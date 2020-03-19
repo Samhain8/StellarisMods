@@ -253,6 +253,7 @@ priest = {
 		}
 		produces = {
 			trigger = {
+				exists = owner
 				owner = { has_valid_civic = civic_exalted_priesthood }
 			}
 			unity = 1
@@ -484,6 +485,7 @@ enforcer = {
 		}
 		produces = {
 			trigger = {
+				exists = owner
 				owner = { has_valid_civic = civic_police_state }
 			}
 			unity = 1
@@ -502,7 +504,7 @@ enforcer = {
 	}
 
 	planet_modifier = {
-		planet_crime_add = -10
+		planet_crime_add = -25
 	}
 
 	triggered_planet_modifier = {
@@ -511,7 +513,7 @@ enforcer = {
 			owner = { has_non_swapped_tradition = tr_domination_judgment_corps }
 		}
 		modifier = {
-			planet_crime_add = -2
+			planet_crime_add = -5
 		}
 	}
 
@@ -521,7 +523,7 @@ enforcer = {
 			planet = { has_modifier = anticrime_campaign }
 		}
 		modifier = {
-			planet_crime_add = -5
+			planet_crime_add = -10
 		}
 	}
 
@@ -641,6 +643,7 @@ telepath = {
 		}
 		produces = {
 			trigger = {
+				exists = owner
 				owner = { has_valid_civic = civic_police_state }
 			}
 			unity = 1
@@ -658,7 +661,7 @@ telepath = {
 	}
 
 	planet_modifier = {
-		planet_crime_add = -13
+		planet_crime_add = -35
 	}
 
 	triggered_planet_modifier = {
@@ -667,7 +670,7 @@ telepath = {
 			owner = { has_non_swapped_tradition = tr_domination_judgment_corps }
 		}
 		modifier = {
-			planet_crime_add = -2
+			planet_crime_add = -5
 		}
 	}
 
@@ -677,7 +680,7 @@ telepath = {
 			planet = { has_modifier = anticrime_campaign }
 		}
 		modifier = {
-			planet_crime_add = -5
+			planet_crime_add = -10
 		}
 	}
 
