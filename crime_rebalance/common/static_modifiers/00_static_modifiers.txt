@@ -239,7 +239,7 @@ has_branch_office = {
 }
 
 has_criminal_branch_office = {
-	planet_crime_add = 25
+	planet_crime_add = 15
 }
 
 planet_devastation = {
@@ -1064,7 +1064,7 @@ skill_scientist = {
 skill_governor = {
 	planet_jobs_produces_mult = 0.02
 	species_empire_size_mult = -0.02
-	planet_crime_add = -3
+	planet_crime_add = -2
 }
 
 skill_ruler = {
