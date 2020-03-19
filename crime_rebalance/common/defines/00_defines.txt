@@ -531,7 +531,7 @@
 		LOW_HAPPINESS_STABILITY_EFFECT		= -50 	# If all pops have 0% happiness, stability is impacted this much
 		HIGH_HAPPINESS_STABILITY_EFFECT		= 30 	# If all pops have 100% happiness, stability is impacted this much
 
-		POP_CRIME							= 1.5		# From each pop with happiness (scaled inversely to happiness)
+		POP_CRIME							= 1.35		# From each pop with happiness (scaled inversely to happiness)
 		MIN_PLANET_CRIME					= 0		# Minimum planetary crime
 		HIGH_PLANET_CRIME					= 50	# High planet crime
 		MAX_PLANET_CRIME					= 100	# Maximum planetary crime
