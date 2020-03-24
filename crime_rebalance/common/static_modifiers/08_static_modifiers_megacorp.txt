@@ -101,7 +101,7 @@ criminal_underworld = {
 	icon_frame = 3
 	planet_crime_add = 10
 	job_criminal_add = 1
-	job_criminal_per_crime = 0.03
+	job_criminal_per_crime = 0.05
 }
 
 drone_deviancy = {
@@ -109,7 +109,7 @@ drone_deviancy = {
 	icon_frame = 3
 	planet_crime_no_happiness_add = 15
 	job_deviant_drone_add = 1
-	job_deviant_drone_per_crime = 0.03
+	job_deviant_drone_per_crime = 0.05
 }
 
 drone_corruption = {
@@ -117,28 +117,31 @@ drone_corruption = {
 	icon_frame = 3
 	planet_crime_no_happiness_add = 15
 	job_corrupt_drone_add = 1
-	job_corrupt_drone_per_crime = 0.03
+	job_corrupt_drone_per_crime = 0.05
 }
 
 gang_wars = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
 	icon_frame = 3
 	planet_crime_add = 20
-	job_criminal_add = 3
+	job_criminal_add = 1
+	job_criminal_per_crime = 0.05
 }
 
 center_of_drug_trade = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
 	icon_frame = 3
 	planet_crime_add = 20
-	job_criminal_add = 3
+	job_criminal_add = 1
+	job_criminal_per_crime = 0.05
 }
 
 mob_rule = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
 	icon_frame = 3
 	planet_crime_add = 20
-	job_criminal_add = 3
+	job_criminal_add = 1
+	job_criminal_per_crime = 0.05
 }
 
 bribed_officials = {

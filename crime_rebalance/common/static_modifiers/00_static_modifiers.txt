@@ -239,7 +239,7 @@ has_branch_office = {
 }
 
 has_criminal_branch_office = {
-	planet_crime_add = 15
+	planet_crime_add = 25
 }
 
 planet_devastation = {

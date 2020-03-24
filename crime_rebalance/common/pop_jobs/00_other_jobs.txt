@@ -515,6 +515,8 @@ criminal = {
 
 	planet_modifier = {
 		trade_value_add = -1
+		planet_amenities_add = -1
+		planet_stability_add = -1
 	}
 		
 	weight = {
