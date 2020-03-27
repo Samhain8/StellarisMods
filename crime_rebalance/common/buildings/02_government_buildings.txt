@@ -679,22 +679,22 @@ building_precinct_house = {
 		weight = 0
 		modifier = {
 			weight = 15
-			planet_crime > 25
-			NOR = {
-				has_building = building_hall_judgment
-				has_building = building_precinct_house
+			AND = {
+				planet_crime > 25
+				NOR = {
+					has_building = building_hall_judgment
+					has_building = building_precinct_house
+				}
 			}
 		}
 		modifier = {
-			weight = 90
-			planet_crime > 45
-			NOR = {
-				AND = {
-					has_building = building_precinct_house
-					owner = { has_technology = tech_colonial_centralization }
+			weight = 50
+			AND = {
+				planet_crime > 45
+				NOR = {
+					has_building = building_hall_judgment
+					num_buildings = { type = building_precinct_house value = 2 }
 				}
-				has_building = building_hall_judgment
-				num_buildings = { type = building_precinct_house value = 2 }
 			}
 		}
 	}
@@ -750,10 +750,12 @@ building_hall_judgment = {
 	ai_weight = {
 		weight = 1
 		modifier = {
-			weight = 100
-			planet_crime > 50
-			NOT = {
-				has_building = building_hall_judgment
+			weight = 75
+			AND = {
+				planet_crime > 50
+				NOT = {
+					has_building = building_hall_judgment
+				}
 			}
 		}
 	}
