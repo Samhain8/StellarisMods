@@ -71,7 +71,7 @@ slave_overseer = {
 			trigger = {
 				planet = { has_modifier = anticrime_campaign }
 			}
-			energy = 2
+			energy = 4
 		}
 	}
 	
@@ -81,7 +81,7 @@ slave_overseer = {
 	}
 		
 	planet_modifier = {
-		planet_crime_add = -10
+		planet_crime_add = -15
 	}
 	
 	triggered_planet_modifier = {
@@ -90,7 +90,7 @@ slave_overseer = {
 			owner = { has_non_swapped_tradition = tr_domination_judgment_corps }
 		}
 		modifier = {
-			planet_crime_add = -2
+			planet_crime_add = -3
 		}		
 	}
 
@@ -99,7 +99,7 @@ slave_overseer = {
 			planet = { has_modifier = anticrime_campaign }
 		}
 		modifier = {
-			planet_crime_add = -5
+			planet_crime_add = -10
 		}		
 	}
 		
