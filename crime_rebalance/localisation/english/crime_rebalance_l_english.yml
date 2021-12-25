@@ -1,0 +1,9 @@
+﻿l_english:
+ job_emergency_responder:0 "Emergency Responder"
+ job_emergency_responder_plural:0 "Emergency Responders"
+ job_emergency_responder_desc:0 "Quick response teams in charge of studying and reacting to natural disasters and crisis situations."
+ job_emergency_responder_effect_desc:1 "£job_emergency_responder£ $job_emergency_responder_plural$ produce £physics£ £society£ £engineering£ §YResearch§! and £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§!"
+ mod_job_emergency_responder_add:0 "$job_emergency_responder$ Jobs"
+ mod_job_enforcer_per_pop:0 "§G+1§! $job_emergency_responder$ Job per $VALUE$ Pops"
+ mod_job_enforcer_per_pop_short:0 "\n§G+1§! £job_emergency_responder£ per $VALUE$ £pop£"
+ planet_enforcers:0 "Emergency Responder Jobs"

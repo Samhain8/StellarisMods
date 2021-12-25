@@ -461,14 +461,14 @@ building_precinct_house = {
 			OR = {
 				owner = { is_ai = no }
 				AND = {
-					planet_crime > 15
+					planet_crime > 30
 					NOR = {
 						AND = {
 							has_building = building_precinct_house
 							owner = { has_technology = tech_colonial_centralization }
 						}
 						has_building = building_hall_judgment
-						num_buildings = { type = building_precinct_house value = 3 }
+						num_buildings = { type = building_precinct_house value = 2 }
 					}
 				}
 			}
@@ -487,7 +487,8 @@ building_precinct_house = {
 	}
 
 	planet_modifier = {
-		job_enforcer_add = 2
+		job_enforcer_add = 1
+		job_emergency_responder_add = 1
 	}
 
 	resources = {
@@ -537,7 +538,8 @@ building_hall_judgment = {
 	}
 
 	planet_modifier = {
-		job_enforcer_add = 5
+		job_enforcer_add = 3
+		job_emergency_responder_add = 2
 	}
 
 	resources = {
