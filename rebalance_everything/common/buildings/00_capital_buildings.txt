@@ -385,7 +385,7 @@ building_major_capital = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 2
 		}
 	}
 
@@ -646,7 +646,7 @@ building_system_capital = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 3
 		}
 	}
 
@@ -1741,7 +1741,7 @@ building_hab_major_capital = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 2
 		}
 	}
 
