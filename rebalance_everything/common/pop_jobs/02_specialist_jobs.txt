@@ -2902,7 +2902,7 @@ pearl_diver = {
 			consumer_goods = 3
 		}
 		upkeep = {
-			food = 2
+			food = 1
 			minerals = 2
 		}
 	}
