@@ -129,7 +129,7 @@ d_rare_crystals_1 = {
 	drop_weight = {
 		weight = 0
 		modifier = {
-			weight = 1
+			weight = 1.5
 			OR = {
 				is_planet_class = pc_frozen
 				is_planet_class = pc_ice_asteroid
@@ -155,7 +155,7 @@ d_rare_crystals_2 = {
 	drop_weight = {
 		weight = 0
 		modifier = {
-			weight = 0.25
+			weight = 0.5
 			OR = {
 				is_planet_class = pc_frozen
 				is_planet_class = pc_ice_asteroid
@@ -336,9 +336,9 @@ d_zro_deposit_1 = {
 	}
 
 	drop_weight = {
-		weight = 5
+		weight = 8
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			is_inside_nebula = no
 		}
 	}
@@ -361,9 +361,9 @@ d_zro_deposit_2 = {
 	}
 
 	drop_weight = {
-		weight = 1
+		weight = 1.5
 		modifier = {
-			factor = 0.5
+			factor = 0.25
 			is_inside_nebula = no
 		}
 	}
@@ -433,12 +433,8 @@ d_dark_matter_deposit_1 = {
 	drop_weight = {
 		weight = 0
 		modifier = {
-			weight = 10
+			weight = 7.5
 			is_planet_class = pc_black_hole
-		}
-		modifier = {
-			factor = 0.5
-			is_inside_nebula = no
 		}
 	}
 }
