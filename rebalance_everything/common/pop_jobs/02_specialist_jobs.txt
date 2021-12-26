@@ -2909,7 +2909,7 @@ pearl_diver = {
 
 	triggered_planet_modifier = {
 		modifier = {
-			trade_value_add = 2
+			trade_value_add = 3
 		}
 	}
 
