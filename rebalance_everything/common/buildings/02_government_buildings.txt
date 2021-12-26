@@ -437,14 +437,14 @@ building_precinct_house = {
 			OR = {
 				owner = { is_ai = no }
 				AND = {
-					planet_crime > 15
+					planet_crime > 30
 					NOR = {
 						AND = {
 							has_building = building_precinct_house
 							owner = { has_technology = tech_colonial_centralization }
 						}
 						has_building = building_hall_judgment
-						num_buildings = { type = building_precinct_house value = 3 }
+						num_buildings = { type = building_precinct_house value = 2 }
 					}
 				}
 			}

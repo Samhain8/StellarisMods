@@ -1660,13 +1660,13 @@ ap_xeno_compatibility = {
 	}
 
 	ai_weight = {
-		factor = 10
+		factor = 0
 		modifier = {
-			factor = 2
+			factor = 0
 			has_ethic = ethic_xenophile
 		}
 		modifier = {
-			factor = 3
+			factor = 0
 			has_ethic = ethic_fanatic_xenophile
 		}
 	}

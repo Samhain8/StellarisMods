@@ -135,7 +135,7 @@ d_minerals_5 = {
 	}
 
 	drop_weight = {
-		weight = 0.1
+		weight = 0.2
 		modifier = {
 			factor = 0.5
 			OR = {
@@ -396,7 +396,7 @@ d_energy_5 = {
 	}
 
 	drop_weight = {
-		weight = 0.1
+		weight = 0.2
 		modifier = {
 			factor = 1.5
 			OR = {
@@ -1249,7 +1249,7 @@ d_trade_value_5 = {
 	}
 
 	drop_weight = {
-		weight = 0.1
+		weight = 0.2
 		modifier = {
 			factor = 0.5
 			is_planet_class = pc_molten
@@ -1346,6 +1346,10 @@ d_alloys_1 = {
 		weight = 2
 		modifier = {
 			factor = 1.5
+			is_planet_class = pc_molten
+		}
+		modifier = {
+			factor = 1.5
 			is_inside_nebula = yes
 		}
 	}
@@ -1368,6 +1372,10 @@ d_alloys_2 = {
 
 	drop_weight = {
 		weight = 0.50
+		modifier = {
+			factor = 1.5
+			is_planet_class = pc_molten
+		}
 		modifier = {
 			factor = 1.5
 			is_inside_nebula = yes
