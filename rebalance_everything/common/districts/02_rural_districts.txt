@@ -372,7 +372,10 @@ district_farming = {
 				is_fallen_empire_spiritualist = no
 				NAND = {
 					is_anglers_empire = yes
-					PREV = { planet = { is_wet = yes } }
+					OR {
+						PREV = { planet = { is_wet = yes } }
+						PREV = { planet = { is_planet_class = pc_gaia } }
+					}
 				}
 			}
 		}
@@ -395,7 +398,10 @@ district_farming = {
 		potential = {
 			exists = owner
 			owner = { is_anglers_empire = yes }
-			planet = { is_wet = yes }
+			OR = {
+				planet = { is_wet = yes }
+				planet = { is_planet_class = pc_gaia }
+			}
 		}
 		modifier = {
 			job_angler_add = 1
@@ -418,7 +424,10 @@ district_farming = {
 				is_fallen_empire_spiritualist = no
 				NAND = {
 					is_anglers_empire = yes
-					PREV = { planet = { is_wet = yes } }
+					OR {
+						PREV = { planet = { is_wet = yes } }
+						PREV = { planet = { is_planet_class = pc_gaia } }
+					}
 				}
 			}
 		}
@@ -435,7 +444,10 @@ district_farming = {
 		trigger = {
 			exists = owner
 			owner = { is_anglers_empire = yes }
-			planet = { is_wet = yes }
+			OR = {
+				planet = { is_wet = yes }
+				planet = { is_planet_class = pc_gaia }
+			}
 		}
 		text = job_aqu_angler_effect_desc
 	}
@@ -443,7 +455,10 @@ district_farming = {
 		trigger = {
 			exists = owner
 			owner = { is_anglers_empire = yes }
-			planet = { is_wet = yes }
+			OR = {
+				planet = { is_wet = yes }
+				planet = { is_planet_class = pc_gaia }
+			}
 		}
 		text = job_pearl_diver_effect_desc
 	}
@@ -934,7 +949,10 @@ district_farming_uncapped = {
 				is_fallen_empire_spiritualist = no
 				NAND = {
 					is_anglers_empire = yes
-					PREV = { planet = { is_wet = yes } }
+					OR {
+						PREV = { planet = { is_wet = yes } }
+						PREV = { planet = { is_planet_class = pc_gaia } }
+					}
 				}
 			}
 		}
@@ -957,7 +975,10 @@ district_farming_uncapped = {
 		potential = {
 			exists = owner
 			owner = { is_anglers_empire = yes }
-			planet = { is_wet = yes }
+			OR = {
+				planet = { is_wet = yes }
+				planet = { is_planet_class = pc_gaia }
+			}
 		}
 		modifier = {
 			job_angler_add = 1
@@ -980,7 +1001,10 @@ district_farming_uncapped = {
 				is_fallen_empire_spiritualist = no
 				NAND = {
 					is_anglers_empire = yes
-					PREV = { planet = { is_wet = yes } }
+					OR {
+						PREV = { planet = { is_wet = yes } }
+						PREV = { planet = { is_planet_class = pc_gaia } }
+					}
 				}
 			}
 		}
@@ -997,7 +1021,10 @@ district_farming_uncapped = {
 		trigger = {
 			exists = owner
 			owner = { is_anglers_empire = yes  }
-			planet = { is_wet = yes }
+			OR = {
+				planet = { is_wet = yes }
+				planet = { is_planet_class = pc_gaia }
+			}
 		}
 		text = job_aqu_angler_effect_desc
 	}
@@ -1005,7 +1032,10 @@ district_farming_uncapped = {
 		trigger = {
 			exists = owner
 			owner = { is_anglers_empire = yes  }
-			planet = { is_wet = yes }
+			OR = {
+				planet = { is_wet = yes }
+				planet = { is_planet_class = pc_gaia }
+			}
 		}
 		text = job_pearl_diver_effect_desc
 	}
