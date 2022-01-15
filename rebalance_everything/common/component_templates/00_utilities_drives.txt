@@ -145,6 +145,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @cost4
+			sr_zro = 0.15
 		}
 	}
 	ftl = yes
