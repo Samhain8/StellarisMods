@@ -631,15 +631,18 @@ building_psi_corps = {
 	planet_modifier = {
 		job_telepath_add = 2
 		planet_stability_add = 5
+		pop_ethic_spiritualist_attraction_mult = 0.1
 	}
 
 	resources = {
 		category = planet_buildings
 		cost = {
 			minerals = 500
+ 			sr_zro = 10
 		}
 		upkeep = {
 			energy = @b2_upkeep
+ 			sr_zro = 0.1
 		}
 	}
 
