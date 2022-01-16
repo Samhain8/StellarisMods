@@ -638,11 +638,10 @@ building_psi_corps = {
 		category = planet_buildings
 		cost = {
 			minerals = 500
- 			sr_zro = 10
+ 			sr_zro = 20
 		}
 		upkeep = {
 			energy = @b2_upkeep
- 			sr_zro = 0.1
 		}
 	}
 
