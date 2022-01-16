@@ -75,9 +75,9 @@ tech_mine_volatile_motes = {
 	weight = @tier2weight1
 
 	weight_modifier = {
-		factor = 2
+		factor = 3
 		modifier = {
-			factor = 1.25
+			factor = 2
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
@@ -120,12 +120,12 @@ tech_mine_volatile_motes = {
 
 #Volatile Material Plants
 tech_volatile_motes = {
-	cost = @tier2cost1
+	cost = @tier2cost3
 	area = physics
-	tier = 2
+	tier = 3
 	category = { particles }
 	prerequisites = { "tech_basic_industry" }
-	weight = @tier2weight1
+	weight = @tier2weight3
 
 	weight_modifier = {
 		factor = 2
@@ -151,7 +151,7 @@ tech_volatile_motes = {
 			}
 		}
 		modifier = {
-			factor = 1.25
+			factor = 2
 			research_leader = {
 				area = physics
 				has_trait = "leader_trait_expertise_particles"
@@ -182,9 +182,9 @@ tech_mine_exotic_gases = {
 	weight = @tier2weight1
 
 	weight_modifier = {
-		factor = 2
+		factor = 3
 		modifier = {
-			factor = 1.25
+			factor = 2
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_materials"
@@ -227,12 +227,12 @@ tech_mine_exotic_gases = {
 
 #Exotic Gas Refining
 tech_exotic_gases = {
-	cost = @tier2cost1
+	cost = @tier2cost3
 	area = engineering
-	tier = 2
+	tier = 3
 	category = { materials }
 	prerequisites = { "tech_basic_industry" }
-	weight = @tier2weight1
+	weight = @tier2weight3
 
 	weight_modifier = {
 		factor = 2
@@ -258,7 +258,7 @@ tech_exotic_gases = {
 			}
 		}
 		modifier = {
-			factor = 1.25
+			factor = 2
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_materials"
@@ -288,7 +288,7 @@ tech_mine_rare_crystals = {
 	weight = @tier2weight1
 
 	weight_modifier = {
-		factor = 2
+		factor = 3
 		modifier = {
 			factor = 2
 			research_leader = {
@@ -334,12 +334,12 @@ tech_mine_rare_crystals = {
 
 #Rare Crystal Manufacturing
 tech_rare_crystals = {
-	cost = @tier2cost1
+	cost = @tier2cost3
 	area = engineering
-	tier = 2
+	tier = 3
 	category = { materials }
 	prerequisites = { "tech_basic_industry" }
-	weight = @tier2weight1
+	weight = @tier2weight3
 
 	weight_modifier = {
 		factor = 2
@@ -366,7 +366,7 @@ tech_rare_crystals = {
 			}
 		}
 		modifier = {
-			factor = 1.25
+			factor = 2
 			research_leader = {
 				area = engineering
 				has_trait = "leader_trait_expertise_materials"
@@ -401,7 +401,7 @@ tech_mine_zro = {
 
 	weight_modifier = {
 		modifier = {
-			factor = 0.10
+			factor = 0.50
 			NOR = {
 				research_leader = {
 					area = society
