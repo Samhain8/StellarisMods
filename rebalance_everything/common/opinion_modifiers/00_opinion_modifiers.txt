@@ -1519,10 +1519,8 @@ opinion_decline_war = {
 	}
 
 	decay = {
-		base = 1
+		base = 5
 	}
-
-	accumulative = yes
 }
 
 # An AI warns a player ally that they are not helping in the war
