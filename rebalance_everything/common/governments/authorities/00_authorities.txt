@@ -237,6 +237,7 @@ auth_corporate = {
 		host_has_dlc = "Megacorp"
 	}
 	random_weight = {
+		factor = 0.35
 		modifier = {
 			factor = 0
 			NOT = { host_has_dlc = "Megacorp" }

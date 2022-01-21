@@ -1956,7 +1956,7 @@
 		AI_MIN_CURRENCY_TO_SELL = 1000.0		# If the AI has less currency (energy) than this it will consider selling resources
 		AI_MIN_CURRENCY_INCOME_TO_SELL = 10.0	# If the AI has less currency (energy) gain last month than this it will consider selling resources
 
-		AI_MIN_HABITABILITY_TO_COLONIZE = 0.35	# AI will avoid colonizing planets with habitability lower than this.
+		AI_MIN_HABITABILITY_TO_COLONIZE = 0.45	# AI will avoid colonizing planets with habitability lower than this.
 		AI_MIN_BRANCH_OFFICE_WORTH_TO_ESTABLISH = 2.0	# AI megacorporations will not establish branch offices unless value is above this
 
 		SLAVE_BUY_EC_THRESHOLD = 5000 # if we have less ec than this, dont buy slaves
