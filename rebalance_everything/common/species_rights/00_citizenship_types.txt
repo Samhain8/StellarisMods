@@ -357,20 +357,29 @@ citizenship_limited = {
 		}
 	}
 	ai_will_do = {
-		factor = 3
+		factor = 2
+		#modifier = {
+		#	factor = 0
+		#	from = {
+		#		has_valid_ai_personality = yes
+		#		has_ai_personality_behaviour = multispecies
+		#	}
+		#}
 		modifier = {
 			factor = 0
 			from = {
-				has_valid_ai_personality = yes
-				has_ai_personality_behaviour = multispecies
+				#has_valid_ai_personality = no
+				OR = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
+				}
 			}
 		}
 		modifier = {
-			factor = 0
+			factor = 0.5
 			from = {
-				has_valid_ai_personality = no
+				#has_valid_ai_personality = no
 				OR = {
-					has_ethic = ethic_xenophile
 					has_ethic = ethic_fanatic_xenophile
 				}
 			}
@@ -481,36 +490,65 @@ citizenship_slavery = {
 		}
 	}
 	ai_will_do = {
-		factor = 15
+		factor = 0.75
 		modifier = {
 			factor = 0
 			from = {
-				has_valid_ai_personality = yes
-				NOT = {
-					has_ai_personality_behaviour = slaver
-				}
-				NAND = {
-					is_ai = no
-					is_xenophobe = yes
+				OR = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
 				}
 			}
 		}
 		modifier = {
-			factor = 0
+			factor = 0.5
 			from = {
-				is_authoritarian = no
-				is_xenophobe = no
-				is_hive_empire = no
+				has_ethic = ethic_fanatic_xenophile
+				has_ethic = ethic_pacifist
+				has_ethic = ethic_fanatic_pacifist
 			}
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.5
 			from = {
 				is_galactic_community_member = yes
 			}
 			OR = {
 				is_active_resolution = "resolution_greatergood_balance_in_the_middle"
 				is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
+			}
+		}
+		modifier = {
+			factor = 10
+			from = {
+				OR = {
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			from = {
+				OR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_xenophobe
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			has_trait = trait_syncretic_proles
+		}
+		modifier = {
+			factor = 1.2
+			OR = {
+				has_trait = trait_strong
+				has_trait = trait_very_strong
+				has_trait = trait_charismatic
+				has_trait = trait_industrious
+				has_trait = trait_agrarian
+				has_trait = trait_ingenious
 			}
 		}
 		modifier = {

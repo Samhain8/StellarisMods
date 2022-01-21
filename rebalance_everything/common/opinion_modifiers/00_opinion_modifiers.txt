@@ -134,28 +134,6 @@ opinion_policy_slavery = {
 				allows_slavery = yes
 			}
 		}
-
-		modifier = {
-			add = -10
-			has_ethic = "ethic_xenophile"
-			allows_slavery = no
-
-			FROM = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
-				allows_slavery = yes
-			}
-		}
-
-		modifier = {
-			add = -20
-			has_ethic = "ethic_fanatic_xenophile"
-			allows_slavery = no
-
-			FROM = {
-				NOT = { has_ethic = ethic_gestalt_consciousness }
-				allows_slavery = yes
-			}
-		}
 	}
 }
 

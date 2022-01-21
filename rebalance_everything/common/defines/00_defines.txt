@@ -1550,8 +1550,8 @@
 		TRADE_DELIVERY_PERCENTAGE_LOW		= 50	# <= 50 of trade value reaches destination
 
 		SLAVE_MARKET_SLAVE_BASE_COST_RESOURCES	= { "energy" }
-		SLAVE_MARKET_SLAVE_BASE_COST_AMOUNT		= { 600 }
-		SLAVE_MARKET_SIZE_CAP					= 100 #Max amount of slaves allowed on the market
+		SLAVE_MARKET_SLAVE_BASE_COST_AMOUNT		= { 1500 }
+		SLAVE_MARKET_SIZE_CAP					= 250 #Max amount of slaves allowed on the market
 
 		SECTOR_AUTOMATION_CONTRUCTION_RAND_FACTOR = 0.1	# Random factor applied to the score of constructions in the sector automation
 		SECTOR_AUTOMATION_FREE_JOBS_BUILD_CAP = 0		# Sector automation will build if there is unemployment OR free jobs <= SECTOR_AUTOMATION_FREE_JOBS_BUILD_CAP OR free housing <= SECTOR_AUTOMATION_FREE_HOUSING_BUILD_CAP
@@ -1959,13 +1959,13 @@
 		AI_MIN_HABITABILITY_TO_COLONIZE = 0.35	# AI will avoid colonizing planets with habitability lower than this.
 		AI_MIN_BRANCH_OFFICE_WORTH_TO_ESTABLISH = 2.0	# AI megacorporations will not establish branch offices unless value is above this
 
-		SLAVE_BUY_EC_THRESHOLD = 3000 # if we have less ec than this, dont buy slaves
+		SLAVE_BUY_EC_THRESHOLD = 5000 # if we have less ec than this, dont buy slaves
 		SLAVE_BUY_UNEMPLOYMENT_THRESHOLD = 1 # if any one planet has this many unemployed pops, don't consider buying slaves for it
 		SLAVE_BUY_HABITABILITY_THRESHOLD = 0.4 # if we cant find a planet with at least this much habitability for a prospective slave, dont buy it
 
-		SLAVE_SELL_EC_THRESHOLD = 30000 # if we have more ec than this and a positive net income, then don't sell any slaves
+		SLAVE_SELL_EC_THRESHOLD = 35000 # if we have more ec than this and a positive net income, then don't sell any slaves
 		SLAVE_SELL_UNEMPLOYMENT_THRESHOLD = 1 # if any one planet has this many unemployed pops on it, consider selling one as a slave
-		SLAVE_SELL_MIN_POPS = 1			# do not sell slaves from this planet if it has this amount of pops, or less
+		SLAVE_SELL_MIN_POPS = 10			# do not sell slaves from this planet if it has this amount of pops, or less
 
 		SCIENTIST_HIRING_REPLACEMENT_THRESHOLD = 1.25	# When hiring for a job category, how much the score has to be higher than the previous tenants's score to replace him
 		SCIENTIST_HIRING_PREV_JOB_THRESHOLD = 1.1		# When hiring a scientist, how much the better score for the new category has to be compared to your current employment score
