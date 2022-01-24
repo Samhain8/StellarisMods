@@ -327,10 +327,10 @@ citizenship_limited = {
 				has_trait = trait_hive_mind
 			}
 		}
-		custom_tooltip = {
-			fail_text = same_species_disallowed
-			NOT = { is_same_species = from }
-		}
+		#custom_tooltip = {
+		#	fail_text = same_species_disallowed
+		#	NOT = { is_same_species = from }
+		#}
 		custom_tooltip = {
 			fail_text = "lonely_hive_mind_pops_kill_themselves_citizenship"
 			is_lonely_hive_mind_pop = no
@@ -370,7 +370,6 @@ citizenship_limited = {
 			from = {
 				#has_valid_ai_personality = no
 				OR = {
-					has_ethic = ethic_egalitarian
 					has_ethic = ethic_fanatic_egalitarian
 				}
 			}
@@ -383,6 +382,10 @@ citizenship_limited = {
 					has_ethic = ethic_fanatic_xenophile
 				}
 			}
+		}
+		modifier = {
+			factor = 0
+			is_same_species = from
 		}
 	}
 }
@@ -418,10 +421,10 @@ citizenship_slavery = {
 				has_trait = trait_hive_mind
 			}
 		}
-		custom_tooltip = {
-			fail_text = same_species_disallowed
-			NOT = { is_same_species = from }
-		}
+		#custom_tooltip = {
+		#	fail_text = same_species_disallowed
+		#	NOT = { is_same_species = from }
+		#}
 		custom_tooltip = {
 			fail_text = "lonely_hive_mind_pops_kill_themselves_citizenship"
 			is_lonely_hive_mind_pop = no
@@ -542,6 +545,10 @@ citizenship_slavery = {
 		modifier = {
 			factor = 2
 			has_species_flag = syncretic_species@from
+		}
+		modifier = {
+			factor = 0
+			is_same_species = from
 		}
 	}
 }
