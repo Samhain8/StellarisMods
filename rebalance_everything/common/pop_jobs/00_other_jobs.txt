@@ -55,7 +55,7 @@ servant = {
 			owner = { is_pleasure_seeker = yes }
 		}
 		modifier = {
-			planet_amenities_add = 5
+			trade_value_add = 2
 		}
 	}
 
