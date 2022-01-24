@@ -672,7 +672,8 @@ enforcer = {
 	}
 
 	planet_modifier = {
-		planet_crime_add = -15
+		planet_crime_add = -10
+		planet_crime_mult = -0.05
 	}
 
 	triggered_planet_modifier = {
@@ -681,7 +682,7 @@ enforcer = {
 			planet = { has_modifier = anticrime_campaign }
 		}
 		modifier = {
-			planet_crime_add = -10
+			planet_crime_add = -5
 		}
 	}
 
@@ -847,7 +848,8 @@ telepath = {
 	}
 
 	planet_modifier = {
-		planet_crime_add = -15
+		planet_crime_add = -10
+		planet_crime_mult = -0.05
 		pop_happiness = 0.02
 	}
 
@@ -857,7 +859,7 @@ telepath = {
 			planet = { has_modifier = anticrime_campaign }
 		}
 		modifier = {
-			planet_crime_add = -10
+			planet_crime_add = -5
 		}
 	}
 
