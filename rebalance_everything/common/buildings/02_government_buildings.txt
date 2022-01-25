@@ -463,7 +463,7 @@ building_precinct_house = {
 	}
 
 	planet_modifier = {
-		job_enforcer_add = 1
+		job_enforcer_add = 2
 	}
 
 	resources = {
@@ -513,7 +513,7 @@ building_hall_judgment = {
 	}
 
 	planet_modifier = {
-		job_enforcer_add = 3
+		job_enforcer_add = 4
 	}
 
 	resources = {
