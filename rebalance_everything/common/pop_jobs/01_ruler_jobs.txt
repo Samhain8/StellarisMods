@@ -184,7 +184,7 @@ high_priest = {
 		category = planet_priests
 		produces = {
 			unity = 5
-			society_research = 2
+			society_research = 3
 		}
 		produces = {
 			trigger = {

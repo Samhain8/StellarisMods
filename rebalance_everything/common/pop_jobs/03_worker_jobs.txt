@@ -468,7 +468,7 @@ crystal_miner = {
 	resources = {
 		category = planet_miners
 		produces = {
-			rare_crystals = 2
+			rare_crystals = 3
 		}
 		upkeep = {
 			trigger = {
@@ -580,7 +580,7 @@ gas_extractor = {
 	resources = {
 		category = planet_miners
 		produces = {
-			exotic_gases = 2
+			exotic_gases = 3
 		}
 		upkeep = {
 			trigger = {
@@ -692,7 +692,7 @@ mote_harvester = {
 	resources = {
 		category = planet_miners
 		produces = {
-			volatile_motes = 2
+			volatile_motes = 3
 		}
 		upkeep = {
 			trigger = {

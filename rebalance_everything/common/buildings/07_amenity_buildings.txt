@@ -789,7 +789,7 @@ building_clinic = {
 	}
 
 	planet_modifier = {
-		job_healthcare_add = 2
+		job_healthcare_add = 1
 	}
 
 	resources = {
@@ -843,7 +843,7 @@ building_hospital = {
 	}
 
 	planet_modifier = {
-		job_healthcare_add = @b2_jobs
+		job_healthcare_add = 2
 	}
 
 	resources = {

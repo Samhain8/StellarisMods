@@ -1519,6 +1519,7 @@ chemist = {
 		category = planet_chemists
 		produces = {
 			volatile_motes = 2
+			physics_research = 3
 		}
 		upkeep = {
 			minerals = 10
@@ -1586,6 +1587,7 @@ translucer = {
 		category = planet_translucers
 		produces = {
 			rare_crystals = 2
+			physics_research = 3
 		}
 		upkeep = {
 			minerals = 10
@@ -1664,6 +1666,7 @@ gas_refiner = {
 		category = planet_refiners
 		produces = {
 			exotic_gases = 2
+			physics_research = 3
 		}
 		upkeep = {
 			minerals = 10
@@ -1744,6 +1747,9 @@ roboticist = {
 
 	resources = {
 		category = planet_pop_assemblers
+		produces = {
+			engineering_research = 4
+		}
 		upkeep = {
 			alloys = 2
 		}
@@ -1770,16 +1776,18 @@ healthcare = {
 	possible_precalc = can_fill_specialist_job
 
 	planet_modifier = {
-		planet_amenities_add = 5
-		pop_growth_speed = 0.05
-		planet_pop_assembly_organic_mult = 0.05
-		pop_environment_tolerance = 0.025
+		pop_growth_speed = 0.1
+		planet_pop_assembly_organic_mult = 0.1
+		pop_environment_tolerance = 0.05
 	}
 
 	resources = {
 		category = planet_doctors
+		produces = {
+			society_research = 4
+		}
 		upkeep = {
-			consumer_goods = 1
+			consumer_goods = 2
 		}
 	}
 
@@ -2818,7 +2826,7 @@ artificer = {
 		category = planet_artisans
 		produces = {
 			consumer_goods = 7
-			engineering_research = 1.1
+			engineering_research = 1
 
 		}
 		upkeep = {
