@@ -855,7 +855,7 @@ ethic_xenophobe = {
 			}
 		}
 		modifier = {
-			factor = 2.0
+			factor = 1.25
 			is_country_type = default
 			is_same_species = root
 			any_relation = {
@@ -911,7 +911,7 @@ ethic_xenophobe = {
 			has_trait = trait_hive_mind
 		}
 		modifier = {
-			factor = 2.0
+			factor = 1.25
 			is_enslaved = no
 			is_being_purged = no
 			from = {
@@ -1222,7 +1222,7 @@ ethic_xenophile = {
 			}
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.8
 			is_same_species = root
 			any_relation = {
 				NOT = { is_same_species = root }
