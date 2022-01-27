@@ -160,7 +160,7 @@ researcher = {
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -320,7 +320,7 @@ priest = {
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -501,7 +501,7 @@ death_priest = {
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -689,7 +689,7 @@ enforcer = {
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -883,7 +883,7 @@ telepath = {
 			}
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 		}
 		modifier = {
@@ -1018,7 +1018,7 @@ entertainer = {
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 0.25
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -1065,7 +1065,7 @@ entertainer = {
 			has_trait = trait_presapient_natural_intellectuals
 		}
 		modifier = {
-			factor = 3
+			factor = 2
 			is_domestic_servant = yes
 		}
 		modifier = {
@@ -1157,7 +1157,7 @@ duelist = {
 			NOT = { has_job = duelist }
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -1267,7 +1267,7 @@ culture_worker = {
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -1450,7 +1450,7 @@ bureaucrat = {
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -1529,7 +1529,7 @@ chemist = {
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -1597,7 +1597,7 @@ translucer = {
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -1676,7 +1676,7 @@ gas_refiner = {
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -1814,7 +1814,7 @@ healthcare = {
 	weight = {
 		weight = @spawner_drone_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -1896,7 +1896,7 @@ manager = {
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -2222,7 +2222,7 @@ bluelotus_technician = {
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -2332,7 +2332,7 @@ death_chronicler = {
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			OR = {
 				has_citizenship_rights = no
 				has_trait = trait_quarrelsome
