@@ -3515,7 +3515,7 @@ opinion_crime_corp_branch_offices = {
 	}
 
 	opinion = {
-		base = -10
+		base = -20
 	}
 }
 
