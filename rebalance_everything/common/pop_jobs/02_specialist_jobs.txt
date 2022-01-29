@@ -1751,7 +1751,8 @@ roboticist = {
 			engineering_research = 4
 		}
 		upkeep = {
-			alloys = 2
+			alloys = 3
+			energy = 5
 		}
 	}
 
@@ -1787,7 +1788,7 @@ healthcare = {
 			society_research = 4
 		}
 		upkeep = {
-			consumer_goods = 2
+			consumer_goods = 4
 		}
 	}
 
