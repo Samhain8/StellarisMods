@@ -787,6 +787,7 @@ chemist_drone = {
 		category = planet_chemists
 		produces = {
 			volatile_motes = 2
+			physics_research = 3
 		}
 		upkeep = {
 			minerals = 10
@@ -838,6 +839,7 @@ translucer_drone = {
 		category = planet_translucers
 		produces = {
 			rare_crystals = 2
+			physics_research = 3
 		}
 		upkeep = {
 			minerals = 10
@@ -889,6 +891,7 @@ gas_refiner_drone = {
 		category = planet_refiners
 		produces = {
 			exotic_gases = 2
+			physics_research = 3
 		}
 		upkeep = {
 			minerals = 10
@@ -1018,7 +1021,7 @@ crystal_mining_drone = {
 	resources = {
 		category = planet_miners
 		produces = {
-			rare_crystals = 2
+			rare_crystals = 3
 		}
 		upkeep = {
 			energy = 1
@@ -1069,7 +1072,7 @@ mote_harvesting_drone = {
 	resources = {
 		category = planet_miners
 		produces = {
-			volatile_motes = 2
+			volatile_motes = 3
 		}
 		upkeep = {
 			energy = 1
@@ -1120,7 +1123,7 @@ gas_extraction_drone = {
 	resources = {
 		category = planet_miners
 		produces = {
-			exotic_gases = 2
+			exotic_gases = 3
 		}
 		upkeep = {
 			energy = 1
