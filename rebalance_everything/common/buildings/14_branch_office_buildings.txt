@@ -948,7 +948,7 @@ building_executive_retreat = {
 	}
 
 	country_modifier = {
-		planet_amenities_mult = 0.1
+		planet_amenities_mult = 0.05
 	}
 
 	planet_modifier = {
@@ -960,6 +960,9 @@ building_executive_retreat = {
 		cost = {
 			minerals = 1000
 			exotic_gases = @b2_rare_cost
+		}
+		produces = {
+			influence = 0.2
 		}
 		upkeep = {
 			energy = @b2_upkeep
@@ -993,6 +996,7 @@ building_xeno_tourism_agency = {
 
 	country_modifier = {
 		planet_immigration_pull_mult = 0.25
+		trade_value_mult = 0.02
 	}
 
 	planet_modifier = {
