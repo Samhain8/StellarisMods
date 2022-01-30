@@ -779,10 +779,11 @@ gas_plant_engineer = {
 	resources = {
 		category = planet_refiners
 		produces = {
-			exotic_gases = 3
+			exotic_gases = 1
+			society_research = 2
 		}
 		upkeep = {
-			minerals = 10
+			energy = 5
 		}
 	}
 
@@ -825,10 +826,11 @@ gas_plant_engineer_gestalt = {
 	resources = {
 		category = planet_refiners
 		produces = {
-			exotic_gases = 3
+			exotic_gases = 1
+			society_research = 2
 		}
 		upkeep = {
-			minerals = 10
+			energy = 5
 		}
 	}
 
