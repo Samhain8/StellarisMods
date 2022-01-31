@@ -178,7 +178,7 @@ technician = {
 	weight = {
 		weight = @worker_job_weight
 		modifier = {
-			factor = 2
+			factor = 3
 			OR = {
 				has_trait = trait_robot_superconductive
 				has_trait = trait_ingenious
@@ -186,23 +186,27 @@ technician = {
 			}
 		}
 		modifier = {
-			factor = 8
+			factor = 10
 			is_enslaved = yes
 			can_take_servant_job = no
-			NOR = {
-				has_trait = trait_syncretic_proles
-				has_trait = trait_nuumismatic_administration
-				has_trait = trait_robot_superconductive
-				has_trait = trait_ingenious
-			}
 		}
 		modifier = {
-			factor = 2
+			factor = 5
 			OR = {
 				is_non_sapient_robot = yes
 				is_shackled_robot = yes
 			}
 			can_take_servant_job = no
+			owner = { has_technology = tech_droid_workers }
+		}
+		modifier = {
+			factor = 10
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+			can_take_servant_job = no
+			owner = { NOT = { has_technology = tech_droid_workers } }
 		}
 		modifier = {
 			factor = 0.25
@@ -254,7 +258,7 @@ technician = {
 			has_trait = trait_nerve_stapled
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.1
 			has_trait = trait_void_dweller_1
 			exists = planet
 			planet = { is_planet_class = pc_habitat }
@@ -347,7 +351,7 @@ miner = {
 			can_take_servant_job = no
 		}
 		modifier = {
-			factor = 3
+			factor = 5
 			OR = {
 				is_non_sapient_robot = yes
 				is_shackled_robot = yes
@@ -356,7 +360,7 @@ miner = {
 			owner = { has_technology = tech_droid_workers }
 		}
 		modifier = {
-			factor = 200
+			factor = 10
 			OR = {
 				is_non_sapient_robot = yes
 				is_shackled_robot = yes
@@ -406,7 +410,7 @@ miner = {
 			has_trait = trait_nerve_stapled
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.1
 			has_trait = trait_void_dweller_1
 			exists = planet
 			planet = { is_planet_class = pc_habitat }
@@ -489,7 +493,7 @@ crystal_miner = {
 			can_take_servant_job = no
 		}
 		modifier = {
-			factor = 2
+			factor = 5
 			OR = {
 				is_non_sapient_robot = yes
 				is_shackled_robot = yes
@@ -498,7 +502,7 @@ crystal_miner = {
 			owner = { has_technology = tech_droid_workers }
 		}
 		modifier = {
-			factor = 200
+			factor = 10
 			OR = {
 				is_non_sapient_robot = yes
 				is_shackled_robot = yes
@@ -601,7 +605,7 @@ gas_extractor = {
 			can_take_servant_job = no
 		}
 		modifier = {
-			factor = 2
+			factor = 5
 			OR = {
 				is_non_sapient_robot = yes
 				is_shackled_robot = yes
@@ -610,7 +614,7 @@ gas_extractor = {
 			owner = { has_technology = tech_droid_workers }
 		}
 		modifier = {
-			factor = 200
+			factor = 10
 			OR = {
 				is_non_sapient_robot = yes
 				is_shackled_robot = yes
@@ -713,7 +717,7 @@ mote_harvester = {
 			can_take_servant_job = no
 		}
 		modifier = {
-			factor = 2
+			factor = 5
 			OR = {
 				is_non_sapient_robot = yes
 				is_shackled_robot = yes
@@ -722,7 +726,7 @@ mote_harvester = {
 			owner = { has_technology = tech_droid_workers }
 		}
 		modifier = {
-			factor = 200
+			factor = 10
 			OR = {
 				is_non_sapient_robot = yes
 				is_shackled_robot = yes
@@ -875,7 +879,7 @@ farmer = {
 			can_take_servant_job = no
 		}
 		modifier = {
-			factor = 3
+			factor = 5
 			OR = {
 				is_non_sapient_robot = yes
 				is_shackled_robot = yes
@@ -884,7 +888,7 @@ farmer = {
 			owner = { has_technology = tech_droid_workers }
 		}
 		modifier = {
-			factor = 200
+			factor = 10
 			OR = {
 				is_non_sapient_robot = yes
 				is_shackled_robot = yes
@@ -945,7 +949,7 @@ farmer = {
 			has_trait = trait_repugnant
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.2
 			has_trait = trait_void_dweller_1
 			exists = planet
 			planet = { is_planet_class = pc_habitat }
