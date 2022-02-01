@@ -19,7 +19,7 @@ d_metal_boneyard = {
 
 	planet_modifier = {
 		district_mining_max = 4
-		planet_jobs_society_research_produces_mult = 0.10
+		planet_jobs_engineering_research_produces_mult = 0.10
 	}
 
 	drop_weight = {
