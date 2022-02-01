@@ -42,7 +42,10 @@ clerk = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_thrifty
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+			}
 		}
 		modifier = {
 			trade_value_add = 1
@@ -70,7 +73,10 @@ clerk = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_thrifty
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+			}
 			exists = owner
 			owner = { has_tradition = tr_mercantile_trickle_up_economics }
 		}
@@ -99,6 +105,7 @@ clerk = {
 			NOR = {
 				has_trait = trait_nuumismatic_administration
 				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
 			}
 		}
 		modifier = {
@@ -110,10 +117,11 @@ clerk = {
 			can_take_servant_job = no
 		}
 		modifier = {
-			factor = 1.5
+			factor = 2
 			OR = {
 				has_trait = trait_thrifty
 				has_trait = trait_nuumismatic_administration
+				has_trait = trait_thrifty_robot
 			}
 		}
 		modifier = {
@@ -1207,7 +1215,10 @@ preacher = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_thrifty
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+			}
 		}
 		modifier = {
 			trade_value_add = 1
@@ -1239,6 +1250,7 @@ preacher = {
 			OR = {
 				has_trait = trait_thrifty
 				has_trait = trait_nuumismatic_administration
+				has_trait = trait_thrifty_robot
 			}
 		}
 		modifier = {
@@ -1569,7 +1581,10 @@ angler = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_thrifty
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+			}
 		}
 		modifier = {
 			trade_value_add = 0.5
@@ -1590,6 +1605,14 @@ angler = {
 		modifier = {
 			factor = 3
 			has_trait = trait_agrarian
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_nuumismatic_administration
+				has_trait = trait_thrifty_robot
+			}
 		}
 		modifier = {
 			factor = 10

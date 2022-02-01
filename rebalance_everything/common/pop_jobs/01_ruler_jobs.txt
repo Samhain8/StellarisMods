@@ -553,7 +553,10 @@ merchant = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_thrifty
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+			}
 		}
 		modifier = {
 			trade_value_add = 3
@@ -593,7 +596,10 @@ merchant = {
 		weight = @ruler_job_weight
 		modifier = {
 			factor = 2.0
-			has_trait = trait_thrifty
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+			}
 		}
 		modifier = {
 			factor = 2.0
@@ -693,7 +699,10 @@ executive = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_thrifty
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+			}
 		}
 		modifier = {
 			trade_value_add = 1.5
@@ -734,9 +743,10 @@ executive = {
 		modifier = {
 			factor = 2.0
 			OR = {
-			has_trait = trait_thrifty
-			has_trait = trait_nuumismatic_administration
-		}
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+				has_trait = trait_nuumismatic_administration
+			}
 		}
 		modifier = {
 			factor = 1.5

@@ -101,6 +101,21 @@ trait_robot_domestic_protocols = {
 	custom_tooltip = TRAIT_DOMESTIC_PROTOCOLS_EFFECT
 }
 
+trait_thrifty_robot = {
+	cost = 2
+	allowed_archetypes = { ROBOT }
+	opposites = { "trait_hive_mind" }
+	icon = "gfx/interface/icons/traits/trait_thrifty.dds"
+	custom_tooltip = TRAIT_THRIFTY_EFFECT
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_droid_workers
+			NOT = { has_policy_flag = ai_outlawed }
+		}
+	}
+}
+
 trait_robot_double_jointed = {
 	cost = 1
 	opposites = { "trait_robot_bulky" }
@@ -161,7 +176,7 @@ trait_robot_emotion_emulators = {
 trait_robot_uncanny = {
 	cost = -1
 	opposites = { "trait_robot_emotion_emulators" }
-	allowed_archetypes = { MACHINE }
+	allowed_archetypes = { ROBOT MACHINE }
 	custom_tooltip = TRAIT_UNCANNY_EFFECT
 	ai_weight = {
 		factor = 0

@@ -1867,7 +1867,10 @@ manager = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_thrifty
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+			}
 		}
 		modifier = {
 			trade_value_add = 0.75
@@ -1930,7 +1933,10 @@ manager = {
 		}
 		modifier = {
 			factor = 1.5
-			has_trait = trait_thrifty
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+			}
 		}
 		modifier = {
 			factor = 1.5
@@ -2837,7 +2843,10 @@ artificer = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_thrifty
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+			}
 		}
 		modifier = {
 			trade_value_add = 0.5
@@ -2927,10 +2936,13 @@ pearl_diver = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_thrifty
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+			}
 		}
 		modifier = {
-			trade_value_add = 0.5
+			trade_value_add = 0.75
 		}
 	}
 
@@ -2939,7 +2951,7 @@ pearl_diver = {
 			has_trait = trait_nuumismatic_administration
 		}
 		modifier = {
-			trade_value_add = 0.2
+			trade_value_add = 0.3
 		}
 	}
 
@@ -2949,6 +2961,13 @@ pearl_diver = {
 			factor = 2
 			is_enslaved = yes
 			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+			}
 		}
 		modifier = {
 			factor = 0.1
