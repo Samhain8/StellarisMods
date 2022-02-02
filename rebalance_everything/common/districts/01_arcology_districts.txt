@@ -516,8 +516,9 @@ district_arcology_leisure = {
 			}
 		}
 		modifier = {
+			job_merchant_add = 1
 			job_entertainer_add = 3
-			job_culture_worker_add = 3
+			job_culture_worker_add = 2
 		}
 	}
 
@@ -530,8 +531,9 @@ district_arcology_leisure = {
 			}
 		}
 		modifier = {
+			job_merchant_add = 1
 			job_duelist_add = 3
-			job_culture_worker_add = 3
+			job_culture_worker_add = 2
 		}
 	}
 
