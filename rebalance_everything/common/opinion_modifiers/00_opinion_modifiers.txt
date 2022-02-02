@@ -1497,7 +1497,7 @@ opinion_decline_war = {
 	}
 
 	decay = {
-		base = 5
+		base = 10
 	}
 }
 
