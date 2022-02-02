@@ -94,6 +94,7 @@ building_food_conglomerate = {
 		}
 		modifier = {
 			job_angler_add = 1
+			job_clerk_add = 1
 		}
 	}
 
