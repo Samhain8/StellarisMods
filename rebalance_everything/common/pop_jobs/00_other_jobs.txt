@@ -42,7 +42,10 @@ servant = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			planet_amenities_add = -1
@@ -56,6 +59,17 @@ servant = {
 		}
 		modifier = {
 			trade_value_add = 2
+		}
+	}
+
+	resources = {
+		category = planet_jobs
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_slaver_civic = yes }
+			}
+			consumer_goods = 1
 		}
 	}
 
@@ -168,7 +182,10 @@ slave_toiler = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			planet_amenities_add = -0.5

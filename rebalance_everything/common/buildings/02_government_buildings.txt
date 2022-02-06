@@ -34,7 +34,7 @@ building_noble_estates = {
 
 	planet_modifier = {
 		job_noble_add = 1
-		planet_housing_add = 1
+		planet_housing_add = 2
 	}
 
 	resources = {

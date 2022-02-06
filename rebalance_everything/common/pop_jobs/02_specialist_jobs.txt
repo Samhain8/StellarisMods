@@ -37,7 +37,10 @@ colonist = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			planet_amenities_add = -1
@@ -79,7 +82,10 @@ colonist = {
 		}
 		modifier = {
 			factor = 0.8
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			factor = 0
@@ -310,7 +316,10 @@ priest = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			planet_amenities_add = -1
@@ -338,7 +347,10 @@ priest = {
 		}
 		modifier = {
 			factor = 0.5
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			factor = 1.5
@@ -492,7 +504,12 @@ death_priest = {
 		}
 	}
 	triggered_planet_modifier = {
-		potential = { has_trait = trait_repugnant }
+		potential = { 
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
+		}
 		modifier = {
 			planet_amenities_add = -1
 		}
@@ -519,7 +536,10 @@ death_priest = {
 		}
 		modifier = {
 			factor = 0.5
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			factor = 1.5
@@ -723,7 +743,7 @@ enforcer = {
 			has_job = enforcer
 		}
 		modifier = {
-			factor = 1.1
+			factor = 1.25
 			has_trait = trait_cybernetic
 		}
 		modifier = {
@@ -999,7 +1019,10 @@ entertainer = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			planet_amenities_add = -2
@@ -1039,7 +1062,10 @@ entertainer = {
 		}
 		modifier = {
 			factor = 0.5
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			factor = 1.25
@@ -1122,11 +1148,15 @@ duelist = {
 	}
 
 	planet_modifier = {
-		planet_amenities_add = 12
+		planet_amenities_add = 10
 	}
 
 	country_modifier = {
 		country_naval_cap_add = 2
+	}
+
+	pop_modifier = {
+		pop_defense_armies_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -1142,7 +1172,10 @@ duelist = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			planet_amenities_add = -2
@@ -1160,14 +1193,6 @@ duelist = {
 			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
-		}
-		modifier = {
-			factor = 3
-			has_trait = trait_robot_domestic_protocols
-			OR = {
-				is_non_sapient_robot = yes
-				is_shackled_robot = yes
-			}
 		}
 		modifier = {
 			factor = 1.5
@@ -1193,31 +1218,19 @@ duelist = {
 			has_trait = trait_quarrelsome
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.15
 			has_trait = trait_brainslug
 		}
 		modifier = {
-			factor = 1.20
+			factor = 1.2
 			has_ethic = ethic_militarist
-		}
-		modifier = {
-			factor = 1.05
-			has_trait = trait_presapient_natural_intellectuals
 		}
 		modifier = {
 			factor = 1.5
 			has_job = duelist
 		}
 		modifier = {
-			factor = 0.1
-			NOT = { has_job = duelist }
-			exists = planet
-			planet = {
-				free_amenities > 5
-			}
-		}
-		modifier = {
-			factor = 1.5
+			factor = 1.15
 			has_trait = trait_void_dweller_1
 			exists = planet
 			planet = { is_planet_class = pc_habitat }
@@ -1231,6 +1244,30 @@ duelist = {
 		modifier = {
 			factor = 1.25
 			has_trait = trait_necrophage
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_lithoid
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_resilient
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_very_strong
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_strong
+		}
+		modifier = {
+			factor = 0.50
+			has_trait = trait_weak
+		}
+		modifier = {
+			factor = 1.25
+			has_trait = trait_cybernetic
 		}
 	}
 }
@@ -1395,7 +1432,7 @@ bureaucrat = {
 				exists = owner
 				owner = { has_valid_civic = civic_byzantine_bureaucracy }
 			}
-			unity = 1
+			unity = 2
 		}
 		upkeep = {
 			consumer_goods = 2
@@ -1805,7 +1842,10 @@ healthcare = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			planet_amenities_add = -1
@@ -1828,7 +1868,10 @@ healthcare = {
 		}
 		modifier = {
 			factor = 0.5
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			factor = 0.1
@@ -2523,7 +2566,10 @@ necro_apprentice = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			planet_amenities_add = -1
@@ -2546,7 +2592,10 @@ necro_apprentice = {
 		}
 		modifier = {
 			factor = 0.5
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			factor = 0.1

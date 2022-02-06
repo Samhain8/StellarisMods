@@ -21,33 +21,10 @@ head_researcher = {
 	resources = {
 		category = planet_researchers
 		produces = {
+			unity = 3
 			physics_research = 5
 			engineering_research = 5
 			society_research = 5
-		}
-	}
-
-	planet_modifier = {
-		planet_amenities_add = 5
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			OR = {
-				has_trait = trait_robot_domestic_protocols
-				has_trait = trait_charismatic
-			}
-		}
-		modifier = {
-			planet_amenities_add = 1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			has_trait = trait_repugnant
-		}
-		modifier = {
-			planet_amenities_add = -1
 		}
 	}
 
@@ -119,17 +96,6 @@ head_researcher = {
 		modifier = {
 			factor = 1.5
 			has_trait = trait_robust
-		}
-		modifier = {
-			factor = 1.25
-			OR = {
-				has_trait = trait_robot_domestic_protocols
-				has_trait = trait_charismatic
-			}
-		}
-		modifier = {
-			factor = 0.75
-			has_trait = trait_repugnant
 		}
 		modifier = {
 			factor = 1.5
@@ -212,7 +178,10 @@ high_priest = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			planet_amenities_add = -1
@@ -235,7 +204,10 @@ high_priest = {
 		}
 		modifier = {
 			factor = 0.75
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			factor = 1.5
@@ -328,7 +300,11 @@ administrator = {
 	}
 
 	planet_modifier = {
-		planet_amenities_add = 8
+		planet_amenities_add = 5
+	}
+
+	country_modifier = {
+		country_admin_cap_add = 5
 	}
 
 	triggered_planet_modifier = {
@@ -339,15 +315,18 @@ administrator = {
 			}
 		}
 		modifier = {
-			planet_amenities_add = 1.6
+			planet_amenities_add = 1
 		}
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
-			planet_amenities_add = -1.6
+			planet_amenities_add = -1
 		}
 	}
 
@@ -367,7 +346,10 @@ administrator = {
 		}
 		modifier = {
 			factor = 0.5
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			factor = 1.25
@@ -452,6 +434,10 @@ noble = {
 
 	planet_modifier = {
 		planet_stability_add = 5
+	}
+
+	country_modifier = {
+		diplo_weight_mult = 0.03
 	}
 
 	weight = {
@@ -585,7 +571,10 @@ merchant = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			planet_amenities_add = -1
@@ -614,7 +603,10 @@ merchant = {
 		}
 		modifier = {
 			factor = 0.5
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			factor = 5
@@ -688,13 +680,16 @@ executive = {
 	resources = {
 		category = planet_executives
 		produces = {
-			unity = 2
+			unity = 3
 		}
 	}
 
 	planet_modifier = {
-		planet_amenities_add = 5
 		trade_value_add = 6
+	}
+
+	country_modifier = {
+		country_admin_cap_add = 5
 	}
 
 	triggered_planet_modifier = {
@@ -731,7 +726,10 @@ executive = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			planet_amenities_add = -1
@@ -765,7 +763,10 @@ executive = {
 		}
 		modifier = {
 			factor = 0.5
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			factor = 5

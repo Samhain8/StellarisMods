@@ -176,6 +176,7 @@ district_mining = {
 		}
 		modifier = {
 			planet_housing_add = 1
+			planet_max_buildings_add = 0.25
 		}
 	}
 

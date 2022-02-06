@@ -112,7 +112,7 @@ trait_lithoid = {
 }
 
 trait_aquatic = {
-	cost = 1
+	cost = 0
 	host_has_dlc = "Aquatics Species Pack"
 
 	sorting_priority = 20
