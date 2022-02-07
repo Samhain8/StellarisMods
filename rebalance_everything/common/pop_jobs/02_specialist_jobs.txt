@@ -240,7 +240,7 @@ researcher = {
 			}
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.5
 			is_enslaved = yes
 			has_slavery_type = { type = slavery_indentured }
 		}
@@ -792,7 +792,7 @@ enforcer = {
 			has_trait = trait_quarrelsome
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.5
 			is_enslaved = yes
 			has_slavery_type = { type = slavery_indentured }
 		}
@@ -1389,6 +1389,11 @@ culture_worker = {
 			}
 		}
 		modifier = {
+			factor = 0.5
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
 			factor = 1.5
 			has_trait = trait_void_dweller_1
 			exists = planet
@@ -1534,6 +1539,11 @@ bureaucrat = {
 			factor = 0.5
 			has_trait = trait_enigmatic_intelligence_failed
 		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
 	}
 }
 
@@ -1575,16 +1585,20 @@ chemist = {
 			can_take_servant_job = yes
 		}
 		modifier = {
-			factor = 7
+			factor = 1.5
 			has_job = chemist
 		}
 		modifier = {
-			factor = 15
-			has_job = chemist
+			factor = 5
 			OR = {
 				has_trait = trait_robust
 				has_trait = trait_robot_efficient_processors
 			}
+		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
 		}
 		modifier = {
 			factor = 1.5
@@ -1599,7 +1613,7 @@ chemist = {
 			planet = { is_artificial = no }
 		}
 		modifier = {
-			factor = 1.5
+			factor = 5
 			has_trait = trait_necrophage
 		}
 	}
@@ -1649,19 +1663,18 @@ translucer = {
 			}
 		}
 		modifier = {
-			factor = 7
+			factor = 1.5
 			has_job = translucer
 		}
 		modifier = {
-			factor = 15
-			has_job = translucer
+			factor = 5
 			OR = {
 				has_trait = trait_robust
 				has_trait = trait_robot_efficient_processors
 			}
 		}
 		modifier = {
-			factor = 1.2
+			factor = 0.8
 			is_enslaved = yes
 			has_slavery_type = { type = slavery_indentured }
 		}
@@ -1678,7 +1691,7 @@ translucer = {
 			planet = { is_artificial = no }
 		}
 		modifier = {
-			factor = 1.5
+			factor = 5
 			has_trait = trait_necrophage
 		}
 	}
@@ -1728,21 +1741,15 @@ gas_refiner = {
 			}
 		}
 		modifier = {
-			factor = 7
+			factor = 1.5
 			has_job = gas_refiner
 		}
 		modifier = {
-			factor = 15
-			has_job = gas_refiner
+			factor = 5
 			OR = {
 				has_trait = trait_robust
 				has_trait = trait_robot_efficient_processors
 			}
-		}
-		modifier = {
-			factor = 1.2
-			is_enslaved = yes
-			has_slavery_type = { type = slavery_indentured }
 		}
 		modifier = {
 			factor = 1.5
@@ -1757,7 +1764,12 @@ gas_refiner = {
 			planet = { is_artificial = no }
 		}
 		modifier = {
-			factor = 1.5
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
+			factor = 5
 			has_trait = trait_necrophage
 		}
 	}
@@ -1795,6 +1807,21 @@ roboticist = {
 
 	weight = {
 		weight = 500
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = trait_robot_logic_engines
+				has_trait = trait_intelligent
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_brainslug
+		}
+		modifier = {
+			factor = 3
+			has_trait = trait_natural_engineers
+		}
 	}
 }
 
@@ -1885,6 +1912,10 @@ healthcare = {
 			factor = 0.5
 			is_enslaved = yes
 			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_necrophage
 		}
 	}
 }
@@ -2056,7 +2087,7 @@ manager = {
 			planet = { is_artificial = no }
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.5
 			has_trait = trait_necrophage
 		}
 	}
@@ -2131,19 +2162,19 @@ necromancer = {
 			planet = { has_modifier = martial_law }
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_trait = trait_resilient
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_trait = trait_very_strong
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.25
 			has_trait = trait_strong
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			has_trait = trait_weak
 		}
 		modifier = {
@@ -2163,7 +2194,7 @@ necromancer = {
 			has_trait = trait_brainslug
 		}
 		modifier = {
-			factor = 1.35
+			factor = 1.5
 			OR = {
 				has_trait = trait_presapient_natural_intellectuals
 				has_trait = trait_natural_physicists
@@ -2172,7 +2203,7 @@ necromancer = {
 			}
 		}
 		modifier = {
-			factor = 1.75
+			factor = 1.5
 			has_trait = trait_erudite
 		}
 		modifier = {
@@ -2207,7 +2238,7 @@ necromancer = {
 			has_trait = trait_lithoid
 		}
 		modifier = {
-			factor = 2
+			factor = 3
 			has_trait = trait_necrophage
 		}
 	}
@@ -2299,7 +2330,7 @@ bluelotus_technician = {
 			}
 		}
 		modifier = {
-			factor = 1.2
+			factor = 0.8
 			is_enslaved = yes
 			has_slavery_type = { type = slavery_indentured }
 		}
@@ -2435,6 +2466,11 @@ death_chronicler = {
 		modifier = {
 			factor = 1.5
 			has_trait = trait_necrophage
+		}
+		modifier = {
+			factor = 0.5
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
 		}
 	}
 }
@@ -2683,6 +2719,15 @@ foundry = {
 			exists = planet
 			planet = { is_artificial = no }
 		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_necrophage
+		}
 	}
 }
 
@@ -2765,6 +2810,15 @@ catalytic_technician = {
 			exists = planet
 			planet = { is_artificial = no }
 		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_necrophage
+		}
 	}
 }
 
@@ -2828,6 +2882,15 @@ artisan = {
 			has_trait = trait_void_dweller_1
 			exists = planet
 			planet = { is_artificial = no }
+		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_necrophage
 		}
 
 		# low income modifier
@@ -2941,6 +3004,15 @@ artificer = {
 			exists = planet
 			planet = { is_artificial = no }
 		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_necrophage
+		}
 	}
 }
 
@@ -3033,6 +3105,15 @@ pearl_diver = {
 				has_trait = trait_robust
 				has_trait = trait_robot_efficient_processors
 			}
+		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_necrophage
 		}
 	}
 }
