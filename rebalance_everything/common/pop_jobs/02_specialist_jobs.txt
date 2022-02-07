@@ -326,6 +326,16 @@ priest = {
 		}
 	}
 
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_imperial_cult }
+		}
+		modifier = {
+			country_admin_cap_add = 2
+		}
+	}
+
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
