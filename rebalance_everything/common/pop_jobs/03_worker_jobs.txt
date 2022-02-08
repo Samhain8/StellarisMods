@@ -150,6 +150,10 @@ clerk = {
 			exists = owner
 			owner = { is_fallen_empire = yes }
 		}
+		modifier = {
+			factor = 0.2
+			has_trait = trait_necrophage
+		}
 	}
 }
 
@@ -316,7 +320,7 @@ technician = {
 			}
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.2
 			has_trait = trait_necrophage
 		}
 	}
@@ -507,7 +511,7 @@ miner = {
 			}
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.2
 			has_trait = trait_necrophage
 		}
 	}
@@ -623,7 +627,7 @@ crystal_miner = {
 			has_trait = trait_nerve_stapled
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.2
 			has_trait = trait_necrophage
 		}
 	}
@@ -735,7 +739,7 @@ gas_extractor = {
 			has_trait = trait_nerve_stapled
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.2
 			has_trait = trait_necrophage
 		}
 	}
@@ -847,7 +851,7 @@ mote_harvester = {
 			has_trait = trait_nerve_stapled
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.2
 			has_trait = trait_necrophage
 		}
 	}
@@ -1068,7 +1072,7 @@ farmer = {
 			}
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.2
 			has_trait = trait_necrophage
 		}
 	}
@@ -1389,6 +1393,10 @@ preacher = {
 			factor = 0.01
 			has_trait = trait_nerve_stapled
 		}
+		modifier = {
+			factor = 0.3
+			has_trait = trait_necrophage
+		}
 	}
 }
 
@@ -1611,7 +1619,7 @@ scrap_miner = {
 			}
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.2
 			has_trait = trait_necrophage
 		}
 	}
@@ -1710,6 +1718,10 @@ angler = {
 				has_trait = trait_robust
 				has_trait = trait_robot_efficient_processors
 			}
+		}
+		modifier = {
+			factor = 0.2
+			has_trait = trait_necrophage
 		}
 	}
 }
