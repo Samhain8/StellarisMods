@@ -928,6 +928,10 @@ civic_barbaric_despoilers = {
 		}
 	}
 	modification = no
+	modifier = {
+		ship_fire_rate_mult = 0.05
+		ship_speed_mult = 0.15
+	}
 	random_weight = {
 		base = 2
 		modifier = {
