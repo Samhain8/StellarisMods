@@ -61,6 +61,19 @@ servant = {
 			trade_value_add = 2
 		}
 	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_pleasure_seeker = yes }
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+			}
+		}
+		modifier = {
+			trade_value_add = 0.5
+		}
+	}
 
 	resources = {
 		category = planet_jobs
