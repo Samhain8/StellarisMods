@@ -225,7 +225,7 @@ tech_eco_simulation = {
 	weight = @tier1weight1
 
 	modifier = {
-		planet_farmers_food_produces_mult = 0.2
+		planet_farmers_food_produces_mult = 0.1
 		starbase_constructions_food_produces_mult = 0.10
 	}
 
@@ -302,7 +302,7 @@ tech_gene_crops = {
 	weight = @tier2weight1
 
 	modifier = {
-		planet_farmers_food_produces_mult = 0.2
+		planet_farmers_food_produces_mult = 0.1
 		starbase_constructions_food_produces_mult = 0.10
 	}
 
@@ -379,7 +379,7 @@ tech_nano_vitality_crops = {
 	weight = @tier3weight1
 
 	modifier = {
-		planet_farmers_food_produces_mult = 0.2
+		planet_farmers_food_produces_mult = 0.1
 		starbase_constructions_food_produces_mult = 0.10
 	}
 
@@ -456,7 +456,7 @@ tech_nutrient_replication = {
 	weight = @tier4weight3
 
 	modifier = {
-		planet_jobs_food_produces_mult = 0.15
+		planet_jobs_food_produces_mult = 0.1
 		starbase_constructions_food_produces_mult = 0.10
 	}
 
