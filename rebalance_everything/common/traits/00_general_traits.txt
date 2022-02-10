@@ -150,6 +150,7 @@ leader_trait_general_psionic = {
 	modifier = {
 		army_morale = 0.15
 		army_morale_damage_mult = 0.15
+		army_disengage_chance_mult = 0.15
 	}
 	leader_trait = { general }
 	leader_class = { general }
@@ -167,6 +168,7 @@ leader_trait_general_chosen = {
 		army_morale = 0.3
 		army_morale_damage_mult = 0.3
 		army_damage_mult = 0.2
+		army_disengage_chance_mult = 0.15
 	}
 	leader_trait = { general }
 	leader_class = { general }

@@ -836,8 +836,8 @@ leader_trait_scientist_psionic = {
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_psionic_leader.dds"
 	modifier = {
 		all_technology_research_speed = 0.10
-		category_psionics_research_speed_mult = 0.10
 		science_ship_survey_speed = 0.25
+		ship_anomaly_research_speed_mult = 0.15
 		ship_archeaological_site_clues_add = 1
 	}
 	leader_trait = { scientist }
@@ -866,6 +866,7 @@ leader_trait_scientist_chosen = {
 	modifier = {
 		all_technology_research_speed = 0.20
 		science_ship_survey_speed = 0.50
+		ship_anomaly_research_speed_mult = 0.30
 		ship_archeaological_site_clues_add = 2
 	}
 	leader_trait = { scientist }
