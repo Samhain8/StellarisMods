@@ -1404,7 +1404,7 @@
 		MAX_NUM_GROWTH_OR_DECLINE_PER_MONTH = 10	# No more than this amount of pops can grow, assemble or decline in the same month
 
 		RESETTLE_UNEMPLOYED_BASE_RATE		= 0.05	# Chance an unemployed pop will automatically migrate if an acceptable location is found (Range is 0 to 1)
-		RESETTLE_DESTROY_COLONY_COST		= 200	# Influence surcharge for manually resettling the last pop from a colony
+		RESETTLE_DESTROY_COLONY_COST		= 50	# Influence surcharge for manually resettling the last pop from a colony
 
 		NEW_POP_SPECIES_RANDOMNESS			= 0.5	# The higher this is, the more random species selection of new pops will be. Does not apply for assembly, as this would mean randomly picking obsolete species
 		NEW_POP_SAME_SPECIES_WEIGHT			= 1.0	# The higher this is, the more new pops will be weighted by number of same or subspecies pops
