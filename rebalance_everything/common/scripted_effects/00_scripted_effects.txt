@@ -4014,7 +4014,7 @@ give_fe_tech = {
 }
 
 shroud_energy_cost = {
-	add_resource = { energy = -1000 }
+	add_resource = { sr_zro = -100 }
 }
 
 # Given a species, create a mod with trait_cybernetic and apply to all pops, leaders
