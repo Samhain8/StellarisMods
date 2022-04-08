@@ -132,7 +132,7 @@ isolationist = {
 		unfulfilled_title = "ISOLATIONIST_NO_PHILOSOPHY"
 		desc = "ISOLATIONIST_PHILOSOPHY_DESC"
 
-		unfulfilled_effect = -25
+		unfulfilled_effect = -15
 		fulfilled_effect = 0.001
 
 		potential = {
@@ -185,7 +185,7 @@ isolationist = {
 		desc = "SUPREMACIST_ISOLATIONIST_NO_FEDERATION_DESC"
 
 		unfulfilled_effect = -25
-		fulfilled_effect = 0.001
+		fulfilled_effect = 10
 
 		potential = {
 			exists = owner

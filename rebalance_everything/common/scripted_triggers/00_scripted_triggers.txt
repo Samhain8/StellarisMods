@@ -2576,6 +2576,13 @@ is_pleasure_seeker = {
 	}
 }
 
+has_slaver_civic = {
+	OR = {
+		has_valid_civic = civic_slaver_guilds
+		has_valid_civic = civic_indentured_assets
+	}
+}
+
 is_crafter_empire = {
 	OR = {
 		has_valid_civic = civic_crafters

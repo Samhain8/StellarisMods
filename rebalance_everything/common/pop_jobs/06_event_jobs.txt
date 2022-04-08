@@ -197,7 +197,10 @@ underground_trade_worker = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_thrifty
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+			}
 		}
 		modifier = {
 			trade_value_add = 1.5
@@ -779,10 +782,11 @@ gas_plant_engineer = {
 	resources = {
 		category = planet_refiners
 		produces = {
-			exotic_gases = 3
+			exotic_gases = 1
+			society_research = 2
 		}
 		upkeep = {
-			minerals = 10
+			energy = 5
 		}
 	}
 
@@ -825,10 +829,11 @@ gas_plant_engineer_gestalt = {
 	resources = {
 		category = planet_refiners
 		produces = {
-			exotic_gases = 3
+			exotic_gases = 1
+			society_research = 2
 		}
 		upkeep = {
-			minerals = 10
+			energy = 5
 		}
 	}
 
@@ -951,7 +956,10 @@ titan_hunter = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_thrifty
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+			}
 		}
 		modifier = {
 			trade_value_add = 2

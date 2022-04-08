@@ -1154,7 +1154,7 @@ decision_market_nomination = {
 				}
 			}
 			random_list = {
-				9 = {
+				1 = {
 					add_modifier = {
 						modifier = market_nominee_level_1
 						days = -1
@@ -1166,23 +1166,23 @@ decision_market_nomination = {
 						}
 					}
 					modifier = {
-						factor = 0.33
+						factor = 0.5
 						from = { has_authority = auth_corporate }
 					}
 					modifier = {
-						factor = 0.33
+						factor = 0
 						from = { trade_income >= 100 }
 					}
 					modifier = {
-						factor = 2
+						factor = 10
 						from = { trade_income <= 50 }
 					}
 					modifier = {
-						factor = 1.5
+						factor = 10
 						from = { has_ethic = ethic_gestalt_consciousness }
 					}
 				}
-				6 = {
+				1 = {
 					add_modifier = {
 						modifier = market_nominee_level_2
 						days = -1
@@ -1193,28 +1193,16 @@ decision_market_nomination = {
 							value = 2
 						}
 					}
+					modifier = {
+						factor = 0
+						from = { trade_income >= 150 }
+					}
+					modifier = {
+						factor = 10
+						from = { trade_income <= 100 }
+					}
 				}
 				1 = {
-					modifier = {
-						factor = 200
-						is_planet_class = pc_city
-					}
-					modifier = {
-						factor = 9
-						from = { has_authority = auth_corporate }
-					}
-					modifier = {
-						factor = 2
-						from = { trade_income >= 120 }
-					}
-					modifier = {
-						factor = 0.5
-						from = { trade_income <= 50 }
-					}
-					modifier = {
-						factor = 0.75
-						from = { has_ethic = ethic_gestalt_consciousness }
-					}
 					add_modifier = {
 						modifier = market_nominee_level_3
 						days = -1
@@ -1224,6 +1212,94 @@ decision_market_nomination = {
 							which = market_rating
 							value = 3
 						}
+					}
+					modifier = {
+						factor = 5
+						from = { has_authority = auth_corporate }
+					}
+					modifier = {
+						factor = 0.5
+						from = { has_ethic = ethic_gestalt_consciousness }
+					}
+					modifier = {
+						factor = 10
+						is_planet_class = pc_city
+					}
+					modifier = {
+						factor = 2
+						from = { trade_income >= 120 }
+					}
+					modifier = {
+						factor = 0
+						from = { trade_income <= 80 }
+					}
+					modifier = {
+						factor = 0
+						from = { trade_income >= 300 }
+					}
+				}
+				1 = {
+					add_modifier = {
+						modifier = market_nominee_level_4
+						days = -1
+					}
+					from = {
+						change_variable = {
+							which = market_rating
+							value = 4
+						}
+					}
+					modifier = {
+						factor = 8
+						from = { has_authority = auth_corporate }
+					}
+					modifier = {
+						factor = 0.3
+						from = { has_ethic = ethic_gestalt_consciousness }
+					}
+					modifier = {
+						factor = 50
+						is_planet_class = pc_city
+					}
+					modifier = {
+						factor = 5
+						from = { trade_income >= 200 }
+					}
+					modifier = {
+						factor = 0
+						from = { trade_income < 200 }
+					}
+				}
+				1 = {
+					add_modifier = {
+						modifier = market_nominee_level_5
+						days = -1
+					}
+					from = {
+						change_variable = {
+							which = market_rating
+							value = 5
+						}
+					}
+					modifier = {
+						factor = 10
+						from = { has_authority = auth_corporate }
+					}
+					modifier = {
+						factor = 0.2
+						from = { has_ethic = ethic_gestalt_consciousness }
+					}
+					modifier = {
+						factor = 100
+						is_planet_class = pc_city
+					}
+					modifier = {
+						factor = 5
+						from = { trade_income >= 350 }
+					}
+					modifier = {
+						factor = 0
+						from = { trade_income < 300 }
 					}
 				}
 			}

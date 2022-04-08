@@ -2735,6 +2735,11 @@ resolution_industry_regulatory_facilitation = {
 		}
 
 		modifier = {
+			factor = 0.8
+			is_spiritualist = yes
+		}
+
+		modifier = {
 			factor = 0.5
 			has_valid_civic = civic_environmentalist
 		}
@@ -2798,6 +2803,11 @@ resolution_industry_collective_waste_management = {
 		modifier = {
 			factor = 1.2
 			is_slaver = yes
+		}
+
+		modifier = {
+			factor = 0.8
+			is_spiritualist = yes
 		}
 
 		modifier = {
@@ -2865,6 +2875,11 @@ resolution_industry_building_a_better_tomorrow = {
 		modifier = {
 			factor = 1.2
 			is_slaver = yes
+		}
+
+		modifier = {
+			factor = 0.8
+			is_spiritualist = yes
 		}
 
 		modifier = {
@@ -2938,6 +2953,11 @@ resolution_industry_environmental_ordinance_waivers = {
 		modifier = {
 			factor = 1.2
 			is_slaver = yes
+		}
+
+		modifier = {
+			factor = 0.8
+			is_spiritualist = yes
 		}
 
 		modifier = {
@@ -3016,6 +3036,11 @@ resolution_industry_project_cornucopia = {
 		modifier = {
 			factor = 1.2
 			is_slaver = yes
+		}
+
+		modifier = {
+			factor = 0.8
+			is_spiritualist = yes
 		}
 
 		modifier = {
@@ -11724,11 +11749,6 @@ resolution_galactic_market_ban_sentient_organic_slave_trade = {
 
 	ai_weight = {
 		weight = @resolution_weight_disliked
-
-		modifier = {
-			factor = 1.5
-			is_xenophile = yes
-		}
 
 		modifier = {
 			factor = 1.5

@@ -294,8 +294,9 @@ leader_trait_admiral_psionic = {
 	modification = no
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_psionic_leader.dds"
 	modifier = {
+		ship_fire_rate_mult = 0.05
 		ship_weapon_damage = 0.1
-		ship_evasion_mult = 0.15
+		ship_evasion_mult = 0.2
 	}
 	leader_trait = { admiral }
 	leader_class = { admiral }
@@ -310,8 +311,9 @@ leader_trait_admiral_chosen = {
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_psionic_chosen_one.dds"
 	immortal_leaders = yes
 	modifier = {
+		ship_fire_rate_mult = 0.1
 		ship_weapon_damage = 0.2
-		ship_evasion_mult = 0.3
+		ship_evasion_mult = 0.4
 	}
 	leader_trait = { admiral }
 	leader_class = { admiral }

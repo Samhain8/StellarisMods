@@ -598,7 +598,7 @@
 		LOW_HAPPINESS_STABILITY_EFFECT		= -50	# If all pops have 0% happiness, stability is impacted this much
 		HIGH_HAPPINESS_STABILITY_EFFECT		= 30	# If all pops have 100% happiness, stability is impacted this much
 
-		POP_CRIME							= 2		# From each pop with happiness (scaled inversely to happiness)
+		POP_CRIME							= 1.35		# From each pop with happiness (scaled inversely to happiness)
 		MIN_PLANET_CRIME					= 0		# Minimum planetary crime
 		HIGH_PLANET_CRIME					= 50	# High planet crime
 		MAX_PLANET_CRIME					= 100	# Maximum planetary crime
@@ -618,9 +618,9 @@
 
 		COLONY_DEPOSITS_USE_NULL = no				# Should the null deposit be a potential outcome in randomization?
 		COLONY_DEPOSITS_FIXED_BASE = 5				# min number of deposits on colonizable planets
-		COLONY_DEPOSITS_RANDOM_BASE = 2				# this number of random deposit chances are always given to colonizable planets
-		COLONY_DEPOSITS_FIXED_FROM_SIZE = 0.2		# ( planet size * this ) is added to min number of deposits on colonizable planets
-		COLONY_DEPOSITS_RANDOM_FROM_SIZE = 0.2		# ( planet size * this ) is added to random deposit chances on colonizable planets
+		COLONY_DEPOSITS_RANDOM_BASE = 3				# this number of random deposit chances are always given to colonizable planets
+		COLONY_DEPOSITS_FIXED_FROM_SIZE = 0.25		# ( planet size * this ) is added to min number of deposits on colonizable planets
+		COLONY_DEPOSITS_RANDOM_FROM_SIZE = 0.35		# ( planet size * this ) is added to random deposit chances on colonizable planets
 
 		NON_COLONY_DEPOSITS_USE_NULL = yes			# Should the null deposit be a potential outcome in randomization?
 		NON_COLONY_DEPOSITS_FIXED_BASE = 1			# min number of deposits on uninhabitable planets
@@ -731,8 +731,8 @@
 		LEADER_EXPERIENCE_REQUIREMENT_BASE_VALUE					= 125 # Base value when calculating required experience for next skill level
 		LEADER_EXPERIENCE_REQUIREMENT_SCALE_VALUE					= 75 # Scale factor when calculating required experience for next skill level
 
-		LEADER_RULER_MONARCH_EXPERIENCE								= 5.0
-		LEADER_RULER_HEIR_EXPERIENCE								= 1.0
+		LEADER_RULER_MONARCH_EXPERIENCE								= 6.0
+		LEADER_RULER_HEIR_EXPERIENCE								= 4.0
 
 		LEADER_ADMIRAL_FLEET_COMBAT_BASE_EXPERIENCE					= 5 # Leader Admiral base experience from fleet combat
 		LEADER_ADMIRAL_FLEET_COMBAT_EXPERIENCE_SCALE				= 0.5 # Scale factor used when calculating experience gain for Admiral
@@ -767,9 +767,9 @@
 
 		WAR_EXHAUSTION_NAVAL_CAP_ADD			= 100
 		WAR_EXHAUSTION_SHIP_KILLED_MULT			= 2.00	# Multiplier of war exhaustion gained from ships
-		WAR_EXHAUSTION_ARMY_KILLED_MULT			= 0.25	# Multiplier of war exhaustion gained from land battles (armies)
+		WAR_EXHAUSTION_ARMY_KILLED_MULT			= 0.50	# Multiplier of war exhaustion gained from land battles (armies)
 		WAR_EXHAUSTION_PLANET_DESTRUCTION_MULT = 5.0		# War exhaustion from planets destroyed
-		WAR_EXHAUSTION_PASSIVE_GAIN_YEARLY		= 0.1		# The amount of yearly war exhaustion gained during war while under WAR_EXHAUSTION_PASSIVE_GAIN_CUTOFF
+		WAR_EXHAUSTION_PASSIVE_GAIN_YEARLY		= 0.05		# The amount of yearly war exhaustion gained during war while under WAR_EXHAUSTION_PASSIVE_GAIN_CUTOFF
 		WAR_EXHAUSTION_PASSIVE_WAR_SIZE_DIV		= 0.1
 		WAR_EXHAUSTION_PASSIVE_GAIN_CUTOFF		= 1.0		# At this amount of war exhaustion (excluding occupation) you stop getting war exhaustion passively over time
 		WAR_EXHAUSTION_FROM_UNITS_CUTOFF		= 1.0		# At this amount of war exhaustion (excluding occupation) you stop gaining war exhaustion from lost units
@@ -959,7 +959,7 @@
 		GENERAL_DEATH_CHANCE					= 0.05		# Chance that general dies when an army under command is destroyed (scaled to number of armies)
 
 		ANOMALY_SPAWN_CHANCE					= 0.050 # Percent chance that a planet gets a discovery when surveyed
-		ANOMALY_SPAWN_CHANCE_INCREMENT			= 0.005 # Percentage increase towards next chance when failing
+		ANOMALY_SPAWN_CHANCE_INCREMENT			= 0.007 # Percentage increase towards next chance when failing
 
 		GOVERNMENT_COOLDOWN_YEARS				= 20	# Cooldown years after changing government before you can change it again
 		GOVERNMENT_CHANGE_INFLUENCE_COST		= 250	# The Influence it costs to change government typ
@@ -1404,7 +1404,7 @@
 		MAX_NUM_GROWTH_OR_DECLINE_PER_MONTH = 10	# No more than this amount of pops can grow, assemble or decline in the same month
 
 		RESETTLE_UNEMPLOYED_BASE_RATE		= 0.05	# Chance an unemployed pop will automatically migrate if an acceptable location is found (Range is 0 to 1)
-		RESETTLE_DESTROY_COLONY_COST		= 200	# Influence surcharge for manually resettling the last pop from a colony
+		RESETTLE_DESTROY_COLONY_COST		= 50	# Influence surcharge for manually resettling the last pop from a colony
 
 		NEW_POP_SPECIES_RANDOMNESS			= 0.5	# The higher this is, the more random species selection of new pops will be. Does not apply for assembly, as this would mean randomly picking obsolete species
 		NEW_POP_SAME_SPECIES_WEIGHT			= 1.0	# The higher this is, the more new pops will be weighted by number of same or subspecies pops
@@ -1501,7 +1501,7 @@
 
 		EXPANSION_COST_MAX					= 1000.0	# Maximum cost of single outpost
 		EXPANSION_COST_BASE					= 75.0		# The influence base cost of outpost
-		EXPANSION_COST_DISTANCE				= 75.0		# Added per hyperlane jump away
+		EXPANSION_COST_DISTANCE				= 50.0		# Added per hyperlane jump away
 
 		CLAIM_COST_MAX						= 1000.0	# Maximum cost of a single claim
 		CLAIM_COST_BASE						= 50.0		# The influence base cost of making claims
@@ -1550,8 +1550,8 @@
 		TRADE_DELIVERY_PERCENTAGE_LOW		= 50	# <= 50 of trade value reaches destination
 
 		SLAVE_MARKET_SLAVE_BASE_COST_RESOURCES	= { "energy" }
-		SLAVE_MARKET_SLAVE_BASE_COST_AMOUNT		= { 500 }
-		SLAVE_MARKET_SIZE_CAP					= 100 #Max amount of slaves allowed on the market
+		SLAVE_MARKET_SLAVE_BASE_COST_AMOUNT		= { 1500 }
+		SLAVE_MARKET_SIZE_CAP					= 250 #Max amount of slaves allowed on the market
 
 		SECTOR_AUTOMATION_CONTRUCTION_RAND_FACTOR = 0.1	# Random factor applied to the score of constructions in the sector automation
 		SECTOR_AUTOMATION_FREE_JOBS_BUILD_CAP = 0		# Sector automation will build if there is unemployment OR free jobs <= SECTOR_AUTOMATION_FREE_JOBS_BUILD_CAP OR free housing <= SECTOR_AUTOMATION_FREE_HOUSING_BUILD_CAP
@@ -1572,8 +1572,8 @@
 		AI_FOCUS_SCORE_MULT = 2									# AI will score buildings producing focus resources this much more
 		AI_AMENITIES_SCORE_MULT = 2								# AI will score amenity buildings this much more than other misc resources
 		AI_HOUSING_SCORE_MULT = 4.5								# AI will score housing buildings this much more than other misc resources
-		AI_CRIME_REDUCTION_SCORE_MULT = 2						# AI will score crime fighting buildings this much more than other misc resource
-		AI_ADMIN_CAP_SCORE_MULT = 2								# AI will score admin cap buildings this much more than other misc resource
+		AI_CRIME_REDUCTION_SCORE_MULT = 1.2						# AI will score crime fighting buildings this much more than other misc resource
+		AI_ADMIN_CAP_SCORE_MULT = 1.5							# AI will score admin cap buildings this much more than other misc resource
 		AI_POPS_SCORE_MULT = 1									# AI will score pop growth and assembly buildings this much more ( already fairly high weighted in code )
 		AI_UPGRADE_SCORE_MULT = 100								# AI will score building upgrades this much more ( since they don't take up a new building slot )
 		AI_MIN_CURRENCY_INCOME_TO_BUILD_STARBASE_MODULES = 100	# AI will not build starbase modules if energy income is below this threshold
@@ -1744,7 +1744,7 @@
 		FEDERATION_ACCEPTANCE_MEMBER_VOTE_SIZE_FACTOR = 0	# for each member above two
 		FEDERATION_ACCEPTANCE_MEMBER_VOTE_MIN = 50
 		FEDERATION_ACCEPTANCE_ASSOCIATION_VOTE = 100
-		FEDERATION_ACCEPTANCE_DISTANCE_MULT = -0.1 # per 1 border distance
+		FEDERATION_ACCEPTANCE_DISTANCE_MULT = -0.07 # per 1 border distance
 		FEDERATION_LAW_SUPPORT_THRESHOLD = 50 # How big ai weight should be for AI to support the vote
 		FEDERATION_ACCEPTANCE_SUPPORT = 100 # Support for ai law
 		FEDERATION_PROPOSE_THRESHOLD = 125 # How big ai weight should be for AI to propose the vote
@@ -1791,7 +1791,7 @@
 		RESEARCH_AGREEMENT_ACCEPTANCE_ATTITUDE_COEXIST = 50
 		RESEARCH_AGREEMENT_ACCEPTANCE_OTHER_ATTITUDE = 0
 		RESEARCH_AGREEMENT_ACCEPTANCE_NUM_PACTS = -30	# per existing research agreement
-		RESEARCH_AGREEMENT_ACCEPTANCE_DISTANCE_MULT = -0.1 # per 1 border distance
+		RESEARCH_AGREEMENT_ACCEPTANCE_DISTANCE_MULT = -0.05 # per 1 border distance
 		RESEARCH_AGREEMENT_ACCEPTANCE_GIVEN_TECHS = -0.5 # Per tech we have they don't
 		RESEARCH_AGREEMENT_ACCEPTANCE_TAKEN_TECHS = -0.5 # Per tech they have we don't
 		RESEARCH_AGREEMENT_ACCEPTANCE_TECHS_MIN = -100
@@ -1802,7 +1802,7 @@
 		COMMERCIAL_PACT_ACCEPTANCE_ATTITUDE_COEXIST = 50
 		COMMERCIAL_PACT_ACCEPTANCE_OTHER_ATTITUDE = 0
 		COMMERCIAL_PACT_ACCEPTANCE_NUM_PACTS = -30	# per existing commercial pact
-		COMMERCIAL_PACT_ACCEPTANCE_DISTANCE_MULT = -0.1 # per 1 border distance
+		COMMERCIAL_PACT_ACCEPTANCE_DISTANCE_MULT = -0.05 # per 1 border distance
 		COMMERCIAL_PACT_ACCEPTANCE_GIVEN_VALUE = -0.5 # Per collected trade value
 		COMMERCIAL_PACT_ACCEPTANCE_GIVEN_VALUE_MIN = -100
 		COMMERCIAL_PACT_ACCEPTANCE_GIVEN_VALUE_MAX = 0
@@ -1810,26 +1810,26 @@
 		COMMERCIAL_PACT_ACCEPTANCE_TAKEN_VALUE_MIN = 0
 		COMMERCIAL_PACT_ACCEPTANCE_TAKEN_VALUE_MAX = 100
 
-		MIGRATION_PACT_ACCEPTANCE_OPINION_FACTOR = 0.5
-		MIGRATION_PACT_ACCEPTANCE_ATTITUDE_ALLIANCE = 10
-		MIGRATION_PACT_ACCEPTANCE_ATTITUDE_COEXIST = 0
+		MIGRATION_PACT_ACCEPTANCE_OPINION_FACTOR = 0.4
+		MIGRATION_PACT_ACCEPTANCE_ATTITUDE_ALLIANCE = 20
+		MIGRATION_PACT_ACCEPTANCE_ATTITUDE_COEXIST = 5
 		MIGRATION_PACT_ACCEPTANCE_THREAT_MULT = -0.5	# scales with actual threat
-		MIGRATION_PACT_ACCEPTANCE_OTHER_ATTITUDE = 0
-		MIGRATION_PACT_ACCEPTANCE_DISTANCE_MULT = -0.05 # per 1 border distance
+		MIGRATION_PACT_ACCEPTANCE_OTHER_ATTITUDE = -10
+		MIGRATION_PACT_ACCEPTANCE_DISTANCE_MULT = -0.03 # per 1 border distance
 
-		VASSALIZATION_ACCEPTANCE_PROTECTORATE_MULT = 0.1		# multiplied by number of techs potential overlord is ahead in
-		VASSALIZATION_ACCEPTANCE_PROTECTORATE_MAX = 20
-		VASSALIZATION_ACCEPTANCE_NUM_POPS = -0.25			# per pop
+		VASSALIZATION_ACCEPTANCE_PROTECTORATE_MULT = 0.25		# multiplied by number of techs potential overlord is ahead in
+		VASSALIZATION_ACCEPTANCE_PROTECTORATE_MAX = 30
+		VASSALIZATION_ACCEPTANCE_NUM_POPS = -0.15			# per pop
 		VASSALIZATION_ACCEPTANCE_POWER_DIFFERENCE_MIN = 1.5
-		VASSALIZATION_ACCEPTANCE_POWER_DIFFERENCE_MULT = 15 # for each 1x over min
-		VASSALIZATION_ACCEPTANCE_POWER_DIFFERENCE_MAX = 100
+		VASSALIZATION_ACCEPTANCE_POWER_DIFFERENCE_MULT = 25 # for each 1x over min
+		VASSALIZATION_ACCEPTANCE_POWER_DIFFERENCE_MAX = 200
 		VASSALIZATION_ACCEPTANCE_ATTITUDE_ALLIANCE = 20
 		VASSALIZATION_ACCEPTANCE_ATTITUDE_COEXIST = 0
 		VASSALIZATION_ACCEPTANCE_ATTITUDE_ATTACK = -1000
 		VASSALIZATION_ACCEPTANCE_OTHER_ATTITUDE = -20
 		VASSALIZATION_ACCEPTANCE_OTHER_THREAT_MULT = 0.2
 		VASSALIZATION_ACCEPTANCE_OTHER_THREAT_MAX = 20
-		VASSALIZATION_ACCEPTANCE_DISTANCE_MULT = -0.5 # per 1 border distance
+		VASSALIZATION_ACCEPTANCE_DISTANCE_MULT = -0.1 # per 1 border distance
 
 		OFFER_VASSALIZATION_ACCEPTANCE_ATTITUDE_VASSALIZE = 100
 		OFFER_VASSALIZATION_ACCEPTANCE_OTHER_ATTITUDE = -1000
@@ -1903,9 +1903,9 @@
 
 
 
-		ENEMY_FLEET_POWER_MULT = 1.2					# AI will need the fleet power of the enemy multiplied by this value to become offensive in an offensive war
+		ENEMY_FLEET_POWER_MULT = 1.1					# AI will need the fleet power of the enemy multiplied by this value to become offensive in an offensive war
 		ENEMY_ARMY_POWER_MULT = 1.0						# AI will need the military power of the enemy multiplied by this value to land armies on planet
-		ENEMY_FLEET_POWER_HOME_SYSTEM_MULT = 1.0 		# AI will need the fleet power of the enemy multiplied by this value to attack hostiles in own systems
+		ENEMY_FLEET_POWER_HOME_SYSTEM_MULT = 0.9 		# AI will need the fleet power of the enemy multiplied by this value to attack hostiles in own systems
 
 		CRISIS_NAVY_SIZE_LIMIT = 100					# Crisis fleets will aim for this size before attacking targets
 		HORDE_NAVY_SIZE_LIMIT = 50						# Horde fleets will aim for this size before attacking targets
@@ -1922,7 +1922,7 @@
 		AUTO_EXPLORE_ATTRACTION_SCORE = 200		# Attraction score to auto explore a system will descrease by this much if system is owned by you or has a planet owned by you
 
 		MAX_EXPANSION_DISTANCE = 2				# Max number of jumps away AI will build starbases
-		MAX_EXPANSION_DISTANCE_SUBJECT = 2		# Max number of jumps away AI subjects will build starbases
+		MAX_EXPANSION_DISTANCE_SUBJECT = 1		# Max number of jumps away AI subjects will build starbases
 		EXPANSION_OWN_PRIORITY = 1000			# Priority on rebuilding destroyed starbases in colonized systems
 		EXPANSION_CUT_OFF_SYSTEM_PRIORITY = 10	# Priority on systems cut-off inside own territory
 		EXPANSION_BORDERING_PRIORITY = 500		# How much will AI prioritize bordering systems when building starbases
@@ -1956,16 +1956,16 @@
 		AI_MIN_CURRENCY_TO_SELL = 1000.0		# If the AI has less currency (energy) than this it will consider selling resources
 		AI_MIN_CURRENCY_INCOME_TO_SELL = 10.0	# If the AI has less currency (energy) gain last month than this it will consider selling resources
 
-		AI_MIN_HABITABILITY_TO_COLONIZE = 0.35	# AI will avoid colonizing planets with habitability lower than this.
+		AI_MIN_HABITABILITY_TO_COLONIZE = 0.45	# AI will avoid colonizing planets with habitability lower than this.
 		AI_MIN_BRANCH_OFFICE_WORTH_TO_ESTABLISH = 2.0	# AI megacorporations will not establish branch offices unless value is above this
 
-		SLAVE_BUY_EC_THRESHOLD = 1000 # if we have less ec than this, dont buy slaves
-		SLAVE_BUY_UNEMPLOYMENT_THRESHOLD = 2 # if any one planet has this many unemployed pops, don't consider buying slaves for it
+		SLAVE_BUY_EC_THRESHOLD = 5000 # if we have less ec than this, dont buy slaves
+		SLAVE_BUY_UNEMPLOYMENT_THRESHOLD = 1 # if any one planet has this many unemployed pops, don't consider buying slaves for it
 		SLAVE_BUY_HABITABILITY_THRESHOLD = 0.4 # if we cant find a planet with at least this much habitability for a prospective slave, dont buy it
 
-		SLAVE_SELL_EC_THRESHOLD = 3000 # if we have more ec than this and a positive net income, then don't sell any slaves
+		SLAVE_SELL_EC_THRESHOLD = 35000 # if we have more ec than this and a positive net income, then don't sell any slaves
 		SLAVE_SELL_UNEMPLOYMENT_THRESHOLD = 1 # if any one planet has this many unemployed pops on it, consider selling one as a slave
-		SLAVE_SELL_MIN_POPS = 1			# do not sell slaves from this planet if it has this amount of pops, or less
+		SLAVE_SELL_MIN_POPS = 10			# do not sell slaves from this planet if it has this amount of pops, or less
 
 		SCIENTIST_HIRING_REPLACEMENT_THRESHOLD = 1.25	# When hiring for a job category, how much the score has to be higher than the previous tenants's score to replace him
 		SCIENTIST_HIRING_PREV_JOB_THRESHOLD = 1.1		# When hiring a scientist, how much the better score for the new category has to be compared to your current employment score

@@ -37,7 +37,10 @@ colonist = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			planet_amenities_add = -1
@@ -79,7 +82,10 @@ colonist = {
 		}
 		modifier = {
 			factor = 0.8
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			factor = 0
@@ -160,7 +166,7 @@ researcher = {
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -234,7 +240,7 @@ researcher = {
 			}
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.5
 			is_enslaved = yes
 			has_slavery_type = { type = slavery_indentured }
 		}
@@ -310,17 +316,30 @@ priest = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			planet_amenities_add = -1
 		}
 	}
 
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_imperial_cult }
+		}
+		modifier = {
+			country_admin_cap_add = 2
+		}
+	}
+
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -338,7 +357,10 @@ priest = {
 		}
 		modifier = {
 			factor = 0.5
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			factor = 1.5
@@ -492,7 +514,12 @@ death_priest = {
 		}
 	}
 	triggered_planet_modifier = {
-		potential = { has_trait = trait_repugnant }
+		potential = { 
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
+		}
 		modifier = {
 			planet_amenities_add = -1
 		}
@@ -501,7 +528,7 @@ death_priest = {
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -519,7 +546,10 @@ death_priest = {
 		}
 		modifier = {
 			factor = 0.5
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			factor = 1.5
@@ -642,7 +672,7 @@ enforcer = {
 	resources = {
 		category = planet_enforcers
 		produces = {
-			unity = 1
+			unity = 2
 		}
 		produces = {
 			trigger = {
@@ -663,16 +693,17 @@ enforcer = {
 				exists = planet
 				planet = { has_modifier = anticrime_campaign }
 			}
-			energy = 2
+			energy = 4
 		}
 	}
 
 	pop_modifier = {
-		pop_defense_armies_add = 2
+		pop_defense_armies_add = 3
 	}
 
 	planet_modifier = {
-		planet_crime_add = -25
+		planet_crime_add = -10
+		planet_crime_mult = -0.05
 	}
 
 	triggered_planet_modifier = {
@@ -681,14 +712,14 @@ enforcer = {
 			planet = { has_modifier = anticrime_campaign }
 		}
 		modifier = {
-			planet_crime_add = -10
+			planet_crime_add = -5
 		}
 	}
 
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -722,7 +753,7 @@ enforcer = {
 			has_job = enforcer
 		}
 		modifier = {
-			factor = 1.1
+			factor = 1.25
 			has_trait = trait_cybernetic
 		}
 		modifier = {
@@ -771,7 +802,7 @@ enforcer = {
 			has_trait = trait_quarrelsome
 		}
 		modifier = {
-			factor = 0.8
+			factor = 0.5
 			is_enslaved = yes
 			has_slavery_type = { type = slavery_indentured }
 		}
@@ -842,12 +873,14 @@ telepath = {
 				exists = planet
 				planet = { has_modifier = anticrime_campaign }
 			}
-			energy = 2
+			energy = 4
 		}
 	}
 
 	planet_modifier = {
-		planet_crime_add = -35
+		planet_crime_add = -10
+		planet_crime_mult = -0.05
+		pop_happiness = 0.02
 	}
 
 	triggered_planet_modifier = {
@@ -856,7 +889,7 @@ telepath = {
 			planet = { has_modifier = anticrime_campaign }
 		}
 		modifier = {
-			planet_crime_add = -10
+			planet_crime_add = -5
 		}
 	}
 
@@ -880,7 +913,7 @@ telepath = {
 			}
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 		}
 		modifier = {
@@ -996,7 +1029,10 @@ entertainer = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			planet_amenities_add = -2
@@ -1008,14 +1044,14 @@ entertainer = {
 			owner = { is_pleasure_seeker = yes }
 		}
 		modifier = {
-			pop_growth_speed = 0.01
+			pop_growth_speed = 0.02
 		}
 	}
 
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -1028,7 +1064,7 @@ entertainer = {
 			}
 		}
 		modifier = {
-			factor = 1.5
+			factor = 2
 			OR = {
 				has_trait = trait_robot_domestic_protocols
 				has_trait = trait_charismatic
@@ -1036,7 +1072,10 @@ entertainer = {
 		}
 		modifier = {
 			factor = 0.5
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			factor = 1.25
@@ -1062,7 +1101,7 @@ entertainer = {
 			has_trait = trait_presapient_natural_intellectuals
 		}
 		modifier = {
-			factor = 0.1
+			factor = 2
 			is_domestic_servant = yes
 		}
 		modifier = {
@@ -1119,11 +1158,15 @@ duelist = {
 	}
 
 	planet_modifier = {
-		planet_amenities_add = 12
+		planet_amenities_add = 10
 	}
 
 	country_modifier = {
 		country_naval_cap_add = 2
+	}
+
+	pop_modifier = {
+		pop_defense_armies_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -1139,7 +1182,10 @@ duelist = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			planet_amenities_add = -2
@@ -1154,17 +1200,9 @@ duelist = {
 			NOT = { has_job = duelist }
 		}
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
-		}
-		modifier = {
-			factor = 3
-			has_trait = trait_robot_domestic_protocols
-			OR = {
-				is_non_sapient_robot = yes
-				is_shackled_robot = yes
-			}
 		}
 		modifier = {
 			factor = 1.5
@@ -1190,31 +1228,19 @@ duelist = {
 			has_trait = trait_quarrelsome
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.15
 			has_trait = trait_brainslug
 		}
 		modifier = {
-			factor = 1.20
+			factor = 1.2
 			has_ethic = ethic_militarist
-		}
-		modifier = {
-			factor = 1.05
-			has_trait = trait_presapient_natural_intellectuals
 		}
 		modifier = {
 			factor = 1.5
 			has_job = duelist
 		}
 		modifier = {
-			factor = 0.1
-			NOT = { has_job = duelist }
-			exists = planet
-			planet = {
-				free_amenities > 5
-			}
-		}
-		modifier = {
-			factor = 1.5
+			factor = 1.15
 			has_trait = trait_void_dweller_1
 			exists = planet
 			planet = { is_planet_class = pc_habitat }
@@ -1228,6 +1254,30 @@ duelist = {
 		modifier = {
 			factor = 1.25
 			has_trait = trait_necrophage
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_lithoid
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_resilient
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_very_strong
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_strong
+		}
+		modifier = {
+			factor = 0.50
+			has_trait = trait_weak
+		}
+		modifier = {
+			factor = 1.25
+			has_trait = trait_cybernetic
 		}
 	}
 }
@@ -1264,7 +1314,7 @@ culture_worker = {
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -1349,6 +1399,11 @@ culture_worker = {
 			}
 		}
 		modifier = {
+			factor = 0.5
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
 			factor = 1.5
 			has_trait = trait_void_dweller_1
 			exists = planet
@@ -1392,7 +1447,7 @@ bureaucrat = {
 				exists = owner
 				owner = { has_valid_civic = civic_byzantine_bureaucracy }
 			}
-			unity = 1
+			unity = 2
 		}
 		upkeep = {
 			consumer_goods = 2
@@ -1447,7 +1502,7 @@ bureaucrat = {
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -1494,6 +1549,11 @@ bureaucrat = {
 			factor = 0.5
 			has_trait = trait_enigmatic_intelligence_failed
 		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
 	}
 }
 
@@ -1516,6 +1576,7 @@ chemist = {
 		category = planet_chemists
 		produces = {
 			volatile_motes = 2
+			physics_research = 3
 		}
 		upkeep = {
 			minerals = 10
@@ -1525,7 +1586,7 @@ chemist = {
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -1534,16 +1595,20 @@ chemist = {
 			can_take_servant_job = yes
 		}
 		modifier = {
-			factor = 7
+			factor = 1.5
 			has_job = chemist
 		}
 		modifier = {
-			factor = 15
-			has_job = chemist
+			factor = 5
 			OR = {
 				has_trait = trait_robust
 				has_trait = trait_robot_efficient_processors
 			}
+		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
 		}
 		modifier = {
 			factor = 1.5
@@ -1558,7 +1623,7 @@ chemist = {
 			planet = { is_artificial = no }
 		}
 		modifier = {
-			factor = 1.5
+			factor = 5
 			has_trait = trait_necrophage
 		}
 	}
@@ -1583,6 +1648,7 @@ translucer = {
 		category = planet_translucers
 		produces = {
 			rare_crystals = 2
+			physics_research = 3
 		}
 		upkeep = {
 			minerals = 10
@@ -1592,7 +1658,7 @@ translucer = {
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -1607,19 +1673,18 @@ translucer = {
 			}
 		}
 		modifier = {
-			factor = 7
+			factor = 1.5
 			has_job = translucer
 		}
 		modifier = {
-			factor = 15
-			has_job = translucer
+			factor = 5
 			OR = {
 				has_trait = trait_robust
 				has_trait = trait_robot_efficient_processors
 			}
 		}
 		modifier = {
-			factor = 1.2
+			factor = 0.8
 			is_enslaved = yes
 			has_slavery_type = { type = slavery_indentured }
 		}
@@ -1636,7 +1701,7 @@ translucer = {
 			planet = { is_artificial = no }
 		}
 		modifier = {
-			factor = 1.5
+			factor = 5
 			has_trait = trait_necrophage
 		}
 	}
@@ -1661,6 +1726,7 @@ gas_refiner = {
 		category = planet_refiners
 		produces = {
 			exotic_gases = 2
+			physics_research = 3
 		}
 		upkeep = {
 			minerals = 10
@@ -1670,7 +1736,7 @@ gas_refiner = {
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -1685,21 +1751,15 @@ gas_refiner = {
 			}
 		}
 		modifier = {
-			factor = 7
+			factor = 1.5
 			has_job = gas_refiner
 		}
 		modifier = {
-			factor = 15
-			has_job = gas_refiner
+			factor = 5
 			OR = {
 				has_trait = trait_robust
 				has_trait = trait_robot_efficient_processors
 			}
-		}
-		modifier = {
-			factor = 1.2
-			is_enslaved = yes
-			has_slavery_type = { type = slavery_indentured }
 		}
 		modifier = {
 			factor = 1.5
@@ -1714,7 +1774,12 @@ gas_refiner = {
 			planet = { is_artificial = no }
 		}
 		modifier = {
-			factor = 1.5
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
+			factor = 5
 			has_trait = trait_necrophage
 		}
 	}
@@ -1741,13 +1806,32 @@ roboticist = {
 
 	resources = {
 		category = planet_pop_assemblers
+		produces = {
+			engineering_research = 4
+		}
 		upkeep = {
-			alloys = 2
+			alloys = 3
+			energy = 5
 		}
 	}
 
 	weight = {
 		weight = 500
+		modifier = {
+			factor = 2
+			OR = {
+				has_trait = trait_robot_logic_engines
+				has_trait = trait_intelligent
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_brainslug
+		}
+		modifier = {
+			factor = 3
+			has_trait = trait_natural_engineers
+		}
 	}
 }
 
@@ -1767,16 +1851,18 @@ healthcare = {
 	possible_precalc = can_fill_specialist_job
 
 	planet_modifier = {
-		planet_amenities_add = 5
-		pop_growth_speed = 0.05
-		planet_pop_assembly_organic_mult = 0.05
-		pop_environment_tolerance = 0.025
+		pop_growth_speed = 0.1
+		planet_pop_assembly_organic_mult = 0.1
+		pop_environment_tolerance = 0.05
 	}
 
 	resources = {
 		category = planet_doctors
+		produces = {
+			society_research = 4
+		}
 		upkeep = {
-			consumer_goods = 1
+			consumer_goods = 4
 		}
 	}
 
@@ -1793,7 +1879,10 @@ healthcare = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			planet_amenities_add = -1
@@ -1803,7 +1892,7 @@ healthcare = {
 	weight = {
 		weight = @spawner_drone_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -1816,7 +1905,10 @@ healthcare = {
 		}
 		modifier = {
 			factor = 0.5
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			factor = 0.1
@@ -1830,6 +1922,10 @@ healthcare = {
 			factor = 0.5
 			is_enslaved = yes
 			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_necrophage
 		}
 	}
 }
@@ -1855,7 +1951,10 @@ manager = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_thrifty
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+			}
 		}
 		modifier = {
 			trade_value_add = 0.75
@@ -1885,7 +1984,7 @@ manager = {
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -1918,7 +2017,10 @@ manager = {
 		}
 		modifier = {
 			factor = 1.5
-			has_trait = trait_thrifty
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+			}
 		}
 		modifier = {
 			factor = 1.5
@@ -1995,7 +2097,7 @@ manager = {
 			planet = { is_artificial = no }
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.5
 			has_trait = trait_necrophage
 		}
 	}
@@ -2070,19 +2172,19 @@ necromancer = {
 			planet = { has_modifier = martial_law }
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_trait = trait_resilient
 		}
 		modifier = {
-			factor = 2
+			factor = 1.5
 			has_trait = trait_very_strong
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.25
 			has_trait = trait_strong
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.75
 			has_trait = trait_weak
 		}
 		modifier = {
@@ -2102,7 +2204,7 @@ necromancer = {
 			has_trait = trait_brainslug
 		}
 		modifier = {
-			factor = 1.35
+			factor = 1.5
 			OR = {
 				has_trait = trait_presapient_natural_intellectuals
 				has_trait = trait_natural_physicists
@@ -2111,7 +2213,7 @@ necromancer = {
 			}
 		}
 		modifier = {
-			factor = 1.75
+			factor = 1.5
 			has_trait = trait_erudite
 		}
 		modifier = {
@@ -2146,7 +2248,7 @@ necromancer = {
 			has_trait = trait_lithoid
 		}
 		modifier = {
-			factor = 2
+			factor = 3
 			has_trait = trait_necrophage
 		}
 	}
@@ -2211,7 +2313,7 @@ bluelotus_technician = {
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
@@ -2238,7 +2340,7 @@ bluelotus_technician = {
 			}
 		}
 		modifier = {
-			factor = 1.2
+			factor = 0.8
 			is_enslaved = yes
 			has_slavery_type = { type = slavery_indentured }
 		}
@@ -2321,7 +2423,7 @@ death_chronicler = {
 	weight = {
 		weight = @specialist_job_weight
 		modifier = {
-			factor = 0.2
+			factor = 0.5
 			OR = {
 				has_citizenship_rights = no
 				has_trait = trait_quarrelsome
@@ -2374,6 +2476,11 @@ death_chronicler = {
 		modifier = {
 			factor = 1.5
 			has_trait = trait_necrophage
+		}
+		modifier = {
+			factor = 0.5
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
 		}
 	}
 }
@@ -2505,7 +2612,10 @@ necro_apprentice = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			planet_amenities_add = -1
@@ -2528,7 +2638,10 @@ necro_apprentice = {
 		}
 		modifier = {
 			factor = 0.5
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			factor = 0.1
@@ -2616,6 +2729,15 @@ foundry = {
 			exists = planet
 			planet = { is_artificial = no }
 		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_necrophage
+		}
 	}
 }
 
@@ -2698,6 +2820,15 @@ catalytic_technician = {
 			exists = planet
 			planet = { is_artificial = no }
 		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_necrophage
+		}
 	}
 }
 
@@ -2762,6 +2893,15 @@ artisan = {
 			exists = planet
 			planet = { is_artificial = no }
 		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_necrophage
+		}
 
 		# low income modifier
 		modifier = {
@@ -2815,7 +2955,7 @@ artificer = {
 		category = planet_artisans
 		produces = {
 			consumer_goods = 7
-			engineering_research = 1.1
+			engineering_research = 1
 
 		}
 		upkeep = {
@@ -2825,7 +2965,10 @@ artificer = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_thrifty
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+			}
 		}
 		modifier = {
 			trade_value_add = 0.5
@@ -2871,6 +3014,15 @@ artificer = {
 			exists = planet
 			planet = { is_artificial = no }
 		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_necrophage
+		}
 	}
 }
 
@@ -2909,16 +3061,19 @@ pearl_diver = {
 
 	triggered_planet_modifier = {
 		modifier = {
-			trade_value_add = 2
+			trade_value_add = 3
 		}
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_thrifty
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+			}
 		}
 		modifier = {
-			trade_value_add = 0.5
+			trade_value_add = 0.75
 		}
 	}
 
@@ -2927,7 +3082,7 @@ pearl_diver = {
 			has_trait = trait_nuumismatic_administration
 		}
 		modifier = {
-			trade_value_add = 0.2
+			trade_value_add = 0.3
 		}
 	}
 
@@ -2937,6 +3092,13 @@ pearl_diver = {
 			factor = 2
 			is_enslaved = yes
 			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+			}
 		}
 		modifier = {
 			factor = 0.1
@@ -2953,6 +3115,15 @@ pearl_diver = {
 				has_trait = trait_robust
 				has_trait = trait_robot_efficient_processors
 			}
+		}
+		modifier = {
+			factor = 0.8
+			is_enslaved = yes
+			has_slavery_type = { type = slavery_indentured }
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_necrophage
 		}
 	}
 }

@@ -2460,7 +2460,7 @@ tech_mining_1 = {
 	weight = @tier1weight1
 
 	modifier = {
-		planet_miners_minerals_produces_mult = 0.20
+		planet_miners_minerals_produces_mult = 0.10
 		starbase_constructions_minerals_produces_mult = 0.10
 	}
 
@@ -2495,7 +2495,7 @@ tech_mining_2 = {
 	weight = @tier2weight1
 
 	modifier = {
-		planet_miners_minerals_produces_mult = 0.20
+		planet_miners_minerals_produces_mult = 0.10
 		starbase_constructions_minerals_produces_mult = 0.10
 	}
 
@@ -2530,7 +2530,7 @@ tech_mining_3 = {
 	weight = @tier3weight1
 
 	modifier = {
-		planet_miners_minerals_produces_mult = 0.20
+		planet_miners_minerals_produces_mult = 0.10
 		starbase_constructions_minerals_produces_mult = 0.10
 	}
 

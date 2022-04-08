@@ -112,7 +112,7 @@ trait_lithoid = {
 }
 
 trait_aquatic = {
-	cost = 1
+	cost = 0
 	host_has_dlc = "Aquatics Species Pack"
 
 	sorting_priority = 20
@@ -152,7 +152,10 @@ trait_aquatic = {
 	species_potential_add = {
 		exists = from
 		from = {
-			has_ascension_perk = ap_evolutionary_mastery
+			OR = {
+				has_ascension_perk = ap_hydrocentric
+				has_ascension_perk = ap_evolutionary_mastery
+			}
 		}
 	}
 	initial = yes

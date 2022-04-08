@@ -94,7 +94,7 @@ ruler = {
 				NOT = { has_valid_civic = civic_corvee_system }
 			}
 		}
-		influence = 50
+		influence = 15
 	}
 
 	triggered_planet_modifier = {
@@ -441,7 +441,7 @@ specialist = {
 				NOT = { has_valid_civic = civic_corvee_system }
 			}
 		}
-		influence = 25
+		influence = 10
 	}
 
 	triggered_planet_modifier = {
@@ -918,7 +918,7 @@ worker = {
 				NOT = { has_valid_civic = civic_corvee_system }
 			}
 		}
-		influence = 10
+		influence = 5
 	}
 
 	resources = {

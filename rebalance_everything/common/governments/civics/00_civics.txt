@@ -77,7 +77,8 @@ civic_imperial_cult = {
 	}
 	random_weight = { base = 5 }
 	modifier = {
-		country_edict_cap_add = 2
+		country_edict_cap_add = 1
+		edicts_cost_mult = -0.33
 	}
 }
 
@@ -320,7 +321,6 @@ civic_slaver_guilds = {
 				value = ethic_fanatic_authoritarian
 			}
 		}
-		civics = { NOT = { value = civic_pleasure_seekers } }
 	}
 	random_weight = { base = 5 }
 	modifier = {
@@ -454,8 +454,9 @@ civic_cutthroat_politics = {
 	}
 	random_weight = { base = 5 }
 	modifier = {
-		edicts_cost_mult = -0.20
-		intel_decryption_add = 1
+		envoys_add = 1
+		intel_decryption_add = 2
+		spy_network_daily_value_mult = 0.33
 	}
 }
 
@@ -927,6 +928,10 @@ civic_barbaric_despoilers = {
 		}
 	}
 	modification = no
+	modifier = {
+		ship_fire_rate_mult = 0.05
+		ship_speed_mult = 0.15
+	}
 	random_weight = {
 		base = 2
 		modifier = {
@@ -1131,7 +1136,6 @@ civic_pleasure_seekers = {
 			NOT = {
 				value = civic_warrior_culture
 				value = civic_shared_burden
-				value = civic_slaver_guilds # would enslave hedonists
 			}
 		}
 	}
