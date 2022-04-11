@@ -236,6 +236,7 @@ building_xeno_zoo = {
 
 	planet_modifier = {
 		job_entertainer_add = 2
+		planet_jobs_society_research_produces_mult = 0.15
 	}
 
 	triggered_planet_modifier = {

@@ -497,7 +497,8 @@ natural_beauty = {
 }
 
 atmospheric_aphrodisiac = {
-	pop_environment_tolerance = 0.05
+	biological_pop_happiness = 0.05
+	lithoid_pop_happiness = 0.05
 	pop_growth_speed = 0.10
 	pop_government_ethic_attraction = -0.20
 
@@ -1115,8 +1116,8 @@ skill_scientist = {
 
 skill_governor = {
 	planet_jobs_produces_mult = 0.02
-	species_empire_size_mult = -0.02
-	planet_crime_add = -3
+	species_empire_size_mult = -0.03
+	planet_crime_add = -1
 }
 
 skill_ruler = {

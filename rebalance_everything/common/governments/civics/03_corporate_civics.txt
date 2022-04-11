@@ -167,7 +167,7 @@ civic_criminal_heritage = {
 	}
 	random_weight = { base = 5 }
 	modifier = {
-		spy_network_daily_value_mult = 0.20
+		spy_network_daily_value_mult = 0.33
 		intel_decryption_add = 1
 	}
 
@@ -217,9 +217,7 @@ civic_indentured_assets = {
 		}
 		civics = {
 			NOR = {
-				value = civic_corporate_hedonism
 				value = civic_slaver_guilds
-				value = civic_pleasure_seekers
 			}
 		}
 	}
@@ -333,8 +331,6 @@ civic_corporate_hedonism = {
 		civics = {
 			NOR = {
 				value = civic_pleasure_seekers
-				value = civic_indentured_assets
-				value = civic_slaver_guilds
 			}
 		}
 	}

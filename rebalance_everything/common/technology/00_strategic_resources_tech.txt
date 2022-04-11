@@ -421,7 +421,7 @@ tech_mine_zro = {
 
 	weight_modifier = {
 		modifier = {
-			factor = 0.10
+			factor = 0.5
 			NOR = {
 				research_leader = {
 					area = society
