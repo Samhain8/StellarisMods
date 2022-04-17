@@ -479,7 +479,7 @@ noble = {
 	}
 
 	country_modifier = {
-		diplo_weight_mult = 0.03
+		diplo_weight_mult = 0.02
 	}
 
 	triggered_planet_modifier = {
@@ -607,6 +607,13 @@ merchant = {
 
 	resources = {
 		category = planet_merchants
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_civic = civic_merchant_guilds }
+			}
+			unity = 1
+		}
 		upkeep = {
 			consumer_goods = 2
 		}

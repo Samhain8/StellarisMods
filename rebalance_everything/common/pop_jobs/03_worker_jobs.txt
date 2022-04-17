@@ -371,6 +371,30 @@ miner = {
 		}
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_merchant_guilds }
+		}
+		modifier = {
+			trade_value_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_merchant_guilds }
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+			}
+		}
+		modifier = {
+			trade_value_add = 0.25
+		}
+	}
+
 	weight = {
 		weight = @worker_job_weight
 		modifier = {
@@ -515,7 +539,7 @@ crystal_miner = {
 	resources = {
 		category = planet_miners
 		produces = {
-			rare_crystals = 2
+			rare_crystals = 3
 		}
 		upkeep = {
 			trigger = {
@@ -631,7 +655,7 @@ gas_extractor = {
 	resources = {
 		category = planet_miners
 		produces = {
-			exotic_gases = 2
+			exotic_gases = 3
 		}
 		upkeep = {
 			trigger = {
@@ -747,7 +771,7 @@ mote_harvester = {
 	resources = {
 		category = planet_miners
 		produces = {
-			volatile_motes = 2
+			volatile_motes = 3
 		}
 		upkeep = {
 			trigger = {
@@ -1105,6 +1129,7 @@ soldier = {
 			}
 		}
 		modifier = {
+			planet_crime_add = -10
 			planet_stability_add = 5
 		}
 	}

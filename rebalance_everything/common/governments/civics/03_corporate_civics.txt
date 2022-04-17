@@ -167,8 +167,9 @@ civic_criminal_heritage = {
 	}
 	random_weight = { base = 5 }
 	modifier = {
-		spy_network_daily_value_mult = 0.33
+		spy_network_daily_value_mult = 0.5
 		intel_decryption_add = 1
+		planet_branch_offices_cost_mult = 0.5
 	}
 
 	description = "civic_tooltip_criminal_heritage_effects"
@@ -400,7 +401,6 @@ civic_permanent_employment = {
 		}
 		origin = {
 			NOR = {
-				value = origin_necrophage
 				value = origin_mechanists
 				value = origin_clone_army
 			}

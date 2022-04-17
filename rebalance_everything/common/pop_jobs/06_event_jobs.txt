@@ -910,21 +910,10 @@ gas_plant_engineer = {
 
 	possible_precalc = can_fill_specialist_job
 
-	triggered_planet_modifier = {
-		potential = {
-			planet = {
-				has_deposit = d_spore_vents
-			}
-		}
-		modifier = {
-			planet_jobs_exotic_gases_produces_mult = 0.1
-		}
-	}
-
 	resources = {
 		category = planet_refiners
 		produces = {
-			exotic_gases = 1
+			exotic_gases = 2
 		}
 		upkeep = {
 			energy = 5
@@ -956,21 +945,10 @@ gas_plant_engineer_gestalt = {
 
 	possible = { NOT = { has_trait = trait_nerve_stapled } }
 
-	triggered_planet_modifier = {
-		potential = {
-			planet = {
-				has_deposit = d_spore_vents
-			}
-		}
-		modifier = {
-			planet_jobs_exotic_gases_produces_mult = 0.1
-		}
-	}
-
 	resources = {
 		category = planet_refiners
 		produces = {
-			exotic_gases = 1
+			exotic_gases = 2
 		}
 		upkeep = {
 			energy = 5

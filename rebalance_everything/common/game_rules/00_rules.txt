@@ -782,9 +782,13 @@ can_species_be_assembled = {
 				limit = {
 					root.owner = { has_civic = civic_permanent_employment }
 				}
-				root = {
-					has_building = building_posthumous_employment_center
+				root = { has_owner = yes }
+				root = { has_building = building_posthumous_employment_center }
+				NAND = {
+					is_same_species = root.owner
+					root.owner = { has_origin = origin_necrophage }
 				}
+				
 			}
 			else = {
 				root = { has_building = building_clone_vats }

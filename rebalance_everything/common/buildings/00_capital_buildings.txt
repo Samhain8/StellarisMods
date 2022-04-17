@@ -631,7 +631,7 @@ building_system_capital = {
 	}
 
 	planet_modifier = {
-		job_enforcer_add = 3
+		job_enforcer_add = 4
 		planet_housing_add = 12
 		planet_amenities_add = 12
 		planet_max_buildings_add = @buildings_t4
