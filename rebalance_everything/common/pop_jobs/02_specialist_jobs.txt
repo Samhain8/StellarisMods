@@ -140,9 +140,9 @@ researcher = {
 	resources = {
 		category = planet_researchers
 		produces = {
-			physics_research = 4
-			engineering_research = 4
-			society_research = 4
+			physics_research = 3
+			engineering_research = 3
+			society_research = 3
 		}
 		upkeep = {
 			consumer_goods = 2
@@ -1726,6 +1726,9 @@ roboticist = {
 
 	resources = {
 		category = planet_pop_assemblers
+		produces = {
+			engineering_research = 3
+		}
 		upkeep = {
 			alloys = 2
 		}
@@ -1760,6 +1763,9 @@ healthcare = {
 
 	resources = {
 		category = planet_doctors
+		produces = {
+			society_research = 2
+		}
 		upkeep = {
 			consumer_goods = 2
 		}

@@ -22,9 +22,9 @@ head_researcher = {
 		category = planet_researchers
 		produces = {
 			unity = 4
-			physics_research = 4
-			engineering_research = 4
-			society_research = 4
+			physics_research = 3
+			engineering_research = 3
+			society_research = 3
 		}
 		upkeep = {
 			consumer_goods = 2
