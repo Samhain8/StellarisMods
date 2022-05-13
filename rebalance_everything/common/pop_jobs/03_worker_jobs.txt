@@ -34,7 +34,10 @@ clerk = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			planet_amenities_add = -0.4
@@ -42,7 +45,10 @@ clerk = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_thrifty
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+			}
 		}
 		modifier = {
 			trade_value_add = 1
@@ -70,7 +76,10 @@ clerk = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_thrifty
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+			}
 			exists = owner
 			owner = { has_tradition = tr_mercantile_trickle_up_economics }
 		}
@@ -99,6 +108,7 @@ clerk = {
 			NOR = {
 				has_trait = trait_nuumismatic_administration
 				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
 			}
 		}
 		modifier = {
@@ -119,7 +129,7 @@ clerk = {
 			can_fill_specialist_job = no
 		}
 		modifier = {
-			factor = 1.5
+			factor = 2
 			OR = {
 				has_trait = trait_thrifty
 				has_trait = trait_nuumismatic_administration
@@ -138,12 +148,19 @@ clerk = {
 		}
 		modifier = {
 			factor = 0.5
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			factor = 0.5
 			exists = owner
 			owner = { is_fallen_empire = yes }
+		}
+		modifier = {
+			factor = 0.2
+			has_trait = trait_necrophage
 		}
 	}
 }
@@ -276,7 +293,7 @@ technician = {
 			has_trait = trait_nerve_stapled
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.1
 			has_trait = trait_void_dweller_1
 			exists = planet
 			planet = { is_planet_class = pc_habitat }
@@ -320,7 +337,7 @@ technician = {
 			}
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.2
 			has_trait = trait_necrophage
 		}
 	}
@@ -354,6 +371,30 @@ miner = {
 		}
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_merchant_guilds }
+		}
+		modifier = {
+			trade_value_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_merchant_guilds }
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+			}
+		}
+		modifier = {
+			trade_value_add = 0.25
+		}
+	}
+
 	weight = {
 		weight = @worker_job_weight
 		modifier = {
@@ -378,7 +419,7 @@ miner = {
 			owner = { has_technology = tech_droid_workers }
 		}
 		modifier = {
-			factor = 200
+			factor = 10
 			OR = {
 				is_non_sapient_robot = yes
 				is_shackled_robot = yes
@@ -436,7 +477,7 @@ miner = {
 			has_trait = trait_nerve_stapled
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.1
 			has_trait = trait_void_dweller_1
 			exists = planet
 			planet = { is_planet_class = pc_habitat }
@@ -470,7 +511,7 @@ miner = {
 			}
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.2
 			has_trait = trait_necrophage
 		}
 	}
@@ -498,7 +539,7 @@ crystal_miner = {
 	resources = {
 		category = planet_miners
 		produces = {
-			rare_crystals = 2
+			rare_crystals = 3
 		}
 		upkeep = {
 			trigger = {
@@ -528,7 +569,7 @@ crystal_miner = {
 			owner = { has_technology = tech_droid_workers }
 		}
 		modifier = {
-			factor = 200
+			factor = 10
 			OR = {
 				is_non_sapient_robot = yes
 				is_shackled_robot = yes
@@ -590,7 +631,7 @@ crystal_miner = {
 			has_trait = trait_nerve_stapled
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.2
 			has_trait = trait_necrophage
 		}
 	}
@@ -614,7 +655,7 @@ gas_extractor = {
 	resources = {
 		category = planet_miners
 		produces = {
-			exotic_gases = 2
+			exotic_gases = 3
 		}
 		upkeep = {
 			trigger = {
@@ -644,7 +685,7 @@ gas_extractor = {
 			owner = { has_technology = tech_droid_workers }
 		}
 		modifier = {
-			factor = 200
+			factor = 10
 			OR = {
 				is_non_sapient_robot = yes
 				is_shackled_robot = yes
@@ -706,7 +747,7 @@ gas_extractor = {
 			has_trait = trait_nerve_stapled
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.2
 			has_trait = trait_necrophage
 		}
 	}
@@ -730,7 +771,7 @@ mote_harvester = {
 	resources = {
 		category = planet_miners
 		produces = {
-			volatile_motes = 2
+			volatile_motes = 3
 		}
 		upkeep = {
 			trigger = {
@@ -760,7 +801,7 @@ mote_harvester = {
 			owner = { has_technology = tech_droid_workers }
 		}
 		modifier = {
-			factor = 200
+			factor = 10
 			OR = {
 				is_non_sapient_robot = yes
 				is_shackled_robot = yes
@@ -822,7 +863,7 @@ mote_harvester = {
 			has_trait = trait_nerve_stapled
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.2
 			has_trait = trait_necrophage
 		}
 	}
@@ -891,7 +932,10 @@ farmer = {
 		potential = {
 			exists = owner
 			owner = { has_valid_civic = civic_agrarian_idyll }
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			planet_amenities_add = -0.4
@@ -926,7 +970,7 @@ farmer = {
 			owner = { has_technology = tech_droid_workers }
 		}
 		modifier = {
-			factor = 200
+			factor = 10
 			OR = {
 				is_non_sapient_robot = yes
 				is_shackled_robot = yes
@@ -986,12 +1030,15 @@ farmer = {
 			}
 		}
 		modifier = {
-			factor = 0.5
+			factor = 0.8
 			owner = { has_valid_civic = civic_agrarian_idyll }
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.1
 			has_trait = trait_void_dweller_1
 			exists = planet
 			planet = { is_planet_class = pc_habitat }
@@ -1038,7 +1085,7 @@ farmer = {
 			}
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.2
 			has_trait = trait_necrophage
 		}
 	}
@@ -1082,6 +1129,7 @@ soldier = {
 			}
 		}
 		modifier = {
+			planet_crime_add = -10
 			planet_stability_add = 5
 		}
 	}
@@ -1240,7 +1288,10 @@ preacher = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			planet_amenities_add = -0.6
@@ -1248,7 +1299,10 @@ preacher = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_thrifty
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+			}
 		}
 		modifier = {
 			trade_value_add = 1
@@ -1279,6 +1333,7 @@ preacher = {
 			factor = 1.5
 			OR = {
 				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
 				has_trait = trait_nuumismatic_administration
 			}
 		}
@@ -1291,7 +1346,10 @@ preacher = {
 		}
 		modifier = {
 			factor = 0.5
-			has_trait = trait_repugnant
+			OR = {
+				has_trait = trait_repugnant
+				has_trait = trait_robot_uncanny
+			}
 		}
 		modifier = {
 			factor = 1.1
@@ -1351,6 +1409,10 @@ preacher = {
 		modifier = {
 			factor = 0.01
 			has_trait = trait_nerve_stapled
+		}
+		modifier = {
+			factor = 0.3
+			has_trait = trait_necrophage
 		}
 	}
 }
@@ -1615,7 +1677,7 @@ scrap_miner = {
 			}
 		}
 		modifier = {
-			factor = 0.75
+			factor = 0.2
 			has_trait = trait_necrophage
 		}
 	}
@@ -1658,7 +1720,10 @@ angler = {
 
 	triggered_planet_modifier = {
 		potential = {
-			has_trait = trait_thrifty
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_thrifty_robot
+			}
 		}
 		modifier = {
 			trade_value_add = 0.5
@@ -1690,6 +1755,14 @@ angler = {
 			can_take_servant_job = yes
 		}
 		modifier = {
+			factor = 1.5
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_nuumismatic_administration
+				has_trait = trait_thrifty_robot
+			}
+		}
+		modifier = {
 			factor = 0.5
 			has_trait = trait_zombie
 		}
@@ -1707,6 +1780,10 @@ angler = {
 				has_trait = trait_robust
 				has_trait = trait_robot_efficient_processors
 			}
+		}
+		modifier = {
+			factor = 0.2
+			has_trait = trait_necrophage
 		}
 	}
 }

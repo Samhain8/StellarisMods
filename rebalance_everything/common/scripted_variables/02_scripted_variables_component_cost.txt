@@ -259,9 +259,9 @@
 @power_M6 = -110
 @power_L6 = -220
 
-@power_S7 = -75
-@power_M7 = -150
-@power_L7 = -300
+@power_S7 = -70
+@power_M7 = -140
+@power_L7 = -280
 
 #############
 #	SHIELD	#
