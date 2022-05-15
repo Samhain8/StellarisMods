@@ -911,7 +911,7 @@ ethic_xenophobe = {
 			has_trait = trait_hive_mind
 		}
 		modifier = {
-			factor = 2.0
+			factor = 1.15
 			is_enslaved = no
 			is_being_purged = no
 			from = {

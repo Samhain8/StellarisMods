@@ -266,6 +266,15 @@ miner = {
 		}
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_merchant_guilds }
+		}
+		trade_value_add = 1
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+	}
+
 	overlord_resources = {
 		category = planet_requisitioned_minerals
 		produces = {

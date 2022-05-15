@@ -166,6 +166,8 @@ civic_philosopher_king = {
 	random_weight = { base = 5 }
 	modifier = {
 		ruler_skill_levels = 2
+		diplo_weight_mult = 0.1
+		country_edict_fund_add = 20
 	}
 }
 
@@ -337,7 +339,6 @@ civic_slaver_guilds = {
 				value = ethic_fanatic_authoritarian
 			}
 		}
-		civics = { NOT = { value = civic_pleasure_seekers } }
 	}
 	random_weight = { base = 5 }
 	modifier = {
@@ -469,7 +470,8 @@ civic_free_haven = {
 	}
 	random_weight = { base = 5 }
 	modifier = {
-		pop_growth_from_immigration = 0.15
+		trade_value_mult = 0.05
+		pop_growth_from_immigration = 0.3
 		planet_immigration_pull_mult = 0.50
 	}
 }
@@ -481,8 +483,9 @@ civic_cutthroat_politics = {
 	}
 	random_weight = { base = 5 }
 	modifier = {
-		edicts_upkeep_mult = -0.20
-		intel_decryption_add = 1
+		envoys_add = 1
+		intel_decryption_add = 2
+		spy_network_daily_value_mult = 0.5
 	}
 }
 
@@ -605,7 +608,8 @@ civic_efficient_bureaucracy = {
 	}
 	random_weight = { base = 5 }
 	modifier = {
-		planet_administrators_upkeep_mult = -0.20
+		planet_administrators_upkeep_mult = -0.3
+		planet_administrators_produces_mult = 0.1
 	}
 }
 
@@ -959,6 +963,10 @@ civic_barbaric_despoilers = {
 		}
 	}
 	modification = no
+	modifier = {
+		ship_fire_rate_mult = 0.05
+		ship_speed_mult = 0.15
+	}
 	random_weight = {
 		base = 2
 		modifier = {
@@ -1182,7 +1190,6 @@ civic_pleasure_seekers = {
 			NOT = {
 				value = civic_warrior_culture
 				value = civic_shared_burden
-				value = civic_slaver_guilds # would enslave hedonists
 			}
 		}
 	}

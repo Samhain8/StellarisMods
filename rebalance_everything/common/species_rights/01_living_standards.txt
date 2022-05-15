@@ -648,7 +648,7 @@ living_standard_good = {
 		pop_cat_ruler_happiness = 0.10
 		pop_cat_specialist_happiness = 0.10
 		pop_cat_worker_happiness = 0.10
-		pop_cat_slave_happiness = 0.10
+		pop_cat_slave_happiness = 0.05
 	}
 
 	triggered_pop_modifier = {
@@ -695,7 +695,7 @@ living_standard_good = {
 				}
 				NOR = {
 					has_slavery_type = { country = from type = slavery_normal }
-					has_slavery_type = { country = from type = slavery_domestic }
+					#has_slavery_type = { country = from type = slavery_domestic }
 				}
 			}
 		}

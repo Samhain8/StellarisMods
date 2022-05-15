@@ -29,6 +29,8 @@ trait_ruler_corvette_focus = {
 	leader_class = { ruler }
 	prerequisites = { tech_destroyers } # 'corvette focus' is a bit silly when it's the only available ship
 	opposites = { "trait_ruler_destroyer_focus" "trait_ruler_cruiser_focus" "trait_ruler_battleship_focus" }
+	initial = no
+	randomized = no
 }
 
 trait_ruler_destroyer_focus = {
@@ -44,6 +46,8 @@ trait_ruler_destroyer_focus = {
 	leader_class = { ruler }
 	prerequisites = { tech_destroyers }
 	opposites = { "trait_ruler_corvette_focus" "trait_ruler_cruiser_focus" "trait_ruler_battleship_focus" }
+	initial = no
+	randomized = no
 }
 
 trait_ruler_cruiser_focus = {
@@ -59,6 +63,8 @@ trait_ruler_cruiser_focus = {
 	leader_class = { ruler }
 	prerequisites = { tech_cruisers }
 	opposites = { "trait_ruler_corvette_focus" "trait_ruler_destroyer_focus" "trait_ruler_battleship_focus" }
+	initial = no
+	randomized = no
 }
 
 trait_ruler_battleship_focus = {
@@ -74,6 +80,8 @@ trait_ruler_battleship_focus = {
 	leader_class = { ruler }
 	prerequisites = { tech_battleships }
 	opposites = { "trait_ruler_corvette_focus" "trait_ruler_destroyer_focus" "trait_ruler_cruiser_focus" }
+	initial = no
+	randomized = no
 }
 
 trait_ruler_recruiter = {
@@ -143,8 +151,11 @@ trait_ruler_military_pioneer = {
 		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
 	}
 	modifier = {
-		country_ship_upgrade_cost_mult = -0.1
-		starbase_shipyard_build_cost_mult = -0.1
+		country_ship_upgrade_cost_mult = -0.2
+		ship_corvette_cost_mult = -0.05
+		ship_destroyer_cost_mult = -0.05
+		ship_cruiser_cost_mult = -0.05
+		ship_battleship_cost_mult = -0.05
 	}
 	leader_trait = { ruler }
 	leader_class = { ruler }
@@ -217,7 +228,8 @@ trait_ruler_home_in_the_sky = {
 		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
 	}
 	modifier = {
-		starbase_modules_cost_mult = -0.2
+		station_gatherers_produces_mult = 0.05
+		station_researchers_produces_mult = 0.05
 		starbase_upgrade_cost_mult = -0.10
 	}
 	leader_trait = { ruler }
@@ -358,7 +370,7 @@ trait_ruler_explorer = {
 		NOT = { from = { has_ethic = "ethic_gestalt_consciousness" } }
 	}
 	modifier = {
-		ship_science_cost_mult = -0.25
+		station_researchers_produces_mult = 0.10
 		ship_anomaly_research_speed_mult = 0.33
 	}
 	leader_trait = { ruler }
@@ -432,6 +444,7 @@ leader_trait_ruler_psionic = {
 	modifier = {
 		pop_government_ethic_attraction = 0.10
 		country_ruler_influence_produces_add = 0.5
+		diplo_weight_mult = 0.1
 	}
 	leader_trait = { ruler }
 	leader_class = { ruler }
@@ -446,6 +459,7 @@ leader_trait_ruler_chosen = {
 	modifier = {
 		pop_government_ethic_attraction = 0.20
 		country_ruler_influence_produces_add = 1
+		diplo_weight_mult = 0.3
 	}
 	leader_trait = { ruler }
 	leader_class = { ruler }

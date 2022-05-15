@@ -158,9 +158,10 @@ building_betharian_power_plant = {
 		cost = {
 			minerals = 200
 		}
-		produces = {
-			energy = 10
-		}
+	}
+
+	planet_modifier = {
+		planet_jobs_physics_research_produces_mult = 0.20
 	}
 
 	triggered_planet_modifier = {
@@ -236,6 +237,7 @@ building_xeno_zoo = {
 
 	planet_modifier = {
 		job_entertainer_add = 2
+		planet_jobs_society_research_produces_mult = 0.20
 	}
 
 	triggered_planet_modifier = {

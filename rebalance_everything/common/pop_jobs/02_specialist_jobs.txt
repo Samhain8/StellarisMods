@@ -96,9 +96,9 @@ researcher = {
 	resources = {
 		category = planet_researchers
 		produces = {
-			physics_research = 4
-			engineering_research = 4
-			society_research = 4
+			physics_research = 3
+			engineering_research = 3
+			society_research = 3
 		}
 		upkeep = {
 			consumer_goods = 2
@@ -330,7 +330,8 @@ enforcer = {
 	}
 
 	planet_modifier = {
-		planet_crime_add = -25
+		planet_crime_add = -10
+		planet_crime_mult = -0.05
 		planet_stability_add = 1
 	}
 
@@ -340,7 +341,7 @@ enforcer = {
 			planet = { has_modifier = anticrime_campaign }
 		}
 		modifier = {
-			planet_crime_add = -10
+			planet_crime_add = -5
 		}
 	}
 
@@ -467,7 +468,8 @@ telepath = {
 	}
 
 	planet_modifier = {
-		planet_crime_add = -35
+		planet_crime_add = -15
+		planet_crime_mult = -0.1
 		planet_jobs_produces_mult = 0.05
 	}
 
@@ -477,7 +479,7 @@ telepath = {
 			planet = { has_modifier = anticrime_campaign }
 		}
 		modifier = {
-			planet_crime_add = -10
+			planet_crime_add = -5
 		}
 	}
 
@@ -559,7 +561,7 @@ entertainer = {
 			owner = { is_pleasure_seeker = yes }
 		}
 		modifier = {
-			pop_growth_speed = 0.01
+			pop_growth_speed = 0.025
 		}
 	}
 
@@ -585,7 +587,7 @@ entertainer = {
 			has_job = entertainer
 		}
 		modifier = {
-			factor = 0.1
+			factor = 1.2
 			is_domestic_servant = yes
 		}
 		modifier = {
@@ -643,7 +645,11 @@ duelist = {
 	}
 
 	country_modifier = {
-		country_naval_cap_add = 2
+		country_naval_cap_add = 4
+	}
+
+	pop_modifier = {
+		pop_defense_armies_add = 2
 	}
 
 	weight = {
@@ -680,6 +686,30 @@ duelist = {
 			planet = {
 				free_amenities > 5
 			}
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_lithoid
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_resilient
+		}
+		modifier = {
+			factor = 2
+			has_trait = trait_very_strong
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_strong
+		}
+		modifier = {
+			factor = 0.5
+			has_trait = trait_weak
+		}
+		modifier = {
+			factor = 1.25
+			has_trait = trait_cybernetic
 		}
 	}
 }
@@ -766,7 +796,7 @@ bureaucrat = {
 			owner = { has_valid_civic = civic_byzantine_bureaucracy }
 		}
 		modifier = {
-			planet_stability_add = 1
+			planet_stability_add = 2
 		}
 	}
 
@@ -952,6 +982,9 @@ roboticist = {
 
 	resources = {
 		category = planet_pop_assemblers
+		produces = {
+			engineering_research = 3
+		}
 		upkeep = {
 			alloys = 2
 		}
@@ -978,15 +1011,18 @@ healthcare = {
 	possible_precalc = can_fill_specialist_job
 
 	planet_modifier = {
-		pop_growth_speed = 0.05
-		planet_pop_assembly_organic_mult = 0.05
-		pop_environment_tolerance = 0.025
+		pop_growth_speed = 0.1
+		planet_pop_assembly_organic_mult = 0.1
+		pop_environment_tolerance = 0.05
 	}
 
 	resources = {
 		category = planet_doctors
+		produces = {
+			society_research = 2
+		}
 		upkeep = {
-			consumer_goods = 1
+			consumer_goods = 2
 		}
 	}
 
@@ -1607,6 +1643,7 @@ catalytic_technician = {
 		category = planet_metallurgists
 		produces = {
 			alloys = 3
+			society_research = 1
 		}
 
 		upkeep = {
@@ -1782,14 +1819,12 @@ artificer = {
 		trade_value_add = 2
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
 	}
-	
 
 	resources = {
 		category = planet_artisans
 		produces = {
 			consumer_goods = 7
-			engineering_research = 1.1
-
+			engineering_research = 1
 		}
 		upkeep = {
 			minerals = 6
@@ -1871,7 +1906,7 @@ pearl_diver = {
 	resources = {
 		category = planet_artisans
 		produces = {
-			consumer_goods = 3
+			consumer_goods = 4
 		}
 		upkeep = {
 			food = 2

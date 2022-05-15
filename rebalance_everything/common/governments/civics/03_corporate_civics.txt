@@ -40,7 +40,9 @@ civic_trading_posts = {
 	}
 	random_weight = { base = 5 }
 	modifier = {
-		country_starbase_capacity_add = 4
+		country_starbase_capacity_add = 2
+		station_gatherers_produces_mult = 0.20
+		station_researchers_produces_mult = 0.20
 	}
 }
 
@@ -175,8 +177,9 @@ civic_criminal_heritage = {
 	}
 	random_weight = { base = 5 }
 	modifier = {
-		spy_network_daily_value_mult = 0.20
+		spy_network_daily_value_mult = 0.5
 		intel_decryption_add = 1
+		planet_branch_offices_cost_mult = 0.5
 	}
 
 	description = "civic_tooltip_criminal_heritage_effects"
@@ -234,9 +237,7 @@ civic_indentured_assets = {
 		}
 		civics = {
 			NOR = {
-				value = civic_corporate_hedonism
 				value = civic_slaver_guilds
-				value = civic_pleasure_seekers
 			}
 		}
 	}
@@ -350,8 +351,6 @@ civic_corporate_hedonism = {
 		civics = {
 			NOR = {
 				value = civic_pleasure_seekers
-				value = civic_indentured_assets
-				value = civic_slaver_guilds
 			}
 		}
 	}
@@ -423,7 +422,6 @@ civic_permanent_employment = {
 		}
 		origin = {
 			NOR = {
-				value = origin_necrophage
 				value = origin_mechanists
 				value = origin_clone_army
 			}

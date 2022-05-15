@@ -617,7 +617,7 @@ building_holotemple = {
 				is_spiritualist = no
 			}
 			has_modifier = slave_colony
-			buildings_no_crystals = yes
+			buildings_no_exotic_gases = yes
 		}
 	}
 
@@ -631,11 +631,11 @@ building_holotemple = {
 		category = planet_buildings
 		cost = {
 			minerals = @b2_minerals
-			rare_crystals = @b2_rare_cost
+			exotic_gases = @b2_rare_cost
 		}
 		upkeep = {
 			energy = @b2_upkeep
-			rare_crystals = @b2_rare_upkeep
+			exotic_gases = @b2_rare_upkeep
 		}
 	}
 
@@ -715,6 +715,7 @@ building_sacred_nexus = {
 			}
 			has_modifier = slave_colony
 			buildings_no_crystals = yes
+			buildings_no_exotic_gases = yes
 		}
 	}
 
@@ -728,11 +729,13 @@ building_sacred_nexus = {
 		category = planet_buildings
 		cost = {
 			minerals = @b3_minerals
-			rare_crystals = @b3_rare_cost
+			rare_crystals = @b2_rare_cost
+			exotic_gases = @b2_rare_cost
 		}
 		upkeep = {
 			energy = @b3_upkeep
-			rare_crystals = @b3_rare_upkeep
+			rare_crystals = @b2_rare_upkeep
+			exotic_gases = @b2_rare_upkeep
 		}
 	}
 
