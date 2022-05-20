@@ -110,7 +110,7 @@ civic_beacon_of_liberty = {
 	modifier = {
 		country_unity_produces_mult = 0.15
 		empire_size_pops_mult = -0.15
-
+		num_tech_alternatives_add = 1
 	}
 }
 
@@ -189,6 +189,7 @@ civic_meritocracy = {
 	modifier = {
 		leader_skill_levels = 1
 		planet_jobs_specialist_produces_mult = 0.10
+		planet_jobs_ruler_produces_mult = 0.10
 	}
 }
 
@@ -470,7 +471,7 @@ civic_free_haven = {
 	}
 	random_weight = { base = 5 }
 	modifier = {
-		trade_value_mult = 0.05
+		trade_value_mult = 0.1
 		pop_growth_from_immigration = 0.3
 		planet_immigration_pull_mult = 0.50
 	}
@@ -570,6 +571,7 @@ civic_shadow_council = {
 		country_election_cost_mult = -0.75
 		planet_jobs_ruler_produces_mult = 0.10
 		intel_decryption_add = 1
+		intel_encryption_add = 1
 	}
 }
 

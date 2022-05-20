@@ -1096,6 +1096,15 @@ embraced_turtle_slavery_modifier = {
 	pop_ethic_authoritarian_attraction_mult = 0.7
 }
 
+sentient_storms = {
+	planet_jobs_physics_research_produces_mult = 0.30
+	planet_jobs_unity_produces_mult = 0.20
+	pop_ethic_spiritualist_attraction_mult = 0.20
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_wild_storms.dds"
+	icon_frame = 1
+}
+
 ##########################################################################
 # Leader Skill Modifiers
 ##########################################################################

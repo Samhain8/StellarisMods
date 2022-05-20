@@ -214,7 +214,7 @@ civic_private_military_companies = {
 		}
 
 		modifier = {
-			country_enclave_capacity_add = 1
+			country_enclave_capacity_add = 2
 		}
 	}
 }

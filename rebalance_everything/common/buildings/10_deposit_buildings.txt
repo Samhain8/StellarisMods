@@ -170,7 +170,7 @@ building_betharian_power_plant = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_technician_add = 4
+			job_technician_add = 5
 		}
 	}
 
@@ -237,6 +237,7 @@ building_xeno_zoo = {
 
 	planet_modifier = {
 		job_entertainer_add = 2
+		job_researcher_add = 1
 		planet_jobs_society_research_produces_mult = 0.20
 	}
 
