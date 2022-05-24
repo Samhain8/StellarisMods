@@ -1166,7 +1166,7 @@ subject_is_protectorate = {
 		}
 	}
 	target_modifier = {
-		subject_tech_cost_mult = -0.80
+		subject_tech_cost_mult = -0.90
 	}
 
 	extra_term_text_subject = protectorate_extra_subject

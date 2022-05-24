@@ -21,8 +21,8 @@ holding_garrison = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = planet.owner
-			planet.owner = { has_active_tradition = tr_domination_adopt }
+			exists = planet.owner.overlord
+			planet.owner.overlord = { has_active_tradition = tr_domination_adopt }
 		}
 		monthly_loyalty = 1
 		planet_stability_add = 10
