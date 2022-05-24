@@ -1,7 +1,7 @@
 tr_domination_adopt = {
-	modifier = {
-		deposit_blockers_cost_mult = -0.33
-	}
+	#modifier = {
+	#	deposit_blockers_cost_mult = -0.33
+	#}
 
 	tradition_swap = {
 		name = tr_domination_adopt_void

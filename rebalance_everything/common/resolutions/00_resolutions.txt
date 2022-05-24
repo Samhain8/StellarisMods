@@ -98,7 +98,7 @@ resolution_galactic_market_form = {
 	}
 
 	ai_weight = {
-		base = @resolution_weight_popular
+		base = 8
 
 		modifier = {
 			factor = 2
@@ -135,13 +135,13 @@ resolution_galactic_market_form = {
 
 		modifier = {
 			factor = 2
-			years_passed > 100
+			years_passed > 75
 			desc = gal_com_years_passed
 		}
 
 		modifier = {
 			factor = 2
-			years_passed > 150
+			years_passed > 100
 			desc = gal_com_years_passed
 		}
 	}
