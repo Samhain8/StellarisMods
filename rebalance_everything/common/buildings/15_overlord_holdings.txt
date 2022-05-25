@@ -395,7 +395,7 @@ holding_energy_requisitorium = {
 	}
 
 	planet_modifier = {
-		monthly_loyalty = -0.25
+		monthly_loyalty = -0.75
 	}
 
 	on_built = {
@@ -446,7 +446,7 @@ holding_material_requisitorium = {
 	}
 
 	planet_modifier = {
-		monthly_loyalty = -0.5
+		monthly_loyalty = -0.75
 	}
 
 	on_built = {
@@ -501,15 +501,7 @@ holding_produce_requisitorium = {
 	}
 
 	planet_modifier = {
-		monthly_loyalty = -0.25
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner.overlord
-			owner.overlord = { is_gestalt = no }
-		}
-		monthly_loyalty = -0.25
+		monthly_loyalty = -0.75
 	}
 
 	on_built = {
@@ -749,7 +741,7 @@ holding_offworld_foundry = {
 	}
 
 	planet_modifier = {
-		monthly_loyalty = -1
+		monthly_loyalty = -0.75
 	}
 
 	triggered_planet_modifier = {

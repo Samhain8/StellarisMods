@@ -58,7 +58,7 @@ civic_media_conglomerate = {
 	}
 	random_weight = { base = 5 }
 	modifier = {
-		country_war_exhaustion_mult = -0.05
+		country_war_exhaustion_mult = -0.1
 		pop_citizen_happiness = 0.05
 	}
 }
@@ -82,7 +82,11 @@ civic_naval_contractors = {
 		civics = { NOT = { value = civic_citizen_service } }
 	}
 	modifier = {
-		country_naval_cap_mult = 0.15
+		country_naval_cap_mult = 0.1
+		ship_corvette_cost_mult = -0.1
+		ship_destroyer_cost_mult = -0.1
+		ship_cruiser_cost_mult = -0.1
+		ship_battleship_cost_mult = -0.1
 	}
 	swap_type = {
 		trigger = {
@@ -90,7 +94,7 @@ civic_naval_contractors = {
 		}
 
 		modifier = {
-			country_enclave_capacity_add = 2
+			country_enclave_capacity_add = 1
 		}
 	}
 }
@@ -104,8 +108,8 @@ civic_free_traders = {
 	}
 	random_weight = { base = 5 }
 	modifier = {
-		trade_value_mult = 0.10
-		branch_office_value_mult = 0.10
+		trade_value_mult = 0.15
+		planet_branch_offices_cost_mult = -0.15
 	}
 }
 
@@ -161,8 +165,8 @@ civic_ruthless_competition = {
 	}
 	random_weight = { base = 5 }
 	modifier = {
-		leader_skill_levels = 1
-		species_leader_exp_gain = 0.1
+		leader_skill_levels = 2
+		species_leader_exp_gain = 0.33
 		intel_decryption_add = 1
 	}
 }
@@ -207,6 +211,7 @@ civic_private_military_companies = {
 		army_starting_experience_add = 100
 		army_damage_mult = 0.2
 		armies_upkeep_mult = -0.2
+		country_alloys_produces_mult = 0.1
 	}
 	swap_type = {
 		trigger = {
@@ -214,7 +219,7 @@ civic_private_military_companies = {
 		}
 
 		modifier = {
-			country_enclave_capacity_add = 2
+			country_enclave_capacity_add = 1
 		}
 	}
 }

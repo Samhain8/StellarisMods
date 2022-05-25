@@ -299,7 +299,10 @@ preset_bulwark = {
 		}
 		modifier = {
 			add = @specialist_unaligned_ethics_value
-			is_pacifist = yes
+			OR = {
+				is_pacifist = yes
+				is_xenophile = yes
+			}
 		}
 	}
 
@@ -364,7 +367,10 @@ preset_scholarium = {
 		base =  @specialist_base_acceptance_value
 		modifier = {
 			add = @specialist_aligned_ethics_value
-			is_materialist = yes
+			OR = {
+				is_materialist = yes
+				is_pacifist = yes
+			}
 		}
 		modifier = {
 			factor = 0.5
@@ -381,11 +387,17 @@ preset_scholarium = {
 		base =  @specialist_base_acceptance_value
 		modifier = {
 			add = @specialist_aligned_ethics_value
-			is_materialist = yes
+			OR = {
+				is_materialist = yes
+				is_pacifist = yes
+			}
 		}
 		modifier = {
 			add = @specialist_unaligned_ethics_value
-			is_spiritualist = yes
+			OR = {
+				is_militarist = yes
+				is_xenophobe = yes
+			}
 		}
 	}
 
@@ -477,7 +489,10 @@ preset_prospectorium = {
 		}
 		modifier = {
 			add = @specialist_unaligned_ethics_value
-			is_militarist = yes
+			OR = {
+				is_militarist = yes
+				is_spiritualist = yes
+			}
 		}
 	}
 
