@@ -22,14 +22,14 @@ overlord_propagandist = {
 	resources = {
 		category = planet_overlord_propagandists
 		upkeep = {
-			unity = 1
+			unity = 2
 		}
 	}
 
 	overlord_resources = {
 		category = planet_overlord_propagandists
 		produces = {
-			influence = 0.15
+			influence = 0.25
 		}
 	}
 
@@ -63,14 +63,14 @@ overlord_propagandist_drone = {
 	resources = {
 		category = planet_overlord_propagandists
 		upkeep = {
-			unity = 1
+			unity = 2
 		}
 	}
 
 	overlord_resources = {
 		category = planet_overlord_propagandists
 		produces = {
-			influence = 0.15
+			influence = 0.25
 		}
 	}
 
@@ -212,14 +212,14 @@ overlord_trader = {
 	resources = {
 		category = planet_overlord_traders
 		upkeep = {
-			energy = 7
+			energy = 6
 		}
 	}
 
 	overlord_resources = {
 		category = planet_overlord_traders
 		produces = {
-			energy = 7
+			energy = 12
 		}
 	}
 
@@ -262,14 +262,14 @@ overlord_trader_drone = {
 	resources = {
 		category = planet_overlord_traders
 		upkeep = {
-			energy = 7
+			energy = 6
 		}
 	}
 
 	overlord_resources = {
 		category = planet_overlord_traders
 		produces = {
-			energy = 7
+			energy = 12
 		}
 	}
 

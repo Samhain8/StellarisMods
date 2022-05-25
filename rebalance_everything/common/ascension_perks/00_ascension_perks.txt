@@ -983,7 +983,9 @@ ap_grasp_the_void = {
 	}
 
 	modifier = {
-		country_starbase_capacity_add = 5
+		country_starbase_capacity_add = 3
+		station_gatherers_produces_mult = 0.30
+		station_researchers_produces_mult = 0.30
 	}
 
 	potential = {
@@ -1220,6 +1222,7 @@ ap_mastery_of_nature = {
 ap_imperial_prerogative = {
 	modifier = {
 		empire_size_colonies_mult = -0.50
+		empire_size_systems_mult = -0.25
 	}
 
 	potential = {

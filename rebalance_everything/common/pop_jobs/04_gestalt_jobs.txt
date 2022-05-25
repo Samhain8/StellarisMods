@@ -708,6 +708,7 @@ catalytic_drone = {
 		category = planet_metallurgists
 		produces = {
 			alloys = 3
+			society_research = 1
 		}
 		produces = {
 			trigger = {
@@ -914,7 +915,7 @@ patrol_drone = {
 	}
 
 	planet_modifier = {
-		planet_crime_no_happiness_add = -20
+		planet_crime_no_happiness_add = -12
 	}
 
 	pop_modifier = {

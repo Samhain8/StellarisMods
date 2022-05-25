@@ -124,7 +124,10 @@ military_service_limited = {
 		hidden_trigger = { exists = from }
 		custom_tooltip = {
 			fail_text = same_species_disallowed
-			NOT = { is_same_species = from }
+			NAND = { 
+				is_same_species = from 
+				NOT = { has_citizenship_type = { country = from type = citizenship_slavery } }
+			}
 		}
 		custom_tooltip = {
 			fail_text = species_is_being_purged

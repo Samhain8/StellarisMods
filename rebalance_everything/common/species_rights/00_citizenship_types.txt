@@ -328,10 +328,6 @@ citizenship_limited = {
 			}
 		}
 		custom_tooltip = {
-			fail_text = same_species_disallowed
-			NOT = { is_same_species = from }
-		}
-		custom_tooltip = {
 			fail_text = "lonely_hive_mind_pops_kill_themselves_citizenship"
 			is_lonely_hive_mind_pop = no
 		}
@@ -357,23 +353,25 @@ citizenship_limited = {
 		}
 	}
 	ai_will_do = {
-		factor = 3
+		factor = 2
 		modifier = {
 			factor = 0
 			from = {
-				has_valid_ai_personality = yes
-				has_ai_personality_behaviour = multispecies
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+		modifier = {
+			factor = 0.5
+			from = {
+				OR = {
+					has_ethic = ethic_fanatic_xenophile
+					has_ethic = ethic_egalitarian
+				}
 			}
 		}
 		modifier = {
 			factor = 0
-			from = {
-				has_valid_ai_personality = no
-				OR = {
-					has_ethic = ethic_xenophile
-					has_ethic = ethic_fanatic_xenophile
-				}
-			}
+			is_same_species = from
 		}
 	}
 }
@@ -410,10 +408,6 @@ citizenship_slavery = {
 			}
 		}
 		custom_tooltip = {
-			fail_text = same_species_disallowed
-			NOT = { is_same_species = from }
-		}
-		custom_tooltip = {
 			fail_text = "lonely_hive_mind_pops_kill_themselves_citizenship"
 			is_lonely_hive_mind_pop = no
 		}
@@ -442,15 +436,6 @@ citizenship_slavery = {
 			}
 		}
 		custom_tooltip = {
-			fail_text = empire_xenophile
-			from = {
-				NOR = {
-					has_ethic = ethic_xenophile
-					has_ethic = ethic_fanatic_xenophile
-				}
-			}
-		}
-		custom_tooltip = {
 			fail_text = "FANATIC_PURIFIERS_MUST_PURIFY"
 			OR = {
 				NOT = { from = { has_valid_civic = civic_fanatic_purifiers } }
@@ -461,12 +446,9 @@ citizenship_slavery = {
 			fail_text = does_not_embrace_species_slavery
 			from = {
 				allows_slavery = yes
-				OR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-					has_ethic = ethic_authoritarian
-					has_ethic = ethic_fanatic_authoritarian
-					has_ethic = ethic_gestalt_consciousness
+				NOR = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
 				}
 			}
 		}
@@ -481,30 +463,28 @@ citizenship_slavery = {
 		}
 	}
 	ai_will_do = {
-		factor = 15
+		factor = 0.75
 		modifier = {
 			factor = 0
 			from = {
-				has_valid_ai_personality = yes
-				NOT = {
-					has_ai_personality_behaviour = slaver
-				}
-				NAND = {
-					is_ai = no
-					is_xenophobe = yes
+				OR = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
 				}
 			}
 		}
 		modifier = {
-			factor = 0
+			factor = 0.5
 			from = {
-				is_authoritarian = no
-				is_xenophobe = no
-				is_hive_empire = no
+				OR = {
+					has_ethic = ethic_fanatic_xenophile
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
 			}
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.5
 			from = {
 				is_galactic_community_member = yes
 			}
@@ -516,6 +496,32 @@ citizenship_slavery = {
 		modifier = {
 			factor = 2
 			has_species_flag = syncretic_species@from
+		}
+		modifier = {
+			factor = 10
+			from = {
+				OR = {
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			from = {
+				OR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_xenophobe
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			has_trait = trait_syncretic_proles
+		}
+		modifier = {
+			factor = 0
+			is_same_species = from
 		}
 	}
 }

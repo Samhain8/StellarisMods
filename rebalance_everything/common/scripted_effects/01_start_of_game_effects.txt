@@ -253,6 +253,7 @@ generate_start_deposits_and_blockers = {
 		limit = {
 			owner = {
 				NOT = { has_origin = origin_machine }
+				NOT = { has_origin = origin_imperial_vassal }
 			}
 		}
 		add_deposit = d_decrepit_dwellings
@@ -267,6 +268,7 @@ generate_start_deposits_and_blockers = {
 				NOR = {
 					has_valid_civic = civic_hive_devouring_swarm
 					has_origin = origin_lithoid
+					has_origin = origin_imperial_vassal
 				}
 			}
 		}
@@ -808,24 +810,138 @@ generate_start_deposits_and_blockers = {
 		add_deposit = d_teeming_reef
 		add_deposit = d_teeming_reef
 		add_deposit = d_teeming_reef
-		add_deposit = d_teeming_reef
-		add_deposit = d_teeming_reef
+		add_deposit = d_lush_jungle
+		add_deposit = d_lush_jungle
+		add_deposit = d_green_hills
 
 		# Minerals
 		add_deposit = d_submerged_ore_veins
 		add_deposit = d_submerged_ore_veins
-		add_deposit = d_submerged_ore_veins
+		add_deposit = d_ore_rich_caverns
+		add_deposit = d_ore_rich_caverns
 
 		# Energy
 		add_deposit = d_underwater_vent
 		add_deposit = d_underwater_vent
-		add_deposit = d_underwater_vent
+		add_deposit = d_rushing_waterfalls
+		add_deposit = d_hot_springs
+		add_deposit = d_hot_springs
 
 		# Bonus
 		add_deposit = d_crystal_reef
-		random_list = {
-			50 = { add_deposit = d_submerged_ore_veins }
-			50 = { add_deposit = d_underwater_vent }
+	}
+
+	if = {
+		limit = {
+			owner = {
+				has_origin = origin_imperial_vassal
+			}
+			OR = {
+				is_planet_class = pc_desert
+				is_planet_class = pc_arid
+				is_planet_class = pc_savannah
+			}
+		}
+
+		set_planet_size = 15
+
+		clear_deposits = yes
+		clear_blockers = yes
+
+		add_deposit = d_burrowing_titans
+		add_deposit = d_dust_desert
+		add_deposit = d_dust_desert
+		add_deposit = d_betharian_deposit
+
+		add_deposit = d_searing_desert
+		add_deposit = d_searing_desert
+
+		add_deposit = d_ore_rich_caverns
+		add_deposit = d_ore_rich_caverns
+		add_deposit = d_prosperous_mesa
+
+		add_deposit = d_fungal_caves
+		add_deposit = d_nutritious_mudland
+		add_deposit = d_nutritious_mudland
+	}
+
+	if = {
+		limit = {
+			owner = {
+				has_origin = origin_imperial_vassal
+			}
+			OR = {
+				is_planet_class = pc_arctic
+				is_planet_class = pc_tundra
+				is_planet_class = pc_alpine
+			}
+		}
+
+		set_planet_size = 13
+
+		add_modifier = { modifier = sentient_storms }
+
+		clear_deposits = yes
+		clear_blockers = yes
+
+		add_deposit = d_crystal_forest
+		add_deposit = d_alien_pets_deposit
+
+		add_deposit = d_tempestous_mountain
+		add_deposit = d_frozen_gas_lake
+		add_deposit = d_hot_springs
+
+		add_deposit = d_veiny_cliffs
+		add_deposit = d_rich_mountain
+
+		add_deposit = d_forgiving_tundra
+		add_deposit = d_forgiving_tundra
+		add_deposit = d_great_river
+	}
+
+	if = {
+		limit = {
+			owner = {
+				has_origin = origin_imperial_vassal
+			}
+			OR = {
+				is_planet_class = pc_continental
+				is_planet_class = pc_tropical
+				is_planet_class = pc_ocean
+			}
+		}
+
+		set_planet_size = 13
+
+		clear_deposits = yes
+		clear_blockers = yes
+
+		add_deposit = d_ancient_concealed_stardocks
+		add_deposit = d_familiar_predators
+		add_deposit = d_fuming_bog
+
+		add_deposit = d_rushing_waterfalls
+		add_deposit = d_rushing_waterfalls
+
+		add_deposit = d_veiny_cliffs
+		add_deposit = d_submerged_ore_veins
+
+		add_deposit = d_rugged_woods
+		add_deposit = d_rugged_woods
+		add_deposit = d_boggy_fens
+		add_deposit = d_tropical_island
+	}
+
+	if = {
+		limit = {
+			owner = {
+				is_lithoid_empire = yes
+				has_origin = origin_imperial_vassal
+			}
+		}
+		while = {
+			count = 2
+			add_deposit = d_hibernating_lithoids
 		}
 	}
 }

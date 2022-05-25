@@ -266,6 +266,29 @@ miner = {
 		}
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_mining_guilds }
+		}
+		trade_value_add = 1
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_valid_civic = civic_agrarian_idyll 
+				owner_species = {
+   					has_trait = trait_lithoid
+   				}
+			}
+		}
+		planet_amenities_add = 2
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
 	overlord_resources = {
 		category = planet_requisitioned_minerals
 		produces = {
@@ -1039,7 +1062,7 @@ ranger = {
 	resources = {
 		category = planet_culture_workers
 		produces = {
-			society_research = 2
+			unity = 2
 		}
 	}
 
@@ -1047,13 +1070,13 @@ ranger = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 3
+		planet_amenities_add = 6
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
 	weight = {
 		weight = @worker_job_weight
-		mult = value:job_weights_modifier|JOB|culture_worker|RESOURCE|society_research|
+		mult = value:job_weights_modifier|JOB|culture_worker|RESOURCE|unity|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {
 			factor = 1.5

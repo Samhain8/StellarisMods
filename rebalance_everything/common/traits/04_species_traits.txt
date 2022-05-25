@@ -619,7 +619,7 @@ trait_wasteful = {
 trait_cybernetic = {
 	cost = 0
 
-	opposites = { "trait_latent_psionic" "trait_psionic" }
+	#opposites = { "trait_latent_psionic" "trait_psionic" }
 
 	improves_leaders = yes
 	initial = no
@@ -651,7 +651,7 @@ trait_latent_psionic = {
 	potential_crossbreeding_chance = 0.25
 	icon = "gfx/interface/icons/traits/trait_psionic_species.dds"
 
-	opposites = { "trait_cybernetic" }
+	#opposites = { "trait_cybernetic" }
 
 	initial = no
 	randomized = no
@@ -670,7 +670,7 @@ trait_latent_psionic = {
 		planet_jobs_engineering_research_produces_mult = 0.05
 		planet_jobs_physics_research_produces_mult = 0.05
 		planet_jobs_society_research_produces_mult = 0.05
-		planet_jobs_energy_produces_mult = 0.05
+		planet_jobs_unity_produces_mult = 0.05
 	}
 	slave_cost = {
 		energy = 1500
@@ -682,7 +682,7 @@ trait_psionic = {
 	potential_crossbreeding_chance = 0.25
 	icon = "gfx/interface/icons/traits/trait_psionic_species.dds"
 
-	opposites = { "trait_cybernetic" }
+	#opposites = { "trait_cybernetic" }
 
 	improves_leaders = yes
 	initial = no
@@ -700,10 +700,11 @@ trait_psionic = {
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 	modifier = {
-		planet_jobs_engineering_research_produces_mult = 0.10
-		planet_jobs_physics_research_produces_mult = 0.10
-		planet_jobs_society_research_produces_mult = 0.10
-		planet_jobs_energy_produces_mult = 0.10
+		planet_jobs_engineering_research_produces_mult = 0.05
+		planet_jobs_physics_research_produces_mult = 0.05
+		planet_jobs_society_research_produces_mult = 0.05
+		planet_jobs_unity_produces_mult = 0.05
+		planet_jobs_produces_mult = 0.05
 		pop_happiness = 0.05
 	}
 	slave_cost = {

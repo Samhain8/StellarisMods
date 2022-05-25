@@ -726,7 +726,6 @@ origin_necrophage = {
 				value = civic_death_cult
 				value = civic_death_cult_corporate
 				value = civic_hive_empath
-				value = civic_permanent_employment
 			}
 		}
 	}

@@ -155,7 +155,7 @@ trait_lithoid = {
 }
 
 trait_aquatic = {
-	cost = 1
+	cost = 2
 	host_has_dlc = "Aquatics Species Pack"
 
 	sorting_priority = 20
@@ -298,7 +298,7 @@ trait_aquatic = {
 		potential = {
 			has_modifier = flooded_habitat
 		}
-		pop_environment_tolerance = 0.2
+		pop_environment_tolerance = 0.4 #Flooding habitat does -20% hab, don't just counter the negative, add ocean bonus
 	}
 	modifier = {
 		pc_ocean_habitability = 0.2

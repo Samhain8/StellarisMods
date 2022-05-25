@@ -118,8 +118,8 @@ imperialist = {
 		unfulfilled_title = "IMPERIALIST_NO_PHILOSOPHY"
 		desc = "IMPERIALIST_PHILOSOPHY_DESC"
 
-		unfulfilled_effect = -30
-		fulfilled_effect = 0.001
+		unfulfilled_effect = -20
+		fulfilled_effect = 5
 
 		potential = {
 			exists = owner
@@ -267,7 +267,7 @@ imperialist = {
 		unfulfilled_title = "IMPERIALIST_NOT_OVERLORD"
 		desc = "IMPERIALIST_OVERLORD_DESC"
 
-		fulfilled_effect = 5
+		fulfilled_effect = 15
 		unfulfilled_effect = -0.001
 
 		potential = {
