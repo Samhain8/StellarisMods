@@ -117,8 +117,9 @@ building_precinct_house = {
 	category = government
 
 	potential = {
-		owner = { is_regular_empire = yes }
-		NOT = { has_modifier = slave_colony }
+		#owner = { is_regular_empire = yes }
+		#NOT = { has_modifier = slave_colony }
+		always = no
 	}
 
 	allow = {
@@ -189,8 +190,9 @@ building_hall_judgment = {
 	can_build = no
 
 	potential = {
-		owner = { is_regular_empire = yes }
-		NOT = { has_modifier = slave_colony }
+		#owner = { is_regular_empire = yes }
+		#NOT = { has_modifier = slave_colony }
+		always = no
 	}
 
 	destroy_trigger = {
@@ -218,7 +220,8 @@ building_hall_judgment = {
 	}
 
 	prerequisites = {
-		"tech_colonial_centralization"
+		#"tech_colonial_centralization"
+		"tech_planetary_government"
 	}
 
 	triggered_desc = {

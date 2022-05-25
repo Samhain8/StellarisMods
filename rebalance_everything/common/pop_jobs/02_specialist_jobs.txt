@@ -314,7 +314,7 @@ enforcer = {
 				exists = owner
 				owner = { has_active_tradition = tr_domination_judgment_corps }
 			}
-			unity = 1
+			unity = 2
 		}
 		upkeep = {
 			trigger = {
