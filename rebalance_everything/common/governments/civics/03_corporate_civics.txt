@@ -82,9 +82,9 @@ civic_naval_contractors = {
 		civics = { NOT = { value = civic_citizen_service } }
 	}
 	modifier = {
-		country_command_limit_add = 10
-		ship_corvette_cost_mult = -0.1
-		ship_destroyer_cost_mult = -0.1
+		country_command_limit_add = 20
+		ship_corvette_cost_mult = -0.15
+		ship_destroyer_cost_mult = -0.15
 		ship_cruiser_cost_mult = -0.1
 		ship_battleship_cost_mult = -0.1
 	}
