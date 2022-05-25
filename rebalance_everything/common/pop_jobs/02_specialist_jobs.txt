@@ -604,6 +604,7 @@ entertainer = {
 			exists = planet
 			planet = {
 				free_amenities < 2
+				has_available_jobs = entertainer
 			}
 		}
 	}
@@ -1060,6 +1061,7 @@ healthcare = {
 			NOT = { has_job = healthcare }
 			planet = {
 				free_amenities < 0
+				has_available_jobs = healthcare
 			}
 		}
 	}

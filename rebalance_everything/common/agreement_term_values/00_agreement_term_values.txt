@@ -191,6 +191,8 @@ specialist_prospectorium = {
 @subsidy_minimum = -0.75
 @subsidy_maximum = 0.75
 
+@set_factor_0 = 0.15
+@set_factor_0_neg = -0.15
 @set_factor_1 = 0.30
 @set_factor_1_neg = -0.30
 @set_factor_2 = 0.45
