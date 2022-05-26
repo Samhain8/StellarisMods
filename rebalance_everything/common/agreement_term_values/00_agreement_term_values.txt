@@ -215,7 +215,7 @@ resource_subsidies_basic = {
 		base = @subsidy_minimum
 
 		modifier = {
-			set = 0.15
+			set = @set_factor_1
 			OR = {
 				agreement_preset = preset_prospectorium
 				agreement_preset = preset_tributary
@@ -281,7 +281,7 @@ resource_subsidies_advanced = {
 		base = @subsidy_minimum
 
 		modifier = {
-			set = 0.15
+			set = @set_factor_0
 			agreement_preset = preset_prospectorium
 		}
 

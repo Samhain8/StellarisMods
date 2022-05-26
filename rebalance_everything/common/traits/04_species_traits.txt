@@ -357,8 +357,8 @@ trait_nomadic = {
 	opposites = { "trait_sedentary" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		pop_growth_from_immigration = 0.15
-		pop_resettlement_cost_mult = -0.25
+		pop_growth_from_immigration = 0.25
+		pop_resettlement_cost_mult = -0.35
 	}
 	slave_cost = {
 		energy = 500
@@ -371,8 +371,8 @@ trait_sedentary = {
 	opposites = { "trait_nomadic" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		pop_growth_from_immigration = -0.15
-		pop_resettlement_cost_mult = 0.25
+		pop_growth_from_immigration = -0.25
+		pop_resettlement_cost_mult = 0.35
 	}
 	ai_weight = {
 		weight = 0
