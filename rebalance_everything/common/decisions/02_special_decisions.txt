@@ -29,7 +29,12 @@ decision_prospect = {
 		custom_tooltip = decision_prospect_effects_short
 		hidden_effect = {
 			set_planet_flag = planet_prospected
-			add_random_non_blocker_deposit = yes
+			random_list = {
+				7 = { add_random_non_blocker_deposit = yes }
+				1 = { add_deposit = d_dust_caverns }
+				1 = { add_deposit = d_bubbling_swamp }
+				1 = { add_deposit = d_crystalline_caverns }
+			}
 			create_message = {
 				type = MESSAGE_TYPE_PLANET_PROSPECTED
 				localization = MESSAGE_PLANET_PROSPECTED
