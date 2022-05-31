@@ -546,7 +546,14 @@ entertainer = {
 		upkeep = {
 			consumer_goods = 1
 		}
+		upkeep = {
+			trigger = {
+				owner = { is_pleasure_seeker = yes }
+			}
+			consumer_goods = 1
+		}
 	}
+
 	triggered_planet_modifier = {
 		potential = {
 			always = yes
@@ -563,6 +570,15 @@ entertainer = {
 		modifier = {
 			pop_growth_speed = 0.025
 		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_pleasure_seeker = yes }
+		}
+		trade_value_add = 4
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
 	}
 
 	weight = {

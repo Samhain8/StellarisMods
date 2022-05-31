@@ -219,7 +219,6 @@ resource_subsidies_basic = {
 			OR = {
 				agreement_preset = preset_prospectorium
 				agreement_preset = preset_tributary
-				agreement_preset = preset_subsidiary
 			}
 		}
 
@@ -228,6 +227,13 @@ resource_subsidies_basic = {
 			OR = {
 				agreement_preset = preset_vassal
 				agreement_preset = preset_scholarium
+			}
+		}
+
+		modifier = {
+			set = 0.0
+			OR = {
+				agreement_preset = preset_subsidiary
 			}
 		}
 	}
@@ -341,7 +347,6 @@ resource_subsidies_research = {
 		modifier = {
 			set = 0.0
 			OR = {
-				agreement_preset = preset_subsidiary
 				agreement_preset = preset_tributary
 			}
 		}
@@ -355,6 +360,7 @@ resource_subsidies_research = {
 			set = @set_factor_2_neg
 			OR = {
 				agreement_preset = preset_vassal
+				agreement_preset = preset_subsidiary
 				agreement_preset = preset_bulwark
 			}
 		}

@@ -16,16 +16,16 @@ servant = {
 		can_take_servant_job = yes
 	}
 
-	resources = {
-		category = planet_jobs
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { is_pleasure_seeker = yes }
-			}
-			consumer_goods = 1
-		}
-	}
+	#resources = {
+	#	category = planet_jobs
+	#	produces = {
+	#		trigger = {
+	#			exists = owner
+	#			owner = { is_pleasure_seeker = yes }
+	#		}
+	#		consumer_goods = 1
+	#	}
+	#}
 
 	triggered_pop_modifier = {
 		potential = {
@@ -49,6 +49,24 @@ servant = {
 		}
 		trade_value_add = 1
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_pleasure_seeker = yes }
+		}
+		modifier = {
+			pop_growth_speed = 0.01
+		}
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_pleasure_seeker = yes }
+		}
+		pop_housing_usage_add = -0.15
 	}
 
 	weight = {

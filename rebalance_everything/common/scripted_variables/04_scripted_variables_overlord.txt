@@ -25,13 +25,13 @@
 @ShareTechTimer = 3600
 
 # SALVAGERS (amounts in Energy Credits unless otherwise specified)
-@ScrapCost = -300
+@ScrapCost = -200
 @ScrapOrganicCost = -200
-@ScrapTier1Alloys = 20
+@ScrapTier1Alloys = 30
 @ScrapTier1Food = 600 # flat food reward for scrapping an organic fleet
-@ScrapValueMultiplier = 0.08 # scrap value = THIS x fleet power
+@ScrapValueMultiplier = 0.12 # scrap value = THIS x fleet power
 @ScrapValueOrganicMult = 0.2 # 80% reduction given lack of organic material
-@ScrapFleetPowerCap = 60000 # any fleet power above this will be valued at THIS x @ScrapValueMultiplier
+@ScrapFleetPowerCap = 100000 # any fleet power above this will be valued at THIS x @ScrapValueMultiplier
 @ScrapFleetTimer = 1800 # days before an empire can use the 'scrap fleet' service again
 
 @SalvageTier1Minerals = 130

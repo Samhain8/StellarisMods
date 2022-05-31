@@ -734,12 +734,12 @@ civic_shared_burden = {
 		authority = { NOT = { value = auth_corporate } }
 	}
 	possible = {
+		authority = { value = auth_dictatorial }
 		ethics = {
 			value = ethic_fanatic_egalitarian
 			NOR = {
-				text = civic_tooltip_not_xenophobe
-				value = ethic_xenophobe
-				value = ethic_fanatic_xenophobe
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
 			}
 		}
 		civics = {
@@ -752,7 +752,7 @@ civic_shared_burden = {
 	}
 	modifier = {
 		planet_stability_add = 5
-		pop_demotion_time_mult = -0.45
+		pop_demotion_time_mult = -0.9
 	}
 	random_weight = {
 		base = 1 # Should be fairly rare
