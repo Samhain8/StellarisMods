@@ -167,6 +167,7 @@ civic_philosopher_king = {
 	modifier = {
 		ruler_skill_levels = 2
 		diplo_weight_mult = 0.1
+		country_unity_produces_mult = 0.1
 		country_edict_fund_add = 20
 	}
 }
@@ -344,7 +345,7 @@ civic_slaver_guilds = {
 	random_weight = { base = 5 }
 	modifier = {
 		planet_jobs_slave_produces_mult = 0.10
-		country_pop_enslaved_mult = 0.35
+		#country_pop_enslaved_mult = 0.35
 	}
 }
 
@@ -415,16 +416,17 @@ civic_warrior_culture = {
 	description = "civic_tooltip_warrior_culture_effects"
 	modifier = {
 		army_damage_mult = 0.20
+		country_power_projection_influence_produces_add = 0.5
+		country_enclave_capacity_add = 1
 	}
-	swap_type = {
-		description = "civic_tooltip_warrior_culture_effects"
-		trigger = {
-			host_has_dlc = "Overlord"
-		}
-		modifier = {
-			country_enclave_capacity_add = 1
-		}
-	}
+	#swap_type = {
+	#	description = "civic_tooltip_warrior_culture_effects"
+	#	trigger = {
+	#		host_has_dlc = "Overlord"
+	#	}
+	#	modifier = {
+	#	}
+	#}
 }
 
 civic_distinguished_admiralty = {
@@ -446,7 +448,8 @@ civic_distinguished_admiralty = {
 	modifier = {
 		ship_fire_rate_mult = 0.10
 		admiral_skill_levels = 1
-		country_command_limit_add = 10
+		country_command_limit_add = 20
+		country_enclave_capacity_add = 1
 	}
 }
 
@@ -1159,6 +1162,10 @@ civic_catalytic_processing = {
 				value = civic_corporate_catalytic_processing
 			}
 		}
+	}
+	modifier = {
+		ship_hull_mult = 0.2
+		ship_hull_regen_add_perc = 0.5
 	}
 	random_weight = { base = 5 }
 }

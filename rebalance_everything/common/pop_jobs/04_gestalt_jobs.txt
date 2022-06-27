@@ -1685,7 +1685,7 @@ scrap_miner_drone = {
 	resources = {
 		category = planet_miners
 		produces = {
-			minerals = 2
+			minerals = 3
 			alloys = 1
 		}
 	}

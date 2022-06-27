@@ -335,7 +335,7 @@ trait_robot_repurposed_hardware = {
 }
 
 trait_robot_mass_produced = {
-	cost = 1
+	cost = 2
 	opposites = { "trait_robot_custom_made" }
 
 	allowed_archetypes = { ROBOT MACHINE }
@@ -349,7 +349,7 @@ trait_robot_mass_produced = {
 }
 
 trait_robot_custom_made = {
-	cost = -1
+	cost = -2
 	opposites = { "trait_robot_mass_produced" }
 
 	allowed_archetypes = { ROBOT MACHINE }

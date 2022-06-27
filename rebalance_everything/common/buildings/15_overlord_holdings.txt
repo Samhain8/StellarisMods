@@ -107,6 +107,7 @@ holding_orbital_assembly_complex = {
 
 	planet_modifier = {
 		planet_building_build_speed_mult = 0.10
+		monthly_loyalty = 0.25
 	}
 
 	triggered_planet_modifier = {
@@ -975,10 +976,6 @@ holding_parasitic_algorithms = {
 
 	country_modifier = {
 		all_technology_research_speed = 0.03
-	}
-
-	planet_modifier = {
-		monthly_loyalty = -1
 	}
 
 	triggered_planet_modifier = {

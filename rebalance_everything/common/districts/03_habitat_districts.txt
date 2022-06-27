@@ -193,6 +193,10 @@ district_hab_industrial = {
 		uses_district_set = habitat
 	}
 
+	allow = {
+		NOT = { has_modifier = slave_colony }
+	}
+
 	resources = {
 		category = planet_districts_hab_industrial
 		cost = {
@@ -591,6 +595,10 @@ district_hab_science = {
 		has_planet_flag = research_habitat
 	}
 
+	allow = {
+		NOT = { has_modifier = slave_colony }
+	}
+
 	resources = {
 		category = planet_districts_hab_research
 		cost = {
@@ -676,6 +684,10 @@ district_hab_commercial = {
 
 		exists = owner
 		owner = { is_gestalt = no }
+	}
+
+	allow = {
+		NOT = { has_modifier = slave_colony }
 	}
 
 	conversion_ratio = 0.5

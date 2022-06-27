@@ -275,7 +275,7 @@ decision_slave_colony = {
 		owner = {
 			is_regular_empire = yes
 		}
-		is_artificial = no
+		#is_artificial = no
 	}
 
 	allow = {

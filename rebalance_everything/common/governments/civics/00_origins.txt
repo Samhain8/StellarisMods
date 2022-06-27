@@ -173,6 +173,10 @@ origin_life_seeded = {
 		authority = { NOT = { value = auth_machine_intelligence } }
 	}
 
+	modifier = {
+		BIOLOGICAL_species_trait_points_add = 2
+	}
+
 	description = "civic_tooltip_life_seeded_effects"
 
 	random_weight = {

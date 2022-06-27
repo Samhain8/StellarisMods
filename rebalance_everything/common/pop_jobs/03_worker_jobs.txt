@@ -915,7 +915,7 @@ scrap_miner = {
 	resources = {
 		category = planet_miners
 		produces = {
-			minerals = 2
+			minerals = 3
 			alloys = 1
 		}
 	}

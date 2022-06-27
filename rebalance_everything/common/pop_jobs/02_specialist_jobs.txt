@@ -603,7 +603,7 @@ entertainer = {
 			has_job = entertainer
 		}
 		modifier = {
-			factor = 1.2
+			factor = 1.5
 			is_domestic_servant = yes
 		}
 		modifier = {
@@ -646,7 +646,7 @@ duelist = {
 	resources = {
 		category = planet_entertainers
 		produces = {
-			unity = 2
+			unity = 3
 		}
 		upkeep = {
 			alloys = 1

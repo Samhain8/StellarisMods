@@ -16,16 +16,23 @@ servant = {
 		can_take_servant_job = yes
 	}
 
-	#resources = {
-	#	category = planet_jobs
-	#	produces = {
-	#		trigger = {
-	#			exists = owner
-	#			owner = { is_pleasure_seeker = yes }
-	#		}
-	#		consumer_goods = 1
-	#	}
-	#}
+	resources = {
+		category = planet_jobs
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_slaver_civic = yes }
+			}
+			consumer_goods = 1
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_slaver_civic = yes }
+			}
+			minerals = 1
+		}
+	}
 
 	triggered_pop_modifier = {
 		potential = {
@@ -162,6 +169,18 @@ slave_toiler = {
 		planet = { has_modifier = slave_colony }
 	}
 
+	resources = {
+		category = planet_jobs
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_slaver_civic = yes }
+			}
+			minerals = 1
+			food = 1
+		}
+	}
+
 	triggered_planet_modifier = {
 		potential = {
 			always = yes
@@ -171,7 +190,7 @@ slave_toiler = {
 	}
 
 	weight = {
-		weight = @special_job_weight
+		weight = 0.001
 	}
 }
 

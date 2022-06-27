@@ -390,7 +390,7 @@ trait_communal = {
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 	modifier = {
-		pop_housing_usage_mult = -0.1
+		pop_housing_usage_mult = -0.15
 	}
 	slave_cost = {
 		energy = 500
@@ -405,7 +405,7 @@ trait_solitary = {
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 	modifier = {
-		pop_housing_usage_mult = 0.1
+		pop_housing_usage_mult = 0.15
 	}
 
 	ai_weight = {
@@ -417,13 +417,13 @@ trait_solitary = {
 }
 
 trait_charismatic = {
-	cost = 2
+	cost = 1
 	potential_crossbreeding_chance = 1.0
 
 	opposites = { "trait_repugnant" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		pop_job_amenities_mult = 0.20
+		pop_job_amenities_mult = 0.15
 	}
 	slave_cost = {
 		energy = 500
@@ -437,7 +437,7 @@ trait_repugnant = {
 	opposites = { "trait_charismatic" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		pop_job_amenities_mult = -0.20
+		pop_job_amenities_mult = -0.25
 	}
 
 	ai_weight = {
@@ -503,7 +503,7 @@ trait_deviants = {
 }
 
 trait_venerable = {
-	cost = 4
+	cost = 3
 	potential_crossbreeding_chance = 1.0
 	modifier = { leader_age = 80 }
 	opposites = { "trait_enduring" "trait_fleeting" "trait_fleeting_lithoid" }
@@ -525,9 +525,9 @@ trait_enduring = {
 }
 
 trait_fleeting = {
-	cost = -1
+	cost = -2
 	potential_crossbreeding_chance = 1.0
-	modifier = { leader_age = -10 }
+	modifier = { leader_age = -20 }
 	opposites = { "trait_venerable" "trait_enduring" "trait_fleeting_lithoid" }
 	allowed_archetypes = { BIOLOGICAL }
 	ai_weight = {
@@ -539,9 +539,9 @@ trait_fleeting = {
 }
 
 trait_fleeting_lithoid = {
-	cost = -1
+	cost = -2
 	potential_crossbreeding_chance = 1.0
-	modifier = { leader_age = -25 }
+	modifier = { leader_age = -40 }
 	icon = "gfx/interface/icons/traits/trait_fleeting.dds"
 
 	opposites = { "trait_venerable" "trait_enduring" "trait_fleeting" }
@@ -816,8 +816,11 @@ trait_erudite = {
 	opposites = { "trait_nerve_stapled" "trait_intelligent" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		planet_researchers_produces_mult = 0.2
+		planet_jobs_engineering_research_produces_mult = 0.15
+		planet_jobs_physics_research_produces_mult = 0.15
+		planet_jobs_society_research_produces_mult = 0.15
 		leader_skill_levels = 1
+		species_leader_exp_gain = 0.25
 	}
 	slave_cost = {
 		energy = 2000
@@ -945,6 +948,7 @@ trait_social_pheromones = { #red
 
 	modifier = {
 		pop_housing_usage_mult = -0.05
+		pop_job_amenities_mult = 0.1
 	}
 	slave_cost = {
 		energy = 250
@@ -968,7 +972,7 @@ trait_limited_regeneration = { #blue
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 	modifier = {
-		army_damage_mult = 0.1
+		army_health = 0.2
 		leader_age = 10
 	}
 	slave_cost = {
