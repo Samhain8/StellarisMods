@@ -122,7 +122,7 @@ revolt_situation_rebellion_joiners = {
 
 revolt_fleet_comparison_factor = {
 	add = owner.trigger:fleet_power
-	divide = target.trigger:fleet_power
+	divide = event_target:rebel_empire.trigger:fleet_power
 	pow = 3
 }
 
@@ -393,9 +393,7 @@ job_weights_multiple_resources_modifier = {
 				$RESOURCE1$ = $WEIGHT1$
 				$RESOURCE2$ = $WEIGHT2$
 			}
-			resource = $RESOURCE1$
 		}
-		mult = $WEIGHT1$
 		mode = add
 	}
 	add = 1

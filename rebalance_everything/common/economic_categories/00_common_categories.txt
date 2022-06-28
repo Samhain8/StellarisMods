@@ -773,6 +773,9 @@ planet_managers = {
 	generate_mult_modifiers = {
 		produces
 	}
+	generate_add_modifiers = {
+		produces
+	}
 }
 
 planet_researchers = {

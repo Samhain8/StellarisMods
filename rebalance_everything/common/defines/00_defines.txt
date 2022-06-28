@@ -1433,7 +1433,7 @@
 		EXCESS_POWER_BONUS_THRESHOLD_MAX	= 1.0	# 0.5 means 0-50% excess power linearly scales ship_excess_power modifier between 0-1.
 		EXCESS_POWER_BONUS_THRESHOLD_MIN	= 0.05 # min value for excess power to be used.
 
-		SHIP_EXP_GAIN_COMBAT			= 1.0				# Gained each day ship is in combat
+		SHIP_EXP_GAIN_COMBAT			= 5					# Gained each day ship is in combat
 		SHIP_EXP_GAIN_PIRACY_SUP		= 0.1				# Gained each day ship suppressing piracy
 		SHIP_EXP_EXPERIENCED			= 100				# Amount of exp to reach experienced rank
 		SHIP_EXP_VETERAN				= 1000				# Amount of exp to reach veteran rank
@@ -2128,7 +2128,6 @@
 
 		COLONY_AUTOMATION_COOLDOWN = 3					# Number of days automation will not be done after a build queue item on a planet completes
 		COLONY_AUTOMATION_DISTRICT_PREFERENCE = 1.5		# Prefer to build districts over buildings unless there are multiple building slots open or this many times as many districts as buildings, minimum 1
-		COLONY_AUTOMATION_CATEGORIES = { "planet_automation_amenities" "planet_automation_designation_construction" "planet_automation_rare_resources" "planet_automation_pop_assembly" "planet_automation_housing" "planet_automation_building_slot" "planet_automation_crime" "planet_automation_clear_blockers" "planet_automation_permanent_employment_center" "planet_automation_psi_corps_building" }
 
 		DIPLO_ACTION_REPEAT_DELAY = 360					# number of days before the ai will try to repeat a proposal
 		AI_FEDERATION_PROPOSE_LAW_CATEGORY_COOLDOWN = 3600 # number of days cooldown before an AI federation member will suggest changing a law of the same category
@@ -2267,6 +2266,8 @@
 		NEGOTIATE_AGREEMENT_RESOURCE_INCOME_ACCEPTANCE_MAX_BONUS = 100
 		NEGOTIATE_AGREEMENT_RESOURCE_ACCEPTANCE_COEFICIENT_FOR_OVERLORD = 1
 		NEGOTIATE_AGREEMENT_RESOURCE_ACCEPTANCE_COEFICIENT_FOR_SUBJECT = 0.5
+		NEGOTIATE_AGREEMENT_MAX_ACCEPTANCE_FROM_TERMS = 1000
+		NEGOTIATE_AGREEMENT_MIN_ACCEPTANCE_FROM_TERMS = -10000
 
 		SECRET_FEALTY_PLEDGE_TERMS_MULTIPLIER = 14 # Multiplied with the disloyalty of a subject. If this is higher, the AI subject is more likely to pledge Secret Fealty
 		SECRET_FEALTY_PLEDGE_TERMS_BONUS = 100 # A higher value makes the AI subject more likely to pledge a Secret Fealty to another empire

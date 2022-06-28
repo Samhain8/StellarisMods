@@ -2,21 +2,13 @@ automate_bureau_planet = {
 	category = "planet_automation_designation_construction"
 
 	available = {
-		OR = {
-			has_designation = col_bureau
-			has_designation = col_habitat_bureau
-			has_designation = col_bureau_machine
-			has_designation = col_habitat_bureau_machine
-			has_designation = col_bureau_hive
-			has_designation = col_habitat_bureau_hive
-			has_designation = col_bureau_spiritualist
-			has_designation = col_habitat_bureau_spiritualist
-		}
+		has_unity_designation = yes
 	}
 
 	prio_districts = {
 		district_hab_cultural
 		district_arcology_administrative
+		district_arcology_religious
 	}
 
 	buildings = {
@@ -31,7 +23,7 @@ automate_bureau_planet = {
 		3 = {
 			building = building_simulation_1
 		}
-		
+
 		4 = {
 			building = building_galactic_memorial_1
 		}

@@ -129,8 +129,7 @@ is_non_menial_laborer = {
 
 wears_clothes = { # The species uses the portrait that wears clothes
 	OR = {
-		species_portrait = human
-		species_portrait = human_legacy
+		is_human_species = yes
 		species_portrait = humanoid_02
 		species_portrait = humanoid_03
 		species_portrait = humanoid_04
@@ -2801,6 +2800,28 @@ can_assemble_clone_soldier_pop = {
 	}
 }
 
+has_research_designation = {
+	OR = {
+		has_designation = col_research
+		has_designation = col_ring_research
+		has_designation = col_habitat_research
+		has_designation = col_ecu_research
+	}
+}
+
+has_unity_designation = {
+	OR = {
+		has_designation = col_bureau
+		has_designation = col_habitat_bureau
+		has_designation = col_bureau_machine
+		has_designation = col_habitat_bureau_machine
+		has_designation = col_bureau_hive
+		has_designation = col_habitat_bureau_hive
+		has_designation = col_bureau_spiritualist
+		has_designation = col_habitat_bureau_spiritualist
+	}
+}
+
 is_pleasure_seeker = {
 	OR = {
 		has_valid_civic = civic_pleasure_seekers
@@ -3274,5 +3295,22 @@ has_specialist_subject_leader_trait = {
 		has_trait = leader_trait_prospectorium_extractor
 		has_trait = leader_trait_prospectorium_optimizer
 		has_trait = leader_trait_prospectorium_refiner
+	}
+}
+
+is_human_species = {
+	OR = {
+		species_portrait = human
+		species_portrait = human_legacy	
+	}
+}
+
+has_fallen_empire_subject_preset = {
+	OR = {
+		agreement_preset = preset_scion
+		agreement_preset = preset_dominion
+		agreement_preset = preset_satellite
+		agreement_preset = preset_signatory
+		agreement_preset = preset_thrall
 	}
 }

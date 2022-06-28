@@ -41,6 +41,10 @@ preset_scholarium_nice_01 = {
 				key = subject_loyalty
 				value = subject_loyalty_effects
 			}
+			{
+				key = protectorate
+				value = subject_is_not_protectorate
+			}
 		}
 	}
 
@@ -143,6 +147,10 @@ preset_scholarium_nice_02 = {
 				key = subject_loyalty
 				value = subject_loyalty_effects
 			}
+			{
+				key = protectorate
+				value = subject_is_not_protectorate
+			}
 		}
 	}
 
@@ -241,6 +249,10 @@ preset_scholarium_mean_01 = {
 				key = subject_loyalty
 				value = subject_loyalty_effects
 			}
+			{
+				key = protectorate
+				value = subject_is_not_protectorate
+			}
 		}
 	}
 
@@ -338,6 +350,10 @@ preset_scholarium_mean_02 = {
 			{
 				key = subject_loyalty
 				value = subject_loyalty_effects
+			}
+			{
+				key = protectorate
+				value = subject_is_not_protectorate
 			}
 		}
 	}
@@ -471,7 +487,6 @@ preset_scholarium_mean_03 = {
 			add = @specialist_unaligned_ethics_value
 			is_spiritualist = yes
 		}
-
 	}
 
 	potential = {

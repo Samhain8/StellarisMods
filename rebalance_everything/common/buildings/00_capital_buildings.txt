@@ -1347,6 +1347,7 @@ building_hive_capital = {
 
 	triggered_planet_modifier = {
 		potential = {
+			exists = owner
 			owner = { has_origin = origin_progenitor_hive }
 			is_planet_class = pc_hive
 		}
@@ -1445,6 +1446,7 @@ building_hive_major_capital = {
 
 	triggered_planet_modifier = {
 		potential = {
+			exists = owner
 			owner = { has_origin = origin_progenitor_hive }
 			is_planet_class = pc_hive
 		}
@@ -1662,7 +1664,21 @@ building_hab_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				NOT = { has_authority = auth_corporate }
+				has_origin = origin_void_dwellers
+				is_regular_empire = yes
+			}
+		}
+		text = job_colonist_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				NOR = {
+					has_authority = auth_corporate
+					has_origin = origin_void_dwellers
+				}
 				is_regular_empire = yes
 			}
 		}
@@ -1682,6 +1698,7 @@ building_hab_capital = {
 			exists = owner
 			owner = {
 				has_authority = auth_corporate
+				NOT = { has_origin = origin_void_dwellers }
 			}
 		}
 		text = job_executive_effect_desc

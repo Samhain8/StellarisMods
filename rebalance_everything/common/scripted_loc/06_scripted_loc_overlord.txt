@@ -417,6 +417,68 @@ defined_text = {
 }
 
 defined_text = {
+	name = ResearchProducerIcon
+	text = {
+		trigger = {
+			exists = planet.owner
+			planet.owner = {
+				is_regular_empire = yes
+			}
+		}
+		localization_key = job_researcher_icon
+	}
+	text = {
+		trigger = {
+			exists = planet.owner
+			planet.owner = {
+				is_hive_empire = yes
+			}
+		}
+		localization_key = job_brain_drone_icon
+	}
+	text = {
+		trigger = {
+			exists = planet.owner
+			planet.owner = {
+				is_machine_empire = yes
+			}
+		}
+		localization_key = job_calculator_icon
+	}
+}
+
+defined_text = {
+	name = ResearchProducer
+	text = {
+		trigger = {
+			exists = planet.owner
+			planet.owner = {
+				is_regular_empire = yes
+			}
+		}
+		localization_key = job_researcher_plural
+	}
+	text = {
+		trigger = {
+			exists = planet.owner
+			planet.owner = {
+				is_hive_empire = yes
+			}
+		}
+		localization_key = job_brain_drone_plural
+	}
+	text = {
+		trigger = {
+			exists = planet.owner
+			planet.owner = {
+				is_machine_empire = yes
+			}
+		}
+		localization_key = job_calculator_plural
+	}
+}
+
+defined_text = {
 	name = CrimeOrDeviancy
 	text = {
 		trigger = {

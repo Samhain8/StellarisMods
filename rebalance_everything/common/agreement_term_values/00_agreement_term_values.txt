@@ -647,6 +647,10 @@ joins_subject_wars_offensive = {
 				agreement_preset = preset_tributary
 			}
 		}
+		custom_tooltip = {
+			fail_text = not_allowed_for_imperial_fiefdom
+			NOT = { owner = { has_ai_personality = imperial_origin_overlord_ai } }
+		}
 	}
 }
 
@@ -668,6 +672,10 @@ joins_subject_wars_all = {
 			NOT = {
 				agreement_preset = preset_tributary
 			}
+		}
+		custom_tooltip = {
+			fail_text = not_allowed_for_imperial_fiefdom
+			NOT = { owner = { has_ai_personality = imperial_origin_overlord_ai } }
 		}
 	}
 }
@@ -1040,7 +1048,7 @@ subject_holdings_limit_3 = {
 		custom_tooltip = {
 			fail_text = not_allowed_for_galcom_resolution
 			OR = {
-				NOT = { owner = { is_galactic_community_member = yes } }
+				owner = { is_galactic_community_member = no }
 				NOT = { is_active_resolution = resolution_bureaucraticsurveillance_personal_oversight }
 			}
 		}
@@ -1067,8 +1075,11 @@ subject_holdings_limit_4 = {
 		custom_tooltip = {
 			fail_text = not_allowed_for_galcom_resolution
 			OR = {
-				NOT = { owner = { is_galactic_community_member = yes } }
-				NOT = { is_active_resolution = resolution_bureaucraticsurveillance_borderless_authority }
+				owner = { is_galactic_community_member = no }
+				NOR = {
+					is_active_resolution = resolution_bureaucraticsurveillance_borderless_authority
+					is_active_resolution = resolution_bureaucraticsurveillance_personal_oversight 
+				}
 			}
 		}
 	}
@@ -1129,6 +1140,12 @@ subject_gets_sensors = {
 
 subject_is_not_protectorate = {
 	term = protectorate
+
+	potential = {
+		NOT = {
+			agreement_preset = preset_protectorate
+		}
+	}
 }
 
 subject_is_protectorate = {
@@ -1143,6 +1160,10 @@ subject_is_protectorate = {
 		subject_tech_cost_mult = -0.80
 	}
 
+	potential = {
+		agreement_preset = preset_protectorate
+	}
+
 	extra_term_text_subject = protectorate_extra_subject
 	extra_term_text_overlord = protectorate_extra_overlord
 }
@@ -1153,6 +1174,8 @@ subject_loyalty_effects = {
 	target_modifier = {
 		diplo_weight_mult = -0.5
 	}
+
+	extra_term_text_subject = loyalty_effects_subject
 
 	activate_effect = {
 		target = { save_event_target_as = new_subject }

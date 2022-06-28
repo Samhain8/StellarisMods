@@ -46,6 +46,10 @@ planet_requisitioned_consumer_goods = {
 	parent = holdings_jobs
 }
 
+planet_requisitioned_research = {
+	parent = holdings_jobs
+}
+
 planet_overlord_offspring_drone_feeder = {
 	parent = holdings_jobs
 }

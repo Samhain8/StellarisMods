@@ -121,7 +121,7 @@ quantum_catapult_1 = {
 	#construction_entity = "quantum_catapult_stage_1_entity"
 	entity = "quantum_catapult_stage_1_entity"
 	construction_entity = "quantum_catapult_stage_1_entity"
-	portrait = GFX_megastructure_construction_background
+	portrait = GFX_megastructure_quantum_catapult_background
 	place_entity_on_planet_plane = yes
 	entity_offset = { x = 0 y = 0 }
 	build_time = 1800
@@ -170,7 +170,7 @@ quantum_catapult_2 = {
 	#construction_entity = "quantum_catapult_stage_2_entity"
 	entity = "quantum_catapult_stage_2_entity"
 	construction_entity = "quantum_catapult_stage_2_entity"
-	portrait = GFX_megastructure_construction_background
+	portrait = GFX_megastructure_quantum_catapult_background
 	place_entity_on_planet_plane = yes
 	entity_offset = { x = 0 y = 0 }
 	build_time = 1800
@@ -219,7 +219,7 @@ quantum_catapult_3 = {
 	#construction_entity = "quantum_catapult_stage_3_entity"
 	entity = "quantum_catapult_stage_3_entity"
 	construction_entity = "quantum_catapult_stage_3_entity"
-	portrait = GFX_megastructure_construction_background
+	portrait = GFX_megastructure_quantum_catapult_background
 	place_entity_on_planet_plane = yes
 	entity_offset = { x = 0 y = 0 }
 	build_time = 1800
@@ -287,8 +287,7 @@ quantum_catapult_restored = {
 	#construction_entity = "quantum_catapult_stage_4_entity"
 	entity = "quantum_catapult_stage_3_entity"
 	construction_entity = "quantum_catapult_stage_3_entity"
-	#portrait = "GFX_megastructure_quantum_catapult_background"
-	portrait = "GFX_megastructure_interstellar_assembly_background"
+	portrait = "GFX_megastructure_quantum_catapult_background"
 	place_entity_on_planet_plane = yes
 	entity_offset = { x = 0 y = 0 }
 	build_time = 3600

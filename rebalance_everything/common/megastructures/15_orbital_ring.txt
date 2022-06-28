@@ -64,6 +64,7 @@ orbital_ring = {
 				NOR = {
 					has_planet_flag = megastructure
 					has_planet_flag = has_megastructure
+					has_planet_flag = ruined_orbital_ring_planet
 					solar_system = {
 						has_star_flag = ring_world_built
 					}
@@ -183,7 +184,10 @@ orbital_ring_restored = {
 
 	possible = {
 		from = { has_technology = tech_orbital_ring_tier_1 }
-		exists = starbase
+		custom_tooltip = {
+			fail_text = "requires_outpost"
+			exists = starbase
+		}
 		custom_tooltip = {
 			fail_text = "requires_inside_border"
 			is_inside_border = from

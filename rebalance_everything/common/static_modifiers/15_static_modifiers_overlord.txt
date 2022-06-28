@@ -110,16 +110,10 @@ relay_network_amenities_gestalt_edict_modifier = {
 
 # Progenitor Hive modifiers
 missing_progenitor_modifier = { #Country Modifier
+	icon = "gfx/interface/icons/modifiers/mod_planet_jobs_simple_drone_reduced_mult.dds"
 	planet_jobs_simple_drone_produces_mult = -0.10
 	planet_stability_add = -10
 	ship_speed_mult = -0.30
-}
-
-ship_progenitor_hive_modifier = {
-	ship_speed_mult = -0.5
-	ship_evasion_mult = -0.5
-	ship_fire_rate_mult = -0.5
-	ship_accuracy_mult = -0.5
 }
 
 missing_offspring_modifier = {
@@ -128,18 +122,12 @@ missing_offspring_modifier = {
 	icon_frame = 3
 }
 
-#Subterranean
-subterranean_nation_modifier = {
-	icon = "gfx/interface/icons/modifiers/mod_minerals_produces_mult.dds"
-	planet_structures_cost_mult = 0.10
-	planet_structures_upkeep_mult = 0.10
-	planet_building_build_speed_mult = -0.10
-	planet_orbital_bombardment_damage = -0.75
-}
-
 #Imperial Vassal
 imperial_vassal_ai_modifier = {
 	country_influence_produces_mult = -0.8
+	branch_office_value_mult = -0.5
+	planet_resettlement_unemployed_mult = -0.5
+	planet_emigration_push_mult = -0.75
 }
 
 #Slingshot
@@ -248,7 +236,7 @@ holding_noble_vacation_home_modifier = {
 specialist_bulwark_neighbor = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_specialist_bulwark_neighbor.dds"
 	planet_crime_mult = -0.1
-	pop_defense_armies_add = 2
+	planet_stability_add = 5
 }
 
 specialist_scholarium_neighbor = {
@@ -592,6 +580,8 @@ great_schism_02 = {
 }
 
 great_schism_03 = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_surreal_visions.dds"
+	icon_frame = 3
 	pop_happiness = -0.1
 }
 
@@ -880,12 +870,12 @@ resolution_bureaucraticsurveillance_administrative_insight = {
 
 resolution_bureaucraticsurveillance_borderless_authority = {
 	monthly_loyalty = -0.5
-	planet_max_overlord_holding_buildings_add = 1
+	planet_max_subject_holding_buildings_add = 1
 }
 
 resolution_bureaucraticsurveillance_personal_oversight = {
 	monthly_loyalty = -0.75
-	planet_max_overlord_holding_buildings_add = 1
+	planet_max_subject_holding_buildings_add = 1
 }
 
 resolution_galcom_spiritualist_ethic_modifier_tier_1 = {

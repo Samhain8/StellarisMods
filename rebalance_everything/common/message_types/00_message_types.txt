@@ -2223,3 +2223,25 @@ message_type = {
 	sound = "notification"
 	ping = "ping_notification_green"
 }
+
+message_type = {
+	key = "OVERLORD_HOLDING_CONSTRUCTION_MESSAGE_TYPE"
+	icon = "GFX_message_other_construction_surface"
+	icon_frame = 1
+
+	name = "OVERLORD_HOLDING_CONSTRUCTION_TITLE"
+	sound = "notification"
+	sound_is_advisor = yes
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "SUBSIDY_UNABLE_TO_PAY_RESEARCH_MESSAGE_TYPE"
+	icon = "GFX_message_other_alert"
+	icon_frame = 1
+
+	name = "overlord_subsidy"
+	sound = "notification"
+	sound_is_advisor = yes
+	ping = "ping_notification_green"
+}

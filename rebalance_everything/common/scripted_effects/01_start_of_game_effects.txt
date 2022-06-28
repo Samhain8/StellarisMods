@@ -2645,35 +2645,32 @@ void_dweller_home_planet_setup = {
 
 
 	# 2 jobs
-			if = {
-				limit = { owner = { is_spiritualist = no } }
-				add_building = building_bureaucratic_1
-			}
-			# 2 jobs
-			if = {
-				limit = {
-					owner = {
-						is_spiritualist = yes
-						OR = {
-							has_valid_civic = civic_death_cult
-							has_valid_civic = civic_death_cult_corporate
-						}
-					}
+	if = {
+		limit = { owner = { is_spiritualist = no } }
+		add_building = building_bureaucratic_1
+	}
+	# 2 jobs
+	if = {
+		limit = {
+			owner = {
+				is_spiritualist = yes
+				OR = {
+					has_valid_civic = civic_death_cult
+					has_valid_civic = civic_death_cult_corporate
 				}
-				add_building = building_sacrificial_temple_1
 			}
-			# 2 jobs
-			if = {
-				limit = {
-					owner = {
-						is_spiritualist = yes
-						NOT = { has_valid_civic = civic_death_cult }
-					}
-				}
-				add_building = building_temple
+		}
+		add_building = building_sacrificial_temple_1
+	}
+	# 2 jobs
+	if = {
+		limit = {
+			owner = {
+				is_spiritualist = yes
+				NOT = { has_valid_civic = civic_death_cult }
 			}
-	else = {
-		add_building = building_holo_theatres
+		}
+		add_building = building_temple
 	}
 	if = {
 		limit = {
@@ -2683,6 +2680,9 @@ void_dweller_home_planet_setup = {
 			free_building_slots > 0
 		}
 		add_building = building_posthumous_employment_center
+	}
+	else = {
+		add_building = building_holo_theatres
 	}
 	if = {
 		limit = {
@@ -2710,14 +2710,6 @@ void_dweller_home_planet_setup = {
 		add_district_and_planet_size_if_needed_effect = {
 			district = district_hab_science
 		}
-	}
-	if = {
-		limit = {
-			owner = {
-				has_valid_civic = civic_permanent_employment
-			}
-		}
-		add_building = building_posthumous_employment_center
 	}
 
 	add_deposit = d_arcane_replicator

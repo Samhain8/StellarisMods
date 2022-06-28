@@ -1,12 +1,12 @@
-############################################
+############################################œ
 ###	SCRIPTED LOCALIZATION FOR FRENCH	###
 ###	Scripted by Pierre du Plessis	 ###
 ############################################
-#This complements Nicolas Fouque's scripted locs and lets you get the genders correct for all leaders, not just the country's rulers
+#This complements Nicolas Fouqué's scripted locs and lets you get the genders correct for all leaders, not just the country's rulers
 
 ##To apply, use [event_target.GetLeLaLead] or [scope.Leader.GetLeLaLead]
 
-#Ex.: "He is [the] scientist => "Il est [le] scientiste / elle est [la] scientiste" (lower case / minuscule)
+#Ex.: "He is [the] scientist => "Il est [le] scientifique / elle est [la] scientifique" (lower case / minuscule)
 defined_text = {
 	name = GetLeLaLead
 	text = {
@@ -19,7 +19,7 @@ defined_text = {
 	}
 }
 
-#Ex.: "[The] scientist is a man/woman." => "[Le] scientiste est un home. / [La] scientiste est une femme." (upper case / majuscule)
+#Ex.: "[The] scientist is a man/woman." => "[Le] scientifique est un homme. / [La] scientifique est une femme." (upper case / majuscule)
 defined_text = {
 	name = GetLeLaLeadCap
 	text = {
@@ -88,7 +88,7 @@ defined_text = {
 }
 
 
-#Ex.: "Our beloved teacher" => "Notre enseignant(e) aimé(e)"
+#Ex.: "Our beloved teacher" => "Notre enseignant(e) bien-aimé(e)"
 defined_text = {
 	name = GetXELead
 	text = {
@@ -157,6 +157,20 @@ defined_text = {
 	text = {
 		trigger = { loc_leader_fem = yes }
 		localization_key = FRLOC_rice
+	}
+}
+
+
+#Ex.: "C'est un [héros] / une [héroïne]" (lower case/minuscule)
+defined_text = {
+	name = GetHeroHeroineLead
+	text = {
+		trigger = { loc_leader_masc = yes }
+		localization_key = FRLOC_heros
+	}
+	text = {
+		trigger = { loc_leader_fem = yes }
+		localization_key = FRLOC_heroine
 	}
 }
 
