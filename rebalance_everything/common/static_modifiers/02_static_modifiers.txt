@@ -270,6 +270,12 @@ snake_infestation = {
 	icon_frame = 3
 }
 
+mining_equipment_offline = {
+	planet_jobs_minerals_produces_mult = -0.25
+	icon = "gfx/interface/icons/planet_modifiers/pm_mineral_poor.dds"
+	icon_frame = 3
+}
+
 broken_assembly_line = {
 	planet_pop_assembly_reduction = 0.10
 	icon = "gfx/interface/icons/planet_modifiers/pm_robots.dds"

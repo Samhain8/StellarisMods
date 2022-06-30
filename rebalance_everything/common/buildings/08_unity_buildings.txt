@@ -2644,10 +2644,7 @@ building_autocurating_vault = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-		}
+	planet_modifier = {
 		planet_administrators_produces_mult = 0.15
 	}
 
@@ -2694,9 +2691,9 @@ building_citadel_of_faith = {
 	}
 
 	planet_modifier = {
-		job_priest_add = @b2_jobs
 		job_high_priest_add = 1
 		pop_ethic_spiritualist_attraction_mult = 0.20
+		planet_administrators_produces_mult = 0.15
 	}
 
 	resources = {
@@ -2709,6 +2706,9 @@ building_citadel_of_faith = {
 			energy = @b2_upkeep
 			rare_crystals = @b2_rare_upkeep
 		}
+		produces = {
+			unity = 10
+		}
 	}
 
 	prerequisites = {
@@ -2716,7 +2716,7 @@ building_citadel_of_faith = {
 	}
 
 	triggered_desc = {
-		text = job_priest_effect_desc
+		text = job_high_priest_effect_desc
 	}
 }
 
@@ -2776,7 +2776,7 @@ building_corporate_vault = {
 	}
 
 	planet_modifier = {
-		planet_managers_produces_mult = 0.15
+		planet_administrators_produces_mult = 0.15
 	}
 
 
@@ -2835,7 +2835,7 @@ building_alpha_hub = {
 	}
 
 	planet_modifier = {
-		planet_administrators_unity_produces_mult = 0.15
+		planet_administrators_produces_mult = 0.15
 	}
 
 	prerequisites = {

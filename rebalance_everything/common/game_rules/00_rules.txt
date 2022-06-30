@@ -497,6 +497,7 @@ can_take_hostile_actions = {
 	}
 	else_if = {
 		limit = {
+			exists = overlord
 			ROOT = { any_agreement = { agreement_preset = preset_satrapy } }
 		}
 		custom_tooltip = {
@@ -1796,7 +1797,16 @@ can_pop_auto_migrate = {
 		}
 		custom_tooltip = {
 			fail_text = AUTO_MIGRATE_SLAVE_PROCESSING
-			planet = { has_building = building_slave_processing }
+			OR = {
+				planet = { has_building = building_slave_processing }
+				solar_system = {
+					count_starbase_buildings = {
+						type = transit_hub
+						count >= 1
+						include_being_constructed = no
+					}
+				}
+			}
 		}
 	}
 }
@@ -2040,6 +2050,22 @@ can_dismiss_leader = {
 		exists = owner
 		owner = {
 			NOT = { has_valid_civic = civic_feudal_realm }
+		}
+	}
+	if = {
+		limit = {
+			leader_class = admiral
+			is_idle = no
+			owner = {
+				is_country_type = enclave_mercenary
+			}
+		}
+		custom_tooltip = {
+			fail_text = "requires_fleet_control"
+			exists = fleet
+			fleet = {
+				controller = { NOT = { is_same_value = this.owner } }
+			}
 		}
 	}
 }

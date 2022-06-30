@@ -4195,6 +4195,7 @@ distantstars_init_00 = {
 		base = 0
 		modifier = {
 			has_distar = yes
+			lgate_enabled = yes
 			add = 2
 		}
 		modifier = {
@@ -4265,6 +4266,7 @@ distantstars_init_06 = {
 		base = 0
 		modifier = {
 			has_distar = yes
+			lgate_enabled = yes
 			add = 99999
 		}
 		modifier = {

@@ -554,7 +554,10 @@ create_subterranean_nation = {
 			name = random
 			class = random_non_machine
 			portrait = random
-			traits = random
+			traits = {
+				trait = trait_cave_dweller
+				trait = random_traits
+			}
 			homeworld = root
 		}
 		create_country = {
@@ -13213,39 +13216,6 @@ country_defaulted_effect = {
 	}
 }
 
-count_drones_to_recycle = {
-
-	set_variable = {
-		which = alloys_for_robot
-		value = $ALLOYS$
-	}
-
-	set_variable = {
-		which = recycled_robots
-		value = 0
-	}
-
-	export_trigger_value_to_variable = {
-		trigger = count_owned_pop
-		parameters = {
-			limit = {
-				is_robot_pop = yes
-			}
-		}
-		variable = recycled_robots
-	}
-
-	set_variable = {
-		which = total_alloys_gained
-		value = recycled_robots
-	}
-
-	multiply_variable = {
-		which = total_alloys_gained
-		value = $ALLOYS$
-	}
-}
-
 count_robots_to_recycle = {
 
 	set_variable = {
@@ -13258,14 +13228,41 @@ count_robots_to_recycle = {
 		value = 0
 	}
 
-	export_trigger_value_to_variable = {
-		trigger = count_owned_pop
-		parameters = {
-			limit = {
-				is_non_sapient_robot = yes
-			}
+	# if machine empire, get half of the population
+	if = {
+		limit = {
+			owner = { is_machine_empire = yes }
 		}
-		variable = recycled_robots
+		export_trigger_value_to_variable = {
+			trigger = count_owned_pop
+			parameters = {
+				limit = {
+					is_robot_pop = yes
+				}
+			}
+			variable = recycled_robots
+		}
+		divide_variable = {
+			which = recycled_robots
+			value = 2
+		}
+
+		round_variable  = recycled_robots
+	}
+	# if normal empire, get all robots
+	else = {
+		export_trigger_value_to_variable = {
+			trigger = count_owned_pop
+			parameters = {
+				limit = {
+					OR = {
+						is_shackled_robot = yes
+						is_non_sapient_robot = yes
+					}
+				}
+			}
+			variable = recycled_robots
+		}
 	}
 
 	set_variable = {
@@ -14038,4 +14035,98 @@ set_ruined_megastructure = {
 
 clean_up_voidspawn_situation = {
 	remove_modifier = voidspawn_contaminant
+}
+
+set_origin_effect = {
+	country_event = { id = game_start.8 }
+	give_starting_resources_effect = yes
+	# Necrophages
+	if = {
+		limit = {
+			has_trait = trait_necrophage
+		}
+		set_origin = origin_necrophage
+	}
+	# Subterranean
+	else_if = {
+		limit = {
+			has_trait = trait_cave_dweller
+		}
+		set_origin = origin_subterranean
+	}
+	# Void Dwellers
+	else_if = {
+		limit = {
+			has_trait = trait_void_dweller_1
+		}
+		set_origin = origin_void_dwellers
+	}
+	# Calamitous Birth
+	else_if = {
+		limit = {
+			from = { has_origin = origin_lithoid }
+			has_trait = trait_lithoid
+		}
+		set_origin = origin_lithoid
+	}
+	# Liberated
+	else_if = {
+		limit = {
+			has_country_flag = released_empire
+		}
+		set_origin = origin_liberated
+	}
+	else = {
+		set_origin = origin_default
+	}
+}
+
+set_merchant_government_effect = {
+	if = {
+		limit = { has_technology = tech_galactic_administration }
+		change_government = {
+			authority = auth_oligarchic
+			cooldown = no
+			remove_invalid_civics = yes
+			civics = { civic = civic_merchant_guilds civic = random civic = random }
+		}
+	}
+	else = {
+		change_government = {
+			authority = auth_oligarchic
+			cooldown = no
+			remove_invalid_civics = yes
+			civics = { civic = civic_merchant_guilds civic = random }
+		}
+	}
+}
+
+impose_ideology_effect = {
+	copy_ethos_and_authority = root
+	if = {
+		limit = {
+			has_civic = civic_galactic_sovereign
+		}
+		force_remove_civic = civic_galactic_sovereign
+	}
+	if = {
+		limit = {
+			has_civic = civic_galactic_sovereign_megacorp
+		}
+		force_remove_civic = civic_galactic_sovereign_megacorp
+	}
+	if = {
+		limit = {
+			root = { has_authority = auth_corporate }
+			has_authority = auth_corporate
+		}
+		from = {
+			set_merchant_government_effect = yes
+		}
+	}
+	add_modifier = { modifier = recently_liberated days = 7300 }
+	add_opinion_modifier = { modifier = opinion_liberated_us who = root }
+	root = {
+		add_opinion_modifier = { modifier = opinion_we_liberated who = from }
+	}
 }

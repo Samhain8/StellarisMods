@@ -28,6 +28,19 @@ orbital_ring_habitation = {
 		planet_max_districts_add = 1
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			planet = {
+				exists = owner.overlord
+				has_holding = {
+					holding = holding_orbital_assembly_complex
+					owner = owner.overlord
+				}
+			}
+		}
+		planet_max_buildings_add = 0.5
+	}
+
 	replaceable = {
 		custom_tooltip = {
 			fail_text = orbital_ring_habitation_districts_maxed_out
@@ -93,6 +106,19 @@ orbital_ring_shipyard = {
 	}
 
 	station_modifier = {
+		starbase_shipyard_capacity_add = 1
+	}
+
+	triggered_station_modifier = {
+		potential = {
+			planet = {
+				exists = owner.overlord
+				has_holding = {
+					holding = holding_orbital_assembly_complex
+					owner = owner.overlord
+				}
+			}
+		}
 		starbase_shipyard_capacity_add = 1
 	}
 
@@ -179,6 +205,19 @@ orbital_ring_anchorage = {
 		country_naval_cap_add = 2
 	}
 
+	triggered_country_modifier = {
+		potential = {
+			planet = {
+				exists = owner.overlord
+				has_holding = {
+					holding = holding_orbital_assembly_complex
+					owner = owner.overlord
+				}
+			}
+		}
+		country_naval_cap_add = 2
+	}
+
 	ai_build_at_chokepoint = no
 	ai_build_outside_chokepoint = yes
 	ai_weight = {
@@ -216,6 +255,19 @@ orbital_ring_gun_battery = {
 	station_modifier = {
 		ship_hull_mult = 0.20
 		ship_armor_mult = 0.20
+		starbase_defense_platform_capacity_add = 1
+	}
+
+	triggered_station_modifier = {
+		potential = {
+			planet = {
+				exists = owner.overlord
+				has_holding = {
+					holding = holding_orbital_assembly_complex
+					owner = owner.overlord
+				}
+			}
+		}
 		starbase_defense_platform_capacity_add = 1
 	}
 
@@ -264,6 +316,19 @@ orbital_ring_missile_battery = {
 		starbase_defense_platform_capacity_add = 1
 	}
 
+	triggered_station_modifier = {
+		potential = {
+			planet = {
+				exists = owner.overlord
+				has_holding = {
+					holding = holding_orbital_assembly_complex
+					owner = owner.overlord
+				}
+			}
+		}
+		starbase_defense_platform_capacity_add = 1
+	}
+
 	ai_build_at_chokepoint = yes
 	ai_build_outside_chokepoint = no
 	ai_weight = {
@@ -303,6 +368,19 @@ orbital_ring_hangar_bay = {
 	station_modifier = {
 		ship_hull_mult = 0.20
 		ship_armor_mult = 0.20
+		starbase_defense_platform_capacity_add = 1
+	}
+
+	triggered_station_modifier = {
+		potential = {
+			planet = {
+				exists = owner.overlord
+				has_holding = {
+					holding = holding_orbital_assembly_complex
+					owner = owner.overlord
+				}
+			}
+		}
 		starbase_defense_platform_capacity_add = 1
 	}
 

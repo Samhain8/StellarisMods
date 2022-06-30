@@ -45,7 +45,7 @@ situation_planetary_revolt = {
 	on_start = {
 		if = {
 			limit = { years_passed < 3 }
-			log_error = "Isn't it a bit early to have a revolt? Owner: [Owner.GetName], Target: [Target.GetName]."
+			log_error = "Isn't it a bit early to have a revolt? Owner: [Owner.GetName] (Origin: [Owner.GetOriginName]), Target: [Target.GetName]."
 		}
 	}
 

@@ -68,6 +68,10 @@ preset_vassal = {
 				key = subject_loyalty
 				value = subject_loyalty_effects
 			}
+			{
+				key = protectorate
+				value = subject_is_not_protectorate
+			}
 		}
 	}
 
@@ -133,6 +137,10 @@ preset_subsidiary = {
 				key = subject_loyalty
 				value = subject_loyalty_effects
 			}
+			{
+				key = protectorate
+				value = subject_is_not_protectorate
+			}
 		}
 		resource_terms = {
 			{
@@ -194,6 +202,10 @@ preset_tributary = {
 			{
 				key = subject_loyalty
 				value = subject_loyalty_effects
+			}
+			{
+				key = protectorate
+				value = subject_is_not_protectorate
 			}
 		}
 		resource_terms = {
@@ -267,6 +279,10 @@ preset_bulwark = {
 				key = subject_loyalty
 				value = subject_loyalty_effects
 			}
+			{
+				key = protectorate
+				value = subject_is_not_protectorate
+			}
 		}
 	}
 
@@ -299,10 +315,7 @@ preset_bulwark = {
 		}
 		modifier = {
 			add = @specialist_unaligned_ethics_value
-			OR = {
-				is_pacifist = yes
-				is_xenophile = yes
-			}
+			is_pacifist = yes
 		}
 	}
 
@@ -360,6 +373,10 @@ preset_scholarium = {
 				key = subject_loyalty
 				value = subject_loyalty_effects
 			}
+			{
+				key = protectorate
+				value = subject_is_not_protectorate
+			}
 		}
 	}
 
@@ -367,10 +384,7 @@ preset_scholarium = {
 		base =  @specialist_base_acceptance_value
 		modifier = {
 			add = @specialist_aligned_ethics_value
-			OR = {
-				is_materialist = yes
-				is_pacifist = yes
-			}
+			is_materialist = yes
 		}
 		modifier = {
 			factor = 0.5
@@ -461,6 +475,10 @@ preset_prospectorium = {
 				key = subject_loyalty
 				value = subject_loyalty_effects
 			}
+			{
+				key = protectorate
+				value = subject_is_not_protectorate
+			}
 		}
 	}
 
@@ -489,10 +507,7 @@ preset_prospectorium = {
 		}
 		modifier = {
 			add = @specialist_unaligned_ethics_value
-			OR = {
-				is_militarist = yes
-				is_spiritualist = yes
-			}
+			is_militarist = yes
 		}
 	}
 
@@ -632,10 +647,16 @@ preset_scion = {
 				key = subject_loyalty
 				value = subject_loyalty_effects
 			}
+			{
+				key = protectorate
+				value = subject_is_not_protectorate
+			}
 		}
 	}
 	potential = {
-		has_origin = origin_scion
+		any_agreement = {
+			agreement_preset = preset_scion
+		}
 		from = {
 			OR = {
 				is_country_type = fallen_empire
@@ -679,6 +700,10 @@ preset_dominion = {
 			{
 				key = subject_loyalty
 				value = subject_loyalty_effects
+			}
+			{
+				key = protectorate
+				value = subject_is_not_protectorate
 			}
 		}
 		resource_terms = {
@@ -728,6 +753,10 @@ preset_satellite = {
 				key = subject_loyalty
 				value = subject_loyalty_effects
 			}
+			{
+				key = protectorate
+				value = subject_is_not_protectorate
+			}
 		}
 		resource_terms = {
 			{
@@ -776,6 +805,10 @@ preset_signatory = {
 				key = subject_loyalty
 				value = subject_loyalty_effects
 			}
+			{
+				key = protectorate
+				value = subject_is_not_protectorate
+			}
 		}
 	}
 	potential = {
@@ -817,6 +850,10 @@ preset_thrall = {
 			{
 				key = subject_loyalty
 				value = subject_loyalty_effects
+			}
+			{
+				key = protectorate
+				value = subject_is_not_protectorate
 			}
 		}
 		resource_terms = {
@@ -869,6 +906,10 @@ preset_satrapy = {
 			{
 				key = subject_loyalty
 				value = subject_loyalty_effects
+			}
+			{
+				key = protectorate
+				value = subject_is_not_protectorate
 			}
 		}
 		resource_terms = {
