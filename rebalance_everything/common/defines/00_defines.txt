@@ -649,7 +649,7 @@
 		MAX_PLANET_RELATIVE_HOUSING			= 4.0	# Mult of housing to housing needs
 
 
-		MIN_BLOCKED_DEPOSITS = 1		# Always try to have this many blocker deposits on planets when generating the galaxy
+		MIN_BLOCKED_DEPOSITS = 3		# Always try to have this many blocker deposits on planets when generating the galaxy
 		MIN_UNBLOCKED_DEPOSITS = 3		# Always try to have this many non-blocker deposits on planets when generating the galaxy
 		DEPOSIT_USED_CATEGORY_WEIGHT = 0.25 # The higher this is, the more randomization will tend to diversify planet deposit types
 
@@ -1505,7 +1505,7 @@
 
 		BASE_POP_GROWTH						= 3		# Base growth rate of pops
 		LOGISTIC_POP_GROWTH_R				= 0.125	# Logistic Pop Growth Constant r
-		LOGISTIC_POP_GROWTH_FLOOR			= 0.1	# Logistic Pop Growth won't lower growth to less than this percent.
+		LOGISTIC_POP_GROWTH_FLOOR			= 0.35	# Logistic Pop Growth won't lower growth to less than this percent.
 		LOGISTIC_POP_GROWTH_MIN_POPS		= 5		# Treat small colonies as having this many pops to avoid the very bottom of the curve
 		LOGISTIC_POP_GROWTH_LOWER_THRESHOLD	= 0.5	# Ignore penalties to Pop Growth if the current number of pops are below this percent of the carrying capacity
 		MAX_CARRYING_CAPACITY				= 500	# Logistic Carrying Capacity Cap (so modders have access to this value in case they make a planet with infinite districts or something like that)
@@ -1515,15 +1515,15 @@
 		OVERCROWDING_NO_GROWTH_THRESHOLD	= 1.15	# At this amount of overcrowding (required housing / actual housing), growth stops entirely
 		OVERCROWDING_DECLINE_THRESHOLD		= 1.25	# At this amount of overcrowding (required housing / actual housing), pops start declining
 		OVERCROWDING_ABSOLUTE_THRESHOLD_FOR_NO_GROWTH		= 5	# Planet needs this amount of overcrowding (required housing - actual housing) for OVERCROWDING_NO_GROWTH_THRESHOLD to kick in
-		MAX_NUM_GROWTH_OR_DECLINE_PER_MONTH = 10	# No more than this amount of pops can grow, assemble or decline in the same month
+		MAX_NUM_GROWTH_OR_DECLINE_PER_MONTH = 12	# No more than this amount of pops can grow, assemble or decline in the same month
 
 		RESETTLE_UNEMPLOYED_BASE_RATE		= 0.05	# Chance an unemployed pop will automatically migrate if an acceptable location is found (Range is 0 to 1)
 		RESETTLE_DESTROY_COLONY_COST		= 50	# Influence surcharge for manually resettling the last pop from a colony
 
 		NEW_POP_SPECIES_RANDOMNESS			= 0.5	# The higher this is, the more random species selection of new pops will be. Does not apply for assembly, as this would mean randomly picking obsolete species
 		NEW_POP_SAME_SPECIES_WEIGHT			= 1.0	# The higher this is, the more new pops will be weighted by number of same or subspecies pops
-		NEW_POP_EXACT_SPECIES_WEIGHT		= 0.5	# The higher this is, the more new pops will be weighted by number of exact same species pops
-		NEW_POP_SLAVERY_WEIGHT				= 0.25	# The higher this is, the more new pops will tend to be balanced between enslaved and non-enslaved species
+		NEW_POP_EXACT_SPECIES_WEIGHT		= 0.25	# The higher this is, the more new pops will be weighted by number of exact same species pops
+		NEW_POP_SLAVERY_WEIGHT				= 0.05	# The higher this is, the more new pops will tend to be balanced between enslaved and non-enslaved species
 		NEW_POP_SPECIES_DIV					= 0.05	# The higher this is, the more planets will tend to grow species that are underrepresented on the planet
 		NEW_POP_HABITABILITY_THRESHOLD		= 0.75	# If habitability is under this, apply exponentially increasing penalties to new pop weight
 		NEW_POP_LOW_HABITABILITY_PENALTY	= 2		# If habitability is under current threshold, apply increasing penalties to new pop weight
@@ -2103,14 +2103,14 @@
 
 		AI_MIN_HOLDING_WORTH_TO_BUILD = 0.0		# AI overlords will not build holdings unless value is above this
 
-		AI_SLAVE_MARKET_BUY_INTERACTION_CHANCE = 0.05 	# Chance that AI will try to buy pops on the slave market during the monthly AI update 1.0 = 100% chance
-		AI_SLAVE_MARKET_SELL_INTERACTION_CHANCE = 0.20 	# Chance that AI will try to sell pops on the slave market during the monthly AI update 1.0 = 100% chance
-		AI_SLAVE_MARKET_SELL_LIMIT = 6 				# Upper limit on how many pops AI will put on the market
-		SLAVE_BUY_EC_THRESHOLD = 5000 # if we have less ec than this, dont buy slaves
+		AI_SLAVE_MARKET_BUY_INTERACTION_CHANCE = 0.03 	# Chance that AI will try to buy pops on the slave market during the monthly AI update 1.0 = 100% chance
+		AI_SLAVE_MARKET_SELL_INTERACTION_CHANCE = 0.50 	# Chance that AI will try to sell pops on the slave market during the monthly AI update 1.0 = 100% chance
+		AI_SLAVE_MARKET_SELL_LIMIT = 10 				# Upper limit on how many pops AI will put on the market
+		SLAVE_BUY_EC_THRESHOLD = 10000 # if we have less ec than this, dont buy slaves
 		SLAVE_BUY_UNEMPLOYMENT_THRESHOLD = 1 # if any one planet has this many unemployed pops, don't consider buying slaves for it
-		SLAVE_BUY_HABITABILITY_THRESHOLD = 0.4 # if we cant find a planet with at least this much habitability for a prospective slave, dont buy it
+		SLAVE_BUY_HABITABILITY_THRESHOLD = 0.6 # if we cant find a planet with at least this much habitability for a prospective slave, dont buy it
 
-		SLAVE_SELL_EC_THRESHOLD = 30000 # if we have more ec than this and a positive net income, then don't sell any slaves
+		SLAVE_SELL_EC_THRESHOLD = 40000 # if we have more ec than this and a positive net income, then don't sell any slaves
 		SLAVE_SELL_UNEMPLOYMENT_THRESHOLD = 1 # if any one planet has this many unemployed pops on it, consider selling one as a slave
 		SLAVE_SELL_MIN_POPS = 1			# do not sell slaves from this planet if it has this amount of pops, or less
 

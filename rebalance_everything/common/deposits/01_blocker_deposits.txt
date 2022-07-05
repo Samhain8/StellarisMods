@@ -30,7 +30,7 @@ d_mountain_range = {
 				exists = owner
 				owner = { has_valid_civic = civic_environmentalist }
 			}
-			engineering_research = 4
+			engineering_research = 6
 		}
 		cost = {
 			energy = 1000
@@ -103,7 +103,7 @@ d_active_volcano = {
 				exists = owner
 				owner = { has_valid_civic = civic_environmentalist }
 			}
-			physics_research = 4
+			physics_research = 6
 		}
 		cost = {
 			energy = 1000
@@ -172,7 +172,7 @@ d_dangerous_wildlife_blocker = {
 				exists = owner
 				owner = { has_valid_civic = civic_environmentalist }
 			}
-			society_research = 4
+			society_research = 6
 		}
 		cost = {
 			energy = 500
@@ -251,7 +251,7 @@ d_dense_jungle = {
 				exists = owner
 				owner = { has_valid_civic = civic_environmentalist }
 			}
-			society_research = 2
+			society_research = 3
 		}
 		cost = {
 			energy = 500
@@ -321,7 +321,7 @@ d_toxic_kelp = {
 				exists = owner
 				owner = { has_valid_civic = civic_environmentalist }
 			}
-			society_research = 2
+			society_research = 3
 		}
 		cost = {
 			energy = 500
@@ -388,7 +388,7 @@ d_deep_sinkhole = {
 				exists = owner
 				owner = { has_valid_civic = civic_environmentalist }
 			}
-			engineering_research = 2
+			engineering_research = 3
 		}
 		cost = {
 			energy = 500
@@ -459,7 +459,7 @@ d_quicksand_basin = {
 				exists = owner
 				owner = { has_valid_civic = civic_environmentalist }
 			}
-			engineering_research = 2
+			engineering_research = 3
 		}
 		cost = {
 			energy = 500
@@ -526,7 +526,7 @@ d_noxious_swamp = {
 				exists = owner
 				owner = { has_valid_civic = civic_environmentalist }
 			}
-			society_research = 2
+			society_research = 3
 		}
 		cost = {
 			energy = 500
@@ -593,7 +593,7 @@ d_massive_glacier = {
 				exists = owner
 				owner = { has_valid_civic = civic_environmentalist }
 			}
-			engineering_research = 2
+			physics_research = 3
 		}
 		cost = {
 			energy = 500

@@ -16,24 +16,6 @@ servant = {
 		can_take_servant_job = yes
 	}
 
-	resources = {
-		category = planet_jobs
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_slaver_civic = yes }
-			}
-			consumer_goods = 1
-		}
-		upkeep = {
-			trigger = {
-				exists = owner
-				owner = { has_slaver_civic = yes }
-			}
-			minerals = 1
-		}
-	}
-
 	triggered_pop_modifier = {
 		potential = {
 			is_organic_species = yes
@@ -52,9 +34,18 @@ servant = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_slaver_civic = yes }
+		}
+		trade_value_add = 2
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_pleasure_seeker = yes }
 		}
-		trade_value_add = 1
+		trade_value_add = 2
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
 	}
 
@@ -64,7 +55,7 @@ servant = {
 			owner = { is_pleasure_seeker = yes }
 		}
 		modifier = {
-			pop_growth_speed = 0.01
+			pop_growth_speed = 0.02
 		}
 	}
 
@@ -147,7 +138,7 @@ slave_overseer = {
 	}
 
 	weight = {
-		weight = @specialist_job_weight
+		weight = @worker_job_weight
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 	}
 }
@@ -324,6 +315,15 @@ livestock = {
 		}
 		produces = {
 			trigger = {
+				exists = owner
+				owner = { has_slaver_civic = yes }
+				is_organic_species = yes
+				is_lithoid = no
+			}
+			food = 1
+		}
+		produces = {
+			trigger = {
 				is_lithoid = yes
 			}
 			minerals = 2
@@ -341,6 +341,14 @@ livestock = {
 				planet = { has_active_building = building_mineral_purification_hub }
 			}
 			minerals = 2
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_slaver_civic = yes }
+				is_lithoid = yes
+			}
+			minerals = 1
 		}
 	}
 

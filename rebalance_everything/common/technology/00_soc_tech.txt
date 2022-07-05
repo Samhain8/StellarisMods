@@ -1434,6 +1434,10 @@ tech_mountain_range = {
 			}
 		}
 		modifier = {
+			factor = 0.33
+			has_valid_civic = civic_environmentalist
+		}
+		modifier = {
 			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = society
@@ -1508,6 +1512,10 @@ tech_volcano = {
 			}
 		}
 		modifier = {
+			factor = 0.33
+			has_valid_civic = civic_environmentalist
+		}
+		modifier = {
 			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = society
@@ -1578,6 +1586,10 @@ tech_dangerous_wildlife = {
 					has_deposit = d_dangerous_wildlife_blocker
 				}
 			}
+		}
+		modifier = {
+			factor = 0.33
+			has_valid_civic = civic_environmentalist
 		}
 		modifier = {
 			factor = value:tech_weight_likelihood
@@ -1651,6 +1663,10 @@ tech_dense_jungle = {
 			}
 		}
 		modifier = {
+			factor = 0.33
+			has_valid_civic = civic_environmentalist
+		}
+		modifier = {
 			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = society
@@ -1720,6 +1736,10 @@ tech_quicksand_basin = {
 					has_deposit = "d_quicksand_basin"
 				}
 			}
+		}
+		modifier = {
+			factor = 0.33
+			has_valid_civic = civic_environmentalist
 		}
 		modifier = {
 			factor = value:tech_weight_likelihood
@@ -1793,6 +1813,10 @@ tech_noxious_swamp = {
 			}
 		}
 		modifier = {
+			factor = 0.33
+			has_valid_civic = civic_environmentalist
+		}
+		modifier = {
 			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = society
@@ -1862,6 +1886,10 @@ tech_massive_glacier = {
 					has_deposit = "d_massive_glacier"
 				}
 			}
+		}
+		modifier = {
+			factor = 0.33
+			has_valid_civic = civic_environmentalist
 		}
 		modifier = {
 			factor = value:tech_weight_likelihood
@@ -1935,6 +1963,10 @@ tech_toxic_kelp = {
 			}
 		}
 		modifier = {
+			factor = 0.33
+			has_valid_civic = civic_environmentalist
+		}
+		modifier = {
 			factor = value:tech_weight_likelihood
 			research_leader = {
 				area = society
@@ -2004,6 +2036,10 @@ tech_deep_sinkhole = {
 					has_deposit = "d_deep_sinkhole"
 				}
 			}
+		}
+		modifier = {
+			factor = 0.33
+			has_valid_civic = civic_environmentalist
 		}
 		modifier = {
 			factor = value:tech_weight_likelihood

@@ -78,10 +78,23 @@ district_city = {
 			exists = owner
 			owner = {
 				is_regular_empire = yes
+				is_pleasure_seeker = no
 			}
 		}
 		modifier = {
 			job_clerk_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_pleasure_seeker = yes
+			}
+		}
+		modifier = {
+			job_entertainer_add = 1
 		}
 	}
 

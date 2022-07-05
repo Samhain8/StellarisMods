@@ -1036,6 +1036,10 @@ generate_start_buildings_and_districts = {
 						has_valid_civic = civic_machine_servitor
 						has_origin = origin_syncretic_evolution
 						has_origin = origin_necrophage
+						has_origin = origin_life_seeded
+						has_origin = origin_remnants
+						has_origin = origin_void_dwellers
+						has_origin = origin_ocean_paradise
 					}
 				}
 			}
@@ -2172,6 +2176,10 @@ generate_start_pops = {
 					has_origin = origin_necrophage
 					has_valid_civic = civic_machine_servitor
 					has_valid_civic = civic_machine_assimilator
+					has_origin = origin_life_seeded
+					has_origin = origin_remnants
+					has_origin = origin_void_dwellers
+					has_origin = origin_ocean_paradise
 				}
 			}
 		}
@@ -2191,6 +2199,10 @@ generate_start_pops = {
 					OR = {
 						has_origin = origin_syncretic_evolution
 						has_origin = origin_necrophage
+						has_origin = origin_life_seeded
+						has_origin = origin_remnants
+						has_origin = origin_void_dwellers
+						has_origin = origin_ocean_paradise
 					}
 				}
 			}
@@ -2324,6 +2336,40 @@ generate_start_pops = {
 			}
 		}
 	}
+
+#---- don't know where this goes so hey
+	if = {
+		limit = { owner = { has_slaver_civic = yes } }
+		owner = {
+			give_technology = {
+				tech = tech_neural_implants
+				message = no
+			}
+			give_technology = {
+				tech = tech_slave_colonies
+				message = no
+			}
+		}
+	}
+	if = {
+		limit = { owner = { has_origin = origin_life_seeded } }
+		owner = {
+			give_technology = {
+				tech = tech_gene_tailoring
+				message = no
+			}
+		}
+	}
+	if = {
+		limit = { owner = { has_origin = origin_mechanists } }
+		owner = {
+			give_technology = {
+				tech = tech_robomodding
+				message = no
+			}
+		}
+	}
+#----
 
 	if = {
 		limit = { owner = { has_origin = origin_mechanists } }

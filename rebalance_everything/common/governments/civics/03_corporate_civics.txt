@@ -339,8 +339,8 @@ civic_corporate_catalytic_processing = {
 		}
 	}
 	modifier = {
-		ship_hull_mult = 0.2
-		ship_hull_regen_add_perc = 0.5
+		ship_hull_mult = 0.1
+		ship_hull_regen_add_perc = 0.35
 	}
 	random_weight = { base = 5 }
 }
@@ -362,6 +362,9 @@ civic_corporate_hedonism = {
 				value = civic_pleasure_seekers
 			}
 		}
+	}
+	modifier = {
+		pop_amenities_usage_mult = 0.5
 	}
 	random_weight = { base = 5 }
 }
@@ -387,9 +390,6 @@ civic_corporate_anglers = {
 			}
 		}
 		civics = { NOT = { value = civic_agrarian_idyll } }
-	}
-	traits = {
-		trait = trait_aquatic
 	}
 }
 

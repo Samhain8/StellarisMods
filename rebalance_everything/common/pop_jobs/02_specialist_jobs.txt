@@ -565,13 +565,13 @@ entertainer = {
 		produces = {
 			unity = 1
 		}
-		upkeep = {
-			consumer_goods = 1
-		}
-		upkeep = {
+		produces = {
 			trigger = {
 				owner = { is_pleasure_seeker = yes }
 			}
+			unity = 1
+		}
+		upkeep = {
 			consumer_goods = 1
 		}
 	}
@@ -590,7 +590,7 @@ entertainer = {
 			owner = { is_pleasure_seeker = yes }
 		}
 		modifier = {
-			pop_growth_speed = 0.025
+			pop_growth_speed = 0.05
 		}
 	}
 
@@ -1926,7 +1926,7 @@ artificer = {
 }
 
 pearl_diver = {
-	category = specialist
+	category = worker
 	condition_string = SPECIALIST_JOB_TRIGGER
 	building_icon = building_food_processing_facility
 	clothes_texture_index = 2
@@ -1938,7 +1938,7 @@ pearl_diver = {
 		is_sapient = yes
 	}
 
-	possible_precalc = can_fill_specialist_job
+	possible_precalc = can_fill_worker_job
 	possible = {
 		hidden_trigger = { exists = owner }
 		owner = {

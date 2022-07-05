@@ -1069,14 +1069,20 @@ ranger = {
 		category = planet_culture_workers
 		produces = {
 			unity = 2
+			society_research = 2
+			engineering_research = 2
 		}
+	}
+
+	planet_modifier = {
+		pop_environment_tolerance = 0.02
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 6
+		planet_amenities_add = 2
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 

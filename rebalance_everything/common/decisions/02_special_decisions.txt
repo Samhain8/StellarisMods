@@ -262,7 +262,7 @@ decision_slave_colony = {
 	resources = {
 		category = decisions
 		cost = {
-			unity = 1000
+			unity = 500
 		}
 	}
 
@@ -313,7 +313,7 @@ decision_abolish_slave_colony = {
 	resources = {
 		category = decisions
 		cost = {
-			unity = 2500
+			unity = 1000
 		}
 	}
 

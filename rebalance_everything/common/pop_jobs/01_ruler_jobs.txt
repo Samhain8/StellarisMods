@@ -251,6 +251,7 @@ noble = {
 		category = planet_nobles
 		produces = {
 			unity = 6
+			influence = 0.12
 		}
 		upkeep = {
 			consumer_goods = 2
@@ -261,18 +262,9 @@ noble = {
 		diplo_weight_mult = 0.02
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			always = yes
-		}
-		planet_amenities_add = 3
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
-	}
-
 	weight = {
 		weight = @ruler_job_weight
 		mult = value:job_weights_modifier|JOB|noble|RESOURCE|unity|
-		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {
 			factor = 0.1
 			has_citizenship_rights = no

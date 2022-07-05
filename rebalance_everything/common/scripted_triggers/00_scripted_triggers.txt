@@ -129,7 +129,7 @@ is_non_menial_laborer = {
 
 wears_clothes = { # The species uses the portrait that wears clothes
 	OR = {
-		#is_human_species = yes
+		is_human_species = yes
 		species_portrait = humanoid_02
 		species_portrait = humanoid_03
 		species_portrait = humanoid_04
