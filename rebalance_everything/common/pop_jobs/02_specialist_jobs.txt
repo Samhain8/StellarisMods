@@ -574,6 +574,12 @@ entertainer = {
 		upkeep = {
 			consumer_goods = 1
 		}
+		upkeep = {
+			trigger = {
+				owner = { is_pleasure_seeker = yes }
+			}
+			consumer_goods = 1
+		}
 	}
 
 	triggered_planet_modifier = {
@@ -684,7 +690,7 @@ duelist = {
 	}
 
 	country_modifier = {
-		country_naval_cap_add = 4
+		country_naval_cap_add = 6
 	}
 
 	pop_modifier = {

@@ -324,7 +324,7 @@ merchant = {
 				exists = owner
 				owner = { has_civic = civic_merchant_guilds }
 			}
-			unity = 1
+			unity = 2
 		}
 		upkeep = {
 			consumer_goods = 2
