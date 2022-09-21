@@ -631,8 +631,12 @@ entertainer = {
 			has_job = entertainer
 		}
 		modifier = {
-			factor = 1.5
+			factor = 5
 			is_domestic_servant = yes
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_syncretic_proles #only possible with this trait for pleasure seekers
 		}
 		modifier = {
 			factor = 0.1

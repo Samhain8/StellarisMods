@@ -1094,5 +1094,9 @@ ranger = {
 			factor = 1.5
 			has_job = ranger
 		}
+		modifier = {
+			factor = 0.15
+			can_take_servant_job = yes
+		}
 	}
 }

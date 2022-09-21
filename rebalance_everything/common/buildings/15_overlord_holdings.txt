@@ -206,6 +206,15 @@ holding_emporium = {
 		job_overlord_trader_drone_add = 2
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner.overlord
+			planet.owner.overlord = { is_crafter_empire = yes }
+		}
+		monthly_loyalty = 0.25
+		planet_pops_consumer_goods_upkeep_mult = -0.15
+	}
+
 	potential = {
 		owner.overlord = {
 			is_machine_empire = no
@@ -983,8 +992,13 @@ holding_noble_vacation_homes = {
 		owner.overlord = { has_valid_civic = civic_aristocratic_elite }
 	}
 
+	country_modifier = {
+		planet_stability_add = 1
+	}
+
 	planet_modifier = {
-		monthly_loyalty = -1
+		monthly_loyalty = -0.5
+		diplo_weight_mult = 0.1
 	}
 
 	triggered_planet_modifier = {
@@ -992,7 +1006,7 @@ holding_noble_vacation_homes = {
 			exists = planet.owner
 			planet.owner = { is_gestalt = no }
 		}
-		planet_amenities_add = -15
+		planet_amenities_add = -10
 	}
 
 	triggered_planet_modifier = {
@@ -1000,24 +1014,24 @@ holding_noble_vacation_homes = {
 			exists = planet.owner
 			planet.owner = { is_gestalt = yes }
 		}
-		planet_amenities_no_happiness_add = -15
+		planet_amenities_no_happiness_add = -10
 	}
 
-	on_built = {
-		planet = {
-			owner.overlord.capital_scope = {
-				append_noble_vacation_home = yes
-				refresh_noble_vacation_home_modifier = yes
-			}
-		}
-	}
+	#on_built = {
+	#	planet = {
+	#		owner.overlord.capital_scope = {
+	#			append_noble_vacation_home = yes
+	#			refresh_noble_vacation_home_modifier = yes
+	#		}
+	#	}
+	#}
 
-	on_destroy = {
-		owner.overlord.capital_scope = {
-			remove_noble_vacation_home = yes
-			refresh_noble_vacation_home_modifier = yes
-		}
-	}
+	#on_destroy = {
+	#	owner.overlord.capital_scope = {
+	#		remove_noble_vacation_home = yes
+	#		refresh_noble_vacation_home_modifier = yes
+	#	}
+	#}
 	triggered_desc = {
 		text = holding_noble_vacation_homes_effect
 	}
