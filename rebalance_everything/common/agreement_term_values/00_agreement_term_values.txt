@@ -170,7 +170,7 @@ specialist_prospectorium = {
 @set_factor_2 = 0.45
 @set_factor_2_neg = -0.45
 @set_factor_3 = 0.60
-@set_factor_3_neg = -1.60
+@set_factor_3_neg = -0.60
 
 resource_subsidies_basic = {
 	term = resource_subsidies
