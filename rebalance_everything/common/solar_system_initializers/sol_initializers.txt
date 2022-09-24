@@ -2123,7 +2123,7 @@ lost_colony_sol_neighbor_t2_second_colony = {
 # Knights of the Toxic God Origin
 toxic_knights_sol_start = {
 	name = "NAME_Sol"
-
+	usage = origin
 	class = "sc_g"
 	asteroid_belt = {
 		type = rocky_asteroid_belt
@@ -2135,8 +2135,6 @@ toxic_knights_sol_start = {
 	}
 
 	flags = { empire_home_system sol_system sol }
-
-	usage = custom_empire
 
 	init_effect = {
 		every_neighbor_system = {

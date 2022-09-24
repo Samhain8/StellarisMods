@@ -415,11 +415,11 @@ strike_craft_component_template = {
 	weapon_type = point_defence
 	projectile_gfx = "toxic_god_strike_craft_weapon"
 
-	prerequisites = { "tech_swarm_strike_craft_1" }
 	component_set = "SWARM_STRIKE_CRAFT_1"
 	icon = "GFX_ship_part_swarm_strike_craft_1"
 	icon_frame = 1
 	tags = { weapon_type_strike_craft }
+	hidden = yes
 }
 
 weapon_component_template = {
