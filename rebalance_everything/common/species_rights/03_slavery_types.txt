@@ -132,6 +132,7 @@ slavery_indentured = {
 	allow = {
 		hidden_trigger = { always = yes }
 	}
+
 	ai_will_do = {
 		factor = 1
 		modifier = {
@@ -212,6 +213,10 @@ slavery_livestock = {
 					has_ethic = ethic_gestalt_consciousness
 				}
 			}
+		}
+		custom_tooltip = {
+			fail_text = noxious_stock
+			NOT = { has_trait = trait_noxious }
 		}
 	}
 	ai_will_do = {

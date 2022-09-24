@@ -240,3 +240,20 @@ d_familiar_predators = {
    		army_morale = 0.2
    	}
 }
+
+# Exotic Metablism Deposit
+d_exotic_mountain = {
+	is_for_colonizable = yes
+	icon = d_radioactive_wasteland
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			exotic_gases = 4
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}

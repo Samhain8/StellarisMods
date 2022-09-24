@@ -268,6 +268,10 @@ tech_eco_simulation = {
 				has_trait = "leader_trait_expertise_biology"
 			}
 		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
+		}
 	}
 
 	ai_weight = {
@@ -343,6 +347,10 @@ tech_gene_crops = {
 				area = society
 				has_trait = "leader_trait_expertise_biology"
 			}
+		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
 		}
 	}
 
@@ -420,6 +428,10 @@ tech_nano_vitality_crops = {
 				area = society
 				has_trait = "leader_trait_expertise_biology"
 			}
+		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
 		}
 	}
 
@@ -520,6 +532,10 @@ tech_nutrient_replication = {
 			factor = 1.5
 			has_ethic = ethic_fanatic_pacifist
 		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
+		}
 	}
 
 	ai_weight = {
@@ -586,6 +602,10 @@ tech_hydroponics = {
 				area = society
 				has_trait = "leader_trait_expertise_biology"
 			}
+		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
 		}
 	}
 
@@ -654,6 +674,10 @@ tech_food_processing_1 = {
 		modifier = {
 			factor = 2
 			is_catalytic_empire = yes
+		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
 		}
 	}
 
@@ -736,6 +760,10 @@ tech_food_processing_2 = {
 				has_country_flag = has_market_access
 			}
 		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
+		}
 	}
 
 	ai_weight = {
@@ -803,6 +831,10 @@ tech_society_1 = {
 			factor = 1.5
 			is_specialist_subject_type = { TYPE = scholarium }
 		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
+		}
 	}
 
 	ai_weight = {
@@ -857,6 +889,10 @@ tech_society_2 = {
 		modifier = {
 			factor = 1.5
 			is_specialist_subject_type = { TYPE = scholarium }
+		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
 		}
 	}
 
@@ -913,6 +949,10 @@ tech_society_3 = {
 			factor = 1.5
 			is_specialist_subject_type = { TYPE = scholarium }
 		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
+		}
 	}
 
 	ai_weight = {
@@ -962,6 +1002,10 @@ tech_alien_life_studies = {
 					has_deposit = d_alien_pets_deposit
 				}
 			}
+		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
 		}
 	}
 
@@ -1013,9 +1057,7 @@ tech_arcane_deciphering = {
 		}
 		modifier = {
 			factor = 0
-			NOT = {
-				has_ancrel = yes
-			}
+			has_ancrel = no
 		}
 		modifier = {
 			factor = 2
@@ -1359,6 +1401,10 @@ tech_frontier_health = {
 				has_trait = "leader_trait_expertise_biology"
 			}
 		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
+		}
 	}
 }
 
@@ -1394,6 +1440,10 @@ tech_frontier_hospital = {
 				area = society
 				has_trait = "leader_trait_expertise_biology"
 			}
+		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
 		}
 	}
 }
@@ -2336,6 +2386,10 @@ tech_genome_mapping = {
 				has_trait = "leader_trait_expertise_biology"
 			}
 		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
+		}
 	}
 
 	ai_weight = {
@@ -2386,6 +2440,10 @@ tech_vitality_boosters = {
 				area = society
 				has_trait = "leader_trait_expertise_biology"
 			}
+		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
 		}
 	}
 
@@ -2449,6 +2507,10 @@ tech_epigenetic_triggers = {
 				area = society
 				has_trait = "leader_trait_expertise_biology"
 			}
+		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
 		}
 		modifier = {
 			factor = 0
@@ -2526,6 +2588,10 @@ tech_cloning = {
 				area = society
 				has_trait = "leader_trait_expertise_biology"
 			}
+		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
 		}
 	}
 
@@ -2607,6 +2673,10 @@ tech_gene_banks = {
 				area = society
 				has_level < 2
 			}
+		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
 		}
 	}
 
@@ -2700,6 +2770,10 @@ tech_gene_seed_purification = {
 					has_level > 3
 				}
 			}
+		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
 		}
 	}
 
@@ -2810,6 +2884,10 @@ tech_morphogenetic_field_mastery = {
 				}
 			}
 		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
+		}
 	}
 
 	ai_weight = {
@@ -2886,6 +2964,10 @@ tech_gene_tailoring = {
 			has_origin = origin_necrophage
 			has_trait = trait_necrophage
 		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
+		}
 	}
 
 	ai_weight = {
@@ -2914,7 +2996,7 @@ tech_glandular_acclimation = {
 	weight = @tier3weight3
 
 	feature_flags = {
-		habitability_gene_modding
+		habitability_gene_modding #no longer does anything except make a tooltip, handled in game rules ("can_gene_mod_habitability")
 	}
 
 	potential = {
@@ -2942,6 +3024,10 @@ tech_glandular_acclimation = {
 			factor = 1.25
 			has_origin = origin_necrophage
 			has_trait = trait_necrophage
+		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
 		}
 	}
 
@@ -2972,8 +3058,8 @@ tech_genetic_resequencing = {
 	gateway = biological
 
 	feature_flags = {
-		advanced_gene_modding
-		add_advanced_traits
+		advanced_gene_modding #no longer does anything except make a tooltip, handled in game rules
+		add_advanced_traits #ditto
 	}
 
 	ai_weight = {
@@ -3055,6 +3141,10 @@ tech_gene_expressions = {
 				has_trait = "leader_trait_expertise_biology"
 			}
 		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
+		}
 	}
 
 	ai_weight = {
@@ -3134,6 +3224,10 @@ tech_selected_lineages = {
 				has_trait = "leader_trait_expertise_biology"
 			}
 		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
+		}
 	}
 
 	ai_weight = {
@@ -3212,6 +3306,10 @@ tech_capacity_boosters = {
 				area = society
 				has_trait = "leader_trait_expertise_biology"
 			}
+		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
 		}
 	}
 
@@ -3962,6 +4060,7 @@ tech_psionic_theory = {
 		OR = { #The OR is so that Gestalts can get Zro Distillation with that Resolution
 			NOT = { has_ethic = ethic_gestalt_consciousness }
 			is_active_resolution = resolution_galacticstudies_extradimensional_experimentation
+			has_relic = r_zro_crystal
 		}
 	}
 
@@ -4953,6 +5052,10 @@ tech_subdermal_stimulation = {
 				area = society
 				has_trait = "leader_trait_expertise_biology"
 			}
+		}
+		modifier = {
+			factor = 2
+			has_relic = r_pox_sample
 		}
 	}
 
