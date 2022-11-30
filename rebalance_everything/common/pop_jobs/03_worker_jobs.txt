@@ -1153,6 +1153,10 @@ squire = {
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
+	country_modifier = {
+		country_naval_cap_add = 1
+	}
+
 	triggered_planet_modifier = {
 		potential = {
 			planet = { has_modifier = syamelles_curse_habitat }

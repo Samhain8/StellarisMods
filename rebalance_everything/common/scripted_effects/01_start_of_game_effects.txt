@@ -1046,7 +1046,7 @@ generate_start_buildings_and_districts = {
 						has_origin = origin_necrophage
 						has_origin = origin_life_seeded
 						has_origin = origin_remnants
-						has_origin = origin_void_dwellers
+						has_origin = origin_overtuned
 						has_origin = origin_ocean_paradise
 					}
 				}
@@ -1266,14 +1266,12 @@ generate_start_buildings_and_districts = {
 				}
 				add_building = building_posthumous_employment_center
 			}
-			# 2 Jobs
 			if = {
 				limit = {
 					owner = {
 						has_valid_civic = civic_environmentalist
 					}
 				}
-				add_building = building_ranger_lodge
 				add_blocker = { type = d_big_nature_preserve_blocker }
 			}
 			# 4-5 jobs
@@ -2204,7 +2202,7 @@ generate_start_pops = {
 					has_valid_civic = civic_machine_assimilator
 					has_origin = origin_life_seeded
 					has_origin = origin_remnants
-					has_origin = origin_void_dwellers
+					has_origin = origin_overtuned
 					has_origin = origin_ocean_paradise
 				}
 			}
@@ -2227,7 +2225,7 @@ generate_start_pops = {
 						has_origin = origin_necrophage
 						has_origin = origin_life_seeded
 						has_origin = origin_remnants
-						has_origin = origin_void_dwellers
+						has_origin = origin_overtuned
 						has_origin = origin_ocean_paradise
 					}
 				}
@@ -3505,6 +3503,14 @@ toxic_knights_order_habitat_setup = {
 
 			add_building = building_hab_major_capital
 			add_building = building_order_keep
+
+			if = {
+				limit = { owner_main_species = { has_trait = trait_aquatic } }
+				add_modifier = {
+					modifier = flooded_habitat
+					days = -1
+				}
+			}
 		}
 		every_system_planet = {
 			limit = { has_deposit_for = shipclass_mining_station }

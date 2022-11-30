@@ -1761,7 +1761,24 @@ d_big_nature_preserve_blocker = {
 	}
 
 	resources = {
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_environmentalist }
+			}
+			unity = 5
+		}
 		category = deposit_blockers_natural
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
 	}
 
 	is_for_colonizable = yes

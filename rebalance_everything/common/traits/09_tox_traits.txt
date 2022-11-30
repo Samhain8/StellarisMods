@@ -230,7 +230,7 @@ trait_technical_skill = {
 }
 trait_crafted_smiles = {
 	host_has_dlc = "Toxoids Species Pack"
-	cost = 1
+	cost = 0
 	potential_crossbreeding_chance = 1.0	# 1.0 = 100% chance of being considered for new traits when forming half-species. does not guarantee the trait will be added if it costs points.
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	allowed_origins = { origin_overtuned }
@@ -251,7 +251,7 @@ trait_crafted_smiles = {
 			owner = { NOT = { has_edict = damn_the_consequences } }
 		}
 		modifier = {
-			pop_job_amenities_mult = 0.15
+			pop_job_amenities_mult = 0.1
 		}
 	}
 	triggered_pop_modifier = {
@@ -260,7 +260,7 @@ trait_crafted_smiles = {
 			owner = { has_edict = damn_the_consequences }
 		}
 		modifier = {
-			pop_job_amenities_mult = 0.3
+			pop_job_amenities_mult = 0.15
 		}
 	}
 	slave_cost = {
@@ -290,7 +290,7 @@ trait_low_maintenance = {
 			owner = { NOT = { has_edict = damn_the_consequences } }
 		}
 		modifier = {
-			planet_pops_consumer_goods_upkeep_mult = 0.15
+			planet_pops_consumer_goods_upkeep_mult = -0.15
 		}
 	}
 	triggered_pop_modifier = {
@@ -299,7 +299,7 @@ trait_low_maintenance = {
 			owner = { has_edict = damn_the_consequences }
 		}
 		modifier = {
-			planet_pops_consumer_goods_upkeep_mult = 0.3
+			planet_pops_consumer_goods_upkeep_mult = -0.3
 		}
 	}
 	modifier = {
@@ -368,7 +368,7 @@ trait_artificial_intelligence = {
 
 trait_gene_mentorship = {
 	host_has_dlc = "Toxoids Species Pack"
-	cost = 1
+	cost = 0
 	potential_crossbreeding_chance = 1.0	# 1.0 = 100% chance of being considered for new traits when forming half-species. does not guarantee the trait will be added if it costs points.
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	allowed_origins = { origin_overtuned }
@@ -388,7 +388,7 @@ trait_gene_mentorship = {
 			owner = { NOT = { has_edict = damn_the_consequences } }
 		}
 		modifier = {
-			species_leader_exp_gain = 0.25
+			species_leader_exp_gain = 0.3
 		}
 	}
 	triggered_leader_modifier = {
@@ -397,7 +397,7 @@ trait_gene_mentorship = {
 			owner = { has_edict = damn_the_consequences }
 		}
 		modifier = {
-			species_leader_exp_gain = 0.5
+			species_leader_exp_gain = 0.6
 		}
 	}
 	modifier = {
@@ -410,7 +410,7 @@ trait_gene_mentorship = {
 
 trait_expressed_tradition = {
 	host_has_dlc = "Toxoids Species Pack"
-	cost = 1
+	cost = 0
 	potential_crossbreeding_chance = 1.0 #1.0 100% of being considered for new traits when forming half-species. doe snot guarantee the trait will be added if it costs points.
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	allowed_origins = { origin_overtuned }
@@ -500,7 +500,8 @@ trait_elevated_synapses = {
 	}
 	modifier = {
 		leader_age = -30
-		leader_skill_levels = 2
+		leader_skill_levels = 1
+		species_leader_exp_gain = 0.35
 	}
 	assembly_score = {
 		modifier = {
@@ -570,7 +571,7 @@ trait_preplanned_growth = {
 		}
 	}
 	modifier = {
-		leader_age = -30
+		leader_age = -20
 	}
 	slave_cost = {
 		energy = 2000
@@ -579,7 +580,7 @@ trait_preplanned_growth = {
 
 trait_excessive_endurance = {
 	host_has_dlc = "Toxoids Species Pack"
-	cost = 3
+	cost = 2
 	potential_crossbreeding_chance = 1.0 #1.0 100% of being considered for new traits when forming half-species. doe snot guarantee the trait will be added if it costs points.
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	allowed_origins = { origin_overtuned }
@@ -630,7 +631,7 @@ trait_excessive_endurance = {
 		}
 	}
 	modifier = {
-		leader_age = -30
+		leader_age = -20
 	}
 	assembly_score = {
 		base = 0.5 #always good
@@ -664,7 +665,7 @@ trait_incubator = {
 
 trait_inorganic_breath = {
 	host_has_dlc = "Toxoids Species Pack"
-	cost = 3
+	cost = 2
 	species_possible_remove = {
 		can_remove_beneficial_traits = yes
 	}
@@ -674,7 +675,7 @@ trait_inorganic_breath = {
 	custom_tooltip_with_modifiers = inorganic_breath_tooltip
 
 	modifier = {
-		planet_pops_upkeep_mult = 0.5
+		planet_pops_upkeep_mult = 0.35
 	}
 
 	slave_cost = {

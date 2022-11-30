@@ -130,11 +130,11 @@ researcher = {
 	weight = {
 		weight = @specialist_job_weight
 		mult = value:job_weights_research_modifier|JOB|researcher|
-		modifier = {
-			factor = 0.2
-			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
-		}
+		#modifier = {
+		#	factor = 0.2
+		#	has_citizenship_rights = no
+		#	NOT = { has_trait = trait_mechanical }
+		#}
 		modifier = {
 			factor = 2
 			has_living_standard = { type = living_standard_academic_privilege }
@@ -195,11 +195,11 @@ priest = {
 		weight = @specialist_job_weight
 		mult = value:job_weights_modifier|JOB|priest|RESOURCE|unity|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
-		modifier = {
-			factor = 0.2
-			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
-		}
+		#modifier = {
+		#	factor = 0.2
+		#	has_citizenship_rights = no
+		#	NOT = { has_trait = trait_mechanical }
+		#}
 		modifier = {
 			factor = 2
 			exists = owner
@@ -613,11 +613,11 @@ entertainer = {
 		weight = @high_prio_specialist_job_weight
 		mult = value:job_weights_modifier|JOB|entertainer|RESOURCE|unity|FACTOR|0.25|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
-		modifier = {
-			factor = 0.2
-			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
-		}
+		#modifier = {
+		#	factor = 0.2
+		#	has_citizenship_rights = no
+		#	NOT = { has_trait = trait_mechanical }
+		#}
 		modifier = {
 			factor = 3
 			has_trait = trait_robot_domestic_protocols
@@ -627,7 +627,7 @@ entertainer = {
 			}
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.1
 			has_job = entertainer
 		}
 		modifier = {
@@ -710,11 +710,11 @@ duelist = {
 			has_ethic = ethic_pacifist
 			NOT = { has_job = duelist }
 		}
-		modifier = {
-			factor = 0.2
-			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
-		}
+		#modifier = {
+		#	factor = 0.2
+		#	has_citizenship_rights = no
+		#	NOT = { has_trait = trait_mechanical }
+		#}
 		modifier = {
 			factor = 10
 			is_enslaved = yes
@@ -801,11 +801,11 @@ culture_worker = {
 		weight = @specialist_job_weight
 		mult = value:job_weights_modifier|JOB|culture_worker|RESOURCE|unity|
 		# We deliberately don't weight the ethics-based modifiers
-		modifier = {
-			factor = 0.2
-			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
-		}
+		#modifier = {
+		#	factor = 0.2
+		#	has_citizenship_rights = no
+		#	NOT = { has_trait = trait_mechanical }
+		#}
 		modifier = {
 			factor = 0.1
 			can_take_servant_job = yes
@@ -858,11 +858,11 @@ bureaucrat = {
 	weight = {
 		weight = @specialist_job_weight
 		mult = value:job_weights_modifier|JOB|bureaucrat|RESOURCE|unity|
-		modifier = {
-			factor = 0.2
-			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
-		}
+		#modifier = {
+		#	factor = 0.2
+		#	has_citizenship_rights = no
+		#	NOT = { has_trait = trait_mechanical }
+		#}
 		modifier = {
 			factor = 0.1
 			can_take_servant_job = yes
@@ -902,11 +902,11 @@ chemist = {
 	weight = {
 		weight = @specialist_job_weight
 		mult = value:job_weights_modifier|JOB|chemist|RESOURCE|volatile_motes|
-		modifier = {
-			factor = 0.2
-			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
-		}
+		#modifier = {
+		#	factor = 0.2
+		#	has_citizenship_rights = no
+		#	NOT = { has_trait = trait_mechanical }
+		#}
 		modifier = {
 			factor = 0.1
 			can_take_servant_job = yes
@@ -946,11 +946,11 @@ translucer = {
 	weight = {
 		weight = @specialist_job_weight
 		mult = value:job_weights_modifier|JOB|translucer|RESOURCE|rare_crystals|
-		modifier = {
-			factor = 0.2
-			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
-		}
+		#modifier = {
+		#	factor = 0.2
+		#	has_citizenship_rights = no
+		#	NOT = { has_trait = trait_mechanical }
+		#}
 		modifier = {
 			factor = 0.1
 			can_take_servant_job = yes
@@ -995,11 +995,11 @@ gas_refiner = {
 	weight = {
 		weight = @specialist_job_weight
 		mult = value:job_weights_modifier|JOB|gas_refiner|RESOURCE|exotic_gases|
-		modifier = {
-			factor = 0.2
-			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
-		}
+		#modifier = {
+		#	factor = 0.2
+		#	has_citizenship_rights = no
+		#	NOT = { has_trait = trait_mechanical }
+		#}
 		modifier = {
 			factor = 0.1
 			can_take_servant_job = yes
@@ -1096,11 +1096,11 @@ healthcare = {
 	weight = {
 		weight = @high_prio_specialist_job_weight
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
-		modifier = {
-			factor = 0.2
-			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
-		}
+		#modifier = {
+		#	factor = 0.2
+		#	has_citizenship_rights = no
+		#	NOT = { has_trait = trait_mechanical }
+		#}
 		modifier = {
 			factor = 0.1
 			can_take_servant_job = yes
@@ -2137,12 +2137,11 @@ bath_attendant = {
 	}
 
 	triggered_planet_modifier = {
-		pop_growth_speed = 0.01
-		pop_environment_tolerance = -0.0025
-		pop_happiness = -0.0075
+		pop_growth_speed = 0.025
+		pop_environment_tolerance = -0.003
+		planet_amenities_add = -0.5
 		mult = planet.value:toxic_attendant_growth
 	}
-
 
 	resources = {
 		category = planet_bath_attendants

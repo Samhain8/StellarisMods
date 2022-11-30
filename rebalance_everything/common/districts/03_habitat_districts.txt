@@ -12,6 +12,10 @@ district_hab_housing = {
 
 	potential = {
 		uses_district_set = habitat
+		NOR = {
+			has_building = building_order_keep
+			has_building = building_order_castle
+		}
 	}
 
 	resources = {
@@ -935,10 +939,6 @@ district_hab_cultural = {
 				is_gestalt = no
 				has_valid_civic = civic_machine_servitor
 			}
-		}
-		NOR = {
-			has_building = building_order_keep
-			has_building = building_order_castle
 		}
 	}
 
