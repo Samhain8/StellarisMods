@@ -31,8 +31,7 @@ shipyard = {
 		starbase_shipyard_capacity_add = 1
 	}
 
-	ai_build_at_chokepoint = no
-	ai_build_outside_chokepoint = yes
+
 	ai_weight = {
 		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
 		modifier = {
@@ -107,8 +106,8 @@ anchorage = {
 		country_naval_cap_add = 2
 	}
 
-	ai_build_at_chokepoint = no
-	ai_build_outside_chokepoint = yes
+
+
 	ai_weight = {
 		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
 		modifier = {
@@ -149,8 +148,7 @@ gun_battery = {
 		starbase_defense_platform_capacity_add = 1
 	}
 
-	ai_build_at_chokepoint = yes
-	ai_build_outside_chokepoint = yes
+
 	ai_weight = {
 		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
 		modifier = {
@@ -174,6 +172,8 @@ missile_battery = {
 	construction_days = 180
 
 	potential = {
+		exists = owner
+		owner = { has_technology = tech_torpedoes_1 }
 		is_orbital_ring = no
 	}
 
@@ -196,8 +196,8 @@ missile_battery = {
 		starbase_defense_platform_capacity_add = 1
 	}
 
-	ai_build_at_chokepoint = yes
-	ai_build_outside_chokepoint = yes
+
+
 	ai_weight = {
 		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
 		modifier = {
@@ -207,7 +207,7 @@ missile_battery = {
 		}
 	}
 
-	show_in_tech = "tech_missiles_1"
+	show_in_tech = "tech_torpedoes_1"
 }
 
 hangar_bay = {
@@ -240,7 +240,7 @@ hangar_bay = {
 		starbase_defense_platform_capacity_add = 1
 	}
 
-	ai_build_outside_chokepoint = yes
+
 	ai_weight = {
 		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
 		modifier = {
@@ -311,7 +311,7 @@ solar_panel_network = {
 		}
 	}
 
-	ai_build_at_chokepoint = no
+
 	ai_weight = {
 		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
 	}
@@ -346,7 +346,7 @@ trading_hub = {
 		starbase_trade_collection_range_add = 1
 	}
 
-	ai_build_at_chokepoint = no
+
 	ai_weight = {
 		weight = 100 #use same weight here - ai weighting is done in starbase_types.txt
 		modifier = {
