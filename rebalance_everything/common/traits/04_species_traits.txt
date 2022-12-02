@@ -82,6 +82,54 @@ trait_industrious = {
 	}
 }
 
+trait_languid = {
+	cost = -2
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	potential_crossbreeding_chance = 1.0
+	opposites = { "trait_industrious" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	icon = "gfx/interface/icons/traits/trait_slow_breeders.dds"
+	modifier = {
+		planet_jobs_minerals_produces_mult = -0.15
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			years_passed > 5
+		}
+	}
+	slave_cost = {
+		energy = -500
+	}
+}
+
+trait_squandering = {
+	cost = -2
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	potential_crossbreeding_chance = 1.0
+	opposites = { "trait_ingenious" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	icon = "gfx/interface/icons/traits/trait_wasteful.dds"
+	modifier = {
+		planet_jobs_energy_produces_mult = -0.15
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			years_passed > 5
+		}
+	}
+	slave_cost = {
+		energy = -500
+	}
+}
+
 trait_intelligent = {
 	cost = 2
 	species_possible_remove = {
@@ -145,7 +193,7 @@ trait_natural_engineers = {
 		always = yes
 	}
 	potential_crossbreeding_chance = 1.0
-	opposites = { "trait_natural_physicists" "trait_natural_sociologists" "trait_nerve_stapled" }
+	opposites = { "trait_natural_physicists" "trait_natural_sociologists" "trait_nerve_stapled" "trait_dim_engineers" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 		planet_jobs_engineering_research_produces_mult = 0.15
@@ -174,7 +222,7 @@ trait_natural_physicists = {
 		always = yes
 	}
 	potential_crossbreeding_chance = 1.0
-	opposites = { "trait_natural_engineers" "trait_natural_sociologists" "trait_nerve_stapled" }
+	opposites = { "trait_natural_engineers" "trait_natural_sociologists" "trait_nerve_stapled" "trait_dim_physicists" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 		planet_jobs_physics_research_produces_mult = 0.15
@@ -203,7 +251,7 @@ trait_natural_sociologists = {
 		always = yes
 	}
 	potential_crossbreeding_chance = 1.0
-	opposites = { "trait_natural_physicists" "trait_natural_engineers" "trait_nerve_stapled" }
+	opposites = { "trait_natural_physicists" "trait_natural_engineers" "trait_nerve_stapled" "trait_dim_sociologists" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 		planet_jobs_society_research_produces_mult = 0.15
@@ -220,6 +268,78 @@ trait_natural_sociologists = {
 			add = 1
 			from = { has_building = building_order_keep }
 		}
+	}
+}
+
+trait_dim_engineers = {
+	cost = -2
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	potential_crossbreeding_chance = 1.0
+	opposites = { "trait_natural_engineers" "trait_dim_physicists" "trait_dim_sociologists" "trait_nerve_stapled" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	icon = "gfx/interface/icons/traits/trait_slow_learners.dds"
+	modifier = {
+		planet_jobs_engineering_research_produces_mult = -0.2
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			years_passed > 5
+		}
+	}
+	slave_cost = {
+		energy = -200
+	}
+}
+
+trait_dim_physicists = {
+	cost = -2
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	potential_crossbreeding_chance = 1.0
+	opposites = { "trait_natural_physicists" "trait_dim_engineers" "trait_dim_sociologists" "trait_nerve_stapled" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	icon = "gfx/interface/icons/traits/trait_slow_learners.dds"
+	modifier = {
+		planet_jobs_physics_research_produces_mult = -0.2
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			years_passed > 5
+		}
+	}
+	slave_cost = {
+		energy = -200
+	}
+}
+
+trait_dim_sociologists = {
+	cost = -2
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	potential_crossbreeding_chance = 1.0
+	opposites = { "trait_natural_sociologists" "trait_dim_engineers" "trait_dim_physicists" "trait_nerve_stapled" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	icon = "gfx/interface/icons/traits/trait_slow_learners.dds"
+	modifier = {
+		planet_jobs_society_research_produces_mult = -0.2
+	}
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			years_passed > 5
+		}
+	}
+	slave_cost = {
+		energy = -200
 	}
 }
 
