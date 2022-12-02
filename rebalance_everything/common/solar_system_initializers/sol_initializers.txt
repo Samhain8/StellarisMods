@@ -790,6 +790,8 @@ com_sol_system = {
 				any_system = { has_star_flag = sol }
 				has_star_flag = empire_cluster
 			}
+			is_fe_cluster = no
+			is_marauder_cluster = no
 			add = 99999
 		}
 	}
@@ -1476,6 +1478,8 @@ lost_colony_sol_system = {
 			}
 			NOT = { any_system = { has_star_flag = sol } }
 			NOT = { has_star_flag = empire_cluster }
+			is_fe_cluster = no
+			is_marauder_cluster = no
 			add = 99999
 		}
 	}
@@ -2153,6 +2157,7 @@ toxic_knights_sol_start = {
 			}
 			clear_deposits = yes
 			add_deposit = d_minerals_6
+			add_deposit = d_alloys_3
 		}
 	}
 
@@ -2183,6 +2188,7 @@ toxic_knights_sol_start = {
 		has_ring = no
 
 		init_effect = {
+			set_planet_flag = toxic_terraforming_candidate
 			add_modifier = {
 				modifier = toxic_terraforming_candidate
 				days = -1
@@ -2235,7 +2241,7 @@ toxic_knights_sol_start = {
 				orbit_angle = 40
 				flags = { toxic_knights_habitat megastructure habitat }
 				deposit_blockers = none
-			}	
+			}
 		}
 	}
 
