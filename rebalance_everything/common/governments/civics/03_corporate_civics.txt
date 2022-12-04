@@ -209,7 +209,7 @@ civic_private_military_companies = {
 		army_starting_experience_add = 100
 		army_damage_mult = 0.2
 		armies_upkeep_mult = -0.2
-		country_alloys_produces_mult = 0.1
+		country_alloys_produces_mult = 0.05
 	}
 	swap_type = {
 		trigger = {

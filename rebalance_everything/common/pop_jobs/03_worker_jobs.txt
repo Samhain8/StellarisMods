@@ -704,6 +704,15 @@ soldier = {
 		mult = planet.modifier:job_soldier_stability_add
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_private_military_companies }
+		}
+		trade_value_add = 2
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+	}
+
 	possible_pre_triggers = {
 		has_owner = yes
 		is_being_purged = no
@@ -874,13 +883,8 @@ mortal_initiate = {
 		mult = value:job_weights_multiple_resources_modifier|JOB|mortal_initiate|RESOURCE1|unity|WEIGHT1|0.5|RESOURCE2|society_research|WEIGHT2|0.3|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {
-			factor = 0.2
+			factor = 2
 			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
-		}
-		modifier = {
-			factor = 0.1
-			can_take_servant_job = yes
 		}
 	}
 }
@@ -1068,8 +1072,8 @@ ranger = {
 		category = planet_culture_workers
 		produces = {
 			unity = 2
-			society_research = 2
-			engineering_research = 2
+			society_research = 1
+			engineering_research = 1
 		}
 	}
 
@@ -1081,7 +1085,7 @@ ranger = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 2
+		planet_amenities_add = 3
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 

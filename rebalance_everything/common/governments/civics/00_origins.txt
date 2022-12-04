@@ -903,10 +903,6 @@ origin_ocean_paradise = {
 		title = civic_syncretic_evolution_secondary_species
 	}
 
-	traits = {
-		trait = trait_aquatic
-	}
-
 	advanced_start = yes
 
 	random_weight = {

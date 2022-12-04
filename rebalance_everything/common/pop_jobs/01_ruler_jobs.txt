@@ -131,6 +131,13 @@ high_priest = {
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		country_edict_fund_add = 2
+	}
+
 	weight = {
 		weight = @ruler_job_weight
 		mult = value:job_weights_modifier|JOB|high_priest|RESOURCE|unity|
@@ -499,6 +506,10 @@ knight_commander = {
 		modifier = {
 			mult = value:job_weights_research_modifier|JOB|researcher|
 			owner = { has_country_flag = toxoids_7011_b }
+		}
+		modifier = {
+			factor = 2
+			has_job = knight_commander
 		}
 	}
 }

@@ -45,15 +45,6 @@ servant = {
 			exists = owner
 			owner = { is_pleasure_seeker = yes }
 		}
-		trade_value_add = 2
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_pleasure_seeker = yes }
-		}
 		modifier = {
 			pop_growth_speed = 0.02
 		}

@@ -511,7 +511,7 @@ trait_clone_soldier_fertile = {
 trait_cave_dweller = {
 	cost = 0
 	potential_crossbreeding_chance = 0
-	opposites = { "trait_plantoid_phototrophic" "trait_aquatic" "trait_advanced_phototrophic" }
+	opposites = { "trait_plantoid_phototrophic" "trait_advanced_phototrophic" }
 	sorting_priority = 20
 
 	initial = no

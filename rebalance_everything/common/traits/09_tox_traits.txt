@@ -288,7 +288,7 @@ trait_crafted_smiles = {
 
 trait_low_maintenance = {
 	host_has_dlc = "Toxoids Species Pack"
-	cost = 1
+	cost = 0
 	potential_crossbreeding_chance = 1.0	# 1.0 = 100% chance of being considered for new traits when forming half-species. does not guarantee the trait will be added if it costs points.
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	allowed_origins = { origin_overtuned }
@@ -311,7 +311,7 @@ trait_low_maintenance = {
 			owner = { NOT = { has_edict = damn_the_consequences } }
 		}
 		modifier = {
-			planet_pops_consumer_goods_upkeep_mult = -0.15
+			planet_pops_consumer_goods_upkeep_mult = -0.10
 		}
 	}
 	triggered_pop_modifier = {
@@ -320,7 +320,7 @@ trait_low_maintenance = {
 			owner = { has_edict = damn_the_consequences }
 		}
 		modifier = {
-			planet_pops_consumer_goods_upkeep_mult = -0.25
+			planet_pops_consumer_goods_upkeep_mult = -0.20
 		}
 	}
 	modifier = {
@@ -415,7 +415,7 @@ trait_gene_mentorship = {
 			owner = { NOT = { has_edict = damn_the_consequences } }
 		}
 		modifier = {
-			species_leader_exp_gain = 0.3
+			species_leader_exp_gain = 0.25
 		}
 	}
 	triggered_leader_modifier = {
@@ -424,7 +424,7 @@ trait_gene_mentorship = {
 			owner = { has_edict = damn_the_consequences }
 		}
 		modifier = {
-			species_leader_exp_gain = 0.6
+			species_leader_exp_gain = 0.5
 		}
 	}
 	modifier = {
@@ -706,7 +706,7 @@ trait_incubator = {
 
 trait_inorganic_breath = {
 	host_has_dlc = "Toxoids Species Pack"
-	cost = 2
+	cost = 1
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
 	}

@@ -677,7 +677,7 @@ entertainer = {
 			owner = { is_pleasure_seeker = yes }
 		}
 		modifier = {
-			pop_growth_speed = 0.05
+			pop_growth_speed = 0.04
 		}
 	}
 
@@ -734,6 +734,15 @@ entertainer = {
 			planet = {
 				free_amenities < 2
 				has_available_jobs = entertainer
+			}
+		}
+		modifier = {
+			factor = 1.25
+			exists = owner
+			owner = { is_pleasure_seeker = yes }
+			OR = {
+				has_trait = trait_thrifty
+				has_trait = trait_robot_trading_algorithms
 			}
 		}
 	}
@@ -2363,6 +2372,26 @@ knight = {
 		}
 		modifier = {
 			mult = value:job_weights_research_modifier|JOB|researcher|
+		}
+		modifier = {
+			factor = 2
+			has_job = knight
+		}
+		modifier = {
+			factor = 1.15
+			has_trait = trait_very_strong
+		}
+		modifier = {
+			factor = 1.15
+			has_trait = trait_resilient
+		}
+		modifier = {
+			factor = 1.1
+			has_trait = trait_strong
+		}
+		modifier = {
+			factor = 0.9
+			has_trait = trait_weak
 		}
 	}
 }
