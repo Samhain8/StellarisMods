@@ -544,9 +544,9 @@ brain_drone = {
 	resources = {
 		category = planet_researchers
 		produces = {
-			physics_research = 4
-			engineering_research = 4
-			society_research = 4
+			physics_research = 3
+			engineering_research = 3
+			society_research = 3
 		}
 		upkeep = {
 			minerals = 6
@@ -608,9 +608,9 @@ calculator = {
 	resources = {
 		category = planet_researchers
 		produces = {
-			physics_research = 4
-			engineering_research = 4
-			society_research = 4
+			physics_research = 3
+			engineering_research = 3
+			society_research = 3
 		}
 		upkeep = {
 			energy = 4
