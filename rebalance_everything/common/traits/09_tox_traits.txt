@@ -32,7 +32,7 @@ trait_spliced_adaptability = {
 		pop_environment_tolerance = 0.40
 	}
 	modifier = {
-		leader_age = -10
+		leader_age = -20
 	}
 	slave_cost = {
 		energy = 1000
