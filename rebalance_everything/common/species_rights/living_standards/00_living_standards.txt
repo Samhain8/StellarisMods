@@ -953,7 +953,7 @@ living_standard_good = {
 				}
 				NOR = {
 					has_slavery_type = { country = from type = slavery_normal }
-					has_slavery_type = { country = from type = slavery_domestic }
+					#has_slavery_type = { country = from type = slavery_domestic }
 				}
 			}
 		}
@@ -1438,19 +1438,20 @@ living_standard_hive_mind = {
 
 living_standard_decadent = {
 	potential = {
-		host_has_dlc = "Humanoids Species Pack"
-		exists = from
-		from = { is_pleasure_seeker = yes }
-		NOT = { from = { has_valid_civic = civic_shared_burden } }
-		OR = {
-			from = { is_gestalt = no }
-			has_citizenship_type = { type = citizenship_slavery country = from }
-		}
-		NOR = {
-			has_trait = trait_hive_mind
-			has_trait = trait_machine_unit
-			is_shackled_robot_species_rights = yes
-		}
+		always = no
+		#host_has_dlc = "Humanoids Species Pack"
+		#exists = from
+		#from = { is_pleasure_seeker = yes }
+		#NOT = { from = { has_valid_civic = civic_shared_burden } }
+		#OR = {
+		#	from = { is_gestalt = no }
+		#	has_citizenship_type = { type = citizenship_slavery country = from }
+		#}
+		#NOR = {
+		#	has_trait = trait_hive_mind
+		#	has_trait = trait_machine_unit
+		#	is_shackled_robot_species_rights = yes
+		#}
 	}
 
 	allow = {
