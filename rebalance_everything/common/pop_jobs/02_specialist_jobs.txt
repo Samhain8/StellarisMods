@@ -15,6 +15,9 @@ colonist = {
 	}
 
 	possible_precalc = can_fill_specialist_job
+	possible = {
+		nondomestic_specialist_job_check_trigger = yes
+	}
 
 	pop_modifier = {
 		pop_defense_armies_add = 1
@@ -147,11 +150,6 @@ researcher = {
 			factor = 1.5
 			has_job = researcher
 		}
-		modifier = {
-			factor = 0.8
-			is_enslaved = yes
-			has_slavery_type = { type = slavery_indentured }
-		}
 	}
 }
 
@@ -221,11 +219,6 @@ priest = {
 		modifier = {
 			factor = 1.5
 			has_job = priest
-		}
-		modifier = {
-			factor = 0.1
-			is_enslaved = yes
-			has_slavery_type = { type = slavery_indentured }
 		}
 	}
 }
@@ -303,11 +296,6 @@ death_priest = {
 		modifier = {
 			factor = 1.5
 			has_job = death_priest
-		}
-		modifier = {
-			factor = 0.1
-			is_enslaved = yes
-			has_slavery_type = { type = slavery_indentured }
 		}
 	}
 }
@@ -983,6 +971,9 @@ chemist = {
 	}
 
 	possible_precalc = can_fill_specialist_job
+	possible = {
+		nondomestic_specialist_job_check_trigger = yes
+	}
 
 	resources = {
 		category = planet_chemists
@@ -1027,6 +1018,9 @@ translucer = {
 	}
 
 	possible_precalc = can_fill_specialist_job
+	possible = {
+		nondomestic_specialist_job_check_trigger = yes
+	}
 
 	resources = {
 		category = planet_translucers
@@ -1076,6 +1070,9 @@ gas_refiner = {
 	}
 
 	possible_precalc = can_fill_specialist_job
+	possible = {
+		nondomestic_specialist_job_check_trigger = yes
+	}
 
 	resources = {
 		category = planet_refiners
@@ -1301,11 +1298,6 @@ manager = {
 			factor = 1.5
 			has_job = manager
 		}
-		modifier = {
-			factor = 0.1
-			is_enslaved = yes
-			has_slavery_type = { type = slavery_indentured }
-		}
 	}
 }
 
@@ -1432,6 +1424,9 @@ bluelotus_technician = {
 	}
 
 	possible_precalc = can_fill_worker_job
+	possible = {
+		nondomestic_specialist_job_check_trigger = yes
+	}
 
 	resources = {
 		category = planet_metallurgists
@@ -1709,8 +1704,8 @@ necro_apprentice = {
 		mult = value:job_weights_modifier|JOB|necro_apprentice|RESOURCE|unity|FACTOR|0.5|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {
-			factor = 0.75
-			is_enslaved = yes #willing apprentices first, please
+			factor = 1.5
+			is_enslaved = yes 
 		}
 		modifier = {
 			factor = 0.75
@@ -1752,6 +1747,7 @@ foundry = {
 		owner = {
 			is_gestalt = no
 		}
+		nondomestic_specialist_job_check_trigger = yes
 	}
 
 	resources = {
@@ -1825,6 +1821,7 @@ catalytic_technician = {
 		owner = {
 			is_gestalt = no
 		}
+		nondomestic_specialist_job_check_trigger = yes
 	}
 
 	resources = {

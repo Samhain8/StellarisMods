@@ -895,6 +895,7 @@ information_quarantine = {
 	modifier = {
 		planet_stability_add = 5
 		pop_government_ethic_attraction = 0.5
+		pop_demotion_time_mult = -0.75
 	}
 
 	potential = {

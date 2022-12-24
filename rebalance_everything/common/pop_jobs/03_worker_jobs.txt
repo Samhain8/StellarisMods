@@ -145,6 +145,7 @@ technician = {
 		owner = {
 			is_gestalt = no
 		}
+		nondomestic_specialist_job_check_trigger = yes
 	}
 
 	resources = {
@@ -255,6 +256,7 @@ miner = {
 		owner = {
 			is_gestalt = no
 		}
+		nondomestic_specialist_job_check_trigger = yes
 	}
 
 	resources = {
@@ -375,6 +377,7 @@ crystal_miner = {
 	possible = {
 		hidden_trigger = { exists = owner }
 		owner = { is_gestalt = no }
+		nondomestic_specialist_job_check_trigger = yes
 	}
 
 	resources = {
@@ -432,6 +435,9 @@ gas_extractor = {
 	}
 
 	possible_precalc = can_fill_worker_job
+	possible = {
+		nondomestic_specialist_job_check_trigger = yes
+	}
 
 	resources = {
 		category = planet_sr_miners
@@ -488,6 +494,9 @@ mote_harvester = {
 	}
 
 	possible_precalc = can_fill_worker_job
+	possible = {
+		nondomestic_specialist_job_check_trigger = yes
+	}
 
 	resources = {
 		category = planet_sr_miners
@@ -723,6 +732,7 @@ soldier = {
 	possible = {
 		soldier_job_check_trigger = yes
 		owner = { is_gestalt = no }
+		nondomestic_specialist_job_check_trigger = yes
 	}
 
 	weight = {
@@ -903,6 +913,9 @@ scrap_miner = {
 	}
 
 	possible_precalc = can_fill_worker_job
+	possible = {
+		nondomestic_specialist_job_check_trigger = yes
+	}
 
 	resources = {
 		category = planet_miners
@@ -1067,6 +1080,9 @@ ranger = {
 	}
 
 	possible_precalc = can_fill_worker_job
+	possible = {
+		nondomestic_specialist_job_check_trigger = yes
+	}
 
 	resources = {
 		category = planet_culture_workers
@@ -1185,6 +1201,7 @@ puddle_technician = {
 		owner = {
 			is_gestalt = no
 		}
+		nondomestic_specialist_job_check_trigger = yes
 	}
 
 	resources = {
