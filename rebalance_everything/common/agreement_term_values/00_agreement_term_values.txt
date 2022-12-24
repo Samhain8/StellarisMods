@@ -208,7 +208,6 @@ resource_subsidies_basic = {
 		modifier = {
 			set = @set_factor_1
 			OR = {
-				agreement_preset = preset_prospectorium
 				agreement_preset = preset_tributary
 			}
 		}
@@ -226,6 +225,7 @@ resource_subsidies_basic = {
 			OR = {
 				agreement_preset = preset_relic_satrapy
 				agreement_preset = preset_subsidiary
+				agreement_preset = preset_prospectorium
 			}
 		}
 	}
@@ -278,10 +278,10 @@ resource_subsidies_advanced = {
 	resource_min = {
 		base = @subsidy_minimum
 
-		modifier = {
-			set = @set_factor_0
-			agreement_preset = preset_prospectorium
-		}
+		#modifier = {
+		#	set = @set_factor_0
+		#	agreement_preset = preset_prospectorium
+		#}
 
 		modifier = {
 			set = 0.0
@@ -289,6 +289,7 @@ resource_subsidies_advanced = {
 				agreement_preset = preset_subsidiary
 				agreement_preset = preset_tributary
 				agreement_preset = preset_relic_satrapy
+				agreement_preset = preset_prospectorium
 			}
 		}
 

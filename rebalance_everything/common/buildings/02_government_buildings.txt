@@ -338,7 +338,7 @@ building_order_keep = {
 	planet_modifier = {
 		job_squire_add = 1
 		job_knight_add = 1
-		job_knight_per_pop = 0.05 # 1 for every 10 pop while quest active. 1 for 20 after quest.
+		job_knight_per_pop = 0.067 # 1 for every 10 pop while quest active. 1 for 15 after quest.
 
 		planet_immigration_pull_add = 5
 		planet_resettlement_unemployed_destination_mult = 1
@@ -357,7 +357,7 @@ building_order_keep = {
 		}
 		modifier = {
 			job_knight_add = 1
-			job_knight_per_pop = 0.05
+			job_knight_per_pop = 0.033
 		}
 	}
 

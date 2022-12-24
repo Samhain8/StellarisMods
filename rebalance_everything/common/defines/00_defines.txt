@@ -721,7 +721,7 @@
 		GALACTIC_DEFENSE_FORCE_NAMELIST = "GDF"
 		IMPERIAL_ARMADA_NAMELIST = "IA"
 
-		JUMP_DRIVE_COOLDOWN = 200					# Days between uses of Jump Drive
+		JUMP_DRIVE_COOLDOWN = 120					# Days between uses of Jump Drive
 
 		RELEVANT_DISTANCE = 150				# Within this distance we're considered to be diplomatically relevant
 
@@ -1747,7 +1747,7 @@
 		AI_POP_MODIFICATION_DISCOUNT = 0.25			# AI pays this much (of base) for gene/robomodding projects
 
 		MIN_DISTANCE_TO_JUMP = 3					# Target must be at least this many systems away for AI to want to use jump drive
-		AI_JUMP_DRIVE_BRAVERY = 0.33				# AI will not want to jump into systems unless enemy is this much weaker than them, relatively
+		AI_JUMP_DRIVE_BRAVERY = 0.5					# AI will not want to jump into systems unless enemy is this much weaker than them, relatively
 
 		# These are used to determine where the AI should be upgrading its starbases
 		STARBASE_COLONY_SCORE = 5

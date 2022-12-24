@@ -22,9 +22,9 @@ holding_garrison = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = planet.owner.overlord
-			planet.owner.overlord = { has_active_tradition = tr_domination_adopt }
+			planet.owner.overlord = { has_active_tradition = tr_domination_colonial_viceroys }
 		}
-		monthly_loyalty = 1
+		monthly_loyalty = 0.25
 		planet_stability_add = 10
 	}
 
@@ -76,6 +76,16 @@ holding_orbital_assembly_complex = {
 		has_overlord_dlc = yes
 	}
 
+	allow = {
+		custom_tooltip = {
+			fail_text = subject_is_prospectorium
+			exists = planet.owner
+			planet.owner = {
+				is_specialist_subject_type = { TYPE = prospectorium }
+			}
+		}
+	}
+
 	resources = {
 		category = planet_holdings
 		cost = {
@@ -88,7 +98,9 @@ holding_orbital_assembly_complex = {
 	}
 
 	planet_modifier = {
-		planet_building_build_speed_mult = 0.10
+		planet_structures_cost_mult = -0.20
+		planet_building_build_speed_mult = 0.20
+		planet_buildings_upkeep_mult = -0.20
 		monthly_loyalty = 0.5
 	}
 
@@ -126,6 +138,14 @@ holding_propaganda_office = {
 			planet.owner = { is_gestalt = yes }
 		}
 		job_overlord_propagandist_drone_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner.overlord
+			planet.owner.overlord = { has_active_tradition = tr_domination_colonial_viceroys }
+		}
+		monthly_loyalty = 0.25
 	}
 
 	resources = {
@@ -363,6 +383,14 @@ holding_energy_requisitorium = {
 		monthly_loyalty = -0.75
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner.overlord
+			planet.owner.overlord = { has_active_tradition = tr_domination_colonial_viceroys }
+		}
+		monthly_loyalty = 0.25
+	}
+
 	on_built = {
 		planet = {
 			set_planet_flag = has_energy_requisitorium
@@ -412,6 +440,14 @@ holding_material_requisitorium = {
 
 	planet_modifier = {
 		monthly_loyalty = -0.75
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner.overlord
+			planet.owner.overlord = { has_active_tradition = tr_domination_colonial_viceroys }
+		}
+		monthly_loyalty = 0.25
 	}
 
 	on_built = {
@@ -467,6 +503,14 @@ holding_produce_requisitorium = {
 
 	planet_modifier = {
 		monthly_loyalty = -0.75
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner.overlord
+			planet.owner.overlord = { has_active_tradition = tr_domination_colonial_viceroys }
+		}
+		monthly_loyalty = 0.25
 	}
 
 	on_built = {
@@ -688,16 +732,6 @@ holding_offworld_foundry = {
 		has_overlord_dlc = yes
 	}
 
-	allow = {
-		custom_tooltip = {
-			fail_text = subject_is_prospectorium
-			exists = planet.owner
-			planet.owner = {
-				is_specialist_subject_type = { TYPE = prospectorium }
-			}
-		}
-	}
-
 	resources = {
 		category = planet_holdings
 		cost = {
@@ -709,7 +743,15 @@ holding_offworld_foundry = {
 	}
 
 	planet_modifier = {
-		monthly_loyalty = -0.75
+		monthly_loyalty = -0.5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner.overlord
+			planet.owner.overlord = { has_active_tradition = tr_domination_colonial_viceroys }
+		}
+		monthly_loyalty = 0.25
 	}
 
 	triggered_planet_modifier = {
@@ -775,15 +817,6 @@ holding_offworld_foundry = {
 			}
 		}
 		text = job_overlord_alloy_producer_effect_desc
-	}
-
-	destroy_trigger = {
-		exists = planet.owner
-		planet.owner = {
-			NOT = {
-				is_specialist_subject_type = { TYPE = prospectorium }
-			}
-		}
 	}
 
 	triggered_desc = {
@@ -946,7 +979,15 @@ holding_parasitic_algorithms = {
 	}
 
 	planet_modifier = {
-		monthly_loyalty = -1
+		monthly_loyalty = -0.75
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner.overlord
+			planet.owner.overlord = { has_active_tradition = tr_domination_colonial_viceroys }
+		}
+		monthly_loyalty = 0.25
 	}
 
 	on_built = {
@@ -1018,6 +1059,14 @@ holding_noble_vacation_homes = {
 			planet.owner = { is_gestalt = yes }
 		}
 		planet_amenities_no_happiness_add = -10
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner.overlord
+			planet.owner.overlord = { has_active_tradition = tr_domination_colonial_viceroys }
+		}
+		monthly_loyalty = 0.25
 	}
 
 	#on_built = {
@@ -1507,7 +1556,7 @@ holding_tree_of_life_sapling = {
 	}
 
 	planet_modifier = {
-		monthly_loyalty = 1
+		monthly_loyalty = 0.75
 		pop_environment_tolerance = 0.1
 		planet_farmers_food_produces_add = 1
 	}
@@ -1773,7 +1822,7 @@ holding_sacrificial_shrine = {
 			exists = planet.owner
 			planet.owner = { is_spiritualist = no }
 		}
-		monthly_loyalty = -0.5
+		monthly_loyalty = -1
 	}
 
 	triggered_planet_modifier = {
@@ -1825,7 +1874,7 @@ holding_toxic_bath = {
 			exists = planet.owner
 			planet.owner = { has_valid_civic = civic_environmentalist }
 		}
-		monthly_loyalty = -0.5
+		monthly_loyalty = -1
 	}
 
 	triggered_planet_modifier = {
@@ -1875,7 +1924,7 @@ holding_toxic_bath_hive = {
 			exists = planet.owner
 			planet.owner = { has_valid_civic = civic_environmentalist }
 		}
-		monthly_loyalty = -0.5
+		monthly_loyalty = -1
 	}
 
 	triggered_planet_modifier = {
@@ -1925,7 +1974,7 @@ holding_toxic_bath_machine = {
 			exists = planet.owner
 			planet.owner = { has_valid_civic = civic_environmentalist }
 		}
-		monthly_loyalty = -0.5
+		monthly_loyalty = -1
 	}
 
 	triggered_planet_modifier = {
@@ -1972,7 +2021,6 @@ holding_knight_commandery = {
 		exists = planet
 		planet = { 
 			is_capital = yes
-			num_pops >= 50
 		}
 	}
 

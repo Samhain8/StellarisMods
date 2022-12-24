@@ -469,14 +469,14 @@ knight_commander = {
 		category = knights_independent_category
 		produces = {
 			trigger = { exists = owner }
-			unity = 4
+			unity = 6
 			mult = value:knight_commander_unity_output_modifier
 		}
 		produces = {
 			trigger = { exists = owner }
-			physics_research = 2
-			engineering_research = 2
-			society_research = 2
+			physics_research = 3
+			engineering_research = 3
+			society_research = 3
 			mult = value:knight_commander_research_output_modifier
 		}
 		upkeep = {
@@ -488,7 +488,7 @@ knight_commander = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 5
+		planet_amenities_add = 8
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -508,7 +508,7 @@ knight_commander = {
 			owner = { has_country_flag = toxoids_7011_b }
 		}
 		modifier = {
-			factor = 2
+			factor = 10
 			has_job = knight_commander
 		}
 	}

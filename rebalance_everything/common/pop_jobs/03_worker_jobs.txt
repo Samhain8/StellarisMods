@@ -1128,7 +1128,7 @@ squire = {
 	}
 
 	planet_modifier = {
-		knights_independent_category_produces_mult = 0.02
+		knights_independent_category_produces_mult = 0.025
 	}
 
 	triggered_planet_modifier = {

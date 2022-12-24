@@ -304,6 +304,12 @@ aid_worker = {
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		pop_growth_speed = 0.05
+	}
 
 	overlord_resources = {
 		category = planet_aid_workers
@@ -1841,13 +1847,13 @@ overlord_knight = {
 	overlord_resources = {
 		category = knights_independent_category
 		produces = {
-			unity = 3
+			unity = 4
 			mult = value:vassal_knights_unity_output_modifier
 		}
 		produces = {
-			physics_research = 2
-			engineering_research = 2
-			society_research = 2
+			physics_research = 3
+			engineering_research = 3
+			society_research = 3
 			mult = value:vassal_knights_research_output_modifier
 		}
 	}
@@ -1868,7 +1874,7 @@ overlord_knight = {
 	}
 
 	triggered_planet_modifier = {
-		planet_stability_add = 3
+		planet_stability_add = 4
 		mult = value:scripted_modifier_mult|MODIFIER|knights_independent_category_produces_mult|
 	}
 
@@ -1922,13 +1928,13 @@ overlord_knight_drone = {
 	overlord_resources = {
 		category = knights_independent_category
 		produces = {
-			unity = 3
+			unity = 4
 			mult = value:knights_unity_output_modifier
 		}
 		produces = {
-			physics_research = 2
-			engineering_research = 2
-			society_research = 2
+			physics_research = 3
+			engineering_research = 3
+			society_research = 3
 			mult = value:knights_research_output_modifier
 		}
 	}
@@ -1949,7 +1955,7 @@ overlord_knight_drone = {
 	}
 
 	triggered_planet_modifier = {
-		planet_stability_add = 3
+		planet_stability_add = 4
 		mult = value:scripted_modifier_mult|MODIFIER|knights_independent_category_produces_mult|
 	}
 

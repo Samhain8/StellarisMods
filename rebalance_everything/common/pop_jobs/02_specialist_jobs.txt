@@ -2320,14 +2320,14 @@ knight = {
 		category = knights_independent_category
 		produces = {
 			trigger = { exists = owner }
-			unity = 3
+			unity = 4
 			mult = value:knights_unity_output_modifier
 		}
 		produces = {
 			trigger = { exists = owner }
-			physics_research = 2
-			engineering_research = 2
-			society_research = 2
+			physics_research = 3
+			engineering_research = 3
+			society_research = 3
 			mult = value:knights_research_output_modifier
 		}
 		upkeep = {
@@ -2374,7 +2374,7 @@ knight = {
 			mult = value:job_weights_research_modifier|JOB|researcher|
 		}
 		modifier = {
-			factor = 2
+			factor = 10
 			has_job = knight
 		}
 		modifier = {
