@@ -896,6 +896,7 @@ information_quarantine = {
 		planet_stability_add = 5
 		pop_government_ethic_attraction = 0.5
 		pop_demotion_time_mult = -0.75
+		empire_size_penalty_mult = 0.2
 	}
 
 	potential = {

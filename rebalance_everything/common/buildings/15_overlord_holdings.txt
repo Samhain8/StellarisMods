@@ -1037,12 +1037,12 @@ holding_noble_vacation_homes = {
 	}
 
 	country_modifier = {
-		planet_stability_add = 1
+		empire_size_penalty_mult = -0.025
 	}
 
 	planet_modifier = {
 		monthly_loyalty = -0.5
-		diplo_weight_mult = 0.1
+		diplo_weight_mult = 0.15
 	}
 
 	triggered_planet_modifier = {

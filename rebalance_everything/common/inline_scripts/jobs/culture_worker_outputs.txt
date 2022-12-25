@@ -22,7 +22,7 @@ triggered_country_modifier = {
 		exists = owner
 		owner = { is_militarist = yes }
 	}
-	country_naval_cap_add = 1
+	empire_size_penalty_mult = -0.005
 	mult = value:scripted_modifier_ethics_weight_mult|ETHIC|militarist|
 }
 

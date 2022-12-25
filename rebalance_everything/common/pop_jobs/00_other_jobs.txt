@@ -58,8 +58,30 @@ servant = {
 		pop_housing_usage_add = -0.15
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			is_pet_slave = yes
+		}
+		trade_value_add = 1
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+	}
+
+	resources = {
+		category = planet_entertainers
+		produces = {
+			trigger = {
+				is_pet_slave = yes
+			}
+			unity = 1
+		}
+	}
+
 	weight = {
 		weight = @special_job_weight
+		modifier = {
+			factor = 100000
+			is_pet_slave = yes
+		}
 	}
 }
 

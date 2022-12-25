@@ -110,10 +110,6 @@ clerk = {
 			can_fill_specialist_job = no
 		}
 		modifier = {
-			factor = 0.1
-			can_take_servant_job = yes
-		}
-		modifier = {
 			factor = 1.1
 			exists = owner
 			owner = { is_megacorp = yes }
@@ -140,13 +136,13 @@ technician = {
 	}
 
 	possible_precalc = can_fill_worker_job
-	possible = {
-		hidden_trigger = { exists = owner }
-		owner = {
-			is_gestalt = no
-		}
-		nondomestic_specialist_job_check_trigger = yes
-	}
+	#possible = {
+	#	hidden_trigger = { exists = owner }
+	#	owner = {
+	#		is_gestalt = no
+	#	}
+	#	nondomestic_specialist_job_check_trigger = yes
+	#}
 
 	resources = {
 		category = planet_technician
@@ -215,7 +211,7 @@ technician = {
 			can_take_servant_job = no
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.1
 			can_take_servant_job = yes
 		}
 		# low income modifier
@@ -251,13 +247,13 @@ miner = {
 	}
 
 	possible_precalc = can_fill_worker_job
-	possible = {
-		hidden_trigger = { exists = owner }
-		owner = {
-			is_gestalt = no
-		}
-		nondomestic_specialist_job_check_trigger = yes
-	}
+	#possible = {
+	#	hidden_trigger = { exists = owner }
+	#	owner = {
+	#		is_gestalt = no
+	#	}
+	#	nondomestic_specialist_job_check_trigger = yes
+	#}
 
 	resources = {
 		category = planet_miners
@@ -337,7 +333,7 @@ miner = {
 			owner = { NOT = { has_technology = tech_droid_workers } }
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.1
 			can_take_servant_job = yes
 		}
 
@@ -913,9 +909,9 @@ scrap_miner = {
 	}
 
 	possible_precalc = can_fill_worker_job
-	possible = {
-		nondomestic_specialist_job_check_trigger = yes
-	}
+	#possible = {
+	#	nondomestic_specialist_job_check_trigger = yes
+	#}
 
 	resources = {
 		category = planet_miners
@@ -953,7 +949,7 @@ scrap_miner = {
 			owner = { NOT = { has_technology = tech_droid_workers } }
 		}
 		modifier = {
-			factor = 0.25
+			factor = 0.1
 			can_take_servant_job = yes
 		}
 		# low income modifier

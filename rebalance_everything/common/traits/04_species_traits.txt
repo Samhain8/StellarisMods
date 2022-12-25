@@ -603,7 +603,7 @@ trait_unruly = {
 }
 
 trait_very_strong = {
-	cost = 3
+	cost = 2
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
 	}
@@ -712,8 +712,8 @@ trait_nomadic = {
 	opposites = { "trait_sedentary" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		pop_growth_from_immigration = 0.25
-		pop_resettlement_cost_mult = -0.35
+		pop_growth_from_immigration = 0.35
+		pop_resettlement_cost_mult = -0.5
 	}
 	slave_cost = {
 		energy = 500
@@ -900,7 +900,7 @@ trait_venerable = {
 	opposites = { "trait_enduring" "trait_fleeting" "trait_fleeting_lithoid" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	slave_cost = {
-		energy = 1000
+		energy = 200
 	}
 }
 
@@ -917,7 +917,7 @@ trait_enduring = {
 	opposites = { "trait_venerable" "trait_fleeting" "trait_fleeting_lithoid" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	slave_cost = {
-		energy = 500
+		energy = 100
 	}
 }
 

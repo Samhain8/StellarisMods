@@ -227,6 +227,7 @@ can_take_servant_job = {
 	OR = {
 		is_domestic_robot = yes
 		is_domestic_servant = yes
+		is_pet_slave = yes
 	}
 }
 
@@ -266,6 +267,11 @@ can_fill_specialist_job = {
 is_domestic_servant = {
 	is_enslaved = yes
 	has_slavery_type = { type = slavery_domestic }
+}
+
+is_pet_slave = {
+	is_enslaved = yes
+	has_slavery_type = { type = slavery_pets }
 }
 
 is_domestic_robot = {

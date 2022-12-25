@@ -143,12 +143,16 @@ researcher = {
 			has_living_standard = { type = living_standard_academic_privilege }
 		}
 		modifier = {
-			factor = 0.1
-			can_take_servant_job = yes
-		}
-		modifier = {
 			factor = 1.5
 			has_job = researcher
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 1.05
+			OR = {
+				is_unemployed = yes
+				has_job = servant
+			}
 		}
 	}
 }
@@ -213,12 +217,16 @@ priest = {
 			owner = { has_civic = civic_exalted_priesthood }
 		}
 		modifier = {
-			factor = 0.1
-			can_take_servant_job = yes
-		}
-		modifier = {
 			factor = 1.5
 			has_job = priest
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 1.05
+			OR = {
+				is_unemployed = yes
+				has_job = servant
+			}
 		}
 	}
 }
@@ -290,12 +298,16 @@ death_priest = {
 			owner = { has_civic = civic_exalted_priesthood }
 		}
 		modifier = {
-			factor = 0.1
-			can_take_servant_job = yes
-		}
-		modifier = {
 			factor = 1.5
 			has_job = death_priest
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 1.05
+			OR = {
+				is_unemployed = yes
+				has_job = servant
+			}
 		}
 	}
 }
@@ -597,17 +609,13 @@ telepath = {
 			has_trait = trait_resilient
 		}
 		modifier = {
-			factor = 0.1
-			can_take_servant_job = yes
-		}
-		modifier = {
 			factor = 1.5
 			has_job = telepath
+			can_take_servant_job = no
 		}
 		modifier = {
 			factor = 0.1
 			is_enslaved = yes
-			has_slavery_type = { type = slavery_indentured }
 		}
 	}
 }
@@ -881,12 +889,16 @@ culture_worker = {
 		#	NOT = { has_trait = trait_mechanical }
 		#}
 		modifier = {
-			factor = 0.1
-			can_take_servant_job = yes
-		}
-		modifier = {
 			factor = 1.5
 			has_job = culture_worker
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 1.05
+			OR = {
+				is_unemployed = yes
+				has_job = servant
+			}
 		}
 	}
 }
@@ -947,12 +959,16 @@ bureaucrat = {
 		#	NOT = { has_trait = trait_mechanical }
 		#}
 		modifier = {
-			factor = 0.1
-			can_take_servant_job = yes
-		}
-		modifier = {
 			factor = 1.5
 			has_job = bureaucrat
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 1.05
+			OR = {
+				is_unemployed = yes
+				has_job = servant
+			}
 		}
 	}
 }
@@ -1216,12 +1232,16 @@ healthcare = {
 		#	NOT = { has_trait = trait_mechanical }
 		#}
 		modifier = {
-			factor = 0.1
-			can_take_servant_job = yes
-		}
-		modifier = {
 			factor = 1.5
 			has_job = healthcare
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 1.05
+			OR = {
+				is_unemployed = yes
+				has_job = servant
+			}
 		}
 		modifier = {
 			factor = 0.5
@@ -1291,12 +1311,16 @@ manager = {
 			NOT = { has_trait = trait_mechanical }
 		}
 		modifier = {
-			factor = 0.1
-			can_take_servant_job = yes
-		}
-		modifier = {
 			factor = 1.5
 			has_job = manager
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 1.05
+			OR = {
+				is_unemployed = yes
+				has_job = servant
+			}
 		}
 	}
 }
@@ -1542,12 +1566,16 @@ death_chronicler = {
 			has_citizenship_rights = no
 		}
 		modifier = {
-			factor = 0.1
-			can_take_servant_job = yes
-		}
-		modifier = {
 			factor = 1.5
 			has_job = death_chronicler
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 1.05
+			OR = {
+				is_unemployed = yes
+				has_job = servant
+			}
 		}
 	}
 }
@@ -1956,6 +1984,14 @@ artisan = {
 		modifier = {
 			factor = 5
 			has_job = artisan
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 1.05
+			OR = {
+				is_unemployed = yes
+				has_job = servant
+			}
 		}
 
 		# low income modifier
@@ -2062,6 +2098,14 @@ artificer = {
 		modifier = {
 			factor = 5
 			has_job = artificer
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 1.05
+			OR = {
+				is_unemployed = yes
+				has_job = servant
+			}
 		}
 	}
 }
@@ -2170,10 +2214,6 @@ pearl_diver = {
 		}
 		modifier = {
 			factor = 0.1
-			can_take_servant_job = yes
-		}
-		modifier = {
-			factor = 0.1
 			NOT = { has_job = pearl_diver }
 			exists = owner
 			owner = {
@@ -2186,6 +2226,14 @@ pearl_diver = {
 		modifier = {
 			factor = 5
 			has_job = pearl_diver
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 1.05
+			OR = {
+				is_unemployed = yes
+				has_job = servant
+			}
 		}
 	}
 }
@@ -2288,6 +2336,14 @@ bath_attendant = {
 		modifier = {
 			factor = 5
 			has_job = bath_attendant
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 1.05
+			OR = {
+				is_unemployed = yes
+				has_job = servant
+			}
 		}
 	}
 }
