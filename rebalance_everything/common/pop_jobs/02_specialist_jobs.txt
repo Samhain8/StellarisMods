@@ -1064,11 +1064,6 @@ translucer = {
 			factor = 7
 			has_job = translucer
 		}
-		modifier = {
-			factor = 1.2
-			is_enslaved = yes
-			has_slavery_type = { type = slavery_indentured }
-		}
 	}
 }
 
@@ -1115,11 +1110,6 @@ gas_refiner = {
 		modifier = {
 			factor = 7
 			has_job = gas_refiner
-		}
-		modifier = {
-			factor = 1.2
-			is_enslaved = yes
-			has_slavery_type = { type = slavery_indentured }
 		}
 	}
 }
@@ -1516,11 +1506,6 @@ bluelotus_technician = {
 			factor = 5
 			has_job = bluelotus_technician
 		}
-		modifier = {
-			factor = 1.2
-			is_enslaved = yes
-			has_slavery_type = { type = slavery_indentured }
-		}
 	}
 }
 
@@ -1820,11 +1805,6 @@ foundry = {
 		weight = @specialist_job_weight # Fairly important job
 		mult = value:job_weights_modifier|JOB|foundry|RESOURCE|alloys|
 		modifier = {
-			factor = 2
-			is_enslaved = yes
-			can_take_servant_job = no
-		}
-		modifier = {
 			factor = 5
 			has_job = foundry
 		}
@@ -1897,11 +1877,6 @@ catalytic_technician = {
 	weight = {
 		weight = @specialist_job_weight # Fairly important job
 		mult = value:job_weights_modifier|JOB|catalytic_technician|RESOURCE|alloys|
-		modifier = {
-			factor = 2
-			is_enslaved = yes
-			can_take_servant_job = no
-		}
 		modifier = {
 			factor = 5
 			has_job = catalytic_technician
@@ -1976,11 +1951,6 @@ artisan = {
 	weight = {
 		weight = @specialist_job_weight
 		mult = value:job_weights_modifier|JOB|artisan|RESOURCE|consumer_goods|
-		modifier = {
-			factor = 2
-			is_enslaved = yes
-			can_take_servant_job = no
-		}
 		modifier = {
 			factor = 5
 			has_job = artisan
@@ -2091,11 +2061,6 @@ artificer = {
 		mult = value:job_weights_multiple_resources_modifier|JOB|artificer|RESOURCE1|consumer_goods|WEIGHT1|0.8|RESOURCE2|engineering_research|WEIGHT2|0.2|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_trade_mult|
 		modifier = {
-			factor = 2
-			is_enslaved = yes
-			can_take_servant_job = no
-		}
-		modifier = {
 			factor = 5
 			has_job = artificer
 			can_take_servant_job = no
@@ -2199,11 +2164,6 @@ pearl_diver = {
 		weight = @worker_job_weight #deliberate
 		mult = value:job_weights_modifier|JOB|pearl_diver|RESOURCE|consumer_goods|FACTOR|0.75|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_trade_mult|
-		modifier = {
-			factor = 2
-			is_enslaved = yes
-			has_slavery_type = { type = slavery_indentured }
-		}
 		modifier = {
 			factor = 1.1
 			owner = { has_valid_civic = civic_agrarian_idyll }
@@ -2328,11 +2288,6 @@ bath_attendant = {
 		weight = @specialist_job_weight
 		mult = value:job_weights_multiple_resources_modifier|JOB|artificer|RESOURCE1|consumer_goods|WEIGHT1|0.8|RESOURCE2|engineering_research|WEIGHT2|0.2|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_trade_mult|
-		modifier = {
-			factor = 2
-			is_enslaved = yes
-			can_take_servant_job = no
-		}
 		modifier = {
 			factor = 5
 			has_job = bath_attendant

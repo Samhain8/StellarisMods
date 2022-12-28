@@ -708,11 +708,13 @@ trait_compliance_instincts = {
 		modifier = {
 			species_empire_size_mult = -0.10
 			pop_government_ethic_attraction = 0.15
+			pop_cat_slave_happiness = 0.1
 		}
 	}
 	modifier = {
 		species_empire_size_mult = -0.10
 		pop_government_ethic_attraction = 0.15
+		pop_cat_slave_happiness = 0.1
 		leader_age = -20
 	}
 	slave_cost = {

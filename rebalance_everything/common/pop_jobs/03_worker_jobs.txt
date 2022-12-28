@@ -49,6 +49,24 @@ clerk = {
 		}
 	}
 
+	resources = {
+		category = planet_artisans
+		produces = {
+			trigger = {
+				owner = { has_slaver_civic = yes }
+			}
+			consumer_goods = 1
+		}
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_slaver_civic = yes }
+		}
+		pop_housing_usage_add = -0.25
+	}
+
 	triggered_planet_modifier = {
 		potential = {
 			always = yes
