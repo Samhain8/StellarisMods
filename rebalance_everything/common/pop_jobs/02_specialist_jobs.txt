@@ -1296,11 +1296,6 @@ manager = {
 		mult = value:job_weights_modifier|JOB|manager|RESOURCE|unity|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_trade_mult|
 		modifier = {
-			factor = 0.2
-			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
-		}
-		modifier = {
 			factor = 1.5
 			has_job = manager
 			can_take_servant_job = no
