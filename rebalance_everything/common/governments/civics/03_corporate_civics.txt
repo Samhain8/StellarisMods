@@ -83,8 +83,8 @@ civic_naval_contractors = {
 	}
 	modifier = {
 		country_command_limit_add = 20
-		starbase_shipyard_build_cost_mult = -0.1
-		starbase_shipyard_build_speed_mult = 0.1
+		starbase_shipyard_build_cost_mult = -0.15
+		starbase_shipyard_build_speed_mult = 0.15
 	}
 	swap_type = {
 		trigger = {
@@ -92,7 +92,7 @@ civic_naval_contractors = {
 		}
 
 		modifier = {
-			country_enclave_capacity_add = 1
+			country_enclave_capacity_add = 2
 		}
 	}
 }
@@ -209,7 +209,7 @@ civic_private_military_companies = {
 		army_starting_experience_add = 100
 		army_damage_mult = 0.2
 		armies_upkeep_mult = -0.2
-		country_alloys_produces_mult = 0.05
+		country_alloys_produces_mult = 0.1
 	}
 	swap_type = {
 		trigger = {
@@ -217,7 +217,7 @@ civic_private_military_companies = {
 		}
 
 		modifier = {
-			country_enclave_capacity_add = 1
+			country_enclave_capacity_add = 2
 		}
 	}
 }
@@ -337,7 +337,7 @@ civic_corporate_catalytic_processing = {
 		}
 	}
 	modifier = {
-		ship_hull_mult = 0.1
+		ship_hull_mult = 0.15
 		ship_hull_regen_add_perc = 0.05
 	}
 	random_weight = { base = 5 }

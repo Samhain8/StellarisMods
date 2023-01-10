@@ -1900,14 +1900,14 @@ holo_theatres_upkeep_affordable = {
 	}
 	OR = {
 		AND = {
-			has_valid_civic = civic_warrior_culture
+			is_warrior_culture = yes
 			has_monthly_income = {
 				resource = alloys
 				value > 2
 			}
 		}
 		AND = {
-			NOT = { has_valid_civic = civic_warrior_culture }
+			NOT = { is_warrior_culture = yes }
 			has_monthly_income = {
 				resource = consumer_goods
 				value > 2
@@ -3065,6 +3065,13 @@ is_pleasure_seeker = {
 	}
 }
 
+is_warrior_culture = {
+	OR = {
+		has_valid_civic = civic_warrior_culture
+		#has_valid_civic = civic_private_military_companies
+	}
+}
+
 has_slaver_civic = {
 	OR = {
 		has_valid_civic = civic_slaver_guilds
@@ -3092,6 +3099,8 @@ is_catalytic_empire = {
 		has_valid_civic = civic_corporate_catalytic_processing
 		has_valid_civic = civic_hive_catalytic_processing
 		has_valid_civic = civic_machine_catalytic_processing
+		has_valid_civic = civic_anglers
+		has_valid_civic = civic_corporate_anglers
 	}
 }
 

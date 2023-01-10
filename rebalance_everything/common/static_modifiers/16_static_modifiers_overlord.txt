@@ -392,6 +392,7 @@ resolution_defenseprivatization_private_support_troops_merc_naval_cap = {
 }
 
 resolution_defenseprivatization_condottieri = {
+	country_enclave_capacity_add = 1
 	country_naval_cap_mult = -0.15
 	trade_value_mult = 0.05
 }
@@ -400,7 +401,6 @@ resolution_defenseprivatization_condottieri_merc_naval_cap = {
 }
 
 resolution_defenseprivatization_security_business = {
-	country_enclave_capacity_add = 1
 	country_naval_cap_mult = -0.2
 	trade_value_mult = 0.05
 }

@@ -2492,7 +2492,7 @@ building_resort_capital = {
 		potential = {
 			exists = owner
 			owner = {
-				has_valid_civic = civic_warrior_culture
+				owner = { is_warrior_culture = yes }
 			}
 		}
 		modifier = {
@@ -2624,7 +2624,7 @@ building_resort_major_capital = {
 		potential = {
 			exists = owner
 			owner = {
-				has_valid_civic = civic_warrior_culture
+				owner = { is_warrior_culture = yes }
 			}
 		}
 		modifier = {

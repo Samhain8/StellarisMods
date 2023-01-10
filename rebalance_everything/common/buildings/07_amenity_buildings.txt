@@ -554,9 +554,7 @@ building_holo_theatres = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				NOT = { has_valid_civic = civic_warrior_culture }
-			}
+			owner = { is_warrior_culture = no }
 		}
 		modifier = {
 			job_entertainer_add = @b1_jobs
@@ -566,9 +564,7 @@ building_holo_theatres = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				has_valid_civic = civic_warrior_culture
-			}
+			owner = { is_warrior_culture = yes }
 		}
 		modifier = {
 			job_duelist_add = @b1_jobs
@@ -596,9 +592,7 @@ building_holo_theatres = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				NOT = { has_valid_civic = civic_warrior_culture }
-			}
+			owner = { is_warrior_culture = no }
 		}
 		text = job_entertainer_effect_desc
 	}
@@ -606,9 +600,7 @@ building_holo_theatres = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				has_valid_civic = civic_warrior_culture
-			}
+			owner = { is_warrior_culture = yes }
 		}
 		text = job_duelist_effect_desc
 	}
@@ -639,9 +631,7 @@ building_hyper_entertainment_forum = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				NOT = { has_valid_civic = civic_warrior_culture }
-			}
+			owner = { is_warrior_culture = no }
 		}
 		modifier = {
 			job_entertainer_add = @b2_jobs
@@ -651,9 +641,7 @@ building_hyper_entertainment_forum = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				has_valid_civic = civic_warrior_culture
-			}
+			owner = { is_warrior_culture = yes }
 		}
 		modifier = {
 			job_duelist_add = @b2_jobs
@@ -679,9 +667,7 @@ building_hyper_entertainment_forum = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				NOT = { has_valid_civic = civic_warrior_culture }
-			}
+			owner = { is_warrior_culture = no }
 		}
 		text = job_entertainer_effect_desc
 	}
@@ -689,9 +675,7 @@ building_hyper_entertainment_forum = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				has_valid_civic = civic_warrior_culture
-			}
+			owner = { is_warrior_culture = yes }
 		}
 		text = job_duelist_effect_desc
 	}

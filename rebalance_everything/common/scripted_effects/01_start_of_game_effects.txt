@@ -2864,9 +2864,18 @@ void_dweller_home_planet_setup = {
 		}
 	}
 	while = {
-		count = 10
+		count = 7
 		create_pop = {
 			species = owner_main_species
+		}
+	}
+	last_created_species = { #can I rename this, or just skip
+		set_species_flag = syncretic_species@root.owner
+	}
+	while = {
+		count = 3
+		create_pop = {
+			species = last_created_species
 		}
 	}
 	set_planet_entity = {
@@ -2962,9 +2971,18 @@ void_dweller_home_planet_setup = {
 			limit = { has_planet_flag = void_dweller_habitat_2 }
 			set_owner = event_target:void_dweller_owner
 			while = {
-				count = 9
+				count = 5
 				create_pop = {
 					species = owner_main_species
+				}
+			}
+			last_created_species = { #can I rename this, or just skip
+				set_species_flag = syncretic_species@root.owner
+			}
+			while = {
+				count = 4
+				create_pop = {
+					species = last_created_species
 				}
 			}
 			set_planet_entity = {
@@ -3005,9 +3023,18 @@ void_dweller_home_planet_setup = {
 			limit = { has_planet_flag = void_dweller_habitat_3 }
 			set_owner = event_target:void_dweller_owner
 			while = {
-				count = 9
+				count = 5
 				create_pop = {
 					species = owner_main_species
+				}
+			}
+			last_created_species = { #can I rename this, or just skip
+				set_species_flag = syncretic_species@root.owner
+			}
+			while = {
+				count = 4
+				create_pop = {
+					species = last_created_species
 				}
 			}
 			set_planet_entity = {

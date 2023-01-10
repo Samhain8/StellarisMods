@@ -216,6 +216,7 @@ resource_subsidies_basic = {
 			set = @set_factor_2_neg
 			OR = {
 				agreement_preset = preset_vassal
+				agreement_preset = preset_relic_satrapy
 				agreement_preset = preset_scholarium
 			}
 		}
@@ -223,7 +224,6 @@ resource_subsidies_basic = {
 		modifier = {
 			set = 0.0
 			OR = {
-				agreement_preset = preset_relic_satrapy
 				agreement_preset = preset_subsidiary
 				agreement_preset = preset_prospectorium
 			}
@@ -261,6 +261,12 @@ resource_subsidies_basic = {
 			}
 		}
 
+		modifier = {
+			set = @set_factor_0
+			OR = {
+				agreement_preset = preset_relic_satrapy
+			}
+		}
 	}
 }
 
@@ -288,7 +294,6 @@ resource_subsidies_advanced = {
 			OR = {
 				agreement_preset = preset_subsidiary
 				agreement_preset = preset_tributary
-				agreement_preset = preset_relic_satrapy
 				agreement_preset = preset_prospectorium
 			}
 		}
@@ -298,6 +303,7 @@ resource_subsidies_advanced = {
 			OR = {
 				agreement_preset = preset_vassal
 				agreement_preset = preset_scholarium
+				agreement_preset = preset_relic_satrapy
 			}
 		}
 	}
@@ -318,6 +324,12 @@ resource_subsidies_advanced = {
 			OR = {
 				agreement_preset = preset_vassal
 				agreement_preset = preset_scholarium
+			}
+		}
+
+		modifier = {
+			set = @set_factor_0
+			OR = {
 				agreement_preset = preset_relic_satrapy
 			}
 		}
@@ -343,7 +355,6 @@ resource_subsidies_research = {
 			set = 0.0
 			OR = {
 				agreement_preset = preset_tributary
-				agreement_preset = preset_relic_satrapy
 			}
 		}
 
@@ -358,6 +369,7 @@ resource_subsidies_research = {
 				agreement_preset = preset_vassal
 				agreement_preset = preset_subsidiary
 				agreement_preset = preset_bulwark
+				agreement_preset = preset_relic_satrapy
 			}
 		}
 	}
@@ -369,7 +381,6 @@ resource_subsidies_research = {
 			set = 0.0
 			OR = {
 				agreement_preset = preset_protectorate
-				agreement_preset = preset_relic_satrapy
 			}
 		}
 
@@ -399,6 +410,13 @@ resource_subsidies_research = {
 				agreement_preset = preset_bulwark
 			}
 		}
+
+		modifier = {
+			set = @set_factor_0
+			OR = {
+				agreement_preset = preset_relic_satrapy
+			}
+		}
 	}
 }
 
@@ -421,7 +439,6 @@ resource_subsidies_strategic = {
 				agreement_preset = preset_subsidiary
 				agreement_preset = preset_tributary
 				agreement_preset = preset_prospectorium
-				agreement_preset = preset_relic_satrapy
 			}
 		}
 
@@ -442,6 +459,7 @@ resource_subsidies_strategic = {
 				agreement_preset = preset_vassal
 				agreement_preset = preset_scholarium
 				agreement_preset = preset_bulwark
+				agreement_preset = preset_relic_satrapy
 			}
 		}
 	}
@@ -454,7 +472,7 @@ resource_subsidies_strategic = {
 		}
 
 		modifier = {
-			set = @set_factor_1
+			set = @set_factor_0
 			agreement_preset = preset_relic_satrapy
 		}
 
@@ -529,14 +547,6 @@ joins_overlord_wars_defensive = {
 			}
 		}
 	}
-	possible = {
-		custom_tooltip = {
-			fail_text = not_allowed_for_satrapy
-			NOT = {
-				agreement_preset = preset_relic_satrapy
-			}
-		}
-	}
 }
 
 joins_overlord_wars_offensive = {
@@ -567,6 +577,12 @@ joins_overlord_wars_offensive = {
 			fail_text = not_allowed_for_tributary
 			NOT = {
 				agreement_preset = preset_tributary
+			}
+		}
+		custom_tooltip = {
+			fail_text = not_allowed_for_satrapy
+			NOT = {
+				agreement_preset = preset_relic_satrapy
 			}
 		}
 	}
@@ -602,8 +618,6 @@ joins_overlord_wars_all = {
 				agreement_preset = preset_tributary
 			}
 		}
-	}
-	possible = {
 		custom_tooltip = {
 			fail_text = not_allowed_for_satrapy
 			NOT = {
@@ -654,6 +668,12 @@ joins_subject_wars_none = {
 				agreement_preset = preset_subsidiary
 			}
 		}
+		custom_tooltip = {
+			fail_text = not_allowed_for_satrapy
+			NOT = {
+				agreement_preset = preset_relic_satrapy
+			}
+		}
 	}
 }
 
@@ -668,14 +688,6 @@ joins_subject_wars_defensive = {
 	}
 	target_modifier = {
 		monthly_loyalty = 0.5
-	}
-	possible = {
-		custom_tooltip = {
-			fail_text = not_allowed_for_satrapy
-			NOT = {
-				agreement_preset = preset_relic_satrapy
-			}
-		}
 	}
 }
 
@@ -739,12 +751,6 @@ joins_subject_wars_all = {
 		custom_tooltip = {
 			fail_text = not_allowed_for_imperial_fiefdom
 			NOT = { owner = { has_ai_personality = imperial_origin_overlord_ai } }
-		}
-		custom_tooltip = {
-			fail_text = not_allowed_for_satrapy
-			NOT = {
-				agreement_preset = preset_relic_satrapy
-			}
 		}
 	}
 }

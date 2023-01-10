@@ -254,9 +254,9 @@
 @hull_M4 = 500
 @hull_L4 = 1200
 
-@hull_S5 = 270
-@hull_M5 = 675
-@hull_L5 = 1620
+@hull_S5 = 260
+@hull_M5 = 650
+@hull_L5 = 1550
 
 @hull_S6 = 350
 @hull_M6 = 875

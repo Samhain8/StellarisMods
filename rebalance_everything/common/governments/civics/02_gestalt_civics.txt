@@ -196,7 +196,7 @@ civic_hive_catalytic_processing = {
 		}
 	}
 	modifier = {
-		ship_hull_mult = 0.1
+		ship_hull_mult = 0.15
 		ship_hull_regen_add_perc = 0.05
 	}
 	random_weight = { base = 5 }
@@ -528,7 +528,7 @@ civic_machine_catalytic_processing = {
 		origin = { NOT = { value = origin_machine } }
 	}
 	modifier = {
-		ship_hull_mult = 0.1
+		ship_hull_mult = 0.15
 		ship_hull_regen_add_perc = 0.05
 	}
 	random_weight = { base = 5 }

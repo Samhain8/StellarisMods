@@ -245,11 +245,12 @@ d_familiar_predators = {
 d_exotic_mountain = {
 	is_for_colonizable = yes
 	icon = d_radioactive_wasteland
+	category = deposit_cat_rare
 
 	resources = {
 		category = planet_deposits
 		produces = {
-			exotic_gases = 4
+			exotic_gases = 3
 		}
 	}
 

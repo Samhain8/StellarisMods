@@ -668,7 +668,7 @@ building_underground_clubs = {
 
 	planet_modifier = {
 		planet_crime_add = 15
-		pop_growth_speed = 0.05
+		pop_growth_speed = 0.1
 	}
 
 	resources = {

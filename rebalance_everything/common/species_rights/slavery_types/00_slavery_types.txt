@@ -68,6 +68,14 @@ slavery_domestic = {
 			OR = {
 				has_trait = trait_crafted_charm
 				has_trait = trait_perfected_charm
+				has_trait = trait_xeno_compatibility
+				has_trait = trait_interbreeder
+			}
+		}
+		modifier = {
+			factor = 3
+			from = {
+				is_pleasure_seeker = yes
 			}
 		}
 	}
@@ -201,11 +209,16 @@ slavery_livestock = {
 		}
 		custom_tooltip = {
 			fail_text = empire_not_xenophobe
-			from = {
-				OR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-					has_ethic = ethic_gestalt_consciousness
+			OR = {
+				has_trait = trait_nerve_stapled
+				has_trait = trait_syncretic_proles
+				from = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_gestalt_consciousness
+						has_slaver_civic = yes
+					}
 				}
 			}
 		}
@@ -215,11 +228,12 @@ slavery_livestock = {
 		}
 	}
 	ai_will_do = {
-		factor = 10
+		factor = 100
 		modifier = {
 			factor = 0
 			NOR = {
 				has_trait = trait_delicious
+				has_trait = trait_felsic
 				from = { has_authority = auth_hive_mind }
 			}
 		}
@@ -240,7 +254,6 @@ slavery_livestock = {
 slavery_pets = {
 	pop_modifier = {
 		pop_happiness = -0.30
-		pop_growth_speed = 0.30
 	}
 
 	in_breach_of = {

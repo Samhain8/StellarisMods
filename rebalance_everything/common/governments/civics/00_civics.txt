@@ -411,18 +411,17 @@ civic_warrior_culture = {
 				value = ethic_fanatic_militarist
 			}
 		}
-		civics = {
-			NOT = {
-				value = civic_pleasure_seekers
-			}
-		}
+		#civics = {
+		#	NOT = {
+		#		value = civic_pleasure_seekers
+		#	}
+		#}
 	}
 	random_weight = { base = 5 }
 	description = "civic_tooltip_warrior_culture_effects"
 	modifier = {
 		army_damage_mult = 0.30
 		country_enclave_capacity_add = 1
-		starbase_shipyard_build_cost_mult = -0.1
 	}
 	#swap_type = {
 	#	description = "civic_tooltip_warrior_culture_effects"
@@ -451,7 +450,8 @@ civic_distinguished_admiralty = {
 	}
 	random_weight = { base = 5 }
 	modifier = {
-		ship_fire_rate_mult = 0.10
+		ship_fire_rate_mult = 0.15
+		ship_speed_mult = 0.15
 		admiral_skill_levels = 1
 		country_command_limit_add = 20
 		country_enclave_capacity_add = 1
@@ -829,8 +829,8 @@ civic_barbaric_despoilers = {
 	}
 	modification = no
 	modifier = {
-		ship_fire_rate_mult = 0.05
-		ship_speed_mult = 0.15
+		ship_fire_rate_mult = 0.1
+		ship_speed_mult = 0.25
 	}
 	random_weight = {
 		base = 2
@@ -1024,7 +1024,7 @@ civic_catalytic_processing = {
 		}
 	}
 	modifier = {
-		ship_hull_mult = 0.1
+		ship_hull_mult = 0.15
 		ship_hull_regen_add_perc = 0.05
 	}
 	random_weight = { base = 5 }
@@ -1057,7 +1057,7 @@ civic_pleasure_seekers = {
 	possible = {
 		civics = {
 			NOT = {
-				value = civic_warrior_culture
+				#value = civic_warrior_culture
 				value = civic_shared_burden
 			}
 		}

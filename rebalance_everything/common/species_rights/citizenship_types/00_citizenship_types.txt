@@ -363,7 +363,7 @@ citizenship_organic_trophy = {
 }
 
 citizenship_limited = {
-	new_pop_weight = 0.75
+	new_pop_weight = 1
 
 	pop_modifier = {
 		pop_happiness = -0.1
@@ -606,6 +606,10 @@ citizenship_slavery = {
 			}
 		}
 		modifier = {
+			factor = 50
+			has_slaver_civic = yes
+		}
+		modifier = {
 			factor = 3
 			has_trait = trait_syncretic_proles
 		}
@@ -709,6 +713,15 @@ citizenship_purge = {
 		modifier = {
 			factor = 0
 			from = {
+				NOR = {
+					has_ethic = ethic_fanatic_xenophobe
+					has_ethic = ethic_gestalt_consciousness
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			from = {
 				has_valid_ai_personality = no
 				NOT = { has_authority = auth_hive_mind }
 			}
@@ -764,15 +777,15 @@ citizenship_purge = {
 				has_ascension_perk = ap_become_the_crisis
 			}
 		}
-		modifier = {
-			add = 1000
-			not = { has_species_flag = syncretic_species@from }
-			is_robotic = no
-			from = {
-				has_origin = origin_necrophage
-				is_xenophobe = yes
-			}
-		}
+		#modifier = {
+		#	add = 1000
+		#	not = { has_species_flag = syncretic_species@from }
+		#	is_robotic = no
+		#	from = {
+		#		has_origin = origin_necrophage
+		#		is_xenophobe = yes
+		#	}
+		#}
 	}
 }
 

@@ -189,7 +189,7 @@ priest = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 2
+		planet_amenities_add = 3
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -640,7 +640,7 @@ entertainer = {
 	resources = {
 		category = planet_entertainers
 		produces = {
-			unity = 1
+			unity = 2
 		}
 		produces = {
 			trigger = {
@@ -649,12 +649,6 @@ entertainer = {
 			unity = 1
 		}
 		upkeep = {
-			consumer_goods = 1
-		}
-		upkeep = {
-			trigger = {
-				owner = { is_pleasure_seeker = yes }
-			}
 			consumer_goods = 1
 		}
 	}
@@ -670,10 +664,14 @@ entertainer = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_pleasure_seeker = yes }
+			OR = {
+				owner = { is_pleasure_seeker = yes }
+				has_trait = trait_xeno_compatibility
+				has_trait = trait_interbreeder
+			}
 		}
 		modifier = {
-			pop_growth_speed = 0.04
+			pop_growth_speed = 0.03
 		}
 	}
 
@@ -682,7 +680,7 @@ entertainer = {
 			exists = owner
 			owner = { is_pleasure_seeker = yes }
 		}
-		trade_value_add = 4
+		trade_value_add = 5
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
 	}
 
@@ -709,7 +707,10 @@ entertainer = {
 		}
 		modifier = {
 			factor = 5
-			is_domestic_servant = yes
+			OR = {
+				is_domestic_servant = yes
+				is_pet_slave = yes
+			}
 		}
 		modifier = {
 			factor = 1.5
@@ -722,6 +723,7 @@ entertainer = {
 			planet = {
 				free_amenities > 5
 			}
+			owner = { is_pleasure_seeker = no }
 		}
 		modifier = {
 			factor = 2
@@ -739,6 +741,13 @@ entertainer = {
 			OR = {
 				has_trait = trait_thrifty
 				has_trait = trait_robot_trading_algorithms
+			}
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				has_trait = trait_xeno_compatibility
+				has_trait = trait_interbreeder
 			}
 		}
 	}
@@ -765,6 +774,7 @@ duelist = {
 		category = planet_entertainers
 		produces = {
 			unity = 3
+			engineering_research = 1
 		}
 		upkeep = {
 			alloys = 1
@@ -927,7 +937,7 @@ bureaucrat = {
 			unity = 4
 		}
 		upkeep = {
-			consumer_goods = 2
+			consumer_goods = 1
 		}
 	}
 
@@ -1831,7 +1841,6 @@ catalytic_technician = {
 		category = planet_metallurgists
 		produces = {
 			alloys = 3
-			society_research = 1
 		}
 
 		upkeep = {

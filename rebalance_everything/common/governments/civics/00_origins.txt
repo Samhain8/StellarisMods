@@ -287,7 +287,7 @@ origin_remnants = {
 	picture = GFX_origin_remnants
 
 	starting_colony = pc_relic #Changes homeworld class regardless of what is picked for empire
-	max_once_global = yes
+	#max_once_global = yes
 
 	playable = {
 		OR = {
@@ -406,6 +406,13 @@ origin_void_dwellers = {
 
 	traits = {
 		trait = trait_void_dweller_1
+	}
+
+	has_secondary_species = {
+		title = civic_syncretic_evolution_secondary_species
+		traits = {
+			trait = trait_void_dweller_1
+		}
 	}
 
 	random_weight = {

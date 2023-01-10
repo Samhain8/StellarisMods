@@ -80,7 +80,7 @@ challenge_type_arena_combat = {
 		modifier = {
 			desc = federation_acceptance_warrior_culture
 			add = 50
-			has_civic = civic_warrior_culture
+			is_warrior_culture = yes
 		}
 		modifier = {
 			desc = federation_acceptance_peaceful_traders

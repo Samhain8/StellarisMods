@@ -881,7 +881,6 @@ catalytic_drone = {
 		category = planet_metallurgists
 		produces = {
 			alloys = 3
-			society_research = 1
 		}
 		produces = {
 			trigger = {

@@ -2284,11 +2284,11 @@ tech_planetary_shield_generator = {
 
 tech_sensors_2 = {
 	area = physics
-	cost = @tier2cost1
-	tier = 2
+	cost = @tier1cost2
+	tier = 1
 	category = { computing }
 	ai_update_type = all
-	weight = @tier2weight1
+	weight = @tier1weight2
 
 	weight_modifier = {
 		modifier = {

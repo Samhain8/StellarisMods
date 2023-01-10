@@ -27,7 +27,7 @@ servant = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 4
+		planet_amenities_add = 3
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -43,7 +43,11 @@ servant = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_pleasure_seeker = yes }
+			OR = {
+				owner = { is_pleasure_seeker = yes }
+				has_trait = trait_xeno_compatibility
+				has_trait = trait_interbreeder
+			}
 		}
 		modifier = {
 			pop_growth_speed = 0.02
@@ -53,7 +57,11 @@ servant = {
 	triggered_pop_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_pleasure_seeker = yes }
+			OR = {
+				owner = { is_pleasure_seeker = yes }
+				has_trait = trait_xeno_compatibility
+				has_trait = trait_interbreeder
+			}
 		}
 		pop_housing_usage_add = -0.15
 	}
@@ -62,7 +70,7 @@ servant = {
 		potential = {
 			is_pet_slave = yes
 		}
-		trade_value_add = 1
+		trade_value_add = 2
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
 	}
 
@@ -71,6 +79,12 @@ servant = {
 		produces = {
 			trigger = {
 				is_pet_slave = yes
+			}
+			unity = 1
+		}
+		produces = {
+			trigger = {
+				owner = { is_pleasure_seeker = yes }
 			}
 			unity = 1
 		}

@@ -573,7 +573,7 @@ utility_component_template = {
 	component_set = "CRYSTAL_ARMOR_2"
 
 	modifier = {
-		ship_hull_add =@hull_S6
+		ship_hull_add = @hull_S5
 	}
 
 	ai_weight = {
@@ -602,7 +602,7 @@ utility_component_template = {
 	component_set = "CRYSTAL_ARMOR_2"
 
 	modifier = {
-		ship_hull_add = @hull_M6
+		ship_hull_add = @hull_M5
 	}
 
 	ai_weight = {
@@ -631,7 +631,7 @@ utility_component_template = {
 	component_set = "CRYSTAL_ARMOR_2"
 
 	modifier = {
-		ship_hull_add = @hull_L6
+		ship_hull_add = @hull_L5
 	}
 
 	ai_weight = {

@@ -2936,8 +2936,7 @@ purge = {
 			factor = 5
 			modifier = {
 				factor = 0
-				has_valid_ai_personality = yes
-				has_ai_personality_behaviour = multispecies
+				NOT = { has_ethic = ethic_fanatic_xenophobe }
 			}
 		}
 	}
@@ -2980,43 +2979,50 @@ purge = {
 			modifier = {
 				factor = 0
 				OR = {
-					has_ethic = ethic_pacifist
-					has_ethic = ethic_fanatic_pacifist
+					has_valid_civic = civic_hive_empath
+					NOT = { has_ethic = ethic_gestalt_consciousness }
 				}
 			}
-			modifier = {
-				factor = 0
-				has_valid_ai_personality = yes
-				NOR = {
-					has_ai_personality_behaviour = purger
-					has_ethic = ethic_gestalt_consciousness
-					AND = {
-						has_origin = origin_necrophage
-						is_xenophobe = yes
-					}
-				}
-			}
-			modifier = {
-				factor = 0.1
-				has_valid_ai_personality = yes
-				is_ai = yes
-				is_galactic_community_member = yes
-				OR = {
-					is_active_resolution = "resolution_rulesofwar_reverence_for_life"
-					is_active_resolution = "resolution_rulesofwar_independent_tribunals"
-					is_active_resolution = "resolution_rulesofwar_last_resort_doctrine"
-					is_active_resolution = "resolution_rulesofwar_demobilization_initiative"
-				}
-			}
+			#modifier = {
+			#	factor = 0
+			#	OR = {
+			#		has_ethic = ethic_pacifist
+			#		has_ethic = ethic_fanatic_pacifist
+			#	}
+			#}
+			#modifier = {
+			#	factor = 0
+			#	has_valid_ai_personality = yes
+			#	NOR = {
+			#		has_ai_personality_behaviour = purger
+			#		has_ethic = ethic_gestalt_consciousness
+			#		AND = {
+			#			has_origin = origin_necrophage
+			#			is_xenophobe = yes
+			#		}
+			#	}
+			#}
+			#modifier = {
+			#	factor = 0.1
+			#	has_valid_ai_personality = yes
+			#	is_ai = yes
+			#	is_galactic_community_member = yes
+			#	OR = {
+			#		is_active_resolution = "resolution_rulesofwar_reverence_for_life"
+			#		is_active_resolution = "resolution_rulesofwar_independent_tribunals"
+			#		is_active_resolution = "resolution_rulesofwar_last_resort_doctrine"
+			#		is_active_resolution = "resolution_rulesofwar_demobilization_initiative"
+			#	}
+			#}
 			modifier = {
 				factor = 10
 				has_ascension_perk = ap_become_the_crisis
 			}
-			modifier = {
-				factor = 1000
-				has_origin = origin_necrophage
-				is_xenophobe = yes
-			}
+			#modifier = {
+			#	factor = 1000
+			#	has_origin = origin_necrophage
+			#	is_xenophobe = yes
+			#}
 		}
 	}
 }
