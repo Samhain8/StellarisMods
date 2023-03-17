@@ -721,7 +721,7 @@ trait_drake_scaled = {
 	custom_tooltip_with_modifiers = TRAIT_DRAKE_SCALED_EFFECT
 
 	modifier = {
-		army_health = 0.5
+		army_health = 0.75
 	}
 
 	slave_cost = {

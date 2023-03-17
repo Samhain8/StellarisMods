@@ -153,7 +153,7 @@ slavery_indentured = {
 
 slavery_matrix = {
 	pop_modifier = {
-		pop_happiness = -0.40
+		pop_happiness = -0.30
 	}
 
 	pop_tooltip = MATRIX_LIVESTOCK
@@ -161,7 +161,12 @@ slavery_matrix = {
 
 	potential = {
 		host_has_dlc = "Synthetic Dawn Story Pack"
-		from = { has_authority = auth_machine_intelligence }
+		from = { 
+			OR = {
+				has_authority = auth_machine_intelligence
+				has_valid_civic = civic_hive_natural_neural_network
+			}
+		}
 	}
 
 	in_breach_of = {

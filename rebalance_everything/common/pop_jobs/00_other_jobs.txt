@@ -274,20 +274,22 @@ organic_battery = {
 	resources = {
 		category = planet_jobs
 		produces = {
-			energy = 4
+			physics_research = 1
+			engineering_research = 1
+			society_research = 1
 		}
-		produces = {
-			trigger = {
-				planet = { has_active_building = building_energy_grid }
-			}
-			energy = 1
-		}
-		produces = {
-			trigger = {
-				planet = { has_active_building = building_energy_nexus }
-			}
-			energy = 2
-		}
+		#produces = {
+		#	trigger = {
+		#		planet = { has_active_building = building_energy_grid }
+		#	}
+		#	energy = 1
+		#}
+		#produces = {
+		#	trigger = {
+		#		planet = { has_active_building = building_energy_nexus }
+		#	}
+		#	energy = 2
+		#}
 	}
 
 	weight = {

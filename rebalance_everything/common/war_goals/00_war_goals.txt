@@ -2345,9 +2345,8 @@ wg_allegiance = {
 				limit = {
 					has_secret_fealty_with = ROOT
 				}
-				add_modifier = {
-					modifier = failed_betrayal_status_quo
-					years = 5
+				set_subject_of = {
+					who = ROOT
 				}
 			}
 		}

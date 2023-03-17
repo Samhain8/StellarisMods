@@ -549,7 +549,7 @@ brain_drone = {
 			society_research = 3
 		}
 		upkeep = {
-			minerals = 6
+			unity = 2
 		}
 		upkeep = {
 			trigger = {
@@ -557,7 +557,7 @@ brain_drone = {
 					has_planet_flag = has_science_ministry
 				}
 			}
-			minerals = 3
+			unity = 1
 		}
 	}
 

@@ -72,8 +72,8 @@ tech_scourge_missile_1 = {
 # Space Whale Weapon
 tech_space_whale_weapon_1 = {
 	area = society
-	cost = @tier1cost3
-	tier = 1
+	cost = @tier2cost3
+	tier = 2
 	category = { biology }
 	ai_update_type = military
 	weight = 0
