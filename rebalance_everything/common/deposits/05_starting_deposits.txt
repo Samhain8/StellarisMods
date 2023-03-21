@@ -187,15 +187,70 @@ d_failing_infrastructure_earth = {
 	}
 }
 
+#vassal mod
+d_burrowing_titans = {
+	icon = d_titanic_life_blocker
+
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	potential = { always = no }
+
+	planet_modifier = {
+		planet_max_districts_add = -2
+		planet_jobs_volatile_motes_produces_mult = 0.15
+		planet_jobs_minerals_produces_mult = 0.25
+	}
+}
+
+d_ancient_concealed_stardocks = {
+	icon = d_mining_tunnels
+
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	potential = { always = no }
+
+	resources = {
+		category = orbital_mining_deposits
+		produces = {
+			alloys = 5
+		}
+	}
+
+	planet_modifier = {
+		planet_jobs_engineering_research_produces_mult = 0.15
+	}
+
+	country_modifier = {
+   		country_naval_cap_add = 20
+   	}
+}
+
+d_familiar_predators = {
+	icon = d_dangerous_wildlife_blocker
+
+	is_for_colonizable = yes
+	category = deposit_cat_rare
+
+	potential = { always = no }
+
+	country_modifier = {
+   		army_damage_mult = 0.2
+   		army_morale = 0.2
+   	}
+}
+
 # Exotic Metablism Deposit
 d_exotic_mountain = {
 	is_for_colonizable = yes
 	icon = d_radioactive_wasteland
+	category = deposit_cat_rare
 
 	resources = {
 		category = planet_deposits
 		produces = {
-			exotic_gases = 4
+			exotic_gases = 3
 		}
 	}
 

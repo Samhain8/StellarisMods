@@ -110,7 +110,7 @@ civic_beacon_of_liberty = {
 	modifier = {
 		country_unity_produces_mult = 0.15
 		empire_size_pops_mult = -0.15
-
+		num_tech_alternatives_add = 1
 	}
 }
 
@@ -166,6 +166,9 @@ civic_philosopher_king = {
 	random_weight = { base = 5 }
 	modifier = {
 		ruler_skill_levels = 2
+		diplo_weight_mult = 0.1
+		country_unity_produces_mult = 0.1
+		country_edict_fund_add = 20
 	}
 }
 
@@ -187,6 +190,7 @@ civic_meritocracy = {
 	modifier = {
 		leader_skill_levels = 1
 		planet_jobs_specialist_produces_mult = 0.10
+		planet_jobs_ruler_produces_mult = 0.10
 	}
 }
 
@@ -324,7 +328,7 @@ civic_environmentalist = {
 	}
 	random_weight = { base = 5 }
 	modifier = {
-		planet_pops_consumer_goods_upkeep_mult = -0.20
+		pop_environment_tolerance = 0.10
 	}
 	description = "civic_tooltip_environmentalist_effects"
 }
@@ -342,12 +346,11 @@ civic_slaver_guilds = {
 				value = ethic_fanatic_authoritarian
 			}
 		}
-		civics = { NOT = { value = civic_pleasure_seekers } }
 	}
 	random_weight = { base = 5 }
 	modifier = {
 		planet_jobs_slave_produces_mult = 0.10
-		country_pop_enslaved_mult = 0.35
+		#country_pop_enslaved_mult = 0.35
 	}
 }
 
@@ -408,26 +411,26 @@ civic_warrior_culture = {
 				value = ethic_fanatic_militarist
 			}
 		}
-		civics = {
-			NOT = {
-				value = civic_pleasure_seekers
-			}
-		}
+		#civics = {
+		#	NOT = {
+		#		value = civic_pleasure_seekers
+		#	}
+		#}
 	}
 	random_weight = { base = 5 }
 	description = "civic_tooltip_warrior_culture_effects"
 	modifier = {
-		army_damage_mult = 0.20
+		army_damage_mult = 0.30
+		country_enclave_capacity_add = 1
 	}
-	swap_type = {
-		description = "civic_tooltip_warrior_culture_effects"
-		trigger = {
-			host_has_dlc = "Overlord"
-		}
-		modifier = {
-			country_enclave_capacity_add = 1
-		}
-	}
+	#swap_type = {
+	#	description = "civic_tooltip_warrior_culture_effects"
+	#	trigger = {
+	#		host_has_dlc = "Overlord"
+	#	}
+	#	modifier = {
+	#	}
+	#}
 }
 
 civic_distinguished_admiralty = {
@@ -447,9 +450,11 @@ civic_distinguished_admiralty = {
 	}
 	random_weight = { base = 5 }
 	modifier = {
-		ship_fire_rate_mult = 0.10
+		ship_fire_rate_mult = 0.15
+		ship_speed_mult = 0.15
 		admiral_skill_levels = 1
-		country_command_limit_add = 10
+		country_command_limit_add = 20
+		country_enclave_capacity_add = 1
 	}
 }
 
@@ -474,7 +479,8 @@ civic_free_haven = {
 	}
 	random_weight = { base = 5 }
 	modifier = {
-		pop_growth_from_immigration = 0.15
+		trade_value_mult = 0.1
+		pop_growth_from_immigration = 0.3
 		planet_immigration_pull_mult = 0.50
 	}
 }
@@ -486,8 +492,9 @@ civic_cutthroat_politics = {
 	}
 	random_weight = { base = 5 }
 	modifier = {
-		edicts_upkeep_mult = -0.20
-		intel_decryption_add = 1
+		envoys_add = 1
+		intel_decryption_add = 2
+		spy_network_daily_value_mult = 0.5
 	}
 }
 
@@ -582,6 +589,7 @@ civic_shadow_council = {
 		country_election_cost_mult = -0.75
 		planet_jobs_ruler_produces_mult = 0.10
 		intel_decryption_add = 1
+		intel_encryption_add = 1
 	}
 }
 
@@ -622,7 +630,8 @@ civic_efficient_bureaucracy = {
 	# The edict fund production is deliberately only limited to  Bureaucrats, Priests, Managers and Death Priests.
 	description = "civic_tooltip_efficient_bureaucracy_effects"
 	modifier = {
-		planet_administrators_upkeep_mult = -0.20
+		planet_administrators_upkeep_mult = -0.3
+		planet_administrators_produces_mult = 0.1
 	}
 }
 
@@ -655,7 +664,7 @@ civic_functional_architecture = {
 	}
 	random_weight = { base = 5 }
 	modifier = {
-		planet_structures_cost_mult = -0.15
+		planet_structures_cost_mult = -0.20
 		planet_max_buildings_add = 1
 	}
 }
@@ -703,12 +712,12 @@ civic_shared_burden = {
 		authority = { NOT = { value = auth_corporate } }
 	}
 	possible = {
+		authority = { value = auth_dictatorial }
 		ethics = {
 			value = ethic_fanatic_egalitarian
 			NOR = {
-				text = civic_tooltip_not_xenophobe
-				value = ethic_xenophobe
-				value = ethic_fanatic_xenophobe
+				value = ethic_egalitarian
+				value = ethic_fanatic_egalitarian
 			}
 		}
 		civics = {
@@ -721,7 +730,7 @@ civic_shared_burden = {
 	}
 	modifier = {
 		planet_stability_add = 5
-		pop_demotion_time_mult = -0.45
+		pop_demotion_time_mult = -0.9
 	}
 	random_weight = {
 		base = 1 # Should be fairly rare
@@ -819,6 +828,10 @@ civic_barbaric_despoilers = {
 		}
 	}
 	modification = no
+	modifier = {
+		ship_fire_rate_mult = 0.1
+		ship_speed_mult = 0.25
+	}
 	random_weight = {
 		base = 2
 		modifier = {
@@ -1010,6 +1023,10 @@ civic_catalytic_processing = {
 			}
 		}
 	}
+	modifier = {
+		ship_hull_mult = 0.15
+		ship_hull_regen_add_perc = 0.05
+	}
 	random_weight = { base = 5 }
 }
 
@@ -1040,11 +1057,13 @@ civic_pleasure_seekers = {
 	possible = {
 		civics = {
 			NOT = {
-				value = civic_warrior_culture
+				#value = civic_warrior_culture
 				value = civic_shared_burden
-				value = civic_slaver_guilds # would enslave hedonists
 			}
 		}
+	}
+	modifier = {
+		pop_amenities_usage_mult = 0.5
 	}
 	random_weight = {
 		base = 3
@@ -1096,9 +1115,6 @@ civic_anglers = {
 				value = origin_subterranean
 			}
 		}
-	}
-	traits = {
-		trait = trait_aquatic
 	}
 }
 

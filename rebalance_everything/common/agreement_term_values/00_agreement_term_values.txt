@@ -54,13 +54,13 @@ specialist_bulwark = {
 		trigger = {
 			target = { is_militarist = yes }
 		}
-		loyalty_change = 5
+		loyalty_change = 30
 	}
 	triggered_loyalty_change = {
 		trigger = {
 			target = { is_pacifist = yes }
 		}
-		loyalty_change = -20
+		loyalty_change = -50
 	}
 	activate_effect = {
 		convert_to_specialist = specialist_bulwark
@@ -98,15 +98,25 @@ specialist_scholarium = {
 	term = specialist_type
 	triggered_loyalty_change = {
 		trigger = {
-			target = { is_materialist = yes }
+			target = {
+				OR = {
+					is_materialist = yes
+					is_pacifist = yes
+				}
+			}
 		}
-		loyalty_change = 5
+		loyalty_change = 30
 	}
 	triggered_loyalty_change = {
 		trigger = {
-			target = { is_spiritualist = yes }
+			target = { 
+				OR = {
+					is_militarist = yes
+					is_xenophobe = yes
+				}
+			}
 		}
-		loyalty_change = -20
+		loyalty_change = -50
 	}
 	activate_effect = {
 		convert_to_specialist = specialist_scholarium
@@ -120,15 +130,24 @@ specialist_prospectorium = {
 	term = specialist_type
 	triggered_loyalty_change = {
 		trigger = {
-			target = { is_pacifist = yes }
+			target = { 
+				OR = {
+					is_pacifist = yes
+				}
+			}
 		}
-		loyalty_change = 5
+		loyalty_change = 30
 	}
 	triggered_loyalty_change = {
 		trigger = {
-			target = { is_militarist = yes }
+			target = { 
+				OR = {
+					is_militarist = yes
+					is_spiritualist = yes
+				}
+			}
 		}
-		loyalty_change = -20
+		loyalty_change = -50
 	}
 	activate_effect = {
 		convert_to_specialist = specialist_prospectorium
@@ -143,9 +162,9 @@ specialist_prospectorium = {
 #########################
 
 @subsidy_multiplier_basic = 0.5
-@subsidy_multiplier_advanced = 0.5
-@subsidy_multiplier_research = 1
-@subsidy_multiplier_strategic = 1.5
+@subsidy_multiplier_advanced = 0.65
+@subsidy_multiplier_research = 0.75
+@subsidy_multiplier_strategic = 0.75
 
 @subsidy_monthly_multiplier_basic = 5
 @subsidy_monthly_multiplier_advanced = 5
@@ -189,10 +208,7 @@ resource_subsidies_basic = {
 		modifier = {
 			set = @set_factor_1
 			OR = {
-				agreement_preset = preset_prospectorium
 				agreement_preset = preset_tributary
-				agreement_preset = preset_subsidiary
-				agreement_preset = preset_relic_satrapy
 			}
 		}
 
@@ -200,7 +216,16 @@ resource_subsidies_basic = {
 			set = @set_factor_2_neg
 			OR = {
 				agreement_preset = preset_vassal
+				agreement_preset = preset_relic_satrapy
 				agreement_preset = preset_scholarium
+			}
+		}
+
+		modifier = {
+			set = 0.0
+			OR = {
+				agreement_preset = preset_subsidiary
+				agreement_preset = preset_prospectorium
 			}
 		}
 	}
@@ -236,6 +261,12 @@ resource_subsidies_basic = {
 			}
 		}
 
+		modifier = {
+			set = @set_factor_0
+			OR = {
+				agreement_preset = preset_relic_satrapy
+			}
+		}
 	}
 }
 
@@ -253,17 +284,17 @@ resource_subsidies_advanced = {
 	resource_min = {
 		base = @subsidy_minimum
 
-		modifier = {
-			set = @set_factor_0
-			agreement_preset = preset_prospectorium
-		}
+		#modifier = {
+		#	set = @set_factor_0
+		#	agreement_preset = preset_prospectorium
+		#}
 
 		modifier = {
 			set = 0.0
 			OR = {
 				agreement_preset = preset_subsidiary
 				agreement_preset = preset_tributary
-				agreement_preset = preset_relic_satrapy
+				agreement_preset = preset_prospectorium
 			}
 		}
 
@@ -272,6 +303,7 @@ resource_subsidies_advanced = {
 			OR = {
 				agreement_preset = preset_vassal
 				agreement_preset = preset_scholarium
+				agreement_preset = preset_relic_satrapy
 			}
 		}
 	}
@@ -292,6 +324,12 @@ resource_subsidies_advanced = {
 			OR = {
 				agreement_preset = preset_vassal
 				agreement_preset = preset_scholarium
+			}
+		}
+
+		modifier = {
+			set = @set_factor_0
+			OR = {
 				agreement_preset = preset_relic_satrapy
 			}
 		}
@@ -316,9 +354,7 @@ resource_subsidies_research = {
 		modifier = {
 			set = 0.0
 			OR = {
-				agreement_preset = preset_subsidiary
 				agreement_preset = preset_tributary
-				agreement_preset = preset_relic_satrapy
 			}
 		}
 
@@ -331,7 +367,9 @@ resource_subsidies_research = {
 			set = @set_factor_2_neg
 			OR = {
 				agreement_preset = preset_vassal
+				agreement_preset = preset_subsidiary
 				agreement_preset = preset_bulwark
+				agreement_preset = preset_relic_satrapy
 			}
 		}
 	}
@@ -343,7 +381,6 @@ resource_subsidies_research = {
 			set = 0.0
 			OR = {
 				agreement_preset = preset_protectorate
-				agreement_preset = preset_relic_satrapy
 			}
 		}
 
@@ -373,6 +410,13 @@ resource_subsidies_research = {
 				agreement_preset = preset_bulwark
 			}
 		}
+
+		modifier = {
+			set = @set_factor_0
+			OR = {
+				agreement_preset = preset_relic_satrapy
+			}
+		}
 	}
 }
 
@@ -395,7 +439,6 @@ resource_subsidies_strategic = {
 				agreement_preset = preset_subsidiary
 				agreement_preset = preset_tributary
 				agreement_preset = preset_prospectorium
-				agreement_preset = preset_relic_satrapy
 			}
 		}
 
@@ -416,6 +459,7 @@ resource_subsidies_strategic = {
 				agreement_preset = preset_vassal
 				agreement_preset = preset_scholarium
 				agreement_preset = preset_bulwark
+				agreement_preset = preset_relic_satrapy
 			}
 		}
 	}
@@ -428,7 +472,7 @@ resource_subsidies_strategic = {
 		}
 
 		modifier = {
-			set = @set_factor_1
+			set = @set_factor_0
 			agreement_preset = preset_relic_satrapy
 		}
 
@@ -503,14 +547,6 @@ joins_overlord_wars_defensive = {
 			}
 		}
 	}
-	possible = {
-		custom_tooltip = {
-			fail_text = not_allowed_for_satrapy
-			NOT = {
-				agreement_preset = preset_relic_satrapy
-			}
-		}
-	}
 }
 
 joins_overlord_wars_offensive = {
@@ -534,13 +570,19 @@ joins_overlord_wars_offensive = {
 		set_rule_join_overlord_wars = none
 	}
 	target_modifier = {
-		monthly_loyalty = -2
+		monthly_loyalty = -1.5
 	}
 	possible = {
 		custom_tooltip = {
 			fail_text = not_allowed_for_tributary
 			NOT = {
 				agreement_preset = preset_tributary
+			}
+		}
+		custom_tooltip = {
+			fail_text = not_allowed_for_satrapy
+			NOT = {
+				agreement_preset = preset_relic_satrapy
 			}
 		}
 	}
@@ -567,7 +609,7 @@ joins_overlord_wars_all = {
 		set_rule_join_overlord_wars = none
 	}
 	target_modifier = {
-		monthly_loyalty = -3
+		monthly_loyalty = -2.5
 	}
 	possible = {
 		custom_tooltip = {
@@ -576,8 +618,6 @@ joins_overlord_wars_all = {
 				agreement_preset = preset_tributary
 			}
 		}
-	}
-	possible = {
 		custom_tooltip = {
 			fail_text = not_allowed_for_satrapy
 			NOT = {
@@ -628,6 +668,12 @@ joins_subject_wars_none = {
 				agreement_preset = preset_subsidiary
 			}
 		}
+		custom_tooltip = {
+			fail_text = not_allowed_for_satrapy
+			NOT = {
+				agreement_preset = preset_relic_satrapy
+			}
+		}
 	}
 }
 
@@ -642,14 +688,6 @@ joins_subject_wars_defensive = {
 	}
 	target_modifier = {
 		monthly_loyalty = 0.5
-	}
-	possible = {
-		custom_tooltip = {
-			fail_text = not_allowed_for_satrapy
-			NOT = {
-				agreement_preset = preset_relic_satrapy
-			}
-		}
 	}
 }
 
@@ -713,12 +751,6 @@ joins_subject_wars_all = {
 		custom_tooltip = {
 			fail_text = not_allowed_for_imperial_fiefdom
 			NOT = { owner = { has_ai_personality = imperial_origin_overlord_ai } }
-		}
-		custom_tooltip = {
-			fail_text = not_allowed_for_satrapy
-			NOT = {
-				agreement_preset = preset_relic_satrapy
-			}
 		}
 	}
 }
@@ -1075,7 +1107,7 @@ subject_holdings_limit_1 = {
 	term = subject_holdings_limit
 	loyalty_change = -5
 	target_modifier = {
-		monthly_loyalty = -0.4
+		monthly_loyalty = -0.5
 		planet_max_subject_holding_buildings_add = 1
 	}
 	possible = {
@@ -1112,7 +1144,7 @@ subject_holdings_limit_3 = {
 	term = subject_holdings_limit
 	loyalty_change = -30
 	target_modifier = {
-		monthly_loyalty = -2
+		monthly_loyalty = -1.5
 		planet_max_subject_holding_buildings_add = 3
 	}
 	possible = {
@@ -1139,7 +1171,7 @@ subject_holdings_limit_4 = {
 	term = subject_holdings_limit
 	loyalty_change = -50
 	target_modifier = {
-		monthly_loyalty = -4
+		monthly_loyalty = -2
 		planet_max_subject_holding_buildings_add = 4
 	}
 	possible = {
@@ -1234,7 +1266,7 @@ subject_is_protectorate = {
 		}
 	}
 	target_modifier = {
-		subject_tech_cost_mult = -0.80
+		subject_tech_cost_mult = -0.90
 	}
 
 	potential = {

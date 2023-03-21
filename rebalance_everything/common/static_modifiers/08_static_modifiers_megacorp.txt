@@ -101,9 +101,9 @@ galactic_market_founder = {
 criminal_underworld = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
 	icon_frame = 3
-	planet_crime_add = 15
-	job_criminal_add = 1
-	job_criminal_per_crime = 0.03
+	planet_crime_add = 10
+	#job_criminal_add = 1
+	#job_criminal_per_crime = 0.033
 }
 
 drone_deviancy = {
@@ -111,7 +111,7 @@ drone_deviancy = {
 	icon_frame = 3
 	planet_crime_no_happiness_add = 15
 	job_deviant_drone_add = 1
-	job_deviant_drone_per_crime = 0.03
+	job_deviant_drone_per_crime = 0.033
 }
 
 drone_corruption = {
@@ -119,28 +119,28 @@ drone_corruption = {
 	icon_frame = 3
 	planet_crime_no_happiness_add = 15
 	job_corrupt_drone_add = 1
-	job_corrupt_drone_per_crime = 0.03
+	job_corrupt_drone_per_crime = 0.033
 }
 
 gang_wars = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
 	icon_frame = 3
-	planet_crime_add = 30
-	job_criminal_add = 3
+	planet_crime_add = 20
+	#job_criminal_add = 3
 }
 
 center_of_drug_trade = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
 	icon_frame = 3
-	planet_crime_add = 30
-	job_criminal_add = 3
+	planet_crime_add = 20
+	#job_criminal_add = 3
 }
 
 mob_rule = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
 	icon_frame = 3
-	planet_crime_add = 30
-	job_criminal_add = 3
+	planet_crime_add = 20
+	#job_criminal_add = 3
 }
 
 bribed_officials = {
@@ -164,7 +164,7 @@ smuggler_activity = {
 crime_wave = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
 	icon_frame = 3
-	planet_crime_add = 30
+	planet_crime_add = 20
 }
 
 travel_advisory = {
@@ -200,7 +200,7 @@ trade_pilfering = {
 crime_boss_arrested = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
 	icon_frame = 1
-	planet_crime_add = -30
+	planet_crime_add = -20
 }
 
 deviant_interference = {
@@ -239,15 +239,15 @@ crime_lord_deal = {
 	icon_frame = 2
 	planet_stability_add = 10
 	planet_crime_mult = 0.5
-	job_criminal_add = 2
-	job_criminal_per_crime = 0.03
+	#job_criminal_add = 3
 }
 
 crime_lord_deal_broken = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
 	icon_frame = 2
 	planet_stability_add = -10
-	job_criminal_per_crime = 0.03
+	#job_criminal_add = 1
+	#job_criminal_per_crime = 0.03
 }
 
 unemployment_benefits = {
@@ -580,7 +580,7 @@ divine_algorithm = {
 criminal_gambling = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
 	icon_frame = 3
-	planet_crime_add = 15
+	planet_crime_add = 10
 }
 
 festival_aftermath = {

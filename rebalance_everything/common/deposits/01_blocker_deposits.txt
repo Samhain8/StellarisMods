@@ -5,8 +5,8 @@
 # constant_modifier - applied to planet always
 # station = station class in orbit to gather
 
-@blocker_high = 10
-@blocker_low = 5
+@blocker_high = 12
+@blocker_low = 6
 
 d_mountain_range = {
 	time = 270
@@ -25,6 +25,13 @@ d_mountain_range = {
 
 	resources = {
 		category = deposit_blockers_natural
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_environmentalist }
+			}
+			engineering_research = 4
+		}
 		cost = {
 			energy = 1000
 		}
@@ -36,6 +43,16 @@ d_mountain_range = {
 
 	planet_modifier = {
 		planet_max_districts_add = -2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 2
+		}
 	}
 
 	drop_weight = {
@@ -81,6 +98,13 @@ d_active_volcano = {
 
 	resources = {
 		category = deposit_blockers_natural
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_environmentalist }
+			}
+			physics_research = 4
+		}
 		cost = {
 			energy = 1000
 		}
@@ -92,6 +116,16 @@ d_active_volcano = {
 
 	planet_modifier = {
 		planet_max_districts_add = -2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 2
+		}
 	}
 
 	drop_weight = {
@@ -133,6 +167,13 @@ d_dangerous_wildlife_blocker = {
 
 	resources = {
 		category = deposit_blockers_natural
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_environmentalist }
+			}
+			society_research = 4
+		}
 		cost = {
 			energy = 500
 		}
@@ -144,6 +185,16 @@ d_dangerous_wildlife_blocker = {
 
 	planet_modifier = {
 		planet_max_districts_add = -2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 2
+		}
 	}
 
 	on_cleared = {
@@ -195,6 +246,13 @@ d_dense_jungle = {
 
 	resources = {
 		category = deposit_blockers_natural
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_environmentalist }
+			}
+			society_research = 2
+		}
 		cost = {
 			energy = 500
 		}
@@ -206,6 +264,16 @@ d_dense_jungle = {
 
 	planet_modifier = {
 		planet_max_districts_add = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
 	}
 
 	all_blocker_swap_types = yes
@@ -248,6 +316,13 @@ d_toxic_kelp = {
 
 	resources = {
 		category = deposit_blockers_natural
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_environmentalist }
+			}
+			society_research = 2
+		}
 		cost = {
 			energy = 500
 		}
@@ -259,6 +334,16 @@ d_toxic_kelp = {
 
 	planet_modifier = {
 		planet_max_districts_add = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
 	}
 
 	all_blocker_swap_types = yes
@@ -298,6 +383,13 @@ d_deep_sinkhole = {
 
 	resources = {
 		category = deposit_blockers_natural
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_environmentalist }
+			}
+			engineering_research = 2
+		}
 		cost = {
 			energy = 500
 		}
@@ -309,6 +401,16 @@ d_deep_sinkhole = {
 
 	planet_modifier = {
 		planet_max_districts_add = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
 	}
 
 	all_blocker_swap_types = yes
@@ -352,6 +454,13 @@ d_quicksand_basin = {
 
 	resources = {
 		category = deposit_blockers_natural
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_environmentalist }
+			}
+			engineering_research = 2
+		}
 		cost = {
 			energy = 500
 		}
@@ -363,6 +472,16 @@ d_quicksand_basin = {
 
 	planet_modifier = {
 		planet_max_districts_add = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
 	}
 
 	all_blocker_swap_types = yes
@@ -402,6 +521,13 @@ d_noxious_swamp = {
 
 	resources = {
 		category = deposit_blockers_natural
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_environmentalist }
+			}
+			society_research = 2
+		}
 		cost = {
 			energy = 500
 		}
@@ -413,6 +539,16 @@ d_noxious_swamp = {
 
 	planet_modifier = {
 		planet_max_districts_add = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
 	}
 
 	all_blocker_swap_types = yes
@@ -452,6 +588,13 @@ d_massive_glacier = {
 
 	resources = {
 		category = deposit_blockers_natural
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_environmentalist }
+			}
+			physics_research = 2
+		}
 		cost = {
 			energy = 500
 		}
@@ -463,6 +606,16 @@ d_massive_glacier = {
 
 	planet_modifier = {
 		planet_max_districts_add = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
 	}
 
 	all_blocker_swap_types = yes

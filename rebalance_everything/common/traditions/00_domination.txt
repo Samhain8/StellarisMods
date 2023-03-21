@@ -1,6 +1,6 @@
 tr_domination_adopt = {
 	modifier = {
-		deposit_blockers_cost_mult = -0.33
+		country_traditions_influence_produces_add = 0.5
 	}
 
 	tradition_swap = {
@@ -20,7 +20,7 @@ tr_domination_adopt = {
 
 tr_domination_finish = {
 	modifier = {
-		empire_size_pops_mult = -0.10
+		empire_size_penalty_mult = -0.10
 		ascension_perks_add = 1
 	}
 
@@ -33,7 +33,7 @@ tr_domination_finish = {
 			has_federations_dlc = yes
 		}
 		modifier = {
-			empire_size_pops_mult = -0.10
+			empire_size_penalty_mult = -0.10
 			ascension_perks_add = 1
 		}
 		weight = {
@@ -45,7 +45,6 @@ tr_domination_finish = {
 tr_domination_colonial_viceroys = {
 	modifier = {
 		governor_skill_levels = 2
-		country_traditions_influence_produces_add = 0.5
 	}
 
 	tradition_swap = {

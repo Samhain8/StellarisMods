@@ -170,9 +170,10 @@ building_betharian_power_plant = {
 		cost = {
 			minerals = 200
 		}
-		produces = {
-			energy = 10
-		}
+	}
+
+	planet_modifier = {
+		planet_jobs_physics_research_produces_mult = 0.20
 	}
 
 	triggered_planet_modifier = {
@@ -181,7 +182,7 @@ building_betharian_power_plant = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_technician_add = 4
+			job_technician_add = 5
 		}
 	}
 
@@ -248,14 +249,14 @@ building_xeno_zoo = {
 
 	planet_modifier = {
 		job_entertainer_add = 2
+		job_researcher_add = 1
+		planet_jobs_society_research_produces_mult = 0.20
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				has_valid_civic = civic_warrior_culture
-			}
+			owner = { is_warrior_culture = yes }
 		}
 		modifier = {
 			job_duelist_add = 2
@@ -270,7 +271,7 @@ building_xeno_zoo = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { has_valid_civic = civic_warrior_culture }
+			owner = { is_warrior_culture = yes }
 		}
 		text = job_duelist_effect_desc
 	}
@@ -278,7 +279,7 @@ building_xeno_zoo = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { NOT = { has_valid_civic = civic_warrior_culture } }
+			owner = { is_warrior_culture = no }
 		}
 		text = job_entertainer_effect_desc
 	}

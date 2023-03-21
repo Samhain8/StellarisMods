@@ -22,14 +22,14 @@ overlord_propagandist = {
 	resources = {
 		category = planet_overlord_propagandists
 		upkeep = {
-			unity = 1
+			unity = 2
 		}
 	}
 
 	overlord_resources = {
 		category = planet_overlord_propagandists
 		produces = {
-			influence = 0.15
+			influence = 0.25
 		}
 	}
 
@@ -63,14 +63,14 @@ overlord_propagandist_drone = {
 	resources = {
 		category = planet_overlord_propagandists
 		upkeep = {
-			unity = 1
+			unity = 2
 		}
 	}
 
 	overlord_resources = {
 		category = planet_overlord_propagandists
 		produces = {
-			influence = 0.15
+			influence = 0.25
 		}
 	}
 
@@ -212,14 +212,14 @@ overlord_trader = {
 	resources = {
 		category = planet_overlord_traders
 		upkeep = {
-			energy = 7
+			energy = 6
 		}
 	}
 
 	overlord_resources = {
 		category = planet_overlord_traders
 		produces = {
-			energy = 7
+			energy = 12
 		}
 	}
 
@@ -262,14 +262,14 @@ overlord_trader_drone = {
 	resources = {
 		category = planet_overlord_traders
 		upkeep = {
-			energy = 7
+			energy = 6
 		}
 	}
 
 	overlord_resources = {
 		category = planet_overlord_traders
 		produces = {
-			energy = 7
+			energy = 12
 		}
 	}
 
@@ -304,6 +304,12 @@ aid_worker = {
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		pop_growth_speed = 0.05
+	}
 
 	overlord_resources = {
 		category = planet_aid_workers
@@ -1714,9 +1720,9 @@ overlord_bath_attendant = {
 	}
 
 	triggered_planet_modifier = {
-		pop_growth_speed = 0.01
-		pop_environment_tolerance = -0.005
-		pop_happiness = -0.005
+		pop_growth_speed = 0.02
+		pop_environment_tolerance = -0.0025
+		planet_amenities_add = -0.5
 		mult = planet.value:toxic_attendant_growth
 	}
 
@@ -1761,8 +1767,8 @@ overlord_bath_attendant_hive = {
 	}
 
 	triggered_planet_modifier = {
-		planet_pop_assembly_organic_mult = 0.015
-		pop_environment_tolerance = -0.0075
+		planet_pop_assembly_organic_mult = 0.03
+		pop_environment_tolerance = -0.005
 		mult = planet.value:toxic_attendant_growth
 	}
 
@@ -1807,8 +1813,8 @@ overlord_bath_attendant_machine = {
 	}
 
 	triggered_planet_modifier = {
-		planet_pop_assembly_mult = 0.01
-		pop_amenities_usage_mult = 0.01
+		planet_pop_assembly_mult = 0.015
+		pop_amenities_usage_mult = 0.0075
 		mult = planet.value:toxic_attendant_growth
 	}
 
@@ -1841,14 +1847,14 @@ overlord_knight = {
 	overlord_resources = {
 		category = knights_independent_category
 		produces = {
-			unity = 3
-			mult = value:knights_unity_output_modifier
+			unity = 4
+			mult = value:vassal_knights_unity_output_modifier
 		}
 		produces = {
-			physics_research = 2
-			engineering_research = 2
-			society_research = 2
-			mult = value:knights_research_output_modifier
+			physics_research = 3
+			engineering_research = 3
+			society_research = 3
+			mult = value:vassal_knights_research_output_modifier
 		}
 	}
 
@@ -1868,7 +1874,7 @@ overlord_knight = {
 	}
 
 	triggered_planet_modifier = {
-		planet_stability_add = 3
+		planet_stability_add = 4
 		mult = value:scripted_modifier_mult|MODIFIER|knights_independent_category_produces_mult|
 	}
 
@@ -1922,13 +1928,13 @@ overlord_knight_drone = {
 	overlord_resources = {
 		category = knights_independent_category
 		produces = {
-			unity = 3
+			unity = 4
 			mult = value:knights_unity_output_modifier
 		}
 		produces = {
-			physics_research = 2
-			engineering_research = 2
-			society_research = 2
+			physics_research = 3
+			engineering_research = 3
+			society_research = 3
 			mult = value:knights_research_output_modifier
 		}
 	}
@@ -1949,7 +1955,7 @@ overlord_knight_drone = {
 	}
 
 	triggered_planet_modifier = {
-		planet_stability_add = 3
+		planet_stability_add = 4
 		mult = value:scripted_modifier_mult|MODIFIER|knights_independent_category_produces_mult|
 	}
 

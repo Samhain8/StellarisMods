@@ -529,15 +529,15 @@ job_total_research_output_modifier = {
 knights_unity_output_modifier = {
 	base = 1
 	modifier = {
-		add = 1
+		add = 0.5
 		owner = { has_country_flag = toxoids_7011_a }
 	}
 	modifier = {
-		add = 1
+		add = 0.5
 		owner = { has_country_flag = toxoids_7040_a }
 	}
 	modifier = {
-		add = 1
+		add = 0.5
 		owner = { has_country_flag = toxoids_7130_c }
 	}
 	mult = value:job_total_output_modifier|JOB|bureaucrat|RESOURCE|unity|
@@ -546,20 +546,58 @@ knights_unity_output_modifier = {
 knights_research_output_modifier = {
 	base = 1
 	modifier = {
-		add = 1
+		add = 0.34
 		owner = { has_country_flag = toxoids_7011_b }
 	}
 	modifier = {
-		add = 1
+		add = 0.34
 		owner = { has_country_flag = toxoids_7040_b }
 	}
 	modifier = {
-		add = 1
+		add = 0.34
 		owner = { has_country_flag = toxoids_7130_b }
 	}
 	modifier = {
-		add = 1
+		add = 0.34
 		owner = { has_country_flag = toxoids_7220_a } #TODO_CD: apply to knight commanders
+	}
+	mult = value:job_total_research_output_modifier|JOB|researcher|
+}
+
+vassal_knights_unity_output_modifier = {
+	base = 1
+	modifier = {
+		add = 0.5
+		owner.overlord = { has_country_flag = toxoids_7011_a }
+	}
+	modifier = {
+		add = 0.5
+		owner.overlord = { has_country_flag = toxoids_7040_a }
+	}
+	modifier = {
+		add = 0.5
+		owner.overlord = { has_country_flag = toxoids_7130_c }
+	}
+	mult = value:job_total_output_modifier|JOB|bureaucrat|RESOURCE|unity|
+}
+
+vassal_knights_research_output_modifier = {
+	base = 1
+	modifier = {
+		add = 0.34
+		owner.overlord = { has_country_flag = toxoids_7011_b }
+	}
+	modifier = {
+		add = 0.34
+		owner.overlord = { has_country_flag = toxoids_7040_b }
+	}
+	modifier = {
+		add = 0.34
+		owner.overlord = { has_country_flag = toxoids_7130_b }
+	}
+	modifier = {
+		add = 0.34
+		owner.overlord = { has_country_flag = toxoids_7220_a } #TODO_CD: apply to knight commanders
 	}
 	mult = value:job_total_research_output_modifier|JOB|researcher|
 }
@@ -567,33 +605,37 @@ knights_research_output_modifier = {
 knight_commander_unity_output_modifier = {
 	base = 1
 	modifier = {
-		add = 1
+		add = 0.5
 		owner = { has_country_flag = toxoids_7011_a }
 	}
 	modifier = {
-		add = 1
+		add = 0.5
 		owner = { has_country_flag = toxoids_7040_a }
 	}
 	modifier = {
-		add = 1
+		add = 0.5
 		owner = { has_country_flag = toxoids_7130_c }
 	}
 	mult = value:job_total_output_modifier|JOB|politician|RESOURCE|unity|
 }
 
 knight_commander_research_output_modifier = {
-	base = 0
+	base = 1
 	modifier = {
-		add = 1
+		add = 0.34
 		owner = { has_country_flag = toxoids_7011_b }
 	}
 	modifier = {
-		add = 1
+		add = 0.34
 		owner = { has_country_flag = toxoids_7040_b }
 	}
 	modifier = {
-		add = 1
+		add = 0.34
 		owner = { has_country_flag = toxoids_7130_b }
+	}
+	modifier = {
+		add = 0.34
+		owner = { has_country_flag = toxoids_7220_a } #TODO_CD: apply to knight commanders
 	}
 	mult = value:job_total_research_output_modifier|JOB|head_researcher|
 }
@@ -1183,7 +1225,7 @@ toxic_knight_job_number = {
 				has_job = knight
 			}
 		}
-		mult = 0.05
+		mult = 0.1
 		mode = add
 	}
 	complex_trigger_modifier = {
@@ -1202,7 +1244,7 @@ toxic_knight_job_number = {
 				}
 			}
 		}
-		mult = 0.05
+		mult = 0.1
 		mode = add
 	}
 	complex_trigger_modifier = {
@@ -1221,7 +1263,7 @@ toxic_knight_job_number = {
 				}
 			}
 		}
-		mult = 0.01
+		mult = 0.05
 		mode = add
 	}
 }

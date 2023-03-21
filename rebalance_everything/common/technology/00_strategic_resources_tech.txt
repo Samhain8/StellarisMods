@@ -140,12 +140,12 @@ tech_mine_volatile_motes = {
 
 #Volatile Material Plants
 tech_volatile_motes = {
-	cost = @tier2cost1
+	cost = @tier2cost3
 	area = physics
-	tier = 2
+	tier = 3
 	category = { particles }
 	prerequisites = { "tech_basic_industry" }
-	weight = @tier2weight1
+	weight = @tier2weight3
 
 	weight_modifier = {
 		factor = 2
@@ -248,12 +248,12 @@ tech_mine_exotic_gases = {
 
 #Exotic Gas Refining
 tech_exotic_gases = {
-	cost = @tier2cost1
+	cost = @tier2cost3
 	area = engineering
-	tier = 2
+	tier = 3
 	category = { materials }
 	prerequisites = { "tech_basic_industry" }
-	weight = @tier2weight1
+	weight = @tier2weight3
 
 	weight_modifier = {
 		factor = 2
@@ -356,12 +356,12 @@ tech_mine_rare_crystals = {
 
 #Rare Crystal Manufacturing
 tech_rare_crystals = {
-	cost = @tier2cost1
+	cost = @tier2cost3
 	area = engineering
-	tier = 2
+	tier = 3
 	category = { materials }
 	prerequisites = { "tech_basic_industry" }
-	weight = @tier2weight1
+	weight = @tier2weight3
 
 	weight_modifier = {
 		factor = 2
@@ -423,7 +423,7 @@ tech_mine_zro = {
 
 	weight_modifier = {
 		modifier = {
-			factor = 0.10
+			factor = 0.5
 			NOR = {
 				research_leader = {
 					area = society

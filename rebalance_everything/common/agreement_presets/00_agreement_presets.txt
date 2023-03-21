@@ -404,11 +404,17 @@ preset_scholarium = {
 		base =  @specialist_subject_base_acceptance_value
 		modifier = {
 			add = @specialist_aligned_ethics_value
-			is_materialist = yes
+			OR = {
+				is_materialist = yes
+				is_pacifist = yes
+			}
 		}
 		modifier = {
 			add = @specialist_unaligned_ethics_value
-			is_spiritualist = yes
+			OR = {
+				is_militarist = yes
+				is_xenophobe = yes
+			}
 		}
 	}
 
@@ -972,13 +978,16 @@ preset_relic_satrapy = {
 		resource_terms = {
 			{
 				key = resource_subsidies_basic
-				value = 0.3
+				value = 0.0
 			}
 		}
 	}
 	potential = {
 		from = {
-			has_relic = r_khans_throne
+			OR = {
+				has_valid_civic = civic_warrior_culture
+				has_relic = r_khans_throne
+			}
 		}
 	}
 }

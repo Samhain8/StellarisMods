@@ -49,13 +49,6 @@ building_hydroponics_farm = {
 			owner = {
 				is_regular_empire = yes
 				is_fallen_empire_spiritualist = no
-				OR = {
-					is_anglers_empire = no
-					AND = {
-						is_anglers_empire = yes
-						NOT = { PREV = { planet = { is_wet = yes } } }
-					}
-				}
 			}
 		}
 		modifier = {
@@ -93,21 +86,6 @@ building_hydroponics_farm = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = yes
-				is_fallen_empire_spiritualist = no
-				is_anglers_empire = yes
-				PREV = { planet = { is_wet = yes } }
-			}
-		}
-		modifier = {
-			job_angler_add = 1
-		}
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -131,13 +109,6 @@ building_hydroponics_farm = {
 			owner = {
 				is_gestalt = no
 				is_fallen_empire_spiritualist = no
-				OR = {
-					is_anglers_empire = no
-					AND = {
-						is_anglers_empire = yes
-						NOT = { PREV = { planet = { is_wet = yes } } }
-					}
-				}
 			}
 		}
 		text = job_farmer_effect_desc
@@ -148,17 +119,6 @@ building_hydroponics_farm = {
 			owner = { is_fallen_empire_spiritualist = yes }
 		}
 		text = job_fe_acolyte_farm_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_fallen_empire_spiritualist = no
-				is_anglers_empire = yes
-				PREV = { planet = { is_wet = yes } }
-			}
-		}
-		text = job_aqu_angler_effect_desc
 	}
 
 	prerequisites = {
@@ -221,6 +181,7 @@ building_food_processing_facility = {
 					AND = {
 						is_anglers_empire = yes
 						NOT = { PREV = { planet = { is_wet = yes } } }
+						NOT = { PREV = { planet = { is_planet_class = pc_gaia } } }
 					}
 				}
 			}
@@ -257,7 +218,10 @@ building_food_processing_facility = {
 				is_regular_empire = yes
 				is_fallen_empire_spiritualist = no
 				is_anglers_empire = yes
-				PREV = { planet = { is_wet = yes } }
+				OR = {
+					PREV = { planet = { is_wet = yes } }
+					PREV = { planet = { is_planet_class = pc_gaia } } 
+				}
 			}
 		}
 		modifier = {
@@ -288,6 +252,14 @@ building_food_processing_facility = {
 			owner = {
 				is_gestalt = no
 				is_fallen_empire_spiritualist = no
+				OR = {
+					is_anglers_empire = no
+					AND = {
+						is_anglers_empire = yes
+						NOT = { PREV = { planet = { is_wet = yes } } }
+						NOT = { PREV = { planet = { is_planet_class = pc_gaia } } }
+					}
+				}
 			}
 		}
 		text = job_farmer_effect_desc
@@ -305,7 +277,10 @@ building_food_processing_facility = {
 			owner = {
 				is_fallen_empire_spiritualist = no
 				is_anglers_empire = yes
-				PREV = { planet = { is_wet = yes } }
+				OR = {
+					PREV = { planet = { is_wet = yes } }
+					PREV = { planet = { is_planet_class = pc_gaia } } 
+				}
 			}
 		}
 		text = job_aqu_angler_effect_desc
@@ -377,6 +352,7 @@ building_food_processing_center = {
 					AND = {
 						is_anglers_empire = yes
 						NOT = { PREV = { planet = { is_wet = yes } } }
+						NOT = { PREV = { planet = { is_planet_class = pc_gaia } } }
 					}
 				}
 			}
@@ -413,7 +389,10 @@ building_food_processing_center = {
 				is_regular_empire = yes
 				is_fallen_empire_spiritualist = no
 				is_anglers_empire = yes
-				PREV = { planet = { is_wet = yes } }
+				OR = {
+					PREV = { planet = { is_wet = yes } }
+					PREV = { planet = { is_planet_class = pc_gaia } } 
+				}
 			}
 		}
 		modifier = {
@@ -466,6 +445,14 @@ building_food_processing_center = {
 			owner = {
 				is_gestalt = no
 				is_fallen_empire_spiritualist = no
+				OR = {
+					is_anglers_empire = no
+					AND = {
+						is_anglers_empire = yes
+						NOT = { PREV = { planet = { is_wet = yes } } }
+						NOT = { PREV = { planet = { is_planet_class = pc_gaia } } }
+					}
+				}
 			}
 		}
 		text = job_farmer_effect_desc
@@ -483,7 +470,10 @@ building_food_processing_center = {
 			owner = {
 				is_fallen_empire_spiritualist = no
 				is_anglers_empire = yes
-				PREV = { planet = { is_wet = yes } }
+				OR = {
+					PREV = { planet = { is_wet = yes } }
+					PREV = { planet = { is_planet_class = pc_gaia } } 
+				}
 			}
 		}
 		text = job_aqu_angler_effect_desc

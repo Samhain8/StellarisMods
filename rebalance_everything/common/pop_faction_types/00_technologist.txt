@@ -86,8 +86,8 @@ technologist = {
 		unfulfilled_title = "TECHNOLOGIST_ROBOTS_BANNED"
 		desc = "TECHNOLOGIST_ROBOTS_ALLOWED_DESC"
 
-		fulfilled_effect = 10
-		unfulfilled_effect = -30
+		fulfilled_effect = 5
+		unfulfilled_effect = -25
 
 		potential = {
 			exists = owner
@@ -130,8 +130,8 @@ technologist = {
 		unfulfilled_title = "TECHNOLOGIST_TECH_LAG"
 		desc = "TECHNOLOGIST_TECH_LEAP_DESC"
 
-		fulfilled_effect = 10
-		unfulfilled_effect = -20
+		fulfilled_effect = 15
+		unfulfilled_effect = -15
 
 		potential = {
 			exists = owner
@@ -217,7 +217,7 @@ technologist = {
 		desc = "TECHNOLOGIST_NO_SYNTH_ENVY_DESC"
 
 		unfulfilled_effect = -10
-		fulfilled_effect = 0.001
+		fulfilled_effect = 10
 
 		potential = {
 			years_passed >= 50 #otherwise, just a penalty for meeting Mechanists early

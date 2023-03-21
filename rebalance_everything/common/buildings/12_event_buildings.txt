@@ -244,7 +244,7 @@ building_nuumismatic_shrine = {
 
 	planet_modifier = {
 		job_merchant_add = 2
-		job_priest_add = 2
+		job_preacher_add = 2
 	}
 
 	resources = {

@@ -392,7 +392,7 @@ trait_cyborg_streamlined_protocols = {
 }
 
 trait_cyborg_high_bandwidth = {
-	cost = -2
+	cost = -1
 	opposites = { "trait_cyborg_streamlined_protocols" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	initial = no

@@ -238,33 +238,33 @@
 #	HULL	#
 #############
 
-@hull_S1 = 50
-@hull_M1 = 125
-@hull_L1 = 300
+@hull_S1 = 90
+@hull_M1 = 225
+@hull_L1 = 540
 
-@hull_S2 = 65
-@hull_M2 = 160
-@hull_L2 = 390
+@hull_S2 = 120
+@hull_M2 = 300
+@hull_L2 = 720
 
-@hull_S3 = 85
-@hull_M3 = 215
-@hull_L3 = 510
+@hull_S3 = 160
+@hull_M3 = 400
+@hull_L3 = 960
 
-@hull_S4 = 110
-@hull_M4 = 275
-@hull_L4 = 660
+@hull_S4 = 200
+@hull_M4 = 500
+@hull_L4 = 1200
 
-@hull_S5 = 145
-@hull_M5 = 365
-@hull_L5 = 870
+@hull_S5 = 260
+@hull_M5 = 650
+@hull_L5 = 1550
 
-@hull_S6 = 185
-@hull_M6 = 465
-@hull_L6 = 1110
+@hull_S6 = 350
+@hull_M6 = 875
+@hull_L6 = 2100
 
-@hull_S7 = 240
-@hull_M7 = 600
-@hull_L7 = 1440
+@hull_S7 = 460
+@hull_M7 = 1150
+@hull_L7 = 2660
 
 #############
 #	POWER	#
@@ -294,9 +294,9 @@
 @power_M6 = -110
 @power_L6 = -220
 
-@power_S7 = -75
-@power_M7 = -150
-@power_L7 = -300
+@power_S7 = -70
+@power_M7 = -140
+@power_L7 = -280
 
 #############
 #	SHIELD	#

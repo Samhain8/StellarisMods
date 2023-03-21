@@ -1097,8 +1097,8 @@ tech_mining_drone_weapon_1 = {
 
 tech_space_cloud_weapon_1 = {
 	area = physics
-	cost = @tier2cost3
-	tier = 2
+	cost = @tier3cost3
+	tier = 3
 	is_rare = yes
 	category = { particles }
 	ai_update_type = military

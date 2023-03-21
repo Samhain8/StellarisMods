@@ -21,10 +21,10 @@ head_researcher = {
 	resources = {
 		category = planet_researchers
 		produces = {
-			unity = 2
-			physics_research = 6
-			engineering_research = 6
-			society_research = 6
+			unity = 4
+			physics_research = 3
+			engineering_research = 3
+			society_research = 3
 		}
 		upkeep = {
 			consumer_goods = 2
@@ -116,7 +116,7 @@ high_priest = {
 	resources = {
 		category = planet_priests
 		produces = {
-			unity = 6
+			unity = 7
 		}
 		upkeep = {
 			consumer_goods = 2
@@ -129,6 +129,13 @@ high_priest = {
 		}
 		planet_amenities_add = 5
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		country_edict_fund_add = 2
 	}
 
 	weight = {
@@ -242,28 +249,20 @@ noble = {
 		category = planet_nobles
 		produces = {
 			unity = 6
+			influence = 0.12
 		}
 		upkeep = {
 			consumer_goods = 2
 		}
 	}
 
-	planet_modifier = {
-		planet_stability_add = 2
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			always = yes
-		}
-		planet_amenities_add = 3
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	country_modifier = {
+		diplo_weight_mult = 0.02
 	}
 
 	weight = {
 		weight = @ruler_job_weight
 		mult = value:job_weights_modifier|JOB|noble|RESOURCE|unity|
-		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {
 			factor = 0.1
 			has_citizenship_rights = no
@@ -313,6 +312,13 @@ merchant = {
 
 	resources = {
 		category = planet_merchants
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_civic = civic_merchant_guilds }
+			}
+			unity = 2
+		}
 		upkeep = {
 			consumer_goods = 2
 		}
@@ -383,7 +389,7 @@ executive = {
 	resources = {
 		category = planet_executives
 		produces = {
-			unity = 6
+			unity = 4
 		}
 		upkeep = {
 			consumer_goods = 2
@@ -463,14 +469,14 @@ knight_commander = {
 		category = knights_independent_category
 		produces = {
 			trigger = { exists = owner }
-			unity = 4
+			unity = 6
 			mult = value:knight_commander_unity_output_modifier
 		}
 		produces = {
 			trigger = { exists = owner }
-			physics_research = 2
-			engineering_research = 2
-			society_research = 2
+			physics_research = 3
+			engineering_research = 3
+			society_research = 3
 			mult = value:knight_commander_research_output_modifier
 		}
 		upkeep = {
@@ -482,7 +488,7 @@ knight_commander = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 5
+		planet_amenities_add = 8
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -500,6 +506,10 @@ knight_commander = {
 		modifier = {
 			mult = value:job_weights_research_modifier|JOB|researcher|
 			owner = { has_country_flag = toxoids_7011_b }
+		}
+		modifier = {
+			factor = 10
+			has_job = knight_commander
 		}
 	}
 }

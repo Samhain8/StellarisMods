@@ -61,7 +61,7 @@ space_dragon_red = {
 					is_country_type = default
 				}
 			}
-			food = 100
+			food = 32
 		}
 	}
 }
@@ -677,7 +677,7 @@ space_dragon_blue = {
 					is_country_type = default
 				}
 			}
-			food = 100
+			food = 32
 		}
 	}
 }
@@ -717,7 +717,7 @@ space_dragon_origin = {
 					is_country_type = default
 				}
 			}
-			food = 100
+			food = 32
 		}
 	}
 }
@@ -780,7 +780,7 @@ space_dragon_origin_baby = {
 			sr_living_metal = 100
 		}
 		upkeep = {
-			food = 10
+			food = 8
 		}
 	}
 

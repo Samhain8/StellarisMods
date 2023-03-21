@@ -279,7 +279,7 @@ technological_enlightenment_1 = {
 		}
 	}
 
-	monthly_progress = 0.002
+	monthly_progress = 0.003
 	completion_event = observation.2000
 	completion_sound = advisor_notification_primitive_enlighted
 
@@ -324,7 +324,7 @@ technological_enlightenment_2 = {
 		}
 	}
 
-	monthly_progress = 0.003
+	monthly_progress = 0.004
 	completion_event = observation.2000
 	completion_sound = advisor_notification_primitive_enlighted
 
@@ -369,7 +369,7 @@ technological_enlightenment_3 = {
 		}
 	}
 
-	monthly_progress = 0.004
+	monthly_progress = 0.005
 	completion_event = observation.2000
 	completion_sound = advisor_notification_primitive_enlighted
 
@@ -414,7 +414,7 @@ technological_enlightenment_4 = {
 		}
 	}
 
-	monthly_progress = 0.005
+	monthly_progress = 0.007
 	completion_event = observation.2000
 	completion_sound = advisor_notification_primitive_enlighted
 

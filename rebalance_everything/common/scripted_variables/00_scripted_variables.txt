@@ -263,8 +263,8 @@
 @ap_grasp_the_void_travel_tech = 1.5
 @federation_perk_factor = 2
 
-@lithoid_trait_resource_production = 0.01
-@drake_scaled_trait_resource_production = 0.025
+@lithoid_trait_resource_production = 0.04
+@drake_scaled_trait_resource_production = 0.1
 
 @plantoid_budding_rate = 0.02
 @tiyanki_budding_rate = 0.05
@@ -310,8 +310,8 @@
 @building_slots_ai_tech_factor = 1.5 	# Extra AI chance for more building slots.
 
 # Toxoids
-@exotic_metabolism = 0.125
-@inorganic_breath = 0.02
+@exotic_metabolism = 0.1
+@inorganic_breath = 0.05
 @overtuned_consequences = 0.2
 @overtuned_consequences_hive = 0.5
 @noxious_happiness_penalty = -0.01

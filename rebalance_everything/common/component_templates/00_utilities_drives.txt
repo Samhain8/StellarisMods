@@ -152,6 +152,7 @@ utility_component_template = {
 		category = ship_components
 		cost = {
 			alloys = @cost4
+			sr_zro = 1
 		}
 	}
 	ftl = yes
@@ -164,6 +165,10 @@ utility_component_template = {
 
 	ai_weight = {
 		weight = 5
+		modifier = {
+			factor = 0.0
+			no_resource_for_component = { RESOURCE = sr_zro }
+		}
 	}
 
 	class_restriction = { shipclass_military shipclass_constructor shipclass_colonizer shipclass_science_ship shipclass_transport shipclass_military_special shipclass_starbase }

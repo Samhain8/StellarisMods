@@ -140,7 +140,7 @@ trait_robot_loyalty_circuits = {
 }
 
 trait_robot_domestic_protocols = {
-	cost = 2
+	cost = 1
 
 	initial = no
 	randomized = no
@@ -156,13 +156,30 @@ trait_robot_domestic_protocols = {
 		}
 	}
 	modifier = {
-		pop_job_amenities_mult = 0.20
+		pop_job_amenities_mult = 0.15
 	}
 	slave_cost = {
 		energy = 750
 	}
 
 	custom_tooltip_with_modifiers = TRAIT_DOMESTIC_PROTOCOLS_EFFECT
+}
+
+trait_robot_armored = {
+	cost = 2
+	icon = "gfx/interface/icons/traits/trait_very_strong.dds"
+	allowed_archetypes = { ROBOT MACHINE }
+	modifier = {
+		army_health = 0.5
+		army_damage_mult = 0.20
+	}
+	species_potential_add = {
+		exists = from
+		from = {
+			has_technology = tech_droid_workers
+			NOT = { has_policy_flag = ai_outlawed }
+		}
+	}
 }
 
 trait_robot_double_jointed = {
@@ -238,7 +255,7 @@ trait_robot_emotion_emulators = {
 trait_robot_uncanny = {
 	cost = -1
 	opposites = { "trait_robot_emotion_emulators" }
-	allowed_archetypes = { MACHINE }
+	allowed_archetypes = { ROBOT MACHINE }
 	modifier = {
 		pop_job_amenities_mult = -0.20
 	}
@@ -339,7 +356,7 @@ trait_robot_repurposed_hardware = {
 }
 
 trait_robot_mass_produced = {
-	cost = 1
+	cost = 2
 	opposites = { "trait_robot_custom_made" }
 
 	allowed_archetypes = { ROBOT MACHINE }
@@ -353,7 +370,7 @@ trait_robot_mass_produced = {
 }
 
 trait_robot_custom_made = {
-	cost = -1
+	cost = -2
 	opposites = { "trait_robot_mass_produced" }
 
 	allowed_archetypes = { ROBOT MACHINE }
@@ -436,7 +453,7 @@ trait_robot_propaganda_machines = {
 }
 
 trait_robot_streamlined_protocols = {
-	cost = 2
+	cost = 1
 	opposites = { "trait_robot_high_bandwidth" }
 	allowed_archetypes = { ROBOT MACHINE }
 	modifier = {
@@ -448,7 +465,7 @@ trait_robot_streamlined_protocols = {
 }
 
 trait_robot_high_bandwidth = {
-	cost = -2
+	cost = -1
 	opposites = { "trait_robot_streamlined_protocols" }
 	allowed_archetypes = { ROBOT MACHINE }
 	modifier = {

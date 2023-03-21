@@ -135,7 +135,7 @@ xenoist = {
 		unfulfilled_title = "XENOIST_SLAVES"
 		desc = "XENOIST_NO_SLAVES_DESC"
 
-		unfulfilled_effect = -25
+		unfulfilled_effect = -15
 		fulfilled_effect = 0.001
 
 		potential = {
@@ -190,7 +190,7 @@ xenoist = {
 		unfulfilled_title = "XENOIST_NO_MULTICULTURALISM"
 		desc = "XENOIST_MULTICULTURALISM_DESC"
 
-		fulfilled_effect = 10
+		fulfilled_effect = 15
 		unfulfilled_effect = -0.001
 
 		potential = {

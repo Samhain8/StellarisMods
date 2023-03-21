@@ -27,7 +27,7 @@ ocean_paradise_start = {
 				is_inside_nebula = no
 			}
 			create_nebula = {
-				radius = 25
+				radius = 50
 			}
 			set_star_flag = ocean_paradise_nebula
 		}

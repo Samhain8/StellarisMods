@@ -256,7 +256,7 @@ leader_trait_righteous = {
 	cost = 1
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_righteous.dds"
 	modifier = {
-		planet_crime_add = -25
+		planet_crime_mult = -0.2
 	}
 	leader_potential_add = {
 		NOT = { from = { has_authority = "auth_machine_intelligence" } }
@@ -270,7 +270,7 @@ leader_trait_corrupt = {
 	cost = 1
 	icon = "gfx/interface/icons/traits/leader_traits/leader_trait_corrupt.dds"
 	modifier = {
-		planet_crime_add = 25
+		planet_crime_mult = 0.2
 	}
 	leader_potential_add = {
 		NOT = { from = { has_authority = "auth_machine_intelligence" } }

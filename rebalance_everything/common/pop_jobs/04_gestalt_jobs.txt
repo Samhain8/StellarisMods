@@ -544,12 +544,12 @@ brain_drone = {
 	resources = {
 		category = planet_researchers
 		produces = {
-			physics_research = 4
-			engineering_research = 4
-			society_research = 4
+			physics_research = 3
+			engineering_research = 3
+			society_research = 3
 		}
 		upkeep = {
-			minerals = 6
+			unity = 2
 		}
 		upkeep = {
 			trigger = {
@@ -557,7 +557,7 @@ brain_drone = {
 					has_planet_flag = has_science_ministry
 				}
 			}
-			minerals = 3
+			unity = 1
 		}
 	}
 
@@ -608,9 +608,9 @@ calculator = {
 	resources = {
 		category = planet_researchers
 		produces = {
-			physics_research = 4
-			engineering_research = 4
-			society_research = 4
+			physics_research = 3
+			engineering_research = 3
+			society_research = 3
 		}
 		upkeep = {
 			energy = 4
@@ -1087,7 +1087,7 @@ patrol_drone = {
 	}
 
 	planet_modifier = {
-		planet_crime_no_happiness_add = -20
+		planet_crime_no_happiness_add = -12
 	}
 
 	pop_modifier = {
@@ -1894,7 +1894,7 @@ scrap_miner_drone = {
 	resources = {
 		category = planet_miners
 		produces = {
-			minerals = 2
+			minerals = 3
 			alloys = 1
 		}
 	}
@@ -1942,8 +1942,8 @@ bath_attendant_hive = {
 	possible = { can_think = yes }
 
 	triggered_planet_modifier = {
-		planet_pop_assembly_organic_mult = 0.015
-		pop_environment_tolerance = -0.0075
+		planet_pop_assembly_organic_mult = 0.035
+		pop_environment_tolerance = -0.005
 		mult = planet.value:toxic_attendant_growth
 	}
 
@@ -2002,8 +2002,8 @@ bath_attendant_machine = {
 	possible = { can_think = yes }
 
 	triggered_planet_modifier = {
-		planet_pop_assembly_mult = 0.01
-		pop_amenities_usage_mult = 0.01
+		planet_pop_assembly_mult = 0.015
+		pop_amenities_usage_mult = 0.0075
 		mult = planet.value:toxic_attendant_growth
 	}
 	

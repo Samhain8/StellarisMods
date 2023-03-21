@@ -160,6 +160,7 @@ origin_mechanists = {
 
 	modifier = {
 		planet_pop_assembly_mult = 0.15
+		ROBOT_species_trait_points_add = 1
 		ROBOT_species_trait_picks_add = 1
 	}
 
@@ -229,7 +230,15 @@ origin_life_seeded = {
 		}
 	}
 
+	modifier = {
+		BIOLOGICAL_species_trait_points_add = 2
+	}
+
 	description = "civic_tooltip_life_seeded_effects"
+
+	has_secondary_species = {
+		title = civic_syncretic_evolution_secondary_species
+	}
 
 	random_weight = {
 		base = 5
@@ -278,7 +287,7 @@ origin_remnants = {
 	picture = GFX_origin_remnants
 
 	starting_colony = pc_relic #Changes homeworld class regardless of what is picked for empire
-	max_once_global = yes
+	#max_once_global = yes
 
 	playable = {
 		OR = {
@@ -294,6 +303,10 @@ origin_remnants = {
 	}
 
 	description = "origin_tooltip_remnants_effects"
+
+	has_secondary_species = {
+		title = civic_syncretic_evolution_secondary_species
+	}
 
 	flags = { custom_start_screen first_contact_event Story7 }
 
@@ -393,6 +406,13 @@ origin_void_dwellers = {
 
 	traits = {
 		trait = trait_void_dweller_1
+	}
+
+	has_secondary_species = {
+		title = civic_syncretic_evolution_secondary_species
+		traits = {
+			trait = trait_void_dweller_1
+		}
 	}
 
 	random_weight = {
@@ -781,7 +801,6 @@ origin_necrophage = {
 				value = civic_death_cult
 				value = civic_death_cult_corporate
 				value = civic_hive_empath
-				value = civic_permanent_employment
 			}
 		}
 	}
@@ -887,8 +906,8 @@ origin_ocean_paradise = {
 
 	description = origin_ocean_paradise_effects
 
-	traits = {
-		trait = trait_aquatic
+	has_secondary_species = {
+		title = civic_syncretic_evolution_secondary_species
 	}
 
 	advanced_start = yes
@@ -1086,6 +1105,10 @@ origin_overtuned = {
 
 	description = "origin_tooltip_overtuned_effects"
 	flags = { custom_start_screen }
+
+	has_secondary_species = {
+		title = civic_syncretic_evolution_secondary_species
+	}
 
 #	feature_flags = {
 #		advanced_gene_modding

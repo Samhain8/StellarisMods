@@ -1085,7 +1085,7 @@ ethic_xenophobe = {
 			has_trait = trait_hive_mind
 		}
 		modifier = {
-			factor = 2.0
+			factor = 1.15
 			is_enslaved = no
 			is_being_purged = no
 			from = {
@@ -2604,7 +2604,7 @@ ethic_spiritualist = {
 			has_technology = "tech_psionic_theory"
 		}
 		modifier = {
-			factor = 1.5
+			factor = 1.25
 			is_country_type = default
 			has_ascension_perk = ap_mind_over_matter
 		}
@@ -2617,6 +2617,41 @@ ethic_spiritualist = {
 			factor = 0.75
 			is_country_type = default
 			has_policy_flag = ai_full_rights
+		}
+		modifier = {
+			factor = 1.5
+			is_subject = yes
+			overlord = {
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+		modifier = {
+			factor = 1.2
+			any_relation = {
+				OR = {
+					has_research_agreement = root
+					has_defensive_pact = root
+					has_commercial_pact = root
+				}
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
+		}
+		modifier = {
+			factor = 1.33
+			any_relation = {
+				is_subject = no
+				has_migration_access = root
+				OR = {
+					has_ethic = ethic_spiritualist
+					has_ethic = ethic_fanatic_spiritualist
+				}
+			}
 		}
 		modifier = {
 			exists = overlord
@@ -2940,9 +2975,35 @@ ethic_materialist = {
 			has_origin = origin_mechanists
 		}
 		modifier = {
-			factor = 1.25
+			factor = 1.5
 			is_country_type = default
 			has_policy_flag = ai_full_rights
+		}
+		modifier = {
+			factor = 1.2
+			any_relation = {
+				OR = {
+					has_defensive_pact = root
+					has_commercial_pact = root
+					has_research_agreement = root
+				}
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+					is_mechanical_empire = yes
+				}
+			}
+		}
+		modifier = {
+			factor = 1.33
+			any_relation = {
+				is_subject = no
+				has_migration_access = root
+				OR = {
+					has_ethic = ethic_materialist
+					has_ethic = ethic_fanatic_materialist
+				}
+			}
 		}
 		modifier = {
 			exists = overlord
