@@ -647,6 +647,12 @@ district_hab_science = {
 
 	allow = {
 		NOT = { has_modifier = slave_colony }
+		OR = {
+			NOT = { exists = owner }
+			owner = {
+				has_technology = tech_basic_science_lab_1
+			}
+		}
 	}
 
 	resources = {

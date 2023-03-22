@@ -10,6 +10,8 @@ building_private_mining_consortium = {
 
 	owner_type = corporate
 
+	category = resource
+
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
@@ -50,6 +52,8 @@ building_food_conglomerate = {
 	base_buildtime = @b1_time
 
 	owner_type = corporate
+
+	category = resource
 
 	potential = {
 		has_branch_office = yes
@@ -122,6 +126,8 @@ building_virtual_entertainment_studios = {
 
 	owner_type = corporate
 
+	category = manufacturing
+
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = { is_criminal_syndicate = no }
@@ -172,6 +178,8 @@ building_private_shipyards = {
 
 	owner_type = corporate
 
+	category = manufacturing
+
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
@@ -206,6 +214,8 @@ building_military_contractors = {
 	base_buildtime = @b1_time
 
 	owner_type = corporate
+
+	category = army
 
 	potential = {
 		has_branch_office = yes
@@ -248,6 +258,8 @@ building_public_relations_office = {
 
 	owner_type = corporate
 
+	category = unity
+
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = { is_criminal_syndicate = no }
@@ -280,6 +292,8 @@ building_private_research_initiative = {
 	base_cap_amount = 1
 
 	owner_type = corporate
+
+	category = research
 
 	potential = {
 		has_branch_office = yes
@@ -315,6 +329,8 @@ building_amusement_megaplex = {
 	base_cap_amount = 1
 
 	owner_type = corporate
+
+	category = amenity
 
 	potential = {
 		has_branch_office = yes
@@ -358,6 +374,8 @@ building_commercial_forum = {
 
 	owner_type = corporate
 
+	category = government
+
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = { is_criminal_syndicate = no }
@@ -388,6 +406,8 @@ building_corporate_embassy = {
 	base_cap_amount = 1
 
 	owner_type = corporate
+
+	category = government
 
 	potential = {
 		has_branch_office = yes
@@ -449,6 +469,8 @@ building_wildcat_miners = {
 
 	owner_type = corporate
 
+	category = government
+
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
@@ -491,6 +513,8 @@ building_bio_reprocessing_facilities = {
 
 	owner_type = corporate
 
+	category = resource
+
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
@@ -531,6 +555,8 @@ building_underground_chemists = {
 	base_buildtime = @b1_time
 
 	owner_type = corporate
+
+	category = manufacturing
 
 	potential = {
 		has_branch_office = yes
@@ -583,6 +609,8 @@ building_wrecking_yards = {
 
 	owner_type = corporate
 
+	category = manufacturing
+
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
@@ -618,6 +646,8 @@ building_pirate_haven = {
 	base_buildtime = @b1_time
 
 	owner_type = corporate
+
+	category = army
 
 	potential = {
 		has_branch_office = yes
@@ -660,6 +690,8 @@ building_underground_clubs = {
 	base_cap_amount = 1
 
 	owner_type = corporate
+
+	category = amenity
 
 	potential = {
 		has_branch_office = yes
@@ -711,6 +743,8 @@ building_syndicate_outreach_office = {
 
 	owner_type = corporate
 
+	category = government
+
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = { is_criminal_syndicate = yes }
@@ -744,6 +778,8 @@ building_illicit_research_labs = {
 	base_cap_amount = 1
 
 	owner_type = corporate
+
+	category = research
 
 	potential = {
 		has_branch_office = yes
@@ -782,6 +818,8 @@ building_smuggling_rings = {
 
 	owner_type = corporate
 
+	category = government
+
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = { is_criminal_syndicate = yes }
@@ -814,6 +852,8 @@ building_disinformation_center = {
 	base_cap_amount = 1
 
 	owner_type = corporate
+
+	category = government
 
 	potential = {
 		has_branch_office = yes
@@ -869,6 +909,9 @@ building_subversive_shrine = {
 	base_buildtime = @b1_time
 	base_cap_amount = 1
 	owner_type = corporate
+
+	category = unity
+
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
@@ -902,6 +945,8 @@ building_temple_of_prosperity = {
 	base_cap_amount = 1
 
 	owner_type = corporate
+
+	category = unity
 
 	potential = {
 		has_branch_office = yes
@@ -938,6 +983,8 @@ building_executive_retreat = {
 	base_cap_amount = 1
 
 	owner_type = corporate
+
+	category = amenity
 
 	prerequisites = { "tech_executive_retreat" }
 
@@ -983,6 +1030,8 @@ building_xeno_tourism_agency = {
 
 	owner_type = corporate
 
+	category = government
+
 	prerequisites = { "tech_xeno_tourism_agency" }
 
 	potential = {
@@ -1027,6 +1076,8 @@ building_imperial_concession_port = {
 
 	owner_type = corporate
 
+	category = government
+
 	potential = {
 		has_branch_office = yes
 		branch_office_owner = {
@@ -1068,6 +1119,8 @@ building_knightly_theme_park = {
 	base_cap_amount = 1
 
 	owner_type = corporate
+
+	category = amenity
 
 	potential = {
 		has_branch_office = yes
