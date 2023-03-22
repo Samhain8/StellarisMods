@@ -2072,12 +2072,12 @@ archaeo_drone = {
 		category = planet_researchers
 		produces = {
 			physics_research = 2
-			engineering_research = 2
-			society_research = 5
+			engineering_research = 3
+			society_research = 4
 		}
 		produces = {
 			trigger = { planet = { is_planet_class = pc_relic } }
-			minor_artifacts = 0.3
+			minor_artifacts = 0.5
 		}
 		upkeep = {
 			minerals = 6
@@ -2133,12 +2133,12 @@ archaeo_unit = {
 		category = planet_researchers
 		produces = {
 			physics_research = 2
-			engineering_research = 2
-			society_research = 5
+			engineering_research = 3
+			society_research = 4
 		}
 		produces = {
 			trigger = { planet = { is_planet_class = pc_relic } }
-			minor_artifacts = 0.3
+			minor_artifacts = 0.5
 		}
 		upkeep = {
 			energy = 4

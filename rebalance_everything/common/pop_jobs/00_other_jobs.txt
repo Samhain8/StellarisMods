@@ -358,7 +358,10 @@ livestock_zoo_animal = {
 
 	possible = {
 		has_citizenship_type = { type = citizenship_slavery country = owner }
-		has_slavery_type = { type = slavery_livestock }
+		OR = {
+			has_slavery_type = { type = slavery_livestock }
+			has_slavery_type = { type = slavery_pets }
+		}
 		planet = {
 			exists = owner
 			owner = {
@@ -393,6 +396,19 @@ livestock_zoo_animal = {
 	triggered_planet_modifier = {
 		planet_amenities_add = 1
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				has_trait = trait_xeno_compatibility
+				has_trait = trait_interbreeder
+			}
+		}
+		modifier = {
+			pop_growth_speed = 0.03
+		}
 	}
 
 	weight = {

@@ -977,6 +977,10 @@ is_livestock = {
 	has_slavery_type = { type = slavery_livestock country = root }
 }
 
+is_pet_slaves = {
+	has_slavery_type = { type = slavery_pets country = root }
+}
+
 is_synthetic_empire = {
 	OR = {
 		has_country_flag = synthetic_empire
