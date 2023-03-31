@@ -1421,6 +1421,28 @@ d_alien_pets_deposit = {
 		can_have_habitable_deposits = yes
 	}
 
+	resources = {
+		category = deposit_blockers_natural
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_environmentalist }
+			}
+			society_research = 3
+			unity = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
+	}
+
 	drop_weight = {
 		weight = @mid_rare
 		modifier = {

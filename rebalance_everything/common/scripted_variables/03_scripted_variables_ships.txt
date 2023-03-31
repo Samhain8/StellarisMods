@@ -29,7 +29,7 @@
 @corvette_collision_radius = 2.0
 @corvette_formation_priority = 20
 
-@corvette_hp = 200
+@corvette_hp = 250
 @corvette_evasion = 60
 @corvette_build_time = 60
 
@@ -41,7 +41,7 @@
 @frigate_formation_priority = 25
 
 @frigate_hp = 400
-@frigate_evasion = 20
+@frigate_evasion = 25
 @frigate_build_time = 90
 
 ##################
@@ -66,7 +66,7 @@
 @cruiser_collision_radius = 3.5
 @cruiser_formation_priority = 30
 
-@cruiser_hp = 1800
+@cruiser_hp = 1500
 @cruiser_evasion = 10
 @cruiser_build_time = 240
 

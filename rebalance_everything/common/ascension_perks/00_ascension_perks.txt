@@ -46,7 +46,7 @@ ap_archaeoengineers = {
 	}
 
 	modifier = {
-		weapon_archaeotech_weapon_damage_mult = 0.33
+		weapon_archaeotech_weapon_damage_mult = 0.35
 	}
 
 	ai_weight = {

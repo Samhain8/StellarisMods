@@ -39,11 +39,13 @@ utility_component_template = {
 
 	modifier = {
 		ship_cloaking_strength_add = @very_low_strength
+		ship_evasion_add = 5
 	}
 
 	triggered_ship_modifier = {
 		potential = {
 			is_cloaked = yes
+			NOT = { owner = { has_active_tradition = tr_subterfuge_cloaking_finish } }
 		}
 		modifier = {
 			ship_shield_reduction = 1
@@ -105,11 +107,13 @@ utility_component_template = {
 
 	modifier = {
 		ship_cloaking_strength_add = @low_strength
+		ship_evasion_add = 8
 	}
 
 	triggered_ship_modifier = {
 		potential = {
 			is_cloaked = yes
+			NOT = { owner = { has_active_tradition = tr_subterfuge_cloaking_finish } }
 		}
 		modifier = {
 			ship_shield_reduction = 1
@@ -174,11 +178,13 @@ utility_component_template = {
 
 	modifier = {
 		ship_cloaking_strength_add = @medium_strength
+		ship_evasion_add = 10
 	}
 
 	triggered_ship_modifier = {
 		potential = {
 			is_cloaked = yes
+			NOT = { owner = { has_active_tradition = tr_subterfuge_cloaking_finish } }
 		}
 		modifier = {
 			ship_shield_reduction = 1
@@ -241,11 +247,13 @@ utility_component_template = {
 
 	modifier = {
 		ship_cloaking_strength_add = @high_strength
+		ship_evasion_add = 10
 	}
 
 	triggered_ship_modifier = {
 		potential = {
 			is_cloaked = yes
+			NOT = { owner = { has_active_tradition = tr_subterfuge_cloaking_finish } }
 		}
 		modifier = {
 			ship_shield_reduction = 0.5
@@ -308,12 +316,14 @@ utility_component_template = {
 
 	modifier = {
 		ship_cloaking_strength_add = @very_high_strength
+		ship_evasion_add = 10
 	}
 
 	triggered_ship_modifier = {
 		potential = {
 			is_cloaked = yes
 			has_non_psionic_shields = yes
+			NOT = { owner = { has_active_tradition = tr_subterfuge_cloaking_finish } }
 		}
 		modifier = {
 			ship_shield_reduction = 1
@@ -379,11 +389,13 @@ utility_component_template = {
 
 	modifier = {
 		ship_cloaking_strength_add = @very_low_strength
+		ship_evasion_add = 8
 	}
 
 	triggered_ship_modifier = {
 		potential = {
 			is_cloaked = yes
+			NOT = { owner = { has_active_tradition = tr_subterfuge_cloaking_finish } }
 		}
 		modifier = {
 			ship_shield_reduction = 1
@@ -445,11 +457,13 @@ utility_component_template = {
 
 	modifier = {
 		ship_cloaking_strength_add = @low_strength
+		ship_evasion_add = 10
 	}
 
 	triggered_ship_modifier = {
 		potential = {
 			is_cloaked = yes
+			NOT = { owner = { has_active_tradition = tr_subterfuge_cloaking_finish } }
 		}
 		modifier = {
 			ship_shield_reduction = 1
@@ -510,11 +524,13 @@ utility_component_template = {
 
 	modifier = {
 		ship_cloaking_strength_add = @medium_strength
+		ship_evasion_add = 10
 	}
 
 	triggered_ship_modifier = {
 		potential = {
 			is_cloaked = yes
+			NOT = { owner = { has_active_tradition = tr_subterfuge_cloaking_finish } }
 		}
 		modifier = {
 			ship_shield_reduction = 0.5
@@ -575,12 +591,14 @@ utility_component_template = {
 
 	modifier = {
 		ship_cloaking_strength_add = @high_strength
+		ship_evasion_add = 10
 	}
 
 	triggered_ship_modifier = {
 		potential = {
 			is_cloaked = yes
 			has_non_psionic_shields = yes
+			NOT = { owner = { has_active_tradition = tr_subterfuge_cloaking_finish } }
 		}
 		modifier = {
 			ship_shield_reduction = 1
@@ -646,11 +664,13 @@ utility_component_template = {
 
 	modifier = {
 		ship_cloaking_strength_add = @very_low_strength
+		ship_evasion_add = 10
 	}
 
 	triggered_ship_modifier = {
 		potential = {
 			is_cloaked = yes
+			NOT = { owner = { has_active_tradition = tr_subterfuge_cloaking_finish } }
 		}
 		modifier = {
 			ship_shield_reduction = 1
@@ -710,11 +730,13 @@ utility_component_template = {
 
 	modifier = {
 		ship_cloaking_strength_add = @low_strength
+		ship_evasion_add = 10
 	}
 
 	triggered_ship_modifier = {
 		potential = {
 			is_cloaked = yes
+			NOT = { owner = { has_active_tradition = tr_subterfuge_cloaking_finish } }
 		}
 		modifier = {
 			ship_shield_reduction = 0.5
@@ -774,12 +796,14 @@ utility_component_template = {
 
 	modifier = {
 		ship_cloaking_strength_add = @medium_strength
+		ship_evasion_add = 10
 	}
 
 	triggered_ship_modifier = {
 		potential = {
 			is_cloaked = yes
 			has_non_psionic_shields = yes
+			NOT = { owner = { has_active_tradition = tr_subterfuge_cloaking_finish } }
 		}
 		modifier = {
 			ship_shield_reduction = 1
@@ -843,11 +867,13 @@ utility_component_template = {
 
 	modifier = {
 		ship_cloaking_strength_add = @very_low_strength
+		ship_evasion_add = 10
 	}
 
 	triggered_ship_modifier = {
 		potential = {
 			is_cloaked = yes
+			NOT = { owner = { has_active_tradition = tr_subterfuge_cloaking_finish } }
 		}
 		modifier = {
 			ship_shield_reduction = 0.5
@@ -906,12 +932,14 @@ utility_component_template = {
 
 	modifier = {
 		ship_cloaking_strength_add = @low_strength
+		ship_evasion_add = 10
 	}
 
 	triggered_ship_modifier = {
 		potential = {
 			is_cloaked = yes
 			has_non_psionic_shields = yes
+			NOT = { owner = { has_active_tradition = tr_subterfuge_cloaking_finish } }
 		}
 		modifier = {
 			ship_shield_reduction = 1
@@ -983,11 +1011,13 @@ utility_component_template = {
 
 	modifier = {
 		ship_cloaking_strength_add = @very_low_strength
+		ship_evasion_add = 5
 	}
 
 	triggered_ship_modifier = {
 		potential = {
 			is_cloaked = yes
+			NOT = { owner = { has_active_tradition = tr_subterfuge_cloaking_finish } }
 		}
 		modifier = {
 			ship_shield_reduction = 1
@@ -1014,11 +1044,13 @@ utility_component_template = {
 
 	modifier = {
 		ship_cloaking_strength_add = @low_strength
+		ship_evasion_add = 8
 	}
 
 	triggered_ship_modifier = {
 		potential = {
 			is_cloaked = yes
+			NOT = { owner = { has_active_tradition = tr_subterfuge_cloaking_finish } }
 		}
 		modifier = {
 			ship_shield_reduction = 1
@@ -1045,11 +1077,13 @@ utility_component_template = {
 
 	modifier = {
 		ship_cloaking_strength_add = @medium_strength
+		ship_evasion_add = 10
 	}
 
 	triggered_ship_modifier = {
 		potential = {
 			is_cloaked = yes
+			NOT = { owner = { has_active_tradition = tr_subterfuge_cloaking_finish } }
 		}
 		modifier = {
 			ship_shield_reduction = 1
@@ -1076,11 +1110,13 @@ utility_component_template = {
 
 	modifier = {
 		ship_cloaking_strength_add = @high_strength
+		ship_evasion_add = 10
 	}
 
 	triggered_ship_modifier = {
 		potential = {
 			is_cloaked = yes
+			NOT = { owner = { has_active_tradition = tr_subterfuge_cloaking_finish } }
 		}
 		modifier = {
 			ship_shield_reduction = 0.5
@@ -1107,12 +1143,14 @@ utility_component_template = {
 
 	modifier = {
 		ship_cloaking_strength_add = @very_high_strength
+		ship_evasion_add = 10
 	}
 	
 	triggered_ship_modifier = {
 		potential = {
 			is_cloaked = yes
 			has_non_psionic_shields = yes
+			NOT = { owner = { has_active_tradition = tr_subterfuge_cloaking_finish } }
 		}
 		modifier = {
 			ship_shield_reduction = 1

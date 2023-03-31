@@ -2661,6 +2661,13 @@ archaeoengineers = {
 			trigger = { planet = { is_planet_class = pc_relic } }
 			minor_artifacts = 0.5
 		}
+		produces = {
+			trigger = { 
+				planet = { is_planet_class = pc_relic }
+				owner = { is_scavenger = yes }
+			}
+			minor_artifacts = 0.25
+		}
 		upkeep = {
 			consumer_goods = 2
 		}

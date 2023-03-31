@@ -102,8 +102,8 @@ trait_stargazer = {
 	icon = "gfx/interface/icons/traits/trait_stargazer.dds"
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		pop_growth_from_immigration = 0.25
-		pop_resettlement_cost_mult = -0.25
+		pop_growth_from_immigration = 0.5
+		pop_resettlement_cost_mult = -0.5
 		pop_environment_tolerance = 0.1
 	}
 }

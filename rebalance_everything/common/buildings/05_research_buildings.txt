@@ -519,9 +519,7 @@ building_archaeostudies_faculty = {
 
 	category = research
 
-	empire_limit = {
-	 	base = 1
-	}
+	base_cap_amount = 1
 
 	potential = {
 		NOR = {
@@ -552,7 +550,7 @@ building_archaeostudies_faculty = {
 			minor_artifacts = 50
 		}
 		upkeep = {
-			energy = 20
+			energy = 10
 		}
 	}
 
@@ -626,7 +624,7 @@ building_archaeostudies_faculty = {
 	}
 
 	country_modifier = {
-		category_archaeostudies_research_speed_mult = 1.0
+		category_archaeostudies_research_speed_mult = 0.5
 	}
 
 	triggered_country_modifier = {

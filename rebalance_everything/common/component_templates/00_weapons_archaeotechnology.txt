@@ -628,7 +628,7 @@ strike_craft_component_template = {
 	rotation_speed = 0.8
 	acceleration = 1
 
-	armor_penetration = 1.0
+	armor_penetration = 0.8
 	shield_damage = 0.5
 	hull_damage = 1.25
 

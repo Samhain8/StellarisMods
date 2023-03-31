@@ -733,7 +733,7 @@
 		GALACTIC_DEFENSE_FORCE_NAMELIST = "GDF"
 		IMPERIAL_ARMADA_NAMELIST = "IA"
 
-		JUMP_DRIVE_COOLDOWN = 120					# Days between uses of Jump Drive
+		JUMP_DRIVE_COOLDOWN = 150					# Days between uses of Jump Drive
 
 		RELEVANT_DISTANCE = 150				# Within this distance we're considered to be diplomatically relevant
 
@@ -1257,7 +1257,7 @@
 		OPINION_TERRIBLE					= -750		# Max value to be considered level terrible
 		OPINION_MIN							= -1500		# Lower limit for opinion value
 
-		FAVOR_CAP							= 10		# Max amount of favors from same empire that can be stored
+		FAVOR_CAP							= 20		# Max amount of favors from same empire that can be stored
 		FAVORS_PER_RESOLUTION_CAP			= 100		# Max amount of favors that can be used for a resolution
 		BORROWED_DIPLO_WEIGHT_FAVOR_MULT	= 0.1		# Diplo weight mult per favor
 
@@ -1785,7 +1785,7 @@
 
 		AI_POP_MODIFICATION_DISCOUNT = 0.25			# AI pays this much (of base) for gene/robomodding projects
 
-		MIN_DISTANCE_TO_JUMP = 3					# Target must be at least this many systems away for AI to want to use jump drive
+		MIN_DISTANCE_TO_JUMP = 1					# Target must be at least this many systems away for AI to want to use jump drive
 		AI_JUMP_DRIVE_BRAVERY = 0.5					# AI will not want to jump into systems unless enemy is this much weaker than them, relatively
 
 		# These are used to determine where the AI should be upgrading its starbases

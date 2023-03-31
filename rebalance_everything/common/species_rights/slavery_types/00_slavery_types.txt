@@ -229,6 +229,19 @@ slavery_livestock = {
 						has_slaver_civic = yes
 					}
 				}
+				AND = {
+					OR = {
+						has_trait = trait_delicious
+						has_trait = trait_kindling
+						has_trait = trait_felsic
+					}
+					from = {
+						OR = {
+							has_ethic = ethic_militarist
+							has_ethic = ethic_fanatic_militarist
+						}
+					}
+				}
 			}
 		}
 		custom_tooltip = {

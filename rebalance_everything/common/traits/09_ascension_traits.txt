@@ -78,6 +78,28 @@ trait_delicious = {
 	}
 }
 
+trait_kindling = {
+	cost = 2
+	icon = "gfx/interface/icons/traits/trait_plantoid_radiotrophic.dds"
+	#species_potential_add = {
+	#	can_do_advanced_gene_modding = yes
+	#}
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	potential_crossbreeding_chance = 0.5
+	initial = yes
+	randomized = no
+	advanced_trait = no
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	slave_cost = {
+		energy = 1000
+	}
+}
+
 trait_xeno_compatibility = {
 	cost = 3
 	icon = "gfx/interface/icons/traits/trait_fertile.dds"

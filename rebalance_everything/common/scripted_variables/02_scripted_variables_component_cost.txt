@@ -127,8 +127,8 @@
 # MINOR ARTIFACTS
 #################
 
-@minor_artifacts_cost_s = 8
-@minor_artifacts_cost_m = 10
+@minor_artifacts_cost_s = 6
+@minor_artifacts_cost_m = 9
 @minor_artifacts_cost_l = 12
 
 @minor_artifacts_cost_xl = 45
@@ -238,7 +238,7 @@
 
 @armor_S6 = 370
 @armor_M6 = 925
-@armor_L6 = 2220
+@armor_L6 = 2280
 
 @armor_S7 = 480
 @armor_M7 = 1200
@@ -312,57 +312,57 @@
 #	SHIELD	#
 #############
 
-@shield_S1 = 75
-@shield_M1 = 190
-@shield_L1 = 450
+@shield_S1 = 80
+@shield_M1 = 200
+@shield_L1 = 470
 
 @regen_S1 = 0.50
 @regen_M1 = 1.25
 @regen_L1 = 3.00
 
-@shield_S2 = 100
-@shield_M2 = 250
-@shield_L2 = 600
+@shield_S2 = 105
+@shield_M2 = 260
+@shield_L2 = 620
 
 @regen_S2 = 0.65
 @regen_M2 = 1.60
 @regen_L2 = 4.05
 
-@shield_S3 = 125
-@shield_M3 = 315
-@shield_L3 = 750
+@shield_S3 = 135
+@shield_M3 = 340
+@shield_L3 = 810
 
 @regen_S3 = 0.85
 @regen_M3 = 2.15
 @regen_L3 = 5.10
 
-@shield_S4 = 165
-@shield_M4 = 415
-@shield_L4 = 990
+@shield_S4 = 175
+@shield_M4 = 440
+@shield_L4 = 1040
 
 @regen_S4 = 1.10
 @regen_M4 = 2.75
 @regen_L4 = 6.60
 
-@shield_S5 = 220
-@shield_M5 = 550
-@shield_L5 = 1320
+@shield_S5 = 235
+@shield_M5 = 580
+@shield_L5 = 1350
 
 @regen_S5 = 1.45
 @regen_M5 = 3.65
 @regen_L5 = 8.70
 
-@shield_S6 = 280
-@shield_M6 = 700
-@shield_L6 = 1680
+@shield_S6 = 315
+@shield_M6 = 760
+@shield_L6 = 1750
 
 @regen_S6 = 1.85
 @regen_M6 = 4.65
 @regen_L6 = 11.10
 
-@shield_S7 = 360
-@shield_M7 = 900
-@shield_L7 = 2160
+@shield_S7 = 415
+@shield_M7 = 1000
+@shield_L7 = 2200
 
 @regen_S7 = 2.00
 @regen_M7 = 5.00

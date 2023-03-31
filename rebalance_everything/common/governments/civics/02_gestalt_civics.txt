@@ -374,9 +374,7 @@ civic_hive_stargazers = {
 	}
 
 	modifier = {
-		ship_sensor_range_add = 1
-		ship_hyperlane_range_add = 2
-		country_starbase_influence_cost_distance_mult = -0.2
+		country_starbase_influence_cost_distance_mult = -0.9
 	}
 
 	traits = {
@@ -815,8 +813,9 @@ civic_machine_exploration_protocol = {
 	}
 
 	modifier = {
+		country_starbase_influence_cost_distance_mult = -0.9
 		first_contact_speed_mult = 0.2
-		station_observers_unity_produces_add = 3
+		station_observers_unity_produces_add = 5
 	}
 
 	random_weight = {

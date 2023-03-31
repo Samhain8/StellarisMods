@@ -900,6 +900,7 @@ utility_component_template = { # Small
 	modifier = {
 		ship_armor_add = @armor_S3
 		ship_shield_add = @shield_S1
+		ship_armor_regen_add_perc = 0.01
 		ship_shield_regen_add_static = @regen_S3 #Regeneration per day
 	}
 	custom_tooltip = tt_SMALL_ARCHAEO_ARMOR_AP
@@ -969,6 +970,7 @@ utility_component_template = { # Medium
 	modifier = {
 		ship_armor_add = @armor_M3
 		ship_shield_add = @shield_M1
+		ship_armor_regen_add_perc = 0.01
 		ship_shield_regen_add_static = @regen_M3
 	}
 	custom_tooltip = tt_MEDIUM_ARCHAEO_ARMOR_AP
@@ -1038,6 +1040,7 @@ utility_component_template = { # Large
 	modifier = {
 		ship_armor_add = @armor_L3
 		ship_shield_add = @shield_L1
+		ship_armor_regen_add_perc = 0.01
 		ship_shield_regen_add_static = @regen_L3
 	}
 	custom_tooltip = tt_LARGE_ARCHAEO_ARMOR_AP

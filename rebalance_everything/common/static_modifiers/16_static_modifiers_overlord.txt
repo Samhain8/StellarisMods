@@ -1008,10 +1008,14 @@ larionessi_resurgence_modifier = {
 	country_base_minerals_produces_add = 50
 	country_base_food_produces_add = 50
 	pop_growth_speed = 1
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_natural_beauty.dds"
 }
 
 larionessi_planet_modifier = {
 	planet_amenities_mult = 0.1
-	planet_building_build_speed_mult = 0.1
-	planet_jobs_food_produces_mult = 0.1
+	planet_building_build_speed_mult = 0.2
+	planet_jobs_produces_mult = 0.1
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_natural_beauty.dds"
 }

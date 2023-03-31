@@ -339,6 +339,12 @@ livestock = {
 			}
 			minerals = 1
 		}
+		produces = {
+			trigger = {
+				has_trait = trait_kindling
+			}
+			energy = 2
+		}
 	}
 
 	weight = {
@@ -396,6 +402,15 @@ livestock_zoo_animal = {
 	triggered_planet_modifier = {
 		planet_amenities_add = 1
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_slaver_civic = yes }
+		}
+		trade_value_add = 2
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
 	}
 
 	triggered_planet_modifier = {
@@ -472,6 +487,15 @@ livestock_zoo_beast = {
 	triggered_planet_modifier = {
 		planet_amenities_add = 1
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_slaver_civic = yes }
+		}
+		trade_value_add = 2
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
 	}
 
 	weight = {

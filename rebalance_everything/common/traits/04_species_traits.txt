@@ -478,6 +478,7 @@ trait_quick_learners = {
 
 trait_cunning = {
 	cost = 2
+	icon = "gfx/interface/icons/traits/trait_adaptive.dds"
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
 	}
