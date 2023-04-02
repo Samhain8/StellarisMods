@@ -846,7 +846,7 @@
 		WAR_EXHAUSTION_HIGH_THRESHOLD			= 1.0		# Apply negative modifier and show alert if war exhaustion >= this
 
 		ENFORCE_STATUS_QUO_ENABLED				= yes		# Can status quo be enforced at high WE?
-		ENFORCE_STATUS_QUO_MONTHS				= 24
+		ENFORCE_STATUS_QUO_MONTHS				= 48
 
 
 		PLANET_HEALTH_MAX					= 100
@@ -1048,7 +1048,7 @@
 		DIPLOMACY_WEIGHT_STANCE_FACTOR			= 0			# Factors weight from Diplo Stance before it is added to diplo weight
 		DIPLOMACY_WEIGHT_SPRAWL_FACTOR			= 0			# Factors Empire Sprawl before it is added to diplo weight
 		DIPLOMACY_WEIGHT_NAVAL_FACTOR			= 0.025		# Factors Naval Power before it is added to diplo weight
-		DIPLOMACY_WEIGHT_GESTALT_WEIGHT			= 1.0		# Gestalts gets a flat base value
+		DIPLOMACY_WEIGHT_GESTALT_WEIGHT			= 1.25		# Gestalts gets a flat base value
 		DIPLOMACY_WEIGHT_POP_BASE				= 1.0		# Base diplomacy weight for each pop
 		DIPLOMACY_WEIGHT_POP_HAPPINESS			= 2.0		# as in formula: DIPLOMACY_WEIGHT_POP_BASE + (DIPLOMACY_WEIGHT_POP_HAPPINESS * Happiness)
 		DIPLOMACY_WEIGHT_ECONOMY_FACTOR			= 0.15		# Factors Economic Power before it is added to diplo weight
@@ -1302,8 +1302,8 @@
 		FIRST_CONTACT_LOWER_INSIGHT_REWARD	= 1			# insights granted for FIRST_CONTACT_LOWER_INSIGHT_SCORE
 		FIRST_CONTACT_HIGHER_INSIGHT_REWARD	= 2			# insights granted for FIRST_CONTACT_HIGHER_INSIGHT_SCORE
 		FIRST_CONTACT_DISCOVERY_SCORE		= 10		# score for completing the stage
-		FIRST_CONTACT_DISCOVERY_DAYS		= 65		# 80 days for 1 roll
-		FIRST_CONTACT_DISCOVERY_DAYS_AI		= 100		# slower for AI to guarantee player has a chance to finish first
+		FIRST_CONTACT_DISCOVERY_DAYS		= 90		# 80 days for 1 roll
+		FIRST_CONTACT_DISCOVERY_DAYS_AI		= 120		# slower for AI to guarantee player has a chance to finish first
 		FIRST_CONTACT_FIRST_STAGE			= "base_contact_set" # Starting stage for all first contacts (see game/common/first_contact)
 		FIRST_CONTACT_INTEL_TARGET			= 10
 		FIRST_CONTACT_POLICY				= "first_contact_policy"
@@ -1320,7 +1320,7 @@
 		SPY_NETWORK_MAX_POWER				= 100		# Including all modifiers, how powerful can a Spy Network ever be?
 		SPY_NETWORK_MAX_ENVOYS_COUNT		= 1			# How many envoys can be assigned to build a single spy network?
 		SPY_NETWORK_DAILY_ENVOY_SCORE		= 1.0		# How much progression do you get for each envoy
-		SPY_NETWORK_SPRAWL_SCORE_SCALE		= 400.0		# This many empire sprawl in the opposing empire adds 1 to daily spy network progression.
+		SPY_NETWORK_SPRAWL_SCORE_SCALE		= 200.0		# This many empire sprawl in the opposing empire adds 1 to daily spy network progression.
 		SPY_NETWORK_BASE_LEVEL_SCORE		= 5.0		# It takes (SPY_NETWORK_BASE_LEVEL_SCORE) + (Current Level * SPY_NETWORK_PER_LEVEL_SCORE) points to increase spy network level
 		SPY_NETWORK_PER_LEVEL_SCORE			= 5.0		# Per level portion of the above formula
 		SPY_NETWORK_MONTHLY_DECAY			= 1.0		# If we don't have an envoy assigned to a spy network or it's above the max value, it decays at this many levels per month
@@ -1329,10 +1329,10 @@
 		SPY_NETWORK_ENCRYPTION_DECRYPTION_BONUS_MAX = 0.4	# Upper bounds to encryption vs decryption (good for attacker)
 		SPY_NETWORK_MAXIMUM_ASSIGNED_ASSETS = 1			# Maximal number of assets that can be assigned to spy network
 		SPY_NETWORK_RELATIVE_ENCRYPTION_DIFFICULTY_MULT = 1	# Difficulty modifier to be multiplied to the relative encryption
-		SPY_NETWORK_RELATIVE_ENCRYPTION_DIFFICULTY_MIN = -4		# How low can excess Codebreaking drop the difficulty of operations? Negative numbers good for the spy.
-		SPY_NETWORK_RELATIVE_ENCRYPTION_DIFFICULTY_MAX = 4		# How high can excess Encryption increase the difficulty of operations? Positive numbers good for the defender.
-		SPY_NETWORK_RELATIVE_ENCRYPTION_MIN = -4	# Lower bounds for relative encryption
-		SPY_NETWORK_RELATIVE_ENCRYPTION_MAX = 4	# Upper bounds for relative encryption
+		SPY_NETWORK_RELATIVE_ENCRYPTION_DIFFICULTY_MIN = -6		# How low can excess Codebreaking drop the difficulty of operations? Negative numbers good for the spy.
+		SPY_NETWORK_RELATIVE_ENCRYPTION_DIFFICULTY_MAX = 6		# How high can excess Encryption increase the difficulty of operations? Positive numbers good for the defender.
+		SPY_NETWORK_RELATIVE_ENCRYPTION_MIN = -6	# Lower bounds for relative encryption
+		SPY_NETWORK_RELATIVE_ENCRYPTION_MAX = 6	# Upper bounds for relative encryption
 
 		GALACTIC_EMPIRE_BASE_AUTHORITY		= 100		# Starting imperial authority when establishing the galactic empire
 		GALACTIC_EMPIRE_MAX_AUTHORITY		= 200		# Maximum value for imperial authority

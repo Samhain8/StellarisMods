@@ -30,8 +30,8 @@ galactic_custodian = {
 galactic_emperor = {
 	intel_level = {
 		relative_fleet
-		intel_economy_systems_high
-		intel_economy_colonies_high
+		intel_economy_systems_med
+		intel_economy_colonies_med
 	}
 }
 
@@ -63,8 +63,9 @@ subject = {
 commercial_pact = {
 	intel_level = {
 		intel_economy_relative_power
-		intel_economy_systems_med
-		intel_economy_colonies_high
+		intel_economy_systems_low
+		intel_economy_colonies_med
+#		intel_economy_systems_med
 	}
 }
 
@@ -95,6 +96,7 @@ associate_status = {
 
 embassy = {
 	intel_level = {
+		capital_location
 		diplomatic_pacts
 	}
 }
@@ -133,5 +135,12 @@ trade_federation = {
 hegemony_federation = {
 	intel_level = {
 		intel_economy_systems_low
+	}
+}
+
+spiritualist_federation = {
+	intel_level = {
+		intel_economy_systems_low
+		relics
 	}
 }

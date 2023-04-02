@@ -1,0 +1,255 @@
+# Triggers when the game starts
+on_game_start = {
+	events = {
+		gamestartdiplo.1
+	}
+}
+
+# this = country
+on_yearly_pulse_country = {
+	events = {
+		primitivesexpanded.82
+		primitivesexpanded.84
+	}
+}
+
+# Fires for each planet every 5 years (counting up from colonisation date, includes home planet)
+on_colony_5_year_pulse = {
+	events = {
+		primitivesexpanded.88
+	}
+}
+
+# Triggers when ground combat starts
+# This = planet
+# From = country attacking
+on_ground_combat_started = {
+	events = {
+		diplospy.174
+	}
+}
+
+# Triggers country_event for the attacker upon victory
+# (Before controller is switched)
+# This = country, leader attacker
+# From = country, planet owner
+# FromFrom = planet
+# IDENTITIES: attacker is the side that "IsHostile" to
+# the planet controller; e.g. spawned monster armies
+# are attackers, but if they win and the player attempts
+# to retake the planet, the player is the attacker
+on_planet_attackers_win = {
+	events = {
+		diplospy.175
+	}
+}
+
+# Triggers country_event for the attacker upon defeat
+# This = country, attack leader
+# From = country, planet owner
+# FromFrom = planet
+on_planet_attackers_lose = {
+	events = {
+		diplospy.175
+	}
+}
+
+# Planet has taken damage from orbital bombardment - Damage is applied daily
+# This = Planet
+# From = Bombarder
+on_planet_bombarded = {
+	events = {
+		diplospy.173
+	}
+}
+
+# Via pre_ftl_tech_progress_situation / preftl.50
+# See also: on_monthly_pulse_pre_ftl_observation_broken_shackles (below)
+on_monthly_pulse_pre_ftl_observation = {
+	random_events = {
+		50 = primitivesexpanded.300 # Political Events
+		50 = primitivesexpanded.500 # Religious Events
+		20 = primitivesexpanded.516 # Spiritual Plurality
+		20 = primitivesexpanded.518 # Atheism
+		20 = primitivesexpanded.522 # Secularism
+		# Stone Age
+		2 = primitivesexpanded.200 # Stone Age Metals
+		2 = primitivesexpanded.202 # Monoliths
+		10 = primitivesexpanded.215 # Agrarian Idyll (also Bronze, Iron, and Medieval)
+		# Iron Age
+		10 = primitivesexpanded.208 # I'm Spartacus (also Medieval)
+		# Renaissance Age
+		10 = primitivesexpanded.206 # Enlightenment (also Steam)
+		10 = primitivesexpanded.210 # French Revolution (also Steam and Machine)
+		# Steam Age
+		200 = primitivesexpanded.204 # Betharian Stone
+		# Machine Age
+		10 = primitivesexpanded.702 # Enamored by Our Culture (also higher ages)
+		# Atomic Age
+		2 = primitivesexpanded.700 # Xenophobes Attack Observation Post (also Space)
+		# Dead God
+		1000 = primitivesexpanded.80 # Dead God Religion
+		100 = primitivesexpanded.86 # Dead God Moon Landing
+	}
+}
+
+# The following are considered valid for "Broken Shackles" empires observing their original civilizations; see also on_monthly_pulse_pre_ftl_observation (above)
+# Via pre_ftl_tech_progress_situation / preftl.50
+on_monthly_pulse_pre_ftl_observation_broken_shackles = {
+	random_events = {
+		# Modded
+		50 = primitivesexpanded.300 # Political Events
+		50 = primitivesexpanded.500 # Religious Events
+		20 = primitivesexpanded.516 # Spiritual Plurality
+		20 = primitivesexpanded.518 # Atheism
+		20 = primitivesexpanded.522 # Secularism
+		# Stone Age
+		2 = primitivesexpanded.200 # Stone Age Metals
+		10 = primitivesexpanded.215 # Agrarian Idyll (also Bronze, Iron, and Medieval)
+		# Iron Age
+		10 = primitivesexpanded.208 # I'm Spartacus (also Medieval)
+		# Renaissance Age
+		10 = primitivesexpanded.206 # Enlightenment (also Steam)
+		10 = primitivesexpanded.210 # French Revolution (also Steam and Machine)
+		# Steam Age
+		200 = primitivesexpanded.204 # Betharian Stone
+		# Dead God
+		1000 = primitivesexpanded.80 # Dead God Religion
+		100 = primitivesexpanded.86 # Dead God Moon Landing
+	}
+}
+
+# Via situation_cold_war / primitivesexpanded.11
+on_monthly_pulse_pre_ftl_cold_war = {
+	random_events = {
+		100 = primitivesexpanded.12 # Nuclear Testing Treaty
+		75 = primitivesexpanded.14 # Nuclear Proliferation Treaty
+		50 = primitivesexpanded.16 # Nuclear Disarmament Treaty
+		50 = primitivesexpanded.18 # Treaty Broken
+		5 = primitivesexpanded.20 # Sabotage Discovered
+		100 = primitivesexpanded.22 # Cold War Technologies
+		75 = primitivesexpanded.24 # Spies Caught
+		75 = primitivesexpanded.26 # Peace Protesters
+		100 = primitivesexpanded.28 # Proxy War
+		100 = primitivesexpanded.32 # Missile Crisis
+		# Accidental Nuke Launch
+		# Hotline
+		# Nation State Crumbles
+		# City Blockaded (Berlin Airlift)
+		# Revolts
+		# Space Race
+		# Detects Alien Life
+		# Roswell
+		# Ship or plane shot down passing near enemy
+		# Duel
+		# Close Call
+		# Bay of Pigs
+		
+
+		# Non-Unique Events
+		5 = mem_primitives.700 # Y2K
+		10 = primitivesexpanded.518 # Atheism
+		10 = primitivesexpanded.522 # Secularism
+
+		# Vanilla Events
+		# Non-era related Observation Events
+		50 = fircon.2000		# Medical Side-Effects
+		50 = fircon.2010		# It's Raining Aliens!
+		# Hive Observation Events
+		100 = fircon.2500		# Phagocyted
+		50 = fircon.2510		# Ecosystem Takeover
+		75 = fircon.2530		# Requiem for a Drone
+		25 = fircon.2550		# The Right to Leave
+		# Pre-3.7 Observation Events
+		# Non-Era Related Observation Events
+		25 = observation.1300	# Aggressive Observation causes ethics change
+		# # Post-Industrial Events
+		100 = observation.1100	# Defense Force
+		50 = observation.1500	# Research Proposal
+	}
+}
+
+# Via pre_ftl_tech_progress_situation / primitivesexpanded.300
+on_monthly_pulse_pre_ftl_government = {
+	random_events = {
+		1 = primitivesexpanded.301 # do nothing
+		75 = preftl.2166 # New World Order Situation
+		100 = primitivesexpanded.302 # Exalted Priesthood
+		100 = primitivesexpanded.309 # Corporate Dominion
+		100 = primitivesexpanded.313 # Shared Burdens
+		100 = primitivesexpanded.315 # Slave Revolt
+		100 = primitivesexpanded.317 # Slaver's Guild
+		100 = primitivesexpanded.320 # Mechanists
+		100 = primitivesexpanded.326 # Democracy falls to dictatorship
+		100 = primitivesexpanded.330 # Dictatorship falls to democracy
+		100 = primitivesexpanded.331 # Global War
+		100 = primitivesexpanded.336 # League of Nations
+		100 = primitivesexpanded.340 # Warrior Culture
+		100 = primitivesexpanded.342 # Feudal Realms
+		100 = primitivesexpanded.344 # Technocracy
+		100 = primitivesexpanded.346 # Fanatic Purifiers
+		100 = primitivesexpanded.349 # Imperial Cult
+		100 = primitivesexpanded.351 # Death Cult
+	}
+}
+
+# Via pre_ftl_tech_progress_situation / primitivesexpanded.500
+on_monthly_pulse_pre_ftl_religion = {
+	random_events = {
+		1 = primitivesexpanded.501 # do nothing
+		100 = primitivesexpanded.510 # Zoroastrianism
+		100 = primitivesexpanded.512 # Paganism
+		100 = primitivesexpanded.514 # Jainism
+		100 = primitivesexpanded.520 # Titan
+		100 = primitivesexpanded.524 # Outpost Xenophile
+		100 = primitivesexpanded.526 # Outpost Xenophobe
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_CRACKER = {
+	events = {
+		primitivesexpanded.93
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_SHIELDER = {
+	events = {
+		primitivesexpanded.93
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_NEUTRON = {
+	events = {
+		primitivesexpanded.93
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_GODRAY = {
+	events = {
+		primitivesexpanded.93
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_NANOBOTS = {
+	events = {
+		primitivesexpanded.93
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_DELUGE = {
+	events = {
+		primitivesexpanded.93
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_TOXIFIER = {
+	events = {
+		primitivesexpanded.93
+	}
+}
+
+on_destroy_planet_with_PLANET_KILLER_DEVOLUTION = {
+	events = {
+		primitivesexpanded.93
+	}
+}
