@@ -89,7 +89,7 @@ strike_craft_component_template = {
 	acceleration = 2.5
 
 
-	shield_damage = 1.0
+	shield_damage = 0.5
 	shield_penetration = 1
 	armor_damage = 1.50
 

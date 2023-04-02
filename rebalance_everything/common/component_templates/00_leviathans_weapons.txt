@@ -323,7 +323,7 @@ strike_craft_component_template = {
 	acceleration = 2.5
 
 	shield_damage = 1.0
-	shield_penetration = 1
+	shield_penetration = 0.8
 	armor_penetration = 0.66
 
 	ship_behavior = "bombers_behavior"
@@ -416,7 +416,7 @@ strike_craft_component_template = {
 	rotation_speed = 0.5
 	acceleration = 0.5
 
-	shield_damage = 1.0
+	shield_damage = 0.5
 	shield_penetration = 1
 	armor_penetration = 0.66
 
