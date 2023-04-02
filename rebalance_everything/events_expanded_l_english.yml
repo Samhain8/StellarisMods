@@ -1,0 +1,21 @@
+﻿l_english:
+
+####################################
+# 	Primitives Events
+####################################
+
+primitivesexpanded.310.name:0 "Starvation on [pre_ftl_planet.GetName]"
+primitivesexpanded.310.desc:0 "Our observation post over §H[pre_ftl_planet.GetName]§! has received an urgent message from the [pre_ftl_planet.GetPlanetMoon]'s major governments.\n\nIt appears that a series of crop failures and poor harvests have recently plagued the [pre_ftl_planet.GetPlanetMoon], resulting in large scale starvation. The primitive governments on §H[pre_ftl_planet.GetName]§! ask that we send them a shipment of food, offering what little they have in exchange."
+primitivesexpanded.310.a:0 "We will help them."
+primitivesexpanded.310.b:0 "We cannot help them."
+primitivesexpanded.316.name:0 "[pre_ftl_planet.GetName]: Asylum Seekers"
+primitivesexpanded.316.desc:0 "Our observation post over §H[pre_ftl_planet.GetName]§! has received clandestine messages from a group of natives. They claim to be an oppressed minority, and wish for our help in escaping [pre_ftl_planet.GetName], so that they could make new lives for themselves on one of our worlds."
+primitivesexpanded.316.a:0 "They are welcome here."
+primitivesexpanded.316.b:0 "We cannot help them."
+primitivesexpanded.320.name:0 "Plague on [pre_ftl_planet.GetName]"
+primitivesexpanded.320.desc:0 "Our observation post over §H[pre_ftl_planet.GetName]§! has received an urgent message from the [pre_ftl_planet.GetPlanetMoon]'s major governments.\n\nIt appears that their world has succumbed to a [pre_ftl_planet.GetPlanetMoon]-wide plague, which already has killed millions. The primitive governments on §H[pre_ftl_planet.GetName]§! beg us to use our advanced medical knowledge to help them develop a cure."
+primitivesexpanded.321.name:0 "A Cure for [pre_ftl_planet.GetName]"
+primitivesexpanded.321.desc:0 "We have developed a cure for the plague on §H[pre_ftl_planet.GetName]§!, and our researchers have begun distributing the medicine. Already our observation post is reporting promising results, and we expect to have the plague eradicated within the next few months."
+primitivesexpanded.323.name:0 "Message from [pre_ftl_planet.GetName]"
+primitivesexpanded.323.desc:0 "Our observation post over §H[pre_ftl_planet.GetName]§! has received a message from the [pre_ftl_planet.GetPlanetMoon]'s major governments.\n\nIt seems that the primitives on [pre_ftl_planet.GetName] have become aware that we have access to rare resources not available on their world. They have asked to trade what is for them an exorbitant sum of resources just for a small sample of our rare materials."
+primitivesexpanded.323.a:0 "We could part with a few crates."

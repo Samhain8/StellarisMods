@@ -1,11 +1,14 @@
 # Monthly Technological Progress of pre-FTL civilizations.
-@early_progress_rate	= 1		# 160 years to tech up.
-@mid_progress_rate		= 2		# 80 years to tech up.
-@late_progress_rate		= 4		# 40 years to tech up.
-@low_awareness			= 0.5
-@partial_awareness		= 1.0
-@high_awareness			= 1.5
-@full_awareness			= 2
+@stone_age_progress_rate	= 0.1	# 1600 years to tech up.
+@bronze_age_progress_rate	= 0.2	# 800 years to tech up.
+@iron_age_progress_rate		= 0.4	# 400 years to tech up.
+@early_progress_rate		= 1		# 160 years to tech up.
+@mid_progress_rate			= 2		# 80 years to tech up.
+@late_progress_rate			= 4		# 40 years to tech up.
+@low_awareness				= 0.5
+@partial_awareness			= 1.0
+@high_awareness				= 1.5
+@full_awareness				= 2
 
 pre_ftl_tech_progress_situation = { # This situation's name-key is used in pre-FTL tech level UI code, do not change without code support!
 	picture = GFX_evt_acquire_asset
@@ -69,15 +72,38 @@ pre_ftl_tech_progress_situation = { # This situation's name-key is used in pre-F
 		# Total: 1920
 		base = 0
 		modifier = {
+			add = @stone_age_progress_rate
+			desc = early_age
+			owner = {
+				has_country_flag = stone_age
+			}
+		}
+		modifier = {
+			add = @bronze_age_progress_rate
+			desc = early_age
+			owner = {
+				has_country_flag = bronze_age
+			}
+		}
+		modifier = {
+			add = @iron_age_progress_rate
+			desc = early_age
+			owner = {
+				has_country_flag = iron_age
+			}
+		}
+		modifier = {
 			add = @early_progress_rate
 			desc = early_age
 			owner = {
-				OR = {
-					has_country_flag = stone_age
-					has_country_flag = bronze_age
-					has_country_flag = iron_age
-					has_country_flag = late_medieval_age
-				}
+				has_country_flag = late_medieval_age
+			}
+		}
+		modifier = {
+			add = @early_progress_rate
+			desc = mid_age
+			owner = {
+				has_country_flag = renaissance_age
 			}
 		}
 		modifier = {
@@ -85,7 +111,6 @@ pre_ftl_tech_progress_situation = { # This situation's name-key is used in pre-F
 			desc = mid_age
 			owner = {
 				OR = {
-					has_country_flag = renaissance_age
 					has_country_flag = steam_age
 					has_country_flag = industrial_age
 					has_country_flag = machine_age
@@ -135,6 +160,45 @@ pre_ftl_tech_progress_situation = { # This situation's name-key is used in pre-F
 			desc = acquired_tech
 			owner = {
 				has_country_flag = acquired_tech
+			}
+		}
+		modifier = {
+			mult = 0.75
+			desc = planet_features
+			owner = {
+				OR = {
+					has_country_flag = stone_age
+					has_country_flag = bronze_age
+					has_country_flag = iron_age
+					has_country_flag = steam_age
+				}
+				capital_scope = { has_modifier = mineral_poor }
+			}
+		}
+		modifier = {
+			mult = 1.5
+			desc = planet_features
+			owner = {
+				OR = {
+					has_country_flag = stone_age
+					has_country_flag = bronze_age
+					has_country_flag = iron_age
+					has_country_flag = steam_age
+				}
+				capital_scope = { has_modifier = mineral_rich }
+			}
+		}
+		modifier = {
+			mult = 2
+			desc = planet_features
+			owner = {
+				OR = {
+					has_country_flag = stone_age
+					has_country_flag = bronze_age
+					has_country_flag = iron_age
+					has_country_flag = steam_age
+				}
+				capital_scope = { has_modifier = ultra_rich }
 			}
 		}
 		modifier = {
@@ -219,6 +283,74 @@ pre_ftl_tech_progress_situation = { # This situation's name-key is used in pre-F
 						has_modifier = payback_student
 					}
 				}
+			}
+		}
+
+		# Events
+
+		modifier = {
+			add = 5
+			desc = metal_experiments
+			owner = {
+				has_country_flag = stone_age
+				has_country_flag = primitives_metal_experiments
+			}
+		}
+		modifier = {
+			add = 10
+			desc = primitive_monoliths
+			owner = {
+				has_country_flag = stone_age
+				has_country_flag = primitive_monoliths
+			}
+		}
+		modifier = {
+			mult = 3
+			desc = acquired_tech
+			owner = {
+				has_country_flag = steam_age
+				has_country_flag = primitives_betharian
+			}
+		}
+		modifier = {
+			mult = 1.25
+			desc = acquired_tech
+			owner = {
+				NOT = { has_country_flag = steam_age }
+				has_country_flag = primitives_betharian
+			}
+		}
+		modifier = {
+			mult = 1.25
+			desc = acquired_tech
+			owner = {
+				has_country_flag = cold_war_technologies
+			}
+		}
+		modifier = {
+			mult = 1.25
+			desc = acquired_tech
+			owner = {
+				has_origin = origin_post_apocalyptic
+			}
+		}
+		modifier = {
+			mult = 3
+			desc = acquired_tech
+			owner = {
+				has_origin = origin_post_apocalyptic
+				OR = {
+					has_country_flag = stone_age
+					has_country_flag = bronze_age
+					has_country_flag = iron_age
+				}
+			}
+		}
+		modifier = {
+			mult = 2
+			desc = acquired_tech
+			owner = {
+				has_country_flag = dead_god_advancement
 			}
 		}
 	}

@@ -1,0 +1,11 @@
+﻿l_english:
+
+operation_sabotage_starbase_on_success:0 "$IF_SUCCESSFUL|E$\nDestroy up to three random Modules and Building on a particular Starbase. Will not affect Shipyard Modules."
+requires_terrible_opinion_or_supremacist:1 "$TRIGGER_FAIL$§RRequires $OPINION_TERRIBLE$, §YRivalry§!, §YWar§!, or one empire must either be in the $diplo_stance_supremacist_name$ $DIPLOMACY_STANCE$ or be a §H$COUNTRY_FALLEN_EMPIRE$§!.§!\n"
+requires_poor_or_worse_opinion:1 "$TRIGGER_FAIL$§RRequires $OPINION_POOR$§!.§!"
+requires_excellent_or_better_opinion:1 "$TRIGGER_FAIL$§RRequires $OPINION_EXCELLENT$§!"
+requires_good_or_better_opinion:1 "$TRIGGER_FAIL$§RRequires $OPINION_GOOD$§!"
+requires_neutral_or_better_opinion:1 "$TRIGGER_FAIL$§RRequires $OPINION_NEUTRAL$§!"
+
+operation.2005.name:0 "Starbase Sabotaged"
+operation.2010.name:2 "Sabotage in the [sabotaged_starbase_system.GetName] System!"

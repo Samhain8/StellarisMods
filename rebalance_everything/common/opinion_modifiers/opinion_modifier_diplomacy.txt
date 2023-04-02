@@ -1,0 +1,531 @@
+### Event Modifiers ###
+opinion_stole_pops = {
+	opinion = {
+		base = -60
+
+		modifier = {
+			add = -20
+			NOT = { has_policy_flag = slavery_allowed }
+			is_gestalt = no
+		}
+		modifier = {
+			add = -10
+			has_ethic = ethic_egalitarian
+		}
+		modifier = {
+			add = -20
+			has_ethic = ethic_fanatic_egalitarian
+		}
+		modifier = {
+			add = -40
+			has_valid_civic = civic_machine_servitor
+		}
+		modifier = {
+			add = 30
+			is_gestalt = yes
+			is_open_gestalt = no
+			is_civic_machine_servitor = no
+			is_civic_machine_assimilator = no # stealing an important resource
+		}
+	}
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_freed_pops = {
+	opinion = {
+		base = -40
+		modifier = {
+			add = -20
+			is_civic_machine_assimilator = yes # stealing an important resource
+		}
+	}
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_betrayed_trust = {
+	opinion = {
+		base = -40
+		modifier = {
+			add = 5
+			has_ethic = ethic_xenophile
+		}
+		modifier = {
+			add = 10
+			has_ethic = ethic_fanatic_xenophobe
+		}
+		modifier = {
+			add = 5
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			add = 10
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			add = -5
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			add = -10
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			add = -10
+			OR = {
+				is_xenophile = yes
+				is_xenophobic_isolationists = yes
+			}
+		}
+	}
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_refused_to_sell = {
+	opinion = {
+		base = -25
+		modifier = {
+			add = 5
+			has_ethic = ethic_xenophile
+		}
+		modifier = {
+			add = 10
+			has_ethic = ethic_fanatic_xenophile
+		}
+		modifier = {
+			add = -5
+			has_ethic = ethic_xenophobe
+		}
+		modifier = {
+			add = -10
+			has_ethic = ethic_fanatic_xenophobe
+		}	
+	}
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_tried_to_steal_secrets = {
+	opinion = {
+		base = -50
+		modifier = {
+			add = 5
+			has_ethic = ethic_xenophile
+		}
+		modifier = {
+			add = 10
+			has_ethic = ethic_fanatic_xenophile
+		}
+		modifier = {
+			add = -5
+			has_ethic = ethic_xenophobe
+		}
+		modifier = {
+			add = -10
+			has_ethic = ethic_fanatic_xenophobe
+		}	
+	}
+
+	decay = {
+		base = 2
+		modifier = {
+			add = 1
+			is_xenophile = yes
+		}
+
+		modifier = {
+			add = -1
+			is_xenophobe = yes
+		}
+	}
+}
+
+opinion_ejected_envoy = {
+	opinion = {
+		base = -25
+		modifier = {
+			add = 5
+			is_xenophile = yes
+		}
+		modifier = {
+			add = -5
+			is_xenophobe = yes
+		}
+	}
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_sided_with_us = {
+	opinion = {
+		base = 25
+	}
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_sided_against_us = {
+	opinion = {
+		base = -25
+	}
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_rude_envoys = {
+	opinion = {
+		base = -25
+	}
+
+	decay = {
+		base = 2
+	}
+}
+
+opinion_federation_gala_excellent = {
+	opinion = {
+		base = 100
+	}
+
+	decay = {
+		base = 2
+		modifier = {
+			add = -1
+			is_xenophile = yes
+		}
+
+		modifier = {
+			add = 1
+			is_xenophobe = yes
+		}
+	}
+}
+
+opinion_federation_gala_good = {
+	opinion = {
+		base = 75
+	}
+
+	decay = {
+		base = 2
+		modifier = {
+			add = -1
+			is_xenophile = yes
+		}
+
+		modifier = {
+			add = 1
+			is_xenophobe = yes
+		}
+	}
+}
+
+opinion_federation_gala_ok = {
+	opinion = {
+		base = 50
+	}
+
+	decay = {
+		base = 2
+		modifier = {
+			add = -1
+			is_xenophile = yes
+		}
+
+		modifier = {
+			add = 1
+			is_xenophobe = yes
+		}
+	}
+}
+
+opinion_federation_gala_bad = {
+	opinion = {
+		base = -33
+	}
+
+	decay = {
+		base = 2
+		modifier = {
+			add = 1
+			is_xenophile = yes
+		}
+
+		modifier = {
+			add = -1
+			is_xenophobe = yes
+		}
+	}
+}
+
+opinion_mutual_assistance_gave_aid = {
+	opinion = {
+		base = 2
+	}
+	
+	accumulative = yes
+
+	max = 100
+
+	decay = {
+		base = 1
+	}
+}
+
+opinion_seized_office = {
+	opinion = {
+		base = -75
+	}
+
+	decay = {
+		base = 2
+		modifier = {
+			add = 1
+			is_xenophile = yes
+		}
+
+		modifier = {
+			add = -1
+			is_xenophobe = yes
+		}
+	}
+}
+
+opinion_stole_galatron = {
+	opinion = {
+		base = -60
+	}
+
+	decay = {
+		base = 1
+	}
+}
+
+
+### Triggered modifiers
+
+# Species Rights
+enslaved_our_pops = {
+	trigger = {
+		has_intel_level = {
+			who = FROM
+			category = economy
+			level >= 1
+		}
+		any_owned_species = {
+			has_citizenship_type = { type = citizenship_full country = PREV }
+			FROM = {
+				any_owned_species = {
+					has_citizenship_type = { type = citizenship_slavery country = from }
+					is_same_value = prevprev
+				}
+			}
+		}
+	}
+	opinion = {
+		base = -30
+		modifier = {
+			add = 10
+			OR = {
+				has_valid_civic = "civic_slaver_guilds"
+				has_valid_civic = "civic_indentured_assets"
+			}
+		}
+		modifier = {
+			add = 10
+			has_ethic = ethic_authoritarian
+		}
+		modifier = {
+			add = 20
+			has_ethic = ethic_fanatic_authoritarian
+		}
+		modifier = {
+			add = -15
+			has_ethic = ethic_egalitarian
+		}
+		modifier = {
+			add = -30
+			has_ethic = ethic_fanatic_egalitarian
+		}
+		modifier = {
+			add = -30
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			NOR = {
+				has_valid_civic = "civic_slaver_guilds"
+				has_valid_civic = "civic_indentured_assets"
+			}
+			NOT = { is_same_species = FROM }
+		}
+	}
+}
+
+displacing_our_pops = {
+	trigger = {
+		has_intel_level = {
+			who = FROM
+			category = economy
+			level >= 1
+		}
+		any_owned_species = {
+			has_citizenship_type = { type = citizenship_full country = PREV }
+			FROM = {
+				any_owned_species = {
+					has_citizenship_type = { type = citizenship_purge country = from }
+					has_purge_type = { type = purge_displacement country = from }
+					is_same_value = prevprev
+				}
+			}
+		}
+	}
+	opinion = {
+		base = -20
+		modifier = {
+			add = -20
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			NOT = { is_same_species = FROM }
+		}
+	}
+}
+
+purging_our_pops = {
+	trigger = {
+		has_intel_level = {
+			who = FROM
+			category = economy
+			level >= 1
+		}
+		any_owned_species = {
+			has_citizenship_type = { type = citizenship_full country = PREV }
+			FROM = {
+				any_owned_species = {
+					has_citizenship_type = { type = citizenship_purge country = from }
+					NOT = { has_purge_type = { type = purge_displacement country = from } }
+					is_same_value = prevprev
+				}
+			}
+		}
+	}
+	opinion = {
+		base = -100
+		modifier = {
+			add = -25
+			OR = {
+				has_ethic = ethic_xenophobe
+				has_ethic = ethic_fanatic_xenophobe
+			}
+			NOT = { is_same_species = FROM }
+		}
+	}
+}
+
+nerve_stapled_pops = {
+	trigger = {
+		has_intel_level = {
+			who = FROM
+			category = economy
+			level >= 2
+		}
+		FROM = {
+			any_owned_species = { has_trait = trait_nerve_stapled }
+		}
+	}
+	opinion = {
+		base = 0
+		modifier = {
+			add = -20
+			OR = {
+				has_ethic = ethic_egalitarian
+				has_ethic = ethic_xenophile
+			}
+			NOR = {
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_fanatic_xenophile
+			}
+			is_xenophobe = no
+		}
+		modifier = {
+			add = -40
+			OR = {
+				has_ethic = ethic_fanatic_egalitarian
+				has_ethic = ethic_fanatic_xenophile
+			}
+			is_xenophobe = no
+		}
+		modifier = {
+			add = -40
+			any_owned_species = {
+				has_citizenship_type = { type = citizenship_full country = PREV }
+				FROM = {
+					any_owned_species = {
+						has_trait = trait_nerve_stapled
+						is_same_value = prevprev
+					}
+				}
+			}
+		}
+		modifier = {
+			add = -20
+			has_ethic = ethic_xenophobe
+			any_owned_species = {
+				has_citizenship_type = { type = citizenship_full country = PREV }
+				FROM = {
+					any_owned_species = {
+						has_trait = trait_nerve_stapled
+						is_same_value = prevprev
+					}
+				}
+			}
+		}
+		modifier = {
+			add = -40
+			has_ethic = ethic_fanatic_xenophobe
+			any_owned_species = {
+				has_citizenship_type = { type = citizenship_full country = PREV }
+				FROM = {
+					any_owned_species = {
+						has_trait = trait_nerve_stapled
+						is_same_value = prevprev
+					}
+				}
+			}
+		}
+	}
+}
+
+# Espionage
+opinion_smear_campaign_suspicious = {
+	opinion = {
+		base = -30
+	}
+	
+	accumulative = yes
+	
+	decay = {
+		base = 0.5
+		modifier = {
+			factor = value:negative_opinion_decay_rate
+		}
+	}
+}

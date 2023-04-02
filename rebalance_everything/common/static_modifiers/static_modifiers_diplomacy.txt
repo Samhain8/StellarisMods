@@ -1,0 +1,51 @@
+##########################################################################
+# Country modifiers
+##########################################################################
+
+outspoken_envoy = {
+	pop_ethics_shift_speed_mult = 0.25
+	pop_government_ethic_attraction = -0.25
+}
+
+insulting_envoys = {
+	diplo_weight_envoys_mult = -0.2
+	envoy_improve_relations_mult = -0.2
+	envoy_harm_relations_mult = 0.2
+}
+
+dishonorable_envoys = {
+	diplo_weight_envoys_mult = -0.25
+	envoy_improve_relations_mult = -0.25
+}
+
+##########################################################################
+# Planet modifiers
+##########################################################################
+
+diplo_mod_bribed_officials = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
+	icon_frame = 3
+	planet_crime_add = 30
+}
+
+diplo_mod_protests = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_unrest.dds"
+	icon_frame = 3
+	planet_stability_add = -15
+}
+
+diplo_mod_crushed_protests = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_unrest.dds"
+	icon_frame = 2
+	planet_stability_add = 5
+	pop_cat_specialist_happiness = -0.05
+	pop_cat_worker_happiness = -0.15
+}
+
+##########################################################################
+# Faction modifiers
+#########################################################################
+
+faction_modifier_envoy_murdered = {
+	faction_approval = -0.1
+}
