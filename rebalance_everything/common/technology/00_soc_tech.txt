@@ -1018,6 +1018,7 @@ tech_alien_life_studies = {
 							OR = {
 								is_sapient = no
 								is_livestock = yes
+								is_pet_slaves = yes
 							}
 						}
 					}

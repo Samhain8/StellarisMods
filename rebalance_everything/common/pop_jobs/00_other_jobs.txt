@@ -544,6 +544,19 @@ bio_trophy = {
 		}
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				has_trait = trait_xeno_compatibility
+				has_trait = trait_interbreeder
+			}
+		}
+		modifier = {
+			pop_growth_speed = 0.02
+		}
+	}
+
 	triggered_pop_modifier = {
 		pop_housing_usage_add = -1
 	}
