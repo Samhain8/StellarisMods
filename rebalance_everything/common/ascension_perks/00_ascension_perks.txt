@@ -946,7 +946,8 @@ ap_imperial_prerogative = {
 
 ap_executive_vigor = {
 	modifier = {
-		country_edict_fund_add = 100
+		country_edict_fund_add = 60
+		country_traditions_influence_produces_add = 1
 	}
 
 	potential = {

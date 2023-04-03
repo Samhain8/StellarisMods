@@ -748,6 +748,12 @@ entertainer = {
 			}
 			unity = 1
 		}
+		produces = {
+			trigger = {
+				owner = { has_civic = civic_media_conglomerate }
+			}
+			influence = 0.06
+		}
 		upkeep = {
 			consumer_goods = 1
 		}

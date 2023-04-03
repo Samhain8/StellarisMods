@@ -1,6 +1,7 @@
 tr_subterfuge_adopt = {
 	modifier = {
 		intel_decryption_add = 1
+		envoys_add = 1
 	}
 	custom_tooltip_with_modifiers = tr_subterfuge_adopt_desc
 }
@@ -49,7 +50,8 @@ tr_subterfuge_nda = {
 
 	modifier = {
 		espionage_hostile_operation_difficulty_add = 1
-		espionage_hostile_operation_cost_mult = 0.2
+		espionage_hostile_operation_cost_mult = 0.25
+		espionage_operation_cost_mult = -0.25
 	}
 
 	tradition_swap = {
@@ -116,7 +118,6 @@ tr_subterfuge_double_agents = {
 
 	modifier = {
 		envoys_add = 1
-		spy_network_levels_add = 10
 		add_base_country_intel = 10
 
 		show_only_custom_tooltip = no
@@ -135,6 +136,7 @@ tr_subterfuge_shadow_recruits = {
 
 	modifier = {
 		spy_network_daily_value_mult = 0.50
+		spy_network_levels_add = 10
 	}
 
 	ai_weight = {
