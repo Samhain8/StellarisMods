@@ -430,11 +430,10 @@ livestock_zoo_animal = {
 		weight = @special_job_weight
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {
-			factor = 1.5
-			NOT = { has_job = livestock_zoo_animal }
-			exists = planet
-			planet = {
-				free_amenities < 5
+			factor = 3
+			OR = {
+				has_trait = trait_xeno_compatibility
+				has_trait = trait_interbreeder
 			}
 		}
 	}

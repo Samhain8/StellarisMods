@@ -376,21 +376,21 @@ civic_criminal_heritage = {
 	random_weight = { base = @civic_default_random_weight }
 	modifier = {
 		spy_network_daily_value_mult = 0.5
-		intel_decryption_add = 1
+		ship_cloaking_strength_add = 1
 		planet_branch_offices_cost_mult = 0.3
 	}
 
 	description = "civic_tooltip_criminal_heritage_effects"
 
-	swap_type = {
-		trigger = {
-			has_first_contact_dlc = yes
-		}
-		description = "civic_tooltip_criminal_heritage_effects"
-		modifier = {
-			ship_cloaking_strength_add = 1
-		}
-	}
+	#swap_type = {
+	#	trigger = {
+	#		has_first_contact_dlc = yes
+	#	}
+	#	description = "civic_tooltip_criminal_heritage_effects"
+	#	modifier = {
+	#		ship_cloaking_strength_add = 1
+	#	}
+	#}
 }
 
 civic_private_military_companies = {
