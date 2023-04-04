@@ -171,7 +171,7 @@ trait_robot_armored = {
 	allowed_archetypes = { ROBOT MACHINE }
 	modifier = {
 		army_health = 0.5
-		army_damage_mult = 0.20
+		army_damage_mult = 0.3
 	}
 	species_potential_add = {
 		exists = from

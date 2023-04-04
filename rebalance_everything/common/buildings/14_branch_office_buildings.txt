@@ -881,7 +881,7 @@ building_disinformation_center = {
 	}
 
 	country_modifier = {
-		spy_network_levels_add = 5
+		spy_network_daily_value_mult = 0.15
 	}
 
 	planet_modifier = {
