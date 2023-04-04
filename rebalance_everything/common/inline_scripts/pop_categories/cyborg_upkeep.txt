@@ -52,3 +52,45 @@ upkeep = {
 	}
 	energy = @cyborg_energy_upkeep
 }
+upkeep = {
+	trigger = {
+		has_trait = trait_cyborg_power_drills
+	}
+	energy = @cyborg_energy_upkeep
+}
+upkeep = {
+	trigger = {
+		has_trait = trait_cyborg_harvesters
+	}
+	energy = @cyborg_energy_upkeep
+}
+upkeep = {
+	trigger = {
+		has_trait = trait_cyborg_neon_allure
+	}
+	energy = @cyborg_energy_upkeep
+}
+upkeep = {
+	trigger = {
+		has_trait = trait_cyborg_armored
+	}
+	energy = @cyborg_energy_upkeep
+}
+upkeep = {
+	trigger = {
+		has_trait = trait_cyborg_willing_tool
+	}
+	energy = @cyborg_energy_upkeep
+}
+upkeep = {
+	trigger = {
+		has_trait = trait_cyborg_organic_recyclers
+	}
+	energy = @cyborg_energy_upkeep
+}
+upkeep = {
+	trigger = {
+		has_trait = trait_cyborg_mechanical_interface
+	}
+	energy = @cyborg_energy_upkeep
+}
