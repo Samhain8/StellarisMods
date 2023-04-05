@@ -3851,7 +3851,11 @@ can_do_advanced_gene_modding = {
 can_remove_beneficial_genetic_traits = {
 	hidden_trigger = { exists = from }
 	from = {
-		has_tradition = tr_genetics_resequencing
+		OR = {
+			has_tradition = tr_genetics_resequencing
+			has_tradition = tr_cybernetics_integrated_anatomy
+			has_tradition = tr_cybernetics_assimilator_integrated_anatomy
+		}
 	}
 }
 
@@ -3871,6 +3875,8 @@ can_remove_overtuned_traits = {
 		OR = {
 			has_tradition = tr_genetics_resequencing
 			has_origin = origin_overtuned
+			has_tradition = tr_cybernetics_integrated_anatomy
+			has_tradition = tr_cybernetics_assimilator_integrated_anatomy
 		}
 	}
 }
@@ -3912,6 +3918,21 @@ can_remove_cybernetic_traits = {
 			has_tradition = tr_cybernetics_integrated_anatomy
 			has_tradition = tr_cybernetics_assimilator_integrated_anatomy
 		}
+	}
+}
+
+can_add_psionic_traits = {
+	hidden_trigger = { exists = from }
+	from = {
+		has_tradition = tr_psionics_finish
+	}
+	has_trait = trait_psionic
+}
+
+can_remove_psionic_traits = {
+	hidden_trigger = { exists = from }
+	from = {
+		has_tradition = tr_psionics_finish
 	}
 }
 

@@ -140,6 +140,7 @@ tr_cybernetics_modular_cybernetics = {
 		}
 		custom_tooltip = tr_cybernetics_modular_cybernetics_hive_tt
 		modifier = {
+			BIOLOGICAL_species_trait_points_add = 2
 			modify_species_cost_mult = -0.50
 		}
 		weight = {
