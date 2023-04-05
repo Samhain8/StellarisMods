@@ -12,6 +12,7 @@ tr_synthetics_adopt = {
 	modifier = {
 		species_leader_exp_gain = 0.25
 		leader_skill_levels = 1
+		ROBOT_species_trait_points_add = 1
 	}
 
 	tradition_swap = {
@@ -21,6 +22,9 @@ tr_synthetics_adopt = {
 		custom_tooltip = tr_synthetics_adopt_machine_desc
 		trigger = {
 			is_machine_empire = yes
+		}
+		modifier = {
+			MACHINE_species_trait_points_add = 1
 		}
 		weight = {
 			factor = 1
@@ -74,7 +78,7 @@ tr_synthetics_finish = {
 
 tr_synthetics_maintenance_protocols = {
 	modifier = {
-		pop_amenities_usage_robotic_mult = -0.1
+		pop_amenities_usage_robotic_mult = -0.15
 	}
 }
 

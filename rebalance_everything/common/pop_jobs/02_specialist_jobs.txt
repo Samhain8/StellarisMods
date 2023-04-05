@@ -577,7 +577,12 @@ telepath = {
 			}
 			unity = 1
 		}
-
+		produces = {
+			trigger = {
+				has_trait = trait_psionic_will_to_power
+			}
+			influence = 0.12
+		}
 		produces = {
 			trigger = {
 				exists = owner
@@ -700,6 +705,10 @@ telepath = {
 		weight = @specialist_job_weight
 		mult = 2
 		mult = value:job_weights_modifier|JOB|telepath|RESOURCE|unity|
+		modifier = {
+			factor = 5
+			has_trait = trait_psionic_will_to_power
+		}
 		modifier = {
 			factor = 0.2
 			has_citizenship_rights = no
@@ -906,6 +915,15 @@ duelist = {
 		country_naval_cap_add = 6
 	}
 
+	triggered_country_modifier = {
+		potential = {
+			has_trait = trait_cyborg_mechanical_interface
+		}
+		modifier = {
+			country_naval_cap_add = 2
+		}
+	}
+
 	pop_modifier = {
 		pop_defense_armies_add = 2
 	}
@@ -932,6 +950,10 @@ duelist = {
 		modifier = {
 			factor = 1.5
 			has_job = duelist
+		}
+		modifier = {
+			factor = 3
+			has_trait = trait_cyborg_mechanical_interface
 		}
 		modifier = {
 			factor = 0.5
@@ -1382,7 +1404,7 @@ roboticist = {
 			}
 			can_assemble_cyborg_pop = yes
 		}
-		planet_pop_assembly_organic_add = 2.25
+		planet_pop_assembly_organic_add = 2
 	}
 
 	resources = {
@@ -1429,6 +1451,13 @@ healthcare = {
 		category = planet_doctors
 		produces = {
 			society_research = 2
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_active_tradition = tr_cybernetics_transubstantiation_synthesis }
+			}
+			engineering_research = 2
 		}
 		upkeep = {
 			consumer_goods = 2
@@ -1573,6 +1602,15 @@ necromancer = {
 		}
 	}
 
+	triggered_country_modifier = {
+		potential = {
+			has_trait = trait_cyborg_mechanical_interface
+		}
+		modifier = {
+			country_naval_cap_add = 2
+		}
+	}
+
 	pop_modifier = {
 		pop_defense_armies_add = 3
 	}
@@ -1618,6 +1656,10 @@ necromancer = {
 			factor = 10
 			exists = planet
 			planet = { has_modifier = martial_law }
+		}
+		modifier = {
+			factor = 3
+			has_trait = trait_cyborg_mechanical_interface
 		}
 		modifier = {
 			factor = 2
@@ -2596,6 +2638,15 @@ knight = {
 	triggered_country_modifier = {
 		country_naval_cap_add = 4
 		mult = value:scripted_modifier_mult|MODIFIER|knights_independent_category_produces_mult|
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			has_trait = trait_cyborg_mechanical_interface
+		}
+		modifier = {
+			country_naval_cap_add = 2
+		}
 	}
 
 	triggered_country_modifier = {

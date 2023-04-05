@@ -552,8 +552,8 @@ trait_cyborg_mechanical_interface = {
 	randomized = no
 	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
 	modifier = {
-		planet_jobs_alloys_produces_mult = 0.2
-		planet_jobs_consumer_goods_produces_mult = 0.2
+		planet_jobs_alloys_produces_mult = 0.1
+		planet_jobs_consumer_goods_produces_mult = 0.1
 		leader_age = -30
 	}
 	slave_cost = {

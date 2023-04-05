@@ -436,6 +436,14 @@ livestock_zoo_animal = {
 				has_trait = trait_interbreeder
 			}
 		}
+		modifier = {
+			factor = 110000
+			has_citizenship_type = { type = citizenship_slavery country = owner }
+			OR = {
+				has_slavery_type = { type = slavery_livestock }
+				has_slavery_type = { type = slavery_pets }
+			}
+		}
 	}
 }
 
