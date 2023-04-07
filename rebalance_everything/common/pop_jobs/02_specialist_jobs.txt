@@ -761,7 +761,7 @@ entertainer = {
 			trigger = {
 				owner = { has_civic = civic_media_conglomerate }
 			}
-			influence = 0.06
+			influence = 0.04
 		}
 		upkeep = {
 			consumer_goods = 1
