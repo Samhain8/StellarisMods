@@ -50,6 +50,14 @@ operation_gather_information = {
 		cost = {
 			influence = 20
 		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -5
+		}
 		upkeep = {
 			energy = 4
 		}
@@ -97,6 +105,14 @@ operation_hack_communications = {
 		category = operations
 		cost = {
 			influence = 20
+		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -5
 		}
 		upkeep = {
 			energy = 4
@@ -156,6 +172,14 @@ operation_diplomatic_incident = {
 		category = operations
 		cost = {
 			influence = 20
+		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -5
 		}
 		upkeep = {
 			energy = 4
@@ -222,7 +246,15 @@ operation_sleeper_cells = {
 	resources = {
 		category = operations
 		cost = {
-			influence = 45
+			influence = 40
+		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -10
 		}
 		upkeep = {
 			energy = 6
@@ -273,6 +305,14 @@ operation_counter_spy = {
 		category = operations
 		cost = {
 			influence = 60
+		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -15
 		}
 		upkeep = {
 			energy = 6
@@ -338,7 +378,15 @@ operation_acquire_asset = {
 	resources = {
 		category = operations
 		cost = {
-			influence = 45
+			influence = 40
+		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -10
 		}
 		upkeep = {
 			energy = 6
@@ -396,7 +444,15 @@ operation_study_defenses = {
 	resources = {
 		category = operations
 		cost = {
-			influence = 45
+			influence = 40
+		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -10
 		}
 		upkeep = {
 			energy = 6
@@ -469,6 +525,14 @@ operation_expel_corp = {
 		cost = {
 			influence = 60
 		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -15
+		}
 		upkeep = {
 			energy = 7
 		}
@@ -540,6 +604,14 @@ operation_extort_favors = {
 		cost = {
 			influence = 60
 		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -15
+		}
 		upkeep = {
 			energy = 7
 		}
@@ -591,6 +663,14 @@ operation_smear_campaign = {
 		category = operations
 		cost = {
 			influence = 60
+		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -15
 		}
 		upkeep = {
 			energy = 7
@@ -655,6 +735,14 @@ operation_steal_technology = {
 		category = operations
 		cost = {
 			influence = 80
+		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -20
 		}
 		upkeep = {
 			energy = 8
@@ -725,6 +813,14 @@ operation_anti_war = {
 		cost = {
 			influence = 80
 		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -20
+		}
 		upkeep = {
 			energy = 8
 		}
@@ -787,6 +883,14 @@ operation_steal_l_gate = {
 		category = operations
 		cost = {
 			influence = 100
+		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -25
 		}
 		upkeep = {
 			energy = 9
@@ -873,6 +977,14 @@ operation_change_ethics = {
 		cost = {
 			influence = 100
 		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -25
+		}
 		upkeep = {
 			energy = 9
 		}
@@ -950,6 +1062,14 @@ operation_hostile_takeover = {
 		category = operations
 		cost = {
 			influence = 100
+		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -25
 		}
 		upkeep = {
 			energy = 9
@@ -1031,6 +1151,14 @@ operation_sabotage_starbase = {
 		category = operations
 		cost = {
 			influence = 100
+		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -25
 		}
 		upkeep = {
 			energy = 9
@@ -1134,6 +1262,14 @@ operation_industrial_sabotage = {
 		cost = {
 			influence = 120
 		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -30
+		}
 		upkeep = {
 			energy = 10
 		}
@@ -1203,6 +1339,14 @@ operation_foment_rebellion = {
 		category = operations
 		cost = {
 			influence = 180
+		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -45
 		}
 		upkeep = {
 			energy = 12
@@ -1278,6 +1422,14 @@ operation_steal_pops = {
 		category = operations
 		cost = {
 			influence = 180
+		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -45
 		}
 		upkeep = {
 			energy = 12
@@ -1361,6 +1513,14 @@ operation_rescue_pops = {
 		cost = {
 			influence = 180
 		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -45
+		}
 		upkeep = {
 			energy = 12
 		}
@@ -1440,6 +1600,14 @@ operation_arm_privateers = {
 		cost = {
 			influence = 180
 		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -45
+		}
 		upkeep = {
 			energy = 12
 		}
@@ -1493,6 +1661,14 @@ operation_crisis_beacon = {
 		category = operations
 		cost = {
 			influence = 320
+		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -80
 		}
 		upkeep = {
 			energy = 16
@@ -1576,7 +1752,15 @@ operation_steal_galatron = {
    resources = {
 		category = operations
 		cost = {
-			influence = 350
+			influence = 360
+		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -90
 		}
 		upkeep = {
 			energy = 18
@@ -1650,6 +1834,14 @@ operation_weaken_galactic_empire = {
 		cost = {
 			influence = 60
 		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -15
+		}
 		upkeep = {
 			energy = 7
 		}
@@ -1706,6 +1898,14 @@ operation_target_seditionists = {
 		category = operations
 		cost = {
 			influence = 60
+		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -15
 		}
 		upkeep = {
 			energy = 7
@@ -1775,7 +1975,15 @@ operation_spark_rebellion = {
 	resources = {
 		category = operations
 		cost = {
-			influence = 250
+			influence = 260
+		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -65
 		}
 		upkeep = {
 			energy = 14
@@ -1860,7 +2068,15 @@ operation_consume_star = {
 	resources = {
 		category = operations
 		cost = {
-			influence = 250
+			influence = 320
+		}
+		cost = {
+			trigger = {
+				owner = {
+					has_tradition = tr_subterfuge_nda
+				}
+			}
+			influence = -80
 		}
 		upkeep = {
 			energy = 9
