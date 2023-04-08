@@ -1120,7 +1120,7 @@ civic_privatized_exploration = {
 	}
 
 	modifier = {
-		country_starbase_influence_cost_distance_mult = -0.9
+		country_starbase_influence_cost_distance_mult = -0.8
 		local_trade_protection_add = 3000
 		starbase_module_build_speed_mult = 0.3
 		starbase_upgrade_speed_mult = 0.3

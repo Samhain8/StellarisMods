@@ -2428,7 +2428,7 @@ civic_eager_explorers = {
 	}
 
 	modifier = {
-		country_starbase_influence_cost_distance_mult = -0.9
+		country_starbase_influence_cost_distance_mult = -0.8
 		local_trade_protection_add = 3000
 		ship_speed_mult = 0.15
 		science_ship_survey_speed = 0.2

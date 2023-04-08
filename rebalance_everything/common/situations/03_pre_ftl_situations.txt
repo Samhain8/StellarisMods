@@ -2,13 +2,13 @@
 @stone_age_progress_rate	= 0.1	# 1600 years to tech up.
 @bronze_age_progress_rate	= 0.2	# 800 years to tech up.
 @iron_age_progress_rate		= 0.4	# 400 years to tech up.
-@early_progress_rate		= 1		# 160 years to tech up.
+@early_progress_rate		= 0.8	# 200 years to tech up.
 @mid_progress_rate			= 2		# 80 years to tech up.
-@late_progress_rate			= 4		# 40 years to tech up.
-@low_awareness				= 0.5
-@partial_awareness			= 1.0
-@high_awareness				= 1.5
-@full_awareness				= 2
+@late_progress_rate			= 3		# 60 years to tech up.
+@low_awareness				= 0.25
+@partial_awareness			= 0.65
+@high_awareness				= 1
+@full_awareness				= 1.5
 
 pre_ftl_tech_progress_situation = { # This situation's name-key is used in pre-FTL tech level UI code, do not change without code support!
 	picture = GFX_evt_acquire_asset

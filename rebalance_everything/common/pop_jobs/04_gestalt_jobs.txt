@@ -1563,6 +1563,13 @@ maintenance_drone = {
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
+	triggered_country_modifier = {
+		potential = {
+			owner = { has_active_tradition = tr_domination_finish }
+		}
+		country_naval_cap_add = 1
+	}
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = planet.orbital_defence

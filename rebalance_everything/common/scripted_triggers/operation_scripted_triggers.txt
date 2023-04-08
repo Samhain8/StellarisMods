@@ -159,6 +159,7 @@ empire_can_abduct_pops = {
 		has_ascension_perk = ap_nihilistic_acquisition
 		is_civic_machine_assimilator = yes
 		has_valid_civic = civic_barbaric_despoilers
+		has_valid_civic = civic_criminal_heritage
 	}
 }
 

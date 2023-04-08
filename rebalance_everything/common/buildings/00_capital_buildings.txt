@@ -169,7 +169,18 @@ building_capital = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_domination_finish }
+		}
+		modifier = {
+			job_page_add = 1
+			job_page_per_pop = 0.15
 		}
 	}
 
@@ -421,7 +432,18 @@ building_major_capital = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 2
+			planet_housing_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_domination_finish }
+		}
+		modifier = {
+			job_page_add = 1
+			job_page_per_pop = 0.15
 		}
 	}
 
@@ -715,7 +737,18 @@ building_system_capital = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 3
+			planet_housing_add = 4
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_domination_finish }
+		}
+		modifier = {
+			job_page_add = 1
+			job_page_per_pop = 0.15
 		}
 	}
 
@@ -1828,7 +1861,18 @@ building_hab_capital = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_domination_finish }
+		}
+		modifier = {
+			job_page_add = 1
+			job_page_per_pop = 0.15
 		}
 	}
 
@@ -2088,7 +2132,18 @@ building_hab_major_capital = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 2
+			planet_housing_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_domination_finish }
+		}
+		modifier = {
+			job_page_add = 1
+			job_page_per_pop = 0.15
 		}
 	}
 
@@ -3009,7 +3064,18 @@ building_imperial_capital = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_domination_finish }
+		}
+		modifier = {
+			job_page_add = 1
+			job_page_per_pop = 0.15
 		}
 	}
 

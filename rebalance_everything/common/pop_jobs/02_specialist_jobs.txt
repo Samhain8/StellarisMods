@@ -795,7 +795,7 @@ entertainer = {
 			exists = owner
 			owner = { is_pleasure_seeker = yes }
 		}
-		trade_value_add = 5
+		trade_value_add = 4
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
 	}
 
