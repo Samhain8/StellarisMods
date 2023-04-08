@@ -2845,10 +2845,10 @@ generate_home_planet_final_pass = {
 				remove_all_buildings = yes
 				destroy_colony = yes
 			}
-			if = {
-				limit = { NOT = { has_valid_civic = civic_permanent_employment } }
-				change_dominant_species = { species = last_created_species change_all = yes }
-			}
+			#if = {
+			#	limit = { NOT = { has_valid_civic = civic_permanent_employment } }
+			#	change_dominant_species = { species = last_created_species change_all = yes }
+			#}
 		}
 	}
 	if = {
