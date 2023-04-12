@@ -176,7 +176,12 @@ building_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_domination_finish }
+			owner = { 
+				OR = { 
+					has_active_tradition = tr_domination_finish 
+					has_active_tradition = tr_domination_federations_finish
+				}
+			}
 		}
 		modifier = {
 			job_page_add = 1
@@ -439,7 +444,12 @@ building_major_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_domination_finish }
+			owner = { 
+				OR = { 
+					has_active_tradition = tr_domination_finish 
+					has_active_tradition = tr_domination_federations_finish
+				}
+			}
 		}
 		modifier = {
 			job_page_add = 1
@@ -744,7 +754,12 @@ building_system_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_domination_finish }
+			owner = { 
+				OR = { 
+					has_active_tradition = tr_domination_finish 
+					has_active_tradition = tr_domination_federations_finish
+				}
+			}
 		}
 		modifier = {
 			job_page_add = 1
@@ -1868,7 +1883,12 @@ building_hab_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_domination_finish }
+			owner = { 
+				OR = { 
+					has_active_tradition = tr_domination_finish 
+					has_active_tradition = tr_domination_federations_finish
+				}
+			}
 		}
 		modifier = {
 			job_page_add = 1
@@ -2139,7 +2159,12 @@ building_hab_major_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_domination_finish }
+			owner = { 
+				OR = { 
+					has_active_tradition = tr_domination_finish 
+					has_active_tradition = tr_domination_federations_finish
+				}
+			}
 		}
 		modifier = {
 			job_page_add = 1
@@ -3071,7 +3096,12 @@ building_imperial_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_domination_finish }
+			owner = { 
+				OR = { 
+					has_active_tradition = tr_domination_finish 
+					has_active_tradition = tr_domination_federations_finish
+				}
+			}
 		}
 		modifier = {
 			job_page_add = 1

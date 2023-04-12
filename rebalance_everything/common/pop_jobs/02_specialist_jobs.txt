@@ -459,6 +459,16 @@ enforcer = {
 
 	triggered_planet_modifier = {
 		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_adaptability_survival_fittest }
+		}
+		modifier = {
+			pop_environment_tolerance = 0.03
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
 			exists = planet
 			planet = { has_modifier = anticrime_campaign }
 		}

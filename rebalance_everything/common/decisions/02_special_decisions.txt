@@ -20,7 +20,10 @@ decision_prospect = {
 		NOT = { is_planet_class = pc_hive }
 		NOT = { is_planet_class = pc_city }
 		owner = {
-			has_active_tradition = tr_adaptability_finish
+			OR = {
+				has_active_tradition = tr_adaptability_finish
+				has_active_tradition = tr_adaptability_void_finish
+			}
 		}
 		NOT = { has_planet_flag = planet_prospected }
 	}
@@ -78,7 +81,10 @@ decision_prospect_void = {
 	potential = {
 		is_planet_class = pc_habitat
 		owner = {
-			has_active_tradition = tr_adaptability_void_finish
+			OR = {
+				has_active_tradition = tr_adaptability_finish
+				has_active_tradition = tr_adaptability_void_finish
+			}
 		}
 		NOR = {
 			has_planet_flag = energy_habitat

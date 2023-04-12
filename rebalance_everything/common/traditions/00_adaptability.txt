@@ -49,14 +49,46 @@ tr_adaptability_survival_fittest = {
 	possible = {
 		has_tradition = tr_adaptability_recycling
 	}
-
 	modifier = {
 		planet_orbital_bombardment_damage = -0.25
 		army_defense_damage_mult = 0.25
 	}
-
 	ai_weight = {
 		factor = 5000
+	}
+
+	tradition_swap = {
+		name = tr_adaptability_hive_survival_fittest
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			is_hive_empire = yes
+		}
+		modifier = {
+			planet_orbital_bombardment_damage = -0.25
+			army_defense_damage_mult = 0.25
+			BIOLOGICAL_species_trait_points_add = 1
+		}
+		weight = {
+			factor = 5000
+		}
+	}
+
+	tradition_swap = {
+		name = tr_adaptability_machine_survival_fittest
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			is_machine_empire = yes
+		}
+		modifier = {
+			planet_orbital_bombardment_damage = -0.25
+			army_defense_damage_mult = 0.25
+			ROBOT_species_trait_points_add = 1
+		}
+		weight = {
+			factor = 5000
+		}
 	}
 }
 
@@ -90,7 +122,7 @@ tr_adaptability_appropriation = {
 	}
 
 	modifier = {
-		pop_resettlement_cost_mult = -0.33
+		pop_resettlement_cost_mult = -0.5
 	}
 
 	ai_weight = {

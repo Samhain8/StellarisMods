@@ -355,13 +355,13 @@ operation_anti_war_desc:0 "Skilled operatives can spread our version of the trut
 operation_anti_war_on_success:0 "$IF_SUCCESSFUL|E$\nOur target will suffer increased war exhaustion gain and decreased stability."
 operation_anti_war_dont_stack_this:0 "$TRIGGER_FAIL$ §RThe [root.target.GetAdj] war effort has already been undermined. The effects will last until §Y[Root.Target.anti_war_sentiments]§!§!"
 
-operation_steal_pops:0 "Xeno-Trafficking"
+operation_steal_pops:0 "Xeno-Abduction"
 operation_steal_pops_desc:0 "Our operatives will conspire with local criminal elements to kidnap pops of the target empire."
 operation_steal_pops_on_success:0 "$IF_SUCCESSFUL|E$\nWe will abduct several pops from the [root.target.GetName]."
 operation_steal_pops_recent:0 "$TRIGGER_FAIL$ §RWe must wait at least §Y[Root.recent_steal_pops]§! before attempting another raid.§!\n"
 operation_steal_pops_five_pops:0 "$TRIGGER_FAIL$ §RThe target must have at least 3 organic, non-gestalt pops.§!\n"
 
-operation_rescue_pops:0 "Xeno-Abolition"
+operation_rescue_pops:0 "Xeno-Emancipation"
 operation_rescue_pops_desc:0 "Our operatives will conspire with sympathetic locals to rescue pops from slavery and purges."
 operation_rescue_pops_on_success:0 "$IF_SUCCESSFUL|E$\nWe will rescue several pops from slavery or worse."
 operation_rescue_pops_five_pops:0 "$TRIGGER_FAIL$ §RThe target must have at least 3 oppressed organic pops.§!\n"
@@ -377,7 +377,7 @@ operation_study_defenses_on_success:0 "$IF_SUCCESSFUL|E$\nWe will study the targ
 operation_study_defenses_recent:0 "$TRIGGER_FAIL$ §RWe have already scouted their defenses. Our intelligence should remain current until §Y[Root.recent_military_intel]§!§!\n"
 operation_study_defenses_ally:0 "$TRIGGER_FAIL$ §ROur allies have already scouted their defenses.§!\n"
 
-operation_hostile_takeover:0 "Hostile Takeover"
+operation_hostile_takeover:0 "Covert Seizure"
 operation_hostile_takeover_desc:0 "Our operatives will conspire to seize control of a [root.target.GetAdj] branch office."
 operation_hostile_takeover_on_success:0 "$IF_SUCCESSFUL|E$\nWe will seize one of our target's branch office."
 operation_hostile_takeover_no_valid_targets:0 "$TRIGGER_FAIL$ §RThe target must have branch offices on an empire we share contact with.§!\n"

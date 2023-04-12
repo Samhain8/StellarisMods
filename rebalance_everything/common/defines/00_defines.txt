@@ -650,7 +650,7 @@
 
 		BRANCH_OFFICE_INCOME_SCALE				= 0.5 # Per planet trade value
 		BRANCH_OFFICE_COST_INCREASE_MIN_RANGE	= 3		# Above this number of hyperlane jumps away, increase cost for branch offices
-		BRANCH_OFFICE_COST_INCREASE_SCALE		= 0.1	# Additional cost per jump
+		BRANCH_OFFICE_COST_INCREASE_SCALE		= 0.05	# Additional cost per jump
 
 		REPAIR_BUILDING_COST				= 0.5
 		REPAIR_BUILDING_TIME				= 0.5
@@ -1041,7 +1041,7 @@
 		EMPIRE_SIZE_FROM_DISTRICTS				= 0.5	# Per district
 		EMPIRE_SIZE_FROM_SYSTEMS				= 1		# Per system
 		EMPIRE_SIZE_FROM_COLONIES				= 10	# Per planet
-		EMPIRE_SIZE_FROM_BRANCH_OFFICES			= 2		# Per branch office
+		EMPIRE_SIZE_FROM_BRANCH_OFFICES			= 4		# Per branch office
 		EMPIRE_SIZE_FROM_POPS					= 1		# Per pop
 
 		DIPLOMACY_WEIGHT_BASE					= 0.0		# Base diplomacy weight for all empires
