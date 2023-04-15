@@ -1759,6 +1759,7 @@ is_wet = {
 is_dry = {
 	has_climate = dry
 	NOT = { is_planet_class = pc_city }
+	NOT = { is_planet_class = pc_relic }
 }
 
 is_barren = {

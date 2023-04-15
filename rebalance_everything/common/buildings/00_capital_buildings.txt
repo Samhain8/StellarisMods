@@ -218,10 +218,26 @@ building_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_authority = auth_corporate }
+			owner = { 
+				has_authority = auth_corporate
+				NOT = { has_civic = civic_merchant_nobles }
+			}
 		}
 		modifier = {
 			job_executive_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_civic = civic_merchant_nobles
+			}
+		}
+		modifier = {
+			job_noble_add = 1
+			job_merchant_add = 1
 		}
 	}
 
@@ -313,7 +329,10 @@ building_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_civic = civic_aristocratic_elite
+				OR = {
+					has_civic = civic_aristocratic_elite
+					has_civic = civic_merchant_nobles
+				}
 			}
 		}
 		text = job_noble_effect_desc
@@ -331,7 +350,10 @@ building_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_civic = civic_merchant_guilds
+				OR = {
+					has_civic = civic_merchant_guilds
+					has_civic = civic_merchant_nobles
+				}
 			}
 		}
 		text = job_merchant_effect_desc
@@ -486,13 +508,28 @@ building_major_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_authority = auth_corporate }
+			owner = { 
+				has_authority = auth_corporate
+				NOT = { has_civic = civic_merchant_nobles }
+			}
 		}
 		modifier = {
 			job_executive_add = 3
 		}
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_civic = civic_merchant_nobles
+			}
+		}
+		modifier = {
+			job_noble_add = 1
+			job_merchant_add = 2
+		}
+	}
 
 	triggered_planet_modifier = {
 		potential = {
@@ -602,7 +639,10 @@ building_major_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_civic = civic_aristocratic_elite
+				OR = {
+					has_civic = civic_aristocratic_elite
+					has_civic = civic_merchant_nobles
+				}
 			}
 		}
 		text = job_noble_effect_desc
@@ -622,7 +662,10 @@ building_major_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_civic = civic_merchant_guilds
+				OR = {
+					has_civic = civic_merchant_guilds
+					has_civic = civic_merchant_nobles
+				}
 			}
 		}
 		text = job_merchant_effect_desc
@@ -796,13 +839,28 @@ building_system_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_authority = auth_corporate }
+			owner = { 
+				has_authority = auth_corporate
+				NOT = { has_civic = civic_merchant_nobles }
+			}
 		}
 		modifier = {
 			job_executive_add = 4
 		}
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_civic = civic_merchant_nobles
+			}
+		}
+		modifier = {
+			job_noble_add = 2
+			job_merchant_add = 2
+		}
+	}
 
 	triggered_planet_modifier = {
 		potential = {
@@ -922,7 +980,10 @@ building_system_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_civic = civic_aristocratic_elite
+				OR = {
+					has_civic = civic_aristocratic_elite
+					has_civic = civic_merchant_nobles
+				}
 			}
 		}
 		text = job_noble_effect_desc
@@ -940,7 +1001,10 @@ building_system_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_civic = civic_merchant_guilds
+				OR = {
+					has_civic = civic_merchant_guilds
+					has_civic = civic_merchant_nobles
+				}
 			}
 		}
 		text = job_merchant_effect_desc
@@ -1920,7 +1984,7 @@ building_hab_capital = {
 			owner = {
 				NOR = {
 					has_authority = auth_corporate
-					#has_origin = origin_void_dwellers
+					has_civic = civic_merchant_nobles
 				}
 				is_regular_empire = yes
 			}
@@ -1933,11 +1997,23 @@ building_hab_capital = {
 			exists = owner
 			owner = {
 				has_authority = auth_corporate
-				#NOT = { has_origin = origin_void_dwellers }
+				NOT = { has_civic = civic_merchant_nobles }
 			}
 		}
 		modifier = {
 			job_executive_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_civic = civic_merchant_nobles
+			}
+		}
+		modifier = {
+			job_merchant_add = 1
 		}
 	}
 
@@ -2049,6 +2125,16 @@ building_hab_capital = {
 			}
 		}
 		text = job_executive_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				has_civic = civic_merchant_nobles
+			}
+		}
+		text = job_merchant_effect_desc
 	}
 
 	triggered_desc = {
@@ -2272,10 +2358,27 @@ building_hab_major_capital = {
 		potential = {
 			NOT = { has_planet_flag = toxic_knights_habitat }
 			exists = owner
-			owner = { has_authority = auth_corporate }
+			owner = { 
+				has_authority = auth_corporate
+				NOT = { has_civic = civic_merchant_nobles }
+			}
 		}
 		modifier = {
 			job_executive_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			NOT = { has_planet_flag = toxic_knights_habitat }
+			exists = owner
+			owner = { 
+				has_civic = civic_merchant_nobles
+			}
+		}
+		modifier = {
+			job_noble_add = 1
+			job_merchant_add = 1
 		}
 	}
 
@@ -2398,7 +2501,10 @@ building_hab_major_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_civic = civic_aristocratic_elite
+				OR = {
+					has_civic = civic_aristocratic_elite
+					has_civic = civic_merchant_nobles
+				}
 			}
 			OR = {
 				NOT = { has_planet_flag = toxic_knights_habitat }
@@ -2411,7 +2517,10 @@ building_hab_major_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_civic = civic_merchant_guilds
+				OR = {
+					has_civic = civic_merchant_guilds
+					has_civic = civic_merchant_nobles
+				}
 			}
 			OR = {
 				NOT = { has_planet_flag = toxic_knights_habitat }
@@ -3138,13 +3247,28 @@ building_imperial_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_authority = auth_corporate }
+			owner = { 
+				has_authority = auth_corporate
+				NOT = { has_civic = civic_merchant_nobles }
+			}
 		}
 		modifier = {
 			job_executive_add = 6
 		}
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_civic = civic_merchant_nobles
+			}
+		}
+		modifier = {
+			job_noble_add = 3
+			job_merchant_add = 3
+		}
+	}
 
 	triggered_planet_modifier = {
 		potential = {
@@ -3256,7 +3380,10 @@ building_imperial_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_civic = civic_aristocratic_elite
+				OR = {
+					has_civic = civic_aristocratic_elite
+					has_civic = civic_merchant_nobles
+				}
 			}
 		}
 		text = job_noble_effect_desc
@@ -3274,7 +3401,10 @@ building_imperial_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_civic = civic_merchant_guilds
+				OR = {
+					has_civic = civic_merchant_guilds
+					has_civic = civic_merchant_nobles
+				}
 			}
 		}
 		text = job_merchant_effect_desc

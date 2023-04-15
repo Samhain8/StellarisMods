@@ -44,7 +44,7 @@ general = {
 
 scientist = {
 	can_research = yes
-	max_trait_points = 1
+	max_trait_points = 2
 	can_have_traits = yes
 	resources = {
 		category = leader_scientists

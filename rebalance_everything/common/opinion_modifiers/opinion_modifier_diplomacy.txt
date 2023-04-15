@@ -1,7 +1,7 @@
 ### Event Modifiers ###
 opinion_stole_pops = {
 	opinion = {
-		base = -60
+		base = -50
 
 		modifier = {
 			add = -20
@@ -17,7 +17,7 @@ opinion_stole_pops = {
 			has_ethic = ethic_fanatic_egalitarian
 		}
 		modifier = {
-			add = -40
+			add = -30
 			has_valid_civic = civic_machine_servitor
 		}
 		modifier = {
@@ -30,7 +30,7 @@ opinion_stole_pops = {
 	}
 
 	decay = {
-		base = 1
+		base = 2
 	}
 }
 
@@ -44,7 +44,7 @@ opinion_freed_pops = {
 	}
 
 	decay = {
-		base = 1
+		base = 2
 	}
 }
 
@@ -57,7 +57,7 @@ opinion_betrayed_trust = {
 		}
 		modifier = {
 			add = 10
-			has_ethic = ethic_fanatic_xenophobe
+			has_ethic = ethic_fanatic_xenophile
 		}
 		modifier = {
 			add = 5
@@ -78,7 +78,7 @@ opinion_betrayed_trust = {
 		modifier = {
 			add = -10
 			OR = {
-				is_xenophile = yes
+				is_xenophobe = yes
 				is_xenophobic_isolationists = yes
 			}
 		}
@@ -117,7 +117,7 @@ opinion_refused_to_sell = {
 
 opinion_tried_to_steal_secrets = {
 	opinion = {
-		base = -50
+		base = -40
 		modifier = {
 			add = 5
 			has_ethic = ethic_xenophile
@@ -164,7 +164,7 @@ opinion_ejected_envoy = {
 	}
 
 	decay = {
-		base = 1
+		base = 2
 	}
 }
 
@@ -174,7 +174,7 @@ opinion_sided_with_us = {
 	}
 
 	decay = {
-		base = 1
+		base = 2
 	}
 }
 

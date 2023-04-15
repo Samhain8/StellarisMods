@@ -636,8 +636,8 @@ ap_defender_of_the_galaxy = {
 
 ap_interstellar_dominion = {
 	modifier = {
-		country_starbase_influence_cost_mult = -0.20
-		country_claim_influence_cost_mult = -0.20
+		country_starbase_influence_cost_mult = -0.25
+		country_claim_influence_cost_mult = -0.25
 	}
 
 	potential = {
@@ -946,7 +946,7 @@ ap_imperial_prerogative = {
 
 ap_executive_vigor = {
 	modifier = {
-		country_edict_fund_add = 60
+		country_edict_fund_add = 80
 		country_traditions_influence_produces_add = 1
 	}
 
@@ -963,8 +963,9 @@ ap_executive_vigor = {
 
 ap_transcendent_learning = {
 	modifier = {
-		leader_skill_levels = 2
 		species_leader_exp_gain = 0.50
+		num_tech_alternatives_add = 1
+		intel_decryption_add = 2
 	}
 
 	potential = {

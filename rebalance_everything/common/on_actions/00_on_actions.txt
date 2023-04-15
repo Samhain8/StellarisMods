@@ -2431,10 +2431,10 @@ on_colony_1_year_old = {
 		colony_mod.161 # Gatekeeper for modifier colony events
 	}
 
-	random_events = {
-		300 = 0
-		30 = factions.3000 # The Political Frontier
-	}
+	#random_events = {
+	#	300 = 0
+	#	30 = factions.3000 # The Political Frontier
+	#}
 }
 
 on_colony_2_years_old = {
@@ -2444,7 +2444,6 @@ on_colony_2_years_old = {
 	random_events = {
 		100 = 0
 
-		30 = factions.3000 # The Political Frontier
 
 		### Colony Events & Chains - 14
 		15 = colony.1 # Migrating Forests
@@ -2478,6 +2477,7 @@ on_colony_2_years_old = {
 		#15 = colony.2030 # Assassination
 		#15 = colony.2035 # Infectious Disease
 		#5 = colony.2010 # A Change of Heart
+		#5 = factions.3000 # The Political Frontier
 
 		### Archaeology Colony Sites
 		5 = ancrel.6049 # Blade of the Huntress
@@ -2533,6 +2533,7 @@ on_colony_3_years_old = {
 		#15 = colony.2030 # Assassination
 		#15 = colony.2035 # Infectious Disease
 		#5 = colony.2010 # A Change of Heart
+		#5 = factions.3000 # The Political Frontier
 
 		### Archaeology Colony Sites
 		5 = ancrel.6049 # Blade of the Huntress
@@ -2583,6 +2584,7 @@ on_colony_4_years_old = {
 		#15 = colony.2030 # Assassination
 		#15 = colony.2035 # Infectious Disease
 		#5 = colony.2010 # A Change of Heart
+		#5 = factions.3000 # The Political Frontier
 
 		### Archaeology Colony Sites
 		10 = ancrel.6049 # Blade of the Huntress
@@ -2619,6 +2621,7 @@ on_colony_5_years_old = {
 		#15 = colony.2030 # Assassination
 		#15 = colony.2035 # Infectious Disease
 		#5 = colony.2010 # A Change of Heart
+		#5 = factions.3000 # The Political Frontier
 
 		### Archaeology Colony Sites
 		10 = ancrel.6049 # Blade of the Huntress

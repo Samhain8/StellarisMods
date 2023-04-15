@@ -16,7 +16,7 @@ trait_cyborg_power_drills = {
 	}
 
 	slave_cost = {
-		energy = 750
+		energy = 1000
 	}
 	assembly_score = {
 		modifier = {
@@ -48,7 +48,7 @@ trait_cyborg_harvesters = {
 	}
 
 	slave_cost = {
-		energy = 750
+		energy = 1000
 	}
 	assembly_score = {
 		modifier = {
@@ -111,7 +111,7 @@ trait_cyborg_efficient_processors = {
 	}
 
 	slave_cost = {
-		energy = 500
+		energy = 1200
 	}
 	assembly_score = {
 		modifier = {
@@ -140,7 +140,7 @@ trait_cyborg_logic_engines = {
 	}
 
 	slave_cost = {
-		energy = 750
+		energy = 1000
 	}
 	assembly_score = {
 		modifier = {
@@ -169,7 +169,7 @@ trait_cyborg_loyalty_circuits = {
 	}
 
 	slave_cost = {
-		energy = 500
+		energy = 1000
 	}
 }
 
@@ -188,13 +188,13 @@ trait_cyborg_double_jointed = {
 	randomized = no
 	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
 	modifier = {
-		pop_housing_usage_mult = -0.1
+		pop_housing_usage_mult = -0.15
 		pop_growth_from_immigration = 0.15
 		pop_resettlement_cost_mult = -0.25
 	}
 
 	slave_cost = {
-		energy = 1500
+		energy = 1000
 	}
 }
 
@@ -247,7 +247,7 @@ trait_cyborg_enhanced_memory = {
 		factor = 0
 	}
 	slave_cost = {
-		energy = 750
+		energy = 1000
 	}
 }
 
@@ -270,7 +270,7 @@ trait_cyborg_durable = {
 		leader_age = 30
 	}
 	slave_cost = {
-		energy = 750
+		energy = 1000
 	}
 }
 
@@ -296,7 +296,7 @@ trait_cyborg_high_maintenance = {
 		factor = 0
 	}
 	slave_cost = {
-		energy = -150
+		energy = -250
 	}
 }
 
@@ -320,7 +320,7 @@ trait_cyborg_learning_algorithms = {
 	}
 
 	slave_cost = {
-		energy = 1500
+		energy = 1000
 	}
 }
 
@@ -343,7 +343,7 @@ trait_cyborg_power_intensive = {
 	}
 
 	slave_cost = {
-		energy = -250
+		energy = -500
 	}
 }
 
@@ -396,7 +396,7 @@ trait_cyborg_streamlined_protocols = {
 		species_empire_size_mult = -0.20
 	}
 	slave_cost = {
-		energy = 750
+		energy = 1000
 	}
 }
 
@@ -417,7 +417,7 @@ trait_cyborg_high_bandwidth = {
 		leader_age = -30
 	}
 	slave_cost = {
-		energy = -150
+		energy = -500
 	}
 }
 
@@ -439,7 +439,7 @@ trait_cyborg_trading_algorithms = {
 		pop_job_trade_mult = 0.25
 	}
 	slave_cost = {
-		energy = 500
+		energy = 1000
 	}
 }
 
@@ -458,10 +458,11 @@ trait_cyborg_neon_allure = {
 	randomized = no
 	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
 	modifier = {
-		pop_job_amenities_mult = 0.25
+		pop_job_amenities_mult = 0.2
+		planet_jobs_unity_produces_mult = 0.1
 	}
 	slave_cost = {
-		energy = 500
+		energy = 1000
 	}
 }
 
@@ -484,7 +485,7 @@ trait_cyborg_armored = {
 		army_damage_mult = 0.3
 	}
 	slave_cost = {
-		energy = 500
+		energy = 1000
 	}
 }
 
@@ -508,7 +509,7 @@ trait_cyborg_willing_tool = {
 		leader_age = -30
 	}
 	slave_cost = {
-		energy = 500
+		energy = 1500
 	}
 }
 
@@ -533,7 +534,7 @@ trait_cyborg_organic_recyclers = {
 		leader_age = -30
 	}
 	slave_cost = {
-		energy = 500
+		energy = 1500
 	}
 }
 
@@ -557,6 +558,6 @@ trait_cyborg_mechanical_interface = {
 		leader_age = -30
 	}
 	slave_cost = {
-		energy = 500
+		energy = 1500
 	}
 }

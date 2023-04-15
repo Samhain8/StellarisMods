@@ -1373,7 +1373,7 @@ pc_shattered_ring_habitable = {
 
 	is_artificial_planet = yes
 
-	carry_cap_per_free_district = @carry_cap_normal
+	carry_cap_per_free_district = @carry_cap_high
 
 	modifier = {
 		pop_environment_tolerance = 1.0
@@ -1414,7 +1414,7 @@ pc_habitat = {
 		pop_environment_tolerance = 0.70
 	}
 
-	carry_cap_per_free_district = @carry_cap_low
+	carry_cap_per_free_district = @carry_cap_normal
 }
 
 pc_shrouded = {
