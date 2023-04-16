@@ -699,18 +699,57 @@ trait_compliance_instincts = {
 		}
 		modifier = {
 			species_empire_size_mult = -0.10
-			pop_government_ethic_attraction = 0.15
 			pop_cat_slave_happiness = 0.1
 		}
 	}
 	modifier = {
 		species_empire_size_mult = -0.10
-		pop_government_ethic_attraction = 0.15
 		pop_cat_slave_happiness = 0.1
-		leader_age = -20
+		leader_age = -15
 	}
 	slave_cost = {
 		energy = 500
+	}
+}
+
+trait_stunted_growth = {
+	icon = "gfx/interface/icons/traits/trait_expressed_tradition.dds"
+	host_has_dlc = "Toxoids Species Pack"
+	cost = 0
+	potential_crossbreeding_chance = 1.0	# 1.0 = 100% chance of being considered for new traits when forming half-species. does not guarantee the trait will be added if it costs points.
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_origins = { origin_overtuned }
+	valid_for_all_origins = no
+	randomized = no
+	species_potential_add = {
+		exists = from
+		from = { has_origin = origin_overtuned }
+	}
+	species_possible_remove = {
+		can_remove_overtuned_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_edict = damn_the_consequences }
+		}
+		modifier = {
+			pop_housing_usage_mult = -0.2
+			army_damage_mult = -0.20
+			planet_jobs_worker_produces_mult = -0.025
+		}
+	}
+	modifier = {
+		pop_housing_usage_mult = -0.2
+		army_damage_mult = -0.20
+		planet_jobs_worker_produces_mult = -0.025
+		leader_age = -5
+	}
+	slave_cost = {
+		energy = 100
 	}
 }
 
