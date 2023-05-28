@@ -429,15 +429,18 @@ payback_freedom_of_speech = {
 }
 
 payback_declining_healthcare = {
+	icon = "gfx/interface/icons/modifiers/mod_negative_pop_growth_req.dds"
 	pop_growth_speed_reduction = 0.1
 	pop_citizen_happiness = -0.05
 }
 
 payback_declining_healthcare_alt = {
+	icon = "gfx/interface/icons/modifiers/mod_negative_pop_growth_req.dds"
 	pop_growth_speed_reduction = 0.1
 }
 
 payback_declining_healthcare_necro = {
+	icon = "gfx/interface/icons/modifiers/mod_negative_pop_growth_req.dds"
 	pop_growth_speed_reduction = 0.1
 	pop_citizen_happiness = 0.05
 }
@@ -498,6 +501,12 @@ payback_underdog = {
 	damage_vs_country_type_ai_empire_mult = 0.2
 	damage_vs_country_type_gray_goo_mult = 0.2
 	damage_vs_player_crisis_mult = 0.2
+}
+
+payback_underdog_khan = {
+	damage_vs_country_type_dormant_marauders_mult = 0.5
+	damage_vs_country_type_awakened_marauders_mult = 0.5
+	damage_vs_country_type_pirate_mult = 0.5
 }
 
 # Fear of the Dark
@@ -787,6 +796,24 @@ young_people = {
 	lithoid_pop_happiness = 0.10
 }
 
+bane_of_the_prophetess = {
+	pop_ethic_militarist_attraction_mult = 0.15
+	ship_weapon_damage = 0.05
+}
+
+bane_of_the_prophetess_gestalt = {
+	ship_weapon_damage = 0.1
+}
+
+charynoi_redemption = {
+	country_unity_produces_mult = 0.1
+	station_observers_produces_mult = 0.5
+}
+
+paradisiacal_habitat = {
+	pop_environment_tolerance = 0.3
+}
+
 singularity_situation_01 = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_luxuries.dds"
 	icon_frame = 1
@@ -814,13 +841,13 @@ singularity_situation_04 = {
 	icon_frame = 1
 	country_food_produces_mult = 0.2
 }
- 
+
 singularity_situation_05 = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_resources_2.dds"
 	icon_frame = 3
 	planet_amenities_mult = -0.2
 }
- 
+
 singularity_situation_06 = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_engineering_research.dds"
 	icon_frame = 1
