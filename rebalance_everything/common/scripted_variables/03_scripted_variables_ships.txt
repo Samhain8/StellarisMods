@@ -81,7 +81,7 @@
 @battleship_collision_radius = 6
 @battleship_formation_priority = 50
 
-@battleship_hp = 3000
+@battleship_hp = 3200
 @battleship_evasion = 5
 @battleship_build_time = 480
 

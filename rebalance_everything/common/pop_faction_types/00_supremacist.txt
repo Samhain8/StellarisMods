@@ -154,7 +154,7 @@ supremacist = {
 		desc = "SUPREMACIST_UNRESTRICTED_STUDY_DESC"
 
 		fulfilled_effect = 5
-		unfulfilled_effect = -10
+		unfulfilled_effect = -5
 
 		potential = {
 			exists = owner
@@ -182,8 +182,8 @@ supremacist = {
 		unfulfilled_title = "SUPREMACIST_HAS_FREE_ALIENS"
 		desc = "SUPREMACIST_ALIEN_SLAVES_DESC"
 
-		fulfilled_effect = 5
-		unfulfilled_effect = -10
+		fulfilled_effect = 10
+		unfulfilled_effect = -15
 
 		potential = {
 			exists = owner

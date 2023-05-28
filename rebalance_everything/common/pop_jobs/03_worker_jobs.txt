@@ -1528,13 +1528,13 @@ page = {
 	resources = {
 		category = planet_entertainers
 		produces = {
-			unity = 1
+			consumer_goods = 1
 		}
 		produces = {
 			trigger = {
-				owner = { has_slaver_civic = yes }
+				owner = { has_valid_civic = civic_feudal_realm }
 			}
-			consumer_goods = 1
+			unity = 1
 		}
 	}
 
@@ -1549,13 +1549,29 @@ page = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			OR = {
-				owner = { is_pleasure_seeker = yes }
-			}
+			owner = { is_pleasure_seeker = yes }
 		}
 		modifier = {
 			pop_growth_speed = 0.01
 		}
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			is_organic_species = yes
+			exists = owner
+			owner = { is_pleasure_seeker = yes }
+		}
+		pop_housing_usage_add = -0.15
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_slaver_civic = yes }
+		}
+		trade_value_add = 2
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
 	}
 
 	weight = {
