@@ -12,6 +12,7 @@ military = {
 		intel_military_fleet_details
 		intel_military_starbases
 		intel_military_ai_prepare_war
+		intel_military_generals
 	}
 
 	intel_level = {

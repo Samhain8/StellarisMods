@@ -121,6 +121,12 @@ citizenship_assimilation = {
 			OR = {
 				is_homicidal = no
 				AND = {
+					is_homicidal = yes
+					root = {
+						is_same_species = prev
+					}
+				}
+				AND = {
 					has_civic = civic_machine_terminator
 					has_active_tradition = tr_synthetics_adopt_machine
 					root = {
@@ -705,7 +711,7 @@ citizenship_purge = {
 			from = { has_policy_flag = robots_outlawed }
 			AND = {
 				from = { has_authority = auth_hive_mind }
-				is_robotic_species = yes
+				is_robotic = yes
 			}
 		}
 	}
@@ -719,9 +725,22 @@ citizenship_purge = {
 		else = {
 			custom_tooltip = {
 				fail_text = is_broken_shackles_origin
-				NOT = { 
-					from = { 
-						has_origin = origin_broken_shackles 
+				if = {
+					limit = {
+						OR = {
+							is_robotic = no
+							AND = {
+								is_robotic = yes
+								NOT = {
+									from = { has_policy_flag = robots_outlawed }
+								}
+							}
+						}
+					}
+					from = {
+						NOT = {
+							has_origin = origin_broken_shackles
+						}
 					}
 				}
 			}

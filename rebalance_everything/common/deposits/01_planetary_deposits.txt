@@ -1140,7 +1140,7 @@ d_fungal_forest = {
 
 d_dust_caverns = {
 	is_for_colonizable = yes
-	category = deposit_cat_rare
+	category = deposit_cat_rare_resource
 
 	potential = {
 		can_have_habitable_deposits = yes
@@ -1175,7 +1175,7 @@ d_dust_caverns = {
 
 d_dust_desert = {
 	is_for_colonizable = yes
-	category = deposit_cat_rare
+	category = deposit_cat_rare_resource
 
 	potential = {
 		can_have_habitable_deposits = yes
@@ -1215,7 +1215,7 @@ d_dust_desert = {
 
 d_bubbling_swamp = {
 	is_for_colonizable = yes
-	category = deposit_cat_rare
+	category = deposit_cat_rare_resource
 
 	potential = {
 		can_have_habitable_deposits = yes
@@ -1250,7 +1250,7 @@ d_bubbling_swamp = {
 
 d_fuming_bog = {
 	is_for_colonizable = yes
-	category = deposit_cat_rare
+	category = deposit_cat_rare_resource
 
 	potential = {
 		can_have_habitable_deposits = yes
@@ -1289,7 +1289,7 @@ d_fuming_bog = {
 
 d_crystalline_caverns = {
 	is_for_colonizable = yes
-	category = deposit_cat_rare
+	category = deposit_cat_rare_resource
 
 	potential = {
 		can_have_habitable_deposits = yes
@@ -1324,7 +1324,7 @@ d_crystalline_caverns = {
 
 d_crystal_forest = {
 	is_for_colonizable = yes
-	category = deposit_cat_rare
+	category = deposit_cat_rare_resource
 
 	planet_modifier = {
 		building_crystal_mines_max = 2
@@ -1364,7 +1364,7 @@ d_crystal_forest = {
 
 d_crystal_reef = {
 	is_for_colonizable = yes
-	category = deposit_cat_rare
+	category = deposit_cat_rare_resource
 
 	planet_modifier = {
 		building_crystal_mines_max = 2

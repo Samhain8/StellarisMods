@@ -43,6 +43,14 @@ generate_subterranean_pre_ftls_on_planet = {
 	pre_ftl_clean_up_effect = yes
 }
 
+generate_chosen_pre_ftls_on_planet = {
+	set_planet_flag = pre_ftl_default
+	#Don't create species. Last created species is already correct
+	create_very_early_pre_ftl_empire = yes
+	setup_pre_ftl_planet = yes
+	pre_ftl_clean_up_effect = yes
+}
+
 # This is called before the pre-ftl species is created due to interactions between various origins and the pop creation effect.
 select_pre_ftl_origin = {
 	# Void Dwellers
@@ -438,15 +446,36 @@ create_pre_ftl_species = {
 		}
 	}
 	else = {
-		create_species = {
-			name = random
-			class = random_pre_ftl
-			portrait = random
-			homeworld = THIS
-			traits = {
-				trait = random_traits
+		random_list = {
+			99 = {
+				create_species = {
+					name = random
+					class = random_pre_ftl
+					portrait = random
+					homeworld = THIS
+					traits = {
+						trait = random_traits
+					}
+				}
+			}
+			1 = {
+				create_species = {
+					name = random
+					class = random_pre_ftl
+					portrait = random
+					homeworld = THIS
+					traits = {
+						trait = random_traits
+						trait = "trait_presapient_forcefully_devolved"
+					}
+				}
+				modifier = {
+					factor = 0
+					has_global_flag = forcefully_devolved_pre_ftl_rolled
+				}
 			}
 		}
+		set_global_flag = forcefully_devolved_pre_ftl_rolled
 	}
 }
 
@@ -2366,6 +2395,9 @@ create_generic_presapient_species = {
 	while = {
 		count = 3
 		create_pop = { species = event_target:latest_presapient }
+	}
+	event_target:pre_sapient_planet = {
+		set_planet_flag = pre_sapient_planet
 	}
 }
 

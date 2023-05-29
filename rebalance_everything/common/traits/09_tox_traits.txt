@@ -508,9 +508,9 @@ trait_elevated_synapses = {
 			owner = { NOT = { has_edict = damn_the_consequences } }
 		}
 		modifier = {
-			planet_jobs_physics_research_produces_mult = 0.2
-			planet_jobs_society_research_produces_mult = 0.2
-			planet_jobs_engineering_research_produces_mult = 0.2
+			planet_jobs_physics_research_produces_mult = 0.15
+			planet_jobs_society_research_produces_mult = 0.15
+			planet_jobs_engineering_research_produces_mult = 0.15
 		}
 	}
 	triggered_pop_modifier = {
@@ -519,15 +519,14 @@ trait_elevated_synapses = {
 			owner = { has_edict = damn_the_consequences }
 		}
 		modifier = {
-			planet_jobs_physics_research_produces_mult = 0.4
-			planet_jobs_society_research_produces_mult = 0.4
-			planet_jobs_engineering_research_produces_mult = 0.4
+			planet_jobs_physics_research_produces_mult = 0.3
+			planet_jobs_society_research_produces_mult = 0.3
+			planet_jobs_engineering_research_produces_mult = 0.3
 		}
 	}
 	modifier = {
 		leader_age = -30
-		leader_skill_levels = 1
-		species_leader_exp_gain = 0.35
+		species_leader_exp_gain = 0.30
 	}
 	assembly_score = {
 		modifier = {
