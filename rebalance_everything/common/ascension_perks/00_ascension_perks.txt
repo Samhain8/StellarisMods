@@ -804,7 +804,9 @@ ap_galactic_contender = {
 
 ap_technological_ascendancy = {
 	modifier = {
-		all_technology_research_speed = 0.1
+		all_technology_research_speed = 0.05
+		num_tech_alternatives_add = 1
+		intel_decryption_add = 2
 	}
 
 	potential = {
@@ -927,6 +929,7 @@ ap_imperial_prerogative = {
 	modifier = {
 		empire_size_colonies_mult = -0.50
 		empire_size_systems_mult = -0.25
+		country_leader_cap_add = 2
 	}
 
 	potential = {
@@ -965,9 +968,8 @@ ap_executive_vigor = {
 ap_transcendent_learning = {
 	modifier = {
 		country_leader_cap_add = 2
-		species_leader_exp_gain = 0.50
-		#num_tech_alternatives_add = 1
-		#intel_decryption_add = 2
+		country_leader_pool_size = 1
+		species_leader_exp_gain = 0.33
 	}
 
 	potential = {

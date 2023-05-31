@@ -1109,6 +1109,7 @@ district_hab_cultural = {
 			owner = {
 				is_regular_empire = yes
 				is_warrior_culture = no
+				NOT = { has_valid_civic = civic_dystopian_society }
 			}
 		}
 		text = job_entertainer_effect_desc
