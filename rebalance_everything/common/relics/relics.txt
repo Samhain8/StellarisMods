@@ -733,6 +733,7 @@ r_zro_crystal = {
 		potential = {
 			always = yes
 		}
+		councilor_exp_gain = 0.15
 		shroud_delve_cooldown = -0.5
 		custom_tooltip = relic_zro_crystal_passive
 	}
