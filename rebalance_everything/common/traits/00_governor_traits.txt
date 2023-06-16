@@ -231,6 +231,9 @@ leader_trait_bureaucrat_2 = { # Unifier
 
 ###################
 leader_trait_army_veteran = {
+	starting_ruler_trait = yes
+	forbidden_origins = { origin_legendary_leader }
+	cost = 1
 	councilor_trait = yes
 	inline_script = {
 		script = trait/icon
@@ -270,7 +273,7 @@ leader_trait_army_veteran_2 = {
 	}
 	modifier = {
 		planet_army_build_speed_mult = 0.25
-		armies_cost_mult = -0.10
+		armies_cost_mult = -0.25
 		army_defense_damage_mult = 0.25
 	}
 	leader_class = { governor }
@@ -279,6 +282,9 @@ leader_trait_army_veteran_2 = {
 
 ###################
 leader_trait_retired_fleet_officer = {
+	starting_ruler_trait = yes
+	forbidden_origins = { origin_legendary_leader }
+	cost = 1
 	councilor_trait = yes
 	inline_script = {
 		script = trait/icon
@@ -637,6 +643,9 @@ leader_trait_enlister_2 = {
 
 ###################
 leader_trait_shipwright = {
+	starting_ruler_trait = yes
+	forbidden_origins = { origin_legendary_leader }
+	cost = 1
 	councilor_trait = yes
 	inline_script = {
 		script = trait/icon
@@ -647,7 +656,7 @@ leader_trait_shipwright = {
 		TIER = 1
 	}
 	modifier = {
-		starbase_shipyard_build_speed_mult = 0.05
+		starbase_shipyard_build_speed_mult = 0.10
 		starbase_shipyard_build_cost_mult = -0.05
 	}
 	leader_potential_add = {
@@ -680,7 +689,7 @@ leader_trait_shipwright_2 = {
 		TIER = 2
 	}
 	modifier = {
-		starbase_shipyard_build_speed_mult = 0.10
+		starbase_shipyard_build_speed_mult = 0.20
 		starbase_shipyard_build_cost_mult = -0.10
 	}
 	leader_class = { governor }
@@ -702,7 +711,7 @@ leader_trait_architectural_interest = {
 	}
 	modifier = {
 		planet_structures_upkeep_mult = -0.1
-		planet_building_build_speed_mult = 0.1
+		planet_building_build_speed_mult = 0.15
 	}
 	leader_potential_add = {
 		is_ruler = no
@@ -732,8 +741,8 @@ leader_trait_architectural_interest_2 = {
 		TIER = 2
 	}
 	modifier = {
-		planet_structures_upkeep_mult = -0.2
-		planet_building_build_speed_mult = 0.2
+		planet_structures_upkeep_mult = -0.25
+		planet_building_build_speed_mult = 0.25
 	}
 	leader_class = { governor }
 	opposites = {
