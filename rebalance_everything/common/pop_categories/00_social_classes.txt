@@ -568,20 +568,20 @@ worker = {
 		pop_happiness = 0.10
 	}
 
-	triggered_pop_modifier = {
-		potential = {
-			has_job = clerk
-			owner = { has_modifier = paragon_origin_strengthened_government_ii }
-		}
-		pop_political_power = 0.25
-	}
-	triggered_pop_modifier = {
-		potential = {
-			has_job = clerk
-			owner = { has_modifier = paragon_origin_strengthened_government_iii }
-		}
-		pop_political_power = 0.50
-	}
+	#triggered_pop_modifier = {
+	#	potential = {
+	#		has_job = clerk
+	#		owner = { has_modifier = paragon_origin_strengthened_government_ii }
+	#	}
+	#	pop_political_power = 0.25
+	#}
+	#triggered_pop_modifier = {
+	#	potential = {
+	#		has_job = clerk
+	#		owner = { has_modifier = paragon_origin_strengthened_government_iii }
+	#	}
+	#	pop_political_power = 0.50
+	#}
 
 	triggered_pop_modifier = {
 		potential = {

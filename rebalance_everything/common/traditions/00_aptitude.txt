@@ -40,7 +40,7 @@ tr_aptitude_the_empire_needs_you = {
 
 tr_aptitude_specialist_training = {
 	modifier = {
-		species_leader_exp_gain = 0.25
+		species_leader_exp_gain = 0.2
 	}
 	ai_weight = { factor = 1000 }
 

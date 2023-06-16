@@ -111,13 +111,13 @@ clerk = {
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
 	}
 
-	triggered_country_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_modifier = paragon_origin_strengthened_government_iii }
-		}
-		country_edict_fund_add = 1
-	}
+	#triggered_country_modifier = {
+	#	potential = {
+	#		exists = owner
+	#		owner = { has_modifier = paragon_origin_strengthened_government_iii }
+	#	}
+	#	country_edict_fund_add = 1
+	#}
 
 	weight = {
 		weight = @clerk_job_weight

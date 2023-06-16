@@ -447,7 +447,7 @@ trait_fractured_memory = {
 		planet_jobs_physics_research_produces_mult = -0.25
 		planet_jobs_society_research_produces_mult = -0.25
 		planet_jobs_engineering_research_produces_mult = -0.25
-		leader_skill_levels = -3
+		species_leader_exp_gain = -0.5
 		leader_age = -30
 		species_empire_size_mult = 0.25
 	}

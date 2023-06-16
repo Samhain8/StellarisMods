@@ -316,8 +316,7 @@ trait_cyborg_learning_algorithms = {
 	randomized = no
 	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
 	modifier = {
-		species_leader_exp_gain = 0.25
-		negative_leader_traits_species = -1
+		species_leader_exp_gain = 0.2
 		leaders_upkeep_mult = -0.1
 	}
 

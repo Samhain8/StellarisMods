@@ -121,8 +121,8 @@ tr_domination_grand_council = {
 	}
 
 	modifier = {
-		councilor_exp_gain = 0.2
-		country_edict_fund_add = 50
+		councilor_exp_gain = 0.15
+		country_edict_fund_add = 30
 	}
 
 	tradition_swap = {

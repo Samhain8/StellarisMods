@@ -372,6 +372,9 @@ leader_trait_agrarian_upbringing_2 = {
 
 ###################
 trait_ruler_fertility_preacher = {
+	starting_ruler_trait = yes
+	forbidden_origins = { origin_legendary_leader }
+	cost = 1
 	councilor_trait = yes
 	inline_script = {
 		script = trait/icon
@@ -422,7 +425,7 @@ trait_ruler_fertility_preacher_2 = {
 			exists = owner
 			owner = { is_machine_empire = no }
 		}
-		pop_growth_speed = 0.05
+		pop_growth_speed = 0.06
 	}
 	triggered_modifier = {
 		potential = {
@@ -1801,7 +1804,7 @@ leader_trait_life_support_systems = {
 		TIER = 1
 	}
 	modifier = {
-		habitability_floor_add = 0.2
+		habitability_floor_add = 0.35
 	}
 	veteran_class_locked_trait = yes
 	leader_potential_add = {
@@ -1824,7 +1827,7 @@ leader_trait_life_support_systems_2 = {
 		TIER = 2
 	}
 	modifier = {
-		habitability_floor_add = 0.35
+		habitability_floor_add = 0.50
 	}
 	veteran_class_locked_trait = yes
 	leader_class = { governor }
@@ -1841,7 +1844,7 @@ leader_trait_life_support_systems_3 = {
 		TIER = 3
 	}
 	modifier = {
-		habitability_floor_add = 0.6
+		habitability_floor_add = 0.65
 	}
 	veteran_class_locked_trait = yes
 	leader_class = { governor }

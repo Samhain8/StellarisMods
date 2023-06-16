@@ -255,6 +255,7 @@ trait_crafted_smiles = {
 	species_potential_add = {
 		exists = from
 		from = { has_origin = origin_overtuned }
+		can_add_tradeoff_traits = yes
 	}
 	species_possible_remove = {
 		can_remove_overtuned_traits = yes
@@ -394,6 +395,7 @@ trait_gene_mentorship = {
 	species_potential_add = {
 		exists = from
 		from = { has_origin = origin_overtuned }
+		can_add_tradeoff_traits = yes
 	}
 	species_possible_remove = {
 		can_remove_overtuned_traits = yes
@@ -408,7 +410,7 @@ trait_gene_mentorship = {
 			owner = { NOT = { has_edict = damn_the_consequences } }
 		}
 		modifier = {
-			species_leader_exp_gain = 0.25
+			species_leader_exp_gain = 0.2
 		}
 	}
 	triggered_leader_modifier = {
@@ -417,7 +419,7 @@ trait_gene_mentorship = {
 			owner = { has_edict = damn_the_consequences }
 		}
 		modifier = {
-			species_leader_exp_gain = 0.5
+			species_leader_exp_gain = 0.4
 		}
 	}
 	modifier = {
@@ -439,6 +441,7 @@ trait_expressed_tradition = {
 	species_potential_add = {
 		exists = from
 		from = { has_origin = origin_overtuned }
+		can_add_tradeoff_traits = yes
 	}
 	species_possible_remove = {
 		can_remove_overtuned_traits = yes
@@ -684,6 +687,7 @@ trait_compliance_instincts = {
 	species_potential_add = {
 		exists = from
 		from = { has_origin = origin_overtuned }
+		can_add_tradeoff_traits = yes
 	}
 	species_possible_remove = {
 		can_remove_overtuned_traits = yes
@@ -723,6 +727,7 @@ trait_stunted_growth = {
 	species_potential_add = {
 		exists = from
 		from = { has_origin = origin_overtuned }
+		can_add_tradeoff_traits = yes
 	}
 	species_possible_remove = {
 		can_remove_overtuned_traits = yes
@@ -764,6 +769,7 @@ trait_thrill_seeker = {
 	species_potential_add = {
 		exists = from
 		from = { has_origin = origin_overtuned }
+		can_add_tradeoff_traits = yes
 	}
 	species_possible_remove = {
 		can_remove_overtuned_traits = yes
@@ -783,7 +789,7 @@ trait_thrill_seeker = {
 	modifier = {
 		army_damage_mult = 0.30
 		pop_growth_speed = 0.1
-		leader_age = -25
+		leader_age = -20
 	}
 	slave_cost = {
 		energy = 500
@@ -934,8 +940,8 @@ trait_noxious = {
 	}
 
 	modifier = {
-		habitability_floor_add = 0.3
-		habitability_ceil_add = -0.3
+		pop_environment_tolerance = 0.1
+		habitability_ceil_add = -0.2
 		army_damage_mult = 0.50
 		pop_housing_usage_mult = 0.1
 	}
@@ -967,10 +973,37 @@ trait_exotic_metabolism = {
 
 	modifier = {
 		leader_age = 50
-		leader_skill_levels = 2
-		species_leader_exp_gain = 0.35
+		species_leader_exp_gain = 0.25
 		planet_jobs_produces_mult = 0.05
 		pop_environment_tolerance = 0.1
+	}
+
+	slave_cost = {
+		energy = 500
+	}
+}
+
+trait_fast_metabolism = {
+	host_has_dlc = "Toxoids Species Pack"
+	cost = 1
+	icon = "gfx/interface/icons/traits/trait_exotic_metabolism.dds"
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	potential_crossbreeding_chance = 1.0 #1.0 100% of being considered for new traits when forming half-species. doe snot guarantee the trait will be added if it costs points.
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	initial = yes
+	randomized = no
+	advanced_trait = yes
+
+	modifier = {
+		species_leader_exp_gain = 0.25
+		planet_jobs_produces_mult = 0.05
+		planet_pops_upkeep_mult = 0.25
+		leader_age = -15
 	}
 
 	slave_cost = {

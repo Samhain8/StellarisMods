@@ -2733,10 +2733,6 @@ species_can_be_necrophaged = {
 		is_archetype = ROBOT
 		is_archetype = PRESAPIENT
 		is_same_species = prev.owner_species
-		AND = {
-			has_slavery_type = { type = slavery_livestock country = prev.owner }
-			prev.owner = { is_hive_empire = no }
-		}
 		has_citizenship_type = { type = citizenship_purge country = prev.owner }
 	}
 	species_has_happiness_with_owner = prev.owner
@@ -3929,6 +3925,13 @@ can_remove_overtuned_traits = {
 			has_tradition = tr_cybernetics_integrated_anatomy
 			has_tradition = tr_cybernetics_assimilator_integrated_anatomy
 		}
+	}
+}
+
+can_add_tradeoff_traits = {
+	hidden_trigger = { exists = from }
+	from = {
+		is_ai = no
 	}
 }
 

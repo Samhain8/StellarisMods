@@ -1158,7 +1158,6 @@ civic_merchant_nobles = {
 		ethics = {
 			NOR = {
 				text = civic_tooltip_not_egalitarian
-				value = ethic_egalitarian
 				value = ethic_fanatic_egalitarian
 			}
 		}
@@ -1204,8 +1203,8 @@ civic_crusader_spirit_corporate = {
 		}
 	}
 	modifier = {
-		local_trade_protection_add = 20
-		ships_upkeep_mult = -0.1
+		local_trade_protection_add = 30
+		ships_upkeep_mult = -0.15
 	}
 	swap_type = {
 		trigger = {
@@ -1213,7 +1212,7 @@ civic_crusader_spirit_corporate = {
 		}
 		description = "civic_tooltip_crusader_spirit_corporate_effects"
 		modifier = {
-			country_enclave_capacity_add = 1
+			country_enclave_capacity_add = 2
 		}
 	}
 }

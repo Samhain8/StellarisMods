@@ -804,7 +804,7 @@ ap_galactic_contender = {
 
 ap_technological_ascendancy = {
 	modifier = {
-		all_technology_research_speed = 0.05
+		all_technology_research_speed = 0.1
 		num_tech_alternatives_add = 1
 		intel_decryption_add = 2
 	}
@@ -950,7 +950,8 @@ ap_imperial_prerogative = {
 
 ap_executive_vigor = {
 	modifier = {
-		country_edict_fund_add = 80
+		country_edict_fund_add = 50
+		council_agenda_progress_speed = 0.15
 		country_traditions_influence_produces_add = 1
 	}
 
@@ -968,7 +969,7 @@ ap_executive_vigor = {
 ap_transcendent_learning = {
 	modifier = {
 		country_leader_cap_add = 2
-		country_leader_pool_size = 1
+		negative_traits_country = -1
 		species_leader_exp_gain = 0.33
 	}
 

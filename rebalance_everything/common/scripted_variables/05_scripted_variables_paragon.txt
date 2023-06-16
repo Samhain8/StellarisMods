@@ -79,9 +79,9 @@
 @reduced_effect_on_leader_mult = 0.25
 
 # Negative trait probabilities, in whole percentages.
-@negative_trait_yearly_chance_when_eligible = 5				# 5 = 50% get after 13.5 years.
-@negative_trait_yearly_chance_when_eligible_max = 25
-@negative_trait_yearly_chance_when_eligible_immortal = 3	# 3 = 50% get after 23 years.
+@negative_trait_yearly_chance_when_eligible = 4				# 5 = 50% get after 13.5 years.
+@negative_trait_yearly_chance_when_eligible_max = 20
+@negative_trait_yearly_chance_when_eligible_immortal = 2	# 3 = 50% get after 23 years.
 
 # Resource trait values
 @trait_scholar_of_war_amt = 1
@@ -113,7 +113,7 @@
 
 #Councilor values
 @councilor_indentured_assets_trade_value = 0.2
-@councilor_corporate_hedonism_entertainer_trade_value = 0.8
+@councilor_corporate_hedonism_entertainer_trade_value = 0.5
 @councilor_private_military_companies_stability = 0.25
 @councilor_mining_guilds_miner_stability = 0.05
 @councilor_anglers_pearl_diver_consumer_goods_bonus = 0.2
@@ -129,10 +129,10 @@
 @agenda_we_come_in_peace_trust = 75
 @agenda_a_higher_purpose_unity = 50
 @agenda_award_tech_progress = 0.25
-@agenda_gestalt_purge_traits_exp_change = -300
+@agenda_gestalt_purge_traits_exp_change = -500
 @agenda_leadership_conditioning_level_threshold = 4
 @agenda_leadership_conditioning_exp_reward = 2000
-@statecraft_amongst_peers_exp_reward = 300
+@statecraft_amongst_peers_exp_reward = 500
 
 # Astrocreator Azaryn
 @azaryn_terraform_cost = 10000

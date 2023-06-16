@@ -706,7 +706,7 @@ pop_branch_office_councilor_level = {
 empire_size_councilor_barbaric_despoilers = {
 	base = 1
 	mult = value:councilor_level|TYPE|councilor_barbaric_despoilers|
-	mult = -0.02
+	mult = -0.03
 }
 
 sacrifice_edict_power_councilor_death_cult = {
@@ -725,7 +725,7 @@ naval_cap_vassals_councilor_feudal_realm = {
 		mode = add
 	}
 	mult = value:councilor_level|TYPE|councilor_feudal_realm|
-	mult = 2
+	mult = 3
 }
 
 # Monthly energy income x3, rounded to the nearest 100

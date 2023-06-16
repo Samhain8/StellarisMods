@@ -1,7 +1,8 @@
 tr_statecraft_adopt = {
 	unlocks_agenda = agenda_departmental_efficiency
 	modifier = {
-		country_edict_fund_add = 40
+		country_edict_fund_add = 30
+		country_leader_cap_add = 1
 	}
 }
 
@@ -85,7 +86,7 @@ tr_statecraft_immutable_directives = {
 
 tr_statecraft_amongst_peers = {
 	modifier = {
-		councilor_exp_gain = 0.15
+		councilor_exp_gain = 0.2
 	}
 	ai_weight = { factor = 1000 }
 

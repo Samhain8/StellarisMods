@@ -21,7 +21,7 @@ triggered_country_modifier = {
 		exists = owner
 		owner = { is_militarist = yes }
 	}
-	empire_size_penalty_mult = -0.005
+	empire_size_add = -2
 	mult = value:scripted_ethics_weight_mult|ETHIC|militarist|
 }
 

@@ -259,6 +259,9 @@ origin_life_seeded = {
 
 	has_secondary_species = {
 		title = civic_syncretic_evolution_secondary_species
+		traits = {
+			trait = trait_comfortable
+		}
 	}
 
 	random_weight = {
@@ -325,15 +328,18 @@ origin_remnants = {
 
 	description = "origin_tooltip_remnants_effects"
 
+	traits = {
+		trait = trait_remnant_survivor
+	}
+
 	has_secondary_species = {
 		title = civic_syncretic_evolution_secondary_species
+		traits = {
+			trait = trait_remnant_survivor
+		}
 	}
 
 	flags = { custom_start_screen first_contact_event Story7 }
-
-	traits = {
-
-	}
 
 	advanced_start = yes
 
@@ -929,6 +935,9 @@ origin_ocean_paradise = {
 
 	has_secondary_species = {
 		title = civic_syncretic_evolution_secondary_species
+		traits = {
+			trait = trait_comfortable
+		}
 	}
 
 	advanced_start = yes
@@ -1359,6 +1368,13 @@ origin_legendary_leader = {
 
 	traits = {
 		trait = trait_perfected_genes
+	}
+
+	has_secondary_species = {
+		title = civic_syncretic_evolution_secondary_species
+		traits = {
+			trait = trait_sheepish
+		}
 	}
 
 	random_weight = {

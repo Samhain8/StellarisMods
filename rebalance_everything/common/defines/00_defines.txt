@@ -791,7 +791,7 @@
 		LEADER_AGE_MAX			= 32				# Max age of generated leaders (uses bell-curve)
 		LEADER_SKILL_LEVEL_START	= 1			# Skill Level Leaders start with. XP needed { 200 475 825 1250 }
 		LEADER_EXPERIENCE_REQUIREMENT_BASE_VALUE					= 100 # Base value when calculating required experience for next skill level
-		LEADER_EXPERIENCE_REQUIREMENT_SCALE_VALUE					= 300 # Scale factor when calculating required experience for next skill level
+		LEADER_EXPERIENCE_REQUIREMENT_SCALE_VALUE					= 250 # Scale factor when calculating required experience for next skill level
 
 		LEADER_SUBCLASS_CHOICE_LEVEL = 4 	# At what level you can pick your leader subclass
 		LEADER_DESTINY_CHOICE_LEVEL = 8 	# At what level you can pick your leader destiny trait
@@ -799,8 +799,8 @@
 		MAX_BASIC_TRAITS = 2 		# How many basic traits you can have before you only get the option to level them up
 		MAX_VETERAN_TRAITS = 3 		# How many veteran traits you can have before you only get the option to level them up
 
-		LEADER_RULER_MONARCH_EXPERIENCE								= 6.0
-		LEADER_RULER_HEIR_EXPERIENCE								= 3.0
+		LEADER_RULER_MONARCH_EXPERIENCE								= 10.0
+		LEADER_RULER_HEIR_EXPERIENCE								= 5.0
 
 		LEADER_ADMIRAL_FLEET_COMBAT_BASE_EXPERIENCE					= 5 # Leader Admiral base experience from fleet combat
 		LEADER_ADMIRAL_FLEET_COMBAT_EXPERIENCE_SCALE				= 0.5 # Scale factor used when calculating experience gain for Admiral
@@ -808,15 +808,15 @@
 		LEADER_ADMIRAL_FLEET_COMBAT_SHIPS_DISENGAGED_CONVERSION		= 0.025 # Scale factor for total number of ships that disengaged after combat when calculating experience gain for Admiral
 		LEADER_ADMIRAL_FLEET_PIRACY_SUPPRESSION_DAILY				= 0.05 # Leader Admiral base experience from piracy suppression
 
-		LEADER_GENERAL_GROUND_COMBAT_BASE_EXPERIENCE				= 100 # Leader General base experience from ground combat
+		LEADER_GENERAL_GROUND_COMBAT_BASE_EXPERIENCE				= 200 # Leader General base experience from ground combat
 		LEADER_GENERAL_GROUND_COMBAT_EXPERIENCE_SCALE				= 2.5 # Scale factor used when calculating experience gain for General
-		LEADER_GENERAL_GROUND_COMBAT_ARMIES_KILLED_CONVERSION		= 0.25 # Scale factor for total number of armies killed after combat when calculating experience gain for General
+		LEADER_GENERAL_GROUND_COMBAT_ARMIES_KILLED_CONVERSION		= 0.35 # Scale factor for total number of armies killed after combat when calculating experience gain for General
 
-		LEADER_SCIENTIST_LEADING_RESEARCH_FIELD_EXPERIENCE			= 3.5
-		LEADER_SCIENTIST_SURVEY_EXPERIENCE							= 10		# Experience gained from surveyed planet
-		LEADER_SCIENTIST_SUCCESSFUL_ANOMALY_RESEARCH_EXPERIENCE		= 50		# Experience gained from a successful discovery research
+		LEADER_SCIENTIST_LEADING_RESEARCH_FIELD_EXPERIENCE			= 1
+		LEADER_SCIENTIST_SURVEY_EXPERIENCE							= 8		# Experience gained from surveyed planet
+		LEADER_SCIENTIST_SUCCESSFUL_ANOMALY_RESEARCH_EXPERIENCE		= 35		# Experience gained from a successful discovery research
 		LEADER_SCIENTIST_COMPLETED_SPECIAL_PROJECT_EXPERIENCE		= 100		# Experience gained from completing a special project
-		LEADER_SCIENTIST_COMPLETED_ARCHAEOLOGICAL_SITE_STAGE_EXPERIENCE = 75	# Experience gained from a successful archaeological site roll
+		LEADER_SCIENTIST_COMPLETED_ARCHAEOLOGICAL_SITE_STAGE_EXPERIENCE = 65	# Experience gained from a successful archaeological site roll
 		LEADER_SCIENTIST_ASSIST_RESEARCH							= 0.10		# Experience gained from assisting research per day
 		LEADER_SCIENTIST_ASSIST_RESEARCH_MULT						= 0.20		# Assist Research modifier-mult per skill level (this value times skill level equals modifier)
 		LEADER_SCIENTIST_ASSIST_CLOAKING_DETECTION_EXPERIENCE		= 0.10		# Experience gained from assisting cloaking detection per day
@@ -826,7 +826,7 @@
 		LEADER_SCIENTIST_ACTIVE_RECONNAISSANCE_COLONY_LEVEL_MULT	= 1.00		# Active Reconnaissance modifier-mult per capital building level (this value times capital building level equals modifier)
 
 		LEADER_GOVERNOR_MONTHLY_EXPERIENCE							= 5	# Monthy exp from governing sector.
-		LEADER_COUNCILOR_MONTHLY_EXPERIENCE							= 5 # Monthly exp from being on the council
+		LEADER_COUNCILOR_MONTHLY_EXPERIENCE							= 5 # Monthly exp from being on the council - FRED : Tested, is NOT applied to ruler
 
 
 		LEADER_AGE_DEATH_CHANCE_AGE	= 80			# Before this age the chance wont increase

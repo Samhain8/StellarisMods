@@ -994,6 +994,7 @@ generate_start_buildings_and_districts = {
 						has_origin = origin_remnants
 						has_origin = origin_overtuned
 						has_origin = origin_ocean_paradise
+						has_origin = origin_legendary_leader
 					}
 				}
 			}
@@ -2337,6 +2338,7 @@ generate_start_pops = {
 					has_origin = origin_remnants
 					has_origin = origin_overtuned
 					has_origin = origin_ocean_paradise
+					has_origin = origin_legendary_leader
 				}
 			}
 		}
@@ -2360,6 +2362,7 @@ generate_start_pops = {
 						has_origin = origin_remnants
 						has_origin = origin_overtuned
 						has_origin = origin_ocean_paradise
+						has_origin = origin_legendary_leader
 					}
 				}
 			}

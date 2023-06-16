@@ -1260,7 +1260,7 @@ zro_crystal = {
 			multiplier = value:edict_size_effect
 		}
 		upkeep = {
-			sr_zro = 0.2
+			sr_zro = 0.35
 			multiplier = value:zro_crystal_leaders
 		}
 
@@ -1281,8 +1281,56 @@ zro_crystal = {
 	}
 
 	modifier = {
-		species_leader_exp_gain = 0.50
+		species_leader_exp_gain = 0.35
 		leader_age = 30
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictMedPrio
+			has_monthly_income = { resource = sr_zro value > 5 }
+		}
+	}
+}
+
+zro_dust_incense = {
+	length = @EdictPerpetual
+	icon = "GFX_edict_type_policy"
+
+	resources = {
+		category = edicts
+		upkeep = {
+			unity = @Edict1Cost
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			sr_zro = 0.35
+			multiplier = value:zro_crystal_leaders
+		}
+
+	}
+
+	potential = {
+		NOT = { has_relic = r_zro_crystal }
+		OR = {
+			has_resource = { type = sr_zro amount > 0 }
+			has_edict = zro_navigation
+		}
+	}
+
+	allow = {
+		NOT = {
+			resource_stockpile_compare = {
+				resource = sr_zro
+				value = 0
+			}
+		}
+	}
+
+	modifier = {
+		species_leader_exp_gain = 0.2
+		leader_age = 10
 	}
 
 	ai_weight = {
@@ -1348,7 +1396,7 @@ zro_crystal_machine = {
 			multiplier = value:edict_size_effect
 		}
 		upkeep = {
-			sr_zro = 0.2
+			sr_zro = 0.35
 			multiplier = value:zro_crystal_leaders
 		}
 	}
@@ -1368,7 +1416,7 @@ zro_crystal_machine = {
 	}
 
 	modifier = {
-		species_leader_exp_gain = 0.50
+		species_leader_exp_gain = 0.35
 		custom_tooltip = edict_zro_crystal_machine_effect
 	}
 
