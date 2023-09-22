@@ -10,6 +10,8 @@
 
 @blocker_high = 12
 @blocker_low = 6
+@ranger_small_production = 1
+@ranger_large_production = 2
 
 d_mountain_range = {
 	time = 270
@@ -28,13 +30,13 @@ d_mountain_range = {
 
 	resources = {
 		category = deposit_blockers_natural
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_valid_civic = civic_environmentalist }
-			}
-			engineering_research = 4
-		}
+		#produces = {
+		#	trigger = {
+		#		exists = owner
+		#		owner = { has_valid_civic = civic_environmentalist }
+		#	}
+		#	engineering_research = 4
+		#}
 		cost = {
 			energy = 1000
 		}
@@ -56,6 +58,14 @@ d_mountain_range = {
 		modifier = {
 			job_ranger_add = 2
 		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_minerals_produces_add = @ranger_large_production
 	}
 
 	inline_script = deposits/ai_weight_natural_blocker
@@ -99,13 +109,13 @@ d_active_volcano = {
 
 	resources = {
 		category = deposit_blockers_natural
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_valid_civic = civic_environmentalist }
-			}
-			physics_research = 4
-		}
+		#produces = {
+		#	trigger = {
+		#		exists = owner
+		#		owner = { has_valid_civic = civic_environmentalist }
+		#	}
+		#	physics_research = 4
+		#}
 		cost = {
 			energy = 1000
 		}
@@ -127,6 +137,14 @@ d_active_volcano = {
 		modifier = {
 			job_ranger_add = 2
 		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_energy_produces_add = @ranger_large_production
 	}
 
 	inline_script = deposits/ai_weight_natural_blocker
@@ -170,13 +188,13 @@ d_dangerous_wildlife_blocker = {
 
 	resources = {
 		category = deposit_blockers_natural
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_valid_civic = civic_environmentalist }
-			}
-			society_research = 4
-		}
+		#produces = {
+		#	trigger = {
+		#		exists = owner
+		#		owner = { has_valid_civic = civic_environmentalist }
+		#	}
+		#	society_research = 4
+		#}
 		cost = {
 			energy = 500
 		}
@@ -198,6 +216,15 @@ d_dangerous_wildlife_blocker = {
 		modifier = {
 			job_ranger_add = 2
 		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_society_research_produces_add = @ranger_small_production
+		planet_rangers_food_produces_add = @ranger_small_production
 	}
 
 	on_cleared = {
@@ -251,13 +278,13 @@ d_dense_jungle = {
 
 	resources = {
 		category = deposit_blockers_natural
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_valid_civic = civic_environmentalist }
-			}
-			society_research = 2
-		}
+		#produces = {
+		#	trigger = {
+		#		exists = owner
+		#		owner = { has_valid_civic = civic_environmentalist }
+		#	}
+		#	society_research = 2
+		#}
 		cost = {
 			energy = 500
 		}
@@ -279,6 +306,14 @@ d_dense_jungle = {
 		modifier = {
 			job_ranger_add = 1
 		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_food_produces_add = @ranger_small_production
 	}
 
 	all_blocker_swap_types = yes
@@ -323,13 +358,13 @@ d_toxic_kelp = {
 
 	resources = {
 		category = deposit_blockers_natural
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_valid_civic = civic_environmentalist }
-			}
-			society_research = 2
-		}
+		#produces = {
+		#	trigger = {
+		#		exists = owner
+		#		owner = { has_valid_civic = civic_environmentalist }
+		#	}
+		#	society_research = 2
+		#}
 		cost = {
 			energy = 500
 		}
@@ -351,6 +386,14 @@ d_toxic_kelp = {
 		modifier = {
 			job_ranger_add = 1
 		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_society_research_produces_add = @ranger_small_production
 	}
 
 	all_blocker_swap_types = yes
@@ -392,13 +435,13 @@ d_deep_sinkhole = {
 
 	resources = {
 		category = deposit_blockers_natural
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_valid_civic = civic_environmentalist }
-			}
-			engineering_research = 2
-		}
+		#produces = {
+		#	trigger = {
+		#		exists = owner
+		#		owner = { has_valid_civic = civic_environmentalist }
+		#	}
+		#	engineering_research = 2
+		#}
 		cost = {
 			energy = 500
 		}
@@ -420,6 +463,14 @@ d_deep_sinkhole = {
 		modifier = {
 			job_ranger_add = 1
 		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_minerals_produces_add = @ranger_small_production
 	}
 
 	all_blocker_swap_types = yes
@@ -465,13 +516,13 @@ d_quicksand_basin = {
 
 	resources = {
 		category = deposit_blockers_natural
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_valid_civic = civic_environmentalist }
-			}
-			engineering_research = 2
-		}
+		#produces = {
+		#	trigger = {
+		#		exists = owner
+		#		owner = { has_valid_civic = civic_environmentalist }
+		#	}
+		#	engineering_research = 2
+		#}
 		cost = {
 			energy = 500
 		}
@@ -493,6 +544,14 @@ d_quicksand_basin = {
 		modifier = {
 			job_ranger_add = 1
 		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_engineering_research_produces_add = @ranger_small_production
 	}
 
 	all_blocker_swap_types = yes
@@ -534,13 +593,13 @@ d_noxious_swamp = {
 
 	resources = {
 		category = deposit_blockers_natural
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_valid_civic = civic_environmentalist }
-			}
-			society_research = 2
-		}
+		#produces = {
+		#	trigger = {
+		#		exists = owner
+		#		owner = { has_valid_civic = civic_environmentalist }
+		#	}
+		#	society_research = 2
+		#}
 		cost = {
 			energy = 500
 		}
@@ -562,6 +621,14 @@ d_noxious_swamp = {
 		modifier = {
 			job_ranger_add = 1
 		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_society_research_produces_add = @ranger_small_production
 	}
 
 	all_blocker_swap_types = yes
@@ -603,13 +670,13 @@ d_massive_glacier = {
 
 	resources = {
 		category = deposit_blockers_natural
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_valid_civic = civic_environmentalist }
-			}
-			physics_research = 2
-		}
+		#produces = {
+		#	trigger = {
+		#		exists = owner
+		#		owner = { has_valid_civic = civic_environmentalist }
+		#	}
+		#	physics_research = 2
+		#}
 		cost = {
 			energy = 500
 		}
@@ -631,6 +698,14 @@ d_massive_glacier = {
 		modifier = {
 			job_ranger_add = 1
 		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_physics_research_produces_add = @ranger_small_production
 	}
 
 	all_blocker_swap_types = yes
@@ -1344,7 +1419,7 @@ d_ruined_building_blocker = {	#Added via event
 }
 
 d_ruined_arcology = {
-	time = 365
+	time = 360
 	icon = d_city_ruins
 
 	is_for_colonizable = yes
@@ -1723,6 +1798,252 @@ d_mass_graves = {
 		habitability_ceil_add = -0.1
 		planet_amenities_add = -5
 		planet_max_districts_add = -2
+	}
+
+	resources = {
+		category = deposit_blockers
+		cost = {
+			energy = 1000
+		}
+	}
+}
+
+### Fruitful origin - blockers for seed bombing bombardment stance
+
+d_seed_bombing_fungoid_blocker = {
+	icon = d_fungal_forest	
+	time = 180
+
+	is_for_colonizable = yes
+	category = deposit_cat_blockers_natural
+
+	can_be_cleared = {
+		custom_tooltip = {
+			fail_text = has_ranger_lodge
+			planet = {
+				NOT = { has_building = building_ranger_lodge }
+			}
+		}
+	}
+
+	potential = { always = no }
+
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+
+	on_cleared = {
+		hidden_effect = {
+			# clear the variable that handled the bombardment event
+			change_variable = {
+				which = seed_bomb_blockers
+				value = -1
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = seed_bomb_blockers
+						value = 0
+					}
+				}
+				clear_variable = seed_bomb_blockers
+			}
+		}
+		
+		# pops created if you're a gardener cutting out the weeds
+		if = {
+			limit = {
+				exists = owner
+				owner = {
+					has_origin = origin_fruitful
+					any_owned_species = {
+						is_flora_species = yes
+					}
+				}
+			}
+			custom_tooltip = d_seed_bombing_blocker_custom_tooltip
+			hidden_effect = {
+				if = { # Is your main species flora? Then prioritize that when creating a new pop
+					limit = {
+						owner_main_species = {
+							is_flora_species = yes
+						}
+					}
+					create_pop = {
+						species = owner_main_species
+					}
+				}
+				else_if = { # Do you have any other flora? If so, pick a random one
+					limit = {
+						owner = {
+							any_owned_species = {
+								is_flora_species = yes
+							}
+						}
+					}
+					owner = {
+						random_owned_species = {
+							limit = {
+								is_flora_species = yes
+							}
+							save_event_target_as = plants_species
+						}
+					}
+					create_pop = {
+						species = event_target:plants_species
+					}
+					# no extra pops if you don't have flora species
+				}
+			}
+		}
+	}
+
+	all_blocker_swap_types = yes
+
+	resources = {
+		category = deposit_blockers
+		cost = {
+			trigger = {
+				planet.owner_main_species = {
+					is_flora_species = no
+				}
+			}
+			energy = 300
+		}
+		cost = {
+			trigger = {
+				planet.owner_main_species = {
+					is_flora_species = yes
+				}
+			}
+			energy = 150
+		}
+	}
+}
+
+d_seed_bombing_plantoid_blocker = {
+	icon = d_dense_jungle	
+	time = 180
+
+	is_for_colonizable = yes
+	category = deposit_cat_blockers_natural
+
+	can_be_cleared = {
+		custom_tooltip = {
+			fail_text = has_ranger_lodge
+			planet = {
+				NOT = { has_building = building_ranger_lodge }
+			}
+		}
+	}
+
+	potential = { always = no }
+
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+
+	on_cleared = {
+		hidden_effect = {
+			# clear the variable that handled the bombardment event
+			change_variable = {
+				which = seed_bomb_blockers
+				value = -1
+			}
+			if = {
+				limit = {
+					check_variable = {
+						which = seed_bomb_blockers
+						value = 0
+					}
+				}
+				clear_variable = seed_bomb_blockers
+			}
+		}
+		
+		# pops created if you're a gardener cutting out the weeds
+		if = {
+			limit = {
+				exists = owner
+				owner = {
+					has_origin = origin_fruitful
+					any_owned_species = {
+						is_flora_species = yes
+					}
+				}
+			}
+			custom_tooltip = d_seed_bombing_blocker_custom_tooltip
+			hidden_effect = {
+				if = { # Is your main species flora? Then prioritize that when creating a new pop
+					limit = {
+						owner_main_species = {
+							is_flora_species = yes
+						}
+					}
+					create_pop = {
+						species = owner_main_species
+					}
+				}
+				else_if = { # Do you have any other flora? If so, pick a random one
+					limit = {
+						owner = {
+							any_owned_species = {
+								is_flora_species = yes
+							}
+						}
+					}
+					owner = {
+						random_owned_species = {
+							limit = {
+								is_flora_species = yes
+							}
+							save_event_target_as = plants_species
+						}
+					}
+					create_pop = {
+						species = event_target:plants_species
+					}
+					# no extra pops if you don't have flora species
+				}
+			}
+		}
+	}
+
+	all_blocker_swap_types = yes
+
+	resources = {
+		category = deposit_blockers_natural
+		cost = {
+			trigger = {
+				owner_main_species = {
+					is_flora_species = no
+				}
+			}
+			energy = 300
+		}
+		cost = {
+			trigger = {
+				owner_main_species = {
+					is_flora_species = yes
+				}
+			}
+			energy = 150
+		}
+	}
+}
+
+d_sprawling_landfill_blocker = {
+	time = 180
+	icon = d_organic_landfill
+
+	is_for_colonizable = yes
+	category = deposit_cat_blockers
+
+	potential = { always = no }
+
+	planet_modifier = {
+		planet_max_districts_add = -1
+		pop_environment_tolerance = -0.05
 	}
 
 	resources = {

@@ -116,16 +116,6 @@ district_rw_city = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_active_tradition = tr_mercantile_trickle_up_economics }
-		}
-		modifier = {
-			job_clerk_add = 3
-		}
-	}
-
 	triggered_desc = {
 		trigger = {
 			planet = {
@@ -466,7 +456,7 @@ district_rw_commercial = {
 
 	triggered_planet_modifier = {
 		planet_housing_add = 10
-		job_merchant_add = 2
+		job_trader_add = 2
 		job_clerk_add = 6
 	}
 
@@ -478,7 +468,7 @@ district_rw_commercial = {
 			}
 		}
 		modifier = {
-			job_merchant_add = 2
+			job_trader_add = 2
 		}
 	}
 
@@ -493,7 +483,7 @@ district_rw_commercial = {
 	}
 
 	triggered_desc = {
-		text = job_merchant_effect_desc
+		text = job_trader_effect_desc
 	}
 
 	triggered_desc = {
@@ -596,7 +586,7 @@ district_rw_farming = {
 
 	show_on_uncolonized = { uses_district_set = ring_world }
 
-	potential = { 
+	potential = {
 		uses_district_set = ring_world
 		NOT = {
 			AND = {
