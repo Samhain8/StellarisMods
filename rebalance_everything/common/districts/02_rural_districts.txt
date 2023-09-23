@@ -399,7 +399,7 @@ district_farming = {
 				is_fallen_empire_spiritualist = no
 				NAND = {
 					is_anglers_empire = yes
-					OR {
+					OR = {
 						PREV = { planet = { is_wet = yes } }
 						PREV = { planet = { is_planet_class = pc_gaia } }
 					}
@@ -451,7 +451,7 @@ district_farming = {
 				is_fallen_empire_spiritualist = no
 				NAND = {
 					is_anglers_empire = yes
-					OR {
+					OR = {
 						PREV = { planet = { is_wet = yes } }
 						PREV = { planet = { is_planet_class = pc_gaia } }
 					}
@@ -1006,7 +1006,7 @@ district_farming_uncapped = {
 				is_fallen_empire_spiritualist = no
 				NAND = {
 					is_anglers_empire = yes
-					OR {
+					OR = {
 						PREV = { planet = { is_wet = yes } }
 						PREV = { planet = { is_planet_class = pc_gaia } }
 					}
@@ -1058,7 +1058,7 @@ district_farming_uncapped = {
 				is_fallen_empire_spiritualist = no
 				NAND = {
 					is_anglers_empire = yes
-					OR {
+					OR = {
 						PREV = { planet = { is_wet = yes } }
 						PREV = { planet = { is_planet_class = pc_gaia } }
 					}

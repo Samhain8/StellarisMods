@@ -1084,7 +1084,6 @@ holding_noble_vacation_homes = {
 
 	planet_modifier = {
 		monthly_loyalty = -0.5
-		diplo_weight_mult = 0.15
 	}
 
 	triggered_planet_modifier = {
