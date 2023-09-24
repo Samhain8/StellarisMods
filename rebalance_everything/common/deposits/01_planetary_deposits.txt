@@ -78,6 +78,8 @@ d_hot_springs = {
 			is_cold = yes
 			is_wet = yes
 			is_planet_class = pc_nuked
+			is_planet_class = pc_gaia
+			is_planet_class = pc_relic
 		}
 	}
 
@@ -108,7 +110,12 @@ d_rushing_waterfalls = {
 	}
 
 	potential = {
-		is_wet = yes
+		OR = {
+			is_planet_class = pc_gaia
+			is_planet_class = pc_relic
+			is_planet_class = pc_alpine
+			is_wet = yes
+		}
 	}
 
 	drop_weight = {
@@ -141,7 +148,6 @@ d_searing_desert = {
 		OR = {
 			is_planet_class = pc_gaia
 			is_planet_class = pc_nuked
-			is_planet_class = pc_relic
 			is_dry = yes
 		}
 	}
@@ -213,6 +219,7 @@ d_geothermal_vent = {
 			is_planet_class = pc_savannah
 			is_planet_class = pc_desert
 			is_planet_class = pc_arid
+			is_planet_class = pc_relic
 		}
 	}
 
@@ -282,7 +289,6 @@ d_tempestous_mountain = {
 			is_planet_class = pc_tropical
 			is_planet_class = pc_alpine
 			is_planet_class = pc_gaia
-			is_planet_class = pc_relic
 			is_planet_class = pc_continental
 		}
 	}
@@ -483,7 +489,6 @@ d_rich_mountain = {
 			is_planet_class = pc_arid
 			is_planet_class = pc_tundra
 			is_planet_class = pc_gaia
-			is_planet_class = pc_relic
 		}
 	}
 
@@ -561,6 +566,8 @@ d_lichen_fields = {
 		OR = {
 			is_planet_class = pc_nuked
 			is_planet_class = pc_arctic
+			is_planet_class = pc_tundra
+			is_planet_class = pc_relic
 		}
 	}
 
@@ -636,7 +643,10 @@ d_rugged_woods = {
 	}
 
 	potential = {
-		is_planet_class = pc_continental
+		OR = {
+			is_planet_class = pc_continental
+			is_planet_class = pc_alpine
+		}
 	}
 
 	drop_weight = {
@@ -674,6 +684,7 @@ d_green_hills = {
 		OR = {
 			is_planet_class = pc_ocean
 			is_planet_class = pc_tropical
+			is_planet_class = pc_continental
 		}
 	}
 
@@ -747,7 +758,11 @@ d_boggy_fens = {
 	}
 
 	potential = {
-		is_planet_class = pc_ocean
+		OR = {
+			is_planet_class = pc_ocean
+			is_planet_class = pc_tropical
+			is_planet_class = pc_relic
+		}
 	}
 
 	drop_weight = {
@@ -782,7 +797,10 @@ d_nutritious_mudland = {
 	}
 
 	potential = {
-		is_planet_class = pc_desert
+		OR = {
+			is_planet_class = pc_desert
+			is_planet_class = pc_relic
+		}
 	}
 
 	drop_weight = {
@@ -815,6 +833,7 @@ d_fungal_caves = {
 	potential = {
 		OR = {
 			is_planet_class = pc_nuked
+			is_planet_class = pc_relic
 			is_cold = yes
 		}
 	}
@@ -925,6 +944,9 @@ d_great_river = {
 		OR = {
 			is_planet_class = pc_arid
 			is_planet_class = pc_desert
+			is_planet_class = pc_continental
+			is_planet_class = pc_gaia
+			is_planet_class = pc_tropical
 		}
 	}
 
@@ -1067,6 +1089,7 @@ d_tropical_island = {
 			is_planet_class = pc_arid
 			is_planet_class = pc_desert
 			is_planet_class = pc_tropical
+			is_planet_class = pc_ocean
 		}
 	}
 
@@ -1419,6 +1442,28 @@ d_alien_pets_deposit = {
 
 	potential = {
 		can_have_habitable_deposits = yes
+	}
+
+	resources = {
+		category = deposit_blockers_natural
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_environmentalist }
+			}
+			society_research = 3
+			unity = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
 	}
 
 	drop_weight = {

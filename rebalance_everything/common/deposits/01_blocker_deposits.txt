@@ -8,10 +8,10 @@
 #	it is set to weight 0 if the planet has no need of more max districts or of districts
 #   of the type gained from clearing the blocker.
 
-@blocker_high = 10
-@blocker_low = 5
-@ranger_small_production = 0.5
-@ranger_large_production = 1
+@blocker_high = 12
+@blocker_low = 6
+@ranger_small_production = 1
+@ranger_large_production = 2
 
 d_mountain_range = {
 	time = 270
@@ -30,6 +30,13 @@ d_mountain_range = {
 
 	resources = {
 		category = deposit_blockers_natural
+		#produces = {
+		#	trigger = {
+		#		exists = owner
+		#		owner = { has_valid_civic = civic_environmentalist }
+		#	}
+		#	engineering_research = 4
+		#}
 		cost = {
 			energy = 1000
 		}
@@ -41,6 +48,16 @@ d_mountain_range = {
 
 	planet_modifier = {
 		planet_max_districts_add = -2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 2
+		}
 	}
 
 	triggered_planet_modifier = {
@@ -92,6 +109,13 @@ d_active_volcano = {
 
 	resources = {
 		category = deposit_blockers_natural
+		#produces = {
+		#	trigger = {
+		#		exists = owner
+		#		owner = { has_valid_civic = civic_environmentalist }
+		#	}
+		#	physics_research = 4
+		#}
 		cost = {
 			energy = 1000
 		}
@@ -103,6 +127,16 @@ d_active_volcano = {
 
 	planet_modifier = {
 		planet_max_districts_add = -2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 2
+		}
 	}
 
 	triggered_planet_modifier = {
@@ -154,6 +188,13 @@ d_dangerous_wildlife_blocker = {
 
 	resources = {
 		category = deposit_blockers_natural
+		#produces = {
+		#	trigger = {
+		#		exists = owner
+		#		owner = { has_valid_civic = civic_environmentalist }
+		#	}
+		#	society_research = 4
+		#}
 		cost = {
 			energy = 500
 		}
@@ -170,9 +211,20 @@ d_dangerous_wildlife_blocker = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { has_civic = civic_environmentalist }
 		}
-		planet_rangers_society_research_produces_add = @ranger_large_production
+		planet_rangers_society_research_produces_add = @ranger_small_production
+		planet_rangers_food_produces_add = @ranger_small_production
 	}
 
 	on_cleared = {
@@ -226,6 +278,13 @@ d_dense_jungle = {
 
 	resources = {
 		category = deposit_blockers_natural
+		#produces = {
+		#	trigger = {
+		#		exists = owner
+		#		owner = { has_valid_civic = civic_environmentalist }
+		#	}
+		#	society_research = 2
+		#}
 		cost = {
 			energy = 500
 		}
@@ -237,6 +296,16 @@ d_dense_jungle = {
 
 	planet_modifier = {
 		planet_max_districts_add = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
 	}
 
 	triggered_planet_modifier = {
@@ -289,6 +358,13 @@ d_toxic_kelp = {
 
 	resources = {
 		category = deposit_blockers_natural
+		#produces = {
+		#	trigger = {
+		#		exists = owner
+		#		owner = { has_valid_civic = civic_environmentalist }
+		#	}
+		#	society_research = 2
+		#}
 		cost = {
 			energy = 500
 		}
@@ -305,9 +381,19 @@ d_toxic_kelp = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { has_civic = civic_environmentalist }
 		}
-		planet_rangers_food_produces_add = @ranger_small_production
+		planet_rangers_society_research_produces_add = @ranger_small_production
 	}
 
 	all_blocker_swap_types = yes
@@ -349,6 +435,13 @@ d_deep_sinkhole = {
 
 	resources = {
 		category = deposit_blockers_natural
+		#produces = {
+		#	trigger = {
+		#		exists = owner
+		#		owner = { has_valid_civic = civic_environmentalist }
+		#	}
+		#	engineering_research = 2
+		#}
 		cost = {
 			energy = 500
 		}
@@ -365,9 +458,19 @@ d_deep_sinkhole = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { has_civic = civic_environmentalist }
 		}
-		planet_rangers_energy_produces_add = @ranger_small_production
+		planet_rangers_minerals_produces_add = @ranger_small_production
 	}
 
 	all_blocker_swap_types = yes
@@ -413,6 +516,13 @@ d_quicksand_basin = {
 
 	resources = {
 		category = deposit_blockers_natural
+		#produces = {
+		#	trigger = {
+		#		exists = owner
+		#		owner = { has_valid_civic = civic_environmentalist }
+		#	}
+		#	engineering_research = 2
+		#}
 		cost = {
 			energy = 500
 		}
@@ -429,9 +539,19 @@ d_quicksand_basin = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { has_civic = civic_environmentalist }
 		}
-		planet_rangers_minerals_produces_add = @ranger_small_production
+		planet_rangers_engineering_research_produces_add = @ranger_small_production
 	}
 
 	all_blocker_swap_types = yes
@@ -473,6 +593,13 @@ d_noxious_swamp = {
 
 	resources = {
 		category = deposit_blockers_natural
+		#produces = {
+		#	trigger = {
+		#		exists = owner
+		#		owner = { has_valid_civic = civic_environmentalist }
+		#	}
+		#	society_research = 2
+		#}
 		cost = {
 			energy = 500
 		}
@@ -489,9 +616,19 @@ d_noxious_swamp = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { has_civic = civic_environmentalist }
 		}
-		planet_rangers_food_produces_add = @ranger_small_production
+		planet_rangers_society_research_produces_add = @ranger_small_production
 	}
 
 	all_blocker_swap_types = yes
@@ -533,6 +670,13 @@ d_massive_glacier = {
 
 	resources = {
 		category = deposit_blockers_natural
+		#produces = {
+		#	trigger = {
+		#		exists = owner
+		#		owner = { has_valid_civic = civic_environmentalist }
+		#	}
+		#	physics_research = 2
+		#}
 		cost = {
 			energy = 500
 		}
@@ -549,9 +693,19 @@ d_massive_glacier = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { has_civic = civic_environmentalist }
 		}
-		planet_rangers_minerals_produces_add = @ranger_small_production
+		planet_rangers_physics_research_produces_add = @ranger_small_production
 	}
 
 	all_blocker_swap_types = yes

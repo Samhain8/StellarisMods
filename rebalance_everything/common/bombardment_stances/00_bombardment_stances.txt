@@ -241,23 +241,22 @@ raiding = {
 	abduct_pops = yes
 
 	planet_damage = 0.5
-	army_damage = 0.5
+	army_damage = 1.0
 
 	kill_pop_chance = {
-		base = 0.15
+		base = 0.35
 	}
-	min_pops_to_kill_pop = 2
+	min_pops_to_kill_pop = 0
 
 	# root = fleet
 	# from = planet
 	ai_weight = {
-		weight = 8
+		weight = 20
 		modifier = {
 			factor = 0
 			exists = from
 			from = {
 				OR = {
-					num_pops < 2
 					owner = { NOT = { is_hostile = root.owner } }
 				}
 			}

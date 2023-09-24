@@ -364,7 +364,8 @@ weapon_component_template = {
 weapon_component_template = {
 	key = "ENERGY_TORPEDO_1"
 	size = torpedo
-	type = instant
+	type = missile #instant
+	entity = "turret_torpedo_entity"
 
 	firing_arc = 25.0
 	min_range = 45.0
@@ -374,7 +375,8 @@ weapon_component_template = {
 
 	prerequisites = { "tech_energy_torpedoes_1" }
 	component_set = "ENERGY_TORPEDO_1"
-	projectile_gfx = "proton_torpedoes"
+	#projectile_gfx = "proton_torpedoes"
+	projectile_gfx = "swarmer_missiles_02"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 	ai_tag_weight = 0
@@ -404,7 +406,8 @@ weapon_component_template = {
 weapon_component_template = {
 	key = "ENERGY_TORPEDO_2"
 	size = torpedo
-	type = instant
+	type = missile #instant
+	entity = "turret_torpedo_entity"
 
 	firing_arc = 25.0
 	min_range = 45.0
@@ -414,7 +417,8 @@ weapon_component_template = {
 
 	prerequisites = { "tech_energy_torpedoes_2" }
 	component_set = "ENERGY_TORPEDO_2"
-	projectile_gfx = "neutron_torpedoes"
+	#projectile_gfx = "neutron_torpedoes"
+	projectile_gfx = "swarmer_missiles_02"
 	tags = { weapon_type_energy }
 	ai_tags = { weapon_role_artillery artillery artillery_stealth energy_torpedoes energy_torpedoes_stealth }
 	ai_tag_weight = 0

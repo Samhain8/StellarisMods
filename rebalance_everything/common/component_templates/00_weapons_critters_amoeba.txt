@@ -1,7 +1,7 @@
 @attack_range = 10
 @engagement_range = 100
 @launch_time = 2
-@count = 8
+@count = 6
 @regen = 0.5
 
 # ####################
@@ -86,21 +86,21 @@ strike_craft_component_template = {
 	regeneration_per_day = @regen
 	launch_time = @launch_time
 
-	damage = { min = 20 max = 30 }
+	damage = { min = 28 max = 40 }
 	cooldown = 5
 	range = @attack_range
 	engagement_range = @engagement_range
-	accuracy = 0.70
+	accuracy = 0.80
 	tracking = 0.50
 
-	health = 20
+	health = 40
 	armor = 0
 	shield = 0
 	evasion = 0.50
 
 	speed = 500
 	rotation_speed = 0.8
-	acceleration = 1
+	acceleration = 0.5
 
 	shield_damage = 1.0
 	shield_penetration = 1

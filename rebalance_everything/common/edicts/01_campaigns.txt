@@ -65,7 +65,7 @@ education_campaign = {
 	}
 
 	modifier = {
-		species_leader_exp_gain = 0.25
+		species_leader_exp_gain = 0.20
 	}
 
 	potential = {
@@ -194,7 +194,7 @@ machine_learning_campaign = {
 	}
 
 	modifier = {
-		species_leader_exp_gain = 0.25
+		species_leader_exp_gain = 0.20
 	}
 
 	potential = {
@@ -299,7 +299,7 @@ learning_campaign = {
 	}
 
 	modifier = {
-		species_leader_exp_gain = 0.25
+		species_leader_exp_gain = 0.20
 	}
 
 	potential = {
@@ -702,7 +702,7 @@ sight_beyond_sight = {
 			multiplier = value:edict_size_effect
 		}
 		upkeep = {
-			sr_zro = 0.5
+			sr_zro = 1
 			multiplier = value:edict_size_effect
 		}
 	}
@@ -712,10 +712,11 @@ sight_beyond_sight = {
 	}
 
 	modifier = {
-		ship_sensor_range_add = 1
+		ship_sensor_range_add = 2
 		ship_windup_mult = -0.15
 		ship_winddown_mult = -0.15
-		ship_jumpdrive_cooldown_mult = -0.15
+		ship_jumpdrive_cooldown_mult = -0.35
+		ship_ftl_jumpdrive_range_mult = 0.35
 		catapult_spread_mult = 0.15
 	}
 

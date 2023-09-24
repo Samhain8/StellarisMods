@@ -943,6 +943,7 @@ building_clone_vats = {
 
 	planet_modifier = {
 		planet_pop_assembly_organic_add = 3
+		job_healthcare_add = 1
 	}
 
 	triggered_planet_modifier = {

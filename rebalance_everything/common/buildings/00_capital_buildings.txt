@@ -193,7 +193,23 @@ building_capital = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = { 
+					has_active_tradition = tr_domination_finish 
+					has_active_tradition = tr_domination_federations_finish
+				}
+			}
+		}
+		modifier = {
+			job_page_add = 1
+			job_page_per_pop = 0.15
 		}
 	}
 
@@ -226,8 +242,9 @@ building_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				is_megacorp = yes
+			owner = { 
+				is_megacorp = yes #has_authority = auth_corporate
+				NOT = { has_civic = civic_merchant_nobles }
 				is_worker_coop_empire = no
 			}
 		}
@@ -236,6 +253,19 @@ building_capital = {
 		}
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_civic = civic_merchant_nobles
+			}
+		}
+		modifier = {
+			job_noble_add = 1
+			job_merchant_add = 1
+		}
+	}
+	
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -348,7 +378,10 @@ building_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_civic = civic_aristocratic_elite
+				OR = {
+					has_civic = civic_aristocratic_elite
+					has_civic = civic_merchant_nobles
+				}
 			}
 		}
 		text = job_noble_effect_desc
@@ -366,7 +399,10 @@ building_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_civic = civic_merchant_guilds
+				OR = {
+					has_civic = civic_merchant_guilds
+					has_civic = civic_merchant_nobles
+				}
 			}
 		}
 		text = job_merchant_effect_desc
@@ -491,7 +527,23 @@ building_major_capital = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = { 
+					has_active_tradition = tr_domination_finish 
+					has_active_tradition = tr_domination_federations_finish
+				}
+			}
+		}
+		modifier = {
+			job_page_add = 1
+			job_page_per_pop = 0.15
 		}
 	}
 
@@ -524,13 +576,27 @@ building_major_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
+			owner = { 
 				is_megacorp = yes
+				NOT = { has_civic = civic_merchant_nobles }
 				is_worker_coop_empire = no
 			}
 		}
 		modifier = {
 			job_executive_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_civic = civic_merchant_nobles
+			}
+		}
+		modifier = {
+			job_noble_add = 1
+			job_merchant_add = 2
 		}
 	}
 
@@ -546,7 +612,6 @@ building_major_capital = {
 			job_steward_add = 4
 		}
 	}
-
 
 	triggered_planet_modifier = {
 		potential = {
@@ -667,7 +732,10 @@ building_major_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_civic = civic_aristocratic_elite
+				OR = {
+					has_civic = civic_aristocratic_elite
+					has_civic = civic_merchant_nobles
+				}
 			}
 		}
 		text = job_noble_effect_desc
@@ -687,7 +755,10 @@ building_major_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_civic = civic_merchant_guilds
+				OR = {
+					has_civic = civic_merchant_guilds
+					has_civic = civic_merchant_nobles
+				}
 			}
 		}
 		text = job_merchant_effect_desc
@@ -809,7 +880,7 @@ building_system_capital = {
 	}
 
 	planet_modifier = {
-		job_enforcer_add = 3
+		job_enforcer_add = 4
 		planet_housing_add = 12
 		planet_amenities_add = 12
 		planet_max_buildings_add = @buildings_t4
@@ -829,7 +900,23 @@ building_system_capital = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 4
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = { 
+					has_active_tradition = tr_domination_finish 
+					has_active_tradition = tr_domination_federations_finish
+				}
+			}
+		}
+		modifier = {
+			job_page_add = 1
+			job_page_per_pop = 0.15
 		}
 	}
 
@@ -862,13 +949,27 @@ building_system_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
+			owner = { 
 				is_megacorp = yes
 				is_worker_coop_empire = no
+				NOT = { has_civic = civic_merchant_nobles }
 			}
 		}
 		modifier = {
 			job_executive_add = 4
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_civic = civic_merchant_nobles
+			}
+		}
+		modifier = {
+			job_noble_add = 2
+			job_merchant_add = 2
 		}
 	}
 
@@ -884,7 +985,6 @@ building_system_capital = {
 			job_steward_add = 6
 		}
 	}
-
 
 	triggered_planet_modifier = {
 		potential = {
@@ -1015,7 +1115,10 @@ building_system_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_civic = civic_aristocratic_elite
+				OR = {
+					has_civic = civic_aristocratic_elite
+					has_civic = civic_merchant_nobles
+				}
 			}
 		}
 		text = job_noble_effect_desc
@@ -1033,7 +1136,10 @@ building_system_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_civic = civic_merchant_guilds
+				OR = {
+					has_civic = civic_merchant_guilds
+					has_civic = civic_merchant_nobles
+				}
 			}
 		}
 		text = job_merchant_effect_desc
@@ -1736,6 +1842,15 @@ building_hive_capital = {
 
 	triggered_planet_modifier = {
 		potential = {
+			owner = { has_origin = origin_progenitor_hive }
+			is_planet_class = pc_hive
+		}
+		job_spawning_drone_add = -1
+		job_offspring_drone_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
 			exists = owner
 			owner = { has_origin = origin_progenitor_hive }
 			is_planet_class = pc_hive
@@ -1846,6 +1961,15 @@ building_hive_major_capital = {
 
 	inline_script = {
 		script = buildings/on_all_capital_buildings
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			owner = { has_origin = origin_progenitor_hive }
+			is_planet_class = pc_hive
+		}
+		job_spawning_drone_add = -1
+		job_offspring_drone_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -1978,6 +2102,14 @@ building_hab_capital = {
 	}
 
 	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		job_enforcer_add = 1
+	}
+
+	triggered_planet_modifier = {
 		modifier = { planet_stability_add = 1 }
 		mult = modifier:habitat_stability_add
 	}
@@ -1990,7 +2122,23 @@ building_hab_capital = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = { 
+					has_active_tradition = tr_domination_finish 
+					has_active_tradition = tr_domination_federations_finish
+				}
+			}
+		}
+		modifier = {
+			job_page_add = 1
+			job_page_per_pop = 0.15
 		}
 	}
 
@@ -2006,8 +2154,9 @@ building_hab_capital = {
 		potential = {
 			exists = owner
 			owner = {
-				NOT = {
+				NOR = {
 					has_authority = auth_corporate
+					has_civic = civic_merchant_nobles
 				}
 				is_regular_empire = yes
 			}
@@ -2020,11 +2169,24 @@ building_hab_capital = {
 			exists = owner
 			owner = {
 				has_authority = auth_corporate
+				NOT = { has_civic = civic_merchant_nobles }
 				is_worker_coop_empire = no
 			}
 		}
 		modifier = {
 			job_executive_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_civic = civic_merchant_nobles
+			}
+		}
+		modifier = {
+			job_merchant_add = 1
 		}
 	}
 
@@ -2040,6 +2202,19 @@ building_hab_capital = {
 			job_steward_add = 2
 		}
 	}
+
+	#triggered_planet_modifier = {
+	#	potential = {
+	#		exists = owner
+	#		owner = {
+	#			has_origin = origin_void_dwellers
+	#			is_regular_empire = yes
+	#		}
+	#	}
+	#	modifier = {
+	#		job_colonist_add = 2
+	#	}
+	#}
 
 	triggered_planet_modifier = {
 		potential = {
@@ -2070,6 +2245,17 @@ building_hab_capital = {
 		job_maintenance_drone_add = 2
 		planet_amenities_add = 3
 	}
+
+	#triggered_desc = {
+	#	trigger = {
+	#		exists = owner
+	#		owner = {
+	#			has_origin = origin_void_dwellers
+	#			is_regular_empire = yes
+	#		}
+	#	}
+	#	text = job_colonist_effect_desc
+	#}
 
 	triggered_planet_modifier = {
 		potential = {
@@ -2132,9 +2318,20 @@ building_hab_capital = {
 			owner = {
 				is_megacorp = yes
 				is_worker_coop_empire = no
+				NOT = { has_civic = civic_merchant_nobles }
 			}
 		}
 		text = job_executive_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				has_civic = civic_merchant_nobles
+			}
+		}
+		text = job_merchant_effect_desc
 	}
 
 	triggered_desc = {
@@ -2258,8 +2455,32 @@ building_hab_major_capital = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 3
 		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = { 
+					has_active_tradition = tr_domination_finish 
+					has_active_tradition = tr_domination_federations_finish
+				}
+			}
+		}
+		modifier = {
+			job_page_add = 1
+			job_page_per_pop = 0.15
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		job_enforcer_add = 2
 	}
 
 	triggered_planet_modifier = {
@@ -2344,13 +2565,28 @@ building_hab_major_capital = {
 		potential = {
 			NOT = { has_planet_flag = toxic_knights_habitat }
 			exists = owner
-			owner = {
+			owner = { 
 				has_authority = auth_corporate
+				NOT = { has_civic = civic_merchant_nobles }
 				is_worker_coop_empire = no
 			}
 		}
 		modifier = {
 			job_executive_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			NOT = { has_planet_flag = toxic_knights_habitat }
+			exists = owner
+			owner = { 
+				has_civic = civic_merchant_nobles
+			}
+		}
+		modifier = {
+			job_noble_add = 1
+			job_merchant_add = 1
 		}
 	}
 
@@ -2431,14 +2667,6 @@ building_hab_major_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		job_enforcer_add = 1
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
 			owner = { has_technology = tech_capital_productivity_1 }
 		}
 		modifier = {
@@ -2485,7 +2713,10 @@ building_hab_major_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_civic = civic_aristocratic_elite
+				OR = {
+					has_civic = civic_aristocratic_elite
+					has_civic = civic_merchant_nobles
+				}
 			}
 			OR = {
 				NOT = { has_planet_flag = toxic_knights_habitat }
@@ -2498,7 +2729,10 @@ building_hab_major_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_civic = civic_merchant_guilds
+				OR = {
+					has_civic = civic_merchant_guilds
+					has_civic = civic_merchant_nobles
+				}
 			}
 			OR = {
 				NOT = { has_planet_flag = toxic_knights_habitat }
@@ -2707,7 +2941,7 @@ building_resort_capital = {
 		potential = {
 			exists = owner
 			owner = {
-				has_valid_civic = civic_warrior_culture
+				owner = { is_warrior_culture = yes }
 			}
 		}
 		modifier = {
@@ -2871,7 +3105,7 @@ building_resort_major_capital = {
 		potential = {
 			exists = owner
 			owner = {
-				has_valid_civic = civic_warrior_culture
+				owner = { is_warrior_culture = yes }
 			}
 		}
 		modifier = {
@@ -3325,7 +3559,23 @@ building_imperial_capital = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = { 
+					has_active_tradition = tr_domination_finish 
+					has_active_tradition = tr_domination_federations_finish
+				}
+			}
+		}
+		modifier = {
+			job_page_add = 1
+			job_page_per_pop = 0.15
 		}
 	}
 
@@ -3358,8 +3608,9 @@ building_imperial_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
+			owner = { 
 				has_authority = auth_corporate
+				NOT = { has_civic = civic_merchant_nobles }
 				is_worker_coop_empire = no
 			}
 		}
@@ -3368,6 +3619,19 @@ building_imperial_capital = {
 		}
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_civic = civic_merchant_nobles
+			}
+		}
+		modifier = {
+			job_noble_add = 3
+			job_merchant_add = 3
+		}
+	}
+	
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -3380,7 +3644,6 @@ building_imperial_capital = {
 			job_steward_add = 9
 		}
 	}
-
 
 	triggered_planet_modifier = {
 		potential = {
@@ -3503,7 +3766,10 @@ building_imperial_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_civic = civic_aristocratic_elite
+				OR = {
+					has_civic = civic_aristocratic_elite
+					has_civic = civic_merchant_nobles
+				}
 			}
 		}
 		text = job_noble_effect_desc
@@ -3521,7 +3787,10 @@ building_imperial_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_civic = civic_merchant_guilds
+				OR = {
+					has_civic = civic_merchant_guilds
+					has_civic = civic_merchant_nobles
+				}
 			}
 		}
 		text = job_merchant_effect_desc

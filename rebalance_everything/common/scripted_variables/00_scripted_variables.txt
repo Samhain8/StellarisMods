@@ -278,8 +278,8 @@
 @federation_perk_factor = 2
 @eager_explorer_effect = 5
 
-@lithoid_trait_resource_production = 0.01
-@drake_scaled_trait_resource_production = 0.025
+@lithoid_trait_resource_production = 0.04
+@drake_scaled_trait_resource_production = 0.1
 
 @plantoid_budding_rate = 0.02
 @tiyanki_budding_rate = 0.05
@@ -334,8 +334,8 @@
 
 
 # Toxoids
-@exotic_metabolism = 0.125
-@inorganic_breath = 0.02
+@exotic_metabolism = 0.1
+@inorganic_breath = 0.05
 @overtuned_consequences = 0.2
 @overtuned_consequences_hive = 0.5
 

@@ -129,7 +129,7 @@ d_rare_crystals_1 = {
 	drop_weight = {
 		weight = 0
 		modifier = {
-			weight = 1
+			weight = 1.2
 			OR = {
 				is_planet_class = pc_frozen
 				is_planet_class = pc_ice_asteroid
@@ -155,7 +155,7 @@ d_rare_crystals_2 = {
 	drop_weight = {
 		weight = 0
 		modifier = {
-			weight = 0.25
+			weight = 0.3
 			OR = {
 				is_planet_class = pc_frozen
 				is_planet_class = pc_ice_asteroid
@@ -323,6 +323,7 @@ d_zro_deposit_1 = {
 	station = shipclass_research_station
 	is_for_colonizable = no
 	icon = d_dust_desert
+	category = deposit_cat_rare
 
 	resources = {
 		category = orbital_research_deposits
@@ -348,6 +349,7 @@ d_zro_deposit_2 = {
 	station = shipclass_research_station
 	is_for_colonizable = no
 	icon = d_dust_desert
+	category = deposit_cat_rare
 
 	resources = {
 		category = orbital_research_deposits
@@ -373,6 +375,7 @@ d_zro_deposit_3 = {
 	station = shipclass_research_station
 	is_for_colonizable = no
 	icon = d_dust_desert
+	category = deposit_cat_rare
 
 	resources = {
 		category = orbital_research_deposits
@@ -390,6 +393,7 @@ d_zro_deposit_4 = {
 	station = shipclass_research_station
 	is_for_colonizable = no
 	icon = d_dust_desert
+	category = deposit_cat_rare
 
 	resources = {
 		category = orbital_research_deposits
@@ -407,6 +411,7 @@ d_zro_deposit_5 = {
 	station = shipclass_research_station
 	is_for_colonizable = no
 	icon = d_dust_desert
+	category = deposit_cat_rare
 
 	resources = {
 		category = orbital_research_deposits
@@ -433,12 +438,8 @@ d_dark_matter_deposit_1 = {
 	drop_weight = {
 		weight = 0
 		modifier = {
-			weight = 10
+			weight = 7.5
 			is_planet_class = pc_black_hole
-		}
-		modifier = {
-			factor = 0.5
-			is_inside_nebula = no
 		}
 	}
 }

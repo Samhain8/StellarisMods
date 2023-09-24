@@ -1,31 +1,30 @@
 tr_domination_adopt = {
 	unlocks_agenda = agenda_civil_exclusion
 	modifier = {
-		deposit_blockers_cost_mult = -0.33
+		country_traditions_influence_produces_add = 0.5
 	}
 
-	tradition_swap = {
-		name = tr_domination_adopt_void
-		inherit_name = yes
-		inherit_icon = yes
-		custom_tooltip = tr_domination_adopt_void_desc
-		trigger = {
-			has_origin = origin_void_dwellers
-		}
-		modifier = {
-			megastructures_habitat_alloys_upkeep_mult = -0.20
-			planet_districts_hab_alloys_upkeep_mult = -0.20
-		}
-		# Effects are implemented in 00_capital_buildings.txt
-		weight = {
-			factor = 1
-		}
-	}
+	#tradition_swap = {
+	#	name = tr_domination_adopt_void
+	#	inherit_name = yes
+	#	inherit_icon = yes
+	#	custom_tooltip = tr_domination_adopt_void_desc
+	#	trigger = {
+	#		has_origin = origin_void_dwellers
+	#	}
+	#	modifier = {
+	#		megastructures_habitat_alloys_upkeep_mult = -0.20
+	#		planet_districts_hab_alloys_upkeep_mult = -0.20
+	#	}
+	#	# Effects are implemented in 00_capital_buildings.txt
+	#	weight = {
+	#		factor = 1
+	#	}
+	#}
 }
 
 tr_domination_finish = {
 	modifier = {
-		empire_size_pops_mult = -0.10
 		ascension_perks_add = 1
 	}
 
@@ -38,7 +37,6 @@ tr_domination_finish = {
 			has_federations_dlc = yes
 		}
 		modifier = {
-			empire_size_pops_mult = -0.10
 			ascension_perks_add = 1
 		}
 		weight = {
@@ -49,9 +47,8 @@ tr_domination_finish = {
 
 tr_domination_colonial_viceroys = {
 	modifier = {
-		country_traditions_influence_produces_add = 0.5
-		leader_governors_cost_mult = -0.1
-		leader_governors_upkeep_mult = -0.1
+		governor_exp_gain = 0.1
+		country_traditions_influence_produces_add = 0.25
 	}
 
 	tradition_swap = {
@@ -128,8 +125,8 @@ tr_domination_grand_council = {
 	}
 
 	modifier = {
-		councilor_exp_gain = 0.2
-		country_edict_fund_add = 50
+		councilor_exp_gain = 0.15
+		country_edict_fund_add = 30
 	}
 
 	tradition_swap = {
@@ -164,13 +161,17 @@ tr_domination_grand_council = {
 tr_domination_judgment_corps = {
 
 	# effect implemented in jobs file
-	custom_tooltip = tr_domination_judgment_corps_desc
+	custom_tooltip_with_modifiers = tr_domination_judgment_corps_desc
+
+	modifier = {
+		empire_size_penalty_mult = -0.10
+	}
 
 	tradition_swap = {
 		name = tr_domination_trust_officers
 		inherit_effects = yes
 		inherit_icon = yes
-		custom_tooltip = tr_domination_trust_officers_desc
+		custom_tooltip_with_modifiers = tr_domination_trust_officers_desc
 		trigger = {
 			is_regular_empire = yes
 			OR = {

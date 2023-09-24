@@ -10,12 +10,13 @@ trait_cyborg_power_drills = {
 		can_remove_cybernetic_traits = yes
 	}
 	randomized = no
+	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
 	modifier = {
-		planet_jobs_minerals_produces_mult = 0.1
+		planet_jobs_minerals_produces_mult = 0.15
 	}
 
 	slave_cost = {
-		energy = 750
+		energy = 1000
 	}
 	assembly_score = {
 		modifier = {
@@ -41,12 +42,13 @@ trait_cyborg_harvesters = {
 		can_remove_cybernetic_traits = yes
 	}
 	randomized = no
+	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
 	modifier = {
-		planet_jobs_food_produces_mult = 0.1
+		planet_jobs_food_produces_mult = 0.15
 	}
 
 	slave_cost = {
-		energy = 750
+		energy = 1000
 	}
 	assembly_score = {
 		modifier = {
@@ -60,36 +62,36 @@ trait_cyborg_harvesters = {
 	}
 }
 
-trait_cyborg_superconductive = {
-	cost = 1
-
-	allowed_archetypes = { BIOLOGICAL LITHOID }
-	initial = no
-	species_potential_add = {
-		can_add_cybernetic_traits = yes
-	}
-	species_possible_remove = {
-		can_remove_cybernetic_traits = yes
-	}
-	randomized = no
-	modifier = {
-		planet_jobs_energy_produces_mult = 0.1
-	}
-
-	slave_cost = {
-		energy = 750
-	}
-	assembly_score = {
-		modifier = {
-			add = 1.5
-			from = { has_generator_designation = yes }
-		}
-		modifier = {
-			add = 0.5
-			from = { has_rural_designation = yes }
-		}
-	}
-}
+#trait_cyborg_superconductive = {
+#	cost = 1
+#
+#	allowed_archetypes = { BIOLOGICAL LITHOID }
+#	initial = no
+#	species_potential_add = {
+#		can_add_cybernetic_traits = yes
+#	}
+#	species_possible_remove = {
+#		can_remove_cybernetic_traits = yes
+#	}
+#	randomized = no
+#	modifier = {
+#		planet_jobs_energy_produces_mult = 0.1
+#	}
+#
+#	slave_cost = {
+#		energy = 750
+#	}
+#	assembly_score = {
+#		modifier = {
+#			add = 1.5
+#			from = { has_generator_designation = yes }
+#		}
+#		modifier = {
+#			add = 0.5
+#			from = { has_rural_designation = yes }
+#		}
+#	}
+#}
 
 trait_cyborg_efficient_processors = {
 	cost = 2
@@ -109,7 +111,7 @@ trait_cyborg_efficient_processors = {
 	}
 
 	slave_cost = {
-		energy = 500
+		energy = 1200
 	}
 	assembly_score = {
 		modifier = {
@@ -138,7 +140,7 @@ trait_cyborg_logic_engines = {
 	}
 
 	slave_cost = {
-		energy = 750
+		energy = 1000
 	}
 	assembly_score = {
 		modifier = {
@@ -167,7 +169,7 @@ trait_cyborg_loyalty_circuits = {
 	}
 
 	slave_cost = {
-		energy = 500
+		energy = 1000
 	}
 }
 
@@ -186,18 +188,18 @@ trait_cyborg_double_jointed = {
 	randomized = no
 	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
 	modifier = {
-		pop_housing_usage_mult = -0.1
+		pop_housing_usage_mult = -0.15
 		pop_growth_from_immigration = 0.15
 		pop_resettlement_cost_mult = -0.25
 	}
 
 	slave_cost = {
-		energy = 1500
+		energy = 1000
 	}
 }
 
 trait_cyborg_bulky = {
-	cost = -2
+	cost = -3
 	opposites = { "trait_cyborg_double_jointed" }
 
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -213,6 +215,7 @@ trait_cyborg_bulky = {
 		pop_housing_usage_mult = 0.1
 		pop_growth_from_immigration = -0.15
 		pop_resettlement_cost_mult = 0.25
+		leader_age = -30
 	}
 
 	ai_weight = {
@@ -245,12 +248,12 @@ trait_cyborg_enhanced_memory = {
 		factor = 0
 	}
 	slave_cost = {
-		energy = 750
+		energy = 1000
 	}
 }
 
 trait_cyborg_durable = {
-	cost = 1
+	cost = 2
 	opposites = { "trait_cyborg_high_maintenance" }
 
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -264,15 +267,16 @@ trait_cyborg_durable = {
 	randomized = no
 	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
 	modifier = {
-		pop_amenities_usage_add = -0.5
+		planet_pops_consumer_goods_upkeep_mult = -0.2
+		leader_age = 30
 	}
 	slave_cost = {
-		energy = 750
+		energy = 1000
 	}
 }
 
 trait_cyborg_high_maintenance = {
-	cost = -2
+	cost = -3
 	opposites = { "trait_cyborg_durable" }
 
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -286,13 +290,14 @@ trait_cyborg_high_maintenance = {
 	randomized = no
 
 	modifier = {
-		pop_amenities_usage_add = 0.5
+		planet_pops_consumer_goods_upkeep_mult = 0.2
+		leader_age = -30
 	}
 	ai_weight = {
 		factor = 0
 	}
 	slave_cost = {
-		energy = -150
+		energy = -250
 	}
 }
 
@@ -311,18 +316,17 @@ trait_cyborg_learning_algorithms = {
 	randomized = no
 	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
 	modifier = {
-		species_leader_exp_gain = 0.25
-		negative_leader_traits_species = -1
+		species_leader_exp_gain = 0.2
 		leaders_upkeep_mult = -0.1
 	}
 
 	slave_cost = {
-		energy = 1500
+		energy = 1000
 	}
 }
 
 trait_cyborg_power_intensive = {
-	cost = -1
+	cost = -3
 	opposites = { }
 
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -334,15 +338,18 @@ trait_cyborg_power_intensive = {
 		can_remove_cybernetic_traits = yes
 	}
 	randomized = no
-	custom_tooltip = TRAIT_POWER_INTENSIVE_EFFECT
+	custom_tooltip_with_modifiers = TRAIT_POWER_INTENSIVE_EFFECT
+	modifier = {
+		leader_age = -30
+	}
 
 	slave_cost = {
-		energy = -250
+		energy = -500
 	}
 }
 
 trait_cyborg_neural_limiters = {
-	cost = -2
+	cost = -3
 
 	opposites = { "trait_cyborg_learning_algorithms" }
 
@@ -358,7 +365,7 @@ trait_cyborg_neural_limiters = {
 	modifier = {
 		species_leader_exp_gain = -0.25
 		negative_leader_traits_species = 1
-		leaders_upkeep_mult = 0.1
+		leader_age = -30
 	}
 
 	ai_weight = {
@@ -387,15 +394,15 @@ trait_cyborg_streamlined_protocols = {
 	randomized = no
 	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
 	modifier = {
-		species_empire_size_mult = -0.10
+		species_empire_size_mult = -0.20
 	}
 	slave_cost = {
-		energy = 750
+		energy = 1000
 	}
 }
 
 trait_cyborg_high_bandwidth = {
-	cost = -2
+	cost = -3
 	opposites = { "trait_cyborg_streamlined_protocols" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	initial = no
@@ -407,10 +414,11 @@ trait_cyborg_high_bandwidth = {
 	}
 	randomized = no
 	modifier = {
-		species_empire_size_mult = 0.10
+		species_empire_size_mult = 0.20
+		leader_age = -30
 	}
 	slave_cost = {
-		energy = -150
+		energy = -500
 	}
 }
 
@@ -418,7 +426,6 @@ trait_cyborg_trading_algorithms = {
 	cost = 1
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
-	allowed_archetypes = { BIOLOGICAL LITHOID }
 	initial = no
 	species_potential_add = {
 		can_add_cybernetic_traits = yes
@@ -433,6 +440,125 @@ trait_cyborg_trading_algorithms = {
 		pop_job_trade_mult = 0.25
 	}
 	slave_cost = {
-		energy = 500
+		energy = 1000
+	}
+}
+
+trait_cyborg_neon_allure = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/trait_robot_domestic_protocols.dds"
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	
+	initial = no
+	species_potential_add = {
+		can_add_cybernetic_traits = yes
+	}
+	species_possible_remove = {
+		can_remove_cybernetic_traits = yes
+	}
+	randomized = no
+	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
+	modifier = {
+		pop_job_amenities_mult = 0.2
+		planet_jobs_unity_produces_mult = 0.1
+	}
+	slave_cost = {
+		energy = 1000
+	}
+}
+
+trait_cyborg_armored = {
+	cost = 1
+	icon = "gfx/interface/icons/traits/trait_very_strong.dds"
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	
+	initial = no
+	species_potential_add = {
+		can_add_cybernetic_traits = yes
+	}
+	species_possible_remove = {
+		can_remove_cybernetic_traits = yes
+	}
+	randomized = no
+	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
+	modifier = {
+		army_health = 0.5
+		army_damage_mult = 0.3
+	}
+	slave_cost = {
+		energy = 1000
+	}
+}
+
+trait_cyborg_willing_tool = {
+	cost = 3
+	icon = "gfx/interface/icons/traits/trait_cyborg_loyalty_circuits.dds"
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	
+	initial = no
+	species_potential_add = {
+		can_add_cybernetic_traits = yes
+	}
+	species_possible_remove = {
+		can_remove_cybernetic_traits = yes
+	}
+	randomized = no
+	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
+	modifier = {
+		pop_cat_slave_happiness = 0.2
+		planet_jobs_produces_mult = 0.05
+		leader_age = -30
+	}
+	slave_cost = {
+		energy = 1500
+	}
+}
+
+trait_cyborg_organic_recyclers = {
+	cost = 3
+	icon = "gfx/interface/icons/traits/trait_robot_recycled.dds"
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	
+	initial = no
+	species_potential_add = {
+		can_add_cybernetic_traits = yes
+	}
+	species_possible_remove = {
+		can_remove_cybernetic_traits = yes
+	}
+	randomized = no
+	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
+	modifier = {
+		pop_environment_tolerance = 0.2
+		planet_pops_organics_food_upkeep_mult = -0.25
+		planet_pops_organics_minerals_upkeep_mult = -0.25
+		leader_age = -30
+	}
+	slave_cost = {
+		energy = 1500
+	}
+}
+
+trait_cyborg_mechanical_interface = {
+	cost = 3
+	icon = "gfx/interface/icons/traits/trait_robot_mass_produced.dds"
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	
+	initial = no
+	species_potential_add = {
+		can_add_cybernetic_traits = yes
+	}
+	species_possible_remove = {
+		can_remove_cybernetic_traits = yes
+	}
+	randomized = no
+	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
+	modifier = {
+		planet_jobs_alloys_produces_mult = 0.1
+		planet_jobs_consumer_goods_produces_mult = 0.1
+		leader_age = -30
+	}
+	slave_cost = {
+		energy = 1500
 	}
 }

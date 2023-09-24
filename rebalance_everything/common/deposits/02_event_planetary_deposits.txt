@@ -19,7 +19,7 @@ d_metal_boneyard = {
 
 	planet_modifier = {
 		district_mining_max = 4
-		planet_jobs_society_research_produces_mult = 0.10
+		planet_jobs_engineering_research_produces_mult = 0.10
 	}
 
 	drop_weight = {
@@ -1737,7 +1737,24 @@ d_big_nature_preserve_blocker = {
 	}
 
 	resources = {
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_environmentalist }
+			}
+			unity = 5
+		}
 		category = deposit_blockers_natural
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
 	}
 
 	inline_script = deposits/ai_weight_natural_blocker
@@ -2084,8 +2101,7 @@ d_metallic_puddles = {
 	icon = d_fertile_lands
 
 	planet_modifier = {
-		district_farming_max = 3
-		job_puddle_technician_add = 1
+		job_puddle_technician_add = 3
 	}
 
 	drop_weight = {
@@ -2100,8 +2116,7 @@ d_metallic_puddles_gestalt = {
 	icon = d_fertile_lands
 
 	planet_modifier = {
-		district_farming_max = 3
-		job_puddle_technician_drone_add = 1
+		job_puddle_technician_drone_add = 3
 	}
 
 	drop_weight = {

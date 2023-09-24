@@ -181,7 +181,7 @@ tech_eco_simulation = {
 	weight = @tier1weight1
 
 	modifier = {
-		planet_farmers_food_produces_mult = 0.2
+		planet_farmers_food_produces_mult = 0.1
 		starbase_constructions_food_produces_mult = 0.10
 	}
 
@@ -247,7 +247,7 @@ tech_gene_crops = {
 	weight = @tier2weight1
 
 	modifier = {
-		planet_farmers_food_produces_mult = 0.2
+		planet_farmers_food_produces_mult = 0.1
 		starbase_constructions_food_produces_mult = 0.10
 	}
 
@@ -314,7 +314,7 @@ tech_nano_vitality_crops = {
 	weight = @tier3weight1
 
 	modifier = {
-		planet_farmers_food_produces_mult = 0.2
+		planet_farmers_food_produces_mult = 0.1
 		starbase_constructions_food_produces_mult = 0.10
 	}
 
@@ -381,7 +381,7 @@ tech_nutrient_replication = {
 	weight = @tier4weight3
 
 	modifier = {
-		planet_jobs_food_produces_mult = 0.15
+		planet_jobs_food_produces_mult = 0.10
 		starbase_constructions_food_produces_mult = 0.10
 	}
 
@@ -657,7 +657,7 @@ tech_society_1 = {
 	weight = @tier1weight1
 
 	modifier = {
-		planet_researchers_society_research_produces_mult = 0.2
+		planet_researchers_society_research_produces_mult = 0.1
 	}
 
 	weight_modifier = {
@@ -706,7 +706,7 @@ tech_society_2 = {
 	weight = @tier2weight3
 
 	modifier = {
-		planet_researchers_society_research_produces_mult = 0.2
+		planet_researchers_society_research_produces_mult = 0.1
 	}
 
 	weight_modifier = {
@@ -751,7 +751,7 @@ tech_society_3 = {
 	weight = @tier4weight2
 
 	modifier = {
-		planet_researchers_society_research_produces_mult = 0.2
+		planet_researchers_society_research_produces_mult = 0.1
 	}
 
 	weight_modifier = {
@@ -830,6 +830,7 @@ tech_alien_life_studies = {
 							OR = {
 								is_sapient = no
 								is_livestock = yes
+								is_pet_slaves = yes
 							}
 						}
 					}
@@ -1198,7 +1199,10 @@ tech_mountain_range = {
 				}
 			}
 		}
-
+		modifier = {
+			factor = 0.33
+			has_valid_civic = civic_environmentalist
+		}
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -1260,7 +1264,10 @@ tech_volcano = {
 				}
 			}
 		}
-
+		modifier = {
+			factor = 0.33
+			has_valid_civic = civic_environmentalist
+		}
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -1320,7 +1327,10 @@ tech_dangerous_wildlife = {
 				}
 			}
 		}
-
+		modifier = {
+			factor = 0.33
+			has_valid_civic = civic_environmentalist
+		}
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -1379,7 +1389,10 @@ tech_dense_jungle = {
 				}
 			}
 		}
-
+		modifier = {
+			factor = 0.33
+			has_valid_civic = civic_environmentalist
+		}
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -1438,7 +1451,10 @@ tech_quicksand_basin = {
 				}
 			}
 		}
-
+		modifier = {
+			factor = 0.33
+			has_valid_civic = civic_environmentalist
+		}
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -1497,7 +1513,10 @@ tech_noxious_swamp = {
 				}
 			}
 		}
-
+		modifier = {
+			factor = 0.33
+			has_valid_civic = civic_environmentalist
+		}
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -1556,7 +1575,10 @@ tech_massive_glacier = {
 				}
 			}
 		}
-
+		modifier = {
+			factor = 0.33
+			has_valid_civic = civic_environmentalist
+		}
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -1615,7 +1637,10 @@ tech_toxic_kelp = {
 				}
 			}
 		}
-
+		modifier = {
+			factor = 0.33
+			has_valid_civic = civic_environmentalist
+		}
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -1674,7 +1699,10 @@ tech_deep_sinkhole = {
 				}
 			}
 		}
-
+		modifier = {
+			factor = 0.33
+			has_valid_civic = civic_environmentalist
+		}
 		modifier = {
 			factor = 0
 			num_owned_planets < 2
@@ -3382,7 +3410,7 @@ tech_psionic_theory = {
 	}
 
 	weight_modifier = {
-		factor = 0.5
+		factor = 0.8
 		modifier = {
 			factor = 0
 			has_ethic = ethic_gestalt_consciousness
@@ -3499,7 +3527,7 @@ tech_telepathy = {
 	}
 
 	weight_modifier = {
-		factor = 0.5
+		factor = 0.8
 		modifier = {
 			factor = 0
 			host_has_dlc = "Utopia"

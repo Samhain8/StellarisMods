@@ -682,8 +682,11 @@ ring_noble_estates = {
 
 	potential = {
 		exists = owner
-		owner = {
-			has_valid_civic = civic_aristocratic_elite
+		owner = { 
+			OR = {
+				has_valid_civic = civic_aristocratic_elite
+				has_civic = civic_merchant_nobles
+			}
 		}
 		is_orbital_ring = yes
 		planet = {
@@ -707,6 +710,9 @@ ring_noble_estates = {
 		NOT = {
 			owner = { has_civic = civic_aristocratic_elite }
 		}
+		NOT = {
+			owner = { has_civic = civic_merchant_nobles }
+		}
 	}
 
 	destroy_trigger = {
@@ -714,11 +720,42 @@ ring_noble_estates = {
 		NOT = {
 			owner = { has_civic = civic_aristocratic_elite }
 		}
+		NOT = {
+			owner = { has_civic = civic_merchant_nobles }
+		}
 	}
 
 	planet_modifier = {
 		job_noble_add = 2
-		planet_housing_add = 2
+		planet_housing_add = 5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_civic = civic_aristocratic_elite
+			}
+		}
+		modifier = {
+			job_enforcer_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_civic = civic_merchant_nobles
+			}
+		}
+		modifier = {
+			job_entertainer_add = 2
+		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 8
 	}
 
 	resources = {

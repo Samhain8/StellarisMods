@@ -170,9 +170,10 @@ building_betharian_power_plant = {
 		cost = {
 			minerals = 200
 		}
-		produces = {
-			energy = 10
-		}
+	}
+
+	planet_modifier = {
+		planet_jobs_physics_research_produces_mult = 0.20
 	}
 
 	inline_script = {
@@ -208,6 +209,9 @@ building_xeno_zoo = {
 				any_owned_pop = {
 					is_livestock = yes
 				}
+				any_owned_pop = {
+					is_pet_slaves = yes
+				}
 			}
 		}
 	}
@@ -233,6 +237,9 @@ building_xeno_zoo = {
 					any_owned_pop = {
 						is_livestock = yes
 					}
+					any_owned_pop = {
+						is_pet_slaves = yes
+					}
 				}
 			}
 		}
@@ -251,9 +258,7 @@ building_xeno_zoo = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				has_valid_civic = civic_warrior_culture
-			}
+			owner = { is_warrior_culture = yes }
 		}
 		modifier = {
 			job_duelist_add = 1
@@ -270,7 +275,10 @@ building_xeno_zoo = {
 		potential = {
 			planet = {
 				any_owned_pop = {
-					is_livestock = yes
+					OR = {
+						is_livestock = yes
+						is_pet_slaves = yes
+					}
 				}
 			}
 			exists = owner
@@ -287,7 +295,7 @@ building_xeno_zoo = {
 		potential = {
 			planet = {
 				any_owned_pop = {
-					is_livestock = no
+					is_livestock = yes
 				}
 			}
 			exists = owner
@@ -319,7 +327,7 @@ building_xeno_zoo = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { has_valid_civic = civic_warrior_culture }
+			owner = { is_warrior_culture = yes }
 		}
 		text = job_duelist_effect_desc
 	}
@@ -332,7 +340,7 @@ building_xeno_zoo = {
 				}
 			}
 			exists = owner
-			owner = { NOT = { has_valid_civic = civic_warrior_culture } }
+			owner = { is_warrior_culture = no }
 		}
 		text = job_xeno_zoo_animal_effect_desc
 	}

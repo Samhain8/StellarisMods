@@ -1,9 +1,9 @@
-@stone_age_pops					= 4
-@bronze_age_pops				= 8
-@iron_age_pops					= 9
-@late_medieval_age_pops			= 10
-@renaissance_age_pops			= 12
-@steam_age_pops					= 16
+@stone_age_pops					= 9
+@bronze_age_pops				= 12
+@iron_age_pops					= 13
+@late_medieval_age_pops			= 14
+@renaissance_age_pops			= 16
+@steam_age_pops					= 19
 @industrial_age_pops			= 22
 @machine_age_pops				= 24
 @atomic_age_pops				= 26
@@ -12,8 +12,8 @@
 @ancient_or_medieval_era_growth	= 1
 @victorian_era_growth			= 2
 @machine_age_growth				= 3
-@atomic_age_growth				= 5
-@early_space_age_growth			= 8
+@atomic_age_growth				= 3
+@early_space_age_growth			= 4
 
 @small_awareness_gain			= 5
 @medium_awareness_gain			= 10

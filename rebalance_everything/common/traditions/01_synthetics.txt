@@ -13,8 +13,8 @@ tr_synthetics_adopt = {
 
 	unlocks_agenda = agenda_synthetic_yield
 	modifier = {
-		species_leader_exp_gain = 0.15
-		leaders_upkeep_mult = -0.15
+		leaders_upkeep_mult = -0.35
+		ROBOT_species_trait_points_add = 1
 	}
 
 	tradition_swap = {
@@ -24,6 +24,9 @@ tr_synthetics_adopt = {
 		custom_tooltip = tr_synthetics_adopt_machine_desc
 		trigger = {
 			is_machine_empire = yes
+		}
+		modifier = {
+			MACHINE_species_trait_points_add = 1
 		}
 		weight = {
 			factor = 1
@@ -78,7 +81,7 @@ tr_synthetics_finish = {
 
 tr_synthetics_maintenance_protocols = {
 	modifier = {
-		pop_amenities_usage_robotic_mult = -0.1
+		pop_amenities_usage_robotic_mult = -0.15
 	}
 }
 

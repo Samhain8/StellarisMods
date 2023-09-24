@@ -106,18 +106,18 @@ colonization_control_no = {
 				can_think = no
 			}
 		}
-		custom_tooltip = {
-			fail_text = is_slaves_not_battle_thralls_or_indentured_fail
-			if = {
-				limit = {
-					has_citizenship_type = { country = from type = citizenship_slavery }
-				}
-				OR = {
-					has_slavery_type = { country = from type = slavery_military }
-					has_slavery_type = { country = from type = slavery_indentured }
-				}
-			}
-		}
+		#custom_tooltip = {
+		#	fail_text = is_slaves_not_battle_thralls_or_indentured_fail
+		#	if = {
+		#		limit = {
+		#			has_citizenship_type = { country = from type = citizenship_slavery }
+		#		}
+		#		OR = {
+		#			has_slavery_type = { country = from type = slavery_military }
+		#			has_slavery_type = { country = from type = slavery_indentured }
+		#		}
+		#	}
+		#}
 	}
 	ai_will_do = {
 		factor = 1

@@ -399,7 +399,7 @@ citizenship_organic_trophy = {
 }
 
 citizenship_limited = {
-	new_pop_weight = 0.75
+	new_pop_weight = 1
 
 	pop_modifier = {
 		pop_happiness = -0.1
@@ -487,23 +487,25 @@ citizenship_limited = {
 		}
 	}
 	ai_will_do = {
-		factor = 3
+		factor = 2
 		modifier = {
 			factor = 0
 			from = {
-				has_valid_ai_personality = yes
-				has_ai_personality_behaviour = multispecies
+				has_ethic = ethic_fanatic_egalitarian
+			}
+		}
+		modifier = {
+			factor = 0.5
+			from = {
+				OR = {
+					has_ethic = ethic_fanatic_xenophile
+					has_ethic = ethic_egalitarian
+				}
 			}
 		}
 		modifier = {
 			factor = 0
-			from = {
-				has_valid_ai_personality = no
-				OR = {
-					has_ethic = ethic_xenophile
-					has_ethic = ethic_fanatic_xenophile
-				}
-			}
+			is_same_species = from
 		}
 	}
 }
@@ -562,10 +564,10 @@ citizenship_slavery = {
 				has_trait = trait_hive_mind
 			}
 		}
-		custom_tooltip = {
-			fail_text = same_species_disallowed
-			NOT = { is_same_species = from }
-		}
+		#custom_tooltip = {
+		#	fail_text = same_species_disallowed
+		#	NOT = { is_same_species = from }
+		#}
 		custom_tooltip = {
 			fail_text = "lonely_hive_mind_pops_kill_themselves_citizenship"
 			is_lonely_hive_mind_pop = no
@@ -594,15 +596,15 @@ citizenship_slavery = {
 				NOT = { has_valid_civic = civic_hive_devouring_swarm }
 			}
 		}
-		custom_tooltip = {
-			fail_text = empire_xenophile
-			from = {
-				NOR = {
-					has_ethic = ethic_xenophile
-					has_ethic = ethic_fanatic_xenophile
-				}
-			}
-		}
+		#custom_tooltip = {
+		#	fail_text = empire_xenophile
+		#	from = {
+		#		NOR = {
+		#			has_ethic = ethic_xenophile
+		#			has_ethic = ethic_fanatic_xenophile
+		#		}
+		#	}
+		#}
 		custom_tooltip = {
 			fail_text = "FANATIC_PURIFIERS_MUST_PURIFY"
 			OR = {
@@ -614,12 +616,9 @@ citizenship_slavery = {
 			fail_text = does_not_embrace_species_slavery
 			from = {
 				allows_slavery = yes
-				OR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-					has_ethic = ethic_authoritarian
-					has_ethic = ethic_fanatic_authoritarian
-					has_ethic = ethic_gestalt_consciousness
+				NOR = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
 				}
 			}
 		}
@@ -643,30 +642,28 @@ citizenship_slavery = {
 		}
 	}
 	ai_will_do = {
-		factor = 15
+		factor = 0.75
 		modifier = {
 			factor = 0
 			from = {
-				has_valid_ai_personality = yes
-				NOT = {
-					has_ai_personality_behaviour = slaver
-				}
-				NAND = {
-					is_ai = no
-					is_xenophobe = yes
+				OR = {
+					has_ethic = ethic_egalitarian
+					has_ethic = ethic_fanatic_egalitarian
 				}
 			}
 		}
 		modifier = {
-			factor = 0
+			factor = 0.5
 			from = {
-				is_authoritarian = no
-				is_xenophobe = no
-				is_hive_empire = no
+				OR = {
+					has_ethic = ethic_fanatic_xenophile
+					has_ethic = ethic_pacifist
+					has_ethic = ethic_fanatic_pacifist
+				}
 			}
 		}
 		modifier = {
-			factor = 0.1
+			factor = 0.5
 			from = {
 				is_galactic_community_member = yes
 			}
@@ -678,6 +675,36 @@ citizenship_slavery = {
 		modifier = {
 			factor = 2
 			has_species_flag = syncretic_species@from
+		}
+		modifier = {
+			factor = 10
+			from = {
+				OR = {
+					has_ethic = ethic_fanatic_authoritarian
+					has_ethic = ethic_fanatic_xenophobe
+				}
+			}
+		}
+		modifier = {
+			factor = 3
+			from = {
+				OR = {
+					has_ethic = ethic_authoritarian
+					has_ethic = ethic_xenophobe
+				}
+			}
+		}
+		modifier = {
+			factor = 50
+			has_slaver_civic = yes
+		}
+		modifier = {
+			factor = 3
+			has_trait = trait_syncretic_proles
+		}
+		modifier = {
+			factor = 0
+			is_same_species = from
 		}
 	}
 }
@@ -822,6 +849,15 @@ citizenship_purge = {
 		modifier = {
 			factor = 0
 			from = {
+				NOR = {
+					has_ethic = ethic_fanatic_xenophobe
+					has_ethic = ethic_gestalt_consciousness
+				}
+			}
+		}
+		modifier = {
+			factor = 0
+			from = {
 				has_valid_ai_personality = no
 				NOT = { has_authority = auth_hive_mind }
 			}
@@ -877,15 +913,15 @@ citizenship_purge = {
 				has_ascension_perk = ap_become_the_crisis
 			}
 		}
-		modifier = {
-			add = 1000
-			not = { has_species_flag = syncretic_species@from }
-			is_robotic = no
-			from = {
-				has_origin = origin_necrophage
-				is_xenophobe = yes
-			}
-		}
+		#modifier = {
+		#	add = 1000
+		#	not = { has_species_flag = syncretic_species@from }
+		#	is_robotic = no
+		#	from = {
+		#		has_origin = origin_necrophage
+		#		is_xenophobe = yes
+		#	}
+		#}
 	}
 }
 

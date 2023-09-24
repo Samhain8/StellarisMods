@@ -51,7 +51,7 @@ strike_craft_component_template = {
 	acceleration = 1
 
 	shield_penetration = 1.0
-	armor_damage = 1.5
+	shield_damage = 0.5
 
 	ship_behavior = "fighters_behavior"
 	icon = "GFX_ship_part_strike_craft_scout_1"
@@ -88,7 +88,7 @@ strike_craft_component_template = {
 	launch_time = @launch_time
 
 	damage = { min = 4 max = 10 }
-	cooldown = 2.3
+	cooldown = 2.2
 	range = @attack_range
 	engagement_range = @engagement_range
 	accuracy = 1.00
@@ -104,7 +104,7 @@ strike_craft_component_template = {
 	acceleration = 1
 
 	shield_penetration = 1.0
-	armor_damage = 1.5
+	shield_damage = 0.5
 
 	ship_behavior = "fighters_behavior"
 
@@ -144,7 +144,7 @@ strike_craft_component_template = {
 	launch_time = @launch_time
 
 	damage = { min = 5 max = 13 }
-	cooldown = 2.3
+	cooldown = 2.1
 	range = @attack_range
 	engagement_range = @engagement_range
 	accuracy = 1.00
@@ -153,14 +153,14 @@ strike_craft_component_template = {
 	health = 10
 	armor = 0
 	shield = 20
-	evasion = 0.80
+	evasion = 0.75
 
 	speed = @speed3
 	rotation_speed = 0.8
 	acceleration = 1
 
 	shield_penetration = 1.0
-	armor_damage = 1.5
+	shield_damage = 0.5
 
 	ship_behavior = "fighters_behavior"
 
@@ -200,11 +200,11 @@ strike_craft_component_template = {
 	launch_time = @launch_time
 
 	damage = { min = 6 max = 17 }
-	cooldown = 2.3
+	cooldown = 2
 	range = @attack_range
 	engagement_range = @engagement_range
 	accuracy = 1.00
-	tracking = 1.00
+	tracking = 0.95
 
 	health = 12
 	armor = 0
@@ -216,7 +216,7 @@ strike_craft_component_template = {
 	acceleration = 1
 
 	shield_penetration = 1.0
-	armor_damage = 1.5
+	shield_damage = 0.5
 
 	ship_behavior = "fighters_behavior"
 

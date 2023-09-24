@@ -253,6 +253,7 @@ generate_start_deposits_and_blockers = {
 		limit = {
 			owner = {
 				NOT = { has_origin = origin_machine }
+				NOT = { has_origin = origin_imperial_vassal }
 			}
 		}
 		add_deposit = d_decrepit_dwellings
@@ -273,6 +274,7 @@ generate_start_deposits_and_blockers = {
 				NOR = {
 					has_valid_civic = civic_hive_devouring_swarm
 					has_origin = origin_lithoid
+					has_origin = origin_imperial_vassal
 					has_origin = origin_broken_shackles
 				}
 			}
@@ -734,16 +736,16 @@ generate_start_deposits_and_blockers = {
 		add_deposit = d_ruined_arcology
 
 		# 3 + 3 energy
-		add_deposit = d_arid_highlands
-		add_deposit = d_searing_desert
+		add_deposit = d_hot_springs
+		add_deposit = d_frozen_gas_lake
 		add_deposit = d_geothermal_vent
 		if = {
 			limit = { owner = { is_machine_empire = yes } }
-			add_deposit = d_searing_desert
+			add_deposit = d_rushing_waterfalls
 		}
 		if = {
 			limit = { owner = { has_valid_civic = civic_machine_servitor } }
-			add_deposit = d_arid_highlands
+			add_deposit = d_hot_springs
 		}
 
 		# 3 + 3 mining
@@ -752,11 +754,11 @@ generate_start_deposits_and_blockers = {
 		add_deposit = d_submerged_ore_veins
 
 		# 4 + 3 farming
-		add_deposit = d_bountiful_plains
-		add_deposit = d_fertile_lands
+		add_deposit = d_boggy_fens
+		add_deposit = d_fungal_caves
 		if = {
 			limit = { owner = { is_machine_empire = no } }
-			add_deposit = d_bountiful_plains
+			add_deposit = d_lichen_fields
 			add_deposit = d_black_soil
 		}
 	}
@@ -769,7 +771,122 @@ generate_start_deposits_and_blockers = {
 				has_origin = origin_ocean_paradise
 			}
 		}
+
 		create_ocean_paradise_planet = yes
+	}
+
+	if = {
+		limit = {
+			owner = {
+				has_origin = origin_imperial_vassal
+			}
+			OR = {
+				is_planet_class = pc_desert
+				is_planet_class = pc_arid
+				is_planet_class = pc_savannah
+			}
+		}
+
+		set_planet_size = 15
+
+		clear_deposits = yes
+		clear_blockers = yes
+
+		add_deposit = d_burrowing_titans
+		add_deposit = d_dust_desert
+		add_deposit = d_dust_desert
+		add_deposit = d_betharian_deposit
+
+		add_deposit = d_searing_desert
+		add_deposit = d_searing_desert
+
+		add_deposit = d_ore_rich_caverns
+		add_deposit = d_ore_rich_caverns
+		add_deposit = d_prosperous_mesa
+
+		add_deposit = d_fungal_caves
+		add_deposit = d_nutritious_mudland
+		add_deposit = d_nutritious_mudland
+	}
+
+	if = {
+		limit = {
+			owner = {
+				has_origin = origin_imperial_vassal
+			}
+			OR = {
+				is_planet_class = pc_arctic
+				is_planet_class = pc_tundra
+				is_planet_class = pc_alpine
+			}
+		}
+
+		set_planet_size = 13
+
+		add_modifier = { modifier = sentient_storms }
+
+		clear_deposits = yes
+		clear_blockers = yes
+
+		add_deposit = d_crystal_forest
+		add_deposit = d_alien_pets_deposit
+
+		add_deposit = d_tempestous_mountain
+		add_deposit = d_frozen_gas_lake
+		add_deposit = d_hot_springs
+
+		add_deposit = d_veiny_cliffs
+		add_deposit = d_rich_mountain
+
+		add_deposit = d_forgiving_tundra
+		add_deposit = d_forgiving_tundra
+		add_deposit = d_great_river
+	}
+
+	if = {
+		limit = {
+			owner = {
+				has_origin = origin_imperial_vassal
+			}
+			OR = {
+				is_planet_class = pc_continental
+				is_planet_class = pc_tropical
+				is_planet_class = pc_ocean
+			}
+		}
+
+		set_planet_size = 13
+
+		clear_deposits = yes
+		clear_blockers = yes
+
+		add_deposit = d_ancient_concealed_stardocks
+		add_deposit = d_familiar_predators
+		add_deposit = d_fuming_bog
+
+		add_deposit = d_rushing_waterfalls
+		add_deposit = d_rushing_waterfalls
+
+		add_deposit = d_veiny_cliffs
+		add_deposit = d_submerged_ore_veins
+
+		add_deposit = d_rugged_woods
+		add_deposit = d_rugged_woods
+		add_deposit = d_boggy_fens
+		add_deposit = d_tropical_island
+	}
+
+	if = {
+		limit = {
+			owner = {
+				is_lithoid_empire = yes
+				has_origin = origin_imperial_vassal
+			}
+		}
+		while = {
+			count = 2
+			add_deposit = d_hibernating_lithoids
+		}
 	}
 }
 
@@ -873,6 +990,11 @@ generate_start_buildings_and_districts = {
 						has_valid_civic = civic_machine_servitor
 						has_origin = origin_syncretic_evolution
 						has_origin = origin_necrophage
+						has_origin = origin_life_seeded
+						has_origin = origin_remnants
+						has_origin = origin_overtuned
+						has_origin = origin_ocean_paradise
+						has_origin = origin_legendary_leader
 					}
 				}
 			}
@@ -1148,7 +1270,6 @@ generate_start_buildings_and_districts = {
 				}
 				add_building = building_posthumous_employment_center
 			}
-			# 2 Jobs
 			if = {
 				limit = {
 					owner = {
@@ -1158,7 +1279,6 @@ generate_start_buildings_and_districts = {
 						has_valid_civic = civic_environmentalist
 					}
 				}
-				add_building = building_ranger_lodge
 				add_blocker = { type = d_big_nature_preserve_blocker }
 			}
 			# 4-5 jobs
@@ -2212,6 +2332,11 @@ generate_start_pops = {
 					has_origin = origin_necrophage
 					has_valid_civic = civic_machine_servitor
 					has_valid_civic = civic_machine_assimilator
+					has_origin = origin_life_seeded
+					has_origin = origin_remnants
+					has_origin = origin_overtuned
+					has_origin = origin_ocean_paradise
+					has_origin = origin_legendary_leader
 				}
 			}
 		}
@@ -2231,6 +2356,11 @@ generate_start_pops = {
 					OR = {
 						has_origin = origin_syncretic_evolution
 						has_origin = origin_necrophage
+						has_origin = origin_life_seeded
+						has_origin = origin_remnants
+						has_origin = origin_overtuned
+						has_origin = origin_ocean_paradise
+						has_origin = origin_legendary_leader
 					}
 				}
 			}
@@ -2370,6 +2500,40 @@ generate_start_pops = {
 			}
 		}
 	}
+
+#---- don't know where this goes so hey
+	if = {
+		limit = { owner = { has_slaver_civic = yes } }
+		owner = {
+			give_technology = {
+				tech = tech_neural_implants
+				message = no
+			}
+			give_technology = {
+				tech = tech_slave_colonies
+				message = no
+			}
+		}
+	}
+	if = {
+		limit = { owner = { has_origin = origin_life_seeded } }
+		owner = {
+			give_technology = {
+				tech = tech_gene_tailoring
+				message = no
+			}
+		}
+	}
+	if = {
+		limit = { owner = { has_origin = origin_mechanists } }
+		owner = {
+			give_technology = {
+				tech = tech_robomodding
+				message = no
+			}
+		}
+	}
+#----
 
 	if = {
 		limit = { owner = { has_origin = origin_mechanists } }
@@ -2682,10 +2846,10 @@ generate_home_planet_final_pass = {
 				remove_all_buildings = yes
 				destroy_colony = yes
 			}
-			if = {
-				limit = { NOT = { has_valid_civic = civic_permanent_employment } }
-				change_dominant_species = { species = last_created_species change_all = yes }
-			}
+			#if = {
+			#	limit = { NOT = { has_valid_civic = civic_permanent_employment } }
+			#	change_dominant_species = { species = last_created_species change_all = yes }
+			#}
 		}
 	}
 	if = {
@@ -3062,20 +3226,39 @@ void_dweller_home_planet_setup = {
 			}
 		}
 		while = {
-			count = 28
-			create_pop = {
-				species = owner_main_species
-			}
-		}
-	}
-	else = {
-		while = {
 			count = 18
 			create_pop = {
 				species = owner_main_species
 			}
 		}
+		last_created_species = { #can I rename this, or just skip
+			set_species_flag = syncretic_species@root.owner
+		}
+		while = {
+			count = 10
+			create_pop = {
+				species = last_created_species
+			}
+		}
 	}
+	else = {
+		while = {
+			count = 12
+			create_pop = {
+				species = owner_main_species
+			}
+		}
+		last_created_species = { #can I rename this, or just skip
+			set_species_flag = syncretic_species@root.owner
+		}
+		while = {
+			count = 6
+			create_pop = {
+				species = last_created_species
+			}
+		}
+	}
+	
 	if = {
 		limit = {
 			owner = {
@@ -3755,6 +3938,15 @@ toxic_knights_order_habitat_setup = {
 
 			add_building = building_hab_major_capital
 			add_building = building_order_keep
+
+			if = {
+				limit = { owner_main_species = { has_trait = trait_aquatic } }
+				add_modifier = {
+					modifier = flooded_habitat
+					days = -1
+				}
+			}
+			
 			event_target:toxic_knights_owner.capital_scope = {
 				set_planet_flag = habitat@PREV
 			}
@@ -3824,7 +4016,6 @@ create_life_seeded_planet = {
 create_ocean_paradise_planet = {
 	if = {
 		limit = {
-			exists = owner
 			owner = { is_hive_empire = yes }
 		}
 		add_modifier = { modifier = ocean_paradise_hive }
@@ -3842,25 +4033,25 @@ create_ocean_paradise_planet = {
 	add_deposit = d_teeming_reef
 	add_deposit = d_teeming_reef
 	add_deposit = d_teeming_reef
-	add_deposit = d_teeming_reef
-	add_deposit = d_teeming_reef
+	add_deposit = d_lush_jungle
+	add_deposit = d_lush_jungle
+	add_deposit = d_green_hills
 
 	# Minerals
 	add_deposit = d_submerged_ore_veins
 	add_deposit = d_submerged_ore_veins
-	add_deposit = d_submerged_ore_veins
+	add_deposit = d_ore_rich_caverns
+	add_deposit = d_ore_rich_caverns
 
 	# Energy
 	add_deposit = d_underwater_vent
 	add_deposit = d_underwater_vent
-	add_deposit = d_underwater_vent
+	add_deposit = d_rushing_waterfalls
+	add_deposit = d_hot_springs
+	add_deposit = d_hot_springs
 
 	# Bonus
 	add_deposit = d_crystal_reef
-	random_list = {
-		50 = { add_deposit = d_submerged_ore_veins }
-		50 = { add_deposit = d_underwater_vent }
-	}
 }
 
 fear_of_the_dark_binary_planets = {

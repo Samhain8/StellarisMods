@@ -608,7 +608,7 @@ create_early_pre_ftl_empire = {
 	last_created_country = {
 		set_graphical_culture = preindustrial_01
 		random_list = {
-			20 = {
+			15 = {
 				set_country_flag = stone_age
 				set_pre_ftl_age = stone_age
 				change_government = {
@@ -686,7 +686,7 @@ create_early_pre_ftl_empire = {
 					}
 				}
 			}
-			20 = {
+			15 = {
 				set_country_flag = renaissance_age
 				set_pre_ftl_age = renaissance_age
 				change_country_flag = {
@@ -706,7 +706,7 @@ create_early_pre_ftl_empire = {
 					}
 				}
 			}
-			20 = {
+			10 = {
 				set_country_flag = steam_age
 				set_pre_ftl_age = steam_age
 				change_country_flag = {
@@ -763,7 +763,7 @@ create_late_pre_ftl_empire = {
 	last_created_country = {
 		set_graphical_culture = industrial_01
 		random_list = {
-			25 = {
+			35 = {
 				set_country_flag = industrial_age
 				set_pre_ftl_age = industrial_age
 				change_country_flag = {
@@ -783,7 +783,7 @@ create_late_pre_ftl_empire = {
 					}
 				}
 			}
-			25 = {
+			35 = {
 				set_country_flag = machine_age
 				set_pre_ftl_age = machine_age
 				change_country_flag = {
@@ -803,7 +803,7 @@ create_late_pre_ftl_empire = {
 					}
 				}
 			}
-			25 = {
+			20 = {
 				set_country_flag = atomic_age
 				set_pre_ftl_age = atomic_age
 				change_country_flag = {
@@ -823,7 +823,7 @@ create_late_pre_ftl_empire = {
 					}
 				}
 			}
-			25 = {
+			10 = {
 				set_country_flag = early_space_age
 				set_pre_ftl_age = early_space_age
 				change_country_flag = {
@@ -851,11 +851,11 @@ create_late_pre_ftl_empire = {
 create_pre_ftl_empire = {
 	random_list = {
 		# Industrial Civilization
-		35 = {
+		20 = {
 			create_late_pre_ftl_empire = yes
 		}
 		# Medieval Civilization
-		65 = {
+		80 = {
 			create_early_pre_ftl_empire = yes
 		}
 	}
@@ -873,7 +873,7 @@ add_tech_progress_situation = {
 		start_situation = {
 			type = pre_ftl_tech_progress_situation
 		}
-		# Early Space Age Pre-FTLs are capped at 50% progress.
+		# Early Space Age Pre-FTLs are capped at 0% progress.
 		if = {
 			limit = {
 				has_country_flag = early_space_age
@@ -887,7 +887,7 @@ add_tech_progress_situation = {
 				set_variable_to_random_value = {
 					which = initial_tech_progress
 					min = 0
-					max = 960
+					max = 300
 					rounded = yes
 				}
 				add_situation_progress = initial_tech_progress
@@ -904,7 +904,7 @@ add_tech_progress_situation = {
 				set_variable_to_random_value = {
 					which = initial_tech_progress
 					min = 0
-					max = 1900
+					max = 1500
 					rounded = yes
 				}
 				add_situation_progress = initial_tech_progress

@@ -866,10 +866,10 @@ neighbor_t1_first_colony = {
 		orbit_angle = { min = 90 max = 270 }
 		size = { min = 12 max = 18 }
 
-		init_effect = {
-			prevent_anomaly = yes
-			set_planet_flag = prescripted_ideal		# used by code, do not remove
-		}
+		#init_effect = {
+		#	prevent_anomaly = yes
+		#	set_planet_flag = prescripted_ideal		# used by code, do not remove
+		#}
 	}
 
 	planet = {
@@ -976,10 +976,10 @@ neighbor_t2_second_colony = {
 
 		change_orbit = @base_moon_distance
 
-		init_effect = {
-			prevent_anomaly = yes
-			set_planet_flag = prescripted_ideal		# used by code, do not remove
-		}
+		#init_effect = {
+		#	prevent_anomaly = yes
+		#	set_planet_flag = prescripted_ideal		# used by code, do not remove
+		#}
 
 		moon = {
 			count = { min = 0 max = 1 }

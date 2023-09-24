@@ -219,8 +219,8 @@ default = {
 	branch_office_resources = {
 		category = planet_branch_offices
 		cost = {
-			energy = 1000
-			influence = 50
+			energy = 2000
+			influence = 80
 		}
 	}
 }

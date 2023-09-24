@@ -27,17 +27,23 @@ commanding_presence = { monthly_loyalty = 1 }
 
 paragon_origin_strengthened_government_i = { #Galactic Paragons Modifier
 	icon = "gfx/interface/icons/modifiers/mod_job_clerk_add.dds"
-	planet_clerks_unity_produces_add = 0.25
+	#planet_clerks_unity_produces_add = 0.25
+	empire_size_penalty_mult = -0.05
+	council_agenda_progress_speed = 0.05
 }
 paragon_origin_strengthened_government_ii = { #Galactic Paragons Modifier
 	icon = "gfx/interface/icons/modifiers/mod_job_clerk_add.dds"
-	planet_clerks_unity_produces_add = 0.5
-	custom_tooltip = paragon_origin_strengthened_government_ii_tt
+	#planet_clerks_unity_produces_add = 0.5
+	#custom_tooltip = paragon_origin_strengthened_government_ii_tt
+	empire_size_penalty_mult = -0.1
+	council_agenda_progress_speed = 0.1
 }
 paragon_origin_strengthened_government_iii = { #Galactic Paragons Modifier
 	icon = "gfx/interface/icons/modifiers/mod_job_clerk_add.dds"
-	planet_clerks_unity_produces_add = 1
-	custom_tooltip = paragon_origin_strengthened_government_iii_tt
+	#planet_clerks_unity_produces_add = 1
+	#custom_tooltip = paragon_origin_strengthened_government_iii_tt
+	empire_size_penalty_mult = -0.15
+	council_agenda_progress_speed = 0.15
 }
 council_in_tatter = {
 	icon = "gfx/interface/icons/modifiers/mod_council_in_tatters.dds"
@@ -421,7 +427,7 @@ agenda_progressive_growth_finish = {
 
 agenda_finding_the_voice_finish = {
 	country_agendas_unity_produces_add = 20
-	country_unity_produces_mult = 0.40
+	country_unity_produces_mult = 0.25
 }
 
 agenda_conquer_nature_finish = {
@@ -447,6 +453,7 @@ agenda_civil_exclusion_finish = {
 
 agenda_superior_colonies_finish = {
 	planet_colony_development_speed_mult = 0.5
+	pop_growth_from_immigration = 0.2
 }
 
 agenda_superior_colonies_planet_boost = {
@@ -474,8 +481,8 @@ agenda_favored_society_finish_planet = {
 }
 
 agenda_departmental_efficiency_finish = {
-	councilor_exp_gain = 0.2
 	councilor_skill_add = 2
+	planet_jobs_ruler_produces_mult = 0.20
 }
 
 agenda_rightful_claims_finish = {
@@ -485,7 +492,7 @@ agenda_rightful_claims_finish = {
 }
 
 agenda_evolving_society_finish = {
-	country_unity_produces_mult = 0.4
+	country_unity_produces_mult = 0.25
 }
 
 agenda_oppose_the_fallen_finish = {
@@ -522,37 +529,38 @@ agenda_second_strike_finish = {
 }
 
 agenda_pioneer_politics_finish = {
-	resolutions_cost_mult = -0.2
-	veto_cooldown_mult = -0.2
+	resolutions_cost_mult = -0.3
+	veto_cooldown_mult = -0.3
+	diplo_weight_mult = 0.1
 }
 
 agenda_psionic_supremacy_finish_composer = {
-	planet_psionic_jobs_produces_mult = 0.2
+	planet_psionic_jobs_produces_mult = 0.1
 	category_psionics_research_speed_mult = 0.4
 	pop_growth_speed = 0.1
 }
 
 agenda_psionic_supremacy_finish_eater = {
-	planet_psionic_jobs_produces_mult = 0.2
+	planet_psionic_jobs_produces_mult = 0.1
 	category_psionics_research_speed_mult = 0.4
 	starbase_shipyard_build_cost_mult = -0.10
 	starbase_shipyard_build_speed_mult = 0.10
 }
 
 agenda_psionic_supremacy_finish_instrument = {
-	planet_psionic_jobs_produces_mult = 0.2
+	planet_psionic_jobs_produces_mult = 0.1
 	category_psionics_research_speed_mult = 0.4
 	trade_value_mult = 0.25
 }
 
 agenda_psionic_supremacy_finish_whisperers = {
-	planet_psionic_jobs_produces_mult = 0.2
+	planet_psionic_jobs_produces_mult = 0.1
 	category_psionics_research_speed_mult = 0.4
 	espionage_operation_cost_mult = -0.3
 }
 
 agenda_psionic_supremacy_finish_no_covenant = {
-	planet_psionic_jobs_produces_mult = 0.2
+	planet_psionic_jobs_produces_mult = 0.1
 	category_psionics_research_speed_mult = 0.4
 	country_unity_produces_mult = 0.1
 }

@@ -279,6 +279,10 @@ civic_hive_catalytic_processing = {
 			}
 		}
 	}
+	modifier = {
+		ship_hull_mult = 0.15
+		ship_hull_regen_add_perc = 0.05
+	}
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = {
 		base = 0			# Too dangerous to switch mid-game
@@ -401,10 +405,8 @@ civic_hive_stargazers = {
 	}
 
 	modifier = {
+		country_starbase_influence_cost_distance_mult = -0.8
 		councilor_gestalt_admiral_exp_gain = @gestalt_civic_node_xp_rate
-		ship_sensor_range_add = 1
-		ship_hyperlane_range_add = 2
-		country_starbase_influence_cost_distance_mult = -0.2
 	}
 
 	traits = {
@@ -509,6 +511,9 @@ civic_machine_servitor = {
 	description = civic_tooltip_machine_servitor_effects
 	has_secondary_species = {	# see game_start.11
 		title = civic_machine_servitor_secondary_species
+		traits = {
+			trait = trait_syncretic_proles
+		}
 	}
 	modifier = {
 		councilor_gestalt_general_exp_gain = @gestalt_civic_node_xp_rate
@@ -850,6 +855,10 @@ civic_machine_catalytic_processing = {
 	possible = {
 		origin = { NOT = { value = origin_machine } }
 	}
+	modifier = {
+		ship_hull_mult = 0.15
+		ship_hull_regen_add_perc = 0.05
+	}
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = {
 		base = 0		# Too dangerous to switch mid-game
@@ -938,9 +947,10 @@ civic_machine_exploration_protocol = {
 	}
 
 	modifier = {
+		country_starbase_influence_cost_distance_mult = -0.8
 		councilor_gestalt_admiral_exp_gain = @gestalt_civic_node_xp_rate
 		first_contact_speed_mult = 0.2
-		station_observers_unity_produces_add = 3
+		station_observers_unity_produces_add = 5
 	}
 
 	random_weight = {

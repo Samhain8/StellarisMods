@@ -79,6 +79,7 @@ agenda_superior_colonies = {
 	}
 	modifier = {
 		planet_colony_development_speed_mult = 0.25
+		pop_growth_from_immigration = 0.1
 	}
 	finish_modifier = agenda_superior_colonies_finish
 	effect = {
@@ -148,6 +149,7 @@ agenda_departmental_efficiency = {
 	}
 	modifier = {
 		councilor_exp_gain = 0.2
+		planet_jobs_ruler_produces_mult = 0.05
 	}
 	finish_modifier = agenda_departmental_efficiency_finish
 }
@@ -323,8 +325,9 @@ agenda_pioneer_politics = {
 		is_homicidal = no
 	}
 	modifier = {
-		resolutions_cost_mult = -0.05
-		veto_cooldown_mult = -0.05
+		resolutions_cost_mult = -0.1
+		veto_cooldown_mult = -0.1
+		diplo_weight_mult = 0.1
 	}
 	finish_modifier = agenda_pioneer_politics_finish
 }

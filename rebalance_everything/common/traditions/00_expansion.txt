@@ -116,6 +116,7 @@ tr_expansion_courier_network = {
 	modifier = {
 		empire_size_systems_mult = -0.25
 		empire_size_colonies_mult = -0.25
+		ship_speed_mult = 0.10
 	}
 
 	tradition_swap = {
@@ -191,7 +192,8 @@ tr_expansion_galactic_ambition = {
 	}
 
 	modifier = {
-		starbases_upkeep_mult = -0.2
+		starbases_upkeep_mult = -0.25
+		country_starbase_influence_cost_distance_mult = -0.2
 	}
 
 	tradition_swap = {

@@ -612,27 +612,27 @@ strike_craft_component_template = {
 	regeneration_per_day = @regen
 	launch_time = @launch_time
 
-	damage = { min = 4 max = 16 }
+	damage = { min = 4 max = 15 }
 	cooldown = 2.3
 	range = @attack_range
 	engagement_range = @engagement_range
 	accuracy = 1.00
-	tracking = 1.00
+	tracking = 0.85
 
 	health = 10
 	armor = 0
-	shield = 25
-	evasion = 0.80
+	shield = 20
+	evasion = 0.65
 
 	speed = @speed4
 	rotation_speed = 0.8
 	acceleration = 1
 
-	armor_penetration = 1.0
+	armor_penetration = 0.8
 	shield_damage = 0.5
 	hull_damage = 1.25
 
-	ship_behavior = "fighters_behavior"
+	ship_behavior = "bombers_behavior"
 
 	icon = "GFX_ship_part_archaeo_strike_craft"
 	icon_frame = 1

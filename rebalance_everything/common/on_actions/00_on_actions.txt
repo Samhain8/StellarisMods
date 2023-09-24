@@ -2620,10 +2620,10 @@ on_colony_1_year_old = {
 		colony_mod.161 # Gatekeeper for modifier colony events
 	}
 
-	random_events = {
-		300 = 0
-		30 = factions.3000 # The Political Frontier
-	}
+	#random_events = {
+	#	300 = 0
+	#	30 = factions.3000 # The Political Frontier
+	#}
 }
 
 on_colony_2_years_old = {
@@ -2631,50 +2631,61 @@ on_colony_2_years_old = {
 		colony.5000 # The Lonely Bot (randomisation set in deposit placement)
 	}
 	random_events = {
-		150 = 0
+		100 = 0
 
-		30 = factions.3000 # The Political Frontier
 
 		### Colony Events & Chains - 14
-		3 = colony.1 # Migrating Forests
-		3 = colony.50 # Subterranean Aliens
-		3 = colony.1500 # Helpful Drones
-		3 = colony.1520 # Mharin Kharin
+		
+		# high because new, lower when I know what it is
+		50 = colony.9950 # Stratospheric Vents
+		50 = colony.9350 # Myrmeku Colonies
+		
+		20 = colony.1 # Migrating Forests, continental/jungle
+		20 = colony.9000 # Turtle World, continental/ocean
+		30 = situation.150 # Living Snow, higher weight because only for deserts
 
-		15 = colony.100 # Abandoned Terraforming
-		6 = colony.180 # Asteroid Sighted
-		3 = colony.2001 # Trouble in Paradise
-		15 = colony.2005 # Submerged Cruiser
+		5 = colony.50 # Subterranean Aliens
+		5 = colony.8001 # Feral Overload
+		5 = colony.3005 # Dimensional Portal
+		5 = colony.3001 # Rogue Moon
+		5 = colony.2060 # Strange Mushrooms
+		5 = colony.9200 # Ancient Manufactorium
+		5 = federations2.8 # Dancing Plague
+		5 = situation.5 # Mysterious Labyrinth
 
-		15 = colony.2015 # Odd Factory
-		15 = colony.2025 # What Separates Us
-		10 = colony.3001 # Rogue Moon
-		8 = colony.3005 # Dimensional Portal
+		10 = colony.1500 # Helpful Drones
+		10 = colony.2005 # Submerged Cruiser
+		10 = colony.2015 # Odd Factory
+		10 = colony.9050 # Crystal Kraken
+		10 = colony_fed.100 # Impossible Corrie
+		10 = colony.9295 # Metallic Puddles
 
-		8 = colony.9000 #Turtle World
-		8 = colony.9050 #Crystal Kraken
-		8 = colony.9295 #Metallic Puddles
-		8 = colony.9950 #Stratospheric Vents
+		5 = colony.100 # Abandoned Terraforming
+		5 = colony.1520 # Mharin Kharin
+		5 = colony.180 # Asteroid Sighted
+		5 = colony.2050 # Clerical Errors
 
-		15 = colony.2060 # Strange Mushrooms
-		# 0 = colony.8099 # Insidious Ophidians
+		#5 = colony.8099 # Insidious Ophidians
+		#5 = colony.2001 # Trouble in Paradise
+		#5 = colony.2025 # What Separates Us
+		#15 = colony.2030 # Assassination
+		#15 = colony.2035 # Infectious Disease
+		#5 = colony.2010 # A Change of Heart
+		#5 = factions.3000 # The Political Frontier
 
 		### Archaeology Colony Sites
-		3 = ancrel.6049 # Blade of the Huntress
-		3 = ancrel.15010 # Mask of Transformation
+		5 = ancrel.6049 # Blade of the Huntress
+		5 = ancrel.15010 # Mask of Transformation
 
 		### Tomb Worlds - 8
-		75 = colony.150 # Underground Vault
-		75 = colony.155 # Nuclear Bomb
-		75 = colony.160 # Particle Accelerator
-		75 = colony.161 # Surviving Infrastructure
-		75 = colony.162 # Space Station
-		75 = colony.163 # Wasteland Radiation
-		75 = colony.164 # Pacifist Movement
-		75 = colony.170 # Orbital Debris
-
-		### Federations
-		3 = colony_fed.100 #Impossible Corrie
+		20 = colony.150 # Underground Vault
+		20 = colony.155 # Nuclear Bomb
+		20 = colony.160 # Particle Accelerator
+		20 = colony.161 # Surviving Infrastructure
+		20 = colony.162 # Space Station
+		20 = colony.163 # Wasteland Radiation
+		20 = colony.164 # Pacifist Movement
+		20 = colony.170 # Orbital Debris
 	}
 }
 
@@ -2682,60 +2693,105 @@ on_colony_3_years_old = {
 	events = {
 	}
 	random_events = {
-		150 = 0
+		95 = 0
 
 		### Colony Events & Chains - 14
-		2 = colony.1 # Migrating Forests
-		2 = colony.50 # Subterranean Aliens
-		2 = colony.1500 # Helpful Drones
-		2 = colony.1520 # Mharin Kharin
-		10 = colony.8001 # Feral Overload
+		
+		# high because new, lower when I know what it is
+		30 = colony.9950 # Stratospheric Vents
+		30 = colony.9350 # Myrmeku Colonies
+		
+		10 = colony.1 # Migrating Forests
+		15 = colony.9000 # Turtle World
+		15 = situation.150 # Living Snow, higher weight because only for deserts
 
-		10 = colony.100 # Abandoned Terraforming
-		6 = colony.180 # Asteroid Sighted
-		10 = colony.2001 # Trouble in Paradise
-		10 = colony.2005 # Submerged Cruiser
-		10 = colony.2010 # A Change of Heart
-		10 = colony.2015 # Odd Factory
-		10 = colony.2025 # What Separates Us
-		10 = colony.2050 # Clerical Errors
+		10 = colony.50 # Subterranean Aliens
+		10 = colony.8001 # Feral Overload
+		10 = colony.3005 # Dimensional Portal
 		10 = colony.3001 # Rogue Moon
-		5 = colony.3005 # Dimensional Portal
-		3 = colony.9050 #Crystal Kraken
-		10 = colony.9350 # Myrmeku Colonies
+		10 = colony.2060 # Strange Mushrooms
+		10 = colony.9200 # Ancient Manufactorium
+		10 = federations2.8 # Dancing Plague
+		10 = situation.5 # Mysterious Labyrinth
+
+		10 = colony.1500 # Helpful Drones
+		10 = colony.2005 # Submerged Cruiser
+		10 = colony.2015 # Odd Factory
+		10 = colony.9050 # Crystal Kraken
+		10 = colony_fed.100 # Impossible Corrie
+		10 = colony.9295 # Metallic Puddles
+
+		5 = colony.100 # Abandoned Terraforming
+		5 = colony.1520 # Mharin Kharin
+		5 = colony.180 # Asteroid Sighted
+		5 = colony.2050 # Clerical Errors
+
+		#5 = colony.8099 # Insidious Ophidians
+		#5 = colony.2001 # Trouble in Paradise
+		#5 = colony.2025 # What Separates Us
+		#15 = colony.2030 # Assassination
+		#15 = colony.2035 # Infectious Disease
+		#5 = colony.2010 # A Change of Heart
+		#5 = factions.3000 # The Political Frontier
 
 		### Archaeology Colony Sites
-		3 = ancrel.6049 # Blade of the Huntress
+		5 = ancrel.6049 # Blade of the Huntress
+		5 = ancrel.15010 # Mask of Transformation
 
 		### Tomb Worlds - 8
-		50 = colony.150 # Underground Vault
-		50 = colony.155 # Nuclear Bomb
-		50 = colony.160 # Particle Accelerator
-		50 = colony.161 # Surviving Infrastructure
-		50 = colony.162 # Space Station
-		50 = colony.163 # Wasteland Radiation
-		50 = colony.164 # Pacifist Movement
-		50 = colony.170 # Orbital Debris
-
-		### Federations
-		4 = colony_fed.100 #Impossible Corrie
+		20 = colony.150 # Underground Vault
+		20 = colony.155 # Nuclear Bomb
+		20 = colony.160 # Particle Accelerator
+		20 = colony.161 # Surviving Infrastructure
+		20 = colony.162 # Space Station
+		20 = colony.163 # Wasteland Radiation
+		20 = colony.164 # Pacifist Movement
+		20 = colony.170 # Orbital Debris
 	}
 }
 
 on_colony_4_years_old = {
 	random_events = {
-		150 = 0
+		25 = 0
 
 		### Colony Events & Chains - 14
-		1 = colony.2001 # Trouble in Paradise
-		1 = colony.2010 # A Change of Heart
-		2 = colony.9200 # Ancient Manufactorium
-		3 = federations2.8 # Dancing Plague
-		3 = situation.5 # Mysterious Labyrinth
-		6 = situation.150 # Living Snow, higher weight because only for deserts
+		
+		# high because new, lower when I know what it is
+		50 = colony.9310 # Junkyard Orbit
+		50 = colony.9900 # Dimensional Prison
+
+		10 = colony.50 # Subterranean Aliens
+		10 = colony.8001 # Feral Overload
+		10 = colony.3005 # Dimensional Portal
+		10 = colony.3001 # Rogue Moon
+		10 = colony.2060 # Strange Mushrooms
+		10 = colony.9200 # Ancient Manufactorium
+		10 = federations2.8 # Dancing Plague
+		10 = situation.5 # Mysterious Labyrinth
+
+		10 = colony.1500 # Helpful Drones
+		10 = colony.2005 # Submerged Cruiser
+		10 = colony.2015 # Odd Factory
+		10 = colony.9050 #Crystal Kraken
+		10 = colony_fed.100 #Impossible Corrie
+		10 = colony.9295 #Metallic Puddles
+
+		5 = colony.100 # Abandoned Terraforming
+		5 = colony.1520 # Mharin Kharin
+		5 = colony.180 # Asteroid Sighted
+		5 = colony.2050 # Clerical Errors
+
+		#5 = colony.8099 # Insidious Ophidians
+		#5 = colony.2001 # Trouble in Paradise
+		#5 = colony.2025 # What Separates Us
+		#15 = colony.2030 # Assassination
+		#15 = colony.2035 # Infectious Disease
+		#5 = colony.2010 # A Change of Heart
+		#5 = factions.3000 # The Political Frontier
 
 		### Archaeology Colony Sites
-		3 = ancrel.6049 # Blade of the Huntress
+		10 = ancrel.6049 # Blade of the Huntress
+		10 = ancrel.15010 # Mask of Transformation
 	}
 }
 
@@ -2744,18 +2800,49 @@ on_colony_5_years_old = {
 		necroids.3
 	}
 	random_events = {
-		150 = 0
+		1 = 0
 
-		# Colony Events
-		3 = colony.2010 # A Change of Heart
-		3 = federations2.8 # Dancing Plague
-		3 = situation.5 # Mysterious Labyrinth
-		3 = colony.9310 # Junkyard Orbit
-		6 = situation.150 # Living Snow, higher weight because only for deserts
-		3 = colony.9900 #Dimensional Prison
+		### Colony Events & Chains - 14
+		
+		# high because new, lower when I know what it is
+		30 = colony.9310 # Junkyard Orbit
+		30 = colony.9900 # Dimensional Prison
+
+		5 = colony.50 # Subterranean Aliens
+		5 = colony.8001 # Feral Overload
+		5 = colony.3005 # Dimensional Portal
+		5 = colony.3001 # Rogue Moon
+		5 = colony.2060 # Strange Mushrooms
+		5 = colony.9200 # Ancient Manufactorium
+		5 = federations2.8 # Dancing Plague
+		5 = situation.5 # Mysterious Labyrinth
+
+		10 = colony.100 # Abandoned Terraforming
+		10 = colony.1520 # Mharin Kharin
+		10 = colony.180 # Asteroid Sighted
+		10 = colony.2050 # Clerical Errors
+
+		#10 = colony.8099 # Insidious Ophidians
+		#5 = colony.2001 # Trouble in Paradise
+		#5 = colony.2025 # What Separates Us
+		#15 = colony.2030 # Assassination
+		#15 = colony.2035 # Infectious Disease
+		#5 = colony.2010 # A Change of Heart
+		#5 = factions.3000 # The Political Frontier
 
 		### Archaeology Colony Sites
-		3 = ancrel.6049 # Blade of the Huntress
+		10 = ancrel.6049 # Blade of the Huntress
+		10 = ancrel.15010 # Mask of Transformation
+
+		### Tomb Worlds - 8
+		10 = colony.150 # Underground Vault
+		10 = colony.155 # Nuclear Bomb
+		10 = colony.160 # Particle Accelerator
+		10 = colony.161 # Surviving Infrastructure
+		10 = colony.162 # Space Station
+		10 = colony.163 # Wasteland Radiation
+		10 = colony.164 # Pacifist Movement
+		10 = colony.170 # Orbital Debris
 	}
 }
 

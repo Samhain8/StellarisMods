@@ -71,6 +71,42 @@ district_hab_housing = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = {
+				is_pleasure_seeker = yes
+			}
+		}
+		modifier = {
+			job_entertainer_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = { is_gestalt = yes }
 		}
 		job_maintenance_drone_add = 1
@@ -104,6 +140,10 @@ district_hab_industrial = {
 
 	potential = {
 		uses_district_set = habitat
+	}
+
+	allow = {
+		NOT = { has_modifier = slave_colony }
 	}
 
 	resources = {
@@ -707,6 +747,7 @@ district_hab_science = {
 
 	planet_modifier = {
 		planet_housing_add = 3
+		planet_max_buildings_add = 0.25
 	}
 
 	inline_script = {
@@ -718,7 +759,7 @@ district_hab_science = {
 			exists = owner
 			owner = { is_regular_empire = yes }
 		}
-		job_researcher_add = 1
+		job_researcher_add = 2
 		mult = owner.value:hab_void_dweller_jobs
 	}
 
@@ -727,7 +768,7 @@ district_hab_science = {
 			exists = owner
 			owner = { is_hive_empire = yes }
 		}
-		job_brain_drone_add = 1
+		job_brain_drone_add = 2
 		mult = owner.value:hab_void_dweller_jobs
 	}
 
@@ -736,7 +777,7 @@ district_hab_science = {
 			exists = owner
 			owner = { is_machine_empire = yes }
 		}
-		job_calculator_add = 1
+		job_calculator_add = 2
 		mult = owner.value:hab_void_dweller_jobs
 	}
 
@@ -769,6 +810,40 @@ district_hab_science = {
 			always = yes
 		}
 		text = num_science_orbitals
+	}
+}
+
+district_hab_commercial = {
+	base_buildtime = @hab_time
+	is_capped_by_modifier = no
+
+	show_on_uncolonized = {
+		uses_district_set = habitat
+		exists = from
+		from = { is_gestalt = no }
+	}
+
+	potential = {
+		uses_district_set = habitat
+		exists = owner
+		owner = { is_gestalt = no }
+	}
+
+	resources = {
+		category = planet_districts_hab_trade
+		cost = {
+			minerals = @hab_cost
+		}
+		upkeep = {
+			energy = @hab_maintenance
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 3
+		planet_max_buildings_add = 0.25
+		job_trader_add = 1
+		job_clerk_add = 2
 	}
 }
 
@@ -980,5 +1055,188 @@ district_hab_mining = {
 			always = yes
 		}
 		text = num_mining_orbitals
+	}
+}
+
+district_hab_cultural = {
+	base_buildtime = @hab_time
+	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
+	desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				NOT = { has_civic = civic_dystopian_society }
+			}
+	 	}
+	 	text = district_hab_cultural_desc
+	}
+	desc = {
+		trigger = {
+			exists = owner
+			owner = { has_civic = civic_dystopian_society }
+	 	}
+	 	text = district_hab_cultural_dystopian_desc
+	}
+
+	show_on_uncolonized = {
+		uses_district_set = habitat
+
+		exists = from
+		from = {
+			OR = {
+				is_gestalt = no
+				has_valid_civic = civic_machine_servitor
+			}
+		}
+	}
+
+	potential = {
+		uses_district_set = habitat
+
+		exists = owner
+		owner = {
+			OR = {
+				is_gestalt = no
+				has_valid_civic = civic_machine_servitor
+			}
+		}
+	}
+
+	resources = {
+		category = planet_districts_hab_leisure
+		cost = {
+			minerals = @hab_cost
+		}
+		upkeep = {
+			energy = @hab_maintenance
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				NOT = {
+					is_machine_empire = yes
+					has_valid_civic = civic_machine_servitor
+				}
+			}
+		}
+		modifier = {
+			planet_housing_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				has_civic = civic_dystopian_society
+			}
+		}
+		modifier = {
+			planet_amenities_add = 1
+			job_enforcer_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_warrior_culture = no
+				NOT = { has_civic = civic_dystopian_society }
+			}
+		}
+		modifier = {
+			job_entertainer_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_warrior_culture = yes
+				NOT = { has_civic = civic_dystopian_society }
+			}
+		}
+		modifier = {
+			job_duelist_add = 3
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				has_valid_civic = civic_machine_servitor
+			}
+		}
+		modifier = {
+			job_bio_trophy_add = 5
+			job_maintenance_drone_add = 1
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_warrior_culture = yes
+			}
+		}
+		text = job_duelist_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				has_valid_civic = civic_dystopian_society
+			}
+		}
+		text = job_enforcer_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_warrior_culture = no
+				NOT = { has_valid_civic = civic_dystopian_society }
+			}
+		}
+		text = job_entertainer_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				has_valid_civic = civic_machine_servitor
+			}
+		}
+		text = job_bio_trophy_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+				has_valid_civic = civic_machine_servitor
+			}
+		}
+		text = job_maintenance_drone_effect_desc
 	}
 }

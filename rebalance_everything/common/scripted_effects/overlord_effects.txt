@@ -345,8 +345,8 @@ compare_and_modify_ethics_factor = {
 			trigger = has_ethic
 			ethic_fanatic_$SAME$ =	{ PREV = { change_variable =	{ which = ethics_compatibility_factor value = 1 } } }
 			ethic_$SAME$ =			{ PREV = { change_variable =	{ which = ethics_compatibility_factor value = 1 } } }
-			ethic_fanatic_$OPP$ =	{ PREV = { subtract_variable =	{ which = ethics_compatibility_factor value = 3 } } }
-			ethic_$OPP$ =			{ PREV = { subtract_variable =	{ which = ethics_compatibility_factor value = 2 } } }
+			ethic_fanatic_$OPP$ =	{ PREV = { subtract_variable =	{ which = ethics_compatibility_factor value = 2 } } }
+			ethic_$OPP$ =			{ PREV = { subtract_variable =	{ which = ethics_compatibility_factor value = 1 } } }
 		}
 	}
 }

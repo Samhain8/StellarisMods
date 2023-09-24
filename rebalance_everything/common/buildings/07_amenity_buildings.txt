@@ -132,7 +132,7 @@ building_paradise_dome = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 2
 		}
 	}
 
@@ -307,7 +307,7 @@ building_communal_housing_large = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 2
 		}
 	}
 
@@ -550,7 +550,7 @@ building_holo_theatres = {
 	category = amenity
 
 	potential = {
-		NOT = {	has_modifier = slave_colony	}
+		#NOT = { has_modifier = slave_colony }
 		owner = {
 			is_regular_empire = yes
 			NOT = { has_valid_civic = civic_dystopian_society }
@@ -572,16 +572,14 @@ building_holo_theatres = {
 		OR = {
 			owner = { is_regular_empire = no }
 			owner = { has_valid_civic = civic_dystopian_society }
-			has_modifier = slave_colony
+			#has_modifier = slave_colony
 		}
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				NOT = { has_valid_civic = civic_warrior_culture }
-			}
+			owner = { is_warrior_culture = no }
 		}
 		modifier = {
 			job_entertainer_add = @b1_jobs
@@ -591,9 +589,7 @@ building_holo_theatres = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				has_valid_civic = civic_warrior_culture
-			}
+			owner = { is_warrior_culture = yes }
 		}
 		modifier = {
 			job_duelist_add = @b1_jobs
@@ -621,9 +617,7 @@ building_holo_theatres = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				NOT = { has_valid_civic = civic_warrior_culture }
-			}
+			owner = { is_warrior_culture = no }
 		}
 		text = job_entertainer_effect_desc
 	}
@@ -631,9 +625,7 @@ building_holo_theatres = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				has_valid_civic = civic_warrior_culture
-			}
+			owner = { is_warrior_culture = yes }
 		}
 		text = job_duelist_effect_desc
 	}
@@ -677,9 +669,7 @@ building_hyper_entertainment_forum = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				NOT = { has_valid_civic = civic_warrior_culture }
-			}
+			owner = { is_warrior_culture = no }
 		}
 		modifier = {
 			job_entertainer_add = @b2_jobs
@@ -689,9 +679,7 @@ building_hyper_entertainment_forum = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = {
-				has_valid_civic = civic_warrior_culture
-			}
+			owner = { is_warrior_culture = yes }
 		}
 		modifier = {
 			job_duelist_add = @b2_jobs
@@ -717,9 +705,7 @@ building_hyper_entertainment_forum = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				NOT = { has_valid_civic = civic_warrior_culture }
-			}
+			owner = { is_warrior_culture = no }
 		}
 		text = job_entertainer_effect_desc
 	}
@@ -727,9 +713,7 @@ building_hyper_entertainment_forum = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				has_valid_civic = civic_warrior_culture
-			}
+			owner = { is_warrior_culture = yes }
 		}
 		text = job_duelist_effect_desc
 	}
@@ -816,7 +800,7 @@ building_clinic = {
 	}
 
 	planet_modifier = {
-		job_healthcare_add = 2
+		job_healthcare_add = 1
 	}
 
 	resources = {
@@ -943,7 +927,7 @@ building_hospital = {
 	}
 
 	planet_modifier = {
-		job_healthcare_add = @b2_jobs
+		job_healthcare_add = 2
 	}
 
 	resources = {
@@ -1088,6 +1072,7 @@ building_ranger_lodge = {
 		NOT = {	has_modifier = slave_colony	}
 		owner = {
 			is_regular_empire = yes
+			is_regular_empire = no # I'm just disabling it stupidly
 			has_valid_civic = civic_environmentalist
 		}
 		NOR = {

@@ -2819,6 +2819,11 @@ resolution_industry_regulatory_facilitation = {
 		}
 
 		modifier = {
+			factor = 0.8
+			is_spiritualist = yes
+		}
+
+		modifier = {
 			factor = 0.5
 			has_valid_civic = civic_environmentalist
 			desc = civic_environmentalist
@@ -2886,6 +2891,11 @@ resolution_industry_collective_waste_management = {
 			factor = 1.2
 			is_slaver = yes
 			desc = gal_com_slaver_empire
+		}
+
+		modifier = {
+			factor = 0.8
+			is_spiritualist = yes
 		}
 
 		modifier = {
@@ -2957,6 +2967,11 @@ resolution_industry_building_a_better_tomorrow = {
 			factor = 1.2
 			is_slaver = yes
 			desc = gal_com_slaver_empire
+		}
+
+		modifier = {
+			factor = 0.8
+			is_spiritualist = yes
 		}
 
 		modifier = {
@@ -3034,6 +3049,11 @@ resolution_industry_environmental_ordinance_waivers = {
 			factor = 1.2
 			is_slaver = yes
 			desc = gal_com_slaver_empire
+		}
+
+		modifier = {
+			factor = 0.8
+			is_spiritualist = yes
 		}
 
 		modifier = {
@@ -3116,6 +3136,11 @@ resolution_industry_project_cornucopia = {
 			factor = 1.2
 			is_slaver = yes
 			desc = gal_com_slaver_empire
+		}
+
+		modifier = {
+			factor = 0.8
+			is_spiritualist = yes
 		}
 
 		modifier = {
@@ -12772,7 +12797,7 @@ resolution_galactic_market_form = {
 		base = @resolution_weight_popular
 
 		modifier = {
-			factor = 2
+			factor = 4
 			has_authority = auth_corporate
 			desc = auth_corporate
 		}
@@ -12881,12 +12906,6 @@ resolution_galactic_market_ban_sentient_organic_slave_trade = {
 
 		modifier = {
 			factor = 1.5
-			is_xenophile = yes
-			desc = ethic_xenophile
-		}
-
-		modifier = {
-			factor = 1.5
 			is_egalitarian = yes
 			desc = ethic_egalitarian
 		}
@@ -12965,12 +12984,6 @@ resolution_galactic_market_repeal_sentient_organic_slave_trade = {
 
 	ai_weight = {
 		base = @resolution_weight_disliked
-
-		modifier = {
-			factor = 0.5
-			is_xenophile = yes
-			desc = ethic_xenophile
-		}
 
 		modifier = {
 			factor = 0.5

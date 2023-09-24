@@ -21,7 +21,7 @@ triggered_country_modifier = {
 		exists = owner
 		owner = { is_militarist = yes }
 	}
-	country_naval_cap_add = 1
+	empire_size_add = -2
 	mult = value:scripted_ethics_weight_mult|ETHIC|militarist|
 }
 
@@ -30,7 +30,7 @@ triggered_planet_modifier = {
 		exists = owner
 		owner = { is_pacifist = yes }
 	}
-	pop_lifestyle_trade_mult = 0.05
+	planet_pops_upkeep_mult = -0.025
 	mult = value:scripted_ethics_weight_mult|ETHIC|pacifist|
 }
 
@@ -66,6 +66,6 @@ triggered_planet_modifier = {
 		exists = owner
 		owner = { is_xenophile = yes }
 	}
-	planet_pops_upkeep_mult = -0.0125
+	trade_value_mult = 0.01
 	mult = value:scripted_ethics_weight_mult|ETHIC|xenophile|
 }

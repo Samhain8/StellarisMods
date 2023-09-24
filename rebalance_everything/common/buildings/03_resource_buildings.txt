@@ -38,11 +38,13 @@ building_hydroponics_farm = {
 			}
 		}
 	}
+	
 	inline_script = {
 		script = jobs/farmers_add
 		FARMER_AMOUNT = 3
 		ANGLER_AMOUNT = 2
 	}
+	
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -52,6 +54,7 @@ building_hydroponics_farm = {
 			energy = 2
 		}
 	}
+	
 	prerequisites = {
 		"tech_hydroponics"
 	}
@@ -116,7 +119,7 @@ building_food_processing_facility = {
 			energy = 2
 		}
 	}
-
+	
 	upgrades = {
 		building_food_processing_center
 	}

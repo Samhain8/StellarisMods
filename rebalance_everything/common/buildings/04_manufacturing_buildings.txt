@@ -1007,7 +1007,8 @@ building_factory_3 = {
 				has_ringworld_output_boost = no
 			}
 			minerals = @b3_minerals
-			rare_crystals = @b4_rare_cost
+			rare_crystals = @b3_rare_cost
+			volatile_motes = @b3_rare_cost
 		}
 		cost = {
 			trigger = {
@@ -1021,7 +1022,8 @@ building_factory_3 = {
 				has_ringworld_output_boost = no
 			}
 			energy = @b3_upkeep
-			rare_crystals = @b4_rare_upkeep
+			rare_crystals = @b3_rare_upkeep
+			volatile_motes = @b3_rare_upkeep
 		}
 		upkeep = {
 			trigger = {

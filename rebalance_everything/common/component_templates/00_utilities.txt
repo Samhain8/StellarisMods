@@ -619,7 +619,7 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			rare_crystals = 0.25
+			rare_crystals = 2
 		}
 	}
 
@@ -628,7 +628,7 @@ utility_component_template = {
 	upgrades_to = "SMALL_CRYSTAL_ARMOR_2"
 
 	modifier = {
-		ship_hull_add = @hull_S2
+		ship_hull_add = @hull_S3
 	}
 
 	ai_weight = {
@@ -649,7 +649,7 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			rare_crystals = 0.50
+			rare_crystals = 4
 		}
 	}
 
@@ -658,7 +658,7 @@ utility_component_template = {
 	upgrades_to = "MEDIUM_CRYSTAL_ARMOR_2"
 
 	modifier = {
-		ship_hull_add =@hull_M2
+		ship_hull_add =@hull_M3
 	}
 
 	ai_weight = {
@@ -679,7 +679,7 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			rare_crystals = 1.00
+			rare_crystals = 8
 		}
 	}
 
@@ -688,7 +688,7 @@ utility_component_template = {
 	upgrades_to = "LARGE_CRYSTAL_ARMOR_2"
 
 	modifier = {
-		ship_hull_add = @hull_L2
+		ship_hull_add = @hull_L3
 	}
 
 	ai_weight = {
@@ -709,7 +709,7 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			rare_crystals = 0.33
+			rare_crystals = 3
 		}
 	}
 
@@ -717,7 +717,7 @@ utility_component_template = {
 	component_set = "CRYSTAL_ARMOR_2"
 
 	modifier = {
-		ship_hull_add =@hull_S4
+		ship_hull_add = @hull_S5
 	}
 
 	ai_weight = {
@@ -738,7 +738,7 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			rare_crystals = 0.65
+			rare_crystals = 6
 		}
 	}
 
@@ -746,7 +746,7 @@ utility_component_template = {
 	component_set = "CRYSTAL_ARMOR_2"
 
 	modifier = {
-		ship_hull_add = @hull_M4
+		ship_hull_add = @hull_M5
 	}
 
 	ai_weight = {
@@ -767,7 +767,7 @@ utility_component_template = {
 	resources = {
 		category = ship_components
 		cost = {
-			rare_crystals = 1.30
+			rare_crystals = 12
 		}
 	}
 
@@ -775,7 +775,7 @@ utility_component_template = {
 	component_set = "CRYSTAL_ARMOR_2"
 
 	modifier = {
-		ship_hull_add = @hull_L4
+		ship_hull_add = @hull_L5
 	}
 
 	ai_weight = {
@@ -900,6 +900,7 @@ utility_component_template = { # Small
 	modifier = {
 		ship_armor_add = @armor_S3
 		ship_shield_add = @shield_S1
+		ship_armor_regen_add_perc = 0.01
 		ship_shield_regen_add_static = @regen_S3 #Regeneration per day
 	}
 	custom_tooltip = tt_SMALL_ARCHAEO_ARMOR_AP
@@ -966,6 +967,7 @@ utility_component_template = { # Medium
 	modifier = {
 		ship_armor_add = @armor_M3
 		ship_shield_add = @shield_M1
+		ship_armor_regen_add_perc = 0.01
 		ship_shield_regen_add_static = @regen_M3
 	}
 	custom_tooltip = tt_MEDIUM_ARCHAEO_ARMOR_AP
@@ -1032,6 +1034,7 @@ utility_component_template = { # Large
 	modifier = {
 		ship_armor_add = @armor_L3
 		ship_shield_add = @shield_L1
+		ship_armor_regen_add_perc = 0.01
 		ship_shield_regen_add_static = @regen_L3
 	}
 	custom_tooltip = tt_LARGE_ARCHAEO_ARMOR_AP

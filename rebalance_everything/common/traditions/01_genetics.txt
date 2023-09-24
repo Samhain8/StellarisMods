@@ -1,5 +1,5 @@
 @ap_genetic_opener_POINTS = 2
-@ap_genetic_finisher_POINTS = 2
+@ap_genetic_finisher_POINTS = 3
 
 tr_genetics_adopt = {
 	possible = {

@@ -401,6 +401,7 @@ resolution_defenseprivatization_private_support_troops_merc_naval_cap = {
 }
 
 resolution_defenseprivatization_condottieri = {
+	country_enclave_capacity_add = 1
 	country_naval_cap_mult = -0.15
 	trade_value_mult = 0.05
 }
@@ -409,7 +410,6 @@ resolution_defenseprivatization_condottieri_merc_naval_cap = {
 }
 
 resolution_defenseprivatization_security_business = {
-	country_enclave_capacity_add = 1
 	country_naval_cap_mult = -0.2
 	trade_value_mult = 0.05
 }
@@ -992,12 +992,16 @@ larionessi_resurgence_modifier = {
 	country_base_minerals_produces_add = 50
 	country_base_food_produces_add = 50
 	pop_growth_speed = 1
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_natural_beauty.dds"
 }
 
 larionessi_planet_modifier = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_surface.dds"
 	icon_frame = 1
 	planet_amenities_mult = 0.1
-	planet_building_build_speed_mult = 0.1
-	planet_jobs_food_produces_mult = 0.1
+	planet_building_build_speed_mult = 0.2
+	planet_jobs_produces_mult = 0.1
+
+	icon = "gfx/interface/icons/planet_modifiers/pm_natural_beauty.dds"
 }
