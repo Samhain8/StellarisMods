@@ -2357,7 +2357,6 @@ reaffirmed_superiority_value = {
 		trigger = num_rivals
 		mode = add
 	}
-	mult = 2
 }
 
 habitat_build_cost_mult = {
@@ -2435,7 +2434,7 @@ num_major_and_minor_orbitals_class = {
 habitat_district_value = {
 	base = 0
 	add = solar_system.value:num_major_and_minor_orbitals_type|TYPE|$TYPE$|
-	mult = 3
+	mult = 2
 }
 
 num_major_orbitals = {

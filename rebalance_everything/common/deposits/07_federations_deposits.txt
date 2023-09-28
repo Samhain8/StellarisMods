@@ -63,8 +63,16 @@ d_system_resources = {
 		potential = {
 			always = yes
 		}
-		planet_max_districts_add = 0.5
+		planet_max_districts_add = 1
 		mult = solar_system.value:num_major_orbitals
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_housing_add = 2
+		mult = solar_system.value:num_minor_orbitals
 	}
 
 	# Non-Resource Orbitals give additional Building Slots
@@ -73,8 +81,16 @@ d_system_resources = {
 		potential = {
 			always = yes
 		}
-		planet_max_buildings_add = 0.50
-		mult = solar_system.value:num_major_and_minor_orbitals_class|CLASS|generic|
+		planet_max_districts_add = 0.5
+		mult = solar_system.value:num_major_orbitals_class|CLASS|generic|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_max_buildings_add = 0.25
+		mult = solar_system.value:num_minor_orbitals_class|CLASS|generic|
 	}
 
 	# Upgraded Habitats get additional Habitability, District Slots and Building Slots
@@ -99,7 +115,7 @@ d_system_resources = {
 		potential = {
 			has_planet_flag = advanced_habitat
 		}
-		planet_max_districts_add = 0.25
+		planet_max_districts_add = 0.5
 		mult = solar_system.value:num_major_orbitals
 	}
 
@@ -107,7 +123,7 @@ d_system_resources = {
 		potential = {
 			has_planet_flag = advanced_habitat_2
 		}
-		planet_max_districts_add = 0.25
+		planet_max_districts_add = 0.5
 		mult = solar_system.value:num_major_orbitals
 	}
 
@@ -115,16 +131,48 @@ d_system_resources = {
 		potential = {
 			has_planet_flag = advanced_habitat
 		}
-		planet_max_buildings_add = 0.25
-		mult = solar_system.value:num_major_and_minor_orbitals_class|CLASS|generic|
+		planet_housing_add = 1
+		mult = solar_system.value:num_minor_orbitals
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			has_planet_flag = advanced_habitat_2
 		}
-		planet_max_buildings_add = 0.25
-		mult = solar_system.value:num_major_and_minor_orbitals_class|CLASS|generic|
+		planet_housing_add = 1
+		mult = solar_system.value:num_minor_orbitals
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_planet_flag = advanced_habitat
+		}
+		planet_max_districts_add = 0.25
+		mult = solar_system.value:num_major_orbitals_class|CLASS|generic|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_planet_flag = advanced_habitat_2
+		}
+		planet_max_districts_add = 0.25
+		mult = solar_system.value:num_major_orbitals_class|CLASS|generic|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_planet_flag = advanced_habitat
+		}
+		planet_max_buildings_add = 0.125
+		mult = solar_system.value:num_minor_orbitals_class|CLASS|generic|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_planet_flag = advanced_habitat_2
+		}
+		planet_max_buildings_add = 0.125
+		mult = solar_system.value:num_minor_orbitals_class|CLASS|generic|
 	}
 
 	# Extra Jobs from Order's Outposts
@@ -146,15 +194,15 @@ d_system_resources = {
 	}
 
 	# The district cap for provided by support habitats is
-	# 3 × NUM_ORBITALS_TYPE
+	# 2 × NUM_ORBITALS_TYPE
 
 	# Research Districts
 	triggered_planet_modifier = {
 		potential = {
 			always = yes
 		}
-		district_hab_science_max = 1
-		mult = value:habitat_district_value|TYPE|science|
+		district_hab_science_max = 2
+		mult = solar_system.value:num_major_orbitals_type|TYPE|science|
 	}
 
 	# Mining Districts
@@ -162,8 +210,8 @@ d_system_resources = {
 		potential = {
 			always = yes
 		}
-		district_hab_mining_max = 1
-		mult = value:habitat_district_value|TYPE|mining|
+		district_hab_mining_max = 2
+		mult = solar_system.value:num_major_orbitals_type|TYPE|mining|
 	}
 
 	# Energy Districts
@@ -171,8 +219,92 @@ d_system_resources = {
 		potential = {
 			always = yes
 		}
-		district_hab_energy_max = 1
-		mult = value:habitat_district_value|TYPE|energy|
+		district_hab_energy_max = 2
+		mult = solar_system.value:num_major_orbitals_type|TYPE|energy|
+	}
+
+	# Research Jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		job_researcher_add = 2
+		mult = solar_system.value:num_minor_orbitals_type|TYPE|science|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		job_brain_drone_add = 2
+		mult = solar_system.value:num_minor_orbitals_type|TYPE|science|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		job_calculator_add = 2
+		mult = solar_system.value:num_minor_orbitals_type|TYPE|science|
+	}
+
+	# Mining Jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		job_miner_add = 2
+		mult = solar_system.value:num_minor_orbitals_type|TYPE|mining|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_mining_drone_add = 2
+		mult = solar_system.value:num_minor_orbitals_type|TYPE|mining|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = yes }
+		}
+		job_fe_acolyte_mine_add = 2
+		mult = solar_system.value:num_minor_orbitals_type|TYPE|mining|
+	}
+
+	# Energy Jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		job_technician_add = 2
+		mult = solar_system.value:num_minor_orbitals_type|TYPE|energy|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = yes }
+		}
+		job_fe_acolyte_generator_add = 2
+		mult = solar_system.value:num_minor_orbitals_type|TYPE|energy|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_technician_drone_add = 2
+		mult = solar_system.value:num_minor_orbitals_type|TYPE|energy|
 	}
 
 	custom_tooltip = system_resources_tooltip

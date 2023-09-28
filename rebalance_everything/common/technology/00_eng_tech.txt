@@ -1177,9 +1177,9 @@ tech_habitat_2 = {
 		}
 	}
 
-	modifier = {
-		habitat_max_districts_mult = 0.10
-	}
+	#modifier = {
+	#	habitat_max_districts_mult = 0.10
+	#}
 
 	weight_modifier = {
 		modifier = {
@@ -1230,9 +1230,9 @@ tech_habitat_3 = {
 		}
 	}
 
-	modifier = {
-		habitat_max_districts_mult = 0.10
-	}
+	#modifier = {
+	#	habitat_max_districts_mult = 0.10
+	#}
 
 	weight_modifier = {
 		modifier = {

@@ -11,6 +11,8 @@ district_hab_housing = {
 
 	show_on_uncolonized = {
 		uses_district_set = habitat
+		exists = from
+		from = { is_gestalt = yes }
 		NOR = {
 			has_planet_flag = toxic_knights_habitat
 			has_building = building_order_castle
@@ -19,6 +21,8 @@ district_hab_housing = {
 
 	potential = {
 		uses_district_set = habitat
+		exists = from
+		from = { is_gestalt = yes }
 		NAND = {
 			exists = owner
 			owner = { has_origin = origin_toxic_knights }
@@ -46,7 +50,7 @@ district_hab_housing = {
 
 	planet_modifier = {
 		planet_max_buildings_add = 0.50
-		planet_housing_add = 6
+		planet_housing_add = 3
 	}
 
 	triggered_planet_modifier = {
@@ -77,6 +81,7 @@ district_hab_housing = {
 		}
 		modifier = {
 			job_entertainer_add = 1
+			mult = owner.value:hab_void_dweller_jobs
 		}
 	}
 
@@ -88,7 +93,7 @@ district_hab_housing = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 0.5
 		}
 	}
 
@@ -100,7 +105,7 @@ district_hab_housing = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 0.5
 		}
 	}
 
@@ -111,6 +116,26 @@ district_hab_housing = {
 		}
 		job_maintenance_drone_add = 1
 		mult = owner.value:hab_void_dweller_jobs
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_synapse_drone_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_evaluator_add = 1
+		}
 	}
 
 	triggered_desc = {
@@ -124,9 +149,151 @@ district_hab_housing = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { is_gestalt = yes }
+			owner = { is_hive_empire = yes }
 		}
-		text = job_maintenance_drone_effect_desc
+		text = job_synapse_drone_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		text = job_evaluator_effect_desc
+	}
+}
+
+district_hab_cultural = {
+	base_buildtime = @hab_time
+	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
+
+	show_on_uncolonized = {
+		uses_district_set = habitat
+		exists = from
+		from = { is_gestalt = no }
+		NOR = {
+			has_planet_flag = toxic_knights_habitat
+			has_building = building_order_castle
+		}
+	}
+
+	potential = {
+		uses_district_set = habitat
+		exists = from
+		from = { is_gestalt = no }
+		NAND = {
+			exists = owner
+			owner = { has_origin = origin_toxic_knights }
+			OR = {
+				has_planet_flag = toxic_knights_habitat
+				has_building = building_order_castle
+			}
+		}
+	}
+
+	convert_to = {
+		district_orders_demesne
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = @hab_cost
+		}
+		upkeep = {
+			energy = @hab_maintenance
+			alloys = @low_hab_maintenance
+		}
+	}
+
+	planet_modifier = {
+		planet_max_buildings_add = 0.50
+		planet_housing_add = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_void_works }
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		job_trader_add = 1
+		job_entertainer_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_pleasure_seeker = yes
+			}
+		}
+		modifier = {
+			job_entertainer_add = 1
+			job_trader_add = -1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_void_dweller_empire = yes
+			}
+		}
+		modifier = {
+			job_trader_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 0.5
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+			}
+		}
+		modifier = {
+			planet_housing_add = 0.5
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_trader_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_entertainer_effect_desc
 	}
 }
 
@@ -169,6 +336,16 @@ district_hab_industrial = {
 	planet_modifier = {
 		planet_housing_add = 3
 		planet_max_buildings_add = 0.25
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_crafter_empire = yes }
+		}
+		modifier = {
+			planet_max_buildings_add = 0.25
+		}
 	}
 
 	triggered_planet_modifier = {
@@ -747,6 +924,7 @@ district_hab_science = {
 
 	planet_modifier = {
 		planet_housing_add = 3
+		planet_max_buildings_add = 0.25
 	}
 
 	inline_script = {
@@ -758,7 +936,7 @@ district_hab_science = {
 			exists = owner
 			owner = { is_regular_empire = yes }
 		}
-		job_researcher_add = 2
+		job_researcher_add = 1
 		mult = owner.value:hab_void_dweller_jobs
 	}
 
@@ -767,7 +945,7 @@ district_hab_science = {
 			exists = owner
 			owner = { is_hive_empire = yes }
 		}
-		job_brain_drone_add = 2
+		job_brain_drone_add = 1
 		mult = owner.value:hab_void_dweller_jobs
 	}
 
@@ -776,7 +954,7 @@ district_hab_science = {
 			exists = owner
 			owner = { is_machine_empire = yes }
 		}
-		job_calculator_add = 2
+		job_calculator_add = 1
 		mult = owner.value:hab_void_dweller_jobs
 	}
 
@@ -829,6 +1007,7 @@ district_hab_energy = {
 
 	planet_modifier = {
 		planet_housing_add = 3
+		planet_max_buildings_add = 0.25
 	}
 
 	inline_script = {
@@ -933,6 +1112,7 @@ district_hab_mining = {
 
 	planet_modifier = {
 		planet_housing_add = 3
+		planet_max_buildings_add = 0.25
 	}
 
 	inline_script = {
