@@ -1,11 +1,14 @@
 # Monthly Technological Progress of pre-FTL civilizations.
-@early_progress_rate	= 1		# 160 years to tech up.
-@mid_progress_rate		= 2		# 80 years to tech up.
-@late_progress_rate		= 4		# 40 years to tech up.
-@low_awareness			= 0.5
-@partial_awareness		= 1.0
-@high_awareness			= 1.5
-@full_awareness			= 2
+@stone_age_progress_rate	= 0.1	# 1600 years to tech up.
+@bronze_age_progress_rate	= 0.2	# 800 years to tech up.
+@iron_age_progress_rate		= 0.4	# 400 years to tech up.
+@early_progress_rate		= 0.7	# 228 years to tech up.
+@mid_progress_rate			= 1.5	# 106 years to tech up.
+@late_progress_rate			= 2.5	# 64 years to tech up.
+@low_awareness				= 0.25
+@partial_awareness			= 0.65
+@high_awareness				= 1
+@full_awareness				= 1.5
 
 # AI empires don't have pulse events, so we're using non-player facing situations to give them a monthly on-action
 
@@ -74,14 +77,39 @@ pre_ftl_tech_progress_situation = { # This situation's name-key is used in pre-F
 		# Total: 1920
 		base = 0
 		modifier = {
-			add = @early_progress_rate
+			add = @stone_age_progress_rate
 			desc = early_age
 			owner = {
 				OR = {
 					has_country_flag = stone_age
+				}
+			}
+		}
+		modifier = {
+			add = @bronze_age_progress_rate
+			desc = early_age
+			owner = {
+				OR = {
 					has_country_flag = bronze_age
+				}
+			}
+		}
+		modifier = {
+			add = @iron_age_progress_rate
+			desc = early_age
+			owner = {
+				OR = {
 					has_country_flag = iron_age
+				}
+			}
+		}
+		modifier = {
+			add = @early_progress_rate
+			desc = early_age
+			owner = {
+				OR = {
 					has_country_flag = late_medieval_age
+					has_country_flag = renaissance_age
 				}
 			}
 		}
@@ -90,7 +118,6 @@ pre_ftl_tech_progress_situation = { # This situation's name-key is used in pre-F
 			desc = mid_age
 			owner = {
 				OR = {
-					has_country_flag = renaissance_age
 					has_country_flag = steam_age
 					has_country_flag = industrial_age
 					has_country_flag = machine_age
@@ -143,7 +170,7 @@ pre_ftl_tech_progress_situation = { # This situation's name-key is used in pre-F
 			}
 		}
 		modifier = {
-			mult = 2
+			mult = 1.5
 			desc = technological_breakthrough
 			has_situation_flag = technological_breakthrough
 		}
