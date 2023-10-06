@@ -3338,7 +3338,7 @@ void_dweller_home_planet_setup = {
 		while = {
 			count = 2
 			add_district = {
-				district_type = district_hab_cultural
+				district_type = district_hab_housing
 				ignore_cap = yes
 			}
 		}

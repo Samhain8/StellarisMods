@@ -716,70 +716,12 @@ building_temple = {
 	}
 
 	planet_modifier = {
-		job_priest_add = 1
+		job_priest_add = 2
 		pop_ethic_spiritualist_attraction_mult = 0.05
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_megacorp = no }
-		}
-		modifier = {
-			job_priest_add = 1
-		}
 	}
 
 	triggered_desc = {
 		text = job_priest_effect_desc
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_worker_coop_empire = no
-			}
-		}
-		modifier = {
-			job_manager_add = 1
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_worker_coop_empire = no
-			}
-		}
-		text = job_manager_effect_desc
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_worker_coop_empire = yes
-			}
-		}
-		modifier = {
-			job_steward_add = 1
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_worker_coop_empire = yes
-			}
-		}
-		text = job_steward_effect_desc
 	}
 
 	upgrades = {
@@ -860,70 +802,12 @@ building_holotemple = {
 	}
 
 	planet_modifier = {
-		job_priest_add = 2
+		job_priest_add = 4
 		pop_ethic_spiritualist_attraction_mult = 0.10
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_megacorp = no }
-		}
-		modifier = {
-			job_priest_add = 2
-		}
 	}
 
 	triggered_desc = {
 		text = job_priest_effect_desc
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_worker_coop_empire = no
-			}
-		}
-		modifier = {
-			job_manager_add = 2
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_worker_coop_empire = no
-			}
-		}
-		text = job_manager_effect_desc
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_worker_coop_empire = yes
-			}
-		}
-		modifier = {
-			job_steward_add = 2
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_worker_coop_empire = yes
-			}
-		}
-		text = job_steward_effect_desc
 	}
 
 	upgrades = {
@@ -1006,7 +890,7 @@ building_sacred_nexus = {
 	}
 
 	planet_modifier = {
-		job_priest_add = 3
+		job_priest_add = 6
 		pop_ethic_spiritualist_attraction_mult = 0.15
 	}
 
@@ -1018,66 +902,8 @@ building_sacred_nexus = {
 		job_high_priest_add = 1
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_megacorp = no }
-		}
-		modifier = {
-			job_priest_add = 3
-		}
-	}
-
 	triggered_desc = {
 		text = job_priest_effect_desc
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_worker_coop_empire = no
-			}
-		}
-		modifier = {
-			job_manager_add = 3
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_worker_coop_empire = no
-			}
-		}
-		text = job_manager_effect_desc
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_worker_coop_empire = yes
-			}
-		}
-		modifier = {
-			job_steward_add = 3
-		}
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = {
-				is_megacorp = yes
-				is_worker_coop_empire = yes
-			}
-		}
-		text = job_steward_effect_desc
 	}
 
 	triggered_desc = {

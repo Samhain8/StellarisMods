@@ -11,8 +11,8 @@ district_hab_housing = {
 
 	show_on_uncolonized = {
 		uses_district_set = habitat
-		exists = from
-		from = { is_gestalt = yes }
+		#exists = from
+		#from = { is_gestalt = yes }
 		NOR = {
 			has_planet_flag = toxic_knights_habitat
 			has_building = building_order_castle
@@ -21,8 +21,8 @@ district_hab_housing = {
 
 	potential = {
 		uses_district_set = habitat
-		exists = from
-		from = { is_gestalt = yes }
+		#exists = from
+		#from = { is_gestalt = yes }
 		NAND = {
 			exists = owner
 			owner = { has_origin = origin_toxic_knights }
@@ -68,8 +68,8 @@ district_hab_housing = {
 			exists = owner
 			owner = { is_gestalt = no }
 		}
-		job_clerk_add = 1
-		mult = owner.value:hab_void_dweller_jobs
+		job_trader_add = 1
+		job_entertainer_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -81,7 +81,20 @@ district_hab_housing = {
 		}
 		modifier = {
 			job_entertainer_add = 1
-			mult = owner.value:hab_void_dweller_jobs
+			job_trader_add = -1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = no }
+			owner = {
+				is_void_dweller_empire = yes
+			}
+		}
+		modifier = {
+			job_trader_add = 1
 		}
 	}
 
@@ -143,7 +156,15 @@ district_hab_housing = {
 			exists = owner
 			owner = { is_gestalt = no }
 		}
-		text = job_clerk_effect_desc
+		text = job_trader_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = no }
+		}
+		text = job_entertainer_effect_desc
 	}
 
 	triggered_desc = {
@@ -169,6 +190,7 @@ district_hab_cultural = {
 	exempt_from_ai_planet_specialization = yes
 
 	show_on_uncolonized = {
+		always = no
 		uses_district_set = habitat
 		exists = from
 		from = { is_gestalt = no }
@@ -179,6 +201,7 @@ district_hab_cultural = {
 	}
 
 	potential = {
+		always = no
 		uses_district_set = habitat
 		exists = from
 		from = { is_gestalt = no }
@@ -247,6 +270,7 @@ district_hab_cultural = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { is_gestalt = no }
 			owner = {
 				is_void_dweller_empire = yes
 			}
