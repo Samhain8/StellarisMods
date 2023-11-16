@@ -207,6 +207,14 @@
 
  trait_psionic:0 "Psionic"
  trait_psionic_desc:0 "§LAll members of this species possess powerful psionic abilities. They typically communicate with each other through telepathy.§!\n"
+ trait_psionic_will_to_power:0 "Will to Power"
+ trait_psionic_will_to_power_desc:0 "§LThe telepathic abilities of this species allows them to directly influence the minds of others.§!\n"
+ trait_psionic_phantasmal:0 "Phantasmal"
+ trait_psionic_phantasmal_desc:0 "§LMembers of this species have one foot in the shroud and the other in this reality, giving them new, very valuable perpectives. As long as they don't get lost out there.§!\n"
+ trait_psionic_martial_prowess:0 "Martial Prowess"
+ trait_psionic_martial_prowess_desc:0 "§LMembers of this species focus their psionic abilities on improving their physical prowess.§!\n"
+ trait_psionic_love_orchestra:0 "Love Orchestra"
+ trait_psionic_love_orchestra_desc:0 "§LMembers of this species find themselves in each other, resonating through their telepathic links. This makes it more difficult for exceptional leaders to emerge however.§!\n"
  trait_self_modified:0 "Self-Modified"
  trait_self_modified_desc:0 "§LMembers of this offshoot species have spontaneously altered their genetic makeup to give themselves an advantage.§!"
 

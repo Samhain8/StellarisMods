@@ -411,10 +411,36 @@ trait_evanescent = {
 	initial = no
 	randomized = no
 	advanced_trait = yes
-	opposites = { "trait_weak" "trait_strong" "trait_very_strong" "trait_ballistic_muscle" }
+	opposites = { "trait_enduring" "trait_fleeting" "trait_fleeting_lithoid" "trait_ephemeral" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 		leader_age = -50
+		species_empire_size_mult = 0.35
+	}
+	slave_cost = {
+		energy = -1500
+	}
+}
+
+trait_frail = {
+	cost = -3
+	icon = "gfx/interface/icons/traits/trait_weak.dds"
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	potential_crossbreeding_chance = 0.5
+	initial = no
+	randomized = no
+	advanced_trait = yes
+	opposites = { "trait_weak" "trait_strong" "trait_very_strong" "trait_ballistic_muscle" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
 		army_damage_mult = -0.4
 		army_health = -0.2
 		planet_jobs_food_produces_mult = -0.15
@@ -444,11 +470,10 @@ trait_fractured_memory = {
 	advanced_trait = yes
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = { 
-		planet_jobs_physics_research_produces_mult = -0.25
-		planet_jobs_society_research_produces_mult = -0.25
-		planet_jobs_engineering_research_produces_mult = -0.25
+		planet_jobs_physics_research_produces_mult = -0.15
+		planet_jobs_society_research_produces_mult = -0.15
+		planet_jobs_engineering_research_produces_mult = -0.15
 		species_leader_exp_gain = -0.5
-		leader_age = -30
 		species_empire_size_mult = 0.25
 	}
 	slave_cost = {
