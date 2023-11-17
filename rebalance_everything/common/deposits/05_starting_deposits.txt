@@ -23,6 +23,14 @@ d_scandinavian_reclamation_sector = {
 		district_farming_max = 1
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 1
+		mult = value:district_amount_mastery_of_nature
+	}
+
 	drop_weight = {
 		weight = 0
 	}
@@ -34,6 +42,14 @@ d_pacific_algae_tracts = {
 
 	planet_modifier = {
 		district_farming_max = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 3
+		mult = value:district_amount_mastery_of_nature
 	}
 
 	drop_weight = {
@@ -49,6 +65,14 @@ d_saharan_irrigation_project = {
 		district_farming_max = 4
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 4
+		mult = value:district_amount_mastery_of_nature
+	}
+
 	drop_weight = {
 		weight = 0
 	}
@@ -60,6 +84,14 @@ d_mesopotamian_urban_corridor = {
 
 	planet_modifier = {
 		district_mining_max = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 3
+		mult = value:district_amount_mastery_of_nature
 	}
 
 	drop_weight = {
@@ -75,6 +107,14 @@ d_delhi_sprawl = {
 		district_generator_max = 2
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 2
+		mult = value:district_amount_mastery_of_nature
+	}
+
 	drop_weight = {
 		weight = 0
 	}
@@ -86,6 +126,14 @@ d_boswash_metropolitan_axis = {
 
 	planet_modifier = {
 		district_generator_max = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 3
+		mult = value:district_amount_mastery_of_nature
 	}
 
 	drop_weight = {
@@ -101,6 +149,14 @@ d_pearl_river_agglomerate = {
 		district_generator_max = 3
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 3
+		mult = value:district_amount_mastery_of_nature
+	}
+
 	drop_weight = {
 		weight = 0
 	}
@@ -114,6 +170,14 @@ d_mauritanian_security_zone = {
 		district_mining_max = 1
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 1
+		mult = value:district_amount_mastery_of_nature
+	}
+
 	drop_weight = {
 		weight = 0
 	}
@@ -125,6 +189,14 @@ d_great_albertan_crater = {
 
 	planet_modifier = {
 		district_mining_max = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 3
+		mult = value:district_amount_mastery_of_nature
 	}
 
 	drop_weight = {

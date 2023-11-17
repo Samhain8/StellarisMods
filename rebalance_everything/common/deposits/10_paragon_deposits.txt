@@ -31,12 +31,23 @@ d_volcanic_active_planet = { #Unstable Planet
 	icon = d_mineral_striations
 	category = deposit_cat_rare
 
-	potential = { always = no }
-
 	planet_modifier = {
 		district_mining_max = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 3
+		mult = value:district_amount_mastery_of_nature
+	}
+
+	planet_modifier = {
 		building_mote_harvesters_max = 1
 	}
+
+	potential = { always = no }
 }
 d_hostile_fauna = { #Hostile Planet
 	is_for_colonizable = yes
@@ -47,6 +58,14 @@ d_hostile_fauna = { #Hostile Planet
 
 	planet_modifier = {
 		district_farming_max = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 1
+		mult = value:district_amount_mastery_of_nature
 	}
 
 	triggered_planet_modifier = {
@@ -78,6 +97,14 @@ d_hostile_flora = { #Hostile Planet
 
 	planet_modifier = {
 		district_farming_max = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 1
+		mult = value:district_amount_mastery_of_nature
 	}
 
 	triggered_planet_modifier = {
@@ -142,8 +169,30 @@ d_fallen_orbital_shipyard = { #Ship Graveyard
 
 	planet_modifier = {
 		planet_housing_add = 8
+	}
+
+	planet_modifier = {
 		district_generator_max = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 3
+		mult = value:district_amount_mastery_of_nature
+	}
+
+	planet_modifier = {
 		district_mining_max = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 3
+		mult = value:district_amount_mastery_of_nature
 	}
 
 	triggered_planet_modifier = {
@@ -187,6 +236,15 @@ d_ancient_facilities = {
 	planet_modifier = {
 		district_generator_max = 3
 	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 3
+		mult = value:district_amount_mastery_of_nature
+	}
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner

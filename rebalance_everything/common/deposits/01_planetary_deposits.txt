@@ -43,6 +43,14 @@ d_arid_highlands = {
 		district_generator_max = 1
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 1
+		mult = value:district_amount_mastery_of_nature
+	}
+
 	potential = {
 		is_dry = yes
 	}
@@ -71,6 +79,14 @@ d_hot_springs = {
 
 	planet_modifier = {
 		district_generator_max = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 1
+		mult = value:district_amount_mastery_of_nature
 	}
 
 	potential = {
@@ -107,6 +123,14 @@ d_rushing_waterfalls = {
 		district_generator_max = 2
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 2
+		mult = value:district_amount_mastery_of_nature
+	}
+
 	potential = {
 		is_wet = yes
 	}
@@ -135,6 +159,14 @@ d_searing_desert = {
 
 	planet_modifier = {
 		district_generator_max = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 2
+		mult = value:district_amount_mastery_of_nature
 	}
 
 	potential = {
@@ -172,6 +204,14 @@ d_frozen_gas_lake = {
 		district_generator_max = 2
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 2
+		mult = value:district_amount_mastery_of_nature
+	}
+
 	potential = {
 		OR = {
 			is_planet_class = pc_gaia
@@ -204,6 +244,14 @@ d_geothermal_vent = {
 
 	planet_modifier = {
 		district_generator_max = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 3
+		mult = value:district_amount_mastery_of_nature
 	}
 
 	potential = {
@@ -242,6 +290,14 @@ d_underwater_vent = {
 		district_generator_max = 3
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 3
+		mult = value:district_amount_mastery_of_nature
+	}
+
 	potential = {
 		OR = {
 			is_planet_class = pc_gaia
@@ -275,6 +331,14 @@ d_tempestous_mountain = {
 
 	planet_modifier = {
 		district_generator_max = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 3
+		mult = value:district_amount_mastery_of_nature
 	}
 
 	potential = {
@@ -317,6 +381,14 @@ d_veiny_cliffs = {
 		district_mining_max = 1
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 1
+		mult = value:district_amount_mastery_of_nature
+	}
+
 	potential = {
 		OR = {
 			is_planet_class = pc_alpine
@@ -351,6 +423,14 @@ d_mineral_fields = {
 
 	planet_modifier = {
 		district_mining_max = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 1
+		mult = value:district_amount_mastery_of_nature
 	}
 
 	potential = {
@@ -388,6 +468,14 @@ d_prosperous_mesa = {
 		district_mining_max = 2
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 2
+		mult = value:district_amount_mastery_of_nature
+	}
+
 	potential = {
 		OR = {
 			is_planet_class = pc_continental
@@ -422,6 +510,14 @@ d_ore_rich_caverns = {
 
 	planet_modifier = {
 		district_mining_max = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 2
+		mult = value:district_amount_mastery_of_nature
 	}
 
 	triggered_planet_modifier = {
@@ -474,6 +570,14 @@ d_rich_mountain = {
 		district_mining_max = 3
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 3
+		mult = value:district_amount_mastery_of_nature
+	}
+
 	potential = {
 		OR = {
 			is_planet_class = pc_continental
@@ -510,6 +614,14 @@ d_submerged_ore_veins = {
 
 	planet_modifier = {
 		district_mining_max = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 3
+		mult = value:district_amount_mastery_of_nature
 	}
 
 	potential = {
@@ -557,6 +669,14 @@ d_lichen_fields = {
 		district_farming_max = 1
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 1
+		mult = value:district_amount_mastery_of_nature
+	}
+
 	potential = {
 		OR = {
 			is_planet_class = pc_nuked
@@ -599,6 +719,14 @@ d_bountiful_plains = {
 		district_farming_max = 1
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 1
+		mult = value:district_amount_mastery_of_nature
+	}
+
 	potential = {
 		OR = {
 			is_planet_class = pc_arid
@@ -635,6 +763,14 @@ d_rugged_woods = {
 		district_farming_max = 1
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 1
+		mult = value:district_amount_mastery_of_nature
+	}
+
 	potential = {
 		is_planet_class = pc_continental
 	}
@@ -668,6 +804,14 @@ d_green_hills = {
 
 	planet_modifier = {
 		district_farming_max = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 1
+		mult = value:district_amount_mastery_of_nature
 	}
 
 	potential = {
@@ -708,6 +852,14 @@ d_forgiving_tundra = {
 		district_farming_max = 1
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 1
+		mult = value:district_amount_mastery_of_nature
+	}
+
 	potential = {
 		OR = {
 			is_planet_class = pc_alpine
@@ -746,6 +898,14 @@ d_boggy_fens = {
 		district_farming_max = 1
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 1
+		mult = value:district_amount_mastery_of_nature
+	}
+
 	potential = {
 		is_planet_class = pc_ocean
 	}
@@ -781,6 +941,14 @@ d_nutritious_mudland = {
 		district_farming_max = 1
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 1
+		mult = value:district_amount_mastery_of_nature
+	}
+
 	potential = {
 		is_planet_class = pc_desert
 	}
@@ -810,6 +978,14 @@ d_fungal_caves = {
 
 	planet_modifier = {
 		district_farming_max = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 2
+		mult = value:district_amount_mastery_of_nature
 	}
 
 	potential = {
@@ -850,6 +1026,14 @@ d_lush_jungle = {
 		district_farming_max = 2
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 2
+		mult = value:district_amount_mastery_of_nature
+	}
+
 	potential = {
 		OR = {
 			is_planet_class = pc_gaia
@@ -883,6 +1067,14 @@ d_fertile_lands = {
 
 	planet_modifier = {
 		district_farming_max = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 2
+		mult = value:district_amount_mastery_of_nature
 	}
 
 	potential = {
@@ -921,6 +1113,14 @@ d_great_river = {
 		district_farming_max = 2
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 2
+		mult = value:district_amount_mastery_of_nature
+	}
+
 	potential = {
 		OR = {
 			is_planet_class = pc_arid
@@ -954,6 +1154,14 @@ d_black_soil = {
 
 	planet_modifier = {
 		district_farming_max = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 3
+		mult = value:district_amount_mastery_of_nature
 	}
 
 	potential = {
@@ -992,6 +1200,13 @@ d_teeming_reef = {
 		district_farming_max = 3
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			has_modifier = mastery_of_nature
+		}
+		district_farming_max = 0.75
+	}
+
 	potential = {
 		OR = {
 			is_planet_class = pc_gaia
@@ -1025,6 +1240,14 @@ d_marvelous_oasis = {
 
 	planet_modifier = {
 		district_farming_max = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 3
+		mult = value:district_amount_mastery_of_nature
 	}
 
 	potential = {
@@ -1062,6 +1285,14 @@ d_tropical_island = {
 		district_farming_max = 3
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 3
+		mult = value:district_amount_mastery_of_nature
+	}
+
 	potential = {
 		OR = {
 			is_planet_class = pc_arid
@@ -1096,6 +1327,14 @@ d_fungal_forest = {
 
 	planet_modifier = {
 		district_farming_max = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 3
+		mult = value:district_amount_mastery_of_nature
 	}
 
 	potential = {

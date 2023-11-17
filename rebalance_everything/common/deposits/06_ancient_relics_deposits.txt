@@ -158,6 +158,14 @@ d_ancient_reactor_pits = {
 	planet_modifier = {
 		district_generator_max = 6
 	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 6
+		mult = value:district_amount_mastery_of_nature
+	}
 }
 
 d_immense_solar_array = {
@@ -168,6 +176,14 @@ d_immense_solar_array = {
 
 	planet_modifier = {
 		district_generator_max = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_generator_max = 3
+		mult = value:district_amount_mastery_of_nature
 	}
 }
 
@@ -180,6 +196,14 @@ d_abandoned_mining_tunnels = {
 	planet_modifier = {
 		district_mining_max = 6
 	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 6
+		mult = value:district_amount_mastery_of_nature
+	}
 }
 
 d_relic_metal_boneyard = {
@@ -190,6 +214,14 @@ d_relic_metal_boneyard = {
 
 	planet_modifier = {
 		district_mining_max = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 3
+		mult = value:district_amount_mastery_of_nature
 	}
 }
 
@@ -301,7 +333,7 @@ d_mutation_vats = {
 
 # Artifacts Deposits
 
-d_artifacts_1 = {
+d_artifacts_research_1 = {
 	resources = {
 		category = orbital_research_deposits
 		produces = {
@@ -317,7 +349,7 @@ d_artifacts_1 = {
 	}
 }
 
-d_artifacts_2 = {
+d_artifacts_research_2 = {
 	resources = {
 		category = orbital_research_deposits
 		produces = {
@@ -333,7 +365,7 @@ d_artifacts_2 = {
 	}
 }
 
-d_artifacts_3 = {
+d_artifacts_research_3 = {
 	resources = {
 		category = orbital_research_deposits
 		produces = {
@@ -441,4 +473,3 @@ d_artifacts_planet_3 = {
 		}
 	}
 }
-

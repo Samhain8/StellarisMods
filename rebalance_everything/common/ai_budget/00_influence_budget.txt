@@ -33,26 +33,6 @@ influence_expenditure_decisions = {
 			factor = 2
 			OR = {
 				AND = {
-					has_origin = origin_void_dwellers
-					has_technology = tech_habitat_2
-					any_owned_planet = {
-						is_planet_class = pc_habitat
-						NOT = {
-							has_planet_flag = advanced_habitat
-						}
-					}
-				}
-				AND = {
-					has_origin = origin_void_dwellers
-					has_technology = tech_habitat_3
-					any_owned_planet = {
-						is_planet_class = pc_habitat
-						NOT = {
-							has_planet_flag = advanced_habitat_2
-						}
-					}
-				}
-				AND = {
 					has_technology = tech_housing_2
 					any_owned_planet = {
 						is_planet_class = pc_relic
@@ -133,8 +113,8 @@ influence_expenditure_edicts = {
 	category = edicts
 
 	potential = {
-		is_death_cult_empire = yes
-		has_sacrificial_edict = no
+		is_sovereign_guardianship_empire = yes
+		NOT = { has_edict = inner_focus }
 	}
 
 	weight = {
@@ -147,6 +127,25 @@ influence_expenditure_edicts = {
 
 	desired_max = {
 		base = 100
+	}
+}
+
+influence_upkeep_edicts = {
+	resource = influence
+	type = upkeep
+	category = edicts
+	potential = {
+		has_edict = inner_focus
+		has_resource = {
+			type = influence
+			amount > 300
+		}
+	}
+	weight = {
+		weight = 0.5
+	}
+	desired_max = {
+		base = 3
 	}
 }
 
