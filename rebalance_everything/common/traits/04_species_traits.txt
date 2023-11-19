@@ -1257,7 +1257,7 @@ trait_psionic_phantasmal = {
 	modifier = {
 		species_leader_exp_gain = 1
 		pop_environment_tolerance = 0.15
-		leader_age = -40
+		leader_lifespan_add = -40
 	}
 
 	slave_cost = {

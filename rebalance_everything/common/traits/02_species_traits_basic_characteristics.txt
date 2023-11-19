@@ -173,7 +173,7 @@ trait_remnant_survivor = {
 	modifier = {
 		species_leader_exp_gain = 0.15
 		pop_environment_tolerance = 0.05
-		leader_age = -15
+		leader_lifespan_add = -15
 	}
 	slave_cost = {
 		energy = 150

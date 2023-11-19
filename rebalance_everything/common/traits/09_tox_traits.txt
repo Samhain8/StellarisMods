@@ -694,7 +694,7 @@ trait_compliance_instincts = {
 	modifier = {
 		species_empire_size_mult = -0.10
 		pop_cat_slave_happiness = 0.1
-		leader_age = -15
+		leader_lifespan_add = -15
 	}
 	slave_cost = {
 		energy = 500
@@ -735,7 +735,7 @@ trait_stunted_growth = {
 		pop_housing_usage_mult = -0.2
 		army_damage_mult = -0.20
 		planet_jobs_worker_produces_mult = -0.025
-		leader_age = -5
+		leader_lifespan_add = -5
 	}
 	slave_cost = {
 		energy = 100
@@ -773,7 +773,7 @@ trait_thrill_seeker = {
 	modifier = {
 		army_damage_mult = 0.30
 		pop_growth_speed = 0.1
-		leader_age = -20
+		leader_lifespan_add = -20
 	}
 	slave_cost = {
 		energy = 500
@@ -801,7 +801,7 @@ trait_crafted_charm = {
 	modifier = { 
 		pop_job_amenities_mult = 0.2
 		pop_job_trade_mult = 0.2
-		leader_age = -15
+		leader_lifespan_add = -15
 	}
 	triggered_pop_modifier = {
 		potential = {
@@ -839,7 +839,7 @@ trait_interbreeder = {
 	modifier = {
 		pop_job_amenities_mult = 0.2
 		pop_growth_speed = 0.1
-		leader_age = -20 
+		leader_lifespan_add = -20 
 	}
 	triggered_pop_modifier = {
 		potential = {
@@ -984,7 +984,7 @@ trait_fast_metabolism = {
 		species_leader_exp_gain = 0.25
 		planet_jobs_produces_mult = 0.05
 		planet_pops_upkeep_mult = 0.25
-		leader_age = -15
+		leader_lifespan_add = -15
 	}
 
 	slave_cost = {

@@ -1481,7 +1481,7 @@ zro_dust_incense = {
 
 	modifier = {
 		species_leader_exp_gain = 0.2
-		leader_age = 10
+		leader_lifespan_add = 10
 	}
 
 	ai_weight = {

@@ -414,7 +414,7 @@ trait_evanescent = {
 	opposites = { "trait_enduring" "trait_fleeting" "trait_fleeting_lithoid" "trait_ephemeral" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		leader_age = -50
+		leader_lifespan_add = -50
 		species_empire_size_mult = 0.35
 	}
 	slave_cost = {
