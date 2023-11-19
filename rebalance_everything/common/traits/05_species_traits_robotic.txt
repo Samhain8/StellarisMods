@@ -317,7 +317,7 @@ trait_robot_learning_algorithms = {
 		}
 	}
 	modifier = {
-		species_leader_exp_gain = 0.25
+		species_leader_exp_gain = 0.10
 	}
 	slave_cost = {
 		energy = 750
@@ -342,7 +342,7 @@ trait_robot_repurposed_hardware = {
 		}
 	}
 	modifier = {
-		species_leader_exp_gain = -0.25
+		species_leader_exp_gain = -0.10
 	}
 	ai_weight = {
 		weight = 1
@@ -352,7 +352,7 @@ trait_robot_repurposed_hardware = {
 		}
 	}
 	slave_cost = {
-		energy = -150
+		energy = -250
 	}
 }
 

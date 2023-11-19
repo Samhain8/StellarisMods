@@ -94,7 +94,7 @@ tr_supremacy_war_games = {
 	}
 	modifier = {
 		command_limit_add = 20
-		admiral_exp_gain = 0.1
+		commander_exp_gain = 0.1
 	}
 
 	tradition_swap = {
@@ -145,6 +145,7 @@ tr_supremacy_great_game = {
 	}
 
 	modifier = {
+		country_commander_cap_add = 1
 		ship_damage_against_starbases_mult = 0.2
 	}
 

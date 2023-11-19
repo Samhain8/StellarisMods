@@ -97,6 +97,8 @@ message_type = {
 	sound = "notification"
 	ping = "ping_notification_green"
 
+	default_disabled = yes
+
 	category = leaders
 }
 
@@ -433,6 +435,16 @@ message_type = {
 	ping = "mixed_notification_yellow"
 
 	category = fleets
+}
+
+message_type = {
+	key = "FLEET_FORCED_TO_DECLOAK_MESSAGE_TYPE"
+	icon = "GFX_message_enemy_forcibly_decloaked"
+	icon_frame = 2
+
+	sound = "advisor_notification_evade_hostile_fleet"
+	sound_is_advisor = yes
+	ping = "mixed_notification_yellow"
 }
 
 message_type = {
@@ -1820,6 +1832,19 @@ message_type = {
 }
 
 message_type = {
+	key = "TOAST_TRUCE_IS_OVER"
+	icon = "GFX_toast_truce_over"
+
+	name = "TOAST_TRUCE_IS_OVER_TITLE"
+	sound = "notification"
+	ping = "ping_notification_green"
+
+	default_toast = yes
+
+	category = military
+}
+
+message_type = {
 	key = "TOAST_HABITAT_BUILT"
 	icon = "GFX_toast_habitat_built"
 
@@ -2260,11 +2285,89 @@ message_type = {
 }
 
 message_type = {
+	key = "MESSAGE_ASTRAL_RIFT_DISCOVERED"
+	icon = "GFX_message_astral_rift_discovered"
+	icon_frame = 1
+	auto_opens = others
+
+	name = "MESSAGE_ASTRAL_RIFT_DISCOVERED_TITLE"
+	sound = "archeology_notifications_new_dig_site"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "MESSAGE_ASTRAL_SCAR_DISCOVERED"
+	icon = "GFX_message_astral_rift_discovered"
+	icon_frame = 1
+	auto_opens = others
+
+	name = "MESSAGE_ASTRAL_SCAR_DISCOVERED_TITLE"
+	sound = "archeology_notifications_new_dig_site"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "MESSAGE_ASTRAL_RIFT_STARTED"
+	icon = "GFX_message_astral_rift_started"
+	icon_frame = 1
+	auto_opens = others
+
+	name = "MESSAGE_ASTRAL_RIFT_STARTED_TITLE"
+	sound = "archeology_notifications_new_dig_site"
+	ping = "ping_notification_green"
+}
+
+message_type = {
+	key = "MESSAGE_ASTRAL_RIFT_FINISHED"
+	icon = "GFX_message_astral_rift_finished"
+	icon_frame = 1
+
+	name = "MESSAGE_ASTRAL_RIFT_FINISHED_TITLE"
+	sound = "ap_rift_event_0_astral_wonder"
+	ping = "ping_notification_green"
+
+	category = science
+}
+
+message_type = {
+	key = "MESSAGE_ASTRAL_ACTION_UNLOCKED"
+	icon = "GFX_message_astral_action_unlocked"
+	icon_frame = 1
+	auto_opens = others
+
+	name = "MESSAGE_ASTRAL_ACTION_UNLOCKED_TITLE"
+	sound = "notification"
+}
+
+message_type = {
+	key = "MESSAGE_DIMENSIONAL_FLEET_DESTROYED"
+	icon = "GFX_message_dimensional_fleet_destroyed"
+	icon_frame = 1
+
+	name = "MESSAGE_DIMENSIONAL_FLEET_DESTROYED_TITLE"
+	sound = "event_air_raid_siren"
+	ping = "ping_notification_green"
+}
+
+message_type = {
 	key = "MESSAGE_FAVOR_GAINED_TRADITION"
 	icon = "GFX_message_diplomatic_invite"
 	icon_frame = 1
 
 	name = "MESSAGE_FAVOR_GAINED_TRADITION_TITLE"
+	sound = "diplomatic_notification"
+	ping = "ping_notification_green"
+	auto_opens = none
+
+	category = government
+}
+
+message_type = {
+	key = "MESSAGE_SUPPORTING_VOTER"
+	icon = "GFX_message_diplomatic_invite"
+	icon_frame = 1
+
+	name = "MESSAGE_SUPPORTING_VOTER"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_green"
 	auto_opens = none
@@ -3123,6 +3226,28 @@ message_type = {
 }
 
 message_type = {
+	key = "MESSAGE_BYPASS_LOCK_EXPIRED"
+	icon = "GFX_message_bypass_lock_expired"
+	icon_frame = 1
+	auto_opens = Always
+
+	name = "MESSAGE_BYPASS_LOCK_EXPIRED_TITLE"
+	sound = "notification"
+	ping = "ping_notification_red"
+}
+
+message_type = {
+	key = "MESSAGE_RESTORING_THE_BALANCE_SACRIFICE"
+	icon = "GFX_message_restoring_the_balance_sacrifice"
+	icon_frame = 1
+	auto_opens = none
+
+	name = "MESSAGE_RESTORING_THE_BALANCE_SACRIFICE_TITLE"
+	sound = "notification"
+	ping = "ping_notification_yellow"
+}
+
+message_type = {
 	key = "MESSAGE_FRUITFUL_SEED_PLANTED"
 	icon = "GFX_message_seed_critter"
 	icon_frame = 1
@@ -3162,7 +3287,7 @@ message_type = {
 	key = "MESSAGE_FRUITFUL_WEED_ARMY"
 	icon = "GFX_message_seed_planted"
 	icon_frame = 1
-	
+
 	name = "MESSAGE_FRUITFUL_WEED_ARMY_TITLE"
 	sound = "notification"
 	ping = "mixed_notification_green"
@@ -3172,7 +3297,7 @@ message_type = {
 	key = "MESSAGE_FRUITFUL_SEED_BOMBING"
 	icon = "GFX_message_other_alert"
 	icon_frame = 1
-	
+
 	name = "MESSAGE_FRUITFUL_SEED_BOMBING_TITLE"
 	sound = "notification"
 	ping = "mixed_notification_red"

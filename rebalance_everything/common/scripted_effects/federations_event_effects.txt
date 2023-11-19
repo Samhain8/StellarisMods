@@ -294,7 +294,7 @@ scion_fe_intervention = {
 
 create_fe_intervention_leader = {
 	create_leader = {
-		class = admiral
+		class = commander
 		species = event_target:fe_species
 		name = random
 		skill = 7
@@ -1218,7 +1218,7 @@ create_hegemon_member = {
 
 create_starting_leaders = {
 	create_leader = {
-		class = governor
+		class = official
 		species = owner_main_species
 	}
 	capital_scope = {
@@ -1593,6 +1593,17 @@ shattered_ring_blocker_effect = {
 	add_deposit = d_malfunctioning_reactor
 }
 
+add_deposit_if_missing = {
+	if = {
+		limit = {
+			NOT = {
+				has_deposit = $DEPOSIT$
+			}
+		}
+		add_deposit = $DEPOSIT$
+	}
+}
+
 spawn_habitat_effect = {
 	spawn_planet = {
 		class = "pc_habitat"
@@ -1623,7 +1634,18 @@ spawn_habitat_effect = {
 			set_planet_flag = habitat
 			set_planet_flag = habitat_level_1
 			save_event_target_as = target_habitat
-			add_deposit = d_system_resources
+			add_deposit_if_missing = {
+				DEPOSIT = d_system_resources
+			}
+			add_deposit_if_missing = {
+				DEPOSIT = d_orbital_research
+			}
+			add_deposit_if_missing = {
+				DEPOSIT = d_orbital_energy
+			}
+			add_deposit_if_missing = {
+				DEPOSIT = d_orbital_mining
+			}
 			event_target:target_planet = {
 				set_planet_flag = habitat@PREV
 			}
@@ -2190,7 +2212,7 @@ set_habitat_planetary_features_effect = {
 
 	if = {
 		limit = {
-			event_target:target_planet = { has_deposit = d_artifacts_1 }
+			event_target:target_planet = { has_deposit = d_artifacts_research_1 }
 		}
 		event_target:target_habitat = {
 			add_deposit = d_artifacts_planet_1
@@ -2202,7 +2224,7 @@ set_habitat_planetary_features_effect = {
 
 	if = {
 		limit = {
-			event_target:target_planet = { has_deposit = d_artifacts_2 }
+			event_target:target_planet = { has_deposit = d_artifacts_research_2 }
 		}
 		event_target:target_habitat = {
 			add_deposit = d_artifacts_planet_2
@@ -2214,10 +2236,46 @@ set_habitat_planetary_features_effect = {
 
 	if = {
 		limit = {
-			event_target:target_planet = { has_deposit = d_artifacts_3 }
+			event_target:target_planet = { has_deposit = d_artifacts_research_3 }
 		}
 		event_target:target_habitat = {
 			add_deposit = d_artifacts_planet_3
+			last_added_deposit = {
+				set_deposit_flag = planet@event_target:target_planet
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			event_target:target_planet = { has_deposit = d_astral_threads_deposit_1 }
+		}
+		event_target:target_habitat = {
+			add_deposit = d_hab_astral_threads_1
+			last_added_deposit = {
+				set_deposit_flag = planet@event_target:target_planet
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			event_target:target_planet = { has_deposit = d_astral_threads_deposit_2 }
+		}
+		event_target:target_habitat = {
+			add_deposit = d_hab_astral_threads_2
+			last_added_deposit = {
+				set_deposit_flag = planet@event_target:target_planet
+			}
+		}
+	}
+
+	if = {
+		limit = {
+			event_target:target_planet = { has_deposit = d_astral_threads_deposit_3 }
+		}
+		event_target:target_habitat = {
+			add_deposit = d_hab_astral_threads_3
 			last_added_deposit = {
 				set_deposit_flag = planet@event_target:target_planet
 			}

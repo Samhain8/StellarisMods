@@ -3,7 +3,7 @@ tr_discovery_adopt = {
 	unlocks_agenda = agenda_chart_the_unknown
 	custom_tooltip = tr_discovery_adopt_desc
 	modifier = {
-		ship_anomaly_research_speed_mult = 0.20
+		science_ship_survey_speed = 0.35
 	}
 }
 
@@ -33,7 +33,7 @@ tr_discovery_finish = {
 
 tr_discovery_to_boldly_go = {
 	modifier = {
-		science_ship_survey_speed = 0.35
+		ship_anomaly_research_speed_mult = 0.20
 		shipclass_science_ship_disengage_mult = 0.5
 	}
 
@@ -90,7 +90,7 @@ tr_discovery_databank_uplinks = {
 tr_discovery_science_division = {
 	modifier = {
 		num_tech_alternatives_add = 1
-		scientist_exp_gain = 0.1
+		country_scientist_cap_add = 1
 	}
 
 	tradition_swap = {
@@ -131,7 +131,7 @@ tr_discovery_polytechnic_education = {
 
 	modifier = {
 		country_leader_pool_size = 1
-		species_leader_exp_gain = 0.10
+		scientist_exp_gain = 0.1
 	}
 
 	tradition_swap = {

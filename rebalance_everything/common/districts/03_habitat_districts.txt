@@ -182,6 +182,10 @@ district_hab_housing = {
 		}
 		text = job_evaluator_effect_desc
 	}
+	
+	#inline_script = {
+	#	script = districts/habitat_housing_job_swaps
+	#}
 }
 
 district_hab_cultural = {

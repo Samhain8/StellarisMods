@@ -47,8 +47,8 @@ tr_domination_finish = {
 
 tr_domination_colonial_viceroys = {
 	modifier = {
-		governor_exp_gain = 0.1
-		country_traditions_influence_produces_add = 0.25
+		official_exp_gain = 0.1
+		country_official_cap_add = 1
 	}
 
 	tradition_swap = {
@@ -85,11 +85,17 @@ tr_domination_colonial_viceroys = {
 tr_domination_imperious_architecture = {
 
 	# additional housing implemented in building files
-	custom_tooltip = tr_domination_imperious_architecture_desc
+	custom_tooltip_with_modifiers = tr_domination_imperious_architecture_desc
+	modifier = {
+		country_traditions_influence_produces_add = 0.25
+	}
 
 	tradition_swap = {
 		name = tr_domination_synaptic_extensions
-		custom_tooltip = tr_domination_synaptic_extensions_desc
+		custom_tooltip_with_modifiers = tr_domination_synaptic_extensions_desc
+		modifier = {
+			country_traditions_influence_produces_add = 0.25
+		}
 		inherit_icon = yes
 		trigger = {
 			is_hive_empire = yes
@@ -125,7 +131,7 @@ tr_domination_grand_council = {
 	}
 
 	modifier = {
-		councilor_exp_gain = 0.15
+		councilor_exp_gain = 0.1
 		country_edict_fund_add = 30
 	}
 

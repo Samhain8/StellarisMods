@@ -13,8 +13,9 @@ tr_synthetics_adopt = {
 
 	unlocks_agenda = agenda_synthetic_yield
 	modifier = {
-		leaders_upkeep_mult = -0.35
 		ROBOT_species_trait_points_add = 1
+		planet_pops_robotics_upkeep_mult = -0.25
+		planet_pop_assemblers_upkeep_mult = -0.25
 	}
 
 	tradition_swap = {
