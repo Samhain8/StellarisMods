@@ -2994,7 +2994,7 @@ building_hab_system_capital = {
 		planet_housing_add = 8
 		planet_amenities_add = 8
 		planet_max_buildings_add = @buildings_t3
-		planet_max_branch_office_buildings_add = 3
+		planet_max_branch_office_buildings_add = 4
 		defense_armies_add = @tier_3_capital_defense_armies
 		pop_environment_tolerance = 0.20
 	}
@@ -3020,8 +3020,32 @@ building_hab_system_capital = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 4
 		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				OR = { 
+					has_active_tradition = tr_domination_finish 
+					has_active_tradition = tr_domination_federations_finish
+				}
+			}
+		}
+		modifier = {
+			job_page_add = 1
+			job_page_per_pop = 0.15
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		job_enforcer_add = 4
 	}
 
 	triggered_planet_modifier = {
@@ -3096,7 +3120,7 @@ building_hab_system_capital = {
 			}
 		}
 		modifier = {
-			job_politician_add = 3
+			job_politician_add = 4
 		}
 	}
 
@@ -3110,7 +3134,7 @@ building_hab_system_capital = {
 		}
 		modifier = {
 			job_knight_commander_add = 1
-			job_knight_add = 2
+			job_knight_add = 3
 		}
 	}
 
@@ -3124,7 +3148,21 @@ building_hab_system_capital = {
 			}
 		}
 		modifier = {
-			job_executive_add = 3
+			job_executive_add = 4
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			NOT = { has_planet_flag = toxic_knights_habitat }
+			exists = owner
+			owner = { 
+				has_civic = civic_merchant_nobles
+			}
+		}
+		modifier = {
+			job_noble_add = 2
+			job_merchant_add = 2
 		}
 	}
 
@@ -3138,7 +3176,7 @@ building_hab_system_capital = {
 			}
 		}
 		modifier = {
-			job_steward_add = 4
+			job_steward_add = 5
 		}
 	}
 
@@ -3153,7 +3191,7 @@ building_hab_system_capital = {
 		}
 		modifier = {
 			job_politician_add = 2
-			job_high_priest_add = 1
+			job_high_priest_add = 2
 		}
 	}
 
@@ -3168,7 +3206,7 @@ building_hab_system_capital = {
 		}
 		modifier = {
 			job_politician_add = 2
-			job_noble_add = 1
+			job_noble_add = 2
 		}
 	}
 
@@ -3182,7 +3220,7 @@ building_hab_system_capital = {
 			}
 		}
 		modifier = {
-			job_head_researcher_add = 1
+			job_head_researcher_add = 2
 			job_politician_add = 2
 		}
 	}
@@ -3198,16 +3236,8 @@ building_hab_system_capital = {
 		}
 		modifier = {
 			job_politician_add = 2
-			job_merchant_add = 1
+			job_merchant_add = 2
 		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		job_enforcer_add = 2
 	}
 
 	triggered_planet_modifier = {
@@ -3259,7 +3289,10 @@ building_hab_system_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_civic = civic_aristocratic_elite
+				OR = {
+					has_civic = civic_aristocratic_elite
+					has_civic = civic_merchant_nobles
+				}
 			}
 			OR = {
 				NOT = { has_planet_flag = toxic_knights_habitat }
@@ -3272,7 +3305,10 @@ building_hab_system_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_civic = civic_merchant_guilds
+				OR = {
+					has_civic = civic_merchant_guilds
+					has_civic = civic_merchant_nobles
+				}
 			}
 			OR = {
 				NOT = { has_planet_flag = toxic_knights_habitat }
