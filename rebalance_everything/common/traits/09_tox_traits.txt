@@ -518,7 +518,7 @@ trait_elevated_synapses = {
 	}
 	modifier = {
 		leader_lifespan_add = -30
-		species_leader_exp_gain = 0.25
+		species_leader_exp_gain = 0.30
 	}
 	assembly_score = {
 		modifier = {
@@ -981,7 +981,7 @@ trait_fast_metabolism = {
 	advanced_trait = yes
 
 	modifier = {
-		species_leader_exp_gain = 0.25
+		species_leader_exp_gain = 0.20
 		planet_jobs_produces_mult = 0.05
 		planet_pops_upkeep_mult = 0.25
 		leader_lifespan_add = -15

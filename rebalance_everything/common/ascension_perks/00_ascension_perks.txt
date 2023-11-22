@@ -976,7 +976,7 @@ ap_executive_vigor = {
 ap_transcendent_learning = {
 	modifier = {
 		leader_trait_selection_options_add = 1
-		species_leader_exp_gain = 0.33
+		species_leader_exp_gain = 0.3
 		country_scientist_cap_add = 2
 	}
 
