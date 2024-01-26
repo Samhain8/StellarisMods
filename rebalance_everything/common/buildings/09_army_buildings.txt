@@ -24,7 +24,7 @@ building_military_academy = {
 			owner = { is_gestalt = no }
 		}
 		modifier = {
-			job_politician_add = 1
+			job_soldier_add = 5
 		}
 	}
 	triggered_planet_modifier = {
@@ -33,7 +33,7 @@ building_military_academy = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_evaluator_add = 2
+			job_warrior_drone_add = 5
 		}
 	}
 

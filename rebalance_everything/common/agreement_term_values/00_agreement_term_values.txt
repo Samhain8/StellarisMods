@@ -1640,7 +1640,7 @@ naval_cap_unmodified = {
 naval_cap_satrapy = {
 	term = naval_capacity
 	target_modifier = {
-		country_naval_cap_mult = -0.3
+		country_naval_cap_mult = -0.25
 	}
 	possible = {
 		agreement_preset = preset_satrapy
@@ -1651,7 +1651,7 @@ naval_cap_satrapy = {
 naval_cap_relic_satrapy = {
 	term = naval_capacity
 	target_modifier = {
-		country_naval_capacity_contribution_to_overlord_mult = 0.3
+		country_naval_capacity_contribution_to_overlord_mult = 0.25
 	}
 	possible = {
 		agreement_preset = preset_relic_satrapy
