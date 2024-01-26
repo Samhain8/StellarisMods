@@ -193,7 +193,10 @@ leader_trait_aggressive = {
 		ship_fire_rate_mult = 0.05
 	}
 	leader_class = { commander }
-	opposites = { leader_trait_cautious }
+	opposites = {
+		leader_trait_cautious
+		leader_trait_cautious_2
+	}
 	selectable_weight = {
 		weight = @class_trait_weight
 		inline_script = paragon/pilot_weight_mult
@@ -215,7 +218,10 @@ leader_trait_aggressive_2 = {
 		ship_weapon_damage = 0.05
 	}
 	leader_class = { commander }
-	opposites = { leader_trait_cautious }
+	opposites = {
+		leader_trait_cautious
+		leader_trait_cautious_2
+	}
 }
 
 ###################
@@ -232,7 +238,10 @@ leader_trait_cautious = {
 		ship_weapon_range_mult = 0.15
 	}
 	leader_class = { commander }
-	opposites = { leader_trait_aggressive }
+	opposites = {
+		leader_trait_aggressive
+		leader_trait_aggressive_2
+	}
 	selectable_weight = {
 		weight = @class_trait_weight
 		inline_script = paragon/pilot_weight_mult
@@ -254,7 +263,10 @@ leader_trait_cautious_2 = {
 		ship_disengage_chance_mult = 0.05
 	}
 	leader_class = { commander }
-	opposites = { leader_trait_aggressive }
+	opposites = {
+		leader_trait_aggressive
+		leader_trait_aggressive_2
+	}
 }
 
 ###################
@@ -427,7 +439,11 @@ leader_trait_wrecker = {
 		create_debris_chance = -0.25
 	}
 	leader_class = { commander }
-	opposites = { leader_trait_juryrigger }
+	opposites = {
+		leader_trait_juryrigger
+		leader_trait_juryrigger_2
+		leader_trait_juryrigger_3
+	}
 	selectable_weight = {
 		weight = @subclass_trait_weight
 		inline_script = paragon/pilot_weight_mult
@@ -454,7 +470,11 @@ leader_trait_wrecker_2 = {
 		create_debris_chance = -0.35
 	}
 	leader_class = { commander }
-	opposites = { leader_trait_juryrigger }
+	opposites = {
+		leader_trait_juryrigger
+		leader_trait_juryrigger_2
+		leader_trait_juryrigger_3
+	}
 }
 
 leader_trait_wrecker_3 = {
@@ -473,7 +493,11 @@ leader_trait_wrecker_3 = {
 		create_debris_chance = -0.5
 	}
 	leader_class = { commander }
-	opposites = { leader_trait_juryrigger }
+	opposites = {
+		leader_trait_juryrigger
+		leader_trait_juryrigger_2
+		leader_trait_juryrigger_3
+	}
 }
 
 ###################
@@ -815,7 +839,7 @@ leader_trait_shipbreaker = {
 	leader_class = { commander }
 	custom_tooltip = leader_trait_shipbreaker_effect
 	selectable_weight = {
-		inline_script = paragon/subclass_free_trait_weight
+		weight = @subclass_trait_weight
 		inline_script = paragon/pilot_weight_mult
 	}
 }
@@ -1285,7 +1309,11 @@ leader_trait_juryrigger = {
 	}
 	leader_class = { commander }
 	custom_tooltip_with_modifiers = leader_trait_juryrigger_effect
-	opposites = { leader_trait_wrecker }
+	opposites = {
+		leader_trait_wrecker
+		leader_trait_wrecker_2
+		leader_trait_wrecker_3
+	}
 	selectable_weight = {
 		weight = @subclass_trait_weight
 		inline_script = paragon/pilot_weight_mult
@@ -1313,7 +1341,11 @@ leader_trait_juryrigger_2 = {
 	}
 	leader_class = { commander }
 	custom_tooltip_with_modifiers = leader_trait_juryrigger_2_effect
-	opposites = { leader_trait_wrecker }
+	opposites = {
+		leader_trait_wrecker
+		leader_trait_wrecker_2
+		leader_trait_wrecker_3
+	}
 }
 
 leader_trait_juryrigger_3 = {
@@ -1334,7 +1366,11 @@ leader_trait_juryrigger_3 = {
 	}
 	leader_class = { commander }
 	custom_tooltip_with_modifiers = leader_trait_juryrigger_2_effect
-	opposites = { leader_trait_wrecker }
+	opposites = {
+		leader_trait_wrecker
+		leader_trait_wrecker_2
+		leader_trait_wrecker_3
+	}
 }
 
 ###################
@@ -1410,7 +1446,7 @@ leader_trait_scout = {
 		script = trait/icon
 		CLASS = leader
 		ICON = GFX_leader_trait_scout
-		RARITY = veteran
+		RARITY = free_or_veteran
 		COUNCIL = no
 		TIER = 1
 	}
@@ -1421,7 +1457,7 @@ leader_trait_scout = {
 			has_trait = subclass_scientist_explorer
 		}
 	}
-	fleet_modifier = {
+	modifier = {
 		ship_speed_mult = 0.05
 		ship_hyperlane_range_add = 2
 		fleet_mia_time_mult = -0.1
@@ -1446,7 +1482,7 @@ leader_trait_scout_2 = {
 		script = trait/icon
 		CLASS = leader
 		ICON = GFX_leader_trait_scout
-		RARITY = veteran
+		RARITY = free_or_veteran
 		COUNCIL = no
 		TIER = 2
 	}
@@ -2212,6 +2248,7 @@ leader_trait_nervous = {
 	}
 	fleet_modifier = {
 		ship_fire_rate_mult = -0.05
+		ship_disengage_chance_mult = 0.05
 	}
 	leader_potential_add = {
 		is_gestalt = no
@@ -2238,6 +2275,7 @@ leader_trait_nervous_2 = {
 	}
 	fleet_modifier = {
 		ship_fire_rate_mult = -0.15
+		ship_disengage_chance_mult = 0.15
 	}
 	leader_class = { commander }
 	opposites = {
@@ -2259,6 +2297,7 @@ leader_trait_lethargic = {
 	fleet_modifier = {
 		ship_evasion_mult = -0.05
 		ship_speed_mult = -0.05
+		ships_upkeep_mult  = -0.025
 	}
 	leader_potential_add = {
 		is_gestalt = no
@@ -2287,6 +2326,7 @@ leader_trait_lethargic_2 = {
 	fleet_modifier = {
 		ship_evasion_mult = -0.15
 		ship_speed_mult = -0.15
+		ships_upkeep_mult  = -0.05
 	}
 	leader_class = { commander }
 	opposites = {
@@ -2307,7 +2347,7 @@ leader_trait_micromanager = {
 		TIER = 1
 	}
 	fleet_modifier = {
-		command_limit_mult  = -0.1
+		ships_upkeep_mult  = 0.1
 	}
 	leader_class = { commander }
 	selectable_weight = {
@@ -2326,7 +2366,7 @@ leader_trait_micromanager_2 = {
 		TIER = 2
 	}
 	fleet_modifier = {
-		command_limit_mult  = -0.3
+		ships_upkeep_mult  = 0.3
 	}
 	leader_class = { commander }
 	selectable_weight = @tier2_negative_trait_weight

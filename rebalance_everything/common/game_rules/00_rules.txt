@@ -1265,6 +1265,14 @@ can_leader_get_council_trait = {
 		}
 		has_leader_flag = restored_node
 	}
+	if = {
+		limit = {
+			exists = owner
+		}
+		owner = {
+			is_crisis_faction = no
+		}
+	}
 }
 
 # this = leader
@@ -1278,7 +1286,13 @@ can_leader_get_normal_trait = {
 				has_leader_flag = restored_node
 			}
 		}
-		is_ruler = yes
+		AND = {
+			is_ruler = yes
+			exists = owner
+			owner = {
+				is_autocracy = yes
+			}
+		}
 		is_heir = yes
 	}
 }
@@ -1301,6 +1315,10 @@ can_leader_get_destiny_trait = {
 	NAND = {
 		exists = owner
 		owner = { is_gestalt = yes }
+	}
+	exists = owner
+	owner = {
+		is_crisis_faction = no
 	}
 }
 
@@ -2571,6 +2589,8 @@ can_trade_leader = {
 			}
 		}
 	}
+	# Can't trade gestalt nodes
+	is_gestalt_node = no
 	# The overlord can't be a fallen or awakened empire.
 	ROOT = {
 		NAND = {
@@ -3009,7 +3029,15 @@ can_interact_with_astral_rift = {
 can_explore_astral_rift = {
 	has_technology = tech_rift_sphere
 	hidden_trigger = {
-		is_astral_rift_pool_empty = no
+		OR = {
+			is_astral_rift_pool_empty = no
+			AND = {
+				exists = from.explorer
+				from.explorer = {
+					is_same_value = prevprev
+				}
+			}
+		}
 	}
 }
 

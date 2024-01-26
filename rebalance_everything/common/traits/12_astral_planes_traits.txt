@@ -89,6 +89,8 @@ leader_trait_planar_theorist = {
 	}
 	leader_potential_add = {
 		has_astral_planes_dlc = yes
+		is_heir = no
+		is_ruler = no
 	}
 	leader_class = { scientist }
 	prerequisites = { tech_rift_sphere }
@@ -115,6 +117,10 @@ leader_trait_planar_theorist = {
 		modifier = {
 			from = { has_origin = origin_riftworld }
 			factor = @synergy_weight_mult
+		}
+		modifier = {
+			is_heir = yes
+			factor = 0
 		}
 	}
 	ai_weight = 100
@@ -232,11 +238,12 @@ leader_trait_academic_astral_rift_expert_3 = {
 }
 
 leader_trait_foreign_consciousness = {
+	destiny_trait = yes
 	inline_script = {
 		script =  trait/icon
 		CLASS = scientist
 		ICON = "GFX_leader_trait_foreign_consciousness"
-		RARITY = common
+		RARITY = paragon
 		COUNCIL = no
 		TIER = none
 	}
@@ -247,6 +254,7 @@ leader_trait_foreign_consciousness = {
 	leader_class = { scientist }
 	initial = no
 	randomized = no
+	background_icon = "GFX_leader_background_destiny_1"
 }
 
 leader_trait_black_light_blinded = {
@@ -371,6 +379,9 @@ trait_plasmic = {
 	}
 	ai_weight = {
 		weight = 0
+	}
+	slave_cost = {
+		energy = 2500
 	}
 }
 

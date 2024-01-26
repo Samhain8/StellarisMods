@@ -218,6 +218,9 @@ formless_system_initializer = {
 			orbit_distance = -64
 			orbit_angle = -90
 			graphics_entity_name = strange_wormhole_entity
+			init_effect = {
+				save_global_event_target_as = strange_wormhole_bypass
+			}
 		}
 		save_global_event_target_as = formless_system
 		event_target:formless_country = {

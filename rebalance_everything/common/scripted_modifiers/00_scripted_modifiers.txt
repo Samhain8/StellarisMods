@@ -77,6 +77,12 @@ living_standard_trade_value_criminals_add = {
 	category = pop
 }
 
+job_soldier_or_warrior_add = {
+	icon = mod_job_soldier_add
+	good = yes
+	category = planet
+}
+
 job_soldier_stability_add = {
 	icon = mod_planet_stability_add
 	good = yes

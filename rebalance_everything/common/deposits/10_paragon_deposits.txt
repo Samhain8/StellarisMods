@@ -169,10 +169,8 @@ d_fallen_orbital_shipyard = { #Ship Graveyard
 
 	planet_modifier = {
 		planet_housing_add = 8
-	}
-
-	planet_modifier = {
 		district_generator_max = 3
+		district_mining_max = 3
 	}
 
 	triggered_planet_modifier = {
@@ -181,10 +179,6 @@ d_fallen_orbital_shipyard = { #Ship Graveyard
 		}
 		district_generator_max = 3
 		mult = value:district_amount_mastery_of_nature
-	}
-
-	planet_modifier = {
-		district_mining_max = 3
 	}
 
 	triggered_planet_modifier = {

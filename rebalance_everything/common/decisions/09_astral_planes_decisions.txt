@@ -121,6 +121,8 @@ decision_tidal_lock_planet = {
 		NOR = {
 			has_modifier = intentionally_tidally_locked
 			has_planet_flag = tidally_locked_world
+			is_artificial = yes
+			is_planet_class = pc_city
 		}
 	}
 
