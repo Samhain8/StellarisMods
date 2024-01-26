@@ -14,6 +14,7 @@ leader_trait_adventurous_spirit = {
 		species_leader_exp_gain = 0.1
 	}
 	leader_potential_add = {
+		trait_is_crisis_faction_check = no
 		has_paragon_dlc = yes
 		NOT = { has_trait_tier1or2 = { TRAIT = leader_trait_eager } }
 	}
@@ -87,12 +88,14 @@ leader_trait_eager = {
 		COUNCIL = no
 		TIER = 1
 	}
+
 	self_modifier = {
 		leaders_cost_mult = -0.5
 		leaders_upkeep_mult = -0.15
 		species_leader_exp_gain = 0.05
 	}
 	leader_potential_add = {
+		trait_is_crisis_faction_check = no
 		is_pool_leader = yes # Starting trait only.
 		NOT = { has_trait_tier1or2or3 = { TRAIT = leader_trait_adventurous_spirit } }
 	}
@@ -131,6 +134,7 @@ leader_trait_resilient = {
 		TIER = 1
 	}
 	leader_potential_add = {
+		trait_is_crisis_faction_check = no
 		is_immortal = no
 	}
 	self_modifier = {
@@ -220,7 +224,7 @@ leader_trait_politician = {
 		TIER = 1
 	}
 	councilor_modifier = {
-		council_agenda_progress_speed = 0.1
+		council_agenda_progress_speed = 0.05
 	}
 	leader_potential_add = {
 		OR = {
@@ -249,7 +253,7 @@ leader_trait_politician_2 = {
 		TIER = 2
 	}
 	councilor_modifier = {
-		council_agenda_progress_speed = 0.20
+		council_agenda_progress_speed = 0.10
 	}
 	leader_class = { commander scientist official }
 }
@@ -265,7 +269,10 @@ leader_trait_capitalist = {
 		TIER = 1
 	}
 	leader_potential_add = {
+		trait_is_crisis_faction_check = no
 		has_global_flag = game_started
+		has_skill > 1
+
 	}
 	triggered_background_planet_modifier = {
 		potential = {
@@ -313,7 +320,7 @@ leader_trait_capitalist = {
 		leader_trait_venerated_2
 	}
 	selectable_weight = {
-		weight = @shared_trait_weight
+		weight = @job_provider_trait_weight
 		inline_script = {
 			script = "paragon/existing_trait_weight_mult"
 			TRAIT = leader_trait_capitalist
@@ -377,7 +384,9 @@ leader_trait_private_mines = {
 		TIER = 1
 	}
 	leader_potential_add = {
+		trait_is_crisis_faction_check = no
 		has_global_flag = game_started
+		has_skill > 1
 	}
 	triggered_background_planet_modifier = {
 		potential = {
@@ -455,7 +464,7 @@ leader_trait_private_mines = {
 		leader_trait_venerated_2
 	}
 	selectable_weight = {
-		weight = @shared_trait_weight
+		weight = @job_provider_trait_weight
 		inline_script = {
 			script = "paragon/existing_trait_weight_mult"
 			TRAIT = leader_trait_private_mines
@@ -549,7 +558,9 @@ leader_trait_homesteader = {
 		TIER = 1
 	}
 	leader_potential_add = {
+		trait_is_crisis_faction_check = no
 		has_global_flag = game_started
+		has_skill > 1
 		owner = {
 			country_uses_food = yes
 		}
@@ -630,7 +641,7 @@ leader_trait_homesteader = {
 		leader_trait_venerated_2
 	}
 	selectable_weight = {
-		weight = @shared_trait_weight
+		weight = @job_provider_trait_weight
 		inline_script = {
 			script = "paragon/existing_trait_weight_mult"
 			TRAIT = leader_trait_homesteader
@@ -804,6 +815,7 @@ leader_trait_gifted = {
 		leader_trait_selection_options_add = 1
 	}
 	leader_potential_add = {
+		trait_is_crisis_faction_check = no
 		is_pool_leader = yes
 		has_paragon_dlc = yes
 	}
@@ -884,7 +896,9 @@ leader_trait_scrapper = {
 		TIER = 1
 	}
 	leader_potential_add = {
+		trait_is_crisis_faction_check = no
 		has_global_flag = game_started
+		has_skill > 1
 	}
 	triggered_background_planet_modifier = {
 		potential = {
@@ -976,7 +990,7 @@ leader_trait_scrapper = {
 		leader_trait_venerated_2
 	}
 	selectable_weight = {
-		weight = @shared_trait_weight
+		weight = @job_provider_trait_weight
 		inline_script = {
 			script = "paragon/existing_trait_weight_mult"
 			TRAIT = leader_trait_scrapper
@@ -1084,7 +1098,9 @@ leader_trait_entrepreneur = {
 		TIER = 1
 	}
 	leader_potential_add = {
+		trait_is_crisis_faction_check = no
 		has_global_flag = game_started
+		has_skill > 1
 		owner = {
 			country_uses_consumer_goods = yes
 		}
@@ -1150,7 +1166,7 @@ leader_trait_entrepreneur = {
 		leader_trait_venerated_2
 	}
 	selectable_weight = {
-		weight = @shared_trait_weight
+		weight = @job_provider_trait_weight
 		inline_script = {
 			script = "paragon/existing_trait_weight_mult"
 			TRAIT = leader_trait_entrepreneur
@@ -1229,7 +1245,9 @@ leader_trait_venerated = {
 		TIER = 1
 	}
 	leader_potential_add = {
+		trait_is_crisis_faction_check = no
 		has_global_flag = game_started
+		has_skill > 1
 	}
 	triggered_background_planet_modifier = {
 		potential = {
@@ -1277,7 +1295,7 @@ leader_trait_venerated = {
 		leader_trait_entrepreneur_2
 	}
 	selectable_weight = {
-		weight = @shared_trait_weight
+		weight = @job_provider_trait_weight
 		inline_script = {
 			script = "paragon/existing_trait_weight_mult"
 			TRAIT = leader_trait_venerated
@@ -1647,6 +1665,9 @@ leader_trait_lavish_lifestyle = {
 		COUNCIL = no
 		TIER = 1
 	}
+	leader_potential_add = {
+		trait_is_crisis_faction_check = no
+	}
 	inline_script = {
 		script = paragon/leader_resource_upkeep
 		RESOURCE = energy
@@ -1701,6 +1722,7 @@ leader_trait_excessive = {
 	}
 	leader_potential_add = {
 		is_gestalt = no
+		trait_is_crisis_faction_check = no
 	}
 	leader_class = { official scientist commander }
 	selectable_weight = {

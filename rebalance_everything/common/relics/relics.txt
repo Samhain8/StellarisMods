@@ -1418,6 +1418,14 @@ r_vacuum_flower = {
 						}
 					}
 				}
+				sc_rift_star = {
+					owner = {
+						add_modifier = {
+							modifier = "relic_vacuum_flower_rift_star"
+							days = @triumph_duration
+						}
+					}
+				}
 			}
 		}
 		custom_tooltip = relic_vacuum_flower_active

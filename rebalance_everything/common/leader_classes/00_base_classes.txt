@@ -4,9 +4,11 @@
 # 	description = <description_key>
 #
 #	#all the following default to no
-#	can_lead_army = yes/no
-#	can_lead_navy = yes/no
-#	can_govern_planet = yes/no
+#	can_lead_army = yes/no			# Applies skill_<class_id>_army scaled by level to armies
+#	can_lead_navy = yes/no			# Applies skill_<class_id>_navy scaled by level to fleets
+#	can_govern_planet = yes/no		# Applies skill_<class_id>_planet_governor scaled by level to governed planet
+									# Applies skill_<class_id>_sector_governor scaled by level to governed sector, if governing the sector capital
+									# Applies skill_<class_id>_background_planet_governor scaled by level togoverned planet, if governing their homeworld
 #	can_be_envoy = yes/no
 # 	can_research_tech = yes/no
 # 	can_research_special_projects = yes/no
@@ -18,7 +20,7 @@
 # 	can_explore_rifts = yes/no
 # 	can_conduct_active_reconnaissance = yes/no
 # 	can_govern_planet = yes/no
-# 	can_have_traits = yes/no	# defaults to yes
+# 	can_have_traits = yes/no	# defaults to yes, if no this class will not gain LEADER_ASSIGNED_MONTHLY_EXPERIENCE when assigned
 #	can_rule_empire = yes/no	# defaults to yes
 #	recruitable = yes/no		# defaults to yes
 # 	max_trait_points = <num>
@@ -38,7 +40,7 @@
 #		modifier = {}
 # 	}
 #
-#	ai_leader_weight = {	# used to evaluate a specific leader for an assignment to the class, 
+#	ai_leader_weight = {	# used to evaluate a specific leader for an assignment to the class,
 #							# scope is the leader, from is the leader location (can be a planet, a fleet, an army etc)
 #		base = <num>
 #		modifier = {}

@@ -51,10 +51,7 @@ councilor_dark_consortium = {
 councilor_sovereign_guardianship = {
 	leader_class = { commander  }
 	is_leader_possible = {
-		OR = {
-			leader_class = commander
-			leader_class = commander
-		}
+		leader_class = commander
 	}
 	civic = civic_sovereign_guardianship
 	modifier = {
@@ -127,10 +124,7 @@ councilor_dark_consortium_corporate = {
 councilor_sovereign_guardianship_corporate = {
 	leader_class = { commander  }
 	is_leader_possible = {
-		OR = {
-			leader_class = commander
-			leader_class = commander
-		}
+		leader_class = commander
 	}
 	civic = civic_corporate_sovereign_guardianship
 	modifier = {

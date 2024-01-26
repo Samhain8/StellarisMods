@@ -107,8 +107,16 @@ tr_aptitude_healthcare_program = {
 
 tr_aptitude_champions_of_the_empire = {
 	possible = { has_tradition = tr_aptitude_specialist_training }
-	modifier = {
-		leader_initial_skill = 1
+	custom_tooltip = tr_aptitude_adopt_desc
+	on_enabled = {
+		hidden_effect = {
+			every_owned_leader = {
+				add_trait_no_notify = "random_common"
+			}
+			every_pool_leader = {
+				add_trait_no_notify = "random_common"
+			}
+		}
 	}
 	ai_weight = { factor = 1000 }
 

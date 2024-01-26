@@ -187,7 +187,8 @@
  astral_situation.65.name: "$astral_rift_discovery_event_title$"
  astral_situation.65.desc: "$astral_rift_discovery_event_text$\n\nSignificant temporal distortions on §Y[rift_temporary_planet.GetName]§! are causing time to pass twice as quickly. We should monitor the situation closely, and make sure to double their supplies."
 
- rift_in_space_time_acceleration_modifier: "Time passes twice as quickly on this planet."
+ rift_in_space_time_acceleration_modifier: "Temporal Distortions"
+ rift_in_space_time_acceleration_modifier_desc: "Time passes twice as quickly on this world."
 
  astral_situation.20.name: "Friction Is the Problem"
  astral_situation.20.desc: "We have discovered that slipping through the folds in space and time requires a perfectly smooth vessel.\n\nWe are certain that we can develop such a device, what we are tentatively calling a "§Y$tech_rift_sphere$§!", should we devote enough research and time. We may then finally discover what is beyond this spatial anomaly."
@@ -274,6 +275,7 @@
  ASTRAL_RIFT_FINISHED: "Rift fully explored"
  ASTRAL_RIFT_EXPLORED_BY_OTHER: "This Rift is being explored by another empire.\nIt is too unstable for us to venture inside."
  ASTRAL_RIFT_LOCKED: "Rift Exploration in Progress"
+ ASTRAL_RIFT_POOL_IS_EMPTY: "This Astral Rift doesn't seem to lead anywhere."
 
  CANNOT_EXPLORE_OUTSIDE_EMPIRE_BORDERS: "$TRIGGER_FAIL$§RCannot explore Astral Rifts outside of your empire§!"
  CANNOT_EXPLORE_OUTSIDE_EMPIRE_BORDERS_CLOAKED: "$TRIGGER_FAIL$§ROur influence over this system is not sufficient enough to ensure the safety of this expedition.§!"
@@ -815,7 +817,7 @@
  astral_planes.3070.a: "We must leave."
  astral_planes.3070.a.tt: "The beings known as the Formless have been destroyed by attackers from another dimension. The portal into the $NAME_Formless_System$ system has sealed shut."
 
- astral_planes.3100.desc: "§HIn a constant state of flux, this entity's visible form is shifts between this reality and another. Their voice resonates as a harmonic multitude, as speaking on behalf of several beings at once.§!\n\n... it is done... the seal is set... never shall our children find this place again..."
+ astral_planes.3100.desc: "§HIn a constant state of flux, this entity's visible form shifts between this reality and another. Their voice resonates as a harmonic multitude, as speaking on behalf of several beings at once.§!\n\n... it is done... the seal is set... never shall our children find this place again..."
  astral_planes.3100.a: "What are you?"
  astral_planes.3100.a.desc: "you know us... we are beyond the rifts... and of the rifts... you have seen..."
  astral_planes.3100.b: "Why are you here?"

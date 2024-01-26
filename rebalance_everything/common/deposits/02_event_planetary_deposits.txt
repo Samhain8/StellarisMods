@@ -244,8 +244,6 @@ d_abandoned_primitive_homesteads = {
 
 	planet_modifier = {
 		planet_jobs_society_research_produces_mult = 0.10
-	}
-	planet_modifier = {
 		district_farming_max = 2
 	}
 
@@ -738,9 +736,6 @@ d_underground_vault_2 = {
 
 	planet_modifier = {
 		planet_jobs_engineering_research_produces_mult = 0.1
-	}
-
-	planet_modifier = {
 		district_mining_max = 2
 	}
 
@@ -1055,6 +1050,7 @@ d_underground_farm = {
 	icon = d_fungal_caves
 
 	planet_modifier = {
+		planet_max_districts_add = 3
 		district_farming_max = 3
 	}
 
@@ -1064,10 +1060,6 @@ d_underground_farm = {
 		}
 		district_farming_max = 3
 		mult = value:district_amount_mastery_of_nature
-	}
-
-	planet_modifier = {
-		planet_max_districts_add = 2
 	}
 
 	drop_weight = {
@@ -1082,10 +1074,7 @@ d_underground_mine = {
 	icon = d_crystalline_caverns
 
 	planet_modifier = {
-		planet_max_districts_add = 2
-	}
-
-	planet_modifier = {
+		planet_max_districts_add = 3
 		district_mining_max = 3
 	}
 
@@ -1109,10 +1098,7 @@ d_underground_generator = {
 	icon = d_underwater_vent
 
 	planet_modifier = {
-		planet_max_districts_add = 2
-	}
-
-	planet_modifier = {
+		planet_max_districts_add = 3
 		district_generator_max = 3
 	}
 
@@ -1299,9 +1285,6 @@ d_underground_contact_zone = {
 
 	planet_modifier = {
 		planet_max_districts_add = 2
-	}
-
-	planet_modifier = {
 		district_generator_max = 2
 	}
 
@@ -1453,9 +1436,6 @@ d_numas_breath = {
 
 	planet_modifier = {
 		planet_max_districts_add = 2
-	}
-
-	planet_modifier = {
 		district_generator_max = 3
 	}
 
@@ -1668,31 +1648,25 @@ d_turtle_corpse = {
 	icon = d_crystalline_caverns
 
 	planet_modifier = {
-		district_mining_max = 3
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			always = yes
-		}
-		district_mining_max = 3
-		mult = value:district_amount_mastery_of_nature
-	}
-
-	planet_modifier = {
-		district_farming_max = 3
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			always = yes
-		}
-		district_farming_max = 3
-		mult = value:district_amount_mastery_of_nature
-	}
-
-	planet_modifier = {
 		planet_jobs_society_research_produces_mult = 0.10
+		district_mining_max = 3
+		district_farming_max = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_mining_max = 3
+		mult = value:district_amount_mastery_of_nature
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		district_farming_max = 3
+		mult = value:district_amount_mastery_of_nature
 	}
 
 	drop_weight = {

@@ -1217,8 +1217,8 @@ skill_commander_planet_governor = {
 	planet_jobs_specialist_produces_mult = @negative_planet_job_mult
 	planet_jobs_worker_produces_mult = @planet_job_mult
 	planet_jobs_slave_produces_mult = @planet_job_mult
-	job_soldier_stability_add = 1
-	planet_crime_add = -2
+	job_soldier_or_warrior_add = 1
+	planet_crime_add = -1
 	species_empire_size_mult = @planet_empire_size
 }
 
@@ -1227,8 +1227,8 @@ skill_commander_sector_governor = {
 	planet_jobs_specialist_produces_mult = @negative_sector_job_mult
 	planet_jobs_worker_produces_mult = @sector_job_mult
 	planet_jobs_slave_produces_mult = @sector_job_mult
-	job_soldier_stability_add = 0.5
-	planet_crime_add = -1
+	job_soldier_or_warrior_add = 0.5
+	planet_crime_add = -0.5
 	species_empire_size_mult = @sector_empire_size
 }
 

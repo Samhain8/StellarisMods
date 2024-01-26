@@ -654,8 +654,8 @@
 		LEADER_SCIENTIST_ACTIVE_RECONNAISSANCE_LEADER_LEVEL_MULT	= 0.00		# Active Reconnaissance modifier-mult per skill level (this value times skill level equals modifier)
 		LEADER_SCIENTIST_ACTIVE_RECONNAISSANCE_COLONY_LEVEL_MULT	= 1.00		# Active Reconnaissance modifier-mult per capital building level (this value times capital building level equals modifier)
 
-		LEADER_GOVERNOR_MONTHLY_EXPERIENCE							= 5	# Monthy exp from governing sector.
-		LEADER_COUNCILOR_MONTHLY_EXPERIENCE							= 5 # Monthly exp from being on the council - FRED : Tested, is NOT applied to ruler
+		LEADER_ASSIGNED_MONTHLY_EXPERIENCE							= 5	# Monthy exp from not being idle (i.e. assigned to planet/sector/fleet/federation/galcom)
+		LEADER_COUNCILOR_MONTHLY_EXPERIENCE							= 5 # Monthly exp from being on the council - FRED : Tested (2023), is NOT applied to ruler
 
 		LEADER_LIFESPAN_DEATH_CHANCE_AGE	= 80			# Before this age the chance wont increase
 		LEADER_LIFESPAN_DEATH_CHANCE_INC = 0.002			# Increase with these % for each year above CHANCE_AGE

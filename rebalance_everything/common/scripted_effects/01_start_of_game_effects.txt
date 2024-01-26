@@ -3106,6 +3106,7 @@ void_dweller_home_planet_setup = {
 				random_system_planet = {
 					limit = {
 						is_star = no
+						is_colonizable = no
 						has_deposit = no
 						has_anomaly = no
 					}
