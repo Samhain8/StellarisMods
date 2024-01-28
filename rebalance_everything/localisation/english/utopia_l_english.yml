@@ -215,7 +215,7 @@
  trait_psionic_martial_prowess:0 "Martial Prowess"
  trait_psionic_martial_prowess_desc:0 "§LMembers of this species focus their psionic abilities on improving their physical prowess.§!\n"
  trait_psionic_love_orchestra:0 "Love Orchestra"
- trait_psionic_love_orchestra_desc:0 "§LMembers of this species find themselves in each other, resonating through their telepathic links. This makes it more difficult for exceptional leaders to emerge however.§!\n"
+ trait_psionic_love_orchestra_desc:0 "§LMembers of this species find themselves in each other, resonating through their telepathic links. However this makes it more difficult for leaders with unique visions to emerge.§!\n"
  trait_self_modified:0 "Self-Modified"
  trait_self_modified_desc:0 "§LMembers of this offshoot species have spontaneously altered their genetic makeup to give themselves an advantage.§!"
 

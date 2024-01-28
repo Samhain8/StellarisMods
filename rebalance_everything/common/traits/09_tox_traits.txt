@@ -966,7 +966,7 @@ trait_exotic_metabolism = {
 
 trait_fast_metabolism = {
 	host_has_dlc = "Toxoids Species Pack"
-	cost = 1
+	cost = 2
 	icon = "gfx/interface/icons/traits/trait_exotic_metabolism.dds"
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
@@ -981,13 +981,40 @@ trait_fast_metabolism = {
 	advanced_trait = yes
 
 	modifier = {
-		species_leader_exp_gain = 0.20
+		species_leader_exp_gain = 0.25
 		planet_jobs_produces_mult = 0.05
 		planet_pops_upkeep_mult = 0.25
-		leader_lifespan_add = -15
+		leader_lifespan_add = -20
 	}
 
 	slave_cost = {
-		energy = 500
+		energy = 750
+	}
+}
+
+trait_impish = {
+	cost = 2
+	icon = "gfx/interface/icons/traits/trait_fertile.dds"
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	potential_crossbreeding_chance = 1.0 #1.0 100% of being considered for new traits when forming half-species. doe snot guarantee the trait will be added if it costs points.
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	initial = yes
+	randomized = no
+	advanced_trait = yes
+
+	modifier = {
+		pop_housing_usage_mult = -0.25
+		pop_growth_speed = 0.1
+		species_empire_size_mult = 0.1
+		leader_lifespan_add = -20
+	}
+
+	slave_cost = {
+		energy = 750
 	}
 }

@@ -178,9 +178,8 @@ civic_naval_contractors = {
 		civics = { NOT = { value = civic_citizen_service } }
 	}
 	modifier = {
-		country_command_limit_add = 20
-		starbase_shipyard_build_cost_mult = -0.15
-		starbase_shipyard_build_speed_mult = 0.15
+		starbase_shipyard_build_cost_mult = -0.10
+		starbase_shipyard_build_speed_mult = 0.20
 	}
 	swap_type = {
 		trigger = {
@@ -188,7 +187,7 @@ civic_naval_contractors = {
 		}
 
 		modifier = {
-			country_enclave_capacity_add = 2
+			country_enclave_capacity_add = 1
 		}
 	}
 }
@@ -487,7 +486,7 @@ civic_private_military_companies = {
 		}
 
 		modifier = {
-			country_enclave_capacity_add = 2
+			country_enclave_capacity_add = 1
 		}
 	}
 }
@@ -1309,7 +1308,7 @@ civic_crusader_spirit_corporate = {
 	}
 	modifier = {
 		local_trade_protection_add = 30
-		ships_upkeep_mult = -0.15
+		ships_upkeep_mult = -0.20
 	}
 	swap_type = {
 		trigger = {

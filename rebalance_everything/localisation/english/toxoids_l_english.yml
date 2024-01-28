@@ -682,6 +682,12 @@
  exotic_metabolism_tooltip:2 "£exotic_gases£ Exotic Gas Upkeep: §R+0.125§!"
  trait_exotic_metabolism_desc:0 "§LA metabolism based on exotic - and expensive - gases has vastly enhanced this species' abilities.§!"
 
+ trait_fast_metabolism:0 "Fast Metabolism"
+ trait_fast_metabolism_desc:0 "§LA particularly fast metabolism makes this species produce, consume, and age more rapidly.§!"
+
+ trait_impish:0 "Impish"
+ trait_impish_desc:0 "§LA diminutive species prone to impulsively following their instincts.§!"
+
  ap_detox:0 "Detox"
  ap_detox_desc:1 "Our newest advancements in terraforming allow us to breathe new life into a class of planets formerly considered irrevocably deadly and beyond salvation."
  detox_tox_worlds:2 "Enables terraforming of §YToxic World Terraforming Candidates§! into habitable worlds.\nWe have §Y[This.num_toxic_terraform_candidates]§! of these within our border."
