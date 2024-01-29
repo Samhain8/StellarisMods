@@ -2525,6 +2525,8 @@ on_planet_conquer = {
 		action.84
 		action.89
 		crisis.5010 # Crisis Menace Objective: Conquer a Colony
+
+		onactiondiplo.32 # For espionage mod
 	}
 }
 

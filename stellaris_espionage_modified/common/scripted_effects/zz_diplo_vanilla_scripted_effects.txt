@@ -1,0 +1,649 @@
+#	Example:
+#
+#	example_effect = {
+#		add_resource = { energy = -100 }
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		example_effect = yes
+#	}
+#
+
+@AssetCategoryDownWeight = 0.4 #Factor for however *less* likely you are to receive an Asset which is in the same category as the current Operation
+@AssetTypeWeight = 10 #Factor for however more or less likely you are to receive an Asset in the same category as one which is assigned to Acquire Asset
+
+### OPERATIONS ###
+
+# Each of the following events is weighted down if the empire has already rolled that particular event recently. Timed flags are set in the event itself, using @RandomOperationEventTimer. The modifier factor used below is explicitly not '0' for repeatable events - to prevent the pool from running out of 'fresh' events entirely.
+
+# Regular empire acting upon a regular empire
+# country (operation owner) scope | root = operation; from = target
+operation_random_events_regular_regular = {
+	random_list = {
+		2 = { #Contact Lost
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_contact_lost
+			}
+			country_event = { id = operation.5000 }
+		}
+		1 = { #Apprehended by Enforcers
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_apprehended_by_drones
+			}
+			modifier = {
+				factor = 0.5
+				has_espionage_type = operation_acquire_asset
+			}
+			country_event = { id = diplospy.8 }
+		}
+		1 = { #Spooked
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_operative_spooked
+			}
+			country_event = { id = operation.5005 }
+		}
+		1 = { #Snuffed Out
+			modifier = {
+				factor = 0
+				root.target = {
+					NOR = {
+						has_valid_civic = civic_fanatic_purifiers
+						has_origin = origin_necrophage
+					}
+				}
+			}
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_snuffed_out
+			}
+			country_event = { id = operation.5035 }
+		}
+		1 = { #Drain on Resources
+			modifier = {
+				factor = 0.3
+				has_country_flag = recent_op_drain_resources
+				OR = { #Criminal Assets skew the usual time-out
+					root = { has_espionage_asset_criminal = yes }
+					root.spynetwork = { has_espionage_asset_criminal = yes }
+				}
+			}
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_drain_resources
+				NOR = {
+					root = { has_espionage_asset_criminal = yes }
+					root.spynetwork = { has_espionage_asset_criminal = yes }
+				}
+			}
+			country_event = { id = operation.5040 }
+		}
+		1 = { #Operative Defects
+			modifier = {
+				factor = 0
+				root.target = { is_homicidal = yes }
+			}
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_operative_defects
+			}
+			country_event = { id = operation.5045 }
+		}
+		1 = { #Confidence Wavers
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_confidence_wavers
+			}
+			country_event = { id = operation.5055 }
+		}
+		1 = { #Local Assets Captured
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_lost_local_asset
+			}
+			modifier = {
+				factor = 0.5
+				relative_encryption_decryption = { target = root.target value > 1.2 }
+			}
+			modifier = {
+				factor = 0
+				root = {
+					NOR = {
+						has_espionage_type = operation_steal_pops
+						has_espionage_type = operation_rescue_pops
+						has_espionage_type = operation_arm_privateers
+					}
+				}
+			}
+			country_event = { id = diplospy.10 }
+		}
+		1 = { #Military Investigates
+			modifier = {
+				factor = 0
+				root = { NOT = { has_espionage_category = op_cat_military } }
+			}
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_military_investigates
+			}
+			country_event = { id = diplospy.11 }
+		}
+		2 = { #Incompatible Technology
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_enigmatic
+			}
+			modifier = {
+				factor = 0.5
+				root = { NOT = { has_espionage_category = op_cat_technology } }
+			}
+			modifier = {
+				factor = 0
+				root.target = { NOT = { has_ascension_perk = ap_enigmatic_engineering } }
+			}
+			country_event = { id = diplospy.14 }
+		}
+	}
+}
+
+# Regular empire acting upon a gestalt empire
+# country (operation owner) scope | root = operation; from = target
+operation_random_events_regular_gestalt = {
+	random_list = {
+		2 = { #Contact Lost
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_contact_lost
+			}
+			country_event = { id = operation.5000 }
+		}
+		1 = { #Apprehended by Hunter-Seeker Drones
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_apprehended_by_drones
+			}
+			country_event = { id = operation.5010 }
+		}
+		1 = { #Spooked
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_operative_spooked
+			}
+			country_event = { id = diplospy.9 }
+		}
+		1 = { #Snuffed Out
+			modifier = {
+				factor = 0
+				root.target = {
+					OR = {
+						has_valid_civic = civic_hive_empath
+						has_valid_civic = civic_machine_servitor
+					}
+				}
+			}
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_snuffed_out
+			}
+			country_event = { id = operation.5035 }
+		}
+		1 = { #Operative Defects
+			modifier = {
+				factor = 0
+				root.target = { is_homicidal = yes }
+			}
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_operative_defects
+			}
+			country_event = { id = operation.5045 }
+		}
+		1 = { #Confidence Wavers
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_confidence_wavers
+			}
+			country_event = { id = operation.5055 }
+		}
+		1 = { #Local Assets Captured
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_lost_local_asset
+			}
+			modifier = {
+				factor = 0.5
+				relative_encryption_decryption = { target = root.target value > 1.2 }
+			}
+			modifier = {
+				factor = 0
+				root = {
+					NOR = {
+						has_espionage_type = operation_steal_pops
+						has_espionage_type = operation_rescue_pops
+						has_espionage_type = operation_arm_privateers
+					}
+				}
+			}
+			country_event = { id = diplospy.10 }
+		}
+		1 = { #Mistaken for Food (regular vs. hive)
+			modifier = {
+				factor = 0
+				root.target = { is_machine_empire = yes }
+			}
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_drones_hunted
+			}
+			country_event = { id = diplospy.7 }
+		}
+		1 = { #Military Investigates
+			modifier = {
+				factor = 0
+				root = { NOT = { has_espionage_category = op_cat_military } }
+			}
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_military_investigates
+			}
+			country_event = { id = diplospy.11 }
+		}
+		2 = { #Incompatible Technology
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_enigmatic
+			}
+			modifier = {
+				factor = 0.5
+				root = { NOT = { has_espionage_category = op_cat_technology } }
+			}
+			modifier = {
+				factor = 0
+				root.target = { NOT = { has_ascension_perk = ap_enigmatic_engineering } }
+			}
+			country_event = { id = diplospy.14 }
+		}
+	}
+}
+
+# Gestalt empire acting upon a regular empire
+# country (operation owner) scope | root = operation; from = target
+operation_random_events_gestalt_regular = {
+	random_list = {
+		1 = { #Apprehended by Enforcers
+			modifier = {
+				factor = 0
+				is_machine_empire = yes
+			}
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_apprehended_by_drones
+			}
+			modifier = {
+				factor = 0.5
+				has_espionage_type = operation_acquire_asset
+			}
+			country_event = { id = diplospy.8 }
+		}
+		1 = { #Spooked
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_operative_spooked
+			}
+			country_event = { id = diplospy.9 }
+		}
+		1 = { #Multi-Phasic Force Fields
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_multiphasic_interference
+			}
+			country_event = { id = operation.5015 }
+		}
+		1 = { #Operative Defects
+			modifier = {
+				factor = 0
+				root.target = { is_homicidal = yes }
+			}
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_operative_defects
+			}
+			country_event = { id = operation.5045 }
+		}
+		1 = { #Confidence Wavers
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_confidence_wavers
+			}
+			country_event = { id = operation.5055 }
+		}
+		1 = { #Excess Noise (machine vs. synthetic)
+			modifier = {
+				factor = 0
+				OR = {
+					is_robot_empire = no
+					root.target = { is_robot_empire = no }
+				}
+			}
+			modifier = {
+				factor = 0.1 has_country_flag = recent_op_excess_noise
+			}
+			country_event = { id = operation.5030 }
+		}
+		1 = { #Local Assets Captured
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_lost_local_asset
+			}
+			modifier = {
+				factor = 0.5
+				relative_encryption_decryption = { target = root.target value > 1.2 }
+			}
+			modifier = {
+				factor = 0
+				root = {
+					NOR = {
+						has_espionage_type = operation_steal_pops
+						has_espionage_type = operation_rescue_pops
+						has_espionage_type = operation_arm_privateers
+					}
+				}
+			}
+			country_event = { id = diplospy.10 }
+		}
+		1 = { #Military Investigates
+			modifier = {
+				factor = 0
+				root = { NOT = { has_espionage_category = op_cat_military } }
+			}
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_military_investigates
+			}
+			country_event = { id = diplospy.11 }
+		}
+		2 = { #Incompatible Technology
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_enigmatic
+			}
+			modifier = {
+				factor = 0.5
+				root = { NOT = { has_espionage_category = op_cat_technology } }
+			}
+			modifier = {
+				factor = 0
+				root.target = { NOT = { has_ascension_perk = ap_enigmatic_engineering } }
+			}
+			country_event = { id = diplospy.14 }
+		}
+	}
+}
+
+# Gestalt empire acting upon a gestalt empire
+# country (operation owner) scope | root = operation; from = target
+operation_random_events_gestalt_gestalt = {
+	random_list = {
+		1 = { #Apprehended by Hunter-Seeker Drones (regular/hive vs. gestalt)
+			modifier = {
+				factor = 0
+				is_machine_empire = yes
+			}
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_apprehended_by_drones
+			}
+			country_event = { id = operation.5010 }
+		}
+		1 = { #Spooked
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_operative_spooked
+			}
+			country_event = { id = diplospy.9 }
+		}
+		1 = { #Mistaken for Food (gestalt vs. hive)
+			modifier = {
+				factor = 0
+				root.target = { is_machine_empire = yes }
+			}
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_drones_hunted
+			}
+			country_event = { id = operation.5020 }
+		}
+		1 = { #Toxic Field Work (hive vs. hive)
+			modifier = {
+				factor = 0
+				OR = {
+					is_machine_empire = yes
+					root.target = { is_machine_empire = yes }
+				}
+			}
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_toxic_field
+			}
+			country_event = { id = operation.5025 }
+		}
+		1 = { #Excess Noise (machine vs. machine)
+			modifier = {
+				factor = 0
+				OR = {
+					is_hive_empire = yes
+					root.target = { is_hive_empire = yes }
+				}
+			}
+			modifier = {
+				factor = 0.1 has_country_flag = recent_op_excess_noise
+			}
+			country_event = { id = operation.5030 }
+		}
+		1 = { #Snuffed Out
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_snuffed_out
+			}
+			country_event = { id = operation.5035 }
+		}
+		1 = { #Operative Defects
+			modifier = {
+				factor = 0
+				root.target = { is_homicidal = yes }
+			}
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_operative_defects
+			}
+			country_event = { id = operation.5045 }
+		}
+		1 = { #Confidence Wavers
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_confidence_wavers
+			}
+			country_event = { id = operation.5055 }
+		}
+		1 = { #Local Assets Captured
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_lost_local_asset
+			}
+			modifier = {
+				factor = 0.5
+				relative_encryption_decryption = { target = root.target value > 1.2 }
+			}
+			modifier = {
+				factor = 0
+				root = {
+					NOR = {
+						has_espionage_type = operation_steal_pops
+						has_espionage_type = operation_rescue_pops
+						has_espionage_type = operation_arm_privateers
+					}
+				}
+			}
+			country_event = { id = diplospy.10 }
+		}
+		1 = { #Military Investigates
+			modifier = {
+				factor = 0
+				root = { NOT = { has_espionage_category = op_cat_military } }
+			}
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_military_investigates
+			}
+			country_event = { id = diplospy.11 }
+		}
+		2 = { #Incompatible Technology
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_enigmatic
+			}
+			modifier = {
+				factor = 0.5
+				root = { NOT = { has_espionage_category = op_cat_technology } }
+			}
+			modifier = {
+				factor = 0
+				root.target = { NOT = { has_ascension_perk = ap_enigmatic_engineering } }
+			}
+			country_event = { id = diplospy.14 }
+		}
+	}
+}
+
+# OPERATIONS UNDER DEEP COVER
+# operation scope | from = target
+operation_random_events_deepcover = {
+	random_list = {
+		1 = { #Snuffed Out
+			modifier = {
+				factor = 0.1
+				owner = { has_country_flag = recent_op_snuffed_out }
+			}
+			owner = { country_event = { id = operation.5035 } }
+		}
+		1 = { #Operative Defects
+			modifier = {
+				factor = 0
+				root.target = { is_homicidal = yes }
+			}
+			modifier = {
+				factor = 0.1
+				owner = { has_country_flag = recent_op_operative_defects }
+			}
+			owner = { country_event = { id = operation.5045 } }
+		}
+		1 = { #Spooked
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_operative_spooked
+			}
+			owner = { country_event = { id = diplospy.9 } }
+		}
+		1 = { #Confidence Wavers
+			modifier = {
+				factor = 0.1
+				owner = { has_country_flag = recent_op_confidence_wavers }
+			}
+			owner = { country_event = { id = operation.5055 } }
+		}
+		1 = { #Local Assets Captured
+			modifier = {
+				factor = 0.1
+				owner = { has_country_flag = recent_op_lost_local_asset }
+			}
+			modifier = {
+				factor = 0.5
+				owner = {
+					relative_encryption_decryption = { target = prev.target value > 1.2 }
+				}
+			}
+			modifier = {
+				factor = 0
+				NOR = {
+					has_espionage_type = operation_steal_pops
+					has_espionage_type = operation_rescue_pops
+					has_espionage_type = operation_arm_privateers
+				}
+			}
+			owner = { country_event = { id = diplospy.10 } }
+		}
+		1 = { #Military Investigates
+			modifier = {
+				factor = 0
+				NOT = { has_espionage_category = op_cat_military }
+			}
+			modifier = {
+				factor = 0.1
+				owner = { has_country_flag = recent_op_military_investigates }
+			}
+			owner = { country_event = { id = diplospy.11 } }
+		}
+		1 = { #Incompatible Technology
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_enigmatic
+			}
+			modifier = {
+				factor = 0.5
+				root = { NOT = { has_espionage_category = op_cat_technology } }
+			}
+			modifier = {
+				factor = 0
+				root.target = { NOT = { has_ascension_perk = ap_enigmatic_engineering } }
+			}
+			owner = { country_event = { id = diplospy.14 } }
+		}
+	}
+}
+
+# SABOTAGE (TARGETED) OPERATIONS
+# operation scope | from = target; from.owner = target country
+operation_random_events_sabotage_targeted = {
+	random_list = {
+		1 = { #Grisly Countermeasures
+			modifier = {
+				factor = 0.1
+				owner = { has_country_flag = recent_op_grisly_countermeasures }
+			}
+			modifier = {
+				factor = 0
+				NOR = {
+					has_espionage_type = operation_sabotage_starbase
+				}
+			}
+			owner = { country_event = { id = operation.5050 } }
+		}
+		1 = { #Confidence Wavers
+			modifier = {
+				factor = 0.1
+				owner = { has_country_flag = recent_op_confidence_wavers }
+			}
+			owner = { country_event = { id = operation.5055 } }
+		}
+		1 = { #Incompatible Technology
+			modifier = {
+				factor = 0.1
+				has_country_flag = recent_op_enigmatic
+			}
+			modifier = {
+				factor = 0.5
+				root = { NOT = { has_espionage_category = op_cat_technology } }
+			}
+			modifier = {
+				factor = 0
+				root.target.owner = { NOT = { has_ascension_perk = ap_enigmatic_engineering } }
+			}
+			owner = { country_event = { id = diplospy.15 } }
+		}
+	}
+}
