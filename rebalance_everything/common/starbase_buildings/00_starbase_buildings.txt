@@ -392,7 +392,11 @@ offworld_trading_company = {
 		mult = value:num_starbase_modules_of_type|TYPE|trading_hub|
 	}
 
-	custom_tooltip = sm_offworld_trading_company_desc_modifier
+	country_modifier = {
+		local_trade_protection_add = 10
+	}
+
+	custom_tooltip_with_modifiers = sm_offworld_trading_company_desc_modifier
 
 	show_in_tech = "tech_space_trading"
 

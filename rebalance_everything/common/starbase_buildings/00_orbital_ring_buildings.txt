@@ -768,8 +768,12 @@ ring_noble_estates = {
 		}
 	}
 
-	country_modifier = {
-		country_naval_cap_add = 8
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_aristocratic_elite }
+		}
+		country_naval_cap_add = 10
 	}
 
 	resources = {

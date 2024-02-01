@@ -82,7 +82,11 @@ building_noble_estates = {
 		}
 	}
 
-	country_modifier = {
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_aristocratic_elite }
+		}
 		country_naval_cap_add = 5
 	}
 

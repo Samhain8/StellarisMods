@@ -101,6 +101,7 @@ tr_psionics_mind_readers = {
 	modifier = {
 		custom_tooltip = tr_psionics_mind_readers_tooltip
 		add_base_country_intel = 10
+		spy_network_daily_value_mult = 0.50
 	}
 }
 

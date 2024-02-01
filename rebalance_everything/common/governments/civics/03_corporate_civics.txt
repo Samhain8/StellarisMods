@@ -54,7 +54,7 @@ civic_franchising = {
 	}
 	description = "civic_tooltip_franchising_effects"
 	modifier = {
-		divided_patrongage_max_subjects = 1
+		divided_patrongage_max_subjects = 2
 	}
 	swap_type = {
 		description = "civic_tooltip_franchising_effects"
@@ -63,7 +63,7 @@ civic_franchising = {
 		}
 		modifier = {
 			planet_max_subject_holding_buildings_add = 1
-			specialist_subject_conversion_time_mult = -0.33
+			specialist_subject_conversion_time_mult = -0.5
 		}
 	}
 }

@@ -1075,11 +1075,23 @@ holding_noble_vacation_homes = {
 	}
 
 	potential = {
-		owner.overlord = { has_valid_civic = civic_aristocratic_elite }
+		OR = {
+			owner.overlord = { has_valid_civic = civic_aristocratic_elite }
+			owner.overlord = { has_valid_civic = civic_merchant_nobles }
+		}
 	}
 
 	country_modifier = {
-		empire_size_penalty_mult = -0.025
+		empire_size_penalty_mult = -0.02
+		planet_jobs_ruler_produces_mult = 0.03
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner.overlord = { has_valid_civic = civic_merchant_nobles }
+		}
+		diplo_weight_economy_mult = 0.1
 	}
 
 	planet_modifier = {

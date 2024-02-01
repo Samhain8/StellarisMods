@@ -999,7 +999,7 @@ ap_shared_destiny = {
 	}
 
 	modifier = {
-		divided_patrongage_max_subjects = 1
+		divided_patrongage_max_subjects = 2
 		envoys_add = 2
 	}
 
