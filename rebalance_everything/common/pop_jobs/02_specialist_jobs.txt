@@ -211,6 +211,25 @@ priest = {
 
 	triggered_planet_modifier = {
 		potential = {
+			exists = owner
+			owner = { is_fertility_rituals = yes }
+		}
+		modifier = {
+			pop_growth_speed = 0.04
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_fertility_rituals = yes }
+		}
+		planet_amenities_add = 2
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
 			planet = {
 				has_active_building = building_league_offices
 			}
@@ -1664,9 +1683,9 @@ healthcare = {
 			exists = owner
 			owner = { has_modifier = revolutionary_medigel_modifier }
 		}
-		pop_growth_speed = 0.025
-		planet_pop_assembly_organic_mult = 0.025
-		pop_environment_tolerance = 0.0125
+		pop_growth_speed = 0.05
+		planet_pop_assembly_organic_mult = 0.05
+		pop_environment_tolerance = 0.025
 	}
 	triggered_planet_modifier = {
 		potential = {

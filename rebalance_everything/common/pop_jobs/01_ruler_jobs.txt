@@ -144,6 +144,25 @@ high_priest = {
 		}
 		country_edict_fund_add = 2
 	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_fertility_rituals = yes }
+		}
+		modifier = {
+			pop_growth_speed = 0.05
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_fertility_rituals = yes }
+		}
+		planet_amenities_add = 2
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
 	
 	triggered_planet_modifier = {
 		potential = {

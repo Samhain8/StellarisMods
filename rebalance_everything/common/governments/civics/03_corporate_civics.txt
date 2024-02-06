@@ -1187,6 +1187,7 @@ civic_privatized_exploration = {
 }
 
 civic_merchant_nobles = {
+	description = "civic_merchant_nobles_effects"
 	potential = {
 		OR = {
 			authority = { value = auth_corporate }
@@ -1209,6 +1210,28 @@ civic_merchant_nobles = {
 
 	random_weight = {
 		base = 0
+	}
+}
+
+civic_fertility_rituals_corporate = {
+	description = "civic_fertility_rituals_effects"
+	potential = {
+		authority = { value = auth_corporate }
+	}
+	possible = {
+		origin = {
+			NOT = { value = origin_necrophage }
+		}
+		ethics = {
+			OR = {
+				text = civic_tooltip_spiritualist
+				value = ethic_spiritualist
+				value = ethic_fanatic_spiritualist
+			}
+		}
+	}
+	modifier = {
+		planet_colony_development_speed_mult = 0.35
 	}
 }
 

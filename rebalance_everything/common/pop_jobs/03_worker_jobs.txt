@@ -1315,7 +1315,7 @@ ranger = {
 	resources = {
 		category = planet_rangers
 		produces = {
-			unity = 2
+			unity = 1
 		}
 	}
 

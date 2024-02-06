@@ -17,10 +17,15 @@
 @low = 4
 
 @high_rare = 0.5
-@mid_rare = 0.25
-@low_rare = 0.1
+@mid_rare = 0.35
+@low_rare = 0.2
 
 @planet_type_bonus = 1.5
+
+@ranger_small_production = 1
+@ranger_large_production = 2
+@ranger_rare_small_production = 0.1
+@ranger_rare_large_production = 0.25
 
 ###############
 #### ENERGY ###
@@ -103,7 +108,7 @@ d_hot_springs = {
 		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_dry = yes
+			is_cold = yes
 		}
 	}
 }
@@ -146,7 +151,7 @@ d_rushing_waterfalls = {
 		weight = @med
 		modifier = {
 			factor = @planet_type_bonus
-			is_dry = yes
+			is_wet = yes
 		}
 	}
 }
@@ -230,7 +235,7 @@ d_frozen_gas_lake = {
 		weight = @med
 		modifier = {
 			factor = @planet_type_bonus
-			is_dry = yes
+			is_cold = yes
 		}
 	}
 }
@@ -318,7 +323,7 @@ d_underwater_vent = {
 		weight = @low
 		modifier = {
 			factor = @planet_type_bonus
-			is_dry = yes
+			is_wet = yes
 		}
 	}
 }
@@ -354,6 +359,7 @@ d_tempestous_mountain = {
 			is_planet_class = pc_alpine
 			is_planet_class = pc_gaia
 			is_planet_class = pc_continental
+			is_planet_class = pc_arid
 		}
 	}
 
@@ -361,7 +367,7 @@ d_tempestous_mountain = {
 		weight = @low
 		modifier = {
 			factor = @planet_type_bonus
-			is_dry = yes
+			is_cold = yes
 		}
 	}
 }
@@ -401,6 +407,8 @@ d_veiny_cliffs = {
 			is_planet_class = pc_arctic
 			is_planet_class = pc_arid
 			is_planet_class = pc_continental
+			is_planet_class = pc_ocean
+			is_planet_class = pc_tropical
 			is_planet_class = pc_nuked
 		}
 	}
@@ -441,11 +449,11 @@ d_mineral_fields = {
 
 	potential = {
 		OR = {
-			is_planet_class = pc_tropical
 			is_planet_class = pc_savannah
 			is_planet_class = pc_desert
-			is_planet_class = pc_ocean
 			is_planet_class = pc_tundra
+			is_planet_class = pc_arctic
+			is_planet_class = pc_arid
 		}
 	}
 
@@ -453,7 +461,7 @@ d_mineral_fields = {
 		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_cold = yes
+			is_dry = yes
 		}
 	}
 }
@@ -489,7 +497,8 @@ d_prosperous_mesa = {
 			is_planet_class = pc_savannah
 			is_planet_class = pc_desert
 			is_planet_class = pc_gaia
-			is_planet_class = pc_relic
+			is_planet_class = pc_alpine
+			is_planet_class = pc_arid
 		}
 	}
 
@@ -497,7 +506,7 @@ d_prosperous_mesa = {
 		weight = @med
 		modifier = {
 			factor = @planet_type_bonus
-			is_cold = yes
+			is_dry = yes
 		}
 	}
 }
@@ -548,6 +557,7 @@ d_ore_rich_caverns = {
 			is_planet_class = pc_nuked
 			is_planet_class = pc_gaia
 			is_planet_class = pc_relic
+			is_planet_class = pc_tropical
 		}
 	}
 
@@ -644,7 +654,7 @@ d_submerged_ore_veins = {
 		weight = @low
 		modifier = {
 			factor = @planet_type_bonus
-			is_cold = yes
+			is_wet = yes
 		}
 	}
 }
@@ -699,7 +709,7 @@ d_lichen_fields = {
 		}
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_cold = yes
 		}
 	}
 }
@@ -745,7 +755,7 @@ d_bountiful_plains = {
 		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_dry = yes
 		}
 	}
 }
@@ -782,6 +792,8 @@ d_rugged_woods = {
 		OR = {
 			is_planet_class = pc_continental
 			is_planet_class = pc_alpine
+			is_planet_class = pc_tundra
+			is_planet_class = pc_ocean
 		}
 	}
 
@@ -789,7 +801,7 @@ d_rugged_woods = {
 		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_cold = yes
 		}
 	}
 }
@@ -873,8 +885,10 @@ d_forgiving_tundra = {
 
 	potential = {
 		OR = {
-			is_planet_class = pc_alpine
-			is_planet_class = pc_tundra
+			#is_planet_class = pc_alpine
+			#is_planet_class = pc_tundra
+			is_cold = yes
+			is_planet_class = pc_relic
 		}
 	}
 
@@ -882,7 +896,7 @@ d_forgiving_tundra = {
 		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_cold = yes
 		}
 	}
 }
@@ -919,8 +933,10 @@ d_boggy_fens = {
 
 	potential = {
 		OR = {
-			is_planet_class = pc_ocean
-			is_planet_class = pc_tropical
+			#is_planet_class = pc_ocean
+			#is_planet_class = pc_tropical
+			is_wet = yes
+			is_planet_class = pc_tundra
 			is_planet_class = pc_relic
 		}
 	}
@@ -967,6 +983,7 @@ d_nutritious_mudland = {
 	potential = {
 		OR = {
 			is_planet_class = pc_desert
+			is_planet_class = pc_arid
 			is_planet_class = pc_relic
 		}
 	}
@@ -975,7 +992,7 @@ d_nutritious_mudland = {
 		weight = @high
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_dry = yes
 		}
 	}
 }
@@ -1011,6 +1028,8 @@ d_fungal_caves = {
 			is_planet_class = pc_nuked
 			is_planet_class = pc_relic
 			is_cold = yes
+			is_planet_class = pc_arid
+			is_planet_class = pc_desert
 		}
 	}
 
@@ -1022,7 +1041,7 @@ d_fungal_caves = {
 		}
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_cold = yes
 		}
 	}
 }
@@ -1056,8 +1075,9 @@ d_lush_jungle = {
 	potential = {
 		OR = {
 			is_planet_class = pc_gaia
-			is_planet_class = pc_tropical
-			is_planet_class = pc_ocean
+			#is_planet_class = pc_tropical
+			#is_planet_class = pc_ocean
+			is_wet = yes
 		}
 	}
 
@@ -1109,7 +1129,7 @@ d_fertile_lands = {
 		weight = @med
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_dry = yes
 		}
 	}
 }
@@ -1146,7 +1166,10 @@ d_great_river = {
 			is_planet_class = pc_desert
 			is_planet_class = pc_continental
 			is_planet_class = pc_gaia
+			is_planet_class = pc_relic
 			is_planet_class = pc_tropical
+			is_planet_class = pc_alpine
+			is_planet_class = pc_tundra
 		}
 	}
 
@@ -1232,7 +1255,8 @@ d_teeming_reef = {
 	potential = {
 		OR = {
 			is_planet_class = pc_gaia
-			is_planet_class = pc_ocean
+			#is_planet_class = pc_ocean
+			is_wet = yes
 		}
 	}
 
@@ -1274,8 +1298,9 @@ d_marvelous_oasis = {
 
 	potential = {
 		OR = {
-			is_planet_class = pc_arid
-			is_planet_class = pc_desert
+			is_dry = yes
+			#is_planet_class = pc_arid
+			#is_planet_class = pc_desert
 		}
 	}
 
@@ -1283,7 +1308,7 @@ d_marvelous_oasis = {
 		weight = @low
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_dry = yes
 		}
 	}
 }
@@ -1317,10 +1342,11 @@ d_tropical_island = {
 
 	potential = {
 		OR = {
-			is_planet_class = pc_arid
 			is_planet_class = pc_desert
 			is_planet_class = pc_tropical
 			is_planet_class = pc_ocean
+			is_planet_class = pc_continental
+			is_planet_class = pc_savannah
 		}
 	}
 
@@ -1361,14 +1387,19 @@ d_fungal_forest = {
 	}
 
 	potential = {
-		is_cold = yes
+		OR = {
+			is_cold = yes
+			is_planet_class = pc_arid
+			is_planet_class = pc_tropical
+			is_planet_class = pc_continental
+		}
 	}
 
 	drop_weight = {
 		weight = @low
 		modifier = {
 			factor = @planet_type_bonus
-			is_wet = yes
+			is_cold = yes
 		}
 	}
 }
@@ -1387,6 +1418,24 @@ d_dust_caverns = {
 
 	planet_modifier = {
 		building_mote_harvesters_max = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_volatile_motes_produces_add = @ranger_rare_small_production
 	}
 
 	drop_weight = {
@@ -1422,6 +1471,24 @@ d_dust_desert = {
 
 	planet_modifier = {
 		building_mote_harvesters_max = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_volatile_motes_produces_add = @ranger_rare_large_production
 	}
 
 	drop_weight = {
@@ -1464,6 +1531,24 @@ d_bubbling_swamp = {
 		building_gas_extractors_max = 1
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_exotic_gases_produces_add = @ranger_rare_small_production
+	}
+
 	drop_weight = {
 		weight = @high_rare
 		modifier = {
@@ -1497,6 +1582,24 @@ d_fuming_bog = {
 
 	planet_modifier = {
 		building_gas_extractors_max = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_exotic_gases_produces_add = @ranger_rare_large_production
 	}
 
 	drop_weight = {
@@ -1538,6 +1641,24 @@ d_crystalline_caverns = {
 		building_crystal_mines_max = 1
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_rare_crystals_produces_add = @ranger_rare_small_production
+	}
+
 	drop_weight = {
 		weight = @high_rare
 		modifier = {
@@ -1567,6 +1688,24 @@ d_crystal_forest = {
 
 	planet_modifier = {
 		building_crystal_mines_max = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_rare_crystals_produces_add = @ranger_rare_large_production
 	}
 
 	potential = {
@@ -1607,6 +1746,24 @@ d_crystal_reef = {
 
 	planet_modifier = {
 		building_crystal_mines_max = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_rare_crystals_produces_add = @ranger_rare_large_production
 	}
 
 	potential = {
@@ -1656,6 +1813,25 @@ d_betharian_deposit = {
 		building_betharian_power_plant_max = 1
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_physics_research_produces_add = @ranger_small_production
+		planet_rangers_engineering_research_produces_add = @ranger_small_production
+	}
+
 	drop_weight = {
 		weight = @mid_rare
 		modifier = {
@@ -1683,17 +1859,17 @@ d_alien_pets_deposit = {
 		can_have_habitable_deposits = yes
 	}
 
-	resources = {
-		category = deposit_blockers_natural
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_valid_civic = civic_environmentalist }
-			}
-			society_research = 3
-			unity = 3
-		}
-	}
+	#resources = {
+	#	category = deposit_blockers_natural
+	#	produces = {
+	#		trigger = {
+	#			exists = owner
+	#			owner = { has_valid_civic = civic_environmentalist }
+	#		}
+	#		society_research = 3
+	#		unity = 3
+	#	}
+	#}
 
 	triggered_planet_modifier = {
 		potential = {
@@ -1703,6 +1879,15 @@ d_alien_pets_deposit = {
 		modifier = {
 			job_ranger_add = 1
 		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_society_research_produces_add = @ranger_small_production
+		planet_rangers_unity_produces_add = @ranger_small_production
 	}
 
 	drop_weight = {

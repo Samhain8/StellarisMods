@@ -628,7 +628,7 @@ d_noxious_swamp = {
 			exists = owner
 			owner = { has_civic = civic_environmentalist }
 		}
-		planet_rangers_society_research_produces_add = @ranger_small_production
+		planet_rangers_energy_produces_add = @ranger_small_production
 	}
 
 	all_blocker_swap_types = yes
@@ -705,7 +705,7 @@ d_massive_glacier = {
 			exists = owner
 			owner = { has_civic = civic_environmentalist }
 		}
-		planet_rangers_physics_research_produces_add = @ranger_small_production
+		planet_rangers_society_research_produces_add = @ranger_small_production
 	}
 
 	all_blocker_swap_types = yes
@@ -731,6 +731,183 @@ d_massive_glacier = {
 	}
 
 	prerequisites = { "tech_massive_glacier" }
+}
+
+d_spore_storms = {
+	icon = d_fungal_forest
+	time = 180
+
+	is_for_colonizable = yes
+	category = deposit_cat_blockers_natural
+
+	can_be_cleared = {
+		custom_tooltip = {
+			fail_text = has_ranger_lodge
+			planet = {
+				NOT = { has_building = building_ranger_lodge }
+			}
+		}
+	}
+
+	resources = {
+		category = deposit_blockers_natural
+		cost = {
+			energy = 500
+		}
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_food_produces_add = @ranger_small_production
+	}
+
+	inline_script = deposits/ai_weight_natural_blocker
+
+	drop_weight = {
+		weight = @blocker_low
+		modifier = {
+			factor = 0
+			num_free_districts = {
+				type = district_city
+				value < 2
+			}
+		}
+	}
+}
+
+d_thorny_woods = {
+	icon = d_rugged_woods
+	time = 180
+
+	is_for_colonizable = yes
+	category = deposit_cat_blockers_natural
+
+	can_be_cleared = {
+		custom_tooltip = {
+			fail_text = has_ranger_lodge
+			planet = {
+				NOT = { has_building = building_ranger_lodge }
+			}
+		}
+	}
+
+	resources = {
+		category = deposit_blockers_natural
+		cost = {
+			energy = 500
+		}
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_food_produces_add = @ranger_small_production
+	}
+
+	inline_script = deposits/ai_weight_natural_blocker
+
+	drop_weight = {
+		weight = @blocker_low
+		modifier = {
+			factor = 0
+			num_free_districts = {
+				type = district_city
+				value < 2
+			}
+		}
+	}
+}
+
+d_trench_rapids = {
+	icon = d_rushing_waterfalls
+	time = 180
+
+	is_for_colonizable = yes
+	category = deposit_cat_blockers_natural
+
+	can_be_cleared = {
+		custom_tooltip = {
+			fail_text = has_ranger_lodge
+			planet = {
+				NOT = { has_building = building_ranger_lodge }
+			}
+		}
+	}
+
+	resources = {
+		category = deposit_blockers_natural
+		cost = {
+			energy = 500
+		}
+	}
+
+	planet_modifier = {
+		planet_max_districts_add = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_engineering_research_produces_add = @ranger_small_production
+	}
+
+	inline_script = deposits/ai_weight_natural_blocker
+
+	drop_weight = {
+		weight = @blocker_low
+		modifier = {
+			factor = 0
+			num_free_districts = {
+				type = district_city
+				value < 2
+			}
+		}
+	}
 }
 
 ### SPECIAL
@@ -895,7 +1072,26 @@ d_wandering_forests = {
 	}
 
 	planet_modifier = {
-		planet_max_districts_add = -1
+		planet_max_districts_add = -2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_society_research_produces_add = @ranger_small_production
+		planet_rangers_food_produces_add = @ranger_small_production
 	}
 }
 

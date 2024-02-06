@@ -225,6 +225,30 @@ councilor_merchant_nobles = {
 	}
 }
 
+councilor_fertility_rituals = {
+	leader_class = { official }
+	is_leader_possible = {
+		leader_class = official
+	}
+	civic = civic_fertility_rituals
+	modifier = {
+		pop_growth_speed = 0.01
+		country_unity_produces_mult = 0.01
+	}
+}
+
+councilor_fertility_rituals_corporate = {
+	leader_class = { official }
+	is_leader_possible = {
+		leader_class = official
+	}
+	civic = civic_fertility_rituals_corporate
+	modifier = {
+		pop_growth_speed = 0.01
+		country_unity_produces_mult = 0.01
+	}
+}
+
 councilor_ascensionists = {
 	leader_class = { official }
 	is_leader_possible = {

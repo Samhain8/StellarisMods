@@ -13,6 +13,9 @@
 @med_rare = 1
 @low_rare = 0.5
 
+@ranger_small_production = 1
+@ranger_large_production = 2
+
 d_metal_boneyard = {
 	is_for_colonizable = yes
 	category = deposit_cat_rare
@@ -42,9 +45,28 @@ d_migrating_forests = {
 	icon = d_huge_tree
 
 	planet_modifier = {
-		district_mining_max = -1
-		district_farming_max = -1
-		district_generator_max = -1
+		district_mining_max = -2
+		district_farming_max = -2
+		district_generator_max = -2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_society_research_produces_add = @ranger_small_production
+		planet_rangers_food_produces_add = @ranger_small_production
 	}
 
 	drop_weight = {
@@ -60,6 +82,9 @@ d_migrating_forest_reserve = {
 
 	planet_modifier = {
 		planet_jobs_society_research_produces_mult = 0.2
+		district_mining_max = -1
+		district_farming_max = -1
+		district_generator_max = -1
 	}
 
 	triggered_planet_modifier = {
@@ -90,6 +115,24 @@ d_migrating_forest_reserve = {
 		modifier = {
 			job_calculator_add = 2
 		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_food_produces_add = @ranger_large_production
 	}
 
 	drop_weight = {
@@ -1601,16 +1644,37 @@ d_house_turtle = {
 	is_for_colonizable = yes
 	category = deposit_cat_rare
 	icon = d_tropical_island
+
 	planet_modifier = {
 		planet_max_districts_add = 1
 		planet_jobs_society_research_produces_mult = 0.025
 	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_society_research_produces_add = @ranger_small_production
+	}
+
 	resources = {
 		category = planet_deposits
 		upkeep = {
 			food = 2
 		}
 	}
+
 	drop_weight = {
 		weight = 0
 	}
@@ -1737,6 +1801,24 @@ d_fungal_study_zone = {
 		planet_jobs_society_research_produces_mult = 0.15
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_society_research_produces_add = @ranger_small_production
+	}
+
 	drop_weight = {
 		weight = 0
 	}
@@ -1773,6 +1855,25 @@ d_living_snow_reserve = {
 		planet_jobs_physics_research_produces_mult = 0.2
 		planet_jobs_society_research_produces_mult = 0.2
 		planet_max_districts_add = -2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_physics_research_produces_add = @ranger_small_production
+		planet_rangers_society_research_produces_add = @ranger_small_production
 	}
 
 	drop_weight = {

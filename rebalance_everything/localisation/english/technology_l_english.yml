@@ -948,8 +948,8 @@
  tech_embodied_dynamism_desc:0 "Initiative and some measure of ambition must be promoted in our autonomous leader units, while still making certain that they do not stray too far from the directives of the core intelligence."
  tech_ethical_equations:0 "Ethical Equations"
  tech_ethical_equations_desc:1 "Limiting the freedoms of others while preserving one's own may require unusual mental acrobatics - a feat we are now better-equipped to perform." # At some point the decision must be made whether to keep to antiquated values or do what is necessary to prosper in a new future/world.
- tech_neural_implants:0 "Neural Implants"
- tech_neural_implants_desc:2 "Cognition is little but the processing of sensory input. It can be altered."
+ tech_neural_implants:0 "Transactional Implants"
+ tech_neural_implants_desc:2 "Sub-dermal implants for convenient tracking of who owns whom. Superfluous slaves can even be granted permission to sell themselves at the market to someone in need of their services."
  # Free will is nothing more than a sensory illusion.
  tech_global_production_strategy:0 "Global Production Strategy"
  tech_global_production_strategy_desc:1 "Planets are big and production sites are often separated by vast distances. A coherent strategy for making certain that everyone is pulling in the same direction is often needed."

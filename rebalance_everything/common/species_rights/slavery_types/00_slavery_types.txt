@@ -236,9 +236,9 @@ slavery_livestock = {
 						has_trait = trait_felsic
 					}
 					from = {
-						OR = {
-							has_ethic = ethic_militarist
-							has_ethic = ethic_fanatic_militarist
+						NOR = {
+							has_ethic = ethic_egalitarian
+							has_ethic = ethic_fanatic_egalitarian
 						}
 					}
 				}

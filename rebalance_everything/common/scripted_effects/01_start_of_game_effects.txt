@@ -1273,13 +1273,55 @@ generate_start_buildings_and_districts = {
 			if = {
 				limit = {
 					owner = {
-						NOT = {
-							has_origin = origin_payback
-						}
+						#NOT = {
+						#	has_origin = origin_payback
+						#}
 						has_valid_civic = civic_environmentalist
 					}
 				}
-				add_blocker = { type = d_big_nature_preserve_blocker }
+				#add_blocker = { type = d_big_nature_preserve_blocker }
+
+				set_planet_size = 18
+				add_blocker = { type = d_dangerous_wildlife_blocker }
+
+				if = {
+					limit = {
+						OR = {
+							is_planet_class = pc_desert
+							is_planet_class = pc_arid
+							is_planet_class = pc_savannah
+						}
+					}
+					add_blocker = { type = d_deep_sinkhole }
+					add_blocker = { type = d_quicksand_basin }
+					add_blocker = { type = d_thorny_woods }
+				}
+
+				if = {
+					limit = {
+						OR = {
+							is_planet_class = pc_arctic
+							is_planet_class = pc_tundra
+							is_planet_class = pc_alpine
+						}
+					}
+					add_blocker = { type = d_noxious_swamp }
+					add_blocker = { type = d_massive_glacier }
+					add_blocker = { type = d_trench_rapids }
+				}
+
+				if = {
+					limit = {
+						OR = {
+							is_planet_class = pc_continental
+							is_planet_class = pc_tropical
+							is_planet_class = pc_ocean
+						}
+					}
+					add_blocker = { type = d_dense_jungle }
+					add_blocker = { type = d_toxic_kelp }
+					add_blocker = { type = d_spore_storms }
+				}
 			}
 			# 4-5 jobs
 			if = {

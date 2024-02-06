@@ -3322,6 +3322,13 @@ is_pleasure_seeker = {
 	}
 }
 
+is_fertility_rituals = {
+	OR = {
+		has_valid_civic = civic_fertility_rituals
+		has_valid_civic = civic_fertility_rituals_corporate
+	}
+}
+
 is_warrior_culture = {
 	OR = {
 		has_valid_civic = civic_warrior_culture
