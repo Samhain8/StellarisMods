@@ -254,11 +254,20 @@ generate_start_deposits_and_blockers = {
 			owner = {
 				NOT = { has_origin = origin_machine }
 				NOT = { has_origin = origin_imperial_vassal }
+				NOT = { has_valid_civic = civic_environmentalist }
 			}
 		}
 		add_deposit = d_decrepit_dwellings
 		add_deposit = d_failing_infrastructure
 		add_deposit = d_failing_infrastructure
+	}
+	else_if = {
+		limit = {
+			owner = {
+				has_valid_civic = civic_environmentalist
+			}
+		}
+		add_deposit = d_decrepit_dwellings
 	}
 	if = {
 		limit = {
@@ -995,6 +1004,8 @@ generate_start_buildings_and_districts = {
 						has_origin = origin_overtuned
 						has_origin = origin_ocean_paradise
 						has_origin = origin_legendary_leader
+						has_origin = origin_toxic_knights
+						has_origin = origin_here_be_dragons
 					}
 				}
 			}
@@ -2379,6 +2390,8 @@ generate_start_pops = {
 					has_origin = origin_overtuned
 					has_origin = origin_ocean_paradise
 					has_origin = origin_legendary_leader
+					has_origin = origin_toxic_knights
+					has_origin = origin_here_be_dragons
 				}
 			}
 		}
@@ -2403,6 +2416,8 @@ generate_start_pops = {
 						has_origin = origin_overtuned
 						has_origin = origin_ocean_paradise
 						has_origin = origin_legendary_leader
+						has_origin = origin_toxic_knights
+						has_origin = origin_here_be_dragons
 					}
 				}
 			}

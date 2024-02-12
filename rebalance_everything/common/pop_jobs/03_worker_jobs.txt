@@ -247,6 +247,10 @@ clerk = {
 			exists = owner
 			owner = { is_fallen_empire = yes }
 		}
+		modifier = {
+			factor = 0
+			is_pet_slave = yes
+		}
 	}
 }
 
@@ -1385,6 +1389,15 @@ squire = {
 		country_naval_cap_add = 2
 	}
 
+	triggered_country_modifier = {
+		potential = {
+			has_trait = trait_cyborg_mechanical_interface
+		}
+		modifier = {
+			country_naval_cap_add = 2
+		}
+	}
+
 	triggered_planet_modifier = {
 		potential = {
 			planet = { has_modifier = syamelles_curse_habitat }
@@ -1442,7 +1455,7 @@ page = {
 	resources = {
 		category = planet_entertainers
 		produces = {
-			consumer_goods = 1
+			unity = 1
 		}
 		produces = {
 			trigger = {
@@ -1458,6 +1471,15 @@ page = {
 		}
 		planet_amenities_add = 3
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			has_trait = trait_cyborg_mechanical_interface
+		}
+		modifier = {
+			country_naval_cap_add = 2
+		}
 	}
 
 	triggered_planet_modifier = {

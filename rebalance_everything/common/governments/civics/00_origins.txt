@@ -972,6 +972,10 @@ origin_here_be_dragons = {
 		}
 	}
 
+	has_secondary_species = {
+		title = civic_syncretic_evolution_secondary_species
+	}
+
 	description = civic_tooltip_aquatics_effects
 
 	advanced_start = yes
@@ -1004,10 +1008,14 @@ origin_ocean_paradise = {
 
 	description = origin_ocean_paradise_effects
 
+	traits = {
+		trait = trait_perfected_genes
+	}
+
 	has_secondary_species = {
 		title = civic_syncretic_evolution_secondary_species
 		traits = {
-			trait = trait_comfortable
+			trait = trait_perfected_genes
 		}
 	}
 
@@ -1252,6 +1260,10 @@ origin_toxic_knights = {
 		}
 	}
 
+	has_secondary_species = {
+		title = civic_syncretic_evolution_secondary_species
+	}
+
 	description = origin_toxic_knights_effects
 	negative_description = origin_toxic_knights_negative_effects
 
@@ -1455,7 +1467,7 @@ origin_legendary_leader = {
 	advanced_start = yes
 
 	traits = {
-		trait = trait_perfected_genes
+		trait = trait_dominant
 	}
 
 	has_secondary_species = {

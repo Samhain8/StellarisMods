@@ -713,6 +713,10 @@ leader_trait_corsair = {
 		has_paragon_dlc = yes
 		has_trait = subclass_commander_admiral
 	}
+	fleet_modifier = {
+		ship_speed_mult = 0.10
+		ship_evasion_add = 5
+	}
 	leader_class = { commander }
 	custom_tooltip = leader_trait_corsair_effect
 	initial = no
@@ -731,6 +735,11 @@ leader_trait_corsair_2 = {
 		TIER = 2
 	}
 	# Effect in paragon_2.1005 event.
+	fleet_modifier = {
+		ship_speed_mult = 0.15
+		ship_evasion_add = 5
+		ships_upkeep_mult = -0.10
+	}
 	leader_class = { commander }
 	custom_tooltip = leader_trait_corsair_2_effect
 }
@@ -748,6 +757,8 @@ leader_trait_corsair_3 = {
 	}
 	# Effect in paragon_2.1005 event.
 	fleet_modifier = {
+		ship_speed_mult = 0.2
+		ship_evasion_add = 5
 		ships_upkeep_mult = -0.2
 	}
 	triggered_modifier = {

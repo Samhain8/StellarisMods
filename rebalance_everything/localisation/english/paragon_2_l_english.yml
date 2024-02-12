@@ -1092,7 +1092,7 @@
  leader_trait_surgical_bombardment_desc:0 "This leader can identify valuable military targets with ease."
  leader_trait_wrecker:0 "Wrecker"
  leader_trait_wrecker_desc:1 "This leader is not concerned with leaving enemy ships in a salvageable state for research, preferring to vaporize them if possible."
- leader_trait_corsair:1 "Material Liberator"
+ leader_trait_corsair:1 "Corsair"
  leader_trait_corsair_effect:2 "$FLEET_EFFECTS_TXT$:\n$t$$EVERY_ENEMY_SHIP_DESTROYED_TXT$:\n$tt$$r_energy$: §G+$@trait_corsair_amt$§!"
  leader_trait_corsair_desc:1 "This leader is dedicated to collecting any useful items from defeated enemy ships."
  leader_trait_corsair_2:0 "$leader_trait_corsair$ II"

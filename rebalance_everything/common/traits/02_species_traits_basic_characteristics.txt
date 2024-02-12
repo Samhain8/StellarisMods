@@ -107,7 +107,7 @@ trait_syncretic_proles = {
 	icon = "gfx/interface/icons/traits/trait_primitive.dds"
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
-	custom_tooltip = TRAIT_SYNCRETIC_PROLES_EFFECT
+	#custom_tooltip = TRAIT_SYNCRETIC_PROLES_EFFECT
 	modifier = {
 		pop_happiness = 0.15
 		planet_jobs_produces_mult = 0.10
@@ -177,6 +177,35 @@ trait_remnant_survivor = {
 	}
 	slave_cost = {
 		energy = 150
+	}
+}
+
+trait_dominant = {
+	cost = 0
+	potential_crossbreeding_chance = 0.33
+	initial = no
+	randomized = no
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		can_remove_presapient_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	icon = "gfx/interface/icons/traits/trait_primitive.dds"
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+
+	modifier = {
+		planet_jobs_ruler_produces_mult = 0.1
+		pop_cat_slave_happiness = -0.1
+	}
+	slave_cost = {
+		energy = -500
 	}
 }
 
@@ -699,6 +728,8 @@ trait_perfected_genes = {
 	icon = "gfx/interface/icons/traits/trait_perfected_genes.dds"
 
 	modifier = {
-		leader_lifespan_add = 25
+		leader_lifespan_add = 10
+		army_health = 0.2
+		pop_happiness = 0.05
 	}
 }

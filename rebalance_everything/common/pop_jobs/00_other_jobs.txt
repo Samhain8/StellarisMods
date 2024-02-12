@@ -45,8 +45,6 @@ servant = {
 			exists = owner
 			OR = {
 				owner = { is_pleasure_seeker = yes }
-				has_trait = trait_xeno_compatibility
-				has_trait = trait_interbreeder
 			}
 		}
 		modifier = {
@@ -59,8 +57,6 @@ servant = {
 			exists = owner
 			OR = {
 				owner = { is_pleasure_seeker = yes }
-				has_trait = trait_xeno_compatibility
-				has_trait = trait_interbreeder
 			}
 		}
 		pop_housing_usage_add = -0.15
@@ -90,13 +86,13 @@ servant = {
 		}
 	}
 
-	weight = {
-		weight = @special_job_weight
-		modifier = {
-			factor = 100000
-			is_pet_slave = yes
-		}
-	}
+	#weight = {
+	#	weight = @special_job_weight
+	#	modifier = {
+	#		factor = 100000
+	#		is_pet_slave = yes
+	#	}
+	#}
 }
 
 slave_overseer = {
@@ -418,27 +414,18 @@ livestock_zoo_animal = {
 
 	triggered_planet_modifier = {
 		potential = {
+			has_slavery_type = { type = slavery_pets }
 			exists = owner
-			OR = {
-				has_trait = trait_xeno_compatibility
-				has_trait = trait_interbreeder
-			}
+			owner = { is_pleasure_seeker = yes }
 		}
 		modifier = {
-			pop_growth_speed = 0.03
+			pop_growth_speed = 0.02
 		}
 	}
 
 	weight = {
 		weight = @special_job_weight
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
-		modifier = {
-			factor = 3
-			OR = {
-				has_trait = trait_xeno_compatibility
-				has_trait = trait_interbreeder
-			}
-		}
 		modifier = {
 			factor = 110000
 			has_citizenship_type = { type = citizenship_slavery country = owner }
@@ -554,19 +541,6 @@ bio_trophy = {
 
 		modifier = {
 			planet_jobs_complex_drone_produces_mult = 0.01
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			OR = {
-				has_trait = trait_xeno_compatibility
-				has_trait = trait_interbreeder
-			}
-		}
-		modifier = {
-			pop_growth_speed = 0.02
 		}
 	}
 

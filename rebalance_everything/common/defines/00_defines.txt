@@ -503,10 +503,10 @@
 		DEPOSIT_USED_CATEGORY_WEIGHT = 0.25 # The higher this is, the more randomization will tend to diversify planet deposit types
 
 		COLONY_DEPOSITS_USE_NULL = no				# Should the null deposit be a potential outcome in randomization?
-		COLONY_DEPOSITS_FIXED_BASE = 5				# min number of deposits on colonizable planets
-		COLONY_DEPOSITS_RANDOM_BASE = 3				# this number of random deposit chances are always given to colonizable planets
+		COLONY_DEPOSITS_FIXED_BASE = 6				# min number of deposits on colonizable planets
+		COLONY_DEPOSITS_RANDOM_BASE = 4				# this number of random deposit chances are always given to colonizable planets
 		COLONY_DEPOSITS_FIXED_FROM_SIZE = 0.25		# ( planet size * this ) is added to min number of deposits on colonizable planets
-		COLONY_DEPOSITS_RANDOM_FROM_SIZE = 0.35		# ( planet size * this ) is added to random deposit chances on colonizable planets
+		COLONY_DEPOSITS_RANDOM_FROM_SIZE = 0.40		# ( planet size * this ) is added to random deposit chances on colonizable planets
 
 		NON_COLONY_DEPOSITS_USE_NULL = yes			# Should the null deposit be a potential outcome in randomization?
 		NON_COLONY_DEPOSITS_FIXED_BASE = 1			# min number of deposits on uninhabitable planets
@@ -620,7 +620,7 @@
 		LEADER_AGE_MAX			= 32				# Max age of generated leaders (uses bell-curve)
 		LEADER_SKILL_LEVEL_START	= 1			# Skill Level Leaders start with. XP needed { 200 475 825 1250 }
 		LEADER_EXPERIENCE_REQUIREMENT_BASE_VALUE					= 100 # Base value when calculating required experience for next skill level
-		LEADER_EXPERIENCE_REQUIREMENT_SCALE_VALUE					= 250 # Scale factor when calculating required experience for next skill level
+		LEADER_EXPERIENCE_REQUIREMENT_SCALE_VALUE					= 300 # Scale factor when calculating required experience for next skill level
 
 		LEADER_SUBCLASS_CHOICE_LEVEL = 4 	# At what level you can pick your leader subclass
 		LEADER_DESTINY_CHOICE_LEVEL = 8 	# At what level you can pick your leader destiny trait
@@ -904,7 +904,7 @@
 		DIPLOMACY_WEIGHT_POP_HAPPINESS			= 2.0		# as in formula: DIPLOMACY_WEIGHT_POP_BASE + (DIPLOMACY_WEIGHT_POP_HAPPINESS * Happiness)
 		DIPLOMACY_WEIGHT_ECONOMY_FACTOR			= 0.15		# Factors Economic Power before it is added to diplo weight
 		DIPLOMACY_WEIGHT_TECHNOLOGY_FACTOR		= 0.1		# Factors Technology Level before it is added to diplo weight
-		DIPLOMACY_WEIGHT_NO_LEADER_PENALTY		= -0.10		# Penalty to diplomatic weight for not having the relevant council position
+		DIPLOMACY_WEIGHT_NO_LEADER_PENALTY		= -0.05		# Penalty to diplomatic weight for not having the relevant council position
 
 		EMPIRE_SIZE_TECH_COST_PENALTY			= 0.001	# Per empire size above base
 		EMPIRE_SIZE_TRADITION_COST_PENALTY		= 0.002	# Per empire size above base
@@ -914,7 +914,7 @@
 		NUM_TECH_ALTERNATIVES					= 3
 		TECH_WEIGHT_BASE						= 10
 		TECH_WEIGHT_POTENTIAL_ADD				= 0
-		TECH_RESEARCH_NO_LEADER_PENALTY			= -0.10
+		TECH_RESEARCH_NO_LEADER_PENALTY			= -0.05
 		TECH_COST_MULT_FALLEN_EMPIRE			= 2	# Awakened Empires pay this much more to research techs
 		TECH_WEIGHT_PREVIOUS_OPTION				= 0.5	# If a tech was one of the alternatives last time its weight will be multiplied with TECH_WEIGHT_PREVIOUS_OPTION
 
@@ -1003,7 +1003,7 @@
 		NAVAL_CAPACITY_MAX										= 9999	# Max value of Naval Capacity
 		NAVAL_CAPACITY_BASE										= 20	# Base value of Naval Capacity
 		NAVAL_CAPACITY_POP_MULT									= 0		# Mult value of Naval Capacity for each Pop
-		NAVAL_CAPACITY_NO_LEADER_PENALTY						= -0.10
+		NAVAL_CAPACITY_NO_LEADER_PENALTY						= -0.05
 
 		LEADER_CAPACITY_XP_SCALE								= 0.85	# Leader XP gets multiplied by XP_Scale ^ Number of Leaders over cap. Never hits zero.
 		NON_PARAGON_LEADER_TRAIT_SELECTION_LEVELS = { 1 3 5 7 9 }

@@ -31,7 +31,7 @@ pc_relic = {
 	uses_alternative_skies_for_moons = no
 
 	modifier = {
-		pop_environment_tolerance = 0.80
+		pop_environment_tolerance = 0.40
 	}
 
 	carry_cap_per_free_district = @carry_cap_normal

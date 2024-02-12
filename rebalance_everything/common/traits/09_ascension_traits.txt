@@ -100,30 +100,276 @@ trait_kindling = {
 	}
 }
 
-trait_xeno_compatibility = {
-	cost = 3
-	icon = "gfx/interface/icons/traits/trait_fertile.dds"
-	potential_crossbreeding_chance = 1.0
+trait_xeno_compatibility_male_p = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_perfected_genes.dds"
+	potential_crossbreeding_chance = 0
 	initial = yes
 	randomized = no
-	advanced_trait = no
+	advanced_trait = yes
 	allowed_archetypes = { BIOLOGICAL }
 	species_potential_add = {
 		can_do_advanced_gene_modding = yes
 	}
 	species_possible_remove = {
-		can_remove_beneficial_genetic_traits = yes
+		can_do_advanced_gene_modding = yes
 	}
 	species_possible_merge_remove = {
 		always = yes
 	}
+	opposites = { "trait_xeno_compatibility_female_a" "trait_xeno_compatibility_female_q" "trait_xeno_compatibility_male_i" "trait_omni_compatibility" "trait_xeno_compatibility_male_r" "trait_xeno_compatibility_male_g" }
+
+	triggered_planet_growth_habitability_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				NOT = { 
+					any_owned_pop = { has_female_species_trait = yes } 
+				}
+			}
+		}
+		pop_growth_speed = -0.8
+	}
 
 	modifier = {
-		pop_job_amenities_mult = 0.2
-		pop_growth_speed = 0.1
+		planet_jobs_produces_mult = 0.1
+		pop_growth_speed = -0.20
+		species_empire_size_mult = 0.20
 	}
 	slave_cost = {
-		energy = 1500
+		energy = 250
+	}
+}
+
+trait_xeno_compatibility_female_a = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_perfected_genes.dds"
+	potential_crossbreeding_chance = 0
+	initial = yes
+	randomized = no
+	advanced_trait = yes
+	allowed_archetypes = { BIOLOGICAL }
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_remove = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	opposites = { "trait_xeno_compatibility_male_p" "trait_xeno_compatibility_female_q" "trait_xeno_compatibility_male_i" "trait_omni_compatibility" "trait_xeno_compatibility_male_r" "trait_xeno_compatibility_male_g" }
+
+	triggered_planet_growth_habitability_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				NOT = { 
+					any_owned_pop = { has_male_species_trait = yes } 
+				}
+			}
+		}
+		pop_growth_speed = -1.2
+	}
+
+	modifier = {
+		pop_growth_speed = 0.20
+		planet_jobs_produces_mult = -0.1
+		leader_lifespan_add = -20
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+trait_xeno_compatibility_male_i = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_perfected_genes.dds"
+	potential_crossbreeding_chance = 0
+	initial = yes
+	randomized = no
+	advanced_trait = yes
+	allowed_archetypes = { BIOLOGICAL }
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_remove = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	opposites = { "trait_xeno_compatibility_female_a" "trait_xeno_compatibility_female_q" "trait_xeno_compatibility_male_p" "trait_omni_compatibility" "trait_xeno_compatibility_male_r" "trait_xeno_compatibility_male_g" }
+
+	triggered_planet_growth_habitability_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				NOT = { 
+					any_owned_pop = { has_female_species_trait = yes } 
+				}
+			}
+		}
+		pop_growth_speed = -1
+	}
+
+	modifier = {
+		species_leader_exp_gain = 0.25
+		negative_leader_traits_species = 1
+		leader_lifespan_add = -20
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+trait_xeno_compatibility_female_q = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_perfected_genes.dds"
+	potential_crossbreeding_chance = 0
+	initial = yes
+	randomized = no
+	advanced_trait = yes
+	allowed_archetypes = { BIOLOGICAL }
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_remove = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	opposites = { "trait_xeno_compatibility_male_p" "trait_xeno_compatibility_female_a" "trait_xeno_compatibility_male_i" "trait_omni_compatibility" "trait_xeno_compatibility_male_r" "trait_xeno_compatibility_male_g" }
+
+	triggered_planet_growth_habitability_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				NOT = { 
+					any_owned_pop = { has_male_species_trait = yes } 
+				}
+			}
+		}
+		pop_growth_speed = -0.5
+	}
+
+	modifier = {
+		leader_lifespan_add = 100
+		negative_leader_traits_species = -2
+		pop_growth_speed = -0.50
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+trait_xeno_compatibility_male_r = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_perfected_genes.dds"
+	potential_crossbreeding_chance = 0
+	initial = yes
+	randomized = no
+	advanced_trait = yes
+	allowed_archetypes = { BIOLOGICAL }
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_remove = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	opposites = { "trait_xeno_compatibility_female_a" "trait_xeno_compatibility_female_q" "trait_xeno_compatibility_male_p" "trait_xeno_compatibility_male_i" "trait_xeno_compatibility_male_g" "trait_omni_compatibility" }
+
+	triggered_planet_growth_habitability_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				NOT = { 
+					any_owned_pop = { has_female_species_trait = yes } 
+				}
+			}
+		}
+		pop_growth_speed = -0.8
+	}
+
+	modifier = {
+		leader_lifespan_add = 30
+		pop_job_trade_mult = 0.30
+		pop_growth_speed = -0.20
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+trait_xeno_compatibility_male_g = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_perfected_genes.dds"
+	potential_crossbreeding_chance = 0
+	initial = yes
+	randomized = no
+	advanced_trait = yes
+	allowed_archetypes = { BIOLOGICAL }
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_remove = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	opposites = { "trait_xeno_compatibility_female_a" "trait_xeno_compatibility_female_q" "trait_xeno_compatibility_male_p" "trait_xeno_compatibility_male_i" "trait_xeno_compatibility_male_r" "trait_omni_compatibility" }
+
+	triggered_planet_growth_habitability_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				NOT = { 
+					any_owned_pop = { has_female_species_trait = yes } 
+				}
+			}
+		}
+		pop_growth_speed = -1
+	}
+
+	modifier = {
+		planet_jobs_worker_produces_mult = 0.05
+		species_empire_size_mult = -0.20
+		species_leader_exp_gain = -0.30
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+trait_omni_compatibility = {
+	cost = 2
+	icon = "gfx/interface/icons/traits/trait_perfected_genes.dds"
+	potential_crossbreeding_chance = 0
+	initial = yes
+	randomized = no
+	advanced_trait = yes
+	allowed_archetypes = { BIOLOGICAL }
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_remove = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	opposites = { "trait_xeno_compatibility_male_p" "trait_xeno_compatibility_female_a" "trait_xeno_compatibility_male_i" "trait_xeno_compatibility_female_q" "trait_xeno_compatibility_male_r" "trait_xeno_compatibility_male_g"}
+
+	modifier = {
+		pop_growth_speed = 0.10
+	}
+	slave_cost = {
+		energy = 750
 	}
 }
 

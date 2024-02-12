@@ -8,10 +8,12 @@
 #	it is set to weight 0 if the planet has no need of more max districts or of districts
 #   of the type gained from clearing the blocker.
 
-@blocker_high = 12
-@blocker_low = 6
+@blocker_high = 13
+@blocker_low = 7
 @ranger_small_production = 1
 @ranger_large_production = 2
+@ranger_small_research_production = 2
+@ranger_large_research_production = 4
 
 d_mountain_range = {
 	time = 270
@@ -223,7 +225,7 @@ d_dangerous_wildlife_blocker = {
 			exists = owner
 			owner = { has_civic = civic_environmentalist }
 		}
-		planet_rangers_society_research_produces_add = @ranger_small_production
+		planet_rangers_society_research_produces_add = @ranger_small_research_production
 		planet_rangers_food_produces_add = @ranger_small_production
 	}
 
@@ -393,7 +395,7 @@ d_toxic_kelp = {
 			exists = owner
 			owner = { has_civic = civic_environmentalist }
 		}
-		planet_rangers_society_research_produces_add = @ranger_small_production
+		planet_rangers_society_research_produces_add = @ranger_small_research_production
 	}
 
 	all_blocker_swap_types = yes
@@ -551,7 +553,7 @@ d_quicksand_basin = {
 			exists = owner
 			owner = { has_civic = civic_environmentalist }
 		}
-		planet_rangers_engineering_research_produces_add = @ranger_small_production
+		planet_rangers_engineering_research_produces_add = @ranger_small_research_production
 	}
 
 	all_blocker_swap_types = yes
@@ -705,7 +707,7 @@ d_massive_glacier = {
 			exists = owner
 			owner = { has_civic = civic_environmentalist }
 		}
-		planet_rangers_society_research_produces_add = @ranger_small_production
+		planet_rangers_society_research_produces_add = @ranger_small_research_production
 	}
 
 	all_blocker_swap_types = yes
@@ -893,7 +895,7 @@ d_trench_rapids = {
 			exists = owner
 			owner = { has_civic = civic_environmentalist }
 		}
-		planet_rangers_engineering_research_produces_add = @ranger_small_production
+		planet_rangers_engineering_research_produces_add = @ranger_small_research_production
 	}
 
 	inline_script = deposits/ai_weight_natural_blocker
@@ -944,6 +946,10 @@ d_radioactive_wasteland = {
 				value < 2
 			}
 		}
+		modifier = {
+			factor = 2
+			is_planet_class = pc_nuked
+		}
 	}
 }
 
@@ -954,8 +960,10 @@ d_city_ruins = {
 	category = deposit_cat_blockers
 
 	potential = {
-		is_planet_class = pc_nuked
-		is_planet_class = pc_relic
+		OR = {
+			is_planet_class = pc_nuked
+			is_planet_class = pc_relic
+		}
 	}
 
 	planet_modifier = {
@@ -976,6 +984,13 @@ d_city_ruins = {
 			num_free_districts = {
 				type = district_city
 				value < 2
+			}
+		}
+		modifier = {
+			factor = 2
+			OR = {
+				is_planet_class = pc_nuked
+				is_planet_class = pc_relic
 			}
 		}
 	}
@@ -1013,6 +1028,10 @@ d_bomb_crater = {
 				type = district_city
 				value < 2
 			}
+		}
+		modifier = {
+			factor = 2
+			is_planet_class = pc_nuked
 		}
 	}
 }
@@ -1090,7 +1109,7 @@ d_wandering_forests = {
 			exists = owner
 			owner = { has_civic = civic_environmentalist }
 		}
-		planet_rangers_society_research_produces_add = @ranger_small_production
+		planet_rangers_society_research_produces_add = @ranger_small_research_production
 		planet_rangers_food_produces_add = @ranger_small_production
 	}
 }
@@ -1129,6 +1148,14 @@ d_titanic_life_blocker = {	#Added via event
 		produces = {
 			society_research = 8
 		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_minerals_produces_add = @ranger_large_production
 	}
 
 	planet_modifier = {

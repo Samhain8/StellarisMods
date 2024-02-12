@@ -59,9 +59,10 @@ slavery_domestic = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 4
+			factor = 5
 			OR = {
 				has_trait = trait_charismatic
+				has_trait = trait_charming
 				has_trait = trait_crafted_smiles
 			}
 		}
@@ -70,8 +71,6 @@ slavery_domestic = {
 			OR = {
 				has_trait = trait_crafted_charm
 				has_trait = trait_perfected_charm
-				has_trait = trait_xeno_compatibility
-				has_trait = trait_interbreeder
 			}
 		}
 		modifier = {
@@ -275,6 +274,8 @@ slavery_livestock = {
 
 slavery_pets = {
 	pop_modifier = {
+		planet_jobs_unity_produces_mult = 0.20
+		planet_jobs_produces_mult = -0.10
 		pop_happiness = -0.30
 	}
 

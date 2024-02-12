@@ -18,6 +18,7 @@ researcher = {
 	possible_precalc = can_fill_specialist_job
 	possible = {
 		complex_specialist_job_check_trigger = yes
+		nondomestic_specialist_job_check_trigger = yes
 	}
 
 	triggered_country_modifier = {
@@ -104,6 +105,7 @@ xeno_zoo_keeper = {
 	possible_precalc = can_fill_specialist_job
 	possible = {
 		complex_specialist_job_check_trigger = yes
+		nondomestic_specialist_job_check_trigger = yes
 	}
 
 	resources = {
@@ -807,12 +809,10 @@ entertainer = {
 			exists = owner
 			OR = {
 				owner = { is_pleasure_seeker = yes }
-				has_trait = trait_xeno_compatibility
-				has_trait = trait_interbreeder
 			}
 		}
 		modifier = {
-			pop_growth_speed = 0.03
+			pop_growth_speed = 0.02
 		}
 	}
 
@@ -882,13 +882,6 @@ entertainer = {
 			OR = {
 				has_trait = trait_thrifty
 				has_trait = trait_robot_trading_algorithms
-			}
-		}
-		modifier = {
-			factor = 5
-			OR = {
-				has_trait = trait_xeno_compatibility
-				has_trait = trait_interbreeder
 			}
 		}
 		modifier = {
@@ -1514,6 +1507,9 @@ roboticist = {
 	}
 
 	possible_precalc = can_fill_specialist_job
+	possible = {
+		nondomestic_specialist_job_check_trigger = yes
+	}
 
 	triggered_planet_modifier = {
 		potential = {
@@ -1764,6 +1760,9 @@ trader = {
 	}
 
 	possible_precalc = can_fill_specialist_job
+	possible = {
+		nondomestic_specialist_job_check_trigger = yes
+	}
 
 	resources = {
 		category = planet_traders
@@ -2744,6 +2743,7 @@ artisan = {
 		owner = {
 			is_gestalt = no
 		}
+		nondomestic_specialist_job_check_trigger = yes
 	}
 
 	resources = {
@@ -3072,6 +3072,9 @@ reassigner = {
 	}
 
 	possible_precalc = can_fill_specialist_job
+	possible = {
+		nondomestic_specialist_job_check_trigger = yes
+	}
 
 	planet_modifier = {
 		planet_pop_assembly_organic_add = 2
@@ -3194,6 +3197,7 @@ knight = {
 		owner = {
 			is_gestalt = no
 		}
+		nondomestic_specialist_job_check_trigger = yes
 	}
 
 	resources = {
@@ -3301,6 +3305,7 @@ archaeoengineers = {
 	possible_precalc = can_fill_specialist_job
 	possible = {
 		complex_specialist_job_check_trigger = yes
+		nondomestic_specialist_job_check_trigger = yes
 	}
 
 	resources = {

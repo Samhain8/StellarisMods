@@ -15,7 +15,7 @@ ocean_paradise = {
 	icon_frame = 1
 	pop_happiness = 0.15
 	pop_growth_speed = 0.3
-	planet_jobs_produces_mult = 0.1
+	planet_jobs_food_produces_mult = 0.3
 }
 
 ocean_paradise_hive = {
@@ -23,5 +23,5 @@ ocean_paradise_hive = {
 	icon_frame = 1
 	planet_stability_add = 10
 	pop_growth_speed = 0.3
-	planet_jobs_produces_mult = 0.1
+	planet_jobs_food_produces_mult = 0.3
 }

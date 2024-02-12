@@ -30,6 +30,7 @@ entertainer_job_check_trigger = {
 			is_enslaved = no
 			has_slavery_type = { type = slavery_domestic }
 			has_slavery_type = { type = slavery_indentured }
+			has_slavery_type = { type = slavery_pets }
 		}
 		is_being_purged = no
 		is_being_assimilated = no

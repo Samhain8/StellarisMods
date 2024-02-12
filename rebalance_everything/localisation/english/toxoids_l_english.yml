@@ -752,6 +752,12 @@
  trait_excessive_endurance:0 "Excessive Endurance"
  trait_excessive_endurance_desc:0 "§LThe greatest in adaptability genes have been hyper-expressed in these specimens. Mutation rates around 30% indicate a somewhat stable and successful experiment.§!"
  excessive_endurance_tooltip:0 "Habitability: §G+30%§!\nResources from Jobs: §G+5%§!"
+ trait_compliance_instincts:0 "Compliance Instincts"
+ trait_compliance_instincts_desc:0 "§LCarrying out direct orders promptly or receiving praise from a master triggers a generous endorphins release. Mind your wording and be wary of addiction.§!"
+ trait_thrill_seeker:0 "Thrill Seeker"
+ trait_thrill_seeker_desc:0 "§LThe drive to find excitement in their lives makes these specimens particularly brave, frisky, and prone to accidents.§!"
+ trait_crafted_charm:0 "Crafted Charm"
+ trait_crafted_charm_desc:0 "§LCarefully curated aesthetic gene banks allow for the customization of one's appearance to any taste. Sometimes at the expense of more functional options.§!"
 
  edict_damn_the_consequences:0 "Damn the Consequences"
  edict_damn_the_consequences_desc:1 "This Edict pushes our genetic modifications to the very limit, doubling their effect but also causing an increased amount of terrible side-effects, including sudden catastrophic combustion.\n\n§RWhat could possibly go wrong?§!"

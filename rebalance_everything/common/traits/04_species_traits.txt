@@ -169,7 +169,7 @@ trait_thrifty = {
 		always = yes
 	}
 	allowed_archetypes = { BIOLOGICAL LITHOID }
-	opposites = { "trait_hive_mind" }
+	opposites = { "trait_hive_mind" "trait_charming" }
 	modifier = {
 		pop_job_trade_mult = 0.25
 	}
@@ -181,6 +181,28 @@ trait_thrifty = {
 			add = 1.5
 			from = { has_trade_designation = yes }
 		}
+	}
+}
+
+trait_charming = {
+	icon = "gfx/interface/icons/traits/trait_charismatic.dds"
+	cost = 2
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	potential_crossbreeding_chance = 1.0
+
+	opposites = { "trait_repugnant" "trait_charismatic" "trait_thrifty" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		pop_job_trade_mult = 0.15
+		pop_job_amenities_mult = 0.15
+	}
+	slave_cost = {
+		energy = 500
 	}
 }
 
@@ -795,7 +817,7 @@ trait_charismatic = {
 	}
 	potential_crossbreeding_chance = 1.0
 
-	opposites = { "trait_repugnant" }
+	opposites = { "trait_repugnant" "trait_charming" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 		pop_job_amenities_mult = 0.15

@@ -364,7 +364,7 @@ lost_owned_pop = {
 
 hazardous_weather = {
 	pop_environment_tolerance = -0.10
-	pop_happiness = -0.05
+	#pop_happiness = -0.05
 	planet_jobs_energy_produces_mult = 0.20
 	district_generator_max = 4
 
@@ -374,7 +374,7 @@ hazardous_weather = {
 
 dangerous_wildlife = {
 	pop_environment_tolerance = -0.10
-	pop_happiness = -0.05
+	#pop_happiness = -0.05
 	planet_jobs_society_research_produces_mult = 0.20
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_dangerous_wildlife.dds"
@@ -400,7 +400,7 @@ strong_magnetic_field = {
 
 unstable_tectonics = {
 	pop_environment_tolerance = -0.10
-	pop_happiness = -0.05
+	#pop_happiness = -0.05
 	planet_jobs_engineering_research_produces_mult = 0.20
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_unstable_tectonics.dds"
@@ -444,7 +444,7 @@ carbon_world = {
 
 wild_storms = {
 	pop_environment_tolerance = -0.05
-	pop_happiness = -0.05
+	#pop_happiness = -0.05
 	planet_jobs_physics_research_produces_mult = 0.20
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_wild_storms.dds"
@@ -568,7 +568,9 @@ irradiated_planet = {
 }
 
 low_gravity = {
-	planet_buildings_cost_mult = -0.1
+	planet_buildings_cost_mult = -0.15
+	planet_districts_cost_mult = -0.15
+	pop_happiness = 0.05
 	pop_environment_tolerance = -0.05
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_low_gravity.dds"
@@ -576,10 +578,11 @@ low_gravity = {
 }
 
 high_gravity = {
-	planet_buildings_cost_mult = 0.1
-	planet_districts_cost_mult = 0.1
+	planet_buildings_cost_mult = 0.15
+	planet_districts_cost_mult = 0.15
+	pop_happiness = -0.05
 	pop_environment_tolerance = -0.05
-	planet_max_districts_add = 2
+	#planet_max_districts_add = 2
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_high_gravity.dds"
 	icon_frame = 2
@@ -783,7 +786,7 @@ gas_giant_colony = {
 
 abandoned_terraforming = {
 	planet_jobs_food_produces_mult = -0.2
-	pop_happiness = -0.1
+	pop_environment_tolerance = -0.1
 	icon = "gfx/interface/icons/planet_modifiers/pm_asteroid_impacts.dds"
 	icon_frame = 3
 }

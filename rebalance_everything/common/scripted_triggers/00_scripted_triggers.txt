@@ -3315,6 +3315,24 @@ has_psionic_species_trait = {
 	}
 }
 
+has_male_species_trait = {
+	OR = {
+		has_trait = trait_xeno_compatibility_male_p
+		has_trait = trait_xeno_compatibility_male_i
+		has_trait = trait_xeno_compatibility_male_r
+		has_trait = trait_xeno_compatibility_male_g
+		has_trait = trait_omni_compatibility
+	}
+}
+
+has_female_species_trait = {
+	OR = {
+		has_trait = trait_xeno_compatibility_female_a
+		has_trait = trait_xeno_compatibility_female_q
+		has_trait = trait_omni_compatibility
+	}
+}
+
 is_pleasure_seeker = {
 	OR = {
 		has_valid_civic = civic_pleasure_seekers

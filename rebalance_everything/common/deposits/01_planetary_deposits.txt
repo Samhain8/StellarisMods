@@ -12,7 +12,7 @@
 # all_terraforming_swap_types = yes/no
 # use_weights_for_terraforming_swap_types = yes/no
 
-@high = 16
+@high = 14
 @med = 8
 @low = 4
 
@@ -24,6 +24,8 @@
 
 @ranger_small_production = 1
 @ranger_large_production = 2
+@ranger_small_research_production = 2
+@ranger_large_research_production = 4
 @ranger_rare_small_production = 0.1
 @ranger_rare_large_production = 0.25
 
@@ -1828,8 +1830,8 @@ d_betharian_deposit = {
 			exists = owner
 			owner = { has_civic = civic_environmentalist }
 		}
-		planet_rangers_physics_research_produces_add = @ranger_small_production
-		planet_rangers_engineering_research_produces_add = @ranger_small_production
+		planet_rangers_physics_research_produces_add = @ranger_small_research_production
+		planet_rangers_engineering_research_produces_add = @ranger_small_research_production
 	}
 
 	drop_weight = {
@@ -1886,7 +1888,7 @@ d_alien_pets_deposit = {
 			exists = owner
 			owner = { has_civic = civic_environmentalist }
 		}
-		planet_rangers_society_research_produces_add = @ranger_small_production
+		planet_rangers_society_research_produces_add = @ranger_small_research_production
 		planet_rangers_unity_produces_add = @ranger_small_production
 	}
 

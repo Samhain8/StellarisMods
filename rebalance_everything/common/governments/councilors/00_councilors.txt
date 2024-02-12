@@ -484,7 +484,8 @@ councilor_environmentalist = {
 	}
 	civic = civic_environmentalist
 	modifier = {
-		pop_environment_tolerance = 0.015
+		pop_environment_tolerance = 0.01
+		planet_rangers_unity_produces_add = 0.2
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -499,6 +500,7 @@ councilor_exalted_priesthood = {
 	civic = civic_exalted_priesthood
 	modifier = {
 		planet_priests_upkeep_mult = -0.02
+		pop_amenities_usage_mult = -0.01
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -529,7 +531,9 @@ councilor_feudal_realm = {
 	}
 	civic = civic_feudal_realm
 	modifier = {
-		subjects_unity_produces_add = 5
+		#subjects_unity_produces_add = 5
+		monthly_loyalty_from_subjects = 0.1
+		diplo_weight_mult = 0.02
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -879,7 +883,8 @@ councilor_slaver_guilds = {
 	}
 	civic = civic_slaver_guilds
 	modifier = {
-		pop_cat_slave_happiness = 0.02
+		pop_cat_slave_happiness = 0.01
+		planet_jobs_slave_produces_mult = 0.01
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -893,7 +898,7 @@ councilor_technocracy = {
 	}
 	civic = civic_technocracy
 	modifier = {
-		planet_researchers_upkeep_mult = -0.02
+		planet_researchers_upkeep_mult = -0.025
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
