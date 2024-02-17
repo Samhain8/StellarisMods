@@ -1831,7 +1831,7 @@ d_betharian_deposit = {
 			owner = { has_civic = civic_environmentalist }
 		}
 		planet_rangers_physics_research_produces_add = @ranger_small_research_production
-		planet_rangers_engineering_research_produces_add = @ranger_small_research_production
+		planet_rangers_energy_produces_add = @ranger_small_production
 	}
 
 	drop_weight = {

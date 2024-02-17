@@ -928,7 +928,7 @@ councilor_warrior_culture = {
 	civic = civic_warrior_culture
 	custom_tooltip = "councilor_warrior_culture_custom_modifier_desc"
 	modifier = {
-		planet_entertainers_unity_produces_add = 0.2
+		planet_entertainers_unity_produces_add = 0.15
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights

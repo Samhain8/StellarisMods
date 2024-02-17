@@ -131,6 +131,15 @@ soldier_job_check_trigger = {
 	}
 }
 
+honor_guard_job_check_trigger = {
+	hidden_trigger = {
+		exists = owner
+		has_military_service_type = {
+			type = military_service_full
+		}
+	}
+}
+
 page_job_check_trigger = {
 	hidden_trigger = {
 		exists = owner

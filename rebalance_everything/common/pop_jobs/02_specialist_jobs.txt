@@ -915,7 +915,6 @@ duelist = {
 		category = planet_entertainers
 		produces = {
 			unity = 3
-			engineering_research = 1
 		}
 		upkeep = {
 			alloys = 1
@@ -927,7 +926,7 @@ duelist = {
 			has_councilor = { COUNCILOR = "councilor_warrior_culture" }
 		}
 
-		planet_amenities_add = 1
+		planet_amenities_add = 0.5
 		mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_amenities_mult|TYPE|councilor_warrior_culture|
 	}
 
@@ -944,7 +943,7 @@ duelist = {
 			has_councilor = { COUNCILOR = "councilor_warrior_culture" }
 		}
 
-		country_naval_cap_add = 0.6
+		country_naval_cap_add = 0.3
 		mult = value:councilor_level|TYPE|councilor_warrior_culture|
 	}
 

@@ -86,13 +86,13 @@ servant = {
 		}
 	}
 
-	#weight = {
-	#	weight = @special_job_weight
-	#	modifier = {
-	#		factor = 100000
-	#		is_pet_slave = yes
-	#	}
-	#}
+	weight = {
+		weight = @special_job_weight
+		#modifier = {
+		#	factor = 100000
+		#	is_pet_slave = yes
+		#}
+	}
 }
 
 slave_overseer = {
@@ -924,6 +924,15 @@ criminal = {
 
 	weight = {
 		weight = @criminal_job_weight
+		modifier = {
+			factor = 5
+			OR = {
+				has_slavery_type = { type = slavery_normal country = root }
+				has_slavery_type = { type = slavery_military country = root }
+				has_slavery_type = { type = slavery_matrix country = root }
+				has_slavery_type = { type = slavery_livestock country = root }
+			}
+		}
 	}
 }
 

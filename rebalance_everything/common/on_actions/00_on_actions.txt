@@ -2759,11 +2759,11 @@ on_colony_2_years_old = {
 		10 = colony_fed.100 # Impossible Corrie
 		10 = colony.9295 # Metallic Puddles
 
-		5 = colony.100 # Abandoned Terraforming
 		5 = colony.1520 # Mharin Kharin
 		5 = colony.180 # Asteroid Sighted
 		5 = colony.2050 # Clerical Errors
 
+		#5 = colony.100 # Abandoned Terraforming
 		#5 = colony.8099 # Insidious Ophidians
 		#5 = colony.2001 # Trouble in Paradise
 		#5 = colony.2025 # What Separates Us
@@ -2821,11 +2821,11 @@ on_colony_3_years_old = {
 		10 = colony_fed.100 # Impossible Corrie
 		10 = colony.9295 # Metallic Puddles
 
-		5 = colony.100 # Abandoned Terraforming
 		5 = colony.1520 # Mharin Kharin
 		5 = colony.180 # Asteroid Sighted
 		5 = colony.2050 # Clerical Errors
 
+		#5 = colony.100 # Abandoned Terraforming
 		#5 = colony.8099 # Insidious Ophidians
 		#5 = colony.2001 # Trouble in Paradise
 		#5 = colony.2025 # What Separates Us
@@ -2860,7 +2860,6 @@ on_colony_4_years_old = {
 		
 		# high because new, lower when I know what it is
 		50 = colony.9310 # Junkyard Orbit
-		50 = colony.9900 # Dimensional Prison
 		50 = astral_planes.6029 # Astralnomical Marvel
 
 		10 = colony.50 # Subterranean Aliens
@@ -2879,11 +2878,13 @@ on_colony_4_years_old = {
 		10 = colony_fed.100 #Impossible Corrie
 		10 = colony.9295 #Metallic Puddles
 
-		5 = colony.100 # Abandoned Terraforming
+		5 = colony.9900 # Dimensional Prison
+
 		5 = colony.1520 # Mharin Kharin
 		5 = colony.180 # Asteroid Sighted
 		5 = colony.2050 # Clerical Errors
 
+		#5 = colony.100 # Abandoned Terraforming
 		#5 = colony.8099 # Insidious Ophidians
 		#5 = colony.2001 # Trouble in Paradise
 		#5 = colony.2025 # What Separates Us
@@ -2909,7 +2910,6 @@ on_colony_5_years_old = {
 		
 		# high because new, lower when I know what it is
 		30 = colony.9310 # Junkyard Orbit
-		30 = colony.9900 # Dimensional Prison
 
 		5 = colony.50 # Subterranean Aliens
 		5 = colony.8001 # Feral Overload
@@ -2920,11 +2920,13 @@ on_colony_5_years_old = {
 		5 = federations2.8 # Dancing Plague
 		5 = situation.5 # Mysterious Labyrinth
 
-		10 = colony.100 # Abandoned Terraforming
+		5 = colony.9900 # Dimensional Prison
+
 		10 = colony.1520 # Mharin Kharin
 		10 = colony.180 # Asteroid Sighted
 		10 = colony.2050 # Clerical Errors
 
+		#10 = colony.100 # Abandoned Terraforming
 		#10 = colony.8099 # Insidious Ophidians
 		#5 = colony.2001 # Trouble in Paradise
 		#5 = colony.2025 # What Separates Us

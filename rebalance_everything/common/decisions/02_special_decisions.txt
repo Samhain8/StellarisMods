@@ -33,10 +33,12 @@ decision_prospect = {
 		hidden_effect = {
 			set_planet_flag = planet_prospected
 			random_list = {
-				7 = { add_random_non_blocker_deposit = yes }
-				1 = { add_deposit = d_dust_caverns }
-				1 = { add_deposit = d_bubbling_swamp }
-				1 = { add_deposit = d_crystalline_caverns }
+				12 = { add_random_non_blocker_deposit = yes }
+				2 = { add_deposit = d_dust_caverns }
+				2 = { add_deposit = d_bubbling_swamp }
+				2 = { add_deposit = d_crystalline_caverns }
+				1 = { add_deposit = d_betharian_deposit }
+				1 = { add_deposit = d_alien_pets_deposit }
 			}
 			create_message = {
 				type = MESSAGE_TYPE_PLANET_PROSPECTED

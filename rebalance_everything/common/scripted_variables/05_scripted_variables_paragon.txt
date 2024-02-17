@@ -133,7 +133,7 @@
 #Councilor values
 @councilor_indentured_assets_trade_value = 0.2
 @councilor_corporate_hedonism_entertainer_trade_value = 0.5
-@councilor_private_military_companies_stability = 0.25
+@councilor_private_military_companies_trade_value = 0.3
 @councilor_mining_guilds_miner_stability = 0.05
 @councilor_anglers_pearl_diver_consumer_goods_bonus = 0.2
 @councilor_anglers_angler_food_bonus = 0.3

@@ -1175,7 +1175,7 @@ tech_mountain_range = {
 			}
 		}
 		modifier = {
-			factor = 0.33
+			factor = 0.2
 			has_valid_civic = civic_environmentalist
 		}
 		modifier = {

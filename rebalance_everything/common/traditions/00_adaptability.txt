@@ -36,12 +36,12 @@ tr_adaptability_finish = {
 tr_adaptability_recycling = {
 	custom_tooltip = tr_adaptability_recycling_desc
 	modifier = {
-		planet_structures_volatile_motes_upkeep_mult = -0.10
-		planet_structures_exotic_gases_upkeep_mult = -0.10
-		planet_structures_rare_crystals_upkeep_mult = -0.10
-		planet_structures_volatile_motes_cost_mult = -0.10
-		planet_structures_exotic_gases_cost_mult = -0.10
-		planet_structures_rare_crystals_cost_mult = -0.10
+		planet_structures_volatile_motes_upkeep_mult = -0.15
+		planet_structures_exotic_gases_upkeep_mult = -0.15
+		planet_structures_rare_crystals_upkeep_mult = -0.15
+		planet_structures_volatile_motes_cost_mult = -0.15
+		planet_structures_exotic_gases_cost_mult = -0.15
+		planet_structures_rare_crystals_cost_mult = -0.15
 	}
 
 	ai_weight = {
@@ -56,6 +56,8 @@ tr_adaptability_survival_fittest = {
 	modifier = {
 		planet_orbital_bombardment_damage = -0.25
 		army_defense_damage_mult = 0.25
+		BIOLOGICAL_species_trait_points_add = 1
+		ROBOT_species_trait_points_add = 1
 	}
 	ai_weight = {
 		factor = 5000
@@ -127,6 +129,7 @@ tr_adaptability_appropriation = {
 
 	modifier = {
 		pop_resettlement_cost_mult = -0.5
+		pop_demotion_time_mult = -0.5
 	}
 
 	ai_weight = {

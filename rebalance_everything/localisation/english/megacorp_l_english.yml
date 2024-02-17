@@ -1291,9 +1291,17 @@
  mod_job_politician_per_pop:0 "§G+1§! $job_politician$ Job per $VALUE$ Pops"
  mod_job_politician_per_pop_short:0 "\n§G+1§! £mod_job_politician_add£ per $VALUE$ £pop£"
 
+ job_honor_guard:0 "Honor Guard"
+ job_honor_guard_plural:0 "Honor Guards"
+ job_honor_guard_desc:1 "The cream of the crop of our military, made of promising officers and decorated veterans."
+ job_honor_guard_effect_desc:0 "£job_honor_guard£ $job_honor_guard_plural$ turn £alloys£ §Y$alloys$§! into £unity£ §Y$unity$§!, Naval Capacity and Stability"
+ mod_job_honor_guard_add:0 "$job_honor_guard$ Jobs"
+ mod_job_honor_guard_per_pop:0 "§G+1§! $job_honor_guard$ Job per $VALUE$ Pops"
+ mod_job_honor_guard_per_pop_short:0 "\n§G+1§! £mod_job_honor_guard_add£ per $VALUE$ £pop£"
+
  job_noble:0 "Noble"
  job_noble_plural:0 "Nobles"
- job_noble_desc:1 "Heavy is the burden of the nobility, whose birthright is to rule over their unwashed lessers. Luckily, there are a few financial advantages to the position."
+ job_noble_desc:1 "Members of the nobility, whose duty and birthright is to rule over their lessers, and play the great galactic game of thrones."
  job_noble_effect_desc:2 "£job_noble£ $job_noble_plural$ turn £consumer_goods£ §Y$consumer_goods$§! into £unity£ §Y$unity$§!, £mod_planet_amenities_add£ §Y$PLANET_AMENITIES_TITLE$§! and £mod_planet_stability_add£ §Y$PLANET_STABILITY_TITLE$§!"
  mod_job_noble_add:0 "$job_noble$ Jobs"
  mod_job_noble_per_pop:0 "§G+1§! $job_noble$ Job per $VALUE$ Pops"
