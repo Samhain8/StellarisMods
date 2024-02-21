@@ -2100,7 +2100,7 @@ civic_pleasure_seekers = {
 		}
 	}
 	modifier = {
-		pop_amenities_usage_mult = 0.5
+		pop_amenities_usage_mult = 1
 	}
 	random_weight = {
 		base = @civic_uncommon_random_weight

@@ -24,8 +24,8 @@
 
 @ranger_small_production = 1
 @ranger_large_production = 2
-@ranger_small_research_production = 2
-@ranger_large_research_production = 4
+@ranger_small_research_production = 1.5
+@ranger_large_research_production = 3
 @ranger_rare_small_production = 0.1
 @ranger_rare_large_production = 0.25
 

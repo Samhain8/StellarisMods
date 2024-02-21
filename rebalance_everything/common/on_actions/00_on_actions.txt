@@ -2731,7 +2731,6 @@ on_colony_2_years_old = {
 	random_events = {
 		100 = 0
 
-
 		### Colony Events & Chains - 14
 		
 		# high because new, lower when I know what it is
@@ -2775,16 +2774,6 @@ on_colony_2_years_old = {
 		### Archaeology Colony Sites
 		5 = ancrel.6049 # Blade of the Huntress
 		5 = ancrel.15010 # Mask of Transformation
-
-		### Tomb Worlds - 8
-		20 = colony.150 # Underground Vault
-		20 = colony.155 # Nuclear Bomb
-		20 = colony.160 # Particle Accelerator
-		20 = colony.161 # Surviving Infrastructure
-		20 = colony.162 # Space Station
-		20 = colony.163 # Wasteland Radiation
-		20 = colony.164 # Pacifist Movement
-		20 = colony.170 # Orbital Debris
 	}
 }
 
@@ -2845,8 +2834,8 @@ on_colony_3_years_old = {
 		20 = colony.161 # Surviving Infrastructure
 		20 = colony.162 # Space Station
 		20 = colony.163 # Wasteland Radiation
-		20 = colony.164 # Pacifist Movement
 		20 = colony.170 # Orbital Debris
+		#20 = colony.164 # Pacifist Movement
 		
 		### Astral Rifts anomalies
 	}
@@ -2859,7 +2848,6 @@ on_colony_4_years_old = {
 		### Colony Events & Chains - 14
 		
 		# high because new, lower when I know what it is
-		50 = colony.9310 # Junkyard Orbit
 		50 = astral_planes.6029 # Astralnomical Marvel
 
 		10 = colony.50 # Subterranean Aliens
@@ -2884,6 +2872,7 @@ on_colony_4_years_old = {
 		5 = colony.180 # Asteroid Sighted
 		5 = colony.2050 # Clerical Errors
 
+		#5 = colony.9310 # Junkyard Orbit
 		#5 = colony.100 # Abandoned Terraforming
 		#5 = colony.8099 # Insidious Ophidians
 		#5 = colony.2001 # Trouble in Paradise
@@ -2907,9 +2896,6 @@ on_colony_5_years_old = {
 		1 = 0
 
 		### Colony Events & Chains - 14
-		
-		# high because new, lower when I know what it is
-		30 = colony.9310 # Junkyard Orbit
 
 		5 = colony.50 # Subterranean Aliens
 		5 = colony.8001 # Feral Overload
@@ -2926,6 +2912,7 @@ on_colony_5_years_old = {
 		10 = colony.180 # Asteroid Sighted
 		10 = colony.2050 # Clerical Errors
 
+		#5 = colony.9310 # Junkyard Orbit
 		#10 = colony.100 # Abandoned Terraforming
 		#10 = colony.8099 # Insidious Ophidians
 		#5 = colony.2001 # Trouble in Paradise
@@ -2946,8 +2933,8 @@ on_colony_5_years_old = {
 		10 = colony.161 # Surviving Infrastructure
 		10 = colony.162 # Space Station
 		10 = colony.163 # Wasteland Radiation
-		10 = colony.164 # Pacifist Movement
 		10 = colony.170 # Orbital Debris
+		#10 = colony.164 # Pacifist Movement
 	}
 }
 

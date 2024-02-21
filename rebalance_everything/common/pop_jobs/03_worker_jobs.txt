@@ -130,30 +130,12 @@ clerk = {
 			unity = 0.25
 		}
 	}
-
-	resources = {
-		category = planet_artisans
-		produces = {
-			trigger = {
-				owner = { has_slaver_civic = yes }
-			}
-			consumer_goods = 1
-		}
-	}
 	
 	triggered_pop_modifier = {
 		potential = {
 			owner = { has_modifier = paragon_origin_strengthened_government_ii }
 		}
 		pop_political_power = 0.25
-	}
-
-	triggered_pop_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_slaver_civic = yes }
-		}
-		pop_housing_usage_add = -0.25
 	}
 
 	triggered_pop_modifier = {
@@ -192,15 +174,6 @@ clerk = {
 		}
 		trade_value_add = 1
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_tradition = tr_mercantile_trickle_up_economics }
-		}
-		planet_amenities_add = 1
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
 	triggered_country_modifier = {
@@ -1463,6 +1436,12 @@ page = {
 			}
 			unity = 1
 		}
+		produces = {
+			trigger = {
+				is_pet_slave = yes
+			}
+			unity = 1
+		}
 	}
 
 	triggered_planet_modifier = {
@@ -1488,7 +1467,7 @@ page = {
 			owner = { is_pleasure_seeker = yes }
 		}
 		modifier = {
-			pop_growth_speed = 0.01
+			pop_growth_speed = 0.02
 		}
 	}
 
@@ -1507,6 +1486,15 @@ page = {
 			owner = { has_slaver_civic = yes }
 		}
 		trade_value_add = 2
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_mercantile_trickle_up_economics }
+		}
+		trade_value_add = 1
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
 	}
 

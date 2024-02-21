@@ -225,6 +225,15 @@ slave = {
 
 	triggered_planet_modifier = {
 		potential = {
+			exists = owner
+			owner = { has_slaver_civic = yes }
+		}
+		trade_value_add = 1
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
 			owner = {
 				has_councilor = { COUNCILOR = "councilor_indentured_assets" } 
 			}

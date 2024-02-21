@@ -9,6 +9,8 @@
 @rw_maintenance = 5
 @rw_maintenance_sr = 2
 
+@ranger_small_research_production = 1.5
+
 ############################
 #	Federations Deposits	#
 ############################
@@ -861,6 +863,24 @@ d_spore_vents = {
 		}
 		job_gas_plant_engineer_add = 2
 		job_gas_plant_engineer_per_pop = 0.05 # 1 per 20
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_society_research_produces_add = @ranger_small_research_production
 	}
 
 	# For Gestalt Empires

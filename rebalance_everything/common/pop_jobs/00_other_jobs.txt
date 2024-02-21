@@ -34,9 +34,9 @@ servant = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_slaver_civic = yes }
+			owner = { has_tradition = tr_mercantile_trickle_up_economics }
 		}
-		trade_value_add = 2
+		trade_value_add = 1
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
 	}
 
@@ -192,6 +192,7 @@ slave_toiler = {
 			}
 			minerals = 1
 			food = 1
+			consumer_goods = 1
 		}
 	}
 
@@ -302,15 +303,6 @@ livestock = {
 		}
 		produces = {
 			trigger = {
-				exists = owner
-				owner = { has_slaver_civic = yes }
-				is_organic_species = yes
-				is_lithoid = no
-			}
-			food = 1
-		}
-		produces = {
-			trigger = {
 				is_lithoid = yes
 			}
 			minerals = 2
@@ -328,14 +320,6 @@ livestock = {
 				planet = { has_active_building = building_mineral_purification_hub }
 			}
 			minerals = 2
-		}
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_slaver_civic = yes }
-				is_lithoid = yes
-			}
-			minerals = 1
 		}
 		produces = {
 			trigger = {
@@ -405,8 +389,7 @@ livestock_zoo_animal = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_slaver_civic = yes }
+			is_pet_slave = yes
 		}
 		trade_value_add = 2
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
@@ -489,11 +472,21 @@ livestock_zoo_beast = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_slaver_civic = yes }
+			is_pet_slave = yes
 		}
 		trade_value_add = 2
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_slavery_type = { type = slavery_pets }
+			exists = owner
+			owner = { is_pleasure_seeker = yes }
+		}
+		modifier = {
+			pop_growth_speed = 0.02
+		}
 	}
 
 	weight = {
