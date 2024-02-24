@@ -48,9 +48,9 @@ unity_conversion =
 
 	conversion_rate = {
 		energy = 0.5
-		physics_research = 0.2
-		engineering_research = 0.2
-		society_research = 0.2
+		physics_research = 0.15
+		engineering_research = 0.15
+		society_research = 0.15
 		#unity = 0.25
 	}
 
@@ -70,9 +70,9 @@ trade_league_conversion =
 	conversion_rate = {
 		energy = 0.5
 		consumer_goods = 0.2
-		physics_research = 0.15
-		engineering_research = 0.15
-		society_research = 0.15
+		physics_research = 0.1
+		engineering_research = 0.1
+		society_research = 0.1
 		#unity = 0.2
 	}
 

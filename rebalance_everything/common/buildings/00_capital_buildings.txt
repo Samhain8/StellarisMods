@@ -210,8 +210,9 @@ building_capital = {
 			exists = owner
 			owner = { 
 				OR = { 
-					has_active_tradition = tr_domination_finish 
-					has_active_tradition = tr_domination_federations_finish
+					#has_active_tradition = tr_domination_finish 
+					#has_active_tradition = tr_domination_federations_finish
+					has_active_tradition = tr_domination_judgment_corps
 				}
 			}
 		}
@@ -569,8 +570,9 @@ building_major_capital = {
 			exists = owner
 			owner = { 
 				OR = { 
-					has_active_tradition = tr_domination_finish 
-					has_active_tradition = tr_domination_federations_finish
+					#has_active_tradition = tr_domination_finish 
+					#has_active_tradition = tr_domination_federations_finish
+					has_active_tradition = tr_domination_judgment_corps
 				}
 			}
 		}
@@ -958,8 +960,9 @@ building_system_capital = {
 			exists = owner
 			owner = { 
 				OR = { 
-					has_active_tradition = tr_domination_finish 
-					has_active_tradition = tr_domination_federations_finish
+					#has_active_tradition = tr_domination_finish 
+					#has_active_tradition = tr_domination_federations_finish
+					has_active_tradition = tr_domination_judgment_corps
 				}
 			}
 		}
@@ -2201,8 +2204,9 @@ building_hab_capital = {
 			exists = owner
 			owner = { 
 				OR = { 
-					has_active_tradition = tr_domination_finish 
-					has_active_tradition = tr_domination_federations_finish
+					#has_active_tradition = tr_domination_finish 
+					#has_active_tradition = tr_domination_federations_finish
+					has_active_tradition = tr_domination_judgment_corps
 				}
 			}
 		}
@@ -2611,8 +2615,9 @@ building_hab_major_capital = {
 			exists = owner
 			owner = { 
 				OR = { 
-					has_active_tradition = tr_domination_finish 
-					has_active_tradition = tr_domination_federations_finish
+					#has_active_tradition = tr_domination_finish 
+					#has_active_tradition = tr_domination_federations_finish
+					has_active_tradition = tr_domination_judgment_corps
 				}
 			}
 		}
@@ -3157,8 +3162,9 @@ building_hab_system_capital = {
 			exists = owner
 			owner = { 
 				OR = { 
-					has_active_tradition = tr_domination_finish 
-					has_active_tradition = tr_domination_federations_finish
+					#has_active_tradition = tr_domination_finish 
+					#has_active_tradition = tr_domination_federations_finish
+					has_active_tradition = tr_domination_judgment_corps
 				}
 			}
 		}
@@ -4334,8 +4340,9 @@ building_imperial_capital = {
 			exists = owner
 			owner = { 
 				OR = { 
-					has_active_tradition = tr_domination_finish 
-					has_active_tradition = tr_domination_federations_finish
+					#has_active_tradition = tr_domination_finish 
+					#has_active_tradition = tr_domination_federations_finish
+					has_active_tradition = tr_domination_judgment_corps
 				}
 			}
 		}

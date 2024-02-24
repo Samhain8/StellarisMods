@@ -396,7 +396,7 @@ offworld_trading_company = {
 		local_trade_protection_add = 10
 	}
 
-	custom_tooltip_with_modifiers = sm_offworld_trading_company_desc_modifier
+	custom_tooltip = sm_offworld_trading_company_desc_modifier
 
 	show_in_tech = "tech_space_trading"
 

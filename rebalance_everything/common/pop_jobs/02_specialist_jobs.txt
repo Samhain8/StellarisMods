@@ -406,13 +406,13 @@ enforcer = {
 
 	resources = {
 		category = planet_enforcers
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_active_tradition = tr_domination_judgment_corps }
-			}
-			unity = 2
-		}
+		#produces = {
+		#	trigger = {
+		#		exists = owner
+		#		owner = { has_active_tradition = tr_domination_judgment_corps }
+		#	}
+		#	unity = 2
+		#}
 		upkeep = {
 			trigger = {
 				exists = planet
@@ -468,10 +468,10 @@ enforcer = {
 	weight = {
 		weight = @specialist_job_weight
 
-		modifier = {
-			mult = value:job_weights_modifier|JOB|enforcer|RESOURCE|unity|FACTOR|0.25|
-			owner = { has_active_tradition = tr_domination_judgment_corps }
-		}
+		#modifier = {
+		#	mult = value:job_weights_modifier|JOB|enforcer|RESOURCE|unity|FACTOR|0.25|
+		#	owner = { has_active_tradition = tr_domination_judgment_corps }
+		#}
 
 		modifier = {
 			factor = 10
@@ -568,13 +568,13 @@ telepath = {
 		produces = {
 			unity = 9
 		}
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_active_tradition = tr_domination_judgment_corps }
-			}
-			unity = 1
-		}
+		#produces = {
+		#	trigger = {
+		#		exists = owner
+		#		owner = { has_active_tradition = tr_domination_judgment_corps }
+		#	}
+		#	unity = 1
+		#}
 		produces = {
 			trigger = {
 				has_trait = trait_psionic_will_to_power

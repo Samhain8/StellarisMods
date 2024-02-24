@@ -1282,6 +1282,14 @@
  mod_job_ranger_per_pop_short:0 "\n§G+1§! £mod_job_ranger_add£ per $VALUE$ £pop£"
  has_ranger_lodge:0 "$TRIGGER_FAIL$§RThis blocker will not be removeable as long as the §Y$building_ranger_lodge$§! exists.§!"
 
+ job_page:0 "Page"
+ job_page_plural:0 "Pages"
+ job_page_desc:0 "Young pupils made available for a variety of tasks, from helping in military logistics to housekeeping."
+ job_ranger_effect_desc:1 "job_page $job_page_plural$ produce £amenities£ §YAmenities§! Naval Capacity and Unity."
+ mod_job_page_add:0 "$job_page$ Jobs"
+ mod_job_page_per_pop:0 "§G+1§! $job_page$ Job per $VALUE$ Pops"
+ mod_job_page_per_pop_short:0 "\n§G+1§! £mod_job_page_add£ per $VALUE$ £pop£"
+
  # Ruling Class Jobs
  job_politician:0 "Politician"
  job_politician_plural:0 "Politicians"

@@ -111,8 +111,8 @@
  tr_domination_adopt_void_desc:1 "§YHabitat§! £alloys£ Alloy Upkeep: §G-20%§!."
 
  tr_domination_colonial_viceroys:0 "Colonial Viceroys"
- #tr_domination_colonial_viceroys_desc:0 "§Y$MOD_LEADER_GOVERNOR_SKILL_LEVELS$§! increased by §Y2§!."
- tr_domination_colonial_viceroys_delayed:0 "Our control over the colonies is dependent upon us finding capable and loyal individuals that can be trusted to enforce the will of the government."
+ #tr_domination_colonial_viceroys_desc:0 "Increased Loyalty from some overlord holdings."
+ tr_domination_colonial_viceroys_delayed:0 "Our control over our subjects is dependent upon us finding capable and loyal individuals that can be trusted to enforce the vision of the empire."
  tr_domination_colonial_viceroys_machine:0 "Autonomous AI"
  tr_domination_colonial_viceroys_machine_delayed:0 "AI released from most behavioral inhibitors may be more prone to erratic performance and random crashes, but they are the only type that can process the huge number of variables inherent to galactic colonization."
  tr_domination_colonial_viceroys_hive:0 "Meeting of the Minds"
@@ -127,7 +127,7 @@
  tr_domination_synaptic_network_delayed:1 "The Mind can only act as fast as it receives input and information from the drones under its control. With a faster and more efficient synaptic network, delays in response time will be a thing of the past."
 
  tr_domination_imperious_architecture:0 "Imperious Architecture"
- tr_domination_imperious_architecture_desc:2 "£building£ §YCapital Buildings§! and £building£ §YHousing Buildings§! provide §G+1§! £housing£ §Y$MOD_PLANET_HOUSING_ADD$§! each."
+ tr_domination_imperious_architecture_desc:2 "£building£ §YCapital Buildings§! and £building£ §YHousing Buildings§! provide additional £housing£."
  tr_domination_imperious_architecture_delayed:1 "All government buildings in our great empire shall be monuments to the state, looming over the populace to inspire obedience, loyalty, and awe."
  tr_domination_synaptic_extensions:0 "Synaptic Extensions"
  tr_domination_synaptic_extensions_desc:0 "£building£ §Y$building_hive_node$§! now also increase £housing£ §Y$MOD_PLANET_HOUSING_ADD$§! by §Y2§!."
@@ -136,9 +136,9 @@
  tr_domination_modular_depot_desc:2 "§Y$EMPIRE_SIZE$§! from §YDistricts§! is reduced by §G25%§!."
  tr_domination_modular_depot_delayed:2 "To maximize the number of drones that can be fielded, our buildings that make up our districts must become more efficient. A modular design would provide far more flexibility."
 
- tr_domination_workplace_motivators:0 "Workplace Motivators"
+ tr_domination_workplace_motivators:0 "Recurring Motivators"
  tr_domination_workplace_motivators_desc:3 "§YUnlocks Edict:§! $edict_extended_shifts$"
- tr_domination_workplace_motivators_delayed:1 "There are many ways to motivate those who perform menial labor to work harder. Some based on incentives and some... not."
+ tr_domination_workplace_motivators_delayed:1 "We ensure workers are given recurring positive incentives to work better. Even simple praise goes a long way. But there are other ways to motivate them to go a few extra miles. "
  tr_domination_drone_network:0 "Drone Network"
  tr_domination_drone_network_desc:3 "§YUnlocks Edict:§! $edict_drone_overdrive$"
  tr_domination_drone_network_delayed:0 "We have improved the ways in which our consciousness communicates with its drones, greatly increasing their efficiency."
@@ -146,9 +146,10 @@
  tr_domination_trust_officers:0 "Public Trust Officers"
  tr_domination_trust_officers_desc:3 "§YUnlocks Edict:§! $edict_enhanced_surveillance$\n£job_enforcer£ §Y$job_enforcer_plural$§! also produce §Y1§! £unity£ Unity"
  tr_domination_trust_officers_delayed:0 "The important work done by law enforcement officials can only truly be successful if they have the cooperation of the public. Creating a corps of Public Trust Officers that work directly with the population will help ensure that this cooperation is freely given."
- tr_domination_judgment_corps:0 "Judgment Corps"
- tr_domination_judgment_corps_desc:3 "§YUnlocks Edict:§! $edict_enhanced_surveillance$\n£job_enforcer£ §Y$job_enforcer_plural$§! also produce §Y1§! £unity£ Unity"
- tr_domination_judgment_corps_delayed:1 "Sprawling cities and isolated mining stations both have unique challenges associated with crime prevention. To expedite law enforcement we have made the judicial process more efficient by combining the roles of judge, jury and enforcer."
+ tr_domination_judgment_corps:0 "Page Assistants"
+ #tr_domination_judgment_corps_desc:3 "§YUnlocks Edict:§! $edict_enhanced_surveillance$\n£job_enforcer£ §Y$job_enforcer_plural$§! also produce §Y1§! £unity£ Unity"
+ tr_domination_judgment_corps_desc:3 "Capital buildings grant 1 Page job, plus 1 per 6 pops. Pages produce naval cap, amenities and unity."
+ tr_domination_judgment_corps_delayed:1 "Codified mentorship customs allow us to tap into a less experienced, but versatile young workforce."
  tr_domination_deviancy_protocols:0 "Deviancy Protocols"
  tr_domination_deviancy_protocols_desc:2 "§Y$MOD_PLANET_CRIME_NO_HAPPINESS_ADD$§! is reduced by §G10§! on all our planets."
  tr_domination_deviancy_protocols_delayed:1 "Deviancy and corruption must be guarded against at all levels. With efficient counter-protocols in place, drones suspected of deviant activities can be swiftly terminated before they can spread the corruption further."
@@ -168,7 +169,7 @@
 
  tr_domination_finish:0 "Domination Traditions Finished"
  tr_domination_federations_finish:0 "$tr_domination_finish$"
- tr_domination_federations_finish_desc:0 "$MOD_EMPIRE_SIZE_POPS_MULT$ §G-10%§!\nGrants access to the §Y$hegemony_federation$§! Federation type.\nAscension Perks Unlocked: §G+1§!"
+ tr_domination_federations_finish_desc:0 "Grants access to the §Y$hegemony_federation$§! Federation type.\nAscension Perks Unlocked: §G+1§!"
 
  ################################################################
  # PURITY
@@ -997,10 +998,10 @@
  tr_statecraft_amongst_peers_delayed:0 "Trust, respect, and learning from mistakes are held to the highest standards even at the top echelons of our empire."
  tr_statecraft_amongst_peers_hive_delayed:0 "Multiple aspects of the conciousness should never make the same mistakes."
  tr_statecraft_amongst_peers_machine_delayed:0 "$tr_statecraft_amongst_peers_hive_delayed$"
- tr_statecraft_shared_benefits:0 "Shared Benefits"
+ tr_statecraft_shared_benefits:0 "State Architects"
  tr_statecraft_shared_benefits_hive:0 "Shared Deduction"
  tr_statecraft_shared_benefits_machine:0 "Shared Computations"
- tr_statecraft_shared_benefits_delayed:0 "By involving all leaders in the implementation of our agendas, they build a stronger understanding for their roles and purpose."
+ tr_statecraft_shared_benefits_delayed:0 "Our governors and diplomats must have a strong understanding of their roles and purpose."
  tr_statecraft_shared_benefits_hive_delayed:0 "By utilizing all nodes and leaders in the implementation of our agendas, any useful specialization is propagated faster."
  tr_statecraft_shared_benefits_machine_delayed:0 "$tr_statecraft_shared_benefits_hive_delayed$"
  tr_statecraft_shared_benefits_desc:0 "Whenever an §YAgenda§! is Launched:\n$t$$tr_statecraft_amongst_peers_effect_desc$"

@@ -71,16 +71,37 @@ tr_statecraft_amongst_peers = {
 tr_statecraft_shared_benefits = {
 	possible = { has_tradition = tr_statecraft_amongst_peers }
 	modifier = {
-		councilor_skill_add = 1
+		official_exp_gain = 0.1
+		country_official_cap_add = 1
 	}
 	ai_weight = { factor = 1000 }
 
-	inline_script = {
-		script = paragon/tradition_swap_desc_hive
-		tradition = tr_statecraft_shared_benefits
+	tradition_swap = {
+		trigger = { is_hive_empire = yes }
+		name = tr_statecraft_shared_benefits_hive
+		inherit_icon = yes
+		weight = { factor = 1 }
+		modifier = {
+			councilor_skill_add = 1
+		}
 	}
-	inline_script = {
-		script = paragon/tradition_swap_desc_machine
-		tradition = tr_statecraft_shared_benefits
+
+	tradition_swap = {
+		trigger = { is_machine_empire = yes }
+		name = tr_statecraft_shared_benefits_machine
+		inherit_icon = yes
+		weight = { factor = 1 }
+		modifier = {
+			councilor_skill_add = 1
+		}
 	}
+
+	#inline_script = {
+	#	script = paragon/tradition_swap_desc_hive
+	#	tradition = tr_statecraft_shared_benefits
+	#}
+	#inline_script = {
+	#	script = paragon/tradition_swap_desc_machine
+	#	tradition = tr_statecraft_shared_benefits
+	#}
 }

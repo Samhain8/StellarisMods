@@ -4753,7 +4753,7 @@
  sm_science_division_desc:0 "§Y$sm_spire$§! output increased by §Y2£physics£ 2£society£ 2£engineering£ §!."
  sm_offworld_trading_company:0 "Offworld Trading Company"
  sm_offworld_trading_company_desc:0 "The offices of a non-governmental organ dedicated to improving the conditions of interstellar trade.\n"
- sm_offworld_trading_company_desc_modifier:3 "Produces §G2§! £trade_value£§Y$TRADE_VALUE$§! for each [Root.GetTradingHubType]\n\n"
+ sm_offworld_trading_company_desc_modifier:3 "+10 empire wide trade protection and produces §G2§! £trade_value£§Y$TRADE_VALUE$§! for each [Root.GetTradingHubType] on this starbase\n\n"
  sm_nebula_refinery:0 "Nebula Refinery"
  sm_nebula_refinery_desc:0 "By processing the dust clouds of a nebula, we are able to refine and extract valuable minerals.\n"
  sm_listening_post:0 "Listening Post"

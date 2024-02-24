@@ -297,8 +297,9 @@ enhanced_surveillance = {
 	}
 
 	potential = {
-		has_active_tradition = tr_domination_judgment_corps
-		is_gestalt = no
+		always = no
+		#has_active_tradition = tr_domination_judgment_corps
+		#is_gestalt = no
 	}
 
 	allow = {

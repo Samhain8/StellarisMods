@@ -132,15 +132,15 @@ slave_overseer = {
 		planet_crime_mult = -0.05
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_active_tradition = tr_domination_judgment_corps }
-		}
-		modifier = {
-			planet_crime_add = -2
-		}
-	}
+	#triggered_planet_modifier = {
+	#	potential = {
+	#		exists = owner
+	#		owner = { has_active_tradition = tr_domination_judgment_corps }
+	#	}
+	#	modifier = {
+	#		planet_crime_add = -2
+	#	}
+	#}
 
 	triggered_planet_modifier = {
 		potential = {

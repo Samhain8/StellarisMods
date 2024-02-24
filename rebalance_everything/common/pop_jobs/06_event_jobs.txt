@@ -2137,13 +2137,13 @@ stasis_warden = {
 		produces = {
 			physics_research = 4
 		}
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_active_tradition = tr_domination_judgment_corps }
-			}
-			unity = 1
-		}
+		#produces = {
+		#	trigger = {
+		#		exists = owner
+		#		owner = { has_active_tradition = tr_domination_judgment_corps }
+		#	}
+		#	unity = 1
+		#}
 		upkeep = {
 			trigger = {
 				exists = planet
@@ -2171,10 +2171,10 @@ stasis_warden = {
 	weight = {
 		weight = @specialist_job_weight
 
-		modifier = {
-			mult = value:job_weights_modifier|JOB|enforcer|RESOURCE|unity|FACTOR|0.25|
-			owner = { has_active_tradition = tr_domination_judgment_corps }
-		}
+		#modifier = {
+		#	mult = value:job_weights_modifier|JOB|enforcer|RESOURCE|unity|FACTOR|0.25|
+		#	owner = { has_active_tradition = tr_domination_judgment_corps }
+		#}
 
 		modifier = {
 			factor = 10
