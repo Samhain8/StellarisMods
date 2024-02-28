@@ -33,7 +33,7 @@ col_default = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			owner = { has_tradition = tr_adaptability_void_finish }
 		}
 		modifier = { pop_happiness = 0.05 }
 	}
@@ -100,7 +100,7 @@ col_city = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			owner = { has_tradition = tr_adaptability_void_finish }
 		}
 		modifier = { trade_value_mult = 0.05 }
 	}
@@ -200,7 +200,7 @@ col_mining = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			owner = { has_tradition = tr_adaptability_void_finish }
 		}
 		modifier = { planet_miners_produces_mult = 0.1 }
 	}
@@ -319,7 +319,7 @@ col_farming = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			owner = { has_tradition = tr_adaptability_void_finish }
 		}
 		modifier = { planet_farmers_produces_mult = 0.1 }
 	}
@@ -451,7 +451,7 @@ col_generator = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			owner = { has_tradition = tr_adaptability_void_finish }
 		}
 		modifier = { planet_technician_produces_mult = 0.1 }
 	}
@@ -532,7 +532,7 @@ col_hive = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			owner = { has_tradition = tr_adaptability_void_finish }
 		}
 		modifier = { planet_jobs_complex_drone_produces_mult = 0.025 }
 	}
@@ -639,7 +639,7 @@ col_industrial = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			owner = { has_tradition = tr_adaptability_void_finish }
 		}
 		modifier = {
 			planet_artisans_produces_mult = 0.05
@@ -747,7 +747,7 @@ col_foundry = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			owner = { has_tradition = tr_adaptability_void_finish }
 		}
 		modifier = {
 			planet_metallurgists_produces_mult = 0.05
@@ -872,7 +872,7 @@ col_factory = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			owner = { has_tradition = tr_adaptability_void_finish }
 		}
 		modifier = {
 			planet_artisans_produces_mult = 0.05
@@ -963,7 +963,7 @@ col_bureau = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			owner = { has_tradition = tr_adaptability_void_finish }
 		}
 		modifier = {
 			planet_administrators_produces_mult = 0.05
@@ -1052,7 +1052,7 @@ col_bureau_spiritualist = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			owner = { has_tradition = tr_adaptability_void_finish }
 		}
 		modifier = {
 			planet_administrators_produces_mult = 0.05
@@ -1151,7 +1151,7 @@ col_bureau_hive = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			owner = { has_tradition = tr_adaptability_void_finish }
 		}
 		modifier = {
 			planet_administrators_produces_mult = 0.05
@@ -1294,7 +1294,7 @@ col_refinery = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			owner = { has_tradition = tr_adaptability_void_finish }
 		}
 		modifier = {
 			planet_refiners_produces_mult = 0.05
@@ -1345,7 +1345,7 @@ col_research = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			owner = { has_tradition = tr_adaptability_void_finish }
 		}
 		modifier = {
 			planet_researchers_produces_mult = 0.05
@@ -1409,7 +1409,7 @@ col_fortress = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			owner = { has_tradition = tr_adaptability_void_finish }
 		}
 		modifier = {
 			planet_orbital_bombardment_damage = -0.1
@@ -1477,7 +1477,7 @@ col_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			owner = { has_tradition = tr_adaptability_void_finish }
 		}
 		modifier = {
 			planet_jobs_produces_mult = 0.05
@@ -1530,7 +1530,7 @@ col_capital_foundry = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			owner = { has_tradition = tr_adaptability_void_finish }
 		}
 		modifier = {
 			planet_jobs_produces_mult = 0.05
@@ -1608,7 +1608,7 @@ col_capital_factory = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			owner = { has_tradition = tr_adaptability_void_finish }
 		}
 		modifier = {
 			planet_jobs_produces_mult = 0.05
@@ -1687,7 +1687,7 @@ col_capital_trade = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			owner = { has_tradition = tr_adaptability_void_finish }
 		}
 		modifier = {
 			planet_jobs_produces_mult = 0.05
@@ -1740,7 +1740,7 @@ col_capital_extraction = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			owner = { has_tradition = tr_adaptability_void_finish }
 		}
 		modifier = {
 			planet_jobs_produces_mult = 0.05
@@ -1783,7 +1783,7 @@ col_capital_hive = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			owner = { has_tradition = tr_adaptability_void_finish }
 		}
 		modifier = {
 			planet_jobs_produces_mult = 0.05
@@ -1848,6 +1848,14 @@ col_habitat = {
 		planet_amenities_add = 10
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_adaptability_void_finish }
+		}
+		modifier = { pop_happiness = 0.05 }
+	}
+
 	weight_modifier = {
 		base = 4
 	}
@@ -1871,6 +1879,15 @@ col_habitat_energy = {
 		planet_district_hab_energy_build_speed_mult = 0.25
 		planet_technician_produces_mult = 0.1
 	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_adaptability_void_finish }
+		}
+		modifier = { planet_technician_produces_mult = 0.1 }
+	}
+
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -1953,6 +1970,14 @@ col_habitat_trade = {
 		trade_value_mult = 0.20
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_adaptability_void_finish }
+		}
+		modifier = { trade_value_mult = 0.1 }
+	}
+
 	weight_modifier = {
 		modifier = {
 			add = @stickiness
@@ -2002,6 +2027,14 @@ col_habitat_research = {
 		planet_researchers_produces_mult = 0.1
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_adaptability_void_finish }
+		}
+		modifier = { planet_researchers_upkeep_mult = -0.1 }
+	}
+
 	weight_modifier = {
 		modifier = {
 			add = @stickiness
@@ -2041,6 +2074,14 @@ col_habitat_mining = {
 	planet_modifier = {
 		planet_district_hab_mining_build_speed_mult = 0.25
 		planet_miners_produces_mult = 0.1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_adaptability_void_finish }
+		}
+		modifier = { planet_miners_produces_mult = 0.1 }
 	}
 
 	triggered_planet_modifier = {
@@ -2131,6 +2172,14 @@ col_habitat_farming = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_tradition = tr_adaptability_void_finish }
+		}
+		modifier = { pop_happiness = 0.05 }
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = {
 				is_galactic_community_member = yes
 			}
@@ -2187,6 +2236,14 @@ col_habitat_gestalt_farming = {
 	planet_modifier = {
 		planet_building_hydroponics_farm_build_speed_mult = 0.25
 		planet_farmers_produces_mult = 0.25
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_adaptability_void_finish }
+		}
+		modifier = { planet_farmers_produces_mult = 0.1 }
 	}
 
 	triggered_planet_modifier = {
@@ -2251,6 +2308,14 @@ col_habitat_fortress = {
 
 	triggered_planet_modifier = {
 		potential = {
+			exists = owner
+			owner = { has_tradition = tr_adaptability_void_finish }
+		}
+		modifier = { planet_orbital_bombardment_damage = -0.1 }
+	}
+
+	triggered_planet_modifier = {
+		potential = {
 			OR = {
 				has_building = building_order_keep
 				has_building = building_order_castle
@@ -2305,6 +2370,17 @@ col_habitat_industrial = {
 		planet_district_hab_industrial_build_speed_mult = 0.25
 		planet_metallurgists_upkeep_mult = -0.1
 		planet_artisans_upkeep_mult = -0.1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_adaptability_void_finish }
+		}
+		modifier = {
+			planet_artisans_produces_mult = 0.05
+			planet_metallurgists_produces_mult = 0.05
+		}
 	}
 
 	triggered_planet_modifier = {
@@ -2391,6 +2467,14 @@ col_habitat_foundry = {
 	planet_modifier = {
 		planet_district_hab_industrial_build_speed_mult = 0.25
 		planet_metallurgists_upkeep_mult = -0.2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_adaptability_void_finish }
+		}
+		modifier = { planet_metallurgists_produces_mult = 0.1 }
 	}
 
 	triggered_planet_modifier = {
@@ -2500,6 +2584,14 @@ col_habitat_factory = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { has_tradition = tr_adaptability_void_finish }
+		}
+		modifier = { planet_artisans_produces_mult = 0.1 }
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = {
 				is_galactic_community_member = yes
 			}
@@ -2579,6 +2671,14 @@ col_habitat_bureau = {
 
 	triggered_planet_modifier = {
 		potential = {
+			exists = owner
+			owner = { has_tradition = tr_adaptability_void_finish }
+		}
+		modifier = { planet_administrators_upkeep_mult = -0.1 }
+	}
+
+	triggered_planet_modifier = {
+		potential = {
 			exists = owner.federation
 			owner.federation = { has_federation_perk = all_the_priests_1 }
 		}
@@ -2637,6 +2737,14 @@ col_habitat_bureau_spiritualist = {
 	planet_modifier = {
 		planet_administrators_produces_mult = 0.10
 		planet_administrators_upkeep_mult = -0.10
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_adaptability_void_finish }
+		}
+		modifier = { planet_administrators_upkeep_mult = -0.1 }
 	}
 
 	triggered_planet_modifier = {
@@ -2719,6 +2827,14 @@ col_habitat_bureau_hive = {
 		planet_administrators_upkeep_mult = -0.10
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_adaptability_void_finish }
+		}
+		modifier = { planet_administrators_upkeep_mult = -0.1 }
+	}
+
 	weight_modifier = {
 		modifier = {
 			add = @stickiness
@@ -2764,6 +2880,14 @@ col_habitat_bureau_machine = {
 	planet_modifier = {
 		planet_administrators_produces_mult = 0.10
 		planet_administrators_upkeep_mult = -0.10
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_adaptability_void_finish }
+		}
+		modifier = { planet_administrators_upkeep_mult = -0.1 }
 	}
 
 	weight_modifier = {
@@ -2812,6 +2936,19 @@ col_habitat_refinery = {
 		planet_translucers_produces_mult = 0.15
 		planet_chemists_produces_mult = 0.15
 		planet_sr_miners_produces_mult = 0.15
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_adaptability_void_finish }
+		}
+		modifier = {
+			planet_refiners_produces_mult = 0.05
+			planet_translucers_produces_mult = 0.05
+			planet_chemists_produces_mult = 0.05
+			planet_sr_miners_produces_mult = 0.05
+		}
 	}
 
 	triggered_planet_modifier = {
@@ -2878,7 +3015,7 @@ col_rural_gestalt = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			owner = { has_tradition = tr_adaptability_void_finish }
 		}
 		modifier = {
 			planet_jobs_simple_drone_produces_mult = 0.05
@@ -2938,7 +3075,7 @@ col_rural = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			owner = { has_tradition = tr_adaptability_void_finish }
 		}
 		modifier = {
 			planet_jobs_worker_produces_mult = 0.05
@@ -3779,7 +3916,7 @@ col_hiv = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			owner = { has_tradition = tr_adaptability_void_finish }
 		}
 		modifier = {
 			planet_jobs_simple_drone_produces_mult = 0.05
@@ -3827,7 +3964,7 @@ col_hiv_foundry = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			owner = { has_tradition = tr_adaptability_void_finish }
 		}
 		modifier = {
 			planet_metallurgists_produces_mult = 0.05
@@ -3980,7 +4117,7 @@ col_resort = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			owner = { has_tradition = tr_adaptability_void_finish }
 		}
 		modifier = { planet_jobs_unity_produces_mult = 0.05 }
 	}

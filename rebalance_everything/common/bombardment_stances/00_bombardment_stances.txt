@@ -244,7 +244,7 @@ raiding = {
 	army_damage = 1.0
 
 	kill_pop_chance = {
-		base = 0.35
+		base = 0.25
 	}
 	min_pops_to_kill_pop = 0
 

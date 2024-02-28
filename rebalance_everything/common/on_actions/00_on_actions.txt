@@ -2794,7 +2794,7 @@ on_colony_3_years_old = {
 		# high because new, lower when I know what it is
 		30 = colony.9950 # Stratospheric Vents
 		30 = colony.9350 # Myrmeku Colonies
-		30 = astral_planes.6029 # Astralnomical Marvel
+		#30 = astral_planes.6029 # Astralnomical Marvel - looked broken, missing special project to resolve the situation
 		
 		10 = colony.1 # Migrating Forests
 		15 = colony.9000 # Turtle World
@@ -2849,12 +2849,12 @@ on_colony_3_years_old = {
 
 on_colony_4_years_old = {
 	random_events = {
-		25 = 0
+		35 = 0
 
 		### Colony Events & Chains - 14
 		
 		# high because new, lower when I know what it is
-		50 = astral_planes.6029 # Astralnomical Marvel
+		#50 = astral_planes.6029 # Astralnomical Marvel - looked broken, missing special project to resolve the situation
 
 		10 = colony.50 # Subterranean Aliens
 		10 = colony.8001 # Feral Overload
@@ -2899,7 +2899,7 @@ on_colony_5_years_old = {
 		necroids.3
 	}
 	random_events = {
-		1 = 0
+		25 = 0
 
 		### Colony Events & Chains - 14
 

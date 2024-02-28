@@ -649,7 +649,7 @@ leader_trait_shipwright = {
 		TIER = 1
 	}
 	councilor_modifier = {
-		starbase_shipyard_build_speed_mult = 0.05
+		starbase_shipyard_build_cost_mult = -0.03
 	}
 	leader_class = { official }
 	opposites = {
@@ -673,7 +673,7 @@ leader_trait_shipwright_2 = {
 		TIER = 2
 	}
 	councilor_modifier = {
-		starbase_shipyard_build_speed_mult = 0.10
+		starbase_shipyard_build_cost_mult = -0.06
 	}
 	leader_class = { official }
 	opposites = {

@@ -451,7 +451,8 @@
  tr_adaptability_appropriation_delayed:0 "Land that is not being worked contributes nothing to our empire. Workers must be relocated in an efficient manner to those planets where they are needed most."
 
  tr_adaptability_finish:0 "Adaptability Traditions Finished"
- tr_adaptability_finish_desc:1 "Increases §YColony Designation Bonuses§! for regular planets."
+ tr_adaptability_finish_desc:1 "Unlocks a prospecting planetary decision able to find new planetary features, including rare resources. Can be used once per planet."
+ tr_adaptability_void_finish_desc:1 "Increases §YColony Designation Bonuses§!."
 
  decision_prospect_void:0 "Orbital Surveying"
  decision_prospect_void_short:0 "Allows construction of an additional random §YDistrict§! type on the habitat."

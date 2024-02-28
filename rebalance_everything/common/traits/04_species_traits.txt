@@ -195,7 +195,7 @@ trait_charming = {
 	}
 	potential_crossbreeding_chance = 1.0
 
-	opposites = { "trait_repugnant" "trait_charismatic" "trait_thrifty" }
+	opposites = { "trait_repugnant" "trait_charismatic" "trait_thrifty" "trait_perfected_charm" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
 		pop_job_trade_mult = 0.15
