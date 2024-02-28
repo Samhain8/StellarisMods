@@ -1,26 +1,9 @@
 tr_domination_adopt = {
 	unlocks_agenda = agenda_civil_exclusion
 	modifier = {
-		country_edict_fund_add = 30
+		empire_size_pops_mult = -0.1
+		pop_cat_slave_political_power = -0.25
 	}
-
-	#tradition_swap = {
-	#	name = tr_domination_adopt_void
-	#	inherit_name = yes
-	#	inherit_icon = yes
-	#	custom_tooltip = tr_domination_adopt_void_desc
-	#	trigger = {
-	#		has_origin = origin_void_dwellers
-	#	}
-	#	modifier = {
-	#		megastructures_habitat_alloys_upkeep_mult = -0.20
-	#		planet_districts_hab_alloys_upkeep_mult = -0.20
-	#	}
-	#	# Effects are implemented in 00_capital_buildings.txt
-	#	weight = {
-	#		factor = 1
-	#	}
-	#}
 }
 
 tr_domination_finish = {
@@ -235,8 +218,7 @@ tr_domination_workplace_motivators = {
 
 	custom_tooltip_with_modifiers = tr_domination_workplace_motivators_desc
 	modifier = {
-		planet_jobs_worker_produces_mult = 0.05
-		planet_jobs_slave_produces_mult = 0.05
+		planet_jobs_slave_produces_mult = 0.1
 		pop_cat_slave_happiness = 0.05
 	}
 

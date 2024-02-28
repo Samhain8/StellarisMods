@@ -2154,7 +2154,7 @@ building_hab_capital = {
 			alloys = 5
 		}
 		upkeep = {
-			trigger = { owner = { has_active_tradition = tr_domination_adopt_void } }
+			trigger = { owner = { has_active_tradition = tr_expansion_adopt } }
 			alloys = -1
 		}
 	}
@@ -2528,7 +2528,6 @@ building_hab_capital = {
 	}
 }
 
-
 # Habitat Central Complex
 building_hab_major_capital = {
 	base_buildtime = @b2_time
@@ -2571,7 +2570,7 @@ building_hab_major_capital = {
 			alloys = 5
 		}
 		upkeep = {
-			trigger = { owner = { has_active_tradition = tr_domination_adopt_void } }
+			trigger = { owner = { has_active_tradition = tr_expansion_adopt } }
 			alloys = -1
 		}
 	}
@@ -3118,7 +3117,7 @@ building_hab_system_capital = {
 			alloys = 5
 		}
 		upkeep = {
-			trigger = { owner = { has_active_tradition = tr_domination_adopt_void } }
+			trigger = { owner = { has_active_tradition = tr_expansion_adopt } }
 			alloys = -1
 		}
 	}
@@ -3661,26 +3660,13 @@ building_resort_capital = {
 	planet_modifier = {
 		planet_housing_add = 5
 		planet_amenities_add = 5
-		job_entertainer_add = 1
-		planet_max_buildings_add = 5
+		job_resort_worker_add = 1
+		planet_max_buildings_add = @buildings_t2
 		planet_max_branch_office_buildings_add = 1
 	}
 
 	inline_script = {
 		script = buildings/on_all_capital_buildings
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				owner = { is_warrior_culture = yes }
-			}
-		}
-		modifier = {
-			job_duelist_add = 1
-			job_entertainer_add = -1
-		}
 	}
 
 	triggered_planet_modifier = {
@@ -3793,6 +3779,10 @@ building_resort_capital = {
 		text = job_healthcare_effect_desc
 	}
 
+	triggered_desc = {
+		text = job_resort_worker_effect_desc
+	}
+
 	upgrades = {
 		"building_resort_major_capital"
 	}
@@ -3841,26 +3831,13 @@ building_resort_major_capital = {
 	planet_modifier = {
 		planet_housing_add = 10
 		planet_amenities_add = 10
-		job_entertainer_add = 2
-		planet_max_buildings_add = 11
+		job_resort_worker_add = 2
+		planet_max_buildings_add = @buildings_t3
 		planet_max_branch_office_buildings_add = 2
 	}
 
 	inline_script = {
 		script = buildings/on_all_capital_buildings
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				owner = { is_warrior_culture = yes }
-			}
-		}
-		modifier = {
-			job_duelist_add = 2
-			job_entertainer_add = -2
-		}
 	}
 
 	triggered_planet_modifier = {
@@ -3982,6 +3959,10 @@ building_resort_major_capital = {
 			owner = { has_valid_civic = civic_private_healthcare_corporate }
 		}
 		text = job_healthcare_effect_desc
+	}
+
+	triggered_desc = {
+		text = job_resort_worker_effect_desc
 	}
 }
 
