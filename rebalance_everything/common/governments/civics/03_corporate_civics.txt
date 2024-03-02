@@ -742,7 +742,7 @@ civic_corporate_hedonism = {
 		}
 	}
 	modifier = {
-		pop_amenities_usage_mult = 0.5
+		pop_amenities_usage_mult = 1
 	}
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = {

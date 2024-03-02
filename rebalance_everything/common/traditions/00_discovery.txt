@@ -3,7 +3,7 @@ tr_discovery_adopt = {
 	unlocks_agenda = agenda_chart_the_unknown
 	custom_tooltip = tr_discovery_adopt_desc
 	modifier = {
-		science_ship_survey_speed = 0.35
+		science_ship_survey_speed = 0.25
 	}
 }
 

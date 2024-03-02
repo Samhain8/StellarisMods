@@ -11512,7 +11512,7 @@ requires_actor_not_selective_kinship: "$TRIGGER_FAIL$§RWe are [Root.GetSpeciesC
 
  trade_policy_unity:0 "Marketplace of Ideas"
  trade_conversion_unity_name:0 "$trade_policy_unity$"
- trade_policy_unity_desc:3 "Trade can be used not only to move goods around, but also to facilitate the spread of ideas. We should focus our trade efforts towards knowledge and innovative theories.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.5§! and 0.2 Research§!"
+ trade_policy_unity_desc:3 "Trade can be used not only to move goods around, but also to facilitate the spread of ideas. We should focus our trade efforts towards knowledge and innovative theories.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.5§! and 0.15 Research§!"
 
  trade_policy_trade_league:0 "Trade League"
  trade_conversion_trade_league_name:0 "$trade_policy_trade_league$"

@@ -496,7 +496,7 @@
  tradition_discovery_hive_desc:0 "In our ancient past, explorator drones left the safety of our hive to find sites for new nests. Now they travel the stars, driven by the same ancestral yearning."
 
  tr_discovery_adopt:0 "Discovery Traditions"
- tr_discovery_adopt_desc:2 "§YUnlocks Edict:§! $edict_map_the_stars$\n§Y$MOD_SHIP_ANOMALY_RESEARCH_SPEED$§! increased by §G+20%§!."
+ tr_discovery_adopt_desc:2 "§YUnlocks Edict:§! $edict_map_the_stars$\n§Y$MOD_SHIP_SCIENCE_SURVEY_SPEED$§! increased by §G+25%§!."
 
  tr_discovery_to_boldly_go:0 "To Boldly Go"
  tr_discovery_to_boldly_go_desc:6 "§Y$MOD_SHIP_SCIENCE_SURVEY_SPEED$§! increased by §G+35%§! and §Y$mod_shipclass_science_ship_disengage_mult$§! increased by §G+50%§!."

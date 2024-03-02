@@ -1265,9 +1265,12 @@ councilor_gospel_of_the_masses = {
 }
 
 councilor_indentured_assets = {
-	 leader_class = { commander }
+	leader_class = { commander official }
 	is_leader_possible = {
-		leader_class = commander
+		OR = {
+			leader_class = commander
+			leader_class = official
+		}
 	}
 	civic = civic_indentured_assets
 	custom_tooltip = "councilor_indentured_assets_custom_modifier_desc"
