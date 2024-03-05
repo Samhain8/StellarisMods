@@ -823,6 +823,9 @@ civic_corporate_crafters = {
 	possible = {
 		civics = { NOT = { value = civic_crafters }	}
 	}
+	modifier = {
+		ROBOT_species_trait_points_add = 1
+	}
 	random_weight = {
 		base = @civic_uncommon_random_weight
 	}

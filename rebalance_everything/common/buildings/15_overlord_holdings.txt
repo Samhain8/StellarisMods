@@ -34,6 +34,7 @@ holding_garrison = {
 			planet.owner.overlord = { has_valid_civic = civic_criminal_heritage }
 		}
 		planet_crime_add = 15
+		monthly_loyalty = -0.5
 	}
 
 	triggered_planet_modifier = {
@@ -247,15 +248,6 @@ holding_emporium = {
 			planet.owner = { is_gestalt = yes }
 		}
 		job_overlord_trader_drone_add = 2
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = planet.owner.overlord
-			planet.owner.overlord = { is_crafter_empire = yes }
-		}
-		monthly_loyalty = 0.25
-		planet_pops_consumer_goods_upkeep_mult = -0.15
 	}
 
 	potential = {

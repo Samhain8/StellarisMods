@@ -4,9 +4,14 @@
 
  trait_aquatic:0 "Aquatic"
  trait_aquatic_desc:1 "§LThis species is perfectly adapted to living in the depths of the ocean. However, on dry land, it is like a fish out of water.§!\n\n§RRequires§! §YOcean World§! §Rhomeworld§!."
- trait_aquatic_tooltip:2 "Housing Usage on §YOcean§! worlds and §YFlooded Habitats§!: §G-10%§!\nFood, Energy and Mineral output on §YOcean§! worlds: §G+10%§!\nHousing Usage on non-§YWet§! worlds: §R+30%§!\nHabitability on non-§YWet§! worlds: §R-20%§!\n\nThe §H$ap_hydrocentric$§! Ascension Perk amplifies this trait's effects."
+ trait_aquatic_tooltip:2 "Housing Usage on §YOcean§! worlds and §YFlooded Habitats§!: §G-10%§!\nFood, Energy and Mineral output on §YOcean§! worlds: §G+10%§!\nHousing Usage on non-§YWet§! worlds: §R+30%§!\nHabitability on non-§YWet§! worlds: §R-30%§!\n\nThe §H$ap_hydrocentric$§! Ascension Perk amplifies this trait's effects."
  trait_aquatic_remove_evolutionary_mastery:1 "§RRequires §Y$tr_genetics_resequencing$§! Tradition to remove.§!"
  trait_aquatic_remove_hydrocentric:0 "§RCannot remove §Y$trait_aquatic$§! trait after taking §Y$ap_hydrocentric$§! Ascension Perk.§!"
+
+ trait_amphibian:0 "Amphibian"
+ trait_amphibian_desc:1 "§LThis species is adapted to living partly on land and in water bodies. Environments lacking in humidity prove very challenging.§!\n\n§RRequires§! Wet §Rhomeworld§!."
+ trait_amphibian_tooltip:2 "Housing Usage on §YOcean§! worlds and §YFlooded Habitats§!: §G-10%§!\nFood, Energy and Mineral output on §YOcean§! worlds: §G+5%§!\nHousing Usage on non-§YWet§! worlds: §R+20%§!\nHabitability on non-§YWet§! worlds: §R-20%§!\n\nThe §H$ap_hydrocentric$§! Ascension Perk amplifies this trait's effects."
+ trait_amphibian_remove_evolutionary_mastery:1 "§RRequires §Y$tr_genetics_resequencing$§! Tradition to remove.§!"
 
  leader_trait_aquatic_admiral:0 "Aquatic"
  leader_trait_aquatic_admiral_desc:0 "The ship adaptations needed to make this commander feel at home have the fortuitous side-effect of making the fleet's hull stronger and more durable."
@@ -166,7 +171,7 @@
 
  ap_hydrocentric:0 "Hydrocentric"
  ap_hydrocentric_desc:0 "No longer shall we settle for "good enough" replacements for our oceanic abodes: no planet shall be deemed fit for colonization until it has been thoroughly inundated."
- ap_hydrocentric_tooltip:2 "Allows the construction of §YIce Mining Stations§! on starbases, which enable the §Y$decision_expand_planetary_sea$§! decision on §YOcean§! worlds and §Y$decision_flood_habitat$§! decision on §YHabitats§!.\nSpecies with the §Y$trait_aquatic$§! trait gain 50% greater benefits for living on §YOcean§! worlds, but penalties for living on non-§YWet§! worlds are likewise amplified."
+ ap_hydrocentric_tooltip:2 "Allows the construction of §YIce Mining Stations§! on starbases, which enable the §Y$decision_expand_planetary_sea$§! decision on §YOcean§! worlds and §Y$decision_flood_habitat$§! decision on §YHabitats§!.\nSpecies with the §Y$trait_aquatic$§! or §Y$trait_amphibian$§! trait gain 50% greater benefits for living on §YOcean§! worlds, but penalties for living on non-§YWet§! worlds are likewise amplified."
  ap_hydrocentric_deluge_tooltip:0 "Unlocks the §YDeluge§! Colossus Weapon."
  ap_hydrocentric_deluge_pre_unlock_tooltip:0 "Unlocks the §YDeluge§! Colossus Weapon §R(requires §Y$ap_colossus$§! Ascension Perk)§!."
 

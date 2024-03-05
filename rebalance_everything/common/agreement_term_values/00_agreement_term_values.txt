@@ -153,6 +153,7 @@ specialist_prospectorium = {
 			target = { 
 				OR = {
 					is_pacifist = yes
+					is_authoritarian = yes
 				}
 			}
 		}
@@ -745,7 +746,7 @@ joins_subject_wars_defensive = {
 	loyalty_change = 5
 	ai_acceptance = {
 		overlord = -30
-		subject = 25
+		subject = 50
 	}
 	activate_effect = {
 		set_rule_join_subject_wars = defensive
@@ -770,8 +771,8 @@ joins_subject_wars_offensive = {
 	term = joins_subject_wars
 	loyalty_change = 10
 	ai_acceptance = {
-		overlord = -60
-		subject = 50
+		overlord = -150
+		subject = 25
 	}
 	activate_effect = {
 		set_rule_join_subject_wars = offensive
@@ -818,7 +819,7 @@ joins_subject_wars_all = {
 	term = joins_subject_wars
 	loyalty_change = 15
 	ai_acceptance = {
-		overlord = -90
+		overlord = -180
 		subject = 75
 	}
 	activate_effect = {
@@ -917,7 +918,7 @@ subject_can_not_be_integrated = {
 	loyalty_change = 5
 	ai_acceptance = {
 		overlord = -30
-		subject = 25
+		subject = 1
 	}
 	activate_effect = {
 		set_rule_can_subject_be_integrated = no
@@ -1085,7 +1086,7 @@ subject_can_do_diplomacy = {
 	loyalty_change = 5
 	ai_acceptance = {
 		overlord = -30
-		subject = 25
+		subject = 1
 	}
 	activate_effect = {
 		set_rule_can_subject_vote = yes
@@ -1216,7 +1217,7 @@ subject_can_expand = {
 	loyalty_change = 5
 	ai_acceptance = {
 		overlord = -30
-		subject = 25
+		subject = 1
 	}
 	activate_effect = {
 		set_rule_can_subject_expand = can_expand
@@ -1285,8 +1286,8 @@ subject_holdings_limit_2 = {
 	term = subject_holdings_limit
 	loyalty_change = -15
 	ai_acceptance = {
-		overlord = 90
-		subject = -75
+		overlord = 60
+		subject = -50
 	}
 	target_modifier = {
 		monthly_loyalty = -1
@@ -1315,8 +1316,8 @@ subject_holdings_limit_3 = {
 	term = subject_holdings_limit
 	loyalty_change = -30
 	ai_acceptance = {
-		overlord = 180
-		subject = -150
+		overlord = 90
+		subject = -75
 	}
 	target_modifier = {
 		monthly_loyalty = -1.5
@@ -1352,8 +1353,8 @@ subject_holdings_limit_4 = {
 	term = subject_holdings_limit
 	loyalty_change = -50
 	ai_acceptance = {
-		overlord = 300
-		subject = -250
+		overlord = 120
+		subject = -100
 	}
 	target_modifier = {
 		monthly_loyalty = -2
@@ -1392,7 +1393,7 @@ subject_does_not_get_sensors = {
 	term = subject_sensors
 	loyalty_change = -5
 	ai_acceptance = {
-		overlord = 10
+		overlord = 5
 		subject = -5
 	}
 	activate_effect = {
@@ -1422,8 +1423,8 @@ subject_gets_sensors = {
 	term = subject_sensors
 	loyalty_change = 0
 	ai_acceptance = {
-		overlord = -10
-		subject = 5
+		overlord = -5
+		subject = 15
 	}
 	activate_effect = {
 		set_rule_subject_has_sensors = yes

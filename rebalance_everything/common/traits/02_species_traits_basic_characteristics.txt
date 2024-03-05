@@ -296,6 +296,8 @@ trait_aquatic = {
 	host_has_dlc = "Aquatics Species Pack"
 
 	sorting_priority = 20
+	
+	opposites = { "trait_amphibian" }
 
 	random_weight = {
 		AQUATIC = 100
@@ -417,7 +419,7 @@ trait_aquatic = {
 			}
 			is_ideal = no
 		}
-		pop_environment_tolerance = -0.2
+		pop_environment_tolerance = -0.3
 	}
 	triggered_planet_growth_habitability_modifier = {
 		potential = {
@@ -429,7 +431,7 @@ trait_aquatic = {
 			exists = owner
 			owner = { has_ascension_perk = ap_hydrocentric }
 		}
-		pop_environment_tolerance = -0.1
+		pop_environment_tolerance = -0.15
 	}
 	triggered_planet_growth_habitability_modifier = {
 		potential = {
@@ -449,6 +451,170 @@ trait_aquatic = {
 			from = {
 				OR = {
 					is_planet_class = pc_ocean
+					has_modifier = flooded_habitat
+				}
+			}
+		}
+
+		modifier = {
+			subtract = 1
+			from = {
+				NOR = {
+					has_climate = wet
+					has_modifier = flooded_habitat
+				}
+				is_ideal = no
+			}
+		}
+	}
+}
+
+trait_amphibian = {
+	cost = 0
+	host_has_dlc = "Aquatics Species Pack"
+
+	sorting_priority = 20
+	
+	opposites = { "trait_aquatic" }
+
+	random_weight = {
+		AQUATIC = 10
+		MOL = 20
+		HUM = 2
+		MAM = 5
+	}
+
+	allowed_planet_classes = {
+		pc_ocean
+		pc_continental
+		pc_tropical
+	}
+
+	species_possible_remove = {
+		exists = from
+		custom_tooltip = {
+			fail_text = trait_amphibian_remove_evolutionary_mastery
+			from = { has_tradition = tr_genetics_resequencing }
+		}
+	}
+	species_potential_add = {
+		exists = from
+		from = {
+			has_tradition = tr_genetics_resequencing
+		}
+	}
+	initial = yes
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+
+	ai_weight = {
+		weight = 0
+	}
+
+	custom_tooltip_with_modifiers = trait_amphibian_tooltip
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				OR = {
+					has_climate = wet
+					has_modifier = flooded_habitat
+				}
+			}
+		}
+		pop_housing_usage_mult = -0.1
+		planet_jobs_food_produces_mult = 0.05
+		planet_jobs_minerals_produces_mult = 0.05
+		planet_jobs_energy_produces_mult = 0.05
+	}
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				OR = {
+					has_climate = wet
+					has_modifier = flooded_habitat
+				}
+				exists = owner
+				owner = { has_ascension_perk = ap_hydrocentric }
+			}
+		}
+		pop_housing_usage_mult = -0.05
+		planet_jobs_food_produces_mult = 0.025
+		planet_jobs_minerals_produces_mult = 0.025
+		planet_jobs_energy_produces_mult = 0.025
+	}
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				NOR = {
+					has_climate = wet
+					has_modifier = flooded_habitat
+				}
+				is_ideal = no
+			}
+		}
+		pop_housing_usage_mult = 0.2
+	}
+	triggered_pop_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				exists = owner
+				owner = { has_ascension_perk = ap_hydrocentric }
+				is_ideal = no
+				NOR = {
+					has_climate = wet
+					has_modifier = flooded_habitat
+				}
+			}
+		}
+		pop_housing_usage_mult = 0.1
+	}
+	# To make it be able to evaluate habitability of planet it has not settled yet. Only applies to this species
+	triggered_planet_growth_habitability_modifier = {
+		potential = {
+			NOR = {
+				has_climate = wet
+				has_modifier = flooded_habitat
+			}
+			is_ideal = no
+		}
+		pop_environment_tolerance = -0.2
+	}
+	triggered_planet_growth_habitability_modifier = {
+		potential = {
+			NOR = {
+				has_climate = wet
+				has_modifier = flooded_habitat
+			}
+			is_ideal = no
+			exists = owner
+			owner = { has_ascension_perk = ap_hydrocentric }
+		}
+		pop_environment_tolerance = -0.1
+	}
+	triggered_planet_growth_habitability_modifier = {
+		potential = {
+			has_modifier = flooded_habitat
+		}
+		pop_environment_tolerance = 0.3 #Flooding habitat does -20% hab, don't just counter the negative, add ocean bonus
+	}
+	modifier = {
+		pc_continental_habitability = 0.1
+		pc_ocean_habitability = 0.1
+		pc_tropical_habitability = 0.1
+	}
+
+	icon = "gfx/interface/icons/traits/trait_aquatic.dds"
+
+	assembly_score = {
+		modifier = {
+			add = 1
+			from = {
+				OR = {
+					has_climate = wet
 					has_modifier = flooded_habitat
 				}
 			}

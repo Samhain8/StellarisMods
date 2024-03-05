@@ -221,6 +221,13 @@ overlord_trader = {
 		produces = {
 			energy = 12
 		}
+		produces = {
+			trigger = {
+				exists = planet.owner.overlord
+				planet.owner.overlord = { has_authority = auth_corporate }
+			}
+			unity = 3
+		}
 	}
 
 	weight = {
