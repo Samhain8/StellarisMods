@@ -62,9 +62,8 @@ agenda_civil_exclusion = {
 		has_paragon_dlc = yes
 	}
 	modifier = {
-		planet_jobs_worker_produces_mult = 0.05
-		planet_jobs_slave_produces_mult = 0.05
-		planet_crime_add = 10
+		country_traditions_influence_produces_add = 0.25
+		monthly_loyalty_from_subjects = 0.25
 	}
 	finish_modifier = agenda_civil_exclusion_finish
 }
@@ -113,6 +112,8 @@ agenda_open_markets = {
 	}
 	modifier = {
 		commercial_pact_mult = 0.2
+		local_trade_protection_add = 30
+		country_trade_fee = -0.05
 	}
 	finish_modifier = agenda_open_markets_finish
 }

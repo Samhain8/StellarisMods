@@ -924,7 +924,7 @@ subject_can_not_be_integrated = {
 		set_rule_can_subject_be_integrated = no
 	}
 	target_modifier = {
-		monthly_loyalty = 0.5
+		monthly_loyalty = 0.25
 	}
 }
 

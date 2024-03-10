@@ -2033,7 +2033,7 @@ civic_catalytic_processing = {
 		}
 	}
 	modifier = {
-		ship_hull_mult = 0.15
+		ship_hull_mult = 0.1
 		ship_hull_regen_add_perc = 0.05
 	}
 	random_weight = { base = @civic_default_random_weight }
@@ -2082,6 +2082,26 @@ civic_crafters = {
 				has_ai_personality = fanatic_purifiers
 			}
 		}
+	}
+}
+
+civic_crystal_artists = {
+	playable = { host_has_dlc = "Humanoids Species Pack" }
+	ai_playable = { host_has_dlc = "Humanoids Species Pack" }
+	description = "civic_tooltip_crystal_artists_effects"
+	potential = {
+		ethics = { NOT = { value = ethic_gestalt_consciousness } }
+		authority = { NOT = { value = auth_corporate } }
+	}
+	possible = {
+		always = yes
+	}
+	modification = no
+	random_weight = {
+		base = @civic_uncommon_random_weight
+	}
+	ai_weight = {
+		base = 0
 	}
 }
 

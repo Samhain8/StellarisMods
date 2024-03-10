@@ -3,7 +3,7 @@ triggered_planet_modifier = {
 		exists = owner
 		owner = { is_materialist = yes }
 	}
-	planet_pops_upkeep_mult = -0.025
+	planet_pops_upkeep_mult = -0.05
 	mult = value:scripted_ethics_weight_mult|ETHIC|materialist|
 	#mult = value:scripted_modifier_ethics_weight_mult|MODIFIER|pop_job_amenities_mult|ETHIC|materialist|
 }
@@ -13,7 +13,7 @@ triggered_planet_modifier = {
 		exists = owner
 		owner = { is_spiritualist = yes }
 	}
-	pop_amenities_usage_mult = -0.025
+	pop_amenities_usage_mult = -0.05
 	mult = value:scripted_ethics_weight_mult|ETHIC|spiritualist|
 }
 
@@ -22,7 +22,7 @@ triggered_country_modifier = {
 		exists = owner
 		owner = { is_militarist = yes }
 	}
-	country_power_projection_influence_produces_add = 0.05
+	country_power_projection_influence_produces_add = 0.1
 	mult = value:scripted_ethics_weight_mult|ETHIC|militarist|
 }
 
@@ -31,7 +31,7 @@ triggered_country_modifier = {
 		exists = owner
 		owner = { is_pacifist = yes }
 	}
-	diplo_weight_pops_mult = 0.01
+	diplo_weight_pops_mult = 0.02
 	mult = value:scripted_ethics_weight_mult|ETHIC|pacifist|
 }
 
@@ -40,7 +40,7 @@ triggered_planet_modifier = {
 		exists = owner
 		owner = { is_egalitarian = yes }
 	}
-	pop_housing_usage_mult = -0.015
+	pop_housing_usage_mult = -0.03
 	mult = value:scripted_ethics_weight_mult|ETHIC|egalitarian|
 }
 
@@ -49,7 +49,7 @@ triggered_country_modifier = {
 		exists = owner
 		owner = { is_authoritarian = yes }
 	}
-	country_edict_fund_add = 3
+	country_edict_fund_add = 6
 	mult = value:scripted_ethics_weight_mult|ETHIC|authoritarian|
 }
 
@@ -58,7 +58,7 @@ triggered_country_modifier = {
 		exists = owner
 		owner = { is_xenophobe = yes }
 	}
-	empire_size_add = -2
+	empire_size_add = -4
 	mult = value:scripted_ethics_weight_mult|ETHIC|xenophobe|
 }
 
@@ -67,6 +67,6 @@ triggered_planet_modifier = {
 		exists = owner
 		owner = { is_xenophile = yes }
 	}
-	trade_value_mult = 0.01
+	trade_value_mult = 0.02
 	mult = value:scripted_ethics_weight_mult|ETHIC|xenophile|
 }

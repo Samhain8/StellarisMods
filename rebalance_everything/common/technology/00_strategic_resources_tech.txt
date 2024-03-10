@@ -90,6 +90,7 @@ tech_mine_volatile_motes = {
 						has_deposit = d_dust_caverns
 						has_deposit = d_dust_desert
 						has_deposit = d_industrial_sector
+						has_deposit = d_spice_pits
 					}
 				}
 				any_planet_within_border = {
@@ -130,6 +131,7 @@ tech_volatile_motes = {
 						has_deposit = d_dust_caverns
 						has_deposit = d_dust_desert
 						has_deposit = d_industrial_sector
+						has_deposit = d_spice_pits
 					}
 				}
 				any_planet_within_border = {
@@ -262,6 +264,7 @@ tech_mine_rare_crystals = {
 						has_deposit = d_crystal_forest
 						has_deposit = d_crystal_reef
 						has_deposit = d_industrial_sector
+						has_deposit = d_crystal_garden
 					}
 				}
 				any_planet_within_border = {
@@ -303,6 +306,7 @@ tech_rare_crystals = {
 						has_deposit = d_crystal_forest
 						has_deposit = d_crystal_reef
 						has_deposit = d_industrial_sector
+						has_deposit = d_crystal_garden
 					}
 				}
 				any_planet_within_border = {

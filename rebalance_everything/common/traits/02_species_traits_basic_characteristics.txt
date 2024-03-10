@@ -870,7 +870,6 @@ trait_cave_dweller = {
 trait_perfected_genes = {
 	cost = 0
 	potential_crossbreeding_chance = 0
-	opposites = { trait_fleeting trait_weak }
 	sorting_priority = 20
 
 	initial = no

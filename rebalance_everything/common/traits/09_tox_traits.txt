@@ -926,6 +926,34 @@ trait_exotic_metabolism = {
 	}
 }
 
+trait_mote_eater = {
+	host_has_dlc = "Toxoids Species Pack"
+	cost = 2
+	icon = "gfx/interface/icons/traits/trait_exotic_metabolism.dds"
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	potential_crossbreeding_chance = 1.0 #1.0 100% of being considered for new traits when forming half-species. doe snot guarantee the trait will be added if it costs points.
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	initial = yes
+	randomized = no
+	advanced_trait = yes
+	custom_tooltip_with_modifiers = mote_eater_tooltip
+
+	modifier = {
+		army_damage_mult = 0.60
+		pop_growth_speed = 0.1
+		planet_jobs_worker_produces_mult = 0.08
+	}
+
+	slave_cost = {
+		energy = 500
+	}
+}
+
 trait_fast_metabolism = {
 	host_has_dlc = "Toxoids Species Pack"
 	cost = 2

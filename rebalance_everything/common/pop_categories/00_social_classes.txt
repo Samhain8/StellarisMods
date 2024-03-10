@@ -115,6 +115,13 @@ ruler = {
 			}
 			exotic_gases = @exotic_metabolism
 		}
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				has_trait = trait_mote_eater
+			}
+			volatile_motes = @exotic_metabolism
+		}
 
 		# Resource Production
 
@@ -263,6 +270,13 @@ specialist = {
 				has_trait = trait_exotic_metabolism
 			}
 			exotic_gases = @exotic_metabolism
+		}
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				has_trait = trait_mote_eater
+			}
+			volatile_motes = @exotic_metabolism
 		}
 
 		# Resource Production
@@ -413,6 +427,13 @@ worker = {
 				has_trait = trait_exotic_metabolism
 			}
 			exotic_gases = @exotic_metabolism
+		}
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				has_trait = trait_mote_eater
+			}
+			volatile_motes = @exotic_metabolism
 		}
 
 		# Resource Production

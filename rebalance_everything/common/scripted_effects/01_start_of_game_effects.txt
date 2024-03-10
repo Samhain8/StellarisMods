@@ -2590,6 +2590,20 @@ generate_start_pops = {
 			}
 		}
 	}
+	if = {
+		limit = {
+			owner = {
+				has_civic = civic_crystal_artists
+			}
+		}
+		owner = {
+			give_technology = {
+				tech = tech_crystal_armor_1
+				message = no
+			}
+			add_research_option = tech_crystal_armor_2
+		}
+	}
 #----
 
 	if = {
@@ -3094,6 +3108,26 @@ generate_home_planet_final_pass = {
 		}
 
 		add_deposit = d_exotic_mountain
+	}
+	if = {
+		limit = {
+			owner = {
+				any_owned_pop = {
+					has_trait = trait_mote_eater
+				}
+			}
+		}
+
+		add_deposit = d_spice_pits
+	}
+	if = {
+		limit = {
+			owner = {
+				has_civic = civic_crystal_artists
+			}
+		}
+
+		add_deposit = d_crystal_garden
 	}
 }
 

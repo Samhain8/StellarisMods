@@ -444,9 +444,8 @@ agenda_chart_the_unknown_finish = {
 }
 
 agenda_civil_exclusion_finish = {
-	planet_jobs_worker_produces_mult = 0.2
-	planet_jobs_slave_produces_mult = 0.2
-	planet_crime_add = 10
+	country_traditions_influence_produces_add = 1
+	monthly_loyalty_from_subjects = 1
 }
 
 agenda_superior_colonies_finish = {
@@ -466,6 +465,8 @@ agenda_inner_stability_finish = {
 agenda_open_markets_finish = {
 	icon = "gfx/interface/icons/modifiers/mod_agenda_open_markets.dds"
 	commercial_pact_mult = 0.5
+	local_trade_protection_add = 100
+	country_trade_fee = -0.10
 }
 
 agenda_favored_society_finish = {

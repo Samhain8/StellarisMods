@@ -188,13 +188,13 @@ civic_hive_devouring_swarm = {
 	description = "civic_tooltip_devouring_swarm_effects"
 	modifier = {
 		councilor_gestalt_legion_exp_gain = @gestalt_civic_node_xp_rate
-		country_starbase_influence_cost_mult = -0.5
+		country_starbase_influence_cost_mult = -0.3
 		ship_hull_mult = 0.25
 		ship_hull_regen_add_perc = 0.05
 		ship_armor_regen_add_perc = 0.05
 		army_damage_mult = 0.40
 		category_biology_research_speed_mult = 0.20
-		starbase_shipyard_build_cost_mult = -0.25
+		starbase_shipyard_build_cost_mult = -0.15
 		country_naval_cap_mult = 0.33
 	}
 

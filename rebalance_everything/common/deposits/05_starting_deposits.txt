@@ -330,3 +330,35 @@ d_exotic_mountain = {
 		weight = 0
 	}
 }
+d_spice_pits = {
+	is_for_colonizable = yes
+	icon = d_dust_caverns
+	category = deposit_cat_rare
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			volatile_motes = 3
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+d_crystal_garden = {
+	is_for_colonizable = yes
+	icon = d_crystal_forest
+	category = deposit_cat_rare
+
+	resources = {
+		category = planet_deposits
+		produces = {
+			rare_crystals = 3
+		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}

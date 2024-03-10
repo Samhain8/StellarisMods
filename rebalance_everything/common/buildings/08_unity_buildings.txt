@@ -54,12 +54,28 @@ building_autochthon_monument = {
 		job_culture_worker_add = @b1_jobs
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_crystal_artists }
+		}
+		job_lattice_artist_add = 1
+	}
+
 	triggered_desc = {
 		text = building_autochthon_monument_effect
 	}
 
 	triggered_desc = {
 		text = job_culture_worker_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_valid_civic = civic_crystal_artists }
+		}
+		text = job_lattice_artist_effect_desc
 	}
 
 	prerequisites = {
@@ -144,12 +160,28 @@ building_heritage_site = {
 		job_culture_worker_add = @b2_jobs
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_crystal_artists }
+		}
+		job_lattice_artist_add = 1
+	}
+
 	triggered_desc = {
 		text = building_heritage_site_effect
 	}
 
 	triggered_desc = {
 		text = job_culture_worker_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_valid_civic = civic_crystal_artists }
+		}
+		text = job_lattice_artist_effect_desc
 	}
 
 	prerequisites = {
@@ -227,12 +259,28 @@ building_hypercomms_forum = {
 		job_culture_worker_add = @b3_jobs
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_crystal_artists }
+		}
+		job_lattice_artist_add = 1
+	}
+
 	triggered_desc = {
 		text = building_hypercomms_forum_effect
 	}
 
 	triggered_desc = {
 		text = job_culture_worker_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_valid_civic = civic_crystal_artists }
+		}
+		text = job_lattice_artist_effect_desc
 	}
 
 	prerequisites = {

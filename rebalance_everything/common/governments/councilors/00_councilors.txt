@@ -370,7 +370,24 @@ councilor_crafters = {
 	}
 	civic = civic_crafters
 	modifier = {
-		ship_armor_mult = 0.01
+		ship_armor_mult = 0.012
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
+councilor_crystal_artists = {
+	leader_class = { official scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = scientist
+		}
+	}
+	civic = civic_crystal_artists
+	modifier = {
+		ship_hull_mult = 0.012
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights

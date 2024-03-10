@@ -73,6 +73,13 @@ complex_drone = {
 			}
 			exotic_gases = @exotic_metabolism
 		}
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				has_trait = trait_mote_eater
+			}
+			volatile_motes = @exotic_metabolism
+		}
 
 		# Resource Production
 
@@ -196,6 +203,13 @@ simple_drone = {
 				has_trait = trait_exotic_metabolism
 			}
 			exotic_gases = @exotic_metabolism
+		}
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				has_trait = trait_mote_eater
+			}
+			volatile_motes = @exotic_metabolism
 		}
 
 		# Resource Production

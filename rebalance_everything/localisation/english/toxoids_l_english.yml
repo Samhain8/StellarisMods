@@ -670,6 +670,21 @@
  civic_corporate_scavengers:1 "Refurbishment Division"
  civic_corporate_scavengers_desc:0 "$civic_scavengers_desc$"
 
+
+ civic_crystal_artists:0 "Crystal Shapers"
+ civic_crystal_artists_desc:0 "Makers of this society excel at creating structures and ship hulls using the rare crystals native to their homeworld."
+ civic_crystal_artists_effects:0 "Homeworld has a deposit producing rare crystals.\nThe Crystal-Infused Plating technology is researched, and Crystal-Forged Plating is available as a research option.\nThe Heritage Site building and its upgraded versions provide one Lattice Artist job."
+ civic_tooltip_crystal_artists_effects:1 "Homeworld has a deposit producing rare crystals.\nThe Crystal-Infused Plating technology is researched, and Crystal-Forged Plating is available as a research option.\nThe Heritage Site building and its upgraded versions provide one Lattice Artist job."
+ 
+ job_lattice_artist:0 "Lattice Artist"
+ job_lattice_artist_desc:0 "Meticulous artists who create highly intricate masterpieces from rare crystals, put on display in public cultural spaces."
+
+ planet_lattice_artists:0 "Lattice Artists"
+ mod_job_lattice_artist_add:0 "$job_lattice_artist$ Jobs"
+ job_lattice_artist_plural:0 "Lattice Artists"
+ job_lattice_artist_effect_desc:1 "£job_lattice_artist£ Lattice Artists turn £rare_crystals£ §YRare Crystals§! into Unity, Engineering Research, and double the output of a culture worker."
+
+
  trait_incubator:0 "Incubators"
  incubator_tooltip:1 "Grants between §G+30%§! and §R-10%§! Pop Growth Speed, inversely proportional to the number of pops on the planet."
  trait_incubator_desc:1 "§LWhen isolated or few in numbers, a species with this trait naturally adapts and is able to focus on procreation with an intentness others would consider extreme. However, when in large numbers, this effect is reversed, and they find reproduction more difficult.§!"
@@ -687,6 +702,9 @@
  trait_exotic_metabolism:0 "Exotic Metabolism"
  exotic_metabolism_tooltip:2 "£exotic_gases£ Exotic Gas Upkeep: §R+0.125§!"
  trait_exotic_metabolism_desc:0 "§LA metabolism based on exotic - and expensive - gases has vastly enhanced this species' abilities.§!"
+ trait_mote_eater:0 "Mote Eaters"
+ mote_eater_tooltip:2 "£volatile_motes£ Volatile Motes Upkeep: §R+0.125§!"
+ trait_mote_eater_desc:0 "§LThe exceptional digestive system of this species depends on volatile motes, leading to an excessive amount of energy and excitement.§!"
 
  trait_fast_metabolism:0 "Fast Metabolism"
  trait_fast_metabolism_desc:0 "§LA particularly fast metabolism makes this species produce, consume, and age more rapidly.§!"
@@ -773,6 +791,10 @@
 
  d_exotic_mountain:0 "Exotic Mountains"
  d_exotic_mountain_desc:0 "Deep within these mountains lie vast reserves of exotic gases - the core of our biology."
+ d_spice_pits:0 "Spice Hollows"
+ d_spice_pits_desc:0 "Deep within these pits lie vast reserves of volatile motes - the spice that gives us life."
+ d_crystal_garden:0 "Amber Garden"
+ d_crystal_garden_desc:0 "A sheltered garden from which plentiful rare crystals can be collected."
 
  #VO
  vo_toxoids_voice:0 "Toxoid"

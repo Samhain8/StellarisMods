@@ -1057,7 +1057,7 @@ culture_worker = {
 	inline_script = "jobs/culture_worker_outputs"
 
 	planet_modifier = {
-		pop_government_ethic_attraction = 0.10
+		pop_government_ethic_attraction = 0.05
 	}
 
 	weight = {
@@ -1072,6 +1072,61 @@ culture_worker = {
 		modifier = {
 			factor = 1.5
 			has_job = culture_worker
+			can_take_servant_job = no
+		}
+		modifier = {
+			factor = 1.05
+			OR = {
+				is_unemployed = yes
+				has_job = servant
+			}
+		}
+	}
+}
+
+lattice_artist = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	icon = culture_worker
+	building_icon = building_autochthon_monument
+	clothes_texture_index = 3
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		complex_specialist_job_check_trigger = yes
+	}
+
+	resources = {
+		category = planet_culture_workers
+		produces = {
+			unity = 8
+			engineering_research = 4
+		}
+		upkeep = {
+			consumer_goods = 1
+			rare_crystals = 1
+		}
+	}
+
+	inline_script = "jobs/lattice_artist_outputs"
+
+	planet_modifier = {
+		pop_government_ethic_attraction = 0.10
+	}
+
+	weight = {
+		weight = @high_prio_specialist_job_weight
+		mult = value:job_weights_modifier|JOB|culture_worker|RESOURCE|unity|
+		modifier = {
+			factor = 1.5
+			has_job = lattice_artist
 			can_take_servant_job = no
 		}
 		modifier = {
@@ -2782,6 +2837,7 @@ catalytic_technician = {
 		category = planet_metallurgists
 		produces = {
 			alloys = 3
+			society_research = 1
 		}
 
 		upkeep = {

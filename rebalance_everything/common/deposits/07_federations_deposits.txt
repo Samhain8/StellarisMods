@@ -49,6 +49,26 @@ d_arcane_replicator = {
 			}
 			exotic_gases = 4
 		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					any_owned_pop = {
+						has_trait = trait_mote_eater
+					}
+				}
+			}
+			volatile_motes = 4
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_civic = civic_crystal_artists
+				}
+			}
+			rare_crystals = 4
+		}
 	}
 }
 
