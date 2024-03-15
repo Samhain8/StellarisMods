@@ -1,15 +1,15 @@
 tr_domination_adopt = {
 	unlocks_agenda = agenda_civil_exclusion
 	modifier = {
-		empire_size_pops_mult = -0.1
-		pop_cat_slave_political_power = -0.25
+		country_subject_acceptance_add = 25
 	}
 }
 
 tr_domination_finish = {
 	modifier = {
 		ascension_perks_add = 1
-		country_subject_acceptance_add = 25
+		empire_size_pops_mult = -0.1
+		pop_cat_slave_political_power = -0.25
 	}
 
 	tradition_swap = {
@@ -22,7 +22,8 @@ tr_domination_finish = {
 		}
 		modifier = {
 			ascension_perks_add = 1
-			country_subject_acceptance_add = 25
+			empire_size_pops_mult = -0.1
+			pop_cat_slave_political_power = -0.25
 		}
 		weight = {
 			factor = 1

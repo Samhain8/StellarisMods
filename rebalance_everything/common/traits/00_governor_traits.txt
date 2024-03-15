@@ -1639,7 +1639,7 @@ leader_trait_cartographer_2 = {
 		CLASS = official
 		ICON = "GFX_leader_trait_cartographer"
 		RARITY = veteran
-		COUNCIL = no
+		COUNCIL = yes
 		TIER = 2
 	}
 	councilor_modifier = {
@@ -1656,7 +1656,7 @@ leader_trait_cartographer_3 = {
 		CLASS = official
 		ICON = "GFX_leader_trait_cartographer"
 		RARITY = veteran
-		COUNCIL = no
+		COUNCIL = yes
 		TIER = 3
 	}
 	councilor_modifier = {
