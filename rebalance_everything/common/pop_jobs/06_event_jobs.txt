@@ -1355,15 +1355,16 @@ manufactorium_specialist = {
 	possible_precalc = can_fill_specialist_job
 	possible = {
 		complex_specialist_job_check_trigger = yes
+		nondomestic_specialist_job_check_trigger = yes
 	}
 
 	resources = {
 		category = planet_metallurgists
 		produces = { #no modifiers min: 2 max: 7
-			alloys = 5
+			alloys = 6
 		}
 		upkeep = { #no modifiers min: 2 food/3 minerals max: 9
-			minerals = 5
+			minerals = 6
 		}
 		produces = {
 			trigger = {
@@ -1528,7 +1529,7 @@ manufactorium_specialist = {
 	}
 
 	weight = {
-		weight = @special_job_weight
+		weight = @high_prio_specialist_job_weight
 		mult = value:job_weights_modifier|JOB|manufactorium_specialist|RESOURCE|alloys|
 	}
 }

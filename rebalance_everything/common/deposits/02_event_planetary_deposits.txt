@@ -2371,7 +2371,7 @@ d_ancient_manufactorium_working = {
 			owner = { is_gestalt = no }
 		}
 		modifier = {
-			job_manufactorium_specialist_add = 1
+			job_manufactorium_specialist_add = 2
 			job_manufactorium_specialist_per_pop = 0.04 #1 per 25
 		}
 	}

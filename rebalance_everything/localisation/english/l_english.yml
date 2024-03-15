@@ -9513,10 +9513,10 @@ requires_actor_not_selective_kinship: "$TRIGGER_FAIL$§RWe are [Root.GetSpeciesC
  civic_merchant_nobles_effects:0 "Replaces Executive jobs with Nobles and Merchants, allows the constructions of Noble Estate buildings and Noble Chateaus holdings."
  civic_fertility_rituals:0 "Fertility Rituals"
  civic_fertility_rituals_desc:0 "This society's religion teaches that procreation is the most sacred and joyous of missions, and their priests and priestesses will gladly carry it out."
- civic_fertility_rituals_effects:0 "Priest and High Priest jobs also increase Pop Growth Speed."
+ civic_fertility_rituals_effects:0 "Priest and High Priest jobs also increase Pop Growth Speed.\nCapital buildings replace one Politician with one High Priest."
  civic_fertility_rituals_corporate:0 "Fertility Rituals"
  civic_fertility_rituals_corporate_desc:0 "This society's religion teaches that procreation is the most sacred and joyous of missions, and their priests and priestesses will gladly carry it out."
- civic_fertility_rituals_corporate_effects:0 "Priest and High Priest jobs also increase Pop Growth Speed."
+ civic_fertility_rituals_corporate_effects:0 "Priest and High Priest jobs also increase Pop Growth Speed.\nCapital buildings replace one Politician with one High Priest."
 
  civic_tooltip_gospel_of_the_masses_effects:1 "£pop£ §YSpiritualist Pops§! give additional £trade_value£ §Y$TRADE_VALUE$§! on all Planets and Branch Offices\nCan build £building£ §Y$building_temple_of_prosperity$§! $BRANCH_OFFICE_BUILDING$\n"
  civic_tooltip_criminal_heritage_effects:3 "Cannot form §YCommercial Pacts§!\nCan build §YBranch Offices§! on the planet of any regular empire they have no war or active truce with\nCrime on §YBranch Office§! Planets increases Branch Office Value\nCan build special Crime-increasing £building£ §Y$BRANCH_OFFICE_BUILDINGS$§!"
@@ -9552,8 +9552,8 @@ requires_actor_not_selective_kinship: "$TRIGGER_FAIL$§RWe are [Root.GetSpeciesC
  civic_tooltip_death_cult_effects:1 "Can build £building£ §Y$building_sacrificial_temple_1$§!\n$job_death_priest_effect_desc$\n$job_mortal_initiate_effect_desc$\nUnlocks a set of §HSacrifice Edicts§!, providing empire-wide bonuses whenever £job_mortal_initiate£ §Y$job_mortal_initiate_plural$§! are sacrificed\nGrants access to the £building£ §Y$holding_sacrificial_shrine$§! Holding"
  civic_tooltip_memorialist_effects:3 "Can build £building£ §Y$building_galactic_memorial_1$§!\n$building_galactic_memorial_regular_tooltip$\n$job_death_chronicler_simple_effect_desc$"
  civic_tooltip_memorialist_gestalt_effects:1 "Can build £building£ §Y$building_galactic_memorial_1$§!\n$building_galactic_memorial_gestalt_tooltip$\n$job_chronicle_drone_effect_desc$"
- civic_tooltip_pleasure_seekers_effects:0 "Entertainers produce Pop Growth Speed, Trade Value and Additional Unity.\nServants produce Pop Growth Speed, Unity and have reduced housing needs.\nPages produce Pop Growth Speed and have reduced housing needs.\nCity Districts will replace Clerk jobs with Entertainers."
- civic_tooltip_corporate_hedonism_effects:0 "Entertainers produce Pop Growth Speed, Trade Value and Additional Unity.\nServants produce Pop Growth Speed, Unity and have reduced housing needs.\nPages produce Pop Growth Speed and have reduced housing needs.\nCity Districts will replace Clerk jobs with Entertainers."
+ civic_tooltip_pleasure_seekers_effects:0 "Entertainers produce Pop Growth Speed and Trade Value.\nServants and Pages produce Pop Growth Speed and have reduced housing needs.\nCity Districts will replace Clerk jobs with Entertainers."
+ civic_tooltip_corporate_hedonism_effects:0 "Entertainers produce Pop Growth Speed and Trade Value.\nServants and Pages produce Pop Growth Speed and have reduced housing needs.\nCity Districts will replace Clerk jobs with Entertainers."
  civic_tooltip_crafters_effects:2 "£job_artisan£ §Y$job_artisan_plural$§! are replaced with £job_artificer£ §Y$job_artificer_plural$§!.\n§Y$job_artificer_plural$§! produce §G7§! £consumer_goods£ §Y$consumer_goods$§! and §Y2§! £trade_value£ §YTrade Value§!.\nEvery §Y3§! §HIndustrial Districts§! grant §G1§! £building£ §YBuilding Slot§!, except on Habitats."
  civic_tooltip_parliamentary_system_effects:0 "Factions will form in your empire shortly after the game starts."
  civic_tooltip_pompous_purists_effects:0 "Can only engage in §YDiplomacy§! with other empires if they are the proposer."
@@ -11512,11 +11512,11 @@ requires_actor_not_selective_kinship: "$TRIGGER_FAIL$§RWe are [Root.GetSpeciesC
 
  trade_policy_unity:0 "Marketplace of Ideas"
  trade_conversion_unity_name:0 "$trade_policy_unity$"
- trade_policy_unity_desc:3 "Trade can be used not only to move goods around, but also to facilitate the spread of ideas. We should focus our trade efforts towards knowledge and innovative theories.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.5§! and 0.15 Research§!"
+ trade_policy_unity_desc:3 "Trade can be used not only to move goods around, but also to facilitate the spread of ideas. We should focus our trade efforts towards knowledge and innovative theories.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.5§! and 0.12 Research§!"
 
  trade_policy_trade_league:0 "Trade League"
  trade_conversion_trade_league_name:0 "$trade_policy_trade_league$"
- trade_policy_trade_league_desc:3 "By banding together in a trade league, we are able to prosper and secure profits on a whole new level.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.5§!, 0.15 Research and £consumer_goods£ §Y0.2§!§!"
+ trade_policy_trade_league_desc:3 "By banding together in a trade league, we are able to prosper and secure profits on a whole new level.\n\n§EEach collected £trade_value£ §YTrade Value§! earns us £energy£ §Y0.5§!, 0.1 Research and £consumer_goods£ §Y0.2§!§!"
 
  trade_policy_holy_covenant:0 "Holy Covenant"
  trade_conversion_holy_covenant_name:0 "$trade_policy_holy_covenant$"

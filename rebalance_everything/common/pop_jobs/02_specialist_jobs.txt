@@ -111,8 +111,7 @@ xeno_zoo_keeper = {
 	resources = {
 		category = planet_researchers
 		produces = {
-			society_research = 1
-			mult = value:zoo_keeper_output
+			society_research = 10
 		}
 		produces = {
 			trigger = {
@@ -133,8 +132,7 @@ xeno_zoo_keeper = {
 	}
 
 	triggered_planet_modifier = {
-		planet_amenities_add = 1
-		mult = value:zoo_keeper_amenity_output
+		planet_amenities_add = 10
 	}
 
 	triggered_planet_modifier = {
@@ -217,17 +215,8 @@ priest = {
 			owner = { is_fertility_rituals = yes }
 		}
 		modifier = {
-			pop_growth_speed = 0.04
+			pop_growth_speed = 0.03
 		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_fertility_rituals = yes }
-		}
-		planet_amenities_add = 2
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
 	triggered_planet_modifier = {
@@ -769,12 +758,6 @@ entertainer = {
 		category = planet_entertainers
 		produces = {
 			unity = 2
-		}
-		produces = {
-			trigger = {
-				owner = { is_pleasure_seeker = yes }
-			}
-			unity = 1
 		}
 		produces = {
 			trigger = {

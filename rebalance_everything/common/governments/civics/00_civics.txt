@@ -213,6 +213,7 @@ civic_exalted_priesthood = {
 			OR = {
 				value = auth_oligarchic
 				value = auth_dictatorial
+				value = auth_imperial
 			}
 		}
 		ethics = {
@@ -1434,6 +1435,7 @@ civic_aristocratic_elite = {
 				text = civic_tooltip_oli_imp
 				value = auth_oligarchic
 				value = auth_imperial
+				value = auth_dictatorial
 			}
 		}
 		civics = {

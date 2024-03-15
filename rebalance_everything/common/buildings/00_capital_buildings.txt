@@ -299,7 +299,10 @@ building_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_civic = civic_exalted_priesthood }
+			OR = {
+				owner = { has_civic = civic_exalted_priesthood }
+				owner = { is_fertility_rituals = yes }
+			}
 		}
 		modifier = {
 			job_high_priest_add = 1
@@ -385,8 +388,9 @@ building_capital = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				has_civic = civic_exalted_priesthood
+			OR = {
+				owner = { has_civic = civic_exalted_priesthood }
+				owner = { is_fertility_rituals = yes }
 			}
 		}
 		text = job_high_priest_effect_desc
@@ -659,7 +663,10 @@ building_major_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_civic = civic_exalted_priesthood }
+			OR = {
+				owner = { has_civic = civic_exalted_priesthood }
+				owner = { is_fertility_rituals = yes }
+			}
 		}
 		modifier = {
 			job_high_priest_add = 2
@@ -764,8 +771,9 @@ building_major_capital = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				has_civic = civic_exalted_priesthood
+			OR = {
+				owner = { has_civic = civic_exalted_priesthood }
+				owner = { is_fertility_rituals = yes }
 			}
 		}
 		text = job_high_priest_effect_desc
@@ -1049,7 +1057,10 @@ building_system_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_civic = civic_exalted_priesthood }
+			OR = {
+				owner = { has_civic = civic_exalted_priesthood }
+				owner = { is_fertility_rituals = yes }
+			}
 		}
 		modifier = {
 			job_high_priest_add = 2
@@ -1165,8 +1176,9 @@ building_system_capital = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				has_civic = civic_exalted_priesthood
+			OR = {
+				owner = { has_civic = civic_exalted_priesthood }
+				owner = { is_fertility_rituals = yes }
 			}
 		}
 		text = job_high_priest_effect_desc
@@ -2289,7 +2301,10 @@ building_hab_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_civic = civic_exalted_priesthood }
+			OR = {
+				owner = { has_civic = civic_exalted_priesthood }
+				owner = { is_fertility_rituals = yes }
+			}
 		}
 		modifier = {
 			job_high_priest_add = 1
@@ -2770,7 +2785,10 @@ building_hab_major_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_civic = civic_exalted_priesthood }
+			OR = {
+				owner = { has_civic = civic_exalted_priesthood }
+				owner = { is_fertility_rituals = yes }
+			}
 			OR = {
 				NOT = { has_planet_flag = toxic_knights_habitat }
 				NOT = { owner = { has_origin = origin_toxic_knights } }
@@ -2873,8 +2891,9 @@ building_hab_major_capital = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				has_civic = civic_exalted_priesthood
+			OR = {
+				owner = { has_civic = civic_exalted_priesthood }
+				owner = { is_fertility_rituals = yes }
 			}
 			OR = {
 				NOT = { has_planet_flag = toxic_knights_habitat }
@@ -3316,7 +3335,10 @@ building_hab_system_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_civic = civic_exalted_priesthood }
+			OR = {
+				owner = { has_civic = civic_exalted_priesthood }
+				owner = { is_fertility_rituals = yes }
+			}
 			OR = {
 				NOT = { has_planet_flag = toxic_knights_habitat }
 				NOT = { owner = { has_origin = origin_toxic_knights } }
@@ -3419,8 +3441,9 @@ building_hab_system_capital = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				has_civic = civic_exalted_priesthood
+			OR = {
+				owner = { has_civic = civic_exalted_priesthood }
+				owner = { is_fertility_rituals = yes }
 			}
 			OR = {
 				NOT = { has_planet_flag = toxic_knights_habitat }
@@ -4410,7 +4433,10 @@ building_imperial_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_civic = civic_exalted_priesthood }
+			OR = {
+				owner = { has_civic = civic_exalted_priesthood }
+				owner = { is_fertility_rituals = yes }
+			}
 		}
 		modifier = {
 			job_high_priest_add = 3
@@ -4518,8 +4544,9 @@ building_imperial_capital = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = {
-				has_civic = civic_exalted_priesthood
+			OR = {
+				owner = { has_civic = civic_exalted_priesthood }
+				owner = { is_fertility_rituals = yes }
 			}
 		}
 		text = job_high_priest_effect_desc

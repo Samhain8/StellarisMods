@@ -27,7 +27,7 @@ servant = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 3
+		planet_amenities_add = 5
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -75,12 +75,6 @@ servant = {
 		produces = {
 			trigger = {
 				is_pet_slave = yes
-			}
-			unity = 1
-		}
-		produces = {
-			trigger = {
-				owner = { is_pleasure_seeker = yes }
 			}
 			unity = 1
 		}
@@ -261,6 +255,7 @@ livestock = {
 	clothes_texture_index = 2
 
 	pop_modifier = {
+		pop_amenities_usage_add = -0.75
 		pop_housing_usage_add = -0.5
 		pop_political_power = -0.1
 	}
@@ -362,28 +357,30 @@ livestock_zoo_animal = {
 
 	pop_modifier = {
 		pop_amenities_usage_add = -0.75
-		pop_housing_usage_add = -0.5
 		pop_political_power = -0.1
 	}
 
 	resources = {
 		category = planet_livestock
-		upkeep = {
-			trigger = {
-				is_lithoid = no
-			}
-			food = 1
+		produces = {
+			society_research = 4
 		}
-		upkeep = {
-			trigger = {
-				is_lithoid = yes
-			}
-			minerals = 1
-		}
+		#upkeep = {
+		#	trigger = {
+		#		is_lithoid = no
+		#	}
+		#	food = 1
+		#}
+		#upkeep = {
+		#	trigger = {
+		#		is_lithoid = yes
+		#	}
+		#	minerals = 1
+		#}
 	}
 
 	triggered_planet_modifier = {
-		planet_amenities_add = 1
+		planet_amenities_add = 4
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -433,7 +430,10 @@ livestock_zoo_beast = {
 
 	possible = {
 		has_citizenship_type = { type = citizenship_slavery country = owner }
-		has_slavery_type = { type = slavery_livestock }
+		OR = {
+			has_slavery_type = { type = slavery_livestock }
+			has_slavery_type = { type = slavery_pets }
+		}
 		planet = {
 			exists = owner
 			owner = {
@@ -445,28 +445,31 @@ livestock_zoo_beast = {
 
 	pop_modifier = {
 		pop_amenities_usage_add = -0.75
-		pop_housing_usage_add = -0.5
 		pop_political_power = -0.1
+		pop_defense_armies_add = 1
 	}
 
 	resources = {
 		category = planet_livestock
-		upkeep = {
-			trigger = {
-				is_lithoid = no
-			}
-			food = 1
+		produces = {
+			society_research = 4
 		}
-		upkeep = {
-			trigger = {
-				is_lithoid = yes
-			}
-			minerals = 1
-		}
+		#upkeep = {
+		#	trigger = {
+		#		is_lithoid = no
+		#	}
+		#	food = 1
+		#}
+		#upkeep = {
+		#	trigger = {
+		#		is_lithoid = yes
+		#	}
+		#	minerals = 1
+		#}
 	}
 
 	triggered_planet_modifier = {
-		planet_amenities_add = 1
+		planet_amenities_add = 4
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
