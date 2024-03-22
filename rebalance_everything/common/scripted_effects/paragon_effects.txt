@@ -711,25 +711,6 @@ paragon_origin_reformists_negotiations_effect = {
 				ethic_pacifist = { shift_ethic = ethic_militarist }
 				ethic_spiritualist = { shift_ethic = ethic_materialist }
 			}
-			if = {
-				limit = {
-					NOT = { has_civic = civic_shadow_council }
-				}
-				if = { #Down with the aristocracy and their oppression
-					limit = {
-						has_civic = civic_aristocratic_elite
-					}
-					force_remove_civic = civic_aristocratic_elite
-					force_add_civic = civic_shadow_council
-				}
-				if = { #Eat the rich
-					limit = {
-						has_civic = civic_merchant_guilds
-					}
-					force_remove_civic = civic_merchant_guilds
-					force_add_civic = civic_shadow_council
-				}
-			}
 		}
 		else = { #Was player a good ruler?
 			if = {
@@ -743,25 +724,6 @@ paragon_origin_reformists_negotiations_effect = {
 					}
 				}
 				paragon_origin_gain_modifier = yes
-			}
-			if = {
-				limit = {
-					NOT = { has_civic = civic_efficient_bureaucracy }
-				}
-				if = { #Down with the aristocracy and their oppression
-					limit = {
-						has_civic = civic_aristocratic_elite
-					}
-					force_remove_civic = civic_aristocratic_elite
-					force_add_civic = civic_efficient_bureaucracy
-				}
-				if = { #Eat the rich
-					limit = {
-						has_civic = civic_merchant_guilds
-					}
-					force_remove_civic = civic_merchant_guilds
-					force_add_civic = civic_efficient_bureaucracy
-				}
 			}
 		}
 		if = { #People wants some more say in ruling the country
@@ -778,30 +740,6 @@ paragon_origin_reformists_negotiations_effect = {
                 days = -1
             }
         }
-		if = { #People don't want to be slaves anymore
-			limit = {
-				has_civic = civic_slaver_guilds
-			}
-			force_remove_civic = civic_slaver_guilds
-			if = {
-				limit = {
-					NOT = { has_civic = civic_philosopher_king }
-				}
-				force_add_civic = civic_philosopher_king
-			}
-			else_if = {
-				limit = {
-					NOT = { has_civic = civic_mining_guilds }
-				}
-				force_add_civic = civic_mining_guilds
-			}
-			else_if = {
-				limit = {
-					NOT = { has_civic = civic_efficient_bureaucracy }
-				}
-				force_add_civic = civic_efficient_bureaucracy
-			}
-		}
 		if = { #People want some amenities
 			limit = {
 				has_civic = civic_dystopian_society
@@ -830,7 +768,6 @@ paragon_origin_reformists_negotiations_effect = {
 			limit = {
 				owner_main_species = {
 					OR = {
-						has_living_standard = { type = living_standard_academic_privilege country = root }
 						has_living_standard = { type = living_standard_stratified country = root }
 						has_living_standard = { type = living_standard_subsistence country = root }
 					}
@@ -838,7 +775,7 @@ paragon_origin_reformists_negotiations_effect = {
 			}
 			owner_main_species = {
 				set_living_standard = {
-					type = living_standard_good
+					type = living_standard_normal
 					country = root.owner
 				}
 			}
@@ -873,7 +810,6 @@ paragon_origin_reformists_negotiations_effect = {
 			limit = {
 				owner_main_species = {
 					OR = {
-						has_living_standard = { type = living_standard_academic_privilege country = root }
 						has_living_standard = { type = living_standard_stratified country = root }
 						has_living_standard = { type = living_standard_subsistence country = root }
 					}
@@ -881,33 +817,9 @@ paragon_origin_reformists_negotiations_effect = {
 			}
 			owner_main_species = {
 				set_living_standard = {
-					type = living_standard_good
+					type = living_standard_normal
 					country = root.owner
 				}
-			}
-		}
-		if = { #People don't want to be slaves anymore
-			limit = {
-				has_civic = civic_slaver_guilds
-			}
-			force_remove_civic = civic_slaver_guilds
-			if = {
-				limit = {
-					NOT = { has_civic = civic_philosopher_king }
-				}
-				force_add_civic = civic_philosopher_king
-			}
-			else_if = {
-				limit = {
-					NOT = { has_civic = civic_mining_guilds }
-				}
-				force_add_civic = civic_mining_guilds
-			}
-			else_if = {
-				limit = {
-					NOT = { has_civic = civic_efficient_bureaucracy }
-				}
-				force_add_civic = civic_efficient_bureaucracy
 			}
 		}
 		if = { #People want some amenities
@@ -933,9 +845,6 @@ paragon_origin_reformists_negotiations_effect = {
 				}
 				force_add_civic = civic_philosopher_king
 			}
-		}
-		hidden_effect = {
-			set_government_cooldown = default
 		}
 	}
 }

@@ -555,7 +555,7 @@ telepath = {
 	resources = {
 		category = planet_telepaths
 		produces = {
-			unity = 9
+			unity = 8
 		}
 		#produces = {
 		#	trigger = {
@@ -603,7 +603,7 @@ telepath = {
 	planet_modifier = {
 		planet_crime_add = -5
 		planet_crime_mult = -0.1
-		planet_psionic_jobs_produces_mult = 0.05
+		planet_psionic_jobs_produces_mult = 0.025
 	}
 
 	triggered_planet_modifier = {
@@ -624,7 +624,7 @@ telepath = {
 			exists = owner
 			owner = { has_country_flag = instrument_covenant_confirmed }
 		}
-		planet_amenities_add = 7
+		planet_jobs_slave_produces_mult = 0.05
 	}
 
 	triggered_planet_modifier = {
@@ -632,7 +632,7 @@ telepath = {
 			exists = owner
 			owner = { has_country_flag = instrument_covenant_rank_1 }
 		}
-		planet_amenities_add = 8
+		planet_jobs_slave_produces_mult = 0.05
 	}
 
 	triggered_planet_modifier = {
@@ -641,7 +641,7 @@ telepath = {
 			owner  = { has_tradition = tr_psionics_breach_shroud }
 		}
 		modifier = {
-			planet_psionic_jobs_produces_mult = 0.05
+			planet_psionic_jobs_produces_mult = 0.025
 		}
 	}
 

@@ -3285,13 +3285,16 @@ on_relic_lost = {
 # This = Fleet ( science vessel )
 # From = Archaeological Site
 on_arch_stage_finished = {
-
+	events = {
+		paragon_2.2003	# leader_trait_midas_touch/Vibrant Storyteller rewards XP
+	}
 }
 
 on_arch_site_finished = {
 	events = {
 		achievement.6 # Archaeologist achievement
 		ancrel.15050 # Generate Minor Artifacts deposits
+
 	}
 	random_events = {
 		90 = 0
@@ -3848,6 +3851,7 @@ on_astral_rift_exploration_start = {
 on_astral_rift_pre_event_fire = {
 	events = {
 		astral_planes.6		# Setup event description flags
+		paragon_2.2003	# leader_trait_midas_touch/Vibrant Storyteller rewards XP
 	}
 }
 
