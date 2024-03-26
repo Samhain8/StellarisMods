@@ -2604,6 +2604,16 @@ generate_start_pops = {
 			add_research_option = tech_crystal_armor_2
 		}
 	}
+	if = {
+		limit = {
+			owner = {
+				has_civic = civic_hive_cordyceptic_drones
+			}
+		}
+		owner = {
+			add_research_option = tech_amoeba_strike_craft_1
+		}
+	}
 #----
 
 	if = {

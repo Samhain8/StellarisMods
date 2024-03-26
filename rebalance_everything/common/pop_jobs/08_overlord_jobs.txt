@@ -1409,13 +1409,15 @@ overlord_arborist = {
 	resources = {
 		category = planet_overlord_arborists
 		upkeep = {
-			food = 10
+			food = 6
 		}
 	}
 	overlord_resources = {
 		category = planet_overlord_arborists
 		produces = {
-			food = 15
+			food = 6
+			society_research = 6
+			unity = 4
 		}
 	}
 
@@ -1445,13 +1447,15 @@ overlord_arborist_drone = {
 	resources = {
 		category = planet_overlord_arborists
 		upkeep = {
-			food = 10
+			food = 6
 		}
 	}
 	overlord_resources = {
 		category = planet_overlord_arborists
 		produces = {
-			food = 15
+			food = 6
+			society_research = 6
+			unity = 4
 		}
 	}
 

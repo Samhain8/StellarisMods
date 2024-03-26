@@ -284,15 +284,13 @@ civic_hive_catalytic_processing = {
 		}
 	}
 	modifier = {
-		ship_hull_mult = 0.15
+		ship_hull_mult = 0.1
 		ship_hull_regen_add_perc = 0.05
+		councilor_gestalt_cognitive_exp_gain = @gestalt_civic_node_xp_rate
 	}
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = {
 		base = 0			# Too dangerous to switch mid-game
-	}
-	modifier = {
-		councilor_gestalt_cognitive_exp_gain = @gestalt_civic_node_xp_rate
 	}
 }
 
@@ -925,15 +923,13 @@ civic_machine_catalytic_processing = {
 		origin = { NOT = { value = origin_machine } }
 	}
 	modifier = {
-		ship_hull_mult = 0.15
+		ship_hull_mult = 0.1
 		ship_hull_regen_add_perc = 0.05
+		councilor_gestalt_cognitive_exp_gain = @gestalt_civic_node_xp_rate
 	}
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = {
 		base = 0		# Too dangerous to switch mid-game
-	}
-	modifier = {
-		councilor_gestalt_cognitive_exp_gain = @gestalt_civic_node_xp_rate
 	}
 }
 

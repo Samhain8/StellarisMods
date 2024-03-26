@@ -702,8 +702,8 @@ gestalt_black_hole_bad = {
 	country_unity_produces_mult = -0.05
 }
 harmonious_tune = {
-	planet_amenities_add = 1
-	planet_crime_add = -1
+	planet_amenities_add = 2
+	planet_crime_add = -2
 }
 engineered_species_revelation = {
 	modify_species_cost_mult = -0.25

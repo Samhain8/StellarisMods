@@ -967,10 +967,11 @@ d_tree_of_life_home = {
 	}
 
 	planet_modifier = {
-		pop_growth_speed = 0.15
+		pop_growth_speed = 0.2
 		planet_jobs_society_research_produces_mult = 0.10
 		planet_housing_add = 10
-		district_farming_max = 4
+		pop_environment_tolerance = 0.1
+		planet_farmers_food_produces_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -1013,7 +1014,8 @@ d_tree_of_life_colony = {
 		pop_growth_speed = 0.1
 		planet_jobs_society_research_produces_mult = 0.10
 		planet_housing_add = 5
-		district_farming_max = 2
+		pop_environment_tolerance = 0.1
+		planet_farmers_food_produces_add = 0.5
 	}
 
 	triggered_planet_modifier = {
