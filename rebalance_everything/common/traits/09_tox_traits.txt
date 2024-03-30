@@ -701,47 +701,6 @@ trait_compliance_instincts = {
 	}
 }
 
-#trait_stunted_growth = {
-#	icon = "gfx/interface/icons/traits/trait_expressed_tradition.dds"
-#	host_has_dlc = "Toxoids Species Pack"
-#	cost = 0
-#	potential_crossbreeding_chance = 1.0	# 1.0 = 100% chance of being considered for new traits when forming half-species. does not guarantee the trait will be added if it costs points.
-#	allowed_archetypes = { BIOLOGICAL LITHOID }
-#	allowed_origins = { origin_overtuned }
-#	randomized = no
-#	species_potential_add = {
-#		exists = from
-#		from = { has_origin = origin_overtuned }
-#		can_add_tradeoff_traits = yes
-#	}
-#	species_possible_remove = {
-#		can_remove_overtuned_traits = yes
-#	}
-#	species_possible_merge_remove = {
-#		always = yes
-#	}
-#	triggered_pop_modifier = {
-#		potential = {
-#			exists = owner
-#			owner = { has_edict = damn_the_consequences }
-#		}
-#		modifier = {
-#			pop_housing_usage_mult = -0.2
-#			army_damage_mult = -0.20
-#			planet_jobs_worker_produces_mult = -0.025
-#		}
-#	}
-#	modifier = {
-#		pop_housing_usage_mult = -0.2
-#		army_damage_mult = -0.20
-#		planet_jobs_worker_produces_mult = -0.025
-#		leader_lifespan_add = -5
-#	}
-#	slave_cost = {
-#		energy = 100
-#	}
-#}
-
 trait_thrill_seeker = {
 	icon = "gfx/interface/icons/traits/trait_juiced_power.dds"
 	host_has_dlc = "Toxoids Species Pack"
@@ -956,7 +915,7 @@ trait_mote_eater = {
 
 trait_fast_metabolism = {
 	host_has_dlc = "Toxoids Species Pack"
-	cost = 2
+	cost = 1
 	icon = "gfx/interface/icons/traits/trait_exotic_metabolism.dds"
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
@@ -983,7 +942,7 @@ trait_fast_metabolism = {
 }
 
 trait_impish = {
-	cost = 2
+	cost = 1
 	icon = "gfx/interface/icons/traits/trait_fertile.dds"
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes

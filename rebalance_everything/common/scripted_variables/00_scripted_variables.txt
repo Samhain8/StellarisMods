@@ -281,8 +281,8 @@
 @eager_explorer_effect = 5
 @dimensional_worship_rare_tech = 1.1
 
-@lithoid_trait_resource_production = 0.04
-@drake_scaled_trait_resource_production = 0.1
+@lithoid_trait_resource_production = 0.03
+@drake_scaled_trait_resource_production = 0.075
 
 @plantoid_budding_rate = 0.02
 @tiyanki_budding_rate = 0.05

@@ -1763,12 +1763,12 @@ tech_deep_sinkhole = {
 # ##################
 
 tech_terrestrial_sculpting = {
-	cost = @tier2cost3
+	cost = @tier3cost2
 	area = society
-	tier = 2
+	tier = 3
 	category = { new_worlds }
 	prerequisites = { "tech_colonization_1" }
-	weight = @tier2weight3
+	weight = @tier3weight2
 
 	feature_flags = {
 		build_terraform_station
@@ -1844,12 +1844,12 @@ tech_terrestrial_sculpting = {
 
 #Ecological Adaptation
 tech_ecological_adaptation = {
-	cost = @tier3cost2
+	cost = @tier3cost3
 	area = society
 	tier = 3
 	category = { new_worlds }
 	prerequisites = { "tech_terrestrial_sculpting" }
-	weight = @tier3weight2
+	weight = @tier3weight3
 
 	feature_flags = {
 		terraform_inhabited
@@ -1902,12 +1902,12 @@ tech_ecological_adaptation = {
 
 #Climate Transformation
 tech_climate_restoration = {
-	cost = @tier4cost1
+	cost = @tier4cost2
 	area = society
 	tier = 4
 	category = { new_worlds }
 	prerequisites = { "tech_terrestrial_sculpting" }
-	weight = @tier4weight1
+	weight = @tier4weight2
 
 	# unlocks additional terraforming-options
 
@@ -2001,12 +2001,12 @@ tech_genome_mapping = {
 
 #Vitality Boosters
 tech_vitality_boosters = {
-	cost = @tier2cost2
+	cost = @tier2cost1
 	area = society
 	tier = 2
 	category = { biology }
 	prerequisites = { "tech_genome_mapping" }
-	weight = @tier2weight2
+	weight = @tier2weight1
 
 	modifier = {
 		leader_lifespan_add = 10
@@ -2041,12 +2041,12 @@ tech_vitality_boosters = {
 
 #Epigenetic Triggers
 tech_epigenetic_triggers = {
-	cost = @tier2cost2
+	cost = @tier3cost1
 	area = society
-	tier = 2
+	tier = 3
 	category = { biology }
 	prerequisites = { "tech_genome_mapping" }
-	weight = @tier2weight2
+	weight = @tier3weight1
 
 	feature_flags = {
 		uplifting
@@ -2128,12 +2128,12 @@ tech_epigenetic_triggers = {
 
 #Cloning
 tech_cloning = {
-	cost = @tier2cost2
+	cost = @tier2cost1
 	area = society
 	tier = 2
 	category = { biology }
 	prerequisites = { "tech_genome_mapping" }
-	weight = @tier2weight2
+	weight = @tier2weight1
 
 	modifier = {
 		pop_growth_speed = 0.10
@@ -2327,12 +2327,12 @@ tech_morphogenetic_field_mastery = {
 #Gene Tailoring
 @tech_gene_tailoring_POINTS = 1
 tech_gene_tailoring = {
-	cost = @tier3cost1
+	cost = @tier2cost2
 	area = society
-	tier = 3
+	tier = 2
 	category = { biology }
 	prerequisites = { "tech_genome_mapping" }
-	weight = @tier3weight1
+	weight = @tier2weight2
 
 	gateway = biological
 
@@ -2389,12 +2389,12 @@ tech_gene_tailoring = {
 
 # Glandular Acclimation (planet preference modding)
 tech_glandular_acclimation = {
-	cost = @tier3cost3
+	cost = @tier3cost1
 	area = society
 	tier = 3
 	category = { biology }
 	prerequisites = { "tech_gene_tailoring" }
-	weight = @tier3weight3
+	weight = @tier3weight1
 
 	feature_flags = {
 		habitability_gene_modding # No longer does anything except make a tooltip, handled in game rules ("can_gene_mod_habitability")
@@ -2727,13 +2727,13 @@ tech_gene_expressions = {
 
 #Selected Lineages
 tech_selected_lineages = {
-	cost = @tier3cost2
+	cost = @tier2cost2
 	area = society
 	category = { biology }
-	tier = 3
+	tier = 2
 	is_rare = yes
 	prerequisites = { "tech_vitality_boosters" }
-	weight = @tier3weight2
+	weight = @tier2weight2
 
 	# Modifiers from this tech is added through a policy-option
 

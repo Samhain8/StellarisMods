@@ -404,7 +404,7 @@ trait_adaptive = {
 }
 
 trait_nonadaptive = {
-	cost = -2
+	cost = -3
 	species_potential_add = {
 		can_do_advanced_gene_modding = yes
 	}
@@ -412,7 +412,7 @@ trait_nonadaptive = {
 	opposites = { "trait_adaptive" "trait_extremely_adaptive" "trait_robust" "trait_adaptive_lithoid" }
 	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
-		pop_environment_tolerance = -0.10
+		pop_environment_tolerance = -0.15
 	}
 	slave_cost = {
 		energy = -200
@@ -442,7 +442,7 @@ trait_rapid_breeders = {
 }
 
 trait_slow_breeders = {
-	cost = -2
+	cost = -3
 	species_potential_add = {
 		can_do_advanced_gene_modding = yes
 	}
@@ -450,7 +450,7 @@ trait_slow_breeders = {
 	opposites = { "trait_rapid_breeders" "trait_fertile" "trait_rapid_breeders_lithoid" "trait_plantoid_budding" "trait_lithoid_budding" "trait_vat_grown" "trait_tiyanki" "trait_humanoid_psychological_infertility" "trait_humanoid_existential_iteroparity" }
 	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
-		pop_growth_speed = -0.10
+		pop_growth_speed = -0.15
 	}
 	slave_cost = {
 		energy = -1000
@@ -492,7 +492,7 @@ trait_quick_learners = {
 	opposites = { "trait_slow_learners" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		species_leader_exp_gain = 0.1
+		species_leader_exp_gain = 0.15
 	}
 	slave_cost = {
 		energy = 500
@@ -529,7 +529,7 @@ trait_slow_learners = {
 	opposites = { "trait_quick_learners" "trait_enigmatic_intelligence" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		species_leader_exp_gain = -0.1
+		species_leader_exp_gain = -0.15
 	}
 	ai_weight = {
 		weight = 0
@@ -778,7 +778,7 @@ trait_communal = {
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 	modifier = {
-		pop_housing_usage_mult = -0.15
+		pop_housing_usage_mult = -0.2
 	}
 	slave_cost = {
 		energy = 500
@@ -796,7 +796,7 @@ trait_solitary = {
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 	modifier = {
-		pop_housing_usage_mult = 0.15
+		pop_housing_usage_mult = 0.2
 	}
 
 	ai_weight = {
@@ -1041,7 +1041,7 @@ trait_resilient = {
 }
 
 trait_conservational = {
-	cost = 1
+	cost = 2
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
 	}
@@ -1052,7 +1052,7 @@ trait_conservational = {
 	opposites = { "trait_wasteful" "trait_hive_mind" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		planet_pops_consumer_goods_upkeep_mult = -0.10
+		planet_pops_consumer_goods_upkeep_mult = -0.3
 	}
 	slave_cost = {
 		energy = 500
@@ -1060,7 +1060,7 @@ trait_conservational = {
 }
 
 trait_wasteful = {
-	cost = -1
+	cost = -2
 	species_potential_add = {
 		can_do_advanced_gene_modding = yes
 	}
@@ -1068,7 +1068,7 @@ trait_wasteful = {
 	opposites = { "trait_conservational" "trait_hive_mind" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		planet_pops_consumer_goods_upkeep_mult = 0.10
+		planet_pops_consumer_goods_upkeep_mult = 0.3
 	}
 	ai_weight = {
 		weight = 0
@@ -1550,7 +1550,7 @@ trait_social_pheromones = { #red
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 	modifier = {
-		pop_housing_usage_mult = -0.05
+		pop_housing_usage_mult = -0.1
 		pop_job_amenities_mult = 0.1
 	}
 	slave_cost = {
@@ -1575,7 +1575,7 @@ trait_limited_regeneration = { #blue
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 	modifier = {
-		army_health = 0.2
+		army_health = 0.25
 		leader_lifespan_add = 10
 	}
 	slave_cost = {

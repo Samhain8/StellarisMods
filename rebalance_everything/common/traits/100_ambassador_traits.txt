@@ -279,7 +279,7 @@ leader_trait_ambassador_pact_keeper = {
 		}
 	}
 	councilor_modifier = {
-		diplomacy_influence_upkeep_mult = -0.05
+		diplomacy_influence_upkeep_mult = -0.1
 	}
 	leader_class = { official }
 	selectable_weight = {
@@ -300,7 +300,7 @@ leader_trait_ambassador_pact_keeper_2 = {
 		TIER = 2
 	}
 	councilor_modifier = {
-		diplomacy_influence_upkeep_mult = -0.10
+		diplomacy_influence_upkeep_mult = -0.2
 	}
 	leader_class = { official }
 }
@@ -320,7 +320,7 @@ leader_trait_ambassador_pact_keeper_3 = {
 		has_paragon_dlc = yes
 	}
 	councilor_modifier = {
-		diplomacy_influence_upkeep_mult = -0.15
+		diplomacy_influence_upkeep_mult = -0.3
 	}
 	leader_class = { official }
 }
