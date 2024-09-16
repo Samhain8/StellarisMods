@@ -690,6 +690,10 @@ planet_enforcers = {
 	parent = planet_jobs
 }
 
+planet_emergency_responder = {
+	parent = planet_enforcers
+}
+
 planet_telepaths = {
 	parent = planet_enforcers
 }
