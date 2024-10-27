@@ -1,6 +1,15 @@
 fallen_empire_humiliate_effect = {
 	hidden_effect = {
-		add_modifier = { modifier = humiliated days = 3600 }
+		if = {
+			limit = {
+				has_ascension_perk = ap_cosmogenesis
+			}
+			add_modifier = { modifier = humiliated_cosmogenesis days = 3600 }
+		}
+		else = {
+			add_modifier = { modifier = humiliated days = 3600 }
+		}
+
 		if = {
 			limit = { has_policy_flag = diplo_stance_supremacist }
 			set_policy = {
@@ -430,7 +439,7 @@ awaken_fallen_machine_empire = {
 	every_country = {
 		limit = {
 			is_country_type = fallen_empire
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 		}
 
 		country_event = { id = fallen_machine_empire.1 days = 30 random = 30 }
@@ -673,7 +682,7 @@ create_fallen_empire_large_ship = {
 			graphical_culture = owner
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			owner = { has_ethic = ethic_fanatic_materialist }
 		}
@@ -683,7 +692,7 @@ create_fallen_empire_large_ship = {
 			graphical_culture = owner
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			owner = { has_ethic = ethic_fanatic_spiritualist }
 		}
@@ -693,7 +702,7 @@ create_fallen_empire_large_ship = {
 			graphical_culture = owner
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			owner = {
 				OR = {
@@ -728,7 +737,7 @@ create_fallen_empire_small_ship = {
 			graphical_culture = owner
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			owner = { has_ethic = ethic_fanatic_materialist }
 		}
@@ -738,7 +747,7 @@ create_fallen_empire_small_ship = {
 			graphical_culture = owner
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			owner = { has_ethic = ethic_fanatic_spiritualist }
 		}
@@ -748,7 +757,7 @@ create_fallen_empire_small_ship = {
 			graphical_culture = owner
 		}
 	}
-	if = {
+	else_if = {
 		limit = {
 			owner = {
 				OR = {

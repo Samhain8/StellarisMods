@@ -21,6 +21,8 @@ spy_orb_0 = {
 		}
 	}
 
+	custom_tooltip_requirements = "MEGASTRUCTURE_TOOLTIP_REQUIREMENTS_ONE_PER_COUNTRY"
+
 	prerequisites = { "tech_sentry_array" }
 
 	possible = {
@@ -34,6 +36,11 @@ spy_orb_0 = {
 		custom_tooltip = {
 			fail_text = "requires_no_existing_megastructure"
 			has_no_non_gate_megastructure = yes
+			NOT = {
+				any_system_planet = {
+					is_planet_class = pc_cosmogenesis_world
+				}
+			}
 		}
 		custom_tooltip = {
 			fail_text = "requires_surveyed_system"

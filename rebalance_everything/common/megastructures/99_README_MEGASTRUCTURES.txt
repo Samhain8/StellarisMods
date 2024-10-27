@@ -11,9 +11,17 @@
 #	prerequisites = { "tech" }		# required technologies
 #	potential = {}					# trigger, scope: country
 #	possible = {}					# trigger, scope: galactic object, from: country
+#	dismantle_potential = {}		# trigger, scope: megastructure instance, from: country. Used to check if the button should even appear
+#	dismantle_possible = {}			# trigger, scope: megastructure instance, from: country. Used to check if the button should be greyed out
 #	build_time = 5					# days
+#	dismantle_time = 5				# days; how many days it takes to dismantle
 #	victory_score = 1000			# Victory score for the player who owns that megastructure
 #	build_cost = {
+#		minerals = 8
+#		energy = 13
+#		influence = 21
+#	}
+#	dismantle_cost = {
 #		minerals = 8
 #		energy = 13
 #		influence = 21
@@ -34,6 +42,10 @@
 #	on_build_cancel = {}			# effects, scope: galactic object, from: country
 #	on_build_complete = {}			# effects, scope: galactic object, from: country, fromfrom: megastructure instance
 #
+#	on_dismantle_start = {}			# effects, scope: galactic object, from: country, fromfrom: megastructure instance
+#	on_dismantle_cancel = {}		# effects, scope: galactic object, from: country, fromfrom: megastructure instance
+#	on_dismantle_complete = {}		# effects, scope: galactic object, from: country
+#
 #	starbase = level_type			# AI will use this starbase level type to evaluate economical value
 #	ai_weight = {					# scope = country, default = 100
 #		modifier = {
@@ -44,9 +56,11 @@
 #		}
 #	}
 #
-#	construction_blocks_and_blocked_by = none # default multi_stage_type,	#use none				if construction can not block and can not be blocked by any constructions, 
-#																			#use self_type			if construction blocks and blocked by same type of constructions, 
+#	construction_blocks_and_blocked_by = none # default multi_stage_type,	#use none				if construction can not block and can not be blocked by any constructions,
+#																			#use self_type			if construction blocks and blocked by same type of constructions,
 #																			#use multi_stage_type	if construction blocks and blocked by multi-stage constructions
+#	custom_tooltip_requirements = LOC_KEY	# custom loc to show in the build requirements. The loc can optionally include a MEGASTRUCTURE variable for the name of the megastructure
+#	build_system_tooltip = habitat_tooltip	# tooltip from common/system_tooltips that will be shown when selecting a location to build the megastructure
 #
 #	is_ruined_orbital_ring = yes			# default = no
 #	scales_with_planet = yes				# default = no
