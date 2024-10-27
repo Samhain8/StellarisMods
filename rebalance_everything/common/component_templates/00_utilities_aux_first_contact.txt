@@ -409,7 +409,7 @@ utility_component_template = {
 		DESTROYER_CLOAKING_DARK_MATTER
 		DESTROYER_CLOAKING_PSI
 	}
-	size_restriction = { destroyer crisis_destroyer offspring_destroyer }
+	size_restriction = { destroyer crisis_destroyer cosmo_crisis_destroyer offspring_destroyer }
 	prerequisites = { "tech_cloaking_2" }
 	component_set = "CLOAKING_2"
 	upgrades_to = "DESTROYER_CLOAKING_3"
@@ -477,7 +477,7 @@ utility_component_template = {
 		DESTROYER_CLOAKING_DARK_MATTER
 		DESTROYER_CLOAKING_PSI
 	}
-	size_restriction = { destroyer crisis_destroyer offspring_destroyer }
+	size_restriction = { destroyer crisis_destroyer cosmo_crisis_destroyer offspring_destroyer }
 	prerequisites = { "tech_cloaking_3" }
 	component_set = "CLOAKING_3"
 	ai_tags = {
@@ -544,7 +544,7 @@ utility_component_template = {
 		DESTROYER_CLOAKING_3
 		DESTROYER_CLOAKING_PSI
 	}
-	size_restriction = { destroyer crisis_destroyer offspring_destroyer }
+	size_restriction = { destroyer crisis_destroyer cosmo_crisis_destroyer offspring_destroyer }
 	prerequisites = { "tech_cloaking_dark_matter" }
 	component_set = "CLOAKING_DARK_MATTER"
 	ai_tags = {
@@ -613,7 +613,7 @@ utility_component_template = {
 		DESTROYER_CLOAKING_3
 		DESTROYER_CLOAKING_DARK_MATTER
 	}
-	size_restriction = { destroyer crisis_destroyer offspring_destroyer }
+	size_restriction = { destroyer crisis_destroyer cosmo_crisis_destroyer offspring_destroyer }
 	prerequisites = { "tech_cloaking_psi" }
 	component_set = "CLOAKING_PSI"
 	ai_tags = {
@@ -885,7 +885,7 @@ utility_component_template = {
 	blocked_by = {
 		BATTLESHIP_CLOAKING_PSI
 	}
-	size_restriction = { battleship offspring_battleship titan }
+	size_restriction = { battleship offspring_battleship cosmo_crisis_battlecruiser titan cosmo_crisis_titan }
 	prerequisites = { "tech_cloaking_dark_matter" }
 	component_set = "CLOAKING_DARK_MATTER"
 	ai_tags = {
@@ -951,7 +951,7 @@ utility_component_template = {
 	blocked_by = {
 		BATTLESHIP_CLOAKING_DARK_MATTER
 	}
-	size_restriction = { battleship offspring_battleship titan }
+	size_restriction = { battleship offspring_battleship cosmo_crisis_battlecruiser titan cosmo_crisis_titan }
 	prerequisites = { "tech_cloaking_psi" }
 	component_set = "CLOAKING_PSI"
 	ai_tags = {

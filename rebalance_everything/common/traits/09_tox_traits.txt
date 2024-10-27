@@ -239,49 +239,6 @@ trait_technical_skill = {
 	}
 }
 
-#trait_crafted_smiles = {
-#	host_has_dlc = "Toxoids Species Pack"
-#	cost = 0
-#	potential_crossbreeding_chance = 1.0	# 1.0 = 100% chance of being considered for new traits when forming half-species. does not guarantee the trait will be added if it costs points.
-#	allowed_archetypes = { BIOLOGICAL LITHOID }
-#	allowed_origins = { origin_overtuned }
-#	randomized = no
-#	species_potential_add = {
-#		exists = from
-#		from = { has_origin = origin_overtuned }
-#		can_add_tradeoff_traits = yes
-#	}
-#	species_possible_remove = {
-#		can_remove_overtuned_traits = yes
-#	}
-#	species_possible_merge_remove = {
-#		always = yes
-#	}
-#	modifier = { leader_lifespan_add = -10 }
-#	custom_tooltip_with_modifiers = crafted_smiles_tooltip
-#	triggered_pop_modifier = {
-#		potential = {
-#			exists = owner
-#			owner = { NOT = { has_edict = damn_the_consequences } }
-#		}
-#		modifier = {
-#			pop_job_amenities_mult = 0.1
-#		}
-#	}
-#	triggered_pop_modifier = {
-#		potential = {
-#			exists = owner
-#			owner = { has_edict = damn_the_consequences }
-#		}
-#		modifier = {
-#			pop_job_amenities_mult = 0.15
-#		}
-#	}
-#	slave_cost = {
-#		energy = 1000
-#	}
-#}
-
 trait_low_maintenance = {
 	host_has_dlc = "Toxoids Species Pack"
 	cost = 1
@@ -780,6 +737,9 @@ trait_crafted_charm = {
 trait_incubator = {
 	host_has_dlc = "Toxoids Species Pack"
 	cost = 2
+	species_possible_add = {
+		can_add_genetic_traits = yes
+	}
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
 	}
@@ -804,6 +764,9 @@ trait_incubator = {
 trait_inorganic_breath = {
 	host_has_dlc = "Toxoids Species Pack"
 	cost = 2
+	species_possible_add = {
+		can_add_genetic_traits = yes
+	}
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
 	}
@@ -827,6 +790,9 @@ trait_inorganic_breath = {
 trait_noxious = {
 	host_has_dlc = "Toxoids Species Pack"
 	cost = 1
+	species_possible_add = {
+		can_add_genetic_traits = yes
+	}
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
 	}
@@ -967,3 +933,36 @@ trait_impish = {
 		energy = 750
 	}
 }
+
+#Overtuned
+#Leave at start of list
+#trait_auto_mod_overtuned = {
+#	host_has_dlc = "Toxoids Species Pack"
+#	cost = 2
+#	auto_mod = yes
+#	category = overtuned
+#
+#	allowed_archetypes = { BIOLOGICAL LITHOID }
+#	allowed_origins = { origin_overtuned }
+#
+#	species_potential_add = {
+#		can_add_overtuned_traits = yes
+#	}
+#	species_possible_remove = {
+#		can_remove_overtuned_traits = yes
+#	}
+#	species_possible_merge_remove = {
+#		always = yes
+#	}
+#	potential_crossbreeding_chance = 1.0
+#	modifier = {
+#		leader_lifespan_add = -20
+#	}
+#	slave_cost = {
+#		energy = 1000
+#	}
+#	assembly_score = {
+#		base = 2
+#	}
+#	custom_tooltip_with_modifiers = automodding_trait_overtuned_tooltip
+#}

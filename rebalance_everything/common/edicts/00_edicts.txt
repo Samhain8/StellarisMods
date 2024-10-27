@@ -1575,8 +1575,8 @@ zro_crystal_machine = {
 	}
 
 	modifier = {
-		species_leader_exp_gain = 0.35
-		custom_tooltip = edict_zro_crystal_machine_effect
+		species_leader_exp_gain = 0.25
+		leader_lifespan_add = 30
 	}
 
 	ai_weight = {
