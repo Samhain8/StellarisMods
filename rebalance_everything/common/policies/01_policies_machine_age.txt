@@ -118,10 +118,9 @@ computation_core_allocation = {
 	}
 }
 
-# The policy flags are checked when a pop is grown, assembled,
-# or switches ethic. Also when the leader pool refreshes.
-#  cyber_force_objectors - Everyone gets the Cybernetic/Cyborg trait
-#  cyber_allow_objectors - Spiritualists get the Limited Cybernetic/Cyborg trait
+# The policy flags are checked when a pop is grown, assembled or switches ethic. Also when the leader pool refreshes.
+# cyberization_standards_full    - Everyone gets the Cybernetic/Cyborg trait
+# cyberization_standards_limited - Spiritualists get the Limited Cybernetic/Cyborg trait
 cyberization_standards = {
 	potential = {
 		OR = {
@@ -224,7 +223,10 @@ cyberization_standards = {
 
 virtuality_focus = {
 	potential = {
-		has_active_tradition = tr_virtuality_3
+		OR = {
+			has_active_tradition = tr_virtuality_3
+			has_country_flag = synth_virtual
+		}
 	}
 
 	option = {
@@ -235,11 +237,11 @@ virtuality_focus = {
 		}
 
 		modifier = {
-			planet_jobs_physics_research_produces_mult = 1
-			planet_jobs_society_research_produces_mult = 1
-			planet_jobs_engineering_research_produces_mult = 1
-			planet_jobs_unity_produces_mult = -0.4
-			species_leader_exp_gain = -0.4
+			planet_jobs_physics_research_produces_mult = 0.8
+			planet_jobs_society_research_produces_mult = 0.8
+			planet_jobs_engineering_research_produces_mult = 0.8
+			planet_jobs_unity_produces_mult = -0.5
+			species_leader_exp_gain = -0.5
 			councilor_skill_add = -1
 		}
 
@@ -255,11 +257,11 @@ virtuality_focus = {
 		}
 
 		modifier = {
-			planet_jobs_unity_produces_mult = 1
-			planet_jobs_physics_research_produces_mult = -0.4
-			planet_jobs_society_research_produces_mult = -0.4
-			planet_jobs_engineering_research_produces_mult = -0.4
-			species_leader_exp_gain = -0.4
+			planet_jobs_unity_produces_mult = 0.8
+			planet_jobs_physics_research_produces_mult = -0.5
+			planet_jobs_society_research_produces_mult = -0.5
+			planet_jobs_engineering_research_produces_mult = -0.5
+			species_leader_exp_gain = -0.5
 			councilor_skill_add = -1
 		}
 
@@ -278,10 +280,10 @@ virtuality_focus = {
 			species_leader_exp_gain = 0.25
 			council_agenda_progress_speed = 0.25
 			councilor_skill_add = 2
-			planet_jobs_physics_research_produces_mult = -0.4
-			planet_jobs_society_research_produces_mult = -0.4
-			planet_jobs_engineering_research_produces_mult = -0.4
-			planet_jobs_unity_produces_mult = -0.4
+			planet_jobs_physics_research_produces_mult = -0.5
+			planet_jobs_society_research_produces_mult = -0.5
+			planet_jobs_engineering_research_produces_mult = -0.5
+			planet_jobs_unity_produces_mult = -0.5
 		}
 
 		AI_weight = {

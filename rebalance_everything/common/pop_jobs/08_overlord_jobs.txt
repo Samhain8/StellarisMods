@@ -36,7 +36,7 @@ overlord_propagandist = {
 	weight = {
 		weight = @overlord_job_weight
 	}
-	
+
 	inline_script = "jobs/automodding_priority_unity"
 }
 
@@ -79,7 +79,7 @@ overlord_propagandist_drone = {
 	weight = {
 		weight = @overlord_job_weight
 	}
-	
+
 	inline_script = "jobs/automodding_priority_unity"
 }
 
@@ -128,7 +128,7 @@ overlord_academic = {
 	weight = {
 		weight = @overlord_job_weight
 	}
-	
+
 	inline_script = "jobs/automodding_priority_research"
 }
 
@@ -183,7 +183,7 @@ overlord_academic_drone = {
 	weight = {
 		weight = @overlord_job_weight
 	}
-	
+
 	inline_script = "jobs/automodding_priority_research"
 }
 
@@ -241,7 +241,7 @@ overlord_trader = {
 	weight = {
 		weight = @overlord_job_weight
 	}
-	
+
 	inline_script = "jobs/automodding_priority_trade"
 }
 
@@ -293,7 +293,7 @@ overlord_trader_drone = {
 	weight = {
 		weight = @overlord_job_weight
 	}
-	
+
 	inline_script = "jobs/automodding_priority_trade"
 }
 
@@ -340,7 +340,7 @@ aid_worker = {
 	weight = {
 		weight = @overlord_job_weight
 	}
-	
+
 	inline_script = "jobs/automodding_priority_unity"
 }
 
@@ -382,7 +382,7 @@ aid_worker_drone = {
 	weight = {
 		weight = @overlord_job_weight
 	}
-	
+
 	inline_script = "jobs/automodding_priority_unity"
 }
 
@@ -534,7 +534,7 @@ mind_thrall = {
 	weight = {
 		weight = @overlord_job_weight
 	}
-	
+
 	inline_script = "jobs/automodding_priority_research"
 }
 
@@ -566,7 +566,7 @@ mind_thrall_drone = {
 	weight = {
 		weight = @overlord_job_weight
 	}
-	
+
 	inline_script = "jobs/automodding_priority_research"
 }
 
@@ -1159,7 +1159,7 @@ overlord_necromancer_drone = {
 	weight = {
 		weight = @overlord_job_weight
 	}
-	
+
 	inline_script = "jobs/automodding_priority_research"
 }
 
@@ -1370,7 +1370,7 @@ overlord_ranger = {
 	weight = {
 		weight = @overlord_job_weight
 	}
-	
+
 	inline_script = "jobs/automodding_priority_unity"
 }
 
@@ -1412,7 +1412,7 @@ overlord_ranger_drone = {
 	weight = {
 		weight = @overlord_job_weight
 	}
-	
+
 	inline_script = "jobs/automodding_priority_unity"
 }
 
@@ -1452,7 +1452,7 @@ overlord_arborist = {
 	weight = {
 		weight = @overlord_job_weight
 	}
-	
+
 	inline_script = "jobs/automodding_priority_food"
 }
 
@@ -1493,7 +1493,7 @@ overlord_arborist_drone = {
 	weight = {
 		weight = @overlord_job_weight
 	}
-	
+
 	inline_script = "jobs/automodding_priority_food"
 }
 
@@ -1638,7 +1638,7 @@ overlord_manager = {
 	weight = {
 		weight = @overlord_job_weight
 	}
-	
+
 	inline_script = "jobs/automodding_priority_trade"
 }
 
@@ -1685,7 +1685,7 @@ overlord_mortal_initiate = {
 	weight = {
 		weight = @overlord_job_weight
 	}
-	
+
 	inline_script = "jobs/automodding_priority_amenities"
 }
 
@@ -1731,7 +1731,7 @@ overlord_mortal_initiate_drone = {
 	weight = {
 		weight = @overlord_job_weight
 	}
-	
+
 	inline_script = "jobs/automodding_priority_amenities"
 }
 
@@ -1739,7 +1739,7 @@ overlord_bath_attendant = {
 	category = specialist
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = building_toxic_baths
+	building_icon = building_toxic_bath
 	clothes_texture_index = 1
 	icon = bath_attendant
 
@@ -1778,7 +1778,7 @@ overlord_bath_attendant = {
 	weight = {
 		weight = @overlord_job_weight
 	}
-	
+
 	inline_script = "jobs/automodding_priority_unity"
 }
 
@@ -1786,7 +1786,7 @@ overlord_bath_attendant_hive = {
 	category = complex_drone
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = building_toxic_baths
+	building_icon = building_toxic_bath
 	clothes_texture_index = 1
 	icon = bath_attendant
 
@@ -1834,7 +1834,7 @@ overlord_bath_attendant_machine = {
 	category = complex_drone
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = building_toxic_baths
+	building_icon = building_toxic_bath
 	clothes_texture_index = 1
 	icon = bath_attendant
 
@@ -1874,7 +1874,7 @@ overlord_bath_attendant_machine = {
 	weight = {
 		weight = @overlord_job_weight
 	}
-	
+
 	inline_script = "jobs/automodding_priority_unity"
 }
 
@@ -1949,7 +1949,7 @@ overlord_knight = {
 			has_job = overlord_knight
 		}
 	}
-	
+
 	inline_script = "jobs/automodding_priority_unity"
 }
 
@@ -2024,7 +2024,7 @@ overlord_knight_drone = {
 			has_job = overlord_knight_drone
 		}
 	}
-	
+
 	inline_script = "jobs/automodding_priority_unity"
 }
 

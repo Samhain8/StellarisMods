@@ -1083,7 +1083,7 @@ ship_event = {
 			NOR = {
 				is_tutorial_level = 0
 				has_country_flag = discovered_modifier_planet
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 			}
 		}
 		from = {
@@ -1153,7 +1153,7 @@ ship_event = {
 				is_tutorial_level = 0
 				has_country_flag = discovered_modifier_planet
 			}
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 		}
 		from = {
 			num_modifiers > 0
@@ -1179,6 +1179,9 @@ ship_event = {
 
 	trigger = {
 		from = {
+			NOT = {
+				has_planet_flag = deposit_added
+			}
 			is_colonizable = no
 			OR = {
 				has_modifier = chthonian_planet
@@ -1203,8 +1206,18 @@ ship_event = {
 	immediate = {
 		from = {
 			prevent_anomaly = yes
-			clear_deposits = yes
-			add_deposit = d_minerals_6
+			hidden_effect = {
+				from = {
+					if = {
+						limit = {
+							NOT = { has_deposit_for = shipclass_mining_station }
+						}
+						clear_deposits = yes
+					}
+					set_planet_flag = deposit_added
+					add_deposit = d_minerals_6
+				}
+			}
 		}
 	}
 }
@@ -1294,7 +1307,7 @@ ship_event = {
 		enable_special_project = {
 			name = "TAME_THE_SWARM"
 			location = event_target:nanite_swarm_planet
-			owner = root.owner
+			owner = root
 		}
 	}
 	option =  {
@@ -1322,6 +1335,7 @@ ship_event = {
 				default = { give_technology = { tech = tech_administrative_ai }}
 			}
 			set_country_flag = studied_nanite_swarm
+			end_event_chain = parvus_III_chain
 		}
 	}
 	option =  {
@@ -1336,7 +1350,6 @@ ship_event = {
 
 	after = {
 		owner = {
-			end_event_chain = parvus_III_chain
 			country_event = { id = anomaly.6710 days = 80 random = 1000 }
 		}
 	}
@@ -1456,6 +1469,9 @@ ship_event = {
 					clear_blocker = yes
 				}
 			}
+		}
+		owner = {
+			end_event_chain = parvus_III_chain
 		}
 	}
 }
@@ -1964,13 +1980,20 @@ ship_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		from = { clear_deposits = yes }
+		from = {
+			if = {
+				limit = {
+					NOT = { has_deposit_for = shipclass_mining_station }
+				}
+				clear_deposits = yes
+			}
+		}
 	}
 
 	option = {
 		name = anomaly.6786.a
 		FROM = {
-			set_deposit = d_minerals_3
+			add_deposit = d_minerals_3
 			custom_tooltip = anomaly.6786.a.tooltip
 		}
 		hidden_effect = {
@@ -2012,13 +2035,20 @@ ship_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		from = { clear_deposits = yes }
+		from = {
+			if = {
+				limit = {
+					NOT = { has_deposit_for = shipclass_research_station }
+				}
+				clear_deposits = yes
+			}
+		}
 	}
 
 	option = {
 		name = FASCINATING
 		FROM = {
-			set_deposit = d_physics_3
+			add_deposit = d_physics_3
 		}
 	}
 }
@@ -2269,7 +2299,12 @@ ship_event = {
 		name = anomaly.6800.b
 		hidden_effect = {
 			from = {
-				clear_deposits = yes
+				if = {
+					limit = {
+						NOT = { has_deposit_for = shipclass_mining_station }
+					}
+					clear_deposits = yes
+				}
 				add_modifier = {
 					modifier = "ship_graveyard"
 					days = -1
@@ -2427,7 +2462,7 @@ ship_event = { #Giant Alien Spiders are no Joke
 		trigger = {
 			owner = {
 				OR = {
-					has_origin = origin_void_dwellers
+					has_void_dweller_origin = yes
 					has_technology = tech_habitat_1
 				}
 			}
@@ -2652,7 +2687,14 @@ ship_event = {
 	option = {
 		name = anomaly.6840.b
 		hidden_effect = {
-			from = { clear_deposits = yes }
+			from = {
+				if = {
+					limit = {
+						NOT = { has_deposit_for = shipclass_mining_station }
+					}
+					clear_deposits = yes
+				}
+			}
 		}
 		from = { add_deposit = d_minerals_5 }
 	}
@@ -3647,13 +3689,13 @@ ship_event = {
 	}
 	desc = {
 		trigger = {
-			owner = { has_authority = auth_machine_intelligence }
+			owner = { is_machine_empire = yes }
 		}
 		text = anomaly.7101.machines.desc
 	}
 	desc = {
 		trigger = {
-			owner = { has_authority = auth_hive_mind }
+			owner = { is_hive_empire = yes }
 		}
 		text = anomaly.7101.hive.desc
 	}
@@ -3678,7 +3720,7 @@ ship_event = {
 	option = {
 		trigger = {
 			owner = {
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 			}
 		}
 		name = anomaly.7101.b
@@ -3689,7 +3731,7 @@ ship_event = {
 	option = {
 		trigger = {
 			owner = {
-				has_authority = auth_hive_mind
+				is_hive_empire = yes
 			}
 		}
 		name = anomaly.7101.c

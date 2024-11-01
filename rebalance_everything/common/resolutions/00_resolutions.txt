@@ -90,6 +90,12 @@ resolution_ecology_repeal_1 = {
 			is_lithoid_empire = yes
 			desc = lithoid
 		}
+
+		modifier = {
+			factor = 2
+			is_environmental_architects_empire = yes
+			desc = civic_environmental_architects
+		}
 	}
 }
 
@@ -169,6 +175,12 @@ resolution_ecology_repeal_2 = {
 			factor = 1.2
 			is_lithoid_empire = yes
 			desc = lithoid
+		}
+
+		modifier = {
+			factor = 2
+			is_environmental_architects_empire = yes
+			desc = civic_environmental_architects
 		}
 	}
 }
@@ -251,6 +263,12 @@ resolution_ecology_repeal_3 = {
 			factor = 1.2
 			is_lithoid_empire = yes
 			desc = lithoid
+		}
+
+		modifier = {
+			factor = 2
+			is_environmental_architects_empire = yes
+			desc = civic_environmental_architects
 		}
 	}
 }
@@ -342,6 +360,12 @@ resolution_ecology_repeal_4 = {
 			is_lithoid_empire = yes
 			desc = lithoid
 		}
+
+		modifier = {
+			factor = 2
+			is_environmental_architects_empire = yes
+			desc = civic_environmental_architects
+		}
 	}
 }
 
@@ -427,6 +451,12 @@ resolution_ecology_repeal_5 = {
 			is_lithoid_empire = yes
 			desc = lithoid
 		}
+
+		modifier = {
+			factor = 2
+			is_environmental_architects_empire = yes
+			desc = civic_environmental_architects
+		}
 	}
 }
 
@@ -509,6 +539,12 @@ resolution_ecology_recycling_initiatives = {
 			country_uses_food = no
 			desc = gal_com_country_uses_food_no
 		}
+
+		modifier = {
+			factor = 0.5
+			is_environmental_architects_empire = yes
+			desc = civic_environmental_architects
+		}
 	}
 }
 
@@ -587,6 +623,12 @@ resolution_ecology_natural_sanctuaries = {
 			factor = 0.8
 			is_lithoid_empire = yes
 			desc = lithoid
+		}
+
+		modifier = {
+			factor = 0.5
+			is_environmental_architects_empire = yes
+			desc = civic_environmental_architects
 		}
 	}
 }
@@ -668,6 +710,12 @@ resolution_ecology_integrated_gardens = {
 			factor = 0.8
 			is_lithoid_empire = yes
 			desc = lithoid
+		}
+
+		modifier = {
+			factor = 0.5
+			is_environmental_architects_empire = yes
+			desc = civic_environmental_architects
 		}
 	}
 }
@@ -767,6 +815,12 @@ resolution_ecology_environmental_control_board = {
 			is_lithoid_empire = yes
 			desc = lithoid
 		}
+
+		modifier = {
+			factor = 0.5
+			is_environmental_architects_empire = yes
+			desc = civic_environmental_architects
+		}
 	}
 }
 
@@ -859,6 +913,12 @@ resolution_ecology_paradise_initiative = {
 			is_lithoid_empire = yes
 			desc = lithoid
 		}
+
+		modifier = {
+			factor = 0.5
+			is_environmental_architects_empire = yes
+			desc = civic_environmental_architects
+		}
 	}
 }
 
@@ -916,6 +976,11 @@ resolution_galacticstudies_repeal_1 = {
 			factor = 1.5
 			is_spiritualist = yes
 			desc = ethic_spiritualist
+		}
+		modifier = {
+			factor = 0.5
+			is_astrometeorologist_empire = yes
+			desc = civic_environmental_architects
 		}
 	}
 }
@@ -975,6 +1040,11 @@ resolution_galacticstudies_repeal_2 = {
 			factor = 1.5
 			is_spiritualist = yes
 			desc = ethic_spiritualist
+		}
+		modifier = {
+			factor = 0.5
+			is_astrometeorologist_empire = yes
+			desc = civic_environmental_architects
 		}
 	}
 }
@@ -1047,6 +1117,11 @@ resolution_galacticstudies_repeal_3 = {
 			factor = 10
 			in_breach_of = resolution_galacticstudies_advanced_xenostudies
 			desc = gal_com_in_breach_of_proposed_resolution
+		}
+		modifier = {
+			factor = 0.5
+			is_astrometeorologist_empire = yes
+			desc = civic_environmental_architects
 		}
 	}
 }
@@ -1124,6 +1199,16 @@ resolution_galacticstudies_repeal_4 = {
 			in_breach_of = resolution_galacticstudies_ethical_guideline_refactoring
 			desc = gal_com_in_breach_of_proposed_resolution
 		}
+		modifier = {
+			factor = 0.5
+			is_astrometeorologist_empire = yes
+			desc = civic_environmental_architects
+		}
+		modifier = {
+			factor = 0.5
+			is_astrometeorologist_empire = yes
+			desc = civic_environmental_architects
+		}
 	}
 }
 
@@ -1188,6 +1273,11 @@ resolution_galacticstudies_repeal_5 = {
 			factor = 1.5
 			is_spiritualist = yes
 			desc = ethic_spiritualist
+		}
+		modifier = {
+			factor = 0.5
+			is_astrometeorologist_empire = yes
+			desc = civic_environmental_architects
 		}
 	}
 }
@@ -1256,6 +1346,11 @@ resolution_galacticstudies_cooperative_research_channels = {
 			is_spiritualist = yes
 			desc = ethic_spiritualist
 		}
+		modifier = {
+			factor = 2
+			is_astrometeorologist_empire = yes
+			desc = civic_environmental_architects
+		}
 	}
 }
 
@@ -1313,6 +1408,11 @@ resolution_galacticstudies_astral_studies_network = {
 			factor = 0.75
 			is_spiritualist = yes
 			desc = ethic_spiritualist
+		}
+		modifier = {
+			factor = 2
+			is_astrometeorologist_empire = yes
+			desc = civic_environmental_architects
 		}
 	}
 }
@@ -1415,6 +1515,11 @@ resolution_galacticstudies_advanced_xenostudies = {
 			factor = 0
 			in_breach_of = resolution_galacticstudies_advanced_xenostudies
 			desc = gal_com_in_breach_of_proposed_resolution
+		}
+		modifier = {
+			factor = 2
+			is_astrometeorologist_empire = yes
+			desc = civic_environmental_architects
 		}
 	}
 }
@@ -1529,6 +1634,11 @@ resolution_galacticstudies_ethical_guideline_refactoring = {
 			in_breach_of = resolution_galacticstudies_ethical_guideline_refactoring
 			desc = gal_com_in_breach_of_proposed_resolution
 		}
+		modifier = {
+			factor = 2
+			is_astrometeorologist_empire = yes
+			desc = civic_environmental_architects
+		}
 	}
 }
 
@@ -1620,6 +1730,11 @@ resolution_galacticstudies_extradimensional_experimentation = {
 			factor = 0.75
 			is_spiritualist = yes
 			desc = ethic_spiritualist
+		}
+		modifier = {
+			factor = 2
+			is_astrometeorologist_empire = yes
+			desc = civic_environmental_architects
 		}
 	}
 }
@@ -2455,6 +2570,12 @@ resolution_industry_repeal_1 = {
 			has_valid_civic = civic_agrarian_idyll
 			desc = civic_agrarian_idyll
 		}
+
+		modifier = {
+			factor = 2
+			is_environmental_architects_empire = yes
+			desc = civic_environmental_architects
+		}
 	}
 }
 
@@ -2525,6 +2646,12 @@ resolution_industry_repeal_2 = {
 			factor = 2
 			has_valid_civic = civic_agrarian_idyll
 			desc = civic_agrarian_idyll
+		}
+
+		modifier = {
+			factor = 2
+			is_environmental_architects_empire = yes
+			desc = civic_environmental_architects
 		}
 	}
 }
@@ -2597,6 +2724,12 @@ resolution_industry_repeal_3 = {
 			factor = 2
 			has_valid_civic = civic_agrarian_idyll
 			desc = civic_agrarian_idyll
+		}
+
+		modifier = {
+			factor = 2
+			is_environmental_architects_empire = yes
+			desc = civic_environmental_architects
 		}
 	}
 }
@@ -2674,6 +2807,12 @@ resolution_industry_repeal_4 = {
 			has_valid_civic = civic_agrarian_idyll
 			desc = civic_agrarian_idyll
 		}
+
+		modifier = {
+			factor = 2
+			is_environmental_architects_empire = yes
+			desc = civic_environmental_architects
+		}
 	}
 }
 
@@ -2749,6 +2888,12 @@ resolution_industry_repeal_5 = {
 			factor = 2
 			has_valid_civic = civic_agrarian_idyll
 			desc = civic_agrarian_idyll
+		}
+
+		modifier = {
+			factor = 2
+			is_environmental_architects_empire = yes
+			desc = civic_environmental_architects
 		}
 	}
 }
@@ -2834,6 +2979,12 @@ resolution_industry_regulatory_facilitation = {
 			has_valid_civic = civic_agrarian_idyll
 			desc = civic_agrarian_idyll
 		}
+
+		modifier = {
+			factor = 0.5
+			is_environmental_architects_empire = yes
+			desc = civic_environmental_architects
+		}
 	}
 }
 
@@ -2908,6 +3059,12 @@ resolution_industry_collective_waste_management = {
 			factor = 0.5
 			has_valid_civic = civic_agrarian_idyll
 			desc = civic_agrarian_idyll
+		}
+
+		modifier = {
+			factor = 0.5
+			is_environmental_architects_empire = yes
+			desc = civic_environmental_architects
 		}
 	}
 }
@@ -2984,6 +3141,12 @@ resolution_industry_building_a_better_tomorrow = {
 			factor = 0.5
 			has_valid_civic = civic_agrarian_idyll
 			desc = civic_agrarian_idyll
+		}
+
+		modifier = {
+			factor = 0.5
+			is_environmental_architects_empire = yes
+			desc = civic_environmental_architects
 		}
 	}
 }
@@ -3066,6 +3229,12 @@ resolution_industry_environmental_ordinance_waivers = {
 			factor = 0.5
 			has_valid_civic = civic_agrarian_idyll
 			desc = civic_agrarian_idyll
+		}
+
+		modifier = {
+			factor = 0.5
+			is_environmental_architects_empire = yes
+			desc = civic_environmental_architects
 		}
 	}
 }
@@ -3153,6 +3322,12 @@ resolution_industry_project_cornucopia = {
 			factor = 0.5
 			has_valid_civic = civic_agrarian_idyll
 			desc = civic_agrarian_idyll
+		}
+
+		modifier = {
+			factor = 0.5
+			is_environmental_architects_empire = yes
+			desc = civic_environmental_architects
 		}
 	}
 }
@@ -6556,7 +6731,7 @@ resolution_divinity_repeal_2 = {
 			is_individual_machine = no
 			desc = ethic_spiritualist
 		}
-		
+
 		modifier = {
 			factor = 10
 			is_individual_machine = yes
@@ -6567,7 +6742,7 @@ resolution_divinity_repeal_2 = {
 			factor = 10
 			has_origin = origin_cybernetic_creed
 			desc = origin_cybernetic_creed
-		} 
+		}
 	}
 }
 
@@ -6659,7 +6834,7 @@ resolution_divinity_repeal_3 = {
 			is_individual_machine = no
 			desc = ethic_spiritualist
 		}
-		
+
 		modifier = {
 			factor = 10
 			is_individual_machine = yes
@@ -6670,7 +6845,7 @@ resolution_divinity_repeal_3 = {
 			factor = 10
 			has_origin = origin_cybernetic_creed
 			desc = origin_cybernetic_creed
-		} 
+		}
 	}
 }
 
@@ -6762,7 +6937,7 @@ resolution_divinity_repeal_4 = {
 			is_individual_machine = no
 			desc = ethic_spiritualist
 		}
-		
+
 		modifier = {
 			factor = 10
 			is_individual_machine = yes
@@ -6773,7 +6948,7 @@ resolution_divinity_repeal_4 = {
 			factor = 10
 			has_origin = origin_cybernetic_creed
 			desc = origin_cybernetic_creed
-		} 
+		}
 	}
 }
 
@@ -6866,7 +7041,7 @@ resolution_divinity_repeal_5 = {
 			is_individual_machine = no
 			desc = ethic_spiritualist
 		}
-		
+
 		modifier = {
 			factor = 10
 			is_individual_machine = yes
@@ -6889,7 +7064,7 @@ resolution_divinity_repeal_5 = {
 			factor = 10
 			has_origin = origin_cybernetic_creed
 			desc = origin_cybernetic_creed
-		} 
+		}
 	}
 }
 
@@ -6992,7 +7167,7 @@ resolution_divinity_comfort_the_fallen = {
 			is_individual_machine = no
 			desc = ethic_spiritualist
 		}
-		
+
 		modifier = {
 			factor = 0
 			is_individual_machine = yes
@@ -7003,7 +7178,7 @@ resolution_divinity_comfort_the_fallen = {
 			factor = 0
 			has_origin = origin_cybernetic_creed
 			desc = origin_cybernetic_creed
-		} 
+		}
 
 		modifier = {
 			factor = 2
@@ -7102,7 +7277,7 @@ resolution_divinity_tithe_on_the_soulless = {
 			is_individual_machine = no
 			desc = ethic_spiritualist
 		}
-		
+
 		modifier = {
 			factor = 0
 			is_individual_machine = yes
@@ -7113,7 +7288,7 @@ resolution_divinity_tithe_on_the_soulless = {
 			factor = 0
 			has_origin = origin_cybernetic_creed
 			desc = origin_cybernetic_creed
-		} 
+		}
 	}
 }
 
@@ -7203,7 +7378,7 @@ resolution_divinity_right_to_work = {
 			is_individual_machine = no
 			desc = ethic_spiritualist
 		}
-		
+
 		modifier = {
 			factor = 0
 			is_individual_machine = yes
@@ -7214,7 +7389,7 @@ resolution_divinity_right_to_work = {
 			factor = 0
 			has_origin = origin_cybernetic_creed
 			desc = origin_cybernetic_creed
-		} 
+		}
 	}
 }
 
@@ -7323,7 +7498,7 @@ resolution_divinity_silence_the_soulless = {
 			is_individual_machine = no
 			desc = ethic_spiritualist
 		}
-		
+
 		modifier = {
 			factor = 0
 			is_individual_machine = yes
@@ -7334,7 +7509,7 @@ resolution_divinity_silence_the_soulless = {
 			factor = 0
 			has_origin = origin_cybernetic_creed
 			desc = origin_cybernetic_creed
-		} 
+		}
 	}
 }
 
@@ -7455,7 +7630,7 @@ resolution_divinity_a_defined_purpose = {
 			is_individual_machine = no
 			desc = ethic_spiritualist
 		}
-		
+
 		modifier = {
 			factor = 0
 			is_individual_machine = yes
@@ -7472,7 +7647,7 @@ resolution_divinity_a_defined_purpose = {
 			factor = 0
 			has_origin = origin_cybernetic_creed
 			desc = origin_cybernetic_creed
-		} 
+		}
 	}
 }
 
@@ -12948,7 +13123,7 @@ resolution_galactic_market_form = {
 
 		modifier = {
 			factor = 4
-			has_authority = auth_corporate
+			is_megacorp = yes
 			desc = auth_corporate
 		}
 
@@ -13445,7 +13620,7 @@ resolution_galactic_market_relocate = {
 
 		modifier = {
 			factor = 2
-			has_authority = auth_corporate
+			is_megacorp = yes
 			NOT = { has_modifier = galactic_market_founder }
 			desc = gal_com_is_not_galactic_market_founder
 		}

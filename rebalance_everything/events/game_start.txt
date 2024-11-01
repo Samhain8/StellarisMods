@@ -267,8 +267,6 @@ event = {
 				limit = {
 					has_origin = origin_lost_colony
 					NOT = {has_country_flag = human_2 }
-					# no need to change the planet class of your planets if you're a machine
-					is_machine_empire = no
 				}
 				country_event = { id = origin.100 }
 			}
@@ -307,7 +305,12 @@ event = {
 
 		# Ocean Paradise
 		every_playable_country = {
-			limit = { has_origin = origin_ocean_paradise }
+			limit = {
+				OR  = {
+					has_origin = origin_ocean_paradise
+					has_origin = origin_ocean_machines
+				}
+			}
 			country_event = { id = aquatics.1000 }
 		}
 
@@ -402,14 +405,113 @@ event = {
 			country_event = { id = paragon.5000 }
 		}
 
-		# Eagar Explorers
+		# Eager Explorers
 		every_playable_country = {
 			limit = {
 				is_eager_explorer_empire = yes
 			}
-			give_technology = { message = no tech = tech_subspace_drive }
+			give_technology = {
+				message = no
+				tech = tech_subspace_drive
+			}
 			low_tech_start_add_research_options_effect = yes
 			add_research_option = tech_hyper_drive_1
+		}
+
+		# Cybernetic Creed
+		every_playable_country = {
+			limit = {
+				has_origin = origin_cybernetic_creed
+			}
+			add_research_option = tech_integrated_cybernetics
+			every_owned_leader = {
+				limit = {
+					is_ruler = yes
+					NOT = { has_trait = leader_trait_cyborg	}
+				}
+				add_trait = leader_trait_ritualistic_implants_cyborg
+			}
+		}
+
+		# Synthetic Fertility
+		every_playable_country = {
+			limit = {
+				has_origin = origin_synthetic_fertility
+			}
+			country_event = { id = machine_age.3100 }
+		}
+
+		# Arc Welders
+		every_playable_country = {
+			limit = {
+				has_origin = origin_arc_welders
+			}
+			arc_welders_start_effect = yes
+		}
+
+		# Astro-Mining Drones
+		every_playable_country = {
+			limit = {
+				has_valid_civic = civic_machine_astromining_drones
+			}
+			random_owned_starbase = {
+				set_starbase_module = {
+					slot = 2
+					module = astromining_bay
+				}
+			}
+		}
+
+		# Genesis Guides
+		every_playable_country = {
+			limit = {
+				is_guided_sapience_empire = yes
+			}
+			set_variable = {
+				which = presapients_guided
+				value = 1
+			}
+			set_country_flag = found_presapients
+			capital_scope = {
+				spawn_presapient_species_randomizer_homeworld_effect = yes
+				add_deposit = d_genesis_preserve
+				set_planet_flag = pre_sapient_planet
+			}
+		}
+
+		# Natural Design
+		every_playable_country = {
+			limit = {
+				is_natural_design_empire = yes
+				capital_scope = {
+					free_building_slots > 0
+				}
+			}
+			if = {
+				limit = {
+					is_hive_empire = yes
+				}
+				capital_scope = {
+					add_building = building_hive_transcendental_retreat
+				}
+			}
+			if = {
+				limit = {
+					is_hive_empire = no
+				}
+				capital_scope = {
+					add_building = building_transcendental_retreat
+				}
+			}
+		}
+
+		# Spyware Directives
+		every_playable_country = {
+			limit = {
+				has_first_contact_dlc = yes
+				has_civic = civic_machine_spybots
+			}
+			add_research_option = tech_cloaking_1
 		}
 
 		every_playable_country = {
@@ -419,6 +521,13 @@ event = {
 			every_owned_planet = {
 				set_planetary_ascension_tier = 1
 			}
+		}
+
+		every_playable_country = {
+			limit = {
+				has_valid_civic = civic_machine_obsessional_directive
+			}
+			obsessional_directive_start_effect = yes
 		}
 	}
 }
@@ -845,6 +954,12 @@ country_event = {
 			}
 			give_technology = { message = no tech = tech_starbase_3 }
 		}
+		if = {
+			limit = {
+				has_origin = origin_storm_chasers
+			}
+			give_technology = { message = no tech = tech_storm_prediction_1 }
+		}
 	}
 
 	# Additional resources that may be changed by subspecies are granted in generate_start_buildings_and_districts
@@ -1204,22 +1319,8 @@ country_event = {
 			days = -1
 		}
 		if = {
-			limit = { is_materialist = yes }
-			modify_species = {
-				species = this
-				add_trait = trait_cybernetic
-			}
-		}
-		if = {
-			limit = { is_spiritualist = yes }
-			modify_species = {
-				species = this
-				add_trait = trait_psionic
-			}
-		}
-		if = {
 			limit = {
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 			}
 			random_list = {
 				66 = { set_country_flag = fallen_machine_empire_awaken_1 }	# Custodian
@@ -1228,7 +1329,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOT = { has_authority = auth_machine_intelligence }
+				is_machine_empire = no
 			}
 			every_owned_pop = {
 				set_pop_flag = organic_fallen_empire_pop
@@ -1283,7 +1384,9 @@ planet_event = {
 
 	immediate = {
 		if = {
-			limit = { NOT = { has_planet_flag = special_start_planet } }
+			limit = {
+				NOT = { has_planet_flag = special_start_planet }
+			}
 			if = {
 				limit = {
 					OR = {
@@ -1317,10 +1420,21 @@ planet_event = {
 			void_dweller_home_planet_setup = yes
 		}
 
-
 		if = {
 			limit = { has_planet_flag = toxic_knights_homeworld }
 			toxic_knights_order_habitat_setup = yes
+		}
+
+		if = {
+			limit = {
+				owner = {
+					is_astrometeorologist_empire = yes
+				}
+				has_building = building_research_lab_1
+			}
+
+			remove_building = building_research_lab_1
+			add_building = building_astrometeorology_observation_center
 		}
 
 	}
@@ -1388,12 +1502,12 @@ planet_event = {
 			add_district_and_planet_size_if_needed_effect = { district = district_generator }
 
 			if = {
-				limit = { owner = { has_authority = auth_machine_intelligence } }
+				limit = { owner = { is_machine_empire = yes } }
 				add_district_and_planet_size_if_needed_effect = { district = district_nexus }
 				add_district_and_planet_size_if_needed_effect = { district = district_nexus }
 			}
 			else_if = {
-				limit = { owner = { has_authority = auth_hive_mind } }
+				limit = { owner = { is_hive_empire = yes } }
 				add_district_and_planet_size_if_needed_effect = { district = district_hive }
 				add_district_and_planet_size_if_needed_effect = { district = district_hive }
 			}
@@ -1405,7 +1519,7 @@ planet_event = {
 			if = {
 				limit = {
 					owner = {
-						NOT = { has_authority = auth_machine_intelligence }
+						is_machine_empire = no
 						is_anglers_empire = yes
 					}
 					is_planet_class = pc_ocean
@@ -1415,14 +1529,14 @@ planet_event = {
 			}
 			else_if = {
 				limit = {
-					owner = { NOT = { has_authority = auth_machine_intelligence } }
+					owner = { is_machine_empire = no }
 				}
 				add_district_and_planet_size_if_needed_effect = { district = district_farming }
 				add_district_and_planet_size_if_needed_effect = { district = district_farming }
 			}
 			if = {
 				limit = {
-					owner = { has_authority = auth_machine_intelligence }
+					owner = { is_machine_empire = yes }
 				}
 				add_district_and_planet_size_if_needed_effect = { district = district_generator }
 				add_district_and_planet_size_if_needed_effect = { district = district_generator }
@@ -1581,13 +1695,13 @@ planet_event = {
 			add_district_and_planet_size_if_needed_effect = { district = district_mining }
 
 			if = {
-				limit = { owner = { has_authority = auth_machine_intelligence } }
+				limit = { owner = { is_machine_empire = yes } }
 				add_district_and_planet_size_if_needed_effect = { district = district_nexus }
 				add_district_and_planet_size_if_needed_effect = { district = district_generator }
 				add_district_and_planet_size_if_needed_effect = { district = district_generator }
 			}
 			else_if = {
-				limit = { owner = { has_authority = auth_hive_mind } }
+				limit = { owner = { is_hive_empire = yes } }
 				add_district_and_planet_size_if_needed_effect = { district = district_hive }
 				add_district_and_planet_size_if_needed_effect = { district = district_farming }
 			}
@@ -1634,14 +1748,14 @@ planet_event = {
 			limit = { is_capital = yes }
 
 			if = {
-				limit = { owner = { has_authority = auth_machine_intelligence } }
+				limit = { owner = { is_machine_empire = yes } }
 				while = {
 					count = 13
 					create_pop = { species = owner_main_species }
 				}
 			}
 			else_if = {
-				limit = { owner = { has_authority = auth_hive_mind } }
+				limit = { owner = { is_hive_empire = yes } }
 				while = {
 					count = 16
 					create_pop = { species = owner_main_species }
@@ -1699,14 +1813,14 @@ planet_event = {
 		}
 		else = {
 			if = {
-				limit = { owner = { has_authority = auth_machine_intelligence } }
+				limit = { owner = { is_machine_empire = yes } }
 				while = {
 					count = 15
 					create_pop = { species = owner_main_species }
 				}
 			}
 			else_if = {
-				limit = { owner = { has_authority = auth_hive_mind } }
+				limit = { owner = { is_hive_empire = yes } }
 				while = {
 					count = 18
 					create_pop = { species = owner_main_species }
@@ -2446,8 +2560,8 @@ country_event = {
 	id = game_start.62
 	hide_window = yes
 	trigger = {
-		is_country_type = default
 		is_memory_vault_empire = yes
+		is_country_type = default
 		NOR = {
 			has_origin = origin_broken_shackles
 			has_origin = origin_payback
@@ -2524,13 +2638,9 @@ country_event = {
 	id = game_start.64
 	hide_window = yes
 	trigger = {
-		exists = owner
 		has_civic = civic_private_healthcare_corporate
 		is_country_type = default
-		NOT = {
-			# Done in 01_start_of_game_effects.txt instead.
-			has_origin = origin_void_dwellers
-		}
+		has_void_dweller_origin = no # Done in 01_start_of_game_effects.txt instead.
 	}
 
 	is_triggered_only = yes
@@ -2564,13 +2674,12 @@ country_event = {
 	id = game_start.65
 	hide_window = yes
 	trigger = {
-		exists = owner
 		has_civic = civic_dystopian_society
 		is_country_type = default
 		NOR = {
 			has_origin = origin_broken_shackles
 			has_origin = origin_payback
-			has_origin = origin_void_dwellers
+			has_void_dweller_origin = yes
 		}
 	}
 
@@ -2607,7 +2716,6 @@ country_event = {
 	hide_window = yes
 	trigger = {
 		has_paragon_dlc = yes
-		exists = owner
 		is_country_type = default
 		OR = {
 			has_origin = origin_broken_shackles
@@ -2684,7 +2792,7 @@ country_event = {
 					is_ruler = no
 				}
 				add_skill = 9
-				set_gestalt_node_protrait_effect = yes
+				set_gestalt_node_portrait_effect = yes
 			}
 		}
 	}
@@ -2755,7 +2863,6 @@ country_event = {
 	hide_window = yes
 	trigger = {
 		is_gestalt = no
-		has_paragon_dlc = yes
 		OR = {
 			is_country_type = default
 			is_country_type = fallen_empire
@@ -2778,8 +2885,11 @@ country_event = {
 					}
 				}
 			}
-			unlock_council_slots = 1
-			set_council_position_to_council = councilor_defense
+			if = {
+				limit = { has_paragon_dlc = yes	}
+				unlock_council_slots = 1
+				set_council_position_to_council = councilor_defense
+			}
 			if = {
 				limit = {
 					any_owned_leader = {
@@ -2827,8 +2937,11 @@ country_event = {
 					}
 				}
 			}
-			unlock_council_slots = 1
-			set_council_position_to_council = councilor_research
+			if = {
+				limit = { has_paragon_dlc = yes	}
+				unlock_council_slots = 1
+				set_council_position_to_council = councilor_research
+			}
 			if = {
 				limit = {
 					any_owned_leader = {
@@ -2868,7 +2981,6 @@ country_event = {
 		}
 
 		# Add Minister of State Position
-		unlock_council_slots = 1
 		if = {
 			limit = {
 				blocks_minister_of_state = no
@@ -2881,7 +2993,11 @@ country_event = {
 						}
 					}
 				}
-				set_council_position_to_council = councilor_state
+				if = {
+					limit = { has_paragon_dlc = yes	}
+					unlock_council_slots = 1
+					set_council_position_to_council = councilor_state
+				}
 				if = {
 					limit = {
 						any_owned_leader = {
@@ -2923,12 +3039,14 @@ country_event = {
 		else_if = {
 			limit = {
 				has_valid_civic = civic_inwards_perfection
+				has_paragon_dlc = yes
 				NOT = {
 					has_councilor = {
 						COUNCILOR = councilor_inwards_perfection
 					}
 				}
 			}
+			unlock_council_slots = 1
 			set_council_position_to_council = councilor_inwards_perfection
 			if = {
 				limit = {
@@ -2970,12 +3088,14 @@ country_event = {
 		else_if = {
 			limit = {
 				has_valid_civic = civic_fanatic_purifiers
+				has_paragon_dlc = yes
 				NOT = {
 					has_councilor = {
 						COUNCILOR = councilor_fanatic_purifiers
 					}
 				}
 			}
+			unlock_council_slots = 1
 			set_council_position_to_council = councilor_fanatic_purifiers
 			if = {
 				limit = {
@@ -3012,6 +3132,56 @@ country_event = {
 				last_created_leader = {
 					set_council_position = councilor_fanatic_purifiers
 				}
+			}
+		}
+	}
+}
+
+#Add 1 of 3 cyborg trait to species
+country_event = {
+	id = game_start.73
+	hide_window = yes
+	trigger = {
+		has_machine_age_dlc = yes
+		has_valid_civic = civic_augmentation_bazaars
+	}
+
+	is_triggered_only = yes
+
+	immediate = {
+		random_list = {
+			30 = {
+				every_owned_species = {
+					limit = {
+						is_robotic = no
+					}
+					change_species_characteristics = {
+						add_trait = trait_cyborg_power_drills
+					}
+				}
+				set_country_flag = augmentation_bazaars_power_drills
+			}
+			30 = {
+				every_owned_species = {
+					limit = {
+						is_robotic = no
+					}
+					change_species_characteristics = {
+						add_trait = trait_cyborg_harvesters
+					}
+				}
+				set_country_flag = augmentation_bazaars_harvesters
+			}
+			30 = {
+				every_owned_species = {
+					limit = {
+						is_robotic = no
+					}
+					change_species_characteristics = {
+						add_trait = trait_cyborg_superconductive
+					}
+				}
+				set_country_flag = augmentation_bazaars_superconductive
 			}
 		}
 	}

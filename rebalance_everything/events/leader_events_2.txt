@@ -88,6 +88,40 @@ country_event = {
 				add_trait_no_notify = leader_trait_corsair
 			}
 		}
+
+		# Tactical Algorithms
+		# Adds the Tactical Algorithms trait
+		if = {
+			limit = {
+				has_civic = civic_machine_tactical_algorithms
+				from = { leader_class = commander }
+			}
+			from = {
+				add_trait_no_notify = leader_trait_tactical_algorithms
+			}
+		}
+
+		# Storm Chasers
+		# Adds the Storm Rider trait
+		if = {
+			limit = {
+				has_origin = origin_storm_chasers
+			}
+			from = {
+				switch = {
+					trigger = leader_class
+					commander = {
+						add_trait_no_notify = leader_trait_storm_rider_commander
+						}
+					scientist = {
+						add_trait_no_notify = leader_trait_storm_rider_scientist
+					}
+					official = {
+						add_trait_no_notify = leader_trait_storm_rider_official
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -139,6 +173,20 @@ country_event = {
 			}
 		}
 
+		# Static Research Analysis
+		# Adds a random Expertise trait
+		if = {
+			limit = {
+				is_machine_empire = yes
+				has_valid_civic = civic_machine_predictive_analysis
+			}
+			every_owned_leader = {
+				limit = {
+					is_councilor_type = councilor_gestalt_cognitive
+				}
+				add_random_expertise_trait_effect = yes
+			}
+		}
 
 		# Technocracy
 		# Adds a random Expertise trait
@@ -177,6 +225,42 @@ country_event = {
 					leader_class = commander
 				}
 				add_trait_no_notify = leader_trait_corsair
+			}
+		}
+
+		# Tactical Algorithms
+		# Adds the Tactical Algorithms trait
+		if = {
+			limit = {
+				has_civic = civic_machine_tactical_algorithms
+			}
+			every_owned_leader = {
+				limit = {
+					leader_class = commander
+				}
+				add_trait_no_notify = leader_trait_tactical_algorithms
+			}
+		}
+
+		# Storm Chasers
+		# Adds the Storm Rider trait
+		if = {
+			limit = {
+				has_origin = origin_storm_chasers
+			}
+			every_owned_leader = {
+				switch = {
+					trigger = leader_class
+					commander = {
+						add_trait_no_notify = leader_trait_storm_rider_commander
+					}
+					scientist = {
+						add_trait_no_notify = leader_trait_storm_rider_scientist
+					}
+					official = {
+						add_trait_no_notify = leader_trait_storm_rider_official
+					}
+				}
 			}
 		}
 	}
@@ -332,6 +416,28 @@ leader_event = {
 			}
 			add_trait_no_notify = leader_trait_corsair
 		}
+
+		# Storm Chasers
+		# Adds the Storm Rider trait
+		if = {
+			limit = {
+				owner = {
+					has_origin = origin_storm_chasers
+				}
+			}
+			switch = {
+				trigger = leader_class
+				commander = {
+					add_trait_no_notify = leader_trait_storm_rider_commander
+				}
+				scientist = {
+					add_trait_no_notify = leader_trait_storm_rider_scientist
+				}
+				official = {
+					add_trait_no_notify = leader_trait_storm_rider_official
+				}
+			}
+		}
 	}
 }
 
@@ -344,7 +450,7 @@ country_event = {
 
 	trigger = {
 		is_country_type = default
-		has_authority = auth_imperial
+		is_imperial_authority = yes
 		exists = ruler
 	}
 
@@ -580,6 +686,7 @@ country_event = { # Delegate Focus Traits
 					is_assigned_to_galcom = yes
 					has_matching_resolution_category_focus_trait_tier1or2or3 = yes
 				}
+				save_event_target_as = galcom_delegate
 				if = {
 					limit = {
 						has_matching_resolution_category_focus_trait_tier_1 = yes

@@ -68,6 +68,16 @@ building_colony_shelter = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
+			owner = { is_regular_empire = yes }
+			has_modifier = penal_colony
+		}
+		job_warden_add = 1
+		job_colonist_add = -1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
 			owner = {
 				is_individual_machine = yes
 			}
@@ -79,7 +89,7 @@ building_colony_shelter = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
+			owner = { has_active_tradition = tr_synthetics_prefabricated_components }
 		}
 		job_roboticist_add = 1
 		job_colonist_add = -1
@@ -102,7 +112,7 @@ building_colony_shelter = {
 			owner = {
 				NAND = {
 					has_valid_civic = civic_dystopian_society
-					has_active_tradition = tr_synthetics_finish
+					has_active_tradition = tr_synthetics_prefabricated_components
 				}
 			}
 		}
@@ -114,7 +124,7 @@ building_colony_shelter = {
 			exists = owner
 			owner = {
 				OR = {
-					has_active_tradition = tr_synthetics_finish
+					has_active_tradition = tr_synthetics_prefabricated_components
 					is_individual_machine = yes
 				}
 			}
@@ -127,6 +137,15 @@ building_colony_shelter = {
 			has_modifier = payback_unified_purpose
 		}
 		text = job_unifier_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+			has_modifier = penal_colony
+		}
+		text = job_warden_effect_desc
 	}
 }
 
@@ -1521,7 +1540,7 @@ building_hab_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
+			owner = { has_active_tradition = tr_synthetics_prefabricated_components }
 		}
 		job_roboticist_add = 1
 	}
@@ -1589,7 +1608,7 @@ building_hab_capital = {
 		potential = {
 			exists = owner
 			owner = {
-				has_authority = auth_corporate
+				is_megacorp = yes
 				is_worker_coop_empire = yes
 			}
 		}
@@ -1715,7 +1734,7 @@ building_hab_capital = {
 			exists = owner
 			owner = {
 				NOT = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 				}
 				is_regular_empire = yes
 			}
@@ -1731,7 +1750,7 @@ building_hab_capital = {
 					is_individual_machine = yes
 					AND = {
 						is_regular_empire = yes
-						has_active_tradition = tr_synthetics_finish
+						has_active_tradition = tr_synthetics_prefabricated_components
 					}
 				}
 			}
@@ -1960,7 +1979,7 @@ building_hab_major_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
+			owner = { has_active_tradition = tr_synthetics_prefabricated_components }
 		}
 		job_roboticist_add = 1
 	}
@@ -1999,7 +2018,7 @@ building_hab_major_capital = {
 			owner = {
 				is_regular_empire = yes
 				NOR = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 					#has_civic = civic_exalted_priesthood
 					#has_civic = civic_aristocratic_elite
 					#has_civic = civic_merchant_guilds
@@ -2035,7 +2054,7 @@ building_hab_major_capital = {
 			NOT = { has_planet_flag = toxic_knights_habitat }
 			exists = owner
 			owner = { 
-				has_authority = auth_corporate
+				is_megacorp = yes
 				NOT = { has_civic = civic_merchant_nobles }
 				is_worker_coop_empire = no
 			}
@@ -2064,7 +2083,7 @@ building_hab_major_capital = {
 			NOT = { has_planet_flag = toxic_knights_habitat }
 			exists = owner
 			owner = {
-				has_authority = auth_corporate
+				is_megacorp = yes
 				is_worker_coop_empire = yes
 			}
 		}
@@ -2252,7 +2271,7 @@ building_hab_major_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				NOT = { has_authority = auth_corporate }
+				is_megacorp = no
 				is_regular_empire = yes
 			}
 			OR = {
@@ -2314,7 +2333,7 @@ building_hab_major_capital = {
 					is_individual_machine = yes
 					AND = {
 						is_regular_empire = yes
-						has_active_tradition = tr_synthetics_finish
+						has_active_tradition = tr_synthetics_prefabricated_components
 					}
 				}
 			}
@@ -2326,7 +2345,7 @@ building_hab_major_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_authority = auth_corporate
+				is_megacorp = yes
 				is_worker_coop_empire = no
 			}
 			OR = {
@@ -2341,7 +2360,7 @@ building_hab_major_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_authority = auth_corporate
+				is_megacorp = yes
 				is_worker_coop_empire = yes
 			}
 			OR = {
@@ -2559,7 +2578,7 @@ building_hab_system_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
+			owner = { has_active_tradition = tr_synthetics_prefabricated_components }
 		}
 		job_roboticist_add = 1
 	}
@@ -2588,7 +2607,7 @@ building_hab_system_capital = {
 			owner = {
 				is_regular_empire = yes
 				NOR = {
-					has_authority = auth_corporate
+					is_megacorp = yes
 					#has_civic = civic_exalted_priesthood
 					#has_civic = civic_aristocratic_elite
 					#has_civic = civic_merchant_guilds
@@ -2624,7 +2643,7 @@ building_hab_system_capital = {
 			NOT = { has_planet_flag = toxic_knights_habitat }
 			exists = owner
 			owner = {
-				has_authority = auth_corporate
+				is_megacorp = yes
 				is_worker_coop_empire = no
 			}
 		}
@@ -2652,7 +2671,7 @@ building_hab_system_capital = {
 			NOT = { has_planet_flag = toxic_knights_habitat }
 			exists = owner
 			owner = {
-				has_authority = auth_corporate
+				is_megacorp = yes
 				is_worker_coop_empire = yes
 			}
 		}
@@ -2807,7 +2826,7 @@ building_hab_system_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				NOT = { has_authority = auth_corporate }
+				is_megacorp = no
 				is_regular_empire = yes
 			}
 			OR = {
@@ -2864,7 +2883,7 @@ building_hab_system_capital = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
+			owner = { has_active_tradition = tr_synthetics_prefabricated_components }
 		}
 		text = job_roboticist_effect_desc
 	}
@@ -2873,7 +2892,7 @@ building_hab_system_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_authority = auth_corporate
+				is_megacorp = yes
 				is_worker_coop_empire = no
 			}
 			OR = {
@@ -2888,7 +2907,7 @@ building_hab_system_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				has_authority = auth_corporate
+				is_megacorp = yes
 				is_worker_coop_empire = yes
 			}
 			OR = {
@@ -3024,7 +3043,7 @@ building_resort_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
+			owner = { has_active_tradition = tr_synthetics_prefabricated_components }
 		}
 		job_roboticist_add = 1
 	}
@@ -3041,7 +3060,7 @@ building_resort_capital = {
 		potential = {
 			exists = owner
 			owner = {
-				NOT = { has_authority = auth_corporate }
+				is_megacorp = no
 			}
 		}
 		job_politician_add = 1
@@ -3051,7 +3070,7 @@ building_resort_capital = {
 		potential = {
 			exists = owner
 			owner = {
-				has_authority = auth_corporate
+				is_megacorp = yes
 				is_worker_coop_empire = no
 			}
 		}
@@ -3064,7 +3083,7 @@ building_resort_capital = {
 		potential = {
 			exists = owner
 			owner = {
-				has_authority = auth_corporate
+				is_megacorp = yes
 				is_worker_coop_empire = yes
 			}
 		}
@@ -3077,7 +3096,7 @@ building_resort_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				NOT = { has_authority = auth_corporate }
+				is_megacorp = no
 			}
 		}
 		text = job_politician_effect_desc
@@ -3086,7 +3105,7 @@ building_resort_capital = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
+			owner = { has_active_tradition = tr_synthetics_prefabricated_components }
 		}
 		text = job_roboticist_effect_desc
 	}
@@ -3185,7 +3204,7 @@ building_resort_major_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
+			owner = { has_active_tradition = tr_synthetics_prefabricated_components }
 		}
 		job_roboticist_add = 1
 	}
@@ -3202,7 +3221,7 @@ building_resort_major_capital = {
 		potential = {
 			exists = owner
 			owner = {
-				NOT = { has_authority = auth_corporate }
+				is_megacorp = no
 			}
 		}
 		job_politician_add = 1
@@ -3249,7 +3268,7 @@ building_resort_major_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				NOT = { has_authority = auth_corporate }
+				is_megacorp = no
 			}
 		}
 		text = job_politician_effect_desc
@@ -3258,7 +3277,7 @@ building_resort_major_capital = {
 	triggered_desc = {
 		trigger = {
 			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
+			owner = { has_active_tradition = tr_synthetics_prefabricated_components }
 		}
 		text = job_roboticist_effect_desc
 	}
@@ -3347,7 +3366,7 @@ building_slave_capital = {
 		potential = {
 			exists = owner
 			owner = {
-				NOT = { has_authority = auth_corporate }
+				is_megacorp = no
 			}
 		}
 		job_politician_add = 2
@@ -3357,7 +3376,7 @@ building_slave_capital = {
 		potential = {
 			exists = owner
 			owner = {
-				has_authority = auth_corporate
+				is_megacorp = yes
 				is_worker_coop_empire = no
 			}
 		}
@@ -3370,7 +3389,7 @@ building_slave_capital = {
 		potential = {
 			exists = owner
 			owner = {
-				has_authority = auth_corporate
+				is_megacorp = yes
 				is_worker_coop_empire = yes
 			}
 		}
@@ -3383,7 +3402,7 @@ building_slave_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				NOT = { has_authority = auth_corporate }
+				is_megacorp = no
 			}
 		}
 		text = job_politician_effect_desc
@@ -3477,7 +3496,7 @@ building_slave_major_capital = {
 		potential = {
 			exists = owner
 			owner = {
-				NOT = { has_authority = auth_corporate }
+				is_megacorp = no
 			}
 		}
 		job_politician_add = 2
@@ -3487,7 +3506,7 @@ building_slave_major_capital = {
 		potential = {
 			exists = owner
 			owner = {
-				has_authority = auth_corporate
+				is_megacorp = yes
 				is_worker_coop_empire = no
 			}
 		}
@@ -3500,7 +3519,7 @@ building_slave_major_capital = {
 		potential = {
 			exists = owner
 			owner = {
-				has_authority = auth_corporate
+				is_megacorp = yes
 				is_worker_coop_empire = yes
 			}
 		}
@@ -3524,7 +3543,7 @@ building_slave_major_capital = {
 		trigger = {
 			exists = owner
 			owner = {
-				NOT = { has_authority = auth_corporate }
+				is_megacorp = no
 			}
 		}
 		text = job_politician_effect_desc
@@ -4072,7 +4091,7 @@ building_colony_shelter_nanotech = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_active_tradition = tr_synthetics_finish }
+			owner = { has_active_tradition = tr_synthetics_prefabricated_components }
 		}
 		job_roboticist_add = 1
 		job_colonist_add = -1
@@ -4095,7 +4114,7 @@ building_colony_shelter_nanotech = {
 			owner = {
 				NAND = {
 					has_valid_civic = civic_dystopian_society
-					has_active_tradition = tr_synthetics_finish
+					has_active_tradition = tr_synthetics_prefabricated_components
 				}
 			}
 		}
@@ -4107,7 +4126,7 @@ building_colony_shelter_nanotech = {
 			exists = owner
 			owner = {
 				OR = {
-					has_active_tradition = tr_synthetics_finish
+					has_active_tradition = tr_synthetics_prefabricated_components
 					is_individual_machine = yes
 				}
 			}

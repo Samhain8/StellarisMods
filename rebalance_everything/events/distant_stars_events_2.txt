@@ -595,7 +595,10 @@ country_event = { #Atomic Clock follow-up: A system planet is terraformed
 					has_anomaly = no
 					planet_size > 8
 					planet_size < 25
-					NOT = { is_planet_class = "pc_broken" }
+					NOR = {
+						is_planet_class = "pc_broken"
+						is_planet_class = "pc_astral_scar"
+					}
 					is_star = no
 				}
 				save_event_target_as = atomic_clock_planet
@@ -1016,14 +1019,18 @@ country_event = {
 		#}
 		save_global_event_target_as = country_that_discovered_mardak_vol
 		event_target:vechtar_zavonia_leader_name = {
-			add_trait = leader_trait_maniacal
+			add_or_level_up_veteran_trait_effect = {
+				TRAIT = leader_trait_maniacal
+			}
 		}
 	}
 
 	option = {
 		tooltip = {
 			event_target:vechtar_zavonia_leader_name = {
-				add_trait = leader_trait_maniacal
+				add_or_level_up_veteran_trait_effect = {
+					TRAIT = leader_trait_maniacal
+				}
 			}
 		}
 		name = distar.1001.a
@@ -1058,7 +1065,9 @@ country_event = {
 	option = {
 		tooltip = {
 			event_target:vechtar_zavonia_leader_name = {
-				add_trait = leader_trait_maniacal
+				add_or_level_up_veteran_trait_effect = {
+					TRAIT = leader_trait_maniacal
+				}
 			}
 		}
 		add_resource = { influence = 50 }
@@ -1179,7 +1188,6 @@ country_event = {
 				class = FUN
 				portrait = fun4
 				traits = {
-					#ideal_planet_class = "pc_continental"
 					trait = random_traits
 				}
 				homeworld = this
@@ -1397,7 +1405,7 @@ country_event = {
 	}
 
 	immediate = {
-		create_species = {
+		create_species = { # No homeworld set as they don't originate from a known planet
 			name = "Vol"
 			class = MAM
 			portrait = mam5
@@ -1843,6 +1851,7 @@ planet_event = {
 		add_deposit = d_fungoid_extermination
 		closest_system = {
 			min_steps = 1
+			use_bypasses = yes
 			random_system_planet = {
 				save_event_target_as = new_target
 			}
@@ -2466,7 +2475,7 @@ ship_event = {
 				NOR = {
 					is_same_value = root.owner
 					has_country_flag = lost_colony_parent
-					has_authority = auth_machine_intelligence
+					is_machine_empire = yes
 					is_synthetic_empire = yes
 					owner_species = {
 						has_trait = trait_mechanical
@@ -2558,7 +2567,9 @@ country_event = {
 	immediate = {
 		from.leader = {
 			save_event_target_as = cube_science_officer
-			add_trait = leader_trait_maniacal
+			add_or_level_up_veteran_trait_effect = {
+				TRAIT = leader_trait_maniacal
+			}
 		}
 	}
 	option = {
@@ -2566,7 +2577,9 @@ country_event = {
 		custom_tooltip = distar.1056.a.tooltip
 		tooltip = {
 			from.leader = {
-			add_trait = leader_trait_maniacal
+				add_or_level_up_veteran_trait_effect = {
+					TRAIT = leader_trait_maniacal
+				}
 		}
 		}
 	}
@@ -3791,7 +3804,7 @@ ship_event = {
 		name = distar.2015.A.machine
 		trigger = {
 			owner = {
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 				NOT = { has_civic = civic_machine_servitor }
 			}
 		}
@@ -4427,7 +4440,7 @@ country_event = {
 					type = defense_army
 				}
 			}
-			
+
 			solar_system = {
 				event_target:time_loop_country = {
 					inverted_switch = { # If you don't have the technology for it build the simpler starbase.
@@ -5209,6 +5222,7 @@ country_event = {
 				}
 				solar_system = {
 					closest_system = {
+						use_bypasses = yes
 						limit = {
 							exists = owner
 							owner = {
@@ -5267,6 +5281,7 @@ country_event = {
 				}
 				solar_system = {
 					closest_system = {
+						use_bypasses = yes
 						limit = {
 							exists = owner
 							owner = {
@@ -8865,7 +8880,7 @@ country_event = { # Alien Box opened
 					is_councilor = yes
 					is_ruler = no
 				}
-				set_gestalt_node_protrait_effect = yes
+				set_gestalt_node_portrait_effect = yes
 			}
 		}
 	}

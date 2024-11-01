@@ -395,7 +395,7 @@ tech_nutrient_replication = {
 	}
 
 	potential = {
-		NOT = { has_authority = auth_machine_intelligence }
+		is_machine_empire = no
 	}
 
 	weight_modifier = {
@@ -908,6 +908,7 @@ tech_alien_life_studies = {
 				any_owned_planet = {
 					OR = {
 						has_deposit = d_alien_pets_deposit
+						has_deposit = d_avian_reserve
 						any_owned_pop = {
 							OR = {
 								is_sapient = no
@@ -1960,7 +1961,7 @@ tech_genome_mapping = {
 
 	potential = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_civic = civic_machine_assimilator
 			has_civic = civic_machine_servitor
 			has_civic = civic_machine_guided_sapience
@@ -1971,7 +1972,7 @@ tech_genome_mapping = {
 		factor = 1.5	# genetech needs to be a bit more common
 		modifier = {
 			factor = 1.25
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 		}
 		modifier = {
 			factor = 1.25
@@ -2023,7 +2024,7 @@ tech_vitality_boosters = {
 
 	potential = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_civic = civic_machine_assimilator
 		}
 	}
@@ -2032,7 +2033,7 @@ tech_vitality_boosters = {
 		factor = 1.5	# genetech needs to be a bit more common
 		modifier = {
 			factor = 1.25
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 		}
 		modifier = {
 			factor = 1.25
@@ -2086,7 +2087,7 @@ tech_epigenetic_triggers = {
 			is_natural_design_empire = yes
 		}
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_civic = civic_machine_assimilator
 			has_civic = civic_machine_servitor
 			has_civic = civic_machine_guided_sapience
@@ -2190,7 +2191,7 @@ tech_cloning = {
 
 	potential = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_civic = civic_machine_assimilator
 		}
 		is_natural_design_empire = no
@@ -2200,7 +2201,7 @@ tech_cloning = {
 		factor = 1.5	# genetech needs to be a bit more common
 		modifier = {
 			factor = 1.25
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 		}
 		modifier = {
 			factor = 1.25
@@ -2246,7 +2247,7 @@ tech_gene_banks = {
 
 	potential = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_civic = civic_machine_assimilator
 		}
 		is_natural_design_empire = no
@@ -2256,7 +2257,7 @@ tech_gene_banks = {
 		factor = 0.5
 		modifier = {
 			factor = 1.25
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 		}
 		modifier = {
 			factor = 0.5
@@ -2300,7 +2301,7 @@ tech_gene_seed_purification = {
 
 	potential = {
 		NOR = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			is_natural_design_empire = yes
 			is_individual_machine = yes
 		}
@@ -2316,7 +2317,7 @@ tech_gene_seed_purification = {
 		}
 		modifier = {
 			factor = 1.25
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 		}
 		modifier = {
 			factor = 1.25
@@ -2373,7 +2374,7 @@ tech_morphogenetic_field_mastery = {
 
 	potential = {
 		NOR = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			is_natural_design_empire = yes
 			is_individual_machine = yes
 		}
@@ -2383,11 +2384,11 @@ tech_morphogenetic_field_mastery = {
 		factor = 0.5
 		modifier = {
 			factor = 0
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 		}
 		modifier = {
 			factor = 1.25
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 		}
 		modifier = {
 			factor = 1.25
@@ -2453,7 +2454,7 @@ tech_gene_tailoring = {
 
 	potential = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_civic = civic_machine_assimilator
 			has_civic = civic_machine_servitor
 		}
@@ -2464,7 +2465,7 @@ tech_gene_tailoring = {
 		factor = 2.0	# genetech needs to be a bit more common
 		modifier = {
 			factor = 1.25
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 		}
 		modifier = {
 			factor = 1.25
@@ -2514,7 +2515,7 @@ tech_glandular_acclimation = {
 
 	potential = {
 		OR = {
-			NOT = { has_authority = auth_machine_intelligence }
+			is_machine_empire = no
 			has_civic = civic_machine_assimilator
 			has_civic = civic_machine_servitor
 		}
@@ -2525,7 +2526,7 @@ tech_glandular_acclimation = {
 		factor = 1.5	# genetech needs to be a bit more common
 		modifier = {
 			factor = 1.25
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 		}
 		modifier = {
 			factor = 1.25
@@ -2817,7 +2818,7 @@ tech_gene_expressions = {
 	potential = {
 		OR = {
 			NOR = {
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 				is_individual_machine = yes
 			}
 			has_civic = civic_machine_assimilator
@@ -2832,7 +2833,7 @@ tech_gene_expressions = {
 	weight_modifier = {
 		modifier = {
 			factor = 1.25
-			has_authority = auth_hive_mind
+			is_hive_empire = yes
 		}
 		modifier = {
 			factor = 0.50
@@ -2871,7 +2872,7 @@ tech_selected_lineages = {
 
 	potential = {
 		NOT = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 		}
 	}
 
@@ -2937,7 +2938,7 @@ tech_capacity_boosters = {
 
 	potential = {
 		NOR = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			is_natural_design_empire = yes
 		}
 	}
@@ -3597,7 +3598,7 @@ tech_psionic_theory = {
 			AND = {
 				is_materialist = yes
 				NOR = {
-					has_trait_tier1or2or3 = { TRAIT = leader_trait_expertise_psionics }
+					has_tier1or2or3_in_council = { TRAIT = leader_trait_expertise_psionics }
 					has_councilor = { COUNCILOR = "councilor_shroudwalker_teacher" }
 					any_owned_pop = {
 						OR = {
@@ -4921,7 +4922,7 @@ tech_collective_production_methods = {
 	}
 
 	potential = {
-		has_authority = auth_hive_mind
+		is_hive_empire = yes
 	}
 
 	weight_modifier = {
@@ -4947,7 +4948,7 @@ tech_resource_processing_algorithms = {
 	}
 
 	potential = {
-		has_authority = auth_machine_intelligence
+		is_machine_empire = yes
 	}
 
 	weight_modifier = {
@@ -5455,7 +5456,7 @@ tech_slave_colonies = {
 	}
 
 	weight_modifier = {
-		factor = 0.5
+		factor = 1
 		modifier = {
 			factor = 0.25
 			NOR = {

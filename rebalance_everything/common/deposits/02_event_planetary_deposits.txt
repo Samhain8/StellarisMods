@@ -32,7 +32,7 @@ d_metal_boneyard = {
 			always = yes
 		}
 		district_mining_max = 4
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {
@@ -157,7 +157,7 @@ d_junk_wastes = {
 			always = yes
 		}
 		district_mining_max = 3
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {
@@ -180,7 +180,7 @@ d_junk_canals = {
 			always = yes
 		}
 		district_farming_max = 3
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {
@@ -203,7 +203,7 @@ d_junk_hollows = {
 			always = yes
 		}
 		district_generator_max = 3
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {
@@ -226,7 +226,7 @@ d_irradiated_valley = {
 			always = yes
 		}
 		district_generator_max = 3
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {
@@ -297,7 +297,7 @@ d_abandoned_primitive_homesteads = {
 			always = yes
 		}
 		district_farming_max = 2
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {
@@ -372,7 +372,7 @@ d_hyperfertile_valley = {
 			always = yes
 		}
 		district_farming_max = 5
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {
@@ -395,7 +395,7 @@ d_ancient_mining_site = {
 			always = yes
 		}
 		district_mining_max = 5
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {
@@ -644,7 +644,7 @@ d_impact_crater = {
 			always = yes
 		}
 		district_mining_max = 3
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {
@@ -789,7 +789,7 @@ d_underground_vault_2 = {
 			always = yes
 		}
 		district_mining_max = 2
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {
@@ -893,7 +893,7 @@ d_harvester_fields = {
 			always = yes
 		}
 		district_farming_max = 6
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {
@@ -1031,7 +1031,7 @@ d_worm_mine = {
 			always = yes
 		}
 		district_mining_max = 4
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {
@@ -1054,7 +1054,7 @@ d_worm_farm = {
 			always = yes
 		}
 		district_farming_max = 4
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {
@@ -1077,7 +1077,7 @@ d_organic_landfill = {
 			always = yes
 		}
 		district_generator_max = 4
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {
@@ -1101,7 +1101,7 @@ d_underground_farm = {
 			always = yes
 		}
 		district_farming_max = 3
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {
@@ -1125,7 +1125,7 @@ d_underground_mine = {
 			always = yes
 		}
 		district_mining_max = 3
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {
@@ -1149,7 +1149,7 @@ d_underground_generator = {
 			always = yes
 		}
 		district_generator_max = 3
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {
@@ -1335,7 +1335,7 @@ d_underground_contact_zone = {
 			always = yes
 		}
 		district_generator_max = 2
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	triggered_planet_modifier = {
@@ -1486,7 +1486,7 @@ d_numas_breath = {
 			always = yes
 		}
 		district_generator_max = 3
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {
@@ -1511,7 +1511,7 @@ d_nanosands = {
 			always = yes
 		}
 		district_mining_max = 2
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {
@@ -1718,7 +1718,7 @@ d_turtle_corpse = {
 			always = yes
 		}
 		district_mining_max = 3
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	triggered_planet_modifier = {
@@ -1726,7 +1726,7 @@ d_turtle_corpse = {
 			always = yes
 		}
 		district_farming_max = 3
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {
@@ -1749,7 +1749,7 @@ d_polaris_city = {
 			always = yes
 		}
 		district_mining_max = 3
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {
@@ -1764,7 +1764,7 @@ d_nano_corpses = {
 
 	planet_modifier = {
 		district_mining_max = 3
-		building_crystal_mines_max = 2
+		planet_miners_rare_crystals_produces_add = 0.2
 	}
 
 	triggered_planet_modifier = {
@@ -1772,7 +1772,7 @@ d_nano_corpses = {
 			always = yes
 		}
 		district_mining_max = 3
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	drop_weight = {
@@ -1887,7 +1887,7 @@ d_dayside_farm = {
 			always = yes
 		}
 		district_generator_max = 6
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	# Tidal Lock knowledge turns dayside farms twice as powerful
@@ -1897,7 +1897,7 @@ d_dayside_farm = {
 			owner = { has_country_flag = tidal_lock_knowledge }
 		}
 		district_generator_max = 6
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 
 	triggered_planet_modifier = {
@@ -2087,6 +2087,8 @@ d_big_nature_preserve_blocker = {
 	planet_modifier = {
 		planet_max_districts_add = -1
 	}
+
+	inline_script = deposits/environmental_architects_natural_blocker_modifier
 }
 
 d_dimensional_manipulation_device = {
@@ -2532,7 +2534,7 @@ d_metallic_puddles = {
 # 			always = yes
 # 		}
 # 		district_farming_max = 3
-# 		mult = value:district_amount_mastery_of_nature
+# 		mult = value:natural_desposit_district_amount_multiplier
 # 	}
 
 # 	drop_weight = {
@@ -2965,7 +2967,7 @@ d_red_desert = {
 			always = yes
 		}
 		district_mining_max = 2
-		mult = value:district_amount_mastery_of_nature
+		mult = value:natural_desposit_district_amount_multiplier
 	}
 	resources = {
 		category = planet_deposits
@@ -3022,6 +3024,22 @@ d_alien_sanctuary = {
 		modifier = {
 			job_xeno_zoo_keeper_add = 2
 		}
+	}
+
+	drop_weight = {
+		weight = 0
+	}
+}
+
+#Stripmine Decision
+d_planet_stripmine = {
+	is_for_colonizable = yes
+	category = deposit_cat_minerals
+	icon = d_prospectorium_strip_mine
+
+	planet_modifier = {
+		pop_environment_tolerance = -0.5
+		district_mining_max = 10
 	}
 
 	drop_weight = {

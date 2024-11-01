@@ -1889,7 +1889,7 @@ country_event = {
 		name = federations.10400.execute
 		trigger = {
 			OR = {
-				has_authority = auth_imperial
+				is_imperial_authority = yes
 				has_ethic = ethic_xenophobe
 				has_ethic = ethic_fanatic_xenophobe
 				AND = {
@@ -2152,7 +2152,7 @@ country_event = {
 		name = federations.10400.eat
 		trigger = {
 			OR = {
-				has_authority = auth_hive_mind
+				is_hive_empire = yes
 				has_origin = origin_necrophage
 			}
 			OR = {
@@ -2877,7 +2877,7 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		NOT = { 
+		NOT = {
 			has_country_flag = first_federation_event
 		}
 		NAND = {
@@ -3367,7 +3367,7 @@ country_event = {
 
 	immediate = {
 		federation = {
-			add_modifier = { modifier = diplo_fed_xpboost days = -1 mult = value:federation_xp_from_diplo_tradition
+			add_modifier = { modifier = diplo_fed_xpboost days = -1 mult = value:federation_xp_from_diplo_tradition }
 		}
 	}
 }

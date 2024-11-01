@@ -206,15 +206,16 @@ country_event = {
 	}
 
 	trigger = {
-		NOT = { has_authority = auth_machine_intelligence }
+		is_machine_empire = no
 		is_mechanical_empire = no
+		is_individual_machine = no
 		is_country_type = default
 		NOT = { has_country_flag = fe_machine_task_1 }
 		is_at_war = no
 
 		any_country = {
 			is_valid_fallen_empire_for_task = yes
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			is_enigmatic_to = root
 			has_communications = root
 			NOT = { has_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_request } }
@@ -228,7 +229,7 @@ country_event = {
 		random_country = {
 			limit = {
 				is_valid_fallen_empire_for_task = yes
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 				is_enigmatic_to = root
 				has_communications = root
 				NOT = { has_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_request } }
@@ -279,7 +280,7 @@ country_event = {
 			}
 			modifier = {
 				factor = 0.5
-				fleet_power > 10000
+				fleet_power > 100000
 			}
 		}
 
@@ -445,7 +446,7 @@ country_event = {
 
 	trigger = {
 		OR = {
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			is_mechanical_empire = yes
 		}
 		is_country_type = default
@@ -454,7 +455,7 @@ country_event = {
 
 		any_country = {
 			is_valid_fallen_empire_for_task = yes
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			is_enigmatic_to = root
 			has_communications = root
 			NOT = { has_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_request } }
@@ -468,7 +469,7 @@ country_event = {
 		random_country = {
 			limit = {
 				is_valid_fallen_empire_for_task = yes
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 				is_enigmatic_to = root
 				has_communications = root
 				NOT = { has_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_request } }
@@ -598,7 +599,7 @@ country_event = {
 
 	trigger = {
 		num_pops > 10
-		has_authority = auth_machine_intelligence
+		is_machine_empire = yes
 		is_country_type = default
 		NOT = { has_country_flag = fe_machine_task_3 }
 		is_at_war = no
@@ -612,7 +613,7 @@ country_event = {
 
 		any_country = {
 			is_valid_fallen_empire_for_task = yes
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			is_enigmatic_to = root
 			has_communications = root
 			NOT = { has_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_request } }
@@ -636,7 +637,7 @@ country_event = {
 		random_country = {
 			limit = {
 				is_valid_fallen_empire_for_task = yes
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 				is_enigmatic_to = root
 				has_communications = root
 				NOT = { has_opinion_modifier = { who = root modifier = opinion_refused_fallen_empire_request } }
@@ -727,7 +728,7 @@ country_event = {
 
 		modifier = {
 			factor = 0.5
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 		}
 	}
 
@@ -740,7 +741,7 @@ country_event = {
 			has_valid_civic = civic_hive_devouring_swarm
 			has_valid_civic = civic_fanatic_purifiers
 		}
-		NOT = { has_authority = auth_machine_intelligence }
+		is_machine_empire = no
 		NOT = { has_country_flag = fe_task_given }
 		NOT = { has_global_flag = fe_task_attack_empire_active }
 		is_at_war = no
@@ -749,7 +750,7 @@ country_event = {
 
 		any_country = {
 			is_valid_fallen_empire_for_task = yes
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			is_enigmatic_to = root
 			has_communications = root
 			NOR = {
@@ -776,7 +777,7 @@ country_event = {
 		random_country = {
 			limit = {
 				is_valid_fallen_empire_for_task = yes
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 				is_enigmatic_to = root
 				has_communications = root
 				NOR = {
@@ -1035,7 +1036,7 @@ country_event = {
 
 		modifier = {
 			factor = 0.5
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 		}
 	}
 
@@ -1048,14 +1049,14 @@ country_event = {
 			has_valid_civic = civic_hive_devouring_swarm
 			has_valid_civic = civic_fanatic_purifiers
 		}
-		NOT = { has_authority = auth_machine_intelligence }
+		is_machine_empire = no
 		NOT = { has_country_flag = fe_task_given }
 		NOT = { has_global_flag = fe_task_colonize_planet_active }
 		is_at_war = no
 
 		any_country = {
 			is_valid_fallen_empire_for_task = yes
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			is_enigmatic_to = root
 			has_communications = root
 			NOR = {
@@ -1098,7 +1099,7 @@ country_event = {
 		random_country = {
 			limit = {
 				is_valid_fallen_empire_for_task = yes
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 				is_enigmatic_to = root
 				has_communications = root
 				NOR = {
@@ -1358,7 +1359,7 @@ country_event = {
 
 		modifier = {
 			factor = 0.75
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 		}
 
 		modifier = {
@@ -1374,7 +1375,7 @@ country_event = {
 			factor = 0.5
 			any_country = {
 				is_valid_fallen_empire_for_task = yes
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 				is_enigmatic_to = root
 				has_communications = root
 				has_opinion_modifier = { who = prev modifier = opinion_failed_fallen_empire_task }
@@ -1386,7 +1387,7 @@ country_event = {
 		is_ai = no
 		is_country_type = default
 		is_subject = no
-		NOT = { has_authority = auth_machine_intelligence }
+		is_machine_empire = no
 		NOT = { has_country_flag = fe_task_given }
 		NOT = { has_global_flag = fe_task_no_wars_active }
 		is_at_war = no
@@ -1400,7 +1401,7 @@ country_event = {
 
 		any_country = {
 			is_valid_fallen_empire_for_task = yes
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			is_enigmatic_to = root
 			has_communications = root
 			OR = {
@@ -1420,7 +1421,7 @@ country_event = {
 		random_country = {
 			limit = {
 				is_valid_fallen_empire_for_task = yes
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 				is_enigmatic_to = root
 				has_communications = root
 				OR = {
@@ -1634,7 +1635,7 @@ country_event = {
 
 		modifier = {
 			factor = 0.75
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 		}
 
 		modifier = {
@@ -1650,7 +1651,7 @@ country_event = {
 			factor = 0.5
 			any_country = {
 				is_valid_fallen_empire_for_task = yes
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 				is_enigmatic_to = root
 				has_communications = root
 				has_opinion_modifier = { who = prev modifier = opinion_failed_fallen_empire_task }
@@ -1662,7 +1663,7 @@ country_event = {
 		is_ai = no
 		is_country_type = default
 		is_subject = no
-		NOT = { has_authority = auth_machine_intelligence }
+		is_machine_empire = no
 		NOT = { has_country_flag = fe_task_given }
 		NOT = { has_global_flag = fe_task_no_colonies_active }
 		NOT = {
@@ -1680,7 +1681,7 @@ country_event = {
 
 		any_country = {
 			is_valid_fallen_empire_for_task = yes
-			has_authority = auth_machine_intelligence
+			is_machine_empire = yes
 			is_enigmatic_to = root
 			has_communications = root
 			OR = {
@@ -1700,7 +1701,7 @@ country_event = {
 		random_country = {
 			limit = {
 				is_valid_fallen_empire_for_task = yes
-				has_authority = auth_machine_intelligence
+				is_machine_empire = yes
 				is_enigmatic_to = root
 				has_communications = root
 				OR = {

@@ -862,14 +862,15 @@
  tr_cybernetics_synaptic_sub_processing:0 "Synaptic Sub-Processing"
  tr_cybernetics_synaptic_sub_processing_situation: "$tr_cybernetics_synaptic_sub_processing$"
  tr_cybernetics_synaptic_sub_processing_delayed:0 "Offloading routine thought patterns into central hubs decreases the synaptic load on our uplink nodes."
- tr_cybernetics_synaptic_sub_processing_situation_effects: "$tr_cybernetics_situation$$MOD_EMPIRE_SIZE_DISTRICTS_MULT$: §G-50%§!"
+ tr_cybernetics_synaptic_sub_processing_tt: "£building£ §Y$building_spawning_pool$§! provide §G+2§! £job_augmentor_drone£ §Y$job_augmentor_drone$§! Jobs\n$MOD_EMPIRE_SIZE_DISTRICTS_MULT$: §G-25%§!"
+ tr_cybernetics_synaptic_sub_processing_situation_effects: "$tr_cybernetics_situation$$tr_cybernetics_synaptic_sub_processing_tt$"
 
  tr_cybernetics_modular_cybernetics:0 "Modular Cybernetics"
  tr_cybernetics_modular_cybernetics_delayed:0 "Improving the compatibility of our cybernetic enhancements will reduce downtime while retrofitting."
  tr_cybernetics_modular_cybernetics_hive_delayed:0 "$tr_cybernetics_modular_cybernetics_delayed$"
  tr_cybernetics_modular_cybernetics_tt:1 "§Y$mod_ROBOT_species_trait_points_add$§! and §Y$mod_ROBOT_species_trait_picks_add$§! also apply to Organic species."
  tr_cybernetics_modular_cybernetics_tt_2:0 "$tr_cybernetics_modular_cybernetics_tt$\n$MOD_COUNTRY_MODIFY_SPECIES_COST_MULT$: §G-50%§!"
- tr_cybernetics_modular_cybernetics_hive_tt:0 "£building£ §Y$building_spawning_pool$§! provide §G+2§! £job_augmentor_drone£ §Y$job_augmentor_drone$§! Jobs.\n$MOD_COUNTRY_MODIFY_SPECIES_COST_MULT$: §G-50%§!"
+ tr_cybernetics_modular_cybernetics_hive_tt:0 "$MOD_COUNTRY_MODIFY_SPECIES_COST_MULT$: §G-50%§!\n$mod_BIOLOGICAL_species_trait_points_add$: §G+3§!"
  tr_cybernetics_modular_cybernetics_situation_effects: "$tr_cybernetics_situation$$tr_cybernetics_modular_cybernetics_tt_2$"
  tr_cybernetics_modular_cybernetics_hive_situation_effects: "$tr_cybernetics_situation$$tr_cybernetics_modular_cybernetics_hive_tt$"
 
@@ -1124,7 +1125,7 @@ tr_enmity_eclipse_effect: "Grants §G2%§! increased $r_research$ and $r_unity$ 
 
 enmity_humiliate: "[GetName] gets the §YReaffirmed Superiority§! modifier for §Y10§! years granting them §G2%§! increased $r_research$ and $r_unity$ output per §YRival§!."
 reaffirmed_superiority: "Reaffirmed Superiority"
-reaffirmed_superiority_desc: "Our superiority is unassailable. No one is greater than the [GetName]."
+reaffirmed_superiority_desc: "Our superiority is unassailable. No one is greater than us."
 
 
 ####################################
@@ -1195,7 +1196,7 @@ reaffirmed_superiority_desc: "Our superiority is unassailable. No one is greater
  allow_raiding:0 "Unlocks the §Y$bombardment_raiding$§! bombardment stance, which in turn allows us to abduct pops from besieged planets and resettle them to our own worlds."
 
  ap_defender_of_the_galaxy_effect_opinion:2 "Increases the £opinion£ §YOpinion§! of empires capable of regular diplomacy by §G+200§!"
- ap_defender_of_the_galaxy_modifier_desc:0 "Damage to Endgame Crisis factions: §G+50%§!\n\n$ap_defender_of_the_galaxy_effect_opinion$"
+ ap_defender_of_the_galaxy_modifier_desc:0 "Damage to Endgame Crisis factions: §G+50%§!\n\n$ap_defender_of_the_galaxy_effect_opinion$\n\n§RDefenders of the Galaxy may not choose to become a Crisis§!"
 
  ap_engineered_evolution:0 "Engineered Evolution"
  ap_the_flesh_is_weak:0 "The Flesh is Weak"
@@ -1234,7 +1235,7 @@ reaffirmed_superiority_desc: "Our superiority is unassailable. No one is greater
  ap_synthetic_age:0 "Synthetic Age"
  ap_synthetic_age_desc:0 "The age of organics has come and gone, the future of the galaxy belongs to the machines. This is the dawn of a synthetic age."
  synthetic_age_tooltip:1 "Gain access to the §Y$tradition_synthetics$§! tradition tree.\n$UNLOCKS_AGENDA$ $council_agenda_agenda_synthetic_age_name$, which grants Machine Modification technologies as Research Options."
- synthetic_age_tooltip_machine_age: "Starts the §YTransformation Situation§! which unlocks the §Y$tradition_modularity$§!, §Y$tradition_virtuality$§! or §Y$tradition_nanotech$§! tradition trees.\n$UNLOCKS_AGENDA$ $council_agenda_agenda_synthetic_age_name$, which grants Machine Modification technologies as Research Options."
+ synthetic_age_tooltip_machine_age: "Starts the §YTransformation Situation§! which unlocks the §Y$tradition_modularity$§!, §Y$tradition_virtuality$§! or §Y$tradition_nanotech$§! tradition trees.\n§RRequires an available tradition slot§!\n$UNLOCKS_AGENDA$ $council_agenda_agenda_synthetic_age_name$, which grants Machine Modification technologies as Research Options."
  ap_machine_worlds:0 "Machine Worlds"
  ap_machine_worlds_desc:0 "We shall shape our worlds into a mirror image of ourselves, replacing the frailty of biology with the immutable perfection of metal."
  ap_hive_worlds:0 "Hive Worlds"

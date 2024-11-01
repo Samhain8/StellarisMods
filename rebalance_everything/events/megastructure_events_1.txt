@@ -558,7 +558,7 @@ country_event = {
 				modifier = {
 					factor = 0
 					OR = {
-						has_authority = auth_machine_intelligence
+						is_machine_empire = yes
 						owner_species = { has_trait = trait_mechanical }
 					}
 				}
@@ -2369,6 +2369,9 @@ country_event = {
 					graphical_culture = "extra_dimensional_01"
 					prefix = no
 					upgradable = no
+					effect = {
+						set_ship_flag = special_science_ship
+					}
 				}
 				set_location = from.capital_scope
 				save_event_target_as = deleted_ship
@@ -4977,7 +4980,7 @@ country_event = {
 	option = {
 		name = over.100.b
 		trigger = {
-			has_authority = auth_corporate
+			is_megacorp = yes
 		}
 	}
 	option = {

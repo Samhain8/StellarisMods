@@ -563,6 +563,8 @@ event = {
 	is_triggered_only = yes
 
 	trigger = {
+		# FE are too busy to care about their scions when the Synth Queen is around
+		NOT = { has_global_flag = synth_queen_happened }
 		any_playable_country = {
 			is_ai = no
 			is_subject = yes
@@ -1618,9 +1620,22 @@ country_event = {
 						building = crew_quarters
 						owner = event_target:fed_member_1
 						effect = {
-							set_starbase_module = {
-								slot = 1
-								module = solar_panel_network
+							if = {
+								limit = {
+									event_target:fed_member_1 = {
+										has_valid_civic = civic_machine_astromining_drones
+									}
+								}
+								set_starbase_module = {
+									slot = 1
+									module = astromining_bay
+								}
+							}
+							else = {
+								set_starbase_module = {
+									slot = 1
+									module = solar_panel_network
+								}
 							}
 							set_starbase_module = {
 								slot = 2
@@ -1725,9 +1740,22 @@ country_event = {
 						building = crew_quarters
 						owner = event_target:fed_member_2
 						effect = {
-							set_starbase_module = {
-								slot = 1
-								module = solar_panel_network
+							if = {
+								limit = {
+									event_target:fed_member_2 = {
+										has_valid_civic = civic_machine_astromining_drones
+									}
+								}
+								set_starbase_module = {
+									slot = 1
+									module = astromining_bay
+								}
+							}
+							else = {
+								set_starbase_module = {
+									slot = 1
+									module = solar_panel_network
+								}
 							}
 							set_starbase_module = {
 								slot = 2
@@ -2167,7 +2195,7 @@ planet_event = {
 		name = origin_70.a
 		trigger = {
 			owner = {
-				NOT = { has_authority = auth_machine_intelligence }
+				is_machine_empire = no
 			}
 		}
 		tooltip = {
@@ -2181,7 +2209,7 @@ planet_event = {
 	option = {
 		name = origin_70.b
 		trigger = {
-			owner = { has_authority = auth_machine_intelligence }
+			owner = { is_machine_empire = yes }
 		}
 		tooltip = {
 			add_planet_devastation = 20
@@ -2396,7 +2424,10 @@ planet_event = {
 				}
 			}
 		}
-		else = {
+		else_if = {
+			limit = {
+				exists = event_target:doomsday_owner
+			}
 			event_target:doomsday_owner = {
 				country_event = { id = origin.81 }
 				every_relation = {

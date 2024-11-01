@@ -525,7 +525,7 @@ enforcer = {
 		potential = {
 			exists = owner
 			owner = {
-				has_authority = auth_oligarchic
+				is_oligarchic_authority = yes
 				OR = {
 					has_country_flag = synth_physical
 					has_country_flag = synth_virtual
@@ -533,7 +533,7 @@ enforcer = {
 
 			}
 		}
-		planet_jobs_ruler_produces_mult = 0.05
+		planet_jobs_ruler_produces_mult = 0.10
 	}
 
 	weight = {
@@ -1747,6 +1747,15 @@ roboticist = {
 		}
 		planet_amenities_add = 2
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		# Actual value determined in the script value below
+		branch_office_value_mult = 1
+		mult = value:roboticist_branch_office_value_mult
 	}
 
 	resources = {
@@ -3122,7 +3131,7 @@ artisan = {
 				planet = {
 					has_planet_flag = has_produce_requisitorium
 					exists = owner.overlord
-					owner.overlord = { is_gestalt = no }
+					owner.overlord = { country_uses_consumer_goods = yes }
 				}
 			}
 			consumer_goods = @requisitorium_consumer_goods_reduction
@@ -3132,7 +3141,7 @@ artisan = {
 				planet = {
 					has_planet_flag = has_produce_requisitorium
 					exists = owner.overlord
-					owner.overlord = { is_gestalt = no }
+					owner.overlord = { country_uses_consumer_goods = yes }
 				}
 			}
 			minerals = 1
@@ -3146,7 +3155,7 @@ artisan = {
 				planet = {
 					has_planet_flag = has_produce_requisitorium
 					exists = owner.overlord
-					owner.overlord = { is_gestalt = no }
+					owner.overlord = { country_uses_consumer_goods = yes }
 				}
 			}
 			consumer_goods = @requisitorium_consumer_goods_overlord
@@ -3230,7 +3239,7 @@ artificer = {
 				planet = {
 					has_planet_flag = has_produce_requisitorium
 					exists = owner.overlord
-					owner.overlord = { is_gestalt = no }
+					owner.overlord = { country_uses_consumer_goods = yes }
 				}
 			}
 			consumer_goods = @requisitorium_consumer_goods_reduction
@@ -3240,7 +3249,7 @@ artificer = {
 				planet = {
 					has_planet_flag = has_produce_requisitorium
 					exists = owner.overlord
-					owner.overlord = { is_gestalt = no }
+					owner.overlord = { country_uses_consumer_goods = yes }
 				}
 			}
 			minerals = 1
@@ -3254,7 +3263,7 @@ artificer = {
 				planet = {
 					has_planet_flag = has_produce_requisitorium
 					exists = owner.overlord
-					owner.overlord = { is_gestalt = no }
+					owner.overlord = { country_uses_consumer_goods = yes }
 				}
 			}
 			consumer_goods = @requisitorium_consumer_goods_overlord
@@ -3355,7 +3364,7 @@ pearl_diver = {
 				planet = {
 					has_planet_flag = has_produce_requisitorium
 					exists = owner.overlord
-					owner.overlord = { is_gestalt = no }
+					owner.overlord = { country_uses_consumer_goods = yes }
 				}
 			}
 			consumer_goods = @requisitorium_consumer_goods_reduction
@@ -3365,7 +3374,7 @@ pearl_diver = {
 				planet = {
 					has_planet_flag = has_produce_requisitorium
 					exists = owner.overlord
-					owner.overlord = { is_gestalt = no }
+					owner.overlord = { country_uses_consumer_goods = yes }
 				}
 			}
 			minerals = 1
@@ -3388,7 +3397,7 @@ pearl_diver = {
 				planet = {
 					has_planet_flag = has_produce_requisitorium
 					exists = owner.overlord
-					owner.overlord = { is_gestalt = no }
+					owner.overlord = { country_uses_consumer_goods = yes }
 				}
 			}
 			consumer_goods = @requisitorium_consumer_goods_overlord
@@ -3904,7 +3913,7 @@ resort_worker = {
 	triggered_planet_modifier = {
 		potential = {
 			has_councilor = { COUNCILOR = "councilor_corporate_hedonism" }
-		} 
+		}
 
 		trade_value_add = @councilor_corporate_hedonism_entertainer_trade_value
 		mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_trade_mult|TYPE|councilor_corporate_hedonism|
@@ -3912,7 +3921,7 @@ resort_worker = {
 
 	country_modifier = {
 		pop_amenities_usage_mult = -0.01
-		pop_lifestyle_trade_value_mult = 0.02 
+		pop_lifestyle_trade_value_mult = 0.02
 	}
 
 	weight = {
@@ -3941,25 +3950,6 @@ resort_worker = {
 					NOT = { species = { is_same_value = event_target:custodian_bot } }
 				}
 			}
-		}
-	}
-
-	weight = {
-		weight = @specialist_job_weight
-		mult = value:job_weights_modifier|JOB|culture_worker|RESOURCE|unity|
-		# We deliberately don't weight the ethics-based modifiers
-		modifier = {
-			factor = 0.2
-			has_citizenship_rights = no
-			NOT = { has_trait = trait_mechanical }
-		}
-		modifier = {
-			factor = 0.1
-			can_take_servant_job = yes
-		}
-		modifier = {
-			factor = 1.5
-			has_job = culture_worker
 		}
 	}
 }
