@@ -254,7 +254,7 @@ tech_mine_rare_crystals = {
 		modifier = {
 
 		}
-		
+
 		modifier = {
 			factor = 0
 			NOT = {
@@ -277,6 +277,10 @@ tech_mine_rare_crystals = {
 					}
 				}
 			}
+		}
+		modifier = {
+			add = 1
+			has_country_flag = tech_mine_rare_crystals_culling_boost
 		}
 	}
 
