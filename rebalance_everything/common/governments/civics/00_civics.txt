@@ -2236,6 +2236,7 @@ civic_pleasure_seekers = {
 				value = civic_dystopian_society
 			}
 		}
+		species_archetype = { NOT = { value = MACHINE } }
 	}
 	modifier = {
 		pop_amenities_usage_mult = 2
@@ -2931,6 +2932,7 @@ civic_fertility_rituals = {
 	possible = {
 		origin = {
 			NOT = { value = origin_necrophage }
+			NOT = { value = origin_cybernetic_creed }
 		}
 		ethics = {
 			OR = {
@@ -2939,6 +2941,7 @@ civic_fertility_rituals = {
 				value = ethic_fanatic_spiritualist
 			}
 		}
+		species_archetype = { NOT = { value = MACHINE } }
 	}
 	modifier = {
 		planet_colony_development_speed_mult = 0.35

@@ -933,7 +933,42 @@ building_sacred_nexus = {
 	# Add Priest & High Priest Jobs
 	inline_script = {
 		script = jobs/priests_add
-		AMOUNT = @b3_jobs
+		AMOUNT = 5
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { NOT = { has_origin = origin_cybernetic_creed } }
+		}
+		modifier = {
+			job_high_priest_add = 1
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { NOT = { has_origin = origin_cybernetic_creed } }
+		}
+		text = job_high_priest_effect_desc
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_origin = origin_cybernetic_creed }
+		}
+		modifier = {
+			job_technophant_add = 1
+		}
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { has_origin = origin_cybernetic_creed }
+		}
+		text = job_technophant_effect_desc
 	}
 
 	inline_script = buildings/job_high_priest_variants_add_saintly_hierarchy
