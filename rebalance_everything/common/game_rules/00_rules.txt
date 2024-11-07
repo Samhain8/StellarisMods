@@ -1080,6 +1080,12 @@ can_species_be_assembled = {
 				}
 			}
 			else_if = {
+				limit = { has_trait = trait_robot_biomimetic_assembly }
+				root = {
+					any_owned_species = { is_exact_same_species = prevprev }
+				}
+			}
+			else_if = {
 				limit = {
 					OR = {
 						has_trait = trait_clone_soldier_infertile

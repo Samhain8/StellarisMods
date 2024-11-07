@@ -12,6 +12,7 @@ trait_auto_mod_biological = {
 		from = {
 			has_technology = tech_gene_expressions
 		}
+		always = no
 	}
 	species_possible_remove = {
 		always = yes

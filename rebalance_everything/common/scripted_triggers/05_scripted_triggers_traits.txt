@@ -289,6 +289,24 @@ can_assemble_tiyanki_pop = {
 	}
 }
 
+can_assemble_biomimetic_pop = {
+	has_trait = trait_robot_biomimetic_assembly
+	planet = {
+		OR = {
+			NOT = { exists = assembling_species }
+			AND = {
+				exists = assembling_species
+				assembling_species = {
+					OR = {
+						has_trait = trait_robot_biomimetic_assembly
+						is_robotic = yes
+					}
+				}
+			}
+		}
+	}
+}
+
 can_assemble_bio_pop = {
 	planet = {
 		OR = {
@@ -408,5 +426,10 @@ has_cyborg_trait = {
 		has_trait = trait_cyborg_creed_of_research
 		has_trait = trait_cyborg_creed_of_labor
 		has_trait = trait_cyborg_ritualistic_implants
+		has_trait = trait_cyborg_neon_allure
+		has_trait = trait_cyborg_armored
+		has_trait = trait_cyborg_willing_tool
+		has_trait = trait_cyborg_organic_recyclers
+		has_trait = trait_cyborg_mechanical_interface
 	}
 }

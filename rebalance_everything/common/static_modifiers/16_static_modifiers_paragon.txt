@@ -467,12 +467,13 @@ agenda_open_markets_finish = {
 	icon = "gfx/interface/icons/modifiers/mod_agenda_open_markets.dds"
 	commercial_pact_mult = 0.5
 	local_trade_protection_add = 100
-	country_trade_fee = -0.10
+	country_trade_fee = -0.15
 }
 
 agenda_open_markets_criminal_heritage_finish = {
 	icon = "gfx/interface/icons/modifiers/mod_agenda_open_markets.dds"
-	branch_office_holding_crime_mult = 0.5
+	branch_office_holding_crime_mult = 0.35
+	country_trade_fee = -0.15
 }
 
 agenda_favored_society_finish = {

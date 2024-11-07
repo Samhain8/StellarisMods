@@ -12,7 +12,9 @@ trait_auto_mod_robotic = {
 
 	allowed_archetypes = { ROBOT MACHINE }
 
-
+	species_potential_add = {
+		always = no
+	}
 	species_possible_remove = {
 		always = yes
 	}
@@ -442,7 +444,7 @@ trait_robot_recycled = {
 
 	#assembling_modifier, declining_modifier, growing_modifier are applied to planet when pop is the one assembling/declining/growing
 	assembling_modifier = {
-		planet_pop_assemblers_upkeep_mult = -0.20
+		planet_pop_assemblers_upkeep_mult = -0.25
 	}
 	slave_cost = {
 		energy = 1500
@@ -458,7 +460,7 @@ trait_robot_luxurious = {
 
 	#assembling_modifier, declining_modifier, growing_modifier are applied to planet when pop is the one assembling/declining/growing
 	assembling_modifier = {
-		planet_pop_assemblers_upkeep_mult = 0.20
+		planet_pop_assemblers_upkeep_mult = 0.25
 	}
 	ai_weight = {
 		weight = 1
@@ -473,7 +475,7 @@ trait_robot_luxurious = {
 }
 
 trait_robot_propaganda_machines = {
-	cost = 1
+	cost = 2
 	category = robotic
 
 	allowed_archetypes = { ROBOT MACHINE }
@@ -749,6 +751,7 @@ trait_robot_integrated_weaponry = {
 			owner_is_machine_intelligence = yes
 			owner_is_individual_machine = yes
 		}
+		always = no
 	}
 	randomized = no
 	modifier = {
@@ -779,7 +782,7 @@ trait_robot_delicate_frames = {
 	}
 	randomized = no
 	modifier = {
-		army_damage_mult = -0.5
+		army_health = -0.35
 		planet_jobs_robot_worker_produces_mult = -0.05
 	}
 
@@ -790,7 +793,7 @@ trait_robot_delicate_frames = {
 
 trait_robot_scarcity_algorithms = {
 	host_has_dlc = "The Machine Age"
-	cost = -1
+	cost = -2
 	category = robotic
 
 	allowed_archetypes = { ROBOT MACHINE }
@@ -843,7 +846,7 @@ trait_robot_ancient_dreadnought = {
 	allowed_archetypes = { ROBOT MACHINE }
 
 	modifier = {
-		army_damage_mult = 5
+		army_damage_mult = 1.5
 		planet_metallurgists_produces_mult = 0.15
 	}
 
@@ -876,6 +879,26 @@ trait_robot_enigmatic_fortress = {
 	allowed_archetypes = { ROBOT MACHINE }
 
 	modifier = {
+		species_empire_size_mult = -0.35
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		pop_amenities_usage_no_happiness_mult = -0.5
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+		}
 		pop_amenities_usage_mult = -0.5
 	}
 
@@ -909,6 +932,9 @@ trait_robot_infinity_sphere = {
 
 	modifier = {
 		planet_researchers_upkeep_mult = -0.5
+		planet_jobs_physics_research_produces_mult = 0.05
+		planet_jobs_society_research_produces_mult = 0.05
+		planet_jobs_engineering_research_produces_mult = 0.05
 	}
 
 	slave_cost = {
@@ -940,7 +966,9 @@ trait_robot_scavenger_bot = {
 	allowed_archetypes = { ROBOT MACHINE }
 
 	modifier = {
-		planet_pop_assembly_mult = 0.5
+		#planet_pop_assembly_mult = 0.5
+		planet_metallurgists_upkeep_mult = -0.20
+		planet_artisans_upkeep_mult = -0.20
 	}
 
 	slave_cost = {
@@ -969,10 +997,10 @@ trait_robot_history_warbot = {
 	opposites = { "trait_robot_history_artbot" "trait_robot_history_explorebot" "trait_robot_history_researchbot" "trait_robot_history_resourcebot" "trait_robot_history_chatbot"}
 
 	modifier = {
-		army_damage_mult = 0.05
+		army_damage_mult = 0.15
 	}
 	slave_cost = {
-		energy = 750
+		energy = 150
 	}
 }
 
@@ -994,10 +1022,10 @@ trait_robot_history_artbot = {
 	opposites = { "trait_robot_history_warbot" "trait_robot_history_explorebot" "trait_robot_history_researchbot" "trait_robot_history_resourcebot" "trait_robot_history_chatbot"}
 
 	modifier = {
-		pop_job_amenities_mult = 0.05
+		pop_job_amenities_mult = 0.1
 	}
 	slave_cost = {
-		energy = 750
+		energy = 150
 	}
 }
 
@@ -1019,10 +1047,10 @@ trait_robot_history_explorebot = {
 	opposites = { "trait_robot_history_warbot" "trait_robot_history_artbot" "trait_robot_history_researchbot" "trait_robot_history_resourcebot" "trait_robot_history_chatbot"}
 
 	modifier = {
-		planet_jobs_unity_produces_mult = 0.02
+		planet_jobs_unity_produces_mult = 0.05
 	}
 	slave_cost = {
-		energy = 750
+		energy = 150
 	}
 }
 
@@ -1044,12 +1072,12 @@ trait_robot_history_researchbot = {
 	opposites = { "trait_robot_history_warbot" "trait_robot_history_artbot" "trait_robot_history_explorebot" "trait_robot_history_resourcebot" "trait_robot_history_chatbot"}
 
 	modifier = {
-		planet_jobs_physics_research_produces_mult = 0.02
-		planet_jobs_society_research_produces_mult = 0.02
-		planet_jobs_engineering_research_produces_mult = 0.02
+		planet_jobs_physics_research_produces_mult = 0.03
+		planet_jobs_society_research_produces_mult = 0.03
+		planet_jobs_engineering_research_produces_mult = 0.03
 	}
 	slave_cost = {
-		energy = 750
+		energy = 150
 	}
 }
 
@@ -1074,7 +1102,7 @@ trait_robot_history_resourcebot = {
 		planet_jobs_minerals_produces_mult = 0.05
 	}
 	slave_cost = {
-		energy = 750
+		energy = 150
 	}
 }
 
@@ -1096,10 +1124,10 @@ trait_robot_history_chatbot = {
 	opposites = { "trait_robot_history_warbot" "trait_robot_history_artbot" "trait_robot_history_explorebot" "trait_robot_history_researchbot" "trait_robot_history_resourcebot"}
 
 	modifier = {
-		planet_jobs_upkeep_mult = -0.02
+		pop_happiness = 0.05
 	}
 	slave_cost = {
-		energy = 750
+		energy = 150
 	}
 }
 
@@ -1225,8 +1253,38 @@ trait_robot_suppressed = {
 	custom_tooltip_with_modifiers = trait_robot_suppressed_tt
 }
 
-trait_robot_shielded_components = {
+trait_robot_willing_tool = {
 	cost = 3
+	icon = "gfx/interface/icons/traits/trait_robot_loyalty_circuits.dds"
+
+	allowed_archetypes = { ROBOT MACHINE }
+
+	species_potential_add = {
+		can_do_advanced_robo_modding = yes
+		always = no
+	}
+	species_possible_remove = {
+		always = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	
+	initial = no
+	randomized = no
+
+	modifier = {
+		pop_cat_slave_happiness = 0.2
+		planet_jobs_produces_mult = 0.05
+		leader_lifespan_add = -30
+	}
+	slave_cost = {
+		energy = 1500
+	}
+}
+
+trait_robot_shielded_components = {
+	cost = 4
 	category = robotic
 
 	allowed_archetypes = { ROBOT MACHINE }
@@ -1245,9 +1303,8 @@ trait_robot_shielded_components = {
 	randomized = no
 
 	modifier = {
-		pop_environment_tolerance = 0.30
-		planet_jobs_produces_mult = 0.05
-		leader_lifespan_add = 50
+		pop_environment_tolerance = 0.25
+		leader_lifespan_add = 100
 	}
 
 	slave_cost = {
@@ -1304,9 +1361,9 @@ trait_robot_inquisitative_axioms = {
 	randomized = no
 
 	modifier = {
-		planet_researchers_produces_mult = 0.2
-		leaders_upkeep_mult = -0.1
+		planet_researchers_produces_mult = 0.15
 		negative_traits_leader = -1
+		species_leader_exp_gain = 0.25
 	}
 
 	opposites = { trait_robot_suppressed }
@@ -1317,7 +1374,7 @@ trait_robot_inquisitative_axioms = {
 }
 
 trait_robot_ceaseless_symmetric_annihilation_engine = {
-	cost = 2
+	cost = 3
 	category = robotic
 
 	allowed_archetypes = { ROBOT MACHINE }
@@ -1349,7 +1406,7 @@ trait_robot_ceaseless_symmetric_annihilation_engine = {
 }
 
 trait_robot_ferro_viscosity_augmentation = {
-	cost = 2
+	cost = 3
 	category = robotic
 
 	allowed_archetypes = { ROBOT MACHINE }
@@ -1370,7 +1427,8 @@ trait_robot_ferro_viscosity_augmentation = {
 	randomized = no
 
 	modifier = {
-		leader_lifespan_mult = 0.5
+		pop_environment_tolerance = 0.25
+		planet_pop_assembly_mult = 0.25
 	}
 
 	triggered_pop_modifier = {
@@ -1380,7 +1438,7 @@ trait_robot_ferro_viscosity_augmentation = {
 				is_gestalt = yes
 			}
 		}
-		pop_amenities_usage_no_happiness_mult = -0.50
+		pop_amenities_usage_no_happiness_mult = -0.25
 	}
 
 	triggered_pop_modifier = {
@@ -1390,7 +1448,7 @@ trait_robot_ferro_viscosity_augmentation = {
 				is_gestalt = no
 			}
 		}
-		pop_amenities_usage_mult = -0.50
+		pop_amenities_usage_mult = -0.25
 	}
 
 	slave_cost = {
@@ -1421,9 +1479,10 @@ trait_robot_biomimetic_assembly = {
 	initial = no
 	randomized = no
 
-	assembling_modifier = {
-		planet_pop_assemblers_upkeep_mult = -0.80
-	}
+	# Organic Pop Assembly set by biomimetic_budding_rate in \pop_categories\ and 00_scripted_variables
+	#assembling_modifier = {
+	#	planet_pop_assemblers_upkeep_mult = -0.80
+	#}
 
 	slave_cost = {
 		energy = 750
@@ -1530,7 +1589,7 @@ trait_robot_exotic_fuel_consumption = {
 	allowed_archetypes = { ROBOT MACHINE }
 
 	species_potential_add = {
-		always = yes
+		always = no
 	}
 	species_possible_add = {
 	}
@@ -1545,7 +1604,8 @@ trait_robot_exotic_fuel_consumption = {
 	randomized = no
 
 	modifier = {
-		planet_jobs_produces_mult = 0.10
+		species_leader_exp_gain = 0.15
+		planet_jobs_unity_produces_mult = 0.1
 	}
 
 	slave_cost = {
@@ -1563,7 +1623,7 @@ trait_robot_rare_crystal_exterior = {
 	allowed_archetypes = { ROBOT MACHINE }
 
 	species_potential_add = {
-		always = yes
+		always = no
 	}
 	species_possible_add = {
 		custom_tooltip = {
@@ -1589,7 +1649,7 @@ trait_robot_rare_crystal_exterior = {
 	randomized = no
 
 	modifier = {
-		planet_metallurgists_produces_mult = 0.2
+		pop_environment_tolerance = 0.15
 	}
 
 	slave_cost = {
@@ -1607,7 +1667,7 @@ trait_robot_volatile_mote_reactor = {
 	allowed_archetypes = { ROBOT MACHINE }
 
 	species_potential_add = {
-		always = yes
+		always = no
 	}
 	species_possible_add = {
 	}
@@ -1622,7 +1682,7 @@ trait_robot_volatile_mote_reactor = {
 	randomized = no
 
 	modifier = {
-		pop_environment_tolerance = 0.3
+		planet_jobs_produces_mult = 0.05
 	}
 
 	slave_cost = {

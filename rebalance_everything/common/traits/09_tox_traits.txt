@@ -936,33 +936,34 @@ trait_impish = {
 
 #Overtuned
 #Leave at start of list
-#trait_auto_mod_overtuned = {
-#	host_has_dlc = "Toxoids Species Pack"
-#	cost = 2
-#	auto_mod = yes
-#	category = overtuned
-#
-#	allowed_archetypes = { BIOLOGICAL LITHOID }
-#	allowed_origins = { origin_overtuned }
-#
-#	species_potential_add = {
-#		can_add_overtuned_traits = yes
-#	}
-#	species_possible_remove = {
-#		can_remove_overtuned_traits = yes
-#	}
-#	species_possible_merge_remove = {
-#		always = yes
-#	}
-#	potential_crossbreeding_chance = 1.0
-#	modifier = {
-#		leader_lifespan_add = -20
-#	}
-#	slave_cost = {
-#		energy = 1000
-#	}
-#	assembly_score = {
-#		base = 2
-#	}
-#	custom_tooltip_with_modifiers = automodding_trait_overtuned_tooltip
-#}
+trait_auto_mod_overtuned = {
+	host_has_dlc = "Toxoids Species Pack"
+	cost = 2
+	auto_mod = yes
+	category = overtuned
+
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	allowed_origins = { origin_overtuned }
+
+	species_potential_add = {
+		can_add_overtuned_traits = yes
+		always = no
+	}
+	species_possible_remove = {
+		can_remove_overtuned_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	potential_crossbreeding_chance = 1.0
+	modifier = {
+		leader_lifespan_add = -20
+	}
+	slave_cost = {
+		energy = 1000
+	}
+	assembly_score = {
+		base = 2
+	}
+	custom_tooltip_with_modifiers = automodding_trait_overtuned_tooltip
+}

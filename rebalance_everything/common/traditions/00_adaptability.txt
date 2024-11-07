@@ -54,7 +54,7 @@ tr_adaptability_survival_fittest = {
 	}
 	modifier = {
 		planet_orbital_bombardment_damage = -0.25
-		army_defense_damage_mult = 0.25
+		#army_defense_damage_mult = 0.25
 		BIOLOGICAL_species_trait_points_add = 1
 		ROBOT_species_trait_points_add = 1
 	}
@@ -71,7 +71,7 @@ tr_adaptability_survival_fittest = {
 		}
 		modifier = {
 			planet_orbital_bombardment_damage = -0.25
-			army_defense_damage_mult = 0.25
+			#army_defense_damage_mult = 0.25
 			BIOLOGICAL_species_trait_points_add = 1
 		}
 		weight = {
@@ -88,7 +88,7 @@ tr_adaptability_survival_fittest = {
 		}
 		modifier = {
 			planet_orbital_bombardment_damage = -0.25
-			army_defense_damage_mult = 0.25
+			#army_defense_damage_mult = 0.25
 			ROBOT_species_trait_points_add = 1
 		}
 		weight = {

@@ -299,6 +299,7 @@
 
 @plantoid_budding_rate = 0.02
 @tiyanki_budding_rate = 0.05
+@biomimetic_budding_rate = 0.03
 
 @armies_for_declaring_war = 6
 

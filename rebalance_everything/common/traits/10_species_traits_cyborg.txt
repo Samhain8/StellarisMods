@@ -9,6 +9,7 @@ trait_auto_mod_cyborg = {
 	randomized = no
 	species_potential_add = {
 		can_add_cybernetic_traits = yes
+		always = no
 	}
 	species_possible_remove = {
 		can_remove_cybernetic_traits = yes
@@ -203,6 +204,7 @@ trait_cyborg_loyalty_circuits = {
 	species_potential_add = {
 		can_add_cybernetic_traits = yes
 		NOT = { has_trait = trait_hive_mind }
+		always = no
 	}
 	species_possible_remove = {
 		can_remove_cybernetic_traits = yes
@@ -303,7 +305,7 @@ trait_cyborg_enhanced_memory = {
 }
 
 trait_cyborg_durable = {
-	cost = 2
+	cost = 1
 	opposites = { "trait_cyborg_high_maintenance" }
 
 	allowed_archetypes = { BIOLOGICAL LITHOID }
@@ -318,8 +320,8 @@ trait_cyborg_durable = {
 	category = cyborg
 	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
 	modifier = {
-		planet_pops_consumer_goods_upkeep_mult = -0.2
-		leader_lifespan_add = 30
+		planet_pops_consumer_goods_upkeep_mult = -0.15
+		leader_lifespan_add = 20
 	}
 	slave_cost = {
 		energy = 1000
@@ -511,6 +513,8 @@ trait_cyborg_neon_allure = {
 	initial = no
 	species_potential_add = {
 		can_add_cybernetic_traits = yes
+		owner_is_machine_intelligence = no
+		owner_is_hive_empire = no
 	}
 	species_possible_remove = {
 		can_remove_cybernetic_traits = yes
@@ -557,6 +561,8 @@ trait_cyborg_willing_tool = {
 	initial = no
 	species_potential_add = {
 		can_add_cybernetic_traits = yes
+		owner_is_machine_intelligence = no
+		owner_is_hive_empire = no
 	}
 	species_possible_remove = {
 		can_remove_cybernetic_traits = yes
@@ -631,6 +637,7 @@ trait_cyborg_stainless_steel_smile = {
 	opposites = { "trait_cyborg_welded_countenance" }
 	species_potential_add = {
 		can_add_cybernetic_traits = yes
+		always = no
 	}
 	species_possible_remove = {
 		can_remove_cybernetic_traits = yes
@@ -656,6 +663,7 @@ trait_cyborg_welded_countenance = {
 	opposites = { "trait_cyborg_stainless_steel_smile" }
 	species_potential_add = {
 		can_add_cybernetic_traits = yes
+		always = no
 	}
 	species_possible_remove = {
 		can_remove_cybernetic_traits = yes
@@ -681,6 +689,7 @@ trait_cyborg_apathy_loops = {
 	species_potential_add = {
 		can_add_cybernetic_traits = yes
 		NOT = { has_trait = trait_hive_mind }
+		always = no
 	}
 	species_possible_remove = {
 		can_remove_cybernetic_traits = yes
@@ -714,8 +723,9 @@ trait_cyborg_bionic_engineers = {
 	}
 	randomized = no
 	category = cyborg
+	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
 	modifier = {
-		planet_jobs_engineering_research_produces_mult = 0.15
+		planet_jobs_engineering_research_produces_mult = 0.25
 	}
 
 	slave_cost = {
@@ -741,8 +751,9 @@ trait_cyborg_bionic_physicists = {
 	}
 	randomized = no
 	category = cyborg
+	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
 	modifier = {
-		planet_jobs_physics_research_produces_mult = 0.15
+		planet_jobs_physics_research_produces_mult = 0.25
 	}
 
 	slave_cost = {
@@ -768,8 +779,9 @@ trait_cyborg_bionic_sociologists = {
 	}
 	randomized = no
 	category = cyborg
+	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
 	modifier = {
-		planet_jobs_society_research_produces_mult = 0.15
+		planet_jobs_society_research_produces_mult = 0.25
 	}
 
 	slave_cost = {
@@ -786,6 +798,7 @@ trait_cyborg_integrated_weaponry = {
 	opposites = { "trait_cyborg_delicate_frames" }
 	species_potential_add = {
 		can_add_cybernetic_traits = yes
+		always = no
 	}
 	species_possible_remove = {
 		can_remove_cybernetic_traits = yes
@@ -804,7 +817,7 @@ trait_cyborg_integrated_weaponry = {
 
 trait_cyborg_delicate_frames = {
 	host_has_dlc = "The Machine Age"
-	cost = -1
+	cost = -3
 
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	initial = no
@@ -818,8 +831,9 @@ trait_cyborg_delicate_frames = {
 	randomized = no
 	category = cyborg
 	modifier = {
-		army_damage_mult = -0.5
+		army_health = -0.35
 		planet_jobs_worker_produces_mult = -0.05
+		leader_lifespan_add = -30
 	}
 
 	slave_cost = {
@@ -836,6 +850,7 @@ trait_cyborg_limited_memory = {
 	opposites = { "trait_cyborg_enhanced_memory" }
 	species_potential_add = {
 		can_add_cybernetic_traits = yes
+		always = no
 	}
 	species_possible_remove = {
 		can_remove_cybernetic_traits = yes
@@ -863,6 +878,7 @@ trait_cyborg_scarcity_algorithms = {
 		can_add_cybernetic_traits = yes
 		owner_is_machine_intelligence = no
 		owner_is_hive_empire = no
+		always = no
 	}
 	species_possible_remove = {
 		can_remove_cybernetic_traits = yes
@@ -1004,13 +1020,13 @@ trait_cyborg_ancient_dreadnought = {
 	initial = no
 	randomized = no
 	category = cyborg
-	opposites = { "trait_lithoid_gaseous_byproducts" "trait_lithoid_scintillating" "trait_lithoid_volatile_excretions" "trait_advanced_gaseous_byproducts" "trait_advanced_scintillating" "trait_advanced_volatile_excretions" }
+	#opposites = { "trait_lithoid_gaseous_byproducts" "trait_lithoid_scintillating" "trait_lithoid_volatile_excretions" "trait_advanced_gaseous_byproducts" "trait_advanced_scintillating" "trait_advanced_volatile_excretions" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
 
 	modifier = {
-		army_damage_mult = 5
+		army_damage_mult = 1.5
 		planet_metallurgists_produces_mult = 0.15
 	}
 
@@ -1034,13 +1050,14 @@ trait_cyborg_enigmatic_fortress = {
 	initial = no
 	randomized = no
 	category = cyborg
-	opposites = { "trait_lithoid_gaseous_byproducts" "trait_lithoid_scintillating" "trait_lithoid_volatile_excretions" "trait_advanced_gaseous_byproducts" "trait_advanced_scintillating" "trait_advanced_volatile_excretions" }
+	#opposites = { "trait_lithoid_gaseous_byproducts" "trait_lithoid_scintillating" "trait_lithoid_volatile_excretions" "trait_advanced_gaseous_byproducts" "trait_advanced_scintillating" "trait_advanced_volatile_excretions" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
 
 	modifier = {
-		pop_amenities_usage_mult = -0.5
+		species_empire_size_mult = -0.35
+		leader_lifespan_add = 80
 	}
 
 	slave_cost = {
@@ -1063,13 +1080,16 @@ trait_cyborg_infinity_sphere = {
 	initial = no
 	randomized = no
 	category = cyborg
-	opposites = { "trait_lithoid_gaseous_byproducts" "trait_lithoid_scintillating" "trait_lithoid_volatile_excretions" "trait_advanced_gaseous_byproducts" "trait_advanced_scintillating" "trait_advanced_volatile_excretions" }
+	#opposites = { "trait_lithoid_gaseous_byproducts" "trait_lithoid_scintillating" "trait_lithoid_volatile_excretions" "trait_advanced_gaseous_byproducts" "trait_advanced_scintillating" "trait_advanced_volatile_excretions" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
 
 	modifier = {
 		planet_researchers_upkeep_mult = -0.5
+		planet_jobs_physics_research_produces_mult = 0.05
+		planet_jobs_society_research_produces_mult = 0.05
+		planet_jobs_engineering_research_produces_mult = 0.05
 	}
 
 	slave_cost = {
@@ -1092,13 +1112,14 @@ trait_cyborg_scavenger_bot = {
 	initial = no
 	randomized = no
 	category = cyborg
-	opposites = { "trait_lithoid_gaseous_byproducts" "trait_lithoid_scintillating" "trait_lithoid_volatile_excretions" "trait_advanced_gaseous_byproducts" "trait_advanced_scintillating" "trait_advanced_volatile_excretions" }
+	#opposites = { "trait_lithoid_gaseous_byproducts" "trait_lithoid_scintillating" "trait_lithoid_volatile_excretions" "trait_advanced_gaseous_byproducts" "trait_advanced_scintillating" "trait_advanced_volatile_excretions" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
 
 	modifier = {
-		pop_growth_speed = 1
+		planet_metallurgists_upkeep_mult = -0.20
+		planet_artisans_upkeep_mult = -0.20
 	}
 
 	slave_cost = {
