@@ -3112,10 +3112,6 @@ generate_start_pops = {
 				tech = tech_neural_implants
 				message = no
 			}
-			give_technology = {
-				tech = tech_slave_colonies
-				message = no
-			}
 		}
 	}
 	if = {

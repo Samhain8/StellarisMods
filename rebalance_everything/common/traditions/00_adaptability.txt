@@ -52,6 +52,7 @@ tr_adaptability_survival_fittest = {
 	possible = {
 		has_tradition = tr_adaptability_recycling
 	}
+	custom_tooltip_with_modifiers = tr_adaptability_survival_fittest_desc
 	modifier = {
 		planet_orbital_bombardment_damage = -0.25
 		#army_defense_damage_mult = 0.25
@@ -69,6 +70,7 @@ tr_adaptability_survival_fittest = {
 		trigger = {
 			is_hive_empire = yes
 		}
+		custom_tooltip_with_modifiers = tr_adaptability_survival_fittest_desc
 		modifier = {
 			planet_orbital_bombardment_damage = -0.25
 			#army_defense_damage_mult = 0.25
@@ -86,6 +88,7 @@ tr_adaptability_survival_fittest = {
 		trigger = {
 			is_machine_empire = yes
 		}
+		custom_tooltip_with_modifiers = tr_adaptability_survival_fittest_desc
 		modifier = {
 			planet_orbital_bombardment_damage = -0.25
 			#army_defense_damage_mult = 0.25

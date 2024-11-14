@@ -437,7 +437,7 @@
  tr_adaptability_recycling_delayed:0 "Reusing what has become obsolete gives us more to build with in the future."
 
  tr_adaptability_survival_fittest:0 "Survival of the Fittest"
- tr_adaptability_survival_fittest_desc:3 "§Y$MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$§! reduced by §G25%§! and §Y$MOD_ARMY_DEFENSE_DAMAGE_MULT$§! increased by §G+25%§!."
+ tr_adaptability_survival_fittest_desc:3 "§Y$MOD_PLANET_ORBITAL_BOMBARDMENT_DAMAGE$§! and Storm negative effects reduced by §G25%§!, gain a trait modification point."
  tr_adaptability_survival_fittest_delayed:1 "By coming into contact with other species, we have learned the true importance of overcoming our weaknesses in the great struggle for survival."
 
  tr_adaptability_environmental_diversification:0 "Environmental Diversification"

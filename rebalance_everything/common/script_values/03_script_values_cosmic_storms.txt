@@ -238,7 +238,7 @@ storm_resistant_production_multiplier = {
 	base = 1
 
 	modifier = {
-		mult = 0.75
+		mult = 0.7
 		has_building = building_storm_resistant_production
 		NOT = {
 			has_modifier = storm_hunkered_down_modifier
@@ -246,13 +246,13 @@ storm_resistant_production_multiplier = {
 	}
 
 	modifier = {
-		mult = 0.5
+		mult = 0.4
 		has_building = building_storm_resistant_production
 		has_modifier = storm_hunkered_down_modifier
 	}
 
 	modifier = {
-		mult = 0.6
+		mult = 0.5
 		has_building = building_advanced_storm_resistant_production
 		NOT = {
 			has_modifier = storm_hunkered_down_modifier
@@ -273,6 +273,18 @@ storm_resistant_production_multiplier = {
 	modifier = {
 		mult = 0.9
 		has_modifier = storm_trap_insight_modifier
+	}
+
+	modifier = {
+		mult = 0.75
+		exists = owner
+		owner = { 
+			OR = {
+				has_tradition = tr_adaptability_survival_fittest 
+				has_tradition = tr_adaptability_hive_survival_fittest 
+				has_tradition = tr_adaptability_machine_survival_fittest 
+			}
+		}
 	}
 }
 

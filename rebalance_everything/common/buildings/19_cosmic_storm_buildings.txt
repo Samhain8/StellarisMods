@@ -382,9 +382,7 @@ building_storm_resistant_production = {
 			}
 		}
 		modifier = {
-			planet_miners_minerals_produces_add = 1
-			planet_farmers_food_produces_add = 1
-			planet_technician_energy_produces_add = 1
+			planet_stability_add = 10
 		}
 	}
 
@@ -432,9 +430,7 @@ building_storm_resistant_production = {
 			}
 		}
 		modifier = {
-			planet_miners_produces_mult = 1
-			planet_farmers_produces_mult = 1
-			planet_technician_produces_mult = 1
+			planet_stability_add = 10
 		}
 		mult = value:storm_building_production_multiplier
 	}
@@ -500,9 +496,7 @@ building_advanced_storm_resistant_production = {
 			}
 		}
 		modifier = {
-			planet_miners_minerals_produces_add = 2
-			planet_farmers_food_produces_add = 2
-			planet_technician_energy_produces_add = 2
+			planet_stability_add = 20
 		}
 	}
 
@@ -550,9 +544,7 @@ building_advanced_storm_resistant_production = {
 			}
 		}
 		modifier = {
-			planet_miners_produces_mult = 1
-			planet_farmers_produces_mult = 1
-			planet_technician_produces_mult = 1
+			planet_stability_add = 20
 		}
 		mult = value:storm_building_production_multiplier
 	}
