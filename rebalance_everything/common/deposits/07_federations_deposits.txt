@@ -1257,7 +1257,7 @@ d_disco_planet = {
 
 	planet_modifier = {
 		planet_amenities_mult = 0.2
-		planet_miners_exotic_gases_produces_add = 0.1
+		planet_farmers_exotic_gases_produces_add = 0.1
 		pop_growth_speed = 0.15
 	}
 

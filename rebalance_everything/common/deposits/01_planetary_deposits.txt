@@ -1430,6 +1430,7 @@ d_dust_caverns = {
 			}
 		}
 		planet_miners_volatile_motes_produces_add = @SR_SMALL
+		planet_farmers_volatile_motes_produces_add = @SR_SMALL
 	}
 
 	planet_modifier = {
@@ -1501,6 +1502,7 @@ d_dust_desert = {
 			}
 		}
 		planet_miners_volatile_motes_produces_add = @SR_LARGE
+		planet_farmers_volatile_motes_produces_add = @SR_LARGE
 	}
 
 	planet_modifier = {
@@ -1576,6 +1578,7 @@ d_bubbling_swamp = {
 			}
 		}
 		planet_miners_exotic_gases_produces_add = @SR_SMALL
+		planet_farmers_exotic_gases_produces_add = @SR_SMALL
 	}
 
 	planet_modifier = {
@@ -1620,13 +1623,6 @@ d_bubbling_swamp = {
 		}
 		modifier = {
 			factor = 0
-			OR = {
-				has_deposit = d_bubbling_swamp
-				has_deposit = d_fuming_bog
-			}
-		}
-		modifier = {
-			factor = 0
 			solar_system = {
 				OR = {
 					has_star_flag = empire_home_system
@@ -1654,6 +1650,7 @@ d_fuming_bog = {
 			}
 		}
 		planet_miners_exotic_gases_produces_add = @SR_LARGE
+		planet_farmers_exotic_gases_produces_add = @SR_LARGE
 	}
 
 	planet_modifier = {
@@ -1698,13 +1695,6 @@ d_fuming_bog = {
 		}
 		modifier = {
 			factor = 0
-			OR = {
-				has_deposit = d_bubbling_swamp
-				has_deposit = d_fuming_bog
-			}
-		}
-		modifier = {
-			factor = 0
 			solar_system = {
 				OR = {
 					has_star_flag = empire_home_system
@@ -1736,6 +1726,7 @@ d_crystalline_caverns = {
 			}
 		}
 		planet_miners_rare_crystals_produces_add = @SR_SMALL
+		planet_farmers_rare_crystals_produces_add = @SR_SMALL
 	}
 
 	planet_modifier = {
@@ -1780,14 +1771,6 @@ d_crystalline_caverns = {
 		}
 		modifier = {
 			factor = 0
-			OR = {
-				has_deposit = d_crystalline_caverns
-				has_deposit = d_crystal_forest
-				has_deposit = d_crystal_reef
-			}
-		}
-		modifier = {
-			factor = 0
 			solar_system = {
 				OR = {
 					has_star_flag = empire_home_system
@@ -1811,6 +1794,7 @@ d_crystal_forest = {
 			}
 		}
 		planet_miners_rare_crystals_produces_add = @SR_LARGE
+		planet_farmers_rare_crystals_produces_add = @SR_LARGE
 	}
 
 	planet_modifier = {
@@ -1864,14 +1848,6 @@ d_crystal_forest = {
 		}
 		modifier = {
 			factor = 0
-			OR = {
-				has_deposit = d_crystalline_caverns
-				has_deposit = d_crystal_forest
-				has_deposit = d_crystal_reef
-			}
-		}
-		modifier = {
-			factor = 0
 			solar_system = {
 				OR = {
 					has_star_flag = empire_home_system
@@ -1895,6 +1871,7 @@ d_crystal_reef = {
 			}
 		}
 		planet_miners_rare_crystals_produces_add = @SR_LARGE
+		planet_farmers_rare_crystals_produces_add = @SR_LARGE
 	}
 
 	planet_modifier = {
@@ -1944,14 +1921,6 @@ d_crystal_reef = {
 		modifier = {
 			factor = 2
 			is_planet_class = pc_gaia
-		}
-		modifier = {
-			factor = 0
-			OR = {
-				has_deposit = d_crystalline_caverns
-				has_deposit = d_crystal_forest
-				has_deposit = d_crystal_reef
-			}
 		}
 		modifier = {
 			factor = 0

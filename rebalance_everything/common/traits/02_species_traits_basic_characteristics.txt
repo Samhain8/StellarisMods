@@ -772,7 +772,7 @@ trait_robot_aquatic = {
 			}
 			is_ideal = no
 		}
-		pop_environment_tolerance = -0.2
+		pop_environment_tolerance = -0.3
 	}
 	triggered_planet_growth_habitability_modifier = {
 		potential = {
@@ -784,13 +784,13 @@ trait_robot_aquatic = {
 			exists = owner
 			owner = { has_ascension_perk = ap_hydrocentric }
 		}
-		pop_environment_tolerance = -0.1
+		pop_environment_tolerance = -0.15
 	}
 	triggered_planet_growth_habitability_modifier = {
 		potential = {
 			has_modifier = flooded_habitat
 		}
-		pop_environment_tolerance = 0.2
+		pop_environment_tolerance = 0.4 #Flooding habitat does -20% hab, don't just counter the negative, add ocean bonus
 	}
 	modifier = {
 		pc_ocean_habitability = 0.2

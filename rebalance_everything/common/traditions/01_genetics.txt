@@ -72,6 +72,7 @@ tr_genetics_finish = {
 tr_genetics_resequencing = {
 	# Can add negative traits to organic species.
 	# Can remove beneficial traits from organic species.
+	# Unlocks Advanced Traits
 	custom_tooltip = tr_genetics_resequencing_desc
 }
 
@@ -91,7 +92,6 @@ tr_genetics_enhanced_expression = {
 	possible = {
 		has_tradition = tr_genetics_creation
 	}
-	# Unlocks Advanced Traits
 	modifier = {
 		BIOLOGICAL_species_trait_points_add = 3
 		BIOLOGICAL_species_trait_picks_add = 1

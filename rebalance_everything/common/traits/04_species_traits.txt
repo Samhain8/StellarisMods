@@ -128,6 +128,7 @@ trait_industrious = {
 
 trait_languid = {
 	cost = -2
+    category = normal
 	species_potential_add = {
 		can_do_advanced_gene_modding = yes
 	}
@@ -152,6 +153,7 @@ trait_languid = {
 
 trait_squandering = {
 	cost = -2
+    category = normal
 	species_potential_add = {
 		can_do_advanced_gene_modding = yes
 	}
@@ -243,6 +245,11 @@ trait_thrifty = {
 trait_charming = {
 	icon = "gfx/interface/icons/traits/trait_charismatic.dds"
 	cost = 2
+	species_possible_add = {
+		can_add_genetic_traits = yes
+		owner_is_machine_intelligence = no
+		owner_is_hive_empire = no
+	}
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
 	}
@@ -363,6 +370,7 @@ trait_natural_sociologists = {
 
 trait_dim_engineers = {
 	cost = -2
+    category = normal
 	species_potential_add = {
 		can_do_advanced_gene_modding = yes
 	}
@@ -387,6 +395,7 @@ trait_dim_engineers = {
 
 trait_dim_physicists = {
 	cost = -2
+    category = normal
 	species_potential_add = {
 		can_do_advanced_gene_modding = yes
 	}
@@ -411,6 +420,7 @@ trait_dim_physicists = {
 
 trait_dim_sociologists = {
 	cost = -2
+    category = normal
 	species_potential_add = {
 		can_do_advanced_gene_modding = yes
 	}
@@ -592,6 +602,10 @@ trait_quick_learners = {
 trait_cunning = {
 	cost = 2
 	icon = "gfx/interface/icons/traits/trait_adaptive.dds"
+    category = normal
+	species_possible_add = {
+		can_add_genetic_traits = yes
+	}
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
 	}
@@ -1103,6 +1117,7 @@ trait_fleeting = {
 trait_ephemeral = {
 	cost = -2
 	icon = "gfx/interface/icons/traits/trait_fleeting.dds"
+    category = normal
 	species_potential_add = {
 		can_do_advanced_gene_modding = yes
 	}
@@ -1120,6 +1135,7 @@ trait_ephemeral = {
 
 trait_fleeting_lithoid = {
 	cost = -2
+    category = normal
 	species_potential_add = {
 		can_do_advanced_gene_modding = yes
 	}

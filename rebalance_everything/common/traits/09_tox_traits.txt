@@ -883,6 +883,9 @@ trait_fast_metabolism = {
 	host_has_dlc = "Toxoids Species Pack"
 	cost = 1
 	icon = "gfx/interface/icons/traits/trait_exotic_metabolism.dds"
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
 	}
@@ -910,6 +913,9 @@ trait_fast_metabolism = {
 trait_impish = {
 	cost = 1
 	icon = "gfx/interface/icons/traits/trait_fertile.dds"
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
 	}
