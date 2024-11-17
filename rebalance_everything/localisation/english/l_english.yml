@@ -9749,7 +9749,7 @@ requires_actor_not_selective_kinship: "$TRIGGER_FAIL$§RWe are [Root.GetSpeciesC
  civic_fertility_rituals_effects:0 "Priest and High Priest jobs also increase Pop Growth Speed."
  civic_fertility_rituals_corporate:0 "Fertility Rituals"
  civic_fertility_rituals_corporate_desc:0 "This society's religion teaches that procreation is the most sacred and joyous of missions, and their priests and priestesses will gladly carry it out."
- civic_fertility_rituals_corporate_effects:0 "Priest and High Priest jobs also increase Pop Growth Speed."
+ civic_fertility_rituals_corporate_effects:0 "Priest and High Priest jobs also increase Pop Growth Speed and Food from jobs."
 
  civic_tooltip_gospel_of_the_masses_effects:1 "£pop£ §YSpiritualist Pops§! give additional £trade_value£ §Y$TRADE_VALUE$§! on all Planets and Branch Offices\nCan build £building£ §Y$building_temple_of_prosperity$§! $BRANCH_OFFICE_BUILDING$\n"
  civic_tooltip_criminal_heritage_effects:3 "Cannot form §YCommercial Pacts§!\nCan build §YBranch Offices§! on the planet of any regular empire they have no war or active truce with\nCrime on §YBranch Office§! Planets increases Branch Office Value\nCan build special Crime-increasing £building£ §Y$BRANCH_OFFICE_BUILDINGS$§!"

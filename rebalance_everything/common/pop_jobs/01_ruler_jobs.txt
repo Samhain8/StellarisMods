@@ -140,15 +140,8 @@ high_priest = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 3
+		planet_amenities_add = 5
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
-	}
-
-	triggered_country_modifier = {
-		potential = {
-			always = yes
-		}
-		country_edict_fund_add = 2
 	}
 
 	triggered_planet_modifier = {
@@ -158,6 +151,7 @@ high_priest = {
 		}
 		modifier = {
 			pop_growth_speed = 0.04
+			planet_jobs_food_produces_mult = 0.04
 		}
 	}
 	
@@ -235,6 +229,13 @@ politician = {
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		country_edict_fund_add = 2
+	}
+
 	weight = {
 		weight = @ruler_job_weight
 		mult = value:job_weights_modifier|JOB|politician|RESOURCE|unity|
@@ -247,6 +248,139 @@ politician = {
 		modifier = {
 			factor = 5
 			has_job = politician
+		}
+		# crisis purge
+		modifier = {
+			factor = 0.01
+			exists = planet
+			exists = planet.controller
+			planet.controller = {
+				OR = {
+					is_country_type = swarm
+					is_country_type = ai_empire
+				}
+			}
+		}
+	}
+
+	inline_script = "jobs/automodding_priority_unity"
+}
+
+oligarch = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	building_icon = building_capital
+	clothes_texture_index = 1
+	icon = noble
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_ruler_job
+
+	resources = {
+		category = planet_politicians
+		produces = {
+			unity = 6
+		}
+		upkeep = {
+			consumer_goods = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_add = 3
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			always = yes
+		}
+		empire_size_add = -2
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+		mult = value:job_weights_modifier|JOB|politician|RESOURCE|unity|
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+		modifier = {
+			factor = 0.1
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 5
+			has_job = oligarch
+		}
+		# crisis purge
+		modifier = {
+			factor = 0.01
+			exists = planet
+			exists = planet.controller
+			planet.controller = {
+				OR = {
+					is_country_type = swarm
+					is_country_type = ai_empire
+				}
+			}
+		}
+	}
+
+	inline_script = "jobs/automodding_priority_unity"
+}
+
+overseer = {
+	category = ruler
+	condition_string = RULER_JOB_TRIGGER
+	building_icon = building_capital
+	clothes_texture_index = 1
+	icon = administrator
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_ruler_job
+
+	resources = {
+		category = planet_politicians
+		produces = {
+			unity = 6
+		}
+		upkeep = {
+			consumer_goods = 2
+		}
+	}
+
+	planet_modifier = {
+		planet_stability_add = 2
+	}
+
+	weight = {
+		weight = @ruler_job_weight
+		mult = value:job_weights_modifier|JOB|politician|RESOURCE|unity|
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+		modifier = {
+			factor = 0.1
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 5
+			has_job = overseer
 		}
 		# crisis purge
 		modifier = {
@@ -461,15 +595,11 @@ noble = {
 		category = planet_nobles
 		produces = {
 			unity = 6
-			influence = 0.12
+			influence = 0.1
 		}
 		upkeep = {
 			consumer_goods = 2
 		}
-	}
-
-	country_modifier = {
-		diplo_weight_mult = 0.02
 	}
 
 	weight = {
@@ -628,7 +758,7 @@ executive = {
 		potential = {
 			always = yes
 		}
-		trade_value_add = 4
+		trade_value_add = 5
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
 	}
 

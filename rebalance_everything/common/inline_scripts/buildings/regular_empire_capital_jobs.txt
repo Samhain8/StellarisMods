@@ -4,18 +4,67 @@ triggered_planet_modifier = {
 		exists = owner
 		owner = {
 			is_regular_empire = yes
-			is_megacorp = no
 			NOR = {
 				has_civic = civic_exalted_priesthood
-				has_civic = civic_aristocratic_elite
 				has_civic = civic_technocracy
-				#is_fertility_rituals = yes
 			}
+			has_authority = auth_democratic
 		}
 		NOT = { has_modifier = penal_colony }
 	}
 	modifier = {
 		job_politician_add = $PRIMARY_JOB$
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			NOR = {
+				has_civic = civic_exalted_priesthood
+				has_civic = civic_technocracy
+			}
+			has_authority = auth_imperial
+		}
+		NOT = { has_modifier = penal_colony }
+	}
+	modifier = {
+		job_noble_add = $PRIMARY_JOB$
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			NOR = {
+				has_civic = civic_exalted_priesthood
+				has_civic = civic_technocracy
+			}
+			has_authority = auth_oligarchic
+		}
+		NOT = { has_modifier = penal_colony }
+	}
+	modifier = {
+		job_oligarch_add = $PRIMARY_JOB$
+	}
+}
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			NOR = {
+				has_civic = civic_exalted_priesthood
+				has_civic = civic_technocracy
+			}
+			has_authority = auth_dictatorial
+		}
+		NOT = { has_modifier = penal_colony }
+	}
+	modifier = {
+		job_overseer_add = $PRIMARY_JOB$
 	}
 }
 
@@ -24,17 +73,62 @@ triggered_desc = {
 		exists = owner
 		owner = {
 			is_regular_empire = yes
-			is_megacorp = no
 			NOR = {
 				has_civic = civic_exalted_priesthood
-				has_civic = civic_aristocratic_elite
 				has_civic = civic_technocracy
-				#is_fertility_rituals = yes
 			}
+			has_authority = auth_democratic
 		}
 		NOT = { has_modifier = penal_colony }
 	}
 	text = job_politician_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			NOR = {
+				has_civic = civic_exalted_priesthood
+				has_civic = civic_technocracy
+			}
+			OR = {
+				has_authority = auth_imperial
+				has_civic = civic_merchant_nobles
+			}
+		}
+	}
+	text = job_noble_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			NOR = {
+				has_civic = civic_exalted_priesthood
+				has_civic = civic_technocracy
+			}
+			has_authority = auth_oligarchic
+		}
+		NOT = { has_modifier = penal_colony }
+	}
+	text = job_oligarch_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+			NOR = {
+				has_civic = civic_exalted_priesthood
+				has_civic = civic_technocracy
+			}
+			has_authority = auth_dictatorial
+		}
+		NOT = { has_modifier = penal_colony }
+	}
+	text = job_overseer_effect_desc
 }
 
 planet_modifier = {
@@ -141,21 +235,6 @@ triggered_desc = {
 	text = job_technophant_effect_desc
 }
 
-# Aristocratic Elite
-# +1 Noble
-triggered_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = {
-			is_regular_empire = yes
-			has_civic = civic_aristocratic_elite
-		}
-	}
-	modifier = {
-		job_noble_add = $PRIMARY_JOB$
-	}
-}
-
 # Additional Nobles Jobs from Cyber Imperial Governments
 triggered_planet_modifier = {
 	potential = {
@@ -167,22 +246,6 @@ triggered_planet_modifier = {
 	modifier = {
 		job_noble_add = $SECONDARY_JOB$
 	}
-}
-
-triggered_desc = {
-	trigger = {
-		exists = owner
-		owner = {
-			OR = {
-				AND = {
-					is_regular_empire = yes
-					has_civic = civic_aristocratic_elite
-				}
-				is_cyber_imperial = yes
-			}
-		}
-	}
-	text = job_noble_effect_desc
 }
 
 # Technocracy
@@ -231,7 +294,10 @@ triggered_desc = {
 		exists = owner
 		owner = {
 			is_regular_empire = yes
-			has_civic = civic_merchant_guilds
+			OR = {
+				has_civic = civic_merchant_guilds
+				has_civic = civic_merchant_nobles
+			}
 		}
 	}
 	text = job_merchant_effect_desc
@@ -360,7 +426,6 @@ triggered_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = {
-			is_regular_empire = yes
 			has_active_tradition = tr_synthetics_prefabricated_components
 		}
 	}
@@ -377,7 +442,7 @@ triggered_planet_modifier = {
 			is_individual_machine = yes
 		}
 	}
-	job_roboticist_add = $PRIMARY_JOB$
+	job_roboticist_add = 1
 }
 
 triggered_desc = {
@@ -419,6 +484,7 @@ triggered_desc = {
 triggered_planet_modifier = {
 	potential = {
 		exists = owner.federation
+		owner = { is_regular_empire = yes }
 		owner.federation = { has_federation_perk = culture_workers_1 }
 	}
 	job_culture_worker_add = $SECONDARY_JOB$
@@ -427,6 +493,7 @@ triggered_planet_modifier = {
 triggered_desc = {
 	trigger = {
 		exists = owner.federation
+		owner = { is_regular_empire = yes }
 		owner.federation = { has_federation_perk = culture_workers_1 }
 	}
 	text = job_culture_worker_effect_desc
@@ -466,11 +533,13 @@ triggered_desc = {
 	text = job_honor_guard_effect_desc
 }
 
-	
 triggered_planet_modifier = {
 	potential = {
 		exists = owner
-		owner = { has_active_tradition = tr_domination_judgment_corps }
+		owner = {
+			is_regular_empire = yes
+			has_active_tradition = tr_domination_judgment_corps 
+		}
 	}
 	modifier = {
 		job_page_add = 1
@@ -481,7 +550,10 @@ triggered_planet_modifier = {
 triggered_desc = {
 	trigger = {
 		exists = owner
-		owner = { has_active_tradition = tr_domination_judgment_corps }
+		owner = {
+			is_regular_empire = yes
+			has_active_tradition = tr_domination_judgment_corps 
+		}
 	}
 	text = job_page_effect_desc
 }

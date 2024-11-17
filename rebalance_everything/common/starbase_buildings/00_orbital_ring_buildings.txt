@@ -658,9 +658,8 @@ ring_embassy_complex = {
 		envoys_add = 2
 	}
 
-
 	planet_modifier = {
-		job_politician_add = 2
+		job_culture_worker_add = 2
 	}
 
 	resources = {
@@ -739,38 +738,11 @@ ring_noble_estates = {
 	planet_modifier = {
 		job_noble_add = 2
 		planet_housing_add = 5
+		planet_jobs_ruler_produces_mult = 0.2
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-				has_civic = civic_aristocratic_elite
-			}
-		}
-		modifier = {
-			job_enforcer_add = 2
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-				has_civic = civic_merchant_nobles
-			}
-		}
-		modifier = {
-			job_entertainer_add = 2
-		}
-	}
-
-	triggered_country_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_civic = civic_aristocratic_elite }
-		}
-		country_naval_cap_add = 10
+	country_modifier = {
+		diplo_weight_mult = 0.05
 	}
 
 	resources = {

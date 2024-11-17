@@ -2869,7 +2869,7 @@ building_autocurating_vault = {
 			owner = { is_gestalt = no }
 		}
 		modifier = {
-			job_politician_add = 1
+			job_culture_worker_add = 1
 		}
 	}
 	triggered_planet_modifier = {
@@ -2887,7 +2887,7 @@ building_autocurating_vault = {
 			exists = owner
 			owner = { is_gestalt = no }
 		}
-		text = job_politician_effect_desc
+		text = job_culture_worker_effect_desc
 	}
 
 	triggered_desc = {

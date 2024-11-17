@@ -223,7 +223,8 @@ priest = {
 			owner = { is_fertility_rituals = yes }
 		}
 		modifier = {
-			pop_growth_speed = 0.03
+			pop_growth_speed = 0.02
+			planet_jobs_food_produces_mult = 0.02
 		}
 	}
 
