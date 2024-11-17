@@ -683,6 +683,7 @@ trait_thrill_seeker = {
 			owner = { has_edict = damn_the_consequences }
 		}
 		modifier = {
+			army_damage_mult = 0.30
 			pop_growth_speed = 0.1
 		}
 	}

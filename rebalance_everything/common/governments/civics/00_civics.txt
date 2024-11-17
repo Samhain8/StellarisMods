@@ -3105,8 +3105,7 @@ civic_natural_design = {
 	}
 	modifier = {
 		BIOLOGICAL_species_trait_picks_add = 2
-		BIOLOGICAL_species_trait_points_add = 2
-		planet_researchers_society_research_produces_add = 0.5
+		BIOLOGICAL_species_trait_points_add = 3
 	}
 	description = civic_tooltip_natural_design_effects
 	negative_description = civic_tooltip_natural_design_negative_effects

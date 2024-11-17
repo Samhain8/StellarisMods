@@ -4304,6 +4304,8 @@
  trait_ephemeral_desc:0 "§LThe potential lifespan of this species is dramatically shortened, their metabolism having a planned end.§!"
  trait_cunning:0 "Cunning"
  trait_cunning_desc:0 "§LMembers of this species are quick witted and favor lateral thinking.§!"
+ trait_keen_intuition:0 "Keen Intuition"
+ trait_keen_intuition_desc:0 "§LMembers of this species have an uncanny aptitude for understanding things before experiencing them.§!"
  trait_dim_sociologists:0 "Dim Sociologists"
  trait_dim_sociologists_desc:0 "§LThis species struggles to understand sociological topics.§!"
  trait_dim_physicists:0 "Dim Physicists"
@@ -4314,6 +4316,8 @@
  trait_squandering_desc:0 "§LMembers of this species struggle with the efficient management of energy.§!"
  trait_languid:0 "Languid"
  trait_languid_desc:0 "§LMembers of this species are averse to heavy physical labor.§!"
+ trait_cheerful:0 "Cheerful"
+ trait_cheerful_desc:0 "§LMembers of this species are naturally cheerful, finding reasons to laugh in even the darkest times.§!"
 
  cannot_add_trait:0 "§RCannot add this trait.§!"
  cannot_remove_trait:0 "§RCannot remove this trait.§!"

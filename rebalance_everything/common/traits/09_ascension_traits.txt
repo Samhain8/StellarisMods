@@ -651,7 +651,7 @@ trait_flexible_metabolism = {
 }
 
 trait_evanescent = {
-	cost = -3
+	cost = -4
 	icon = "gfx/interface/icons/traits/trait_weak.dds"
 	species_potential_add = {
 		can_do_advanced_gene_modding = yes
@@ -678,7 +678,7 @@ trait_evanescent = {
 }
 
 trait_frail = {
-	cost = -3
+	cost = -4
 	icon = "gfx/interface/icons/traits/trait_weak.dds"
 	species_potential_add = {
 		can_do_advanced_gene_modding = yes
@@ -708,7 +708,7 @@ trait_frail = {
 }
 
 trait_fractured_memory = {
-	cost = -3
+	cost = -4
 	icon = "gfx/interface/icons/traits/trait_fleeting.dds"
 	species_potential_add = {
 		can_do_advanced_gene_modding = yes
