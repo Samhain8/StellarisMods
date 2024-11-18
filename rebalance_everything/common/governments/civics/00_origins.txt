@@ -2220,6 +2220,17 @@ origin_primal_calling = {
 
 	max_once_global = yes
 
+	traits = {
+		trait = trait_primal_calling
+	}
+
+	has_secondary_species = {
+		title = civic_syncretic_evolution_secondary_species
+		traits = {
+			trait = trait_primal_calling
+		}
+	}
+
 	random_weight = {
 		base = 0
 		modifier = {

@@ -4108,6 +4108,8 @@
  trait_dominant_desc:0 "§LMany individuals from this species developed a natural talent for leading others, having evolved alongside members of a different species who show little vision for the future.§!"
  trait_sheepish:0 "Sheepish"
  trait_sheepish_desc:0 "§LThe modest and timid members of this species have taken to a more subservient role, relying on a more assertive species for guidance.§!"
+ trait_primal_calling:0 "Primal Calling"
+ trait_primal_calling_desc:0 "§LMembers of this species make little effort to curb their primal instincts. Their wild lifestyle leads to shorter generation gaps and reduced longevity.§!"
  
  trait_presapient_conservative:0 "Conservative"
  trait_presapient_conservative_desc:0 "§LMembers of this species often prefer old wisdom over new experiences.§!\n"

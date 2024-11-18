@@ -1156,6 +1156,8 @@ culture_worker = {
 			}
 		}
 	}
+
+	inline_script = "jobs/automodding_priority_unity"
 }
 
 lattice_artist = {
@@ -1211,8 +1213,6 @@ lattice_artist = {
 			}
 		}
 	}
-
-	inline_script = "jobs/automodding_priority_unity"
 }
 
 bureaucrat = {
@@ -3864,7 +3864,6 @@ resort_worker = {
 		is_sapient = yes
 	}
 
-	possible_precalc = can_fill_specialist_job
 	possible = {
 		entertainer_job_check_trigger = yes
 	}
@@ -3873,6 +3872,12 @@ resort_worker = {
 		category = planet_entertainers
 		produces = {
 			unity = 2
+		}
+		produces = {
+			trigger = {
+				owner = { has_civic = civic_media_conglomerate }
+			}
+			influence = 0.04
 		}
 		upkeep = {
 			consumer_goods = 2
@@ -3898,6 +3903,19 @@ resort_worker = {
 
 	triggered_planet_modifier = {
 		potential = {
+			exists = owner
+			owner = {
+				is_pleasure_seeker = yes
+				is_individual_machine = no
+			}
+		}
+		modifier = {
+			pop_growth_speed = 0.02
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
 			has_councilor = { COUNCILOR = "councilor_corporate_hedonism" }
 		}
 
@@ -3907,7 +3925,7 @@ resort_worker = {
 
 	country_modifier = {
 		pop_amenities_usage_mult = -0.01
-		pop_lifestyle_trade_value_mult = 0.02
+		pop_lifestyle_trade_value_mult = 0.03
 	}
 
 	weight = {
@@ -3915,8 +3933,27 @@ resort_worker = {
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_trade_mult|
 		modifier = {
-			factor = 5
+			factor = 3
+			has_trait = trait_robot_domestic_protocols
+			OR = {
+				is_non_sapient_robot = yes
+				is_shackled_robot = yes
+			}
+		}
+		modifier = {
+			factor = 1.1
 			has_job = resort_worker
+		}
+		modifier = {
+			factor = 5
+			OR = {
+				is_domestic_servant = yes
+				is_pet_slave = yes
+			}
+		}
+		modifier = {
+			factor = 1.5
+			has_trait = trait_syncretic_proles #only possible with this trait for pleasure seekers
 		}
 		# crisis purge
 		modifier = {

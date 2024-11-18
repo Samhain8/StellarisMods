@@ -265,6 +265,36 @@ trait_sheepish = {
 	}
 }
 
+trait_primal_calling = {
+	cost = 0
+	potential_crossbreeding_chance = 0.33
+	initial = no
+	randomized = no
+	species_potential_add = {
+		always = no
+	}
+	species_possible_remove = {
+		can_remove_presapient_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	species_possible_merge_add = {
+		always = no
+	}
+	icon = "gfx/interface/icons/traits/trait_primitive.dds"
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+
+	modifier = {
+		pop_growth_speed = 0.10
+		species_empire_size_mult = 0.10
+		leader_lifespan_add = -10
+	}
+	slave_cost = {
+		energy = 750
+	}
+}
+
 trait_lithoid = {
 	cost = 0
 	potential_crossbreeding_chance = 0

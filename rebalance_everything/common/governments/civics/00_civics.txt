@@ -2772,11 +2772,11 @@ civic_eager_explorers = {
 				value = ethic_gestalt_consciousness
 			}
 		}
-		authority = {
-			NOT = {
-				value = auth_corporate
-			}
-		}
+		#authority = {
+		#	NOT = {
+		#		value = auth_corporate
+		#	}
+		#}
 	}
 
 	possible = {

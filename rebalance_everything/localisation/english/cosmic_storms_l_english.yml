@@ -380,7 +380,7 @@
 # Traits
  trait_storm_touched: "Storm Touched"
  trait_storm_touched_desc: "Being inside a cosmic storm fills the $trait_storm_touched$ with devotional aspiration."
- trait_storm_touched_modifier_tooltip: "While in a §Y$default_storm$§!:$TABBED_NEW_LINE$$mod_planet_jobs_produces_mult$: §G+10%§!$TABBED_NEW_LINE$Amenity Usage: §G-10%§!"
+ trait_storm_touched_modifier_tooltip: "While in a §Y$default_storm$§!:$TABBED_NEW_LINE$$mod_planet_jobs_produces_mult$: §G+20%§!$TABBED_NEW_LINE$$MOD_POP_HAPPINESS$: §G+10%§!"
  trait_storm_fused: "Storm Fused"
  trait_storm_fused_desc: "The Storm Fused learned to cultivate their Inner Storm as they strain for enlightenment."
  trait_storm_fused_modifier_tooltip: "While in a §Y$default_storm$§!:\n$mod_planet_jobs_produces_mult$: §G+10%§!\n$MOD_POP_HAPPINESS$: §G+5%§!"
