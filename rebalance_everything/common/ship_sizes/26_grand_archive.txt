@@ -60,6 +60,7 @@ voidworms_small = {
 	construction_type = { starbase_hatchery starbase_beastport }
 	base_buildtime = @corvette_build_time
 	uses_name_prefix = no
+	can_have_federation_design = yes
 	is_space_fauna_ship = yes
 	space_fauna_values = {
 		age_threshold = { max = 15 }
@@ -145,6 +146,7 @@ voidworms_medium = {
 	base_buildtime = @destroyer_build_time
 	prerequisites = { "tech_improved_incubators" }
 	uses_name_prefix = no
+	can_have_federation_design = yes
 	is_space_fauna_ship = yes
 	space_fauna_values = {
 		age_threshold = { min = 15 max = 60 }
@@ -230,6 +232,7 @@ voidworms_large = {
 	base_buildtime = @cruiser_build_time
 	prerequisites = { "tech_metabolic_gases" }
 	uses_name_prefix = no
+	can_have_federation_design = yes
 	is_space_fauna_ship = yes
 	space_fauna_values = {
 		age_threshold = { min = 60 max = 65 }
@@ -316,6 +319,7 @@ voidworms_titan = {
 	base_buildtime = @battleship_build_time
 	prerequisites = { "tech_metabolic_gases" }
 	uses_name_prefix = no
+	can_have_federation_design = yes
 	is_space_fauna_ship = yes
 	space_fauna_values = {
 		age_threshold = { min = 65 }
@@ -447,6 +451,7 @@ cutholoids_hatchling = {
 	prerequisites = { "tech_improved_incubators" }
 	uses_name_prefix = no
 	is_space_station = no
+	can_have_federation_design = yes
 	is_space_fauna_ship = yes
 	space_fauna_values = {
 		age_threshold = { max = 30 }
@@ -527,6 +532,7 @@ cutholoids_juvenile = {
 	prerequisites = { "tech_metabolic_gases" }
 	uses_name_prefix = no
 	is_space_station = no
+	can_have_federation_design = yes
 	is_space_fauna_ship = yes
 	space_fauna_values = {
 		age_threshold = { min = 30 max = 80 }
@@ -607,6 +613,7 @@ cutholoids = {
 	prerequisites = { "tech_metabolic_gases" }
 	uses_name_prefix = no
 	is_space_station = no
+	can_have_federation_design = yes
 	is_space_fauna_ship = yes
 	space_fauna_values = {
 		age_threshold = { min = 80 }

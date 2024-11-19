@@ -53,6 +53,7 @@ crystal_ship_small_blue = {
 	construction_type = { starbase_hatchery starbase_beastport }
 	base_buildtime = @corvette_build_time
 	uses_name_prefix = no
+	can_have_federation_design = yes
 	is_space_fauna_ship = yes
 	space_fauna_values = {
 		age_threshold = { max = 40 }
@@ -121,6 +122,7 @@ crystal_ship_medium_blue = {
 	base_buildtime = @destroyer_build_time
 	prerequisites = { "tech_improved_incubators" }
 	uses_name_prefix = no
+	can_have_federation_design = yes
 	is_space_fauna_ship = yes
 	space_fauna_values = {
 		age_threshold = { min = 40 max = 80 }
@@ -189,6 +191,7 @@ crystal_ship_large_blue = {
 	base_buildtime = @cruiser_build_time
 	prerequisites = { "tech_metabolic_gases" }
 	uses_name_prefix = no
+	can_have_federation_design = yes
 	is_space_fauna_ship = yes
 	space_fauna_values = {
 		age_threshold = { min = 80 }

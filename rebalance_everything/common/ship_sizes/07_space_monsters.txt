@@ -91,6 +91,7 @@ space_amoeba = {
 	base_buildtime = @corvette_build_time
 	uses_name_prefix = no
 	pre_communications_name = "NO_COMMUNICATIONS_AMOEBA"
+	can_have_federation_design = yes
 	is_space_fauna_ship = yes
 	space_fauna_values = {
 		age_threshold = { max = 30 }
@@ -171,6 +172,7 @@ space_amoeba_mother = {
 	prerequisites = { "tech_metabolic_gases" }
 	uses_name_prefix = no
 	pre_communications_name = "NO_COMMUNICATIONS_AMOEBA"
+	can_have_federation_design = yes
 	is_space_fauna_ship = yes
 	space_fauna_values = {
 		age_threshold = { min = 30 }
@@ -252,6 +254,7 @@ space_whale_1 = {
 	base_buildtime = @cruiser_build_time
 	prerequisites = { "tech_metabolic_gases" }
 	uses_name_prefix = no
+	can_have_federation_design = yes
 	is_space_fauna_ship = yes
 	space_fauna_values = {
 		age_threshold = { min = 30 max = 80 }
@@ -333,6 +336,7 @@ space_whale_2 = {
 	base_buildtime = @cruiser_build_time
 	prerequisites = { "tech_metabolic_gases" }
 	uses_name_prefix = no
+	can_have_federation_design = yes
 	is_space_fauna_ship = yes
 	space_fauna_values = {
 		age_threshold = { min = 30 max = 80 }
@@ -414,6 +418,7 @@ space_whale_3 = {
 	construction_type = { starbase_hatchery starbase_beastport }
 	base_buildtime = @corvette_build_time
 	uses_name_prefix = no
+	can_have_federation_design = yes
 	is_space_fauna_ship = yes
 	space_fauna_values = {
 		age_threshold = { max = 15 }
@@ -493,6 +498,7 @@ space_whale_4 = {
 	base_buildtime = @destroyer_build_time
 	prerequisites = { "tech_improved_incubators" }
 	uses_name_prefix = no
+	can_have_federation_design = yes
 	is_space_fauna_ship = yes
 	space_fauna_values = {
 		age_threshold = { min = 15 max = 30 }
@@ -571,6 +577,7 @@ space_whale_5 = {
 	base_buildtime = @battleship_build_time
 	prerequisites = { "tech_metabolic_gases" }
 	uses_name_prefix = no
+	can_have_federation_design = yes
 	is_space_fauna_ship = yes
 	space_fauna_values = {
 		age_threshold = { min = 80 }

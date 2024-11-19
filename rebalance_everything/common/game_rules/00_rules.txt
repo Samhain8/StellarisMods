@@ -3785,7 +3785,7 @@ can_voidworms_bombard_country = {
 		is_fallen_empire = yes
 		is_country_type = awakened_marauders
 	}
-	# During crisis, they should bombard no matter what, otherwise check max voidworms
+	# During crisis, they should bombard no matter what, otherwise check tech and max voidworms
 	if = {
 		limit = {
 			event_target:voidworms_country = {
@@ -3795,6 +3795,7 @@ can_voidworms_bombard_country = {
 		always = yes
 	}
 	else = {
+		NOT = { has_technology = tech_voidworm_immunity }
 		event_target:voidworms_country = {
 			check_variable_arithmetic = {
 				which = value:voidworm_ships_owned
