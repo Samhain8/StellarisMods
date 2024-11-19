@@ -1600,7 +1600,7 @@
  collided_planet_desc: "Two planets crashed into one, and rather than destroying each other, they have become entangled. While boasting increased usable surface area, the world poses unique habitation and building challenges."
  wooden_planet: "Arboreal World"
  wooden_planet_desc: "Over thousands of years, this planet's crust has become a dense layer of roots several kilometers thick, making it one titanic living organism."
- wooden_planet_tt: "Housing costs £food£ to build and upkeep.\nFarms cost £food£ to build."
+ wooden_planet_tt: "Housing costs $w_food$ to build and upkeep.\nFarms cost $w_food$ to build."
 
 #Planet Job Modifiers
  mod_planet_miners_rare_crystals_produces_mult: "£rare_crystals£ $rare_crystals$ from £job_miner£ [GetMinerPlural]"
@@ -1865,7 +1865,7 @@
 
 # Melting Glaciers
  cstorms.1755.name: "Melting Glaciers"
- cstorms.1755.desc.common: "The recent [this.GetAffectedStormType] has had an unexpected impact on the climate of [this.GetName]."
+ cstorms.1755.desc.common: "The recent §Y[this.GetAffectedStormType]§! has had an unexpected impact on the climate of [this.GetName]."
  cstorms.1755.desc.electric: "The increased electrical charge in the atmosphere has led to a drastic temperature shift in the polar region, $cstorms.1755.desc.common_2$"
  cstorms.1755.desc.particle: "The corrosive effect of the storm's particles has heavily impacted the polar regions, $cstorms.1755.desc.common_2$"
  cstorms.1755.desc.gravity: "The gravitational shifts brought on by the storm have shattered multiple layers of subaquatic ice, $cstorms.1755.desc.common_2$"

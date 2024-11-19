@@ -1141,6 +1141,14 @@ sorbital_ring = { # generic
 				base = 0.0 # Generally better to use normal starbases for this
 			}
 
+			orbital_ring_hatchery = {
+				base = 0.0 # Generally better to use normal starbases for this
+			}
+
+			orbital_ring_beastport = {
+				base = 0.0 # Generally better to use normal starbases for this
+			}
+
 			orbital_ring_anchorage = {
 				base = 0.0 # Generally better to use normal starbases for this
 			}
@@ -1337,6 +1345,18 @@ sorbital_shipyard = {
 			}
 		}
 	}
+}
+
+# Orbital Hatchery
+inline_script = {
+	script = grand_archive/ship_building_starbase_type
+	TYPE = orbital_ring_hatchery
+}
+
+# Orbital Beastport
+inline_script = {
+	script = grand_archive/ship_building_starbase_type
+	TYPE = orbital_ring_beastport
 }
 
 # Anchorage
@@ -1713,6 +1733,14 @@ sorbital_seeder = {
 			}
 
 			orbital_ring_shipyard = {
+				base = 0.0 # Generally better to use normal starbases for this
+			}
+
+			orbital_ring_hatchery = {
+				base = 0.0 # Generally better to use normal starbases for this
+			}
+
+			orbital_ring_beastport = {
 				base = 0.0 # Generally better to use normal starbases for this
 			}
 

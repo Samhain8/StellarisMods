@@ -1,24 +1,28 @@
 s$TYPE$ = {
 	potential = {
-		has_starbase_size > starbase_outpost
-
-		NAND = {
-			owner = {
-				is_ai = yes
-				should_ai_focus_on_trade = yes
-			}
-
-			solar_system = {
-				is_same_value = sector.sector_capital.solar_system
-			}
-		}
-
 		has_starbase_module = $TYPE$
+		OR = {
+			is_orbital_ring = yes
+			AND = {
+				has_starbase_size > starbase_outpost
 
-		owner = {
-			OR = {
-				is_ai = no
-				uses_fauna_ship_sizes = yes
+				NAND = {
+					owner = {
+						is_ai = yes
+						should_ai_focus_on_trade = yes
+					}
+
+					solar_system = {
+						is_same_value = sector.sector_capital.solar_system
+					}
+				}
+
+				owner = {
+					OR = {
+						is_ai = no
+						uses_fauna_ship_sizes = yes
+					}
+				}
 			}
 		}
 	}
