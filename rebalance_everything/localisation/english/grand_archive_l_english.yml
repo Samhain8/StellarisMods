@@ -840,7 +840,7 @@
  tech_voidworm_immunity: "Voidworm Immunity"
  tech_voidworm_immunity_desc: "We can develop a cure for Voidworm parasitic infection. All of our colonies would be rendered immune to their current strain of spore bombardment."
  tech_voidworm_immunity_effect: "Colonies are immune to Voidworm bombardment.\n$mod_damage_vs_country_type_voidworms_mult$: §G+$@vaccine_damage_vs_country_type_voidworms_mult|0%$§!"
- tech_voidworm_immunity_effect_during_situation: "$tech_voidworm_immunity_effect$\nAdvances the §Y$situation_voidworm_plague$§! Situation by §G+$@vaccine_situation_advancement|0$§!"
+ tech_voidworm_immunity_effect_during_situation: "§RBombardment immunity is ineffective during the Voidworm Plague.§!\n$mod_damage_vs_country_type_voidworms_mult$: §G+$@vaccine_damage_vs_country_type_voidworms_mult|0%$§!\nAdvances the §Y$situation_voidworm_plague$§! Situation by §G+$@vaccine_situation_advancement|0$§!"
 
  voidworm_nest: "Voidworm Nest"
  voidworm_nest_plural: "Voidworm Nests"
@@ -1307,6 +1307,11 @@
  sm_hatchery_plural: "Hatcheries"
  sm_hatchery_desc: "Hatcheries incubate §YSpace Fauna§! ['concept_dna', $genetic_material_w_icon$] we have collected and produce viable new specimens under our control. We can produce more powerful creatures by collecting more advanced genetic samples with our ['technology:tech_gravity_wells', £physics£$tech_gravity_wells$]."
  shatchery: "$sm_hatchery$"
+
+ sm_orbital_ring_hatchery: "Orbital Hatchery"
+ sm_orbital_ring_hatchery_desc: "$sm_hatchery_desc$"
+ sorbital_ring_hatchery: "$sm_orbital_ring_hatchery$"
+
  STARBASE_HATCHERY_TAB: "$sm_hatchery$"
  STARBASE_HATCHERY_CAPACITY: "Hatcheries: $COUNT|Y$"
  STARBASE_HATCHERY_CAPACITY_DESC: "The amount of Hatcheries controls how many creatures the Starbase can clone in parallel."
@@ -1322,6 +1327,11 @@
  sm_beastport_plural: "Beastports"
  sm_beastport_desc: "Beastports are specially modified Hatcheries that can both clone Space Fauna and construct basic Civilian Ships."
  sbeastport: "$sm_beastport$"
+
+ sm_orbital_ring_beastport: "Orbital Beastport"
+ sm_orbital_ring_beastport_desc: "$sm_beastport_desc$"
+ sorbital_ring_beastport: "$sm_orbital_ring_beastport$"
+
  STARBASE_BEASTPORT_TAB: "$sm_beastport$"
  STARBASE_BEASTPORT_CAPACITY: "Beastports: $COUNT|Y$"
  STARBASE_BEASTPORT_CAPACITY_DESC: "The amount of Beastports controls how many Space Fauna and civilian ships the Starbase can clone in parallel."
@@ -1333,6 +1343,9 @@
 
  sm_vivarium_tank: "Vivarium Tank"
  sm_vivarium_tank_desc: "External tanks partially exposed to space that can safely house captured §YSpace Fauna§!."
+
+ sm_orbital_ring_vivarium_tank: "Orbital Vivarium Tank"
+ sm_orbital_ring_vivarium_tank_desc: "$sm_vivarium_tank_desc$"
 
 ####################
 # Artifact Actions #
@@ -2105,7 +2118,7 @@
  grand_archive.8025.name: "$NAME_CaptainHoo$ of the $NAME_BlackNeedle$"
  grand_archive.8025.desc: "§HDistinguished and haughty, this outlaw captain feigns disinterest. He looks down his beak when speaking and refuses to meet our gaze, as if we are unworthy of his full attention. He gesticulates with his feathers in an inadvertently comical manner.§!\n\nYou have crossed the path of the §Y$NAME_BlackNeedle$§!, a blunder on your part!\n\nWe caught wind of a rumor that your burgeoning little society would be exploring this system. You have stumbled upon a chart that clearly belongs to us. Hand it over, lest things become violent."
  grand_archive.8025.a: "Who are you?"
- grand_archive.8025.a.reply: "Hoo I am! My name is Glimarhoo Zelmendrion, but you may refer to me as §Y$NAME_CaptainHoo$§!, Second Mate Lieutenant of the illustrious §Y$NAME_BlackNeedle$§! pirates. We have had our feathers in every variety of illicit dealings for thousands of years, and I am but one thread in the majestic tapestry of our legacy.\n\nYou would do well to remember my name, as I expect a significant bounty after presenting this chart to our peerless leader."
+ grand_archive.8025.a.reply: "Hoo I am! My name is Glimarhoo Zelmendrion, but you may refer to me as §Y$NAME_CaptainHoo$§!, Captain of the Silverwing and Second Mate Lieutenant of the illustrious §Y$NAME_BlackNeedle$§! pirates. We have had our feathers in every variety of illicit dealings for thousands of years, and I am but one thread in the majestic tapestry of our legacy.\n\nYou would do well to remember my name, as I expect a significant bounty after presenting this chart to our peerless leader."
  grand_archive.8025.b: "What do you know of the chart?"
  grand_archive.8025.b.reply: "A talented, and very expensive, information broker informed us that you recently stumbled upon a peculiar capsule... A capsule that is supposed to contain directions to a hidden system of great interest to us.\n\nWe ourselves have also claimed a piece of the chart, but it is useless without the data from your capsule. I cannot fathom why §Y$NAME_CaptainNess$§! would give you the key to her legacy, but it falls to us to relieve you of it."
  grand_archive.8025.c: "Why do you want this chart so badly?"

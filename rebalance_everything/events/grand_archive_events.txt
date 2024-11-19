@@ -1715,8 +1715,10 @@ country_event = {
 			every_owned_fleet = {
 				limit = {
 					has_fleet_flag = is_actively_bombarding
+					exists = orbit
 					orbit = {
-						planet_owner = {
+						exists = planet.owner
+						planet.owner = {
 							has_technology = tech_voidworm_immunity
 						}
 					}
@@ -5097,6 +5099,7 @@ country_event = {
 	trigger = {
 		is_galactic_curators_empire = yes
 		days_passed > 0
+		is_last_acquired_specimen_from_trade = no
 	}
 
 	immediate = {
@@ -5883,12 +5886,10 @@ country_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		has_country_flag = grand_archive_destroyed
 		has_any_dna = yes
 	}
 
 	immediate = {
-		remove_country_flag = grand_archive_destroyed
 		set_variable = {
 			which = repopulate_cost
 			value = value:vivarium_repopulation_cost
@@ -6666,6 +6667,44 @@ country_event = {
 	}
 
 	immediate = {
+		# Space Amoebas Pacification
+		add_modifier = { modifier = pacified_amoebas }
+		event_target:amoeba_country = {
+			set_faction_hostility = {
+				set_hostile = no
+				set_neutral = yes
+				target = prev
+			}
+		}
+		if = {
+			limit = { exists = event_target:amoeba_garrison_country }
+			event_target:amoeba_garrison_country = {
+				set_faction_hostility = {
+					set_hostile = no
+					set_neutral = yes
+					target = prev
+				}
+			}
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_tech_option = tech_amoeba_strike_craft_1
+					has_technology = tech_amoeba_strike_craft_1
+				}
+			}
+			add_research_option = tech_amoeba_strike_craft_1
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_tech_option = tech_regenerative_hull_tissue
+					has_technology = tech_regenerative_hull_tissue
+				}
+			}
+			add_research_option = tech_regenerative_hull_tissue
+		}
+
 		give_technology = { tech = tech_gravity_wells message = no }
 		give_technology = { tech = tech_alien_cloning message = no }
 		give_technology = { tech = tech_thrusters_bio_integration message = no }
