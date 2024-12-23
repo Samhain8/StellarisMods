@@ -78,6 +78,7 @@ crystal_ship_small_blue = {
 		cost = {
 			minerals = 300
 			rare_crystals = 15
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -147,6 +148,7 @@ crystal_ship_medium_blue = {
 		cost = {
 			minerals = 500
 			rare_crystals = 25
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -219,6 +221,7 @@ crystal_ship_large_blue = {
 		cost = {
 			minerals = 700
 			rare_crystals = 35
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -280,6 +283,7 @@ crystal_ship_small_green = {
 		cost = {
 			minerals = 300
 			rare_crystals = 15
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -337,6 +341,7 @@ crystal_ship_medium_green = {
 		cost = {
 			minerals = 500
 			rare_crystals = 25
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -397,6 +402,7 @@ crystal_ship_large_green = {
 		cost = {
 			minerals = 700
 			rare_crystals = 35
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -453,6 +459,7 @@ crystal_ship_small_yellow = {
 		cost = {
 			minerals = 300
 			rare_crystals = 15
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -510,6 +517,7 @@ crystal_ship_medium_yellow = {
 		cost = {
 			minerals = 500
 			rare_crystals = 25
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -570,6 +578,7 @@ crystal_ship_large_yellow = {
 		cost = {
 			minerals = 700
 			rare_crystals = 35
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -626,6 +635,7 @@ crystal_ship_small_red = {
 		cost = {
 			minerals = 300
 			rare_crystals = 15
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -683,6 +693,7 @@ crystal_ship_medium_red = {
 		cost = {
 			minerals = 500
 			rare_crystals = 25
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -743,6 +754,7 @@ crystal_ship_large_red = {
 		cost = {
 			minerals = 700
 			rare_crystals = 35
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -799,6 +811,7 @@ crystal_ship_small_blue_elite = {
 		cost = {
 			minerals = 300
 			rare_crystals = 15
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -856,6 +869,7 @@ crystal_ship_medium_blue_elite = {
 		cost = {
 			minerals = 500
 			rare_crystals = 25
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -916,6 +930,7 @@ crystal_ship_large_blue_elite = {
 		cost = {
 			minerals = 700
 			rare_crystals = 35
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -972,6 +987,7 @@ crystal_ship_small_green_elite = {
 		cost = {
 			minerals = 300
 			rare_crystals = 15
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -1029,6 +1045,7 @@ crystal_ship_medium_green_elite = {
 		cost = {
 			minerals = 500
 			rare_crystals = 25
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -1089,6 +1106,7 @@ crystal_ship_large_green_elite = {
 		cost = {
 			minerals = 700
 			rare_crystals = 35
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -1145,6 +1163,7 @@ crystal_ship_small_yellow_elite = {
 		cost = {
 			minerals = 300
 			rare_crystals = 15
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -1202,6 +1221,7 @@ crystal_ship_medium_yellow_elite = {
 		cost = {
 			minerals = 500
 			rare_crystals = 25
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -1262,6 +1282,7 @@ crystal_ship_large_yellow_elite = {
 		cost = {
 			minerals = 700
 			rare_crystals = 35
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -1318,6 +1339,7 @@ crystal_ship_small_red_elite = {
 		cost = {
 			minerals = 300
 			rare_crystals = 15
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -1375,6 +1397,7 @@ crystal_ship_medium_red_elite = {
 		cost = {
 			minerals = 500
 			rare_crystals = 25
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -1435,6 +1458,7 @@ crystal_ship_large_red_elite = {
 		cost = {
 			minerals = 700
 			rare_crystals = 35
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -1479,6 +1503,7 @@ crystal_station_large = {
 		cost = {
 			minerals = @salvagecostlarge
 			rare_crystals = @salvagecostlargerare
+			mult = @fauna_cost_scaling
 		}
 	}
 }

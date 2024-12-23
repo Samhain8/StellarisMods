@@ -116,6 +116,7 @@ space_amoeba = {
 		category = ships
 		cost = {
 			food = 500
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -200,6 +201,7 @@ space_amoeba_mother = {
 		category = ships
 		cost = {
 			food = 1900
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -282,6 +284,7 @@ space_whale_1 = {
 		category = ships
 		cost = {
 			food = 1700
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -364,6 +367,7 @@ space_whale_2 = {
 		category = ships
 		cost = {
 			food = 1700
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -443,6 +447,7 @@ space_whale_3 = {
 		category = ships
 		cost = {
 			food = 550
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -523,6 +528,7 @@ space_whale_4 = {
 		category = ships
 		cost = {
 			food = 1100
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"
@@ -605,6 +611,7 @@ space_whale_5 = {
 		category = ships
 		cost = {
 			food = 3300
+			mult = @fauna_cost_scaling
 		}
 		inline_script = {
 			script = "grand_archive/space_fauna_upkeep"

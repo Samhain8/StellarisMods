@@ -620,7 +620,7 @@
 
 # Beastmasters
  concept_beastport: "$sm_beastport$"
- concept_beastport_desc: "- Replaces §Y$sm_hatchery$§! Starbase Building\n- Can build Civilian Ships along with cloning Space Fauna using ['concept_dna']."
+ concept_beastport_desc: "- Replaces ['concept_hatchery'] Starbase Building\n- Can build Civilian Ships along with cloning Space Fauna using $c_dna$."
 
  concept_xeno_geology_holomuseum: "$xeno_geology_holomuseum$"
  concept_xeno_geology_holomuseum_desc: "$xeno_geology_holomuseum_desc$"
