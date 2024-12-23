@@ -3862,3 +3862,62 @@ force_create_default_ship_design = {
 is_seeded = {
 	has_fleet_flag = fruitful_seeded_critter
 }
+
+# this = destroyed ship
+# from = attacker (ship)
+can_capture_ship = {
+	exists = this
+	exists = from
+	exists = controller
+	controller = {
+		is_country_type = default
+	}
+	OR = {
+		# Civilian Ships
+		is_ship_size = constructor
+		is_ship_size = science
+		# Regular Ships
+		is_ship_size = corvette
+		is_ship_size = frigate
+		is_ship_size = destroyer
+		is_ship_size = cruiser
+		is_ship_size = battleship
+		# Galactic Nemesis Ships
+		is_ship_size = crisis_corvette
+		is_ship_size = crisis_destroyer
+		is_ship_size = crisis_cruiser
+		# Offspring Ships
+		AND = {
+			controller = {
+				has_origin = origin_progenitor_hive
+			}
+			OR = {
+				is_ship_size = offspring_corvette
+				is_ship_size = offspring_destroyer
+				is_ship_size = offspring_cruiser
+				is_ship_size = offspring_battleship
+			}
+		}
+		# Cosmogenesis Ships
+		is_ship_size = cosmo_crisis_destroyer
+		is_ship_size = cosmo_crisis_battlecruiser
+		# Nanotech Ships
+		AND = {
+			controller = {
+				has_tradition = tr_nanotech_finish
+			}
+			OR = {
+				is_ship_size = nanite_swarmer
+				is_ship_size = nanite_interdictor
+			}
+		}
+		# Fallen Empire Ships
+		is_ship_size = large_ship_fallen_empire
+		is_ship_size = small_ship_fallen_empire
+		# Marauder Ships
+		is_ship_size = marauder_corvette
+		is_ship_size = marauder_destroyer
+		is_ship_size = marauder_cruiser
+		is_ship_size = marauder_galleon
+	}
+}

@@ -4736,10 +4736,9 @@ ship_event = {
 	}
 }
 
-# This = owner of fleet 1 (combatant)
-# From = owner of fleet 2 (destroyed)
-# FromFrom = fleet 1
-# FromFromFrom = fleet 2
+# This = Country triggering event
+# From = owner of voidworms fleet
+# FromFromFrom = voidworms fleet
 country_event = {
 	id = grand_archive.8305
 	hide_window = yes

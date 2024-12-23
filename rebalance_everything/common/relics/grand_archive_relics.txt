@@ -465,6 +465,13 @@ r_propagandosphere = {
 	portrait = "GFX_propagandosphere"
 	sound = "relic_activation_propagandosphere"
 
+	resources = {
+		category = relics
+		cost = {
+			energy = 5000
+		}
+	}
+
 	ai_weight = {
 		weight = 100
 	}
