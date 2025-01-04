@@ -684,7 +684,7 @@
  ### Scavengers
  civic_scavengers:0 "Scavengers"
  civic_scavengers_desc:0 "In this society, nothing goes to waste, even in the grimmest times of war: no enemy technology will go undiscovered, as teams of scrappers accompanying the war fleets scrape wreckages of anything and everything worth salvaging."
- civic_scavengers_effects:0 "Researching §YDebris§! will grant both §YResearch§! and a portion of other §YResource Costs§! of the destroyed fleet.\n§YShips§! can be salvaged from some §YDebris§!."
+ civic_scavengers_effects:0 "Researching §YDebris§! will grant both §YResearch§! and a portion of other §YResource Costs§! of the destroyed fleet.\n§YShips§! can be salvaged from some §YDebris§!. £job_researcher£ $job_archaeoengineers_plural$ produce an additional 0.25 minor artifacts."
  civic_corporate_scavengers:1 "Refurbishment Division"
  civic_corporate_scavengers_desc:0 "$civic_scavengers_desc$"
 

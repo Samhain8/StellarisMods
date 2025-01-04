@@ -2188,6 +2188,10 @@ origin_treasure_hunters = {
 		}
 	}
 
+	has_secondary_species = {
+		title = civic_syncretic_evolution_secondary_species
+	}
+
 	random_weight = {
 		base = 1
 	}

@@ -2028,9 +2028,10 @@ civic_corporate_galactic_curators = {
 
 	modifier = {
 		planet_jobs_unity_produces_mult = @galactic_curators_civic_unity_jobs_production_mult
-		country_specimen_selling_cost_mult = 1.0
-		country_exhibit_unlocking_cost_mult = -0.50
 		ship_anomaly_generation_chance_mult = @galactic_curators_civic_anomaly_discovery_mult
+		#country_specimen_selling_cost_mult = 1.0
+		#country_exhibit_unlocking_cost_mult = -0.50
+		specimens_produces_mult = @galactic_curators_civic_specimens_produces_mult
 	}
 }
 

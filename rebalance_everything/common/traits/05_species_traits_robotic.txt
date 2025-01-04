@@ -755,9 +755,8 @@ trait_robot_integrated_weaponry = {
 	}
 	randomized = no
 	modifier = {
-		army_damage_mult = 1.0
+		army_damage_mult = 0.8
 	}
-	custom_tooltip = INTEGRATED_WEAPONRY_TT
 
 	slave_cost = {
 		energy = 1000
