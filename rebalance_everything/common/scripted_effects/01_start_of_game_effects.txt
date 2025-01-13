@@ -1381,6 +1381,8 @@ generate_start_buildings_and_districts = {
 						has_origin = origin_legendary_leader
 						has_origin = origin_toxic_knights
 						has_origin = origin_here_be_dragons
+						has_origin = origin_primal_calling
+						has_origin = origin_treasure_hunters
 					}
 				}
 			}
@@ -3007,6 +3009,8 @@ generate_start_pops = {
 					has_origin = origin_legendary_leader
 					has_origin = origin_toxic_knights
 					has_origin = origin_here_be_dragons
+					has_origin = origin_primal_calling
+					has_origin = origin_treasure_hunters
 				}
 			}
 		}
@@ -3039,6 +3043,8 @@ generate_start_pops = {
 						has_origin = origin_legendary_leader
 						has_origin = origin_toxic_knights
 						has_origin = origin_here_be_dragons
+						has_origin = origin_primal_calling
+						has_origin = origin_treasure_hunters
 					}
 				}
 			}
