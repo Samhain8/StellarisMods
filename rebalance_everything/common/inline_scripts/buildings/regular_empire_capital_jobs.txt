@@ -557,3 +557,22 @@ triggered_desc = {
 	}
 	text = job_page_effect_desc
 }
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { has_valid_civic = civic_environmentalist }
+	}
+	modifier = {
+		job_ranger_add = 2
+		job_ranger_per_pop = 0.05
+	}
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { has_valid_civic = civic_environmentalist }
+	}
+	text = job_ranger_effect_desc
+}

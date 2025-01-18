@@ -95,6 +95,17 @@ building_colony_shelter = {
 		job_colonist_add = -1
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 2
+			job_colonist_add = -2
+		}
+	}
+
 	resources = {
 		category = planet_buildings
 		upkeep = {

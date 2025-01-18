@@ -776,6 +776,13 @@ vivarium_tank = {
 	country_modifier = {
 		country_vivarium_max_capacity_add = 10
 	}
+	triggered_country_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_tradition = tr_domestication_finish }
+		}
+		country_naval_cap_add = 4
+	}
 
 	orbit_modifier = {
 		space_fauna_growth_rate_mult = 0.1

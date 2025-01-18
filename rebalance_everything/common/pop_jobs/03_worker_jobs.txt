@@ -1525,12 +1525,12 @@ ranger = {
 	resources = {
 		category = planet_rangers
 		produces = {
-			unity = 1
+			unity = 2
 		}
 	}
 
 	planet_modifier = {
-		pop_environment_tolerance = 0.02
+		pop_environment_tolerance = 0.03
 	}
 
 	triggered_planet_modifier = {
@@ -1542,7 +1542,7 @@ ranger = {
 	}
 
 	weight = {
-		weight = @worker_job_weight
+		weight = @high_prio_specialist_job_weight
 		mult = value:job_weights_modifier|JOB|culture_worker|RESOURCE|unity|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {

@@ -1357,7 +1357,7 @@
  job_ranger:0 "Ranger"
  job_ranger_plural:0 "Rangers"
  job_ranger_desc:0 "Special individuals tasked with ensuring that our planets remain clean and natural."
- job_ranger_effect_desc:1 "£job_ranger£ $job_ranger_plural$ produce £amenities£ §YAmenities§! and £society_research£ §Y$society_research$§!. They also produce $r_energy$, $r_food$ and $r_minerals$ depending on the £blocker£ Natural Blockers present."
+ job_ranger_effect_desc:1 "£job_ranger£ $job_ranger_plural$ increase habitability, produce £amenities£ §YAmenities§! and £unity£ §Y$unity$§!. They also produce other resources depending on the £blocker£ Natural Blockers present."
  mod_job_ranger_add:0 "$job_ranger$ Jobs"
  mod_job_ranger_per_pop:0 "§G+1§! $job_ranger$ Job per $VALUE$ Pops"
  mod_job_ranger_per_pop_short:0 "\n§G+1§! £mod_job_ranger_add£ per $VALUE$ £pop£"

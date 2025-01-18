@@ -35,12 +35,12 @@ tr_adaptability_finish = {
 tr_adaptability_recycling = {
 	custom_tooltip = tr_adaptability_recycling_desc
 	modifier = {
-		planet_structures_volatile_motes_upkeep_mult = -0.15
-		planet_structures_exotic_gases_upkeep_mult = -0.15
-		planet_structures_rare_crystals_upkeep_mult = -0.15
-		planet_structures_volatile_motes_cost_mult = -0.15
-		planet_structures_exotic_gases_cost_mult = -0.15
-		planet_structures_rare_crystals_cost_mult = -0.15
+		planet_structures_volatile_motes_upkeep_mult = -0.2
+		planet_structures_exotic_gases_upkeep_mult = -0.2
+		planet_structures_rare_crystals_upkeep_mult = -0.2
+		planet_structures_volatile_motes_cost_mult = -0.2
+		planet_structures_exotic_gases_cost_mult = -0.2
+		planet_structures_rare_crystals_cost_mult = -0.2
 	}
 
 	ai_weight = {
@@ -61,6 +61,20 @@ tr_adaptability_survival_fittest = {
 	}
 	ai_weight = {
 		factor = 5000
+	}
+
+	tradition_swap = {
+		inherit_icon = yes
+		inherit_name = yes
+		trigger = {
+			has_valid_civic = civic_natural_design
+		}
+		custom_tooltip_with_modifiers = tr_adaptability_survival_fittest_desc
+		modifier = {
+			planet_orbital_bombardment_damage = -0.25
+			pop_growth_speed = 0.05
+			#army_defense_damage_mult = 0.25
+		}
 	}
 
 	tradition_swap = {

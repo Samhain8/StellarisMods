@@ -13,10 +13,10 @@
 @med_rare = 1
 @low_rare = 0.5
 
-@ranger_small_production = 1
-@ranger_large_production = 2
-@ranger_small_research_production = 1.5
-@ranger_large_research_production = 3
+@ranger_small_production = 2
+@ranger_large_production = 4
+@ranger_small_research_production = 3
+@ranger_large_research_production = 6
 
 d_metal_boneyard = {
 	is_for_colonizable = yes
@@ -50,16 +50,6 @@ d_migrating_forests = {
 		district_mining_max = -2
 		district_farming_max = -2
 		district_generator_max = -2
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_valid_civic = civic_environmentalist }
-		}
-		modifier = {
-			job_ranger_add = 2
-		}
 	}
 
 	triggered_planet_modifier = {
@@ -122,19 +112,10 @@ d_migrating_forest_reserve = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_valid_civic = civic_environmentalist }
-		}
-		modifier = {
-			job_ranger_add = 2
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
 			owner = { has_civic = civic_environmentalist }
 		}
-		planet_rangers_food_produces_add = @ranger_large_production
+		planet_rangers_society_research_produces_add = @ranger_small_research_production
+		planet_rangers_food_produces_add = @ranger_small_production
 	}
 
 	drop_weight = {
@@ -1649,16 +1630,6 @@ d_house_turtle = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_valid_civic = civic_environmentalist }
-		}
-		modifier = {
-			job_ranger_add = 1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
 			owner = { has_civic = civic_environmentalist }
 		}
 		planet_rangers_society_research_produces_add = @ranger_small_research_production
@@ -1794,16 +1765,6 @@ d_fungal_study_zone = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { has_valid_civic = civic_environmentalist }
-		}
-		modifier = {
-			job_ranger_add = 1
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
 			owner = { has_civic = civic_environmentalist }
 		}
 		planet_rangers_society_research_produces_add = @ranger_small_research_production
@@ -1845,16 +1806,6 @@ d_living_snow_reserve = {
 		planet_jobs_physics_research_produces_mult = 0.2
 		planet_jobs_society_research_produces_mult = 0.2
 		planet_max_districts_add = -2
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_valid_civic = civic_environmentalist }
-		}
-		modifier = {
-			job_ranger_add = 2
-		}
 	}
 
 	triggered_planet_modifier = {

@@ -465,11 +465,11 @@
  GET_UNIQUE_EDICT: "Gain access to a unique §YEdict§!"
 
  primal_calling_exhibit_modifier: "Voidborne Livestock"
- primal_calling_exhibit_modifier_tt: "- $MOD_TRADE_VALUE_MULT$: §G+$@primal_calling_exhibit_trade_value|1%$§! per occupied Vivarium Capacity\n- $mod_specimens_produces_mult$: §G+$@primal_calling_exhibit_specimen|1%$§! per occupied Vivarium Capacity"
+ primal_calling_exhibit_modifier_tt: "- $MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED$: §G+$@primal_calling_exploit_research_mult|1%$§! per occupied Vivarium Capacity\n- $mod_specimens_produces_mult$: §G+$@primal_calling_exhibit_specimen|1%$§! per occupied Vivarium Capacity"
  primal_calling_exhibit_bonus_tt: "[GetWranglerContext]\n- $GET_UNIQUE_EDICT$, ['edict:space_fauna_exhibition']"
 
  primal_calling_exploit_modifier: "Galactic Livestock"
- primal_calling_exploit_modifier_tt: "- $MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED$: §G+$@primal_calling_exploit_research_mult|1%$§! per occupied Vivarium Capacity\n- $mod_planet_primal_jobs_produces_mult$: §G+$@primal_calling_exploit_wrangler_mult|1%$§! per occupied Vivarium Capacity"
+ primal_calling_exploit_modifier_tt: "- $MOD_TRADE_VALUE_MULT$: §G+$@primal_calling_exhibit_trade_value|1%$§! per occupied Vivarium Capacity\n- $mod_planet_primal_jobs_produces_mult$: §G+$@primal_calling_exploit_wrangler_mult|1%$§! per occupied Vivarium Capacity"
  primal_calling_exploit_bonus_tt: "[GetRancherContext]\n- $GET_UNIQUE_EDICT$, ['edict:beasts_burden']"
 
  animal_handler_common_effect_desc: "- Space Fauna Ships generate §G+$@primal_calling_animal_handler_diplo_weight_mult|0%$§! more £diplo_weight£ Diplomatic Weight\n- §G$@primal_calling_animal_handler_opinion_bonus|0$§! opinion with other non-Homicidal, non-Xenophobe and non-Fallen Empires per occupied Vivarium Capacity."
