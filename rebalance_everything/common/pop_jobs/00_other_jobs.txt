@@ -289,6 +289,15 @@ livestock = {
 		}
 		produces = {
 			trigger = {
+				is_organic_species = yes
+				is_lithoid = no
+				exists = owner
+				owner = { has_tradition = tr_domestication_bio_repurposing }
+			}
+			food = 1
+		}
+		produces = {
+			trigger = {
 				is_lithoid = yes
 			}
 			minerals = 2
@@ -309,9 +318,24 @@ livestock = {
 		}
 		produces = {
 			trigger = {
+				is_lithoid = yes
+				exists = owner
+				owner = { has_tradition = tr_domestication_bio_repurposing }
+			}
+			minerals = 1
+		}
+		produces = {
+			trigger = {
 				has_trait = trait_kindling
 			}
 			energy = 2
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_tradition = tr_domestication_bio_repurposing }
+			}
+			consumer_goods = 0.5
 		}
 	}
 
@@ -354,7 +378,7 @@ livestock_zoo_animal = {
 	resources = {
 		category = planet_livestock
 		produces = {
-			society_research = 4
+			unity = 2
 		}
 		#upkeep = {
 		#	trigger = {
@@ -368,6 +392,30 @@ livestock_zoo_animal = {
 		#	}
 		#	minerals = 1
 		#}
+		produces = {
+			trigger = {
+				is_organic_species = yes
+				is_lithoid = no
+				exists = owner
+				owner = { has_tradition = tr_domestication_bio_repurposing }
+			}
+			food = 1
+		}
+		produces = {
+			trigger = {
+				is_lithoid = yes
+				exists = owner
+				owner = { has_tradition = tr_domestication_bio_repurposing }
+			}
+			minerals = 1
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_tradition = tr_domestication_bio_repurposing }
+			}
+			consumer_goods = 0.5
+		}
 	}
 
 	triggered_planet_modifier = {
@@ -375,6 +423,10 @@ livestock_zoo_animal = {
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
+	triggered_planet_modifier = {
+		trade_value_add = 2
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+	}
 	triggered_planet_modifier = {
 		potential = {
 			is_pet_slave = yes
@@ -443,7 +495,7 @@ livestock_zoo_beast = {
 	resources = {
 		category = planet_livestock
 		produces = {
-			society_research = 4
+			unity = 2
 		}
 		#upkeep = {
 		#	trigger = {
@@ -457,6 +509,30 @@ livestock_zoo_beast = {
 		#	}
 		#	minerals = 1
 		#}
+		produces = {
+			trigger = {
+				is_organic_species = yes
+				is_lithoid = no
+				exists = owner
+				owner = { has_tradition = tr_domestication_bio_repurposing }
+			}
+			food = 1
+		}
+		produces = {
+			trigger = {
+				is_lithoid = yes
+				exists = owner
+				owner = { has_tradition = tr_domestication_bio_repurposing }
+			}
+			minerals = 1
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_tradition = tr_domestication_bio_repurposing }
+			}
+			consumer_goods = 0.5
+		}
 	}
 
 	triggered_planet_modifier = {
@@ -464,6 +540,11 @@ livestock_zoo_beast = {
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
+
+	triggered_planet_modifier = {
+		trade_value_add = 2
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+	}
 	triggered_planet_modifier = {
 		potential = {
 			is_pet_slave = yes

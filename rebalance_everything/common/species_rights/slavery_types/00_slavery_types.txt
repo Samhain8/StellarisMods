@@ -239,6 +239,7 @@ slavery_livestock = {
 						has_trait = trait_delicious
 						has_trait = trait_kindling
 						has_trait = trait_felsic
+						from = { has_valid_civic = civic_natural_design }
 					}
 					from = {
 						NOR = {

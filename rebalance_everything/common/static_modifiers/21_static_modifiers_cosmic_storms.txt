@@ -258,7 +258,6 @@ magnetic_storm_aftermath_modifier_severity_3 = {
 }
 
 solar_storm_aftermath_modifier_severity_1 = {
-	pop_growth_speed = -0.1
 	pop_amenities_usage_mult = 0.15
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_solar_aftermath_modifier.dds"
@@ -266,7 +265,6 @@ solar_storm_aftermath_modifier_severity_1 = {
 }
 
 solar_storm_aftermath_modifier_severity_2 = {
-	pop_growth_speed = -0.25
 	pop_amenities_usage_mult = 0.2
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_solar_aftermath_modifier.dds"
@@ -274,7 +272,6 @@ solar_storm_aftermath_modifier_severity_2 = {
 }
 
 solar_storm_aftermath_modifier_severity_3 = {
-	pop_growth_speed = -0.4
 	pop_amenities_usage_mult = 0.25
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_solar_aftermath_modifier.dds"
@@ -283,7 +280,7 @@ solar_storm_aftermath_modifier_severity_3 = {
 
 celestial_storm_aftermath_modifier_severity_1 = {
 	planet_crime_mult = 0.1
-	planet_jobs_food_produces_mult = -0.05
+	planet_jobs_food_produces_mult = -0.1
 	custom_tooltip = celestial_storm_aftermath_1_tt
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_celestial_aftermath_modifier.dds"
@@ -292,7 +289,7 @@ celestial_storm_aftermath_modifier_severity_1 = {
 
 celestial_storm_aftermath_modifier_severity_2 = {
 	planet_crime_mult = 0.2
-	planet_jobs_food_produces_mult = -0.10
+	planet_jobs_food_produces_mult = -0.15
 	custom_tooltip = celestial_storm_aftermath_2_tt
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_celestial_aftermath_modifier.dds"
@@ -302,7 +299,7 @@ celestial_storm_aftermath_modifier_severity_2 = {
 
 celestial_storm_aftermath_modifier_severity_3 = {
 	planet_crime_mult = 0.3
-	planet_jobs_food_produces_mult = -0.15
+	planet_jobs_food_produces_mult = -0.2
 	custom_tooltip = celestial_storm_aftermath_3_tt
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_celestial_aftermath_modifier.dds"

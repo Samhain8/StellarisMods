@@ -117,17 +117,24 @@ xeno_zoo_keeper = {
 	resources = {
 		category = planet_zoo_keepers
 		produces = {
-			society_research = 10
+			society_research = 8
 		}
 		produces = {
 			trigger = {
 				planet = { has_deposit = d_alien_pets_deposit }
 			}
-			society_research = 6
+			society_research = 4
 		}
 		upkeep = {
 			consumer_goods = 1
 		}
+	}
+
+	inline_script = "jobs/culture_worker_outputs"
+
+	inline_script = {
+		script = "jobs/galactic_curator_council_output"
+		CATEGORY = planet_culture_workers
 	}
 
 	triggered_country_modifier = {
@@ -138,7 +145,7 @@ xeno_zoo_keeper = {
 	}
 
 	triggered_planet_modifier = {
-		planet_amenities_add = 10
+		planet_amenities_add = 8
 	}
 
 	triggered_planet_modifier = {
@@ -147,7 +154,7 @@ xeno_zoo_keeper = {
 				has_deposit = d_alien_pets_deposit
 			}
 		}
-		planet_amenities_add = 6
+		planet_amenities_add = 4
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -904,11 +911,12 @@ entertainer = {
 			has_job = entertainer
 		}
 		modifier = {
+			factor = 10
+			is_domestic_servant = yes
+		}
+		modifier = {
 			factor = 5
-			OR = {
-				is_domestic_servant = yes
-				is_pet_slave = yes
-			}
+			is_pet_slave = yes
 		}
 		modifier = {
 			factor = 1.5

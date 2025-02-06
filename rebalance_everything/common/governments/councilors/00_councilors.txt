@@ -540,7 +540,7 @@ councilor_environmentalist = {
 	civic = civic_environmentalist
 	modifier = {
 		pop_environment_tolerance = 0.01
-		planet_rangers_unity_produces_add = 0.2
+		planet_rangers_unity_produces_add = 0.3
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights

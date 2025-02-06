@@ -3052,6 +3052,7 @@ planet_event = {
 				is_owned_by = from
 				owner = {
 					NOT = { has_country_flag = triggered_volcanic_inactivity }
+					NOT = { has_valid_civic = civic_environmentalist }
 				}
 			}
 			set_planet_flag = afflicted_by_storm_event
@@ -3075,7 +3076,13 @@ planet_event = {
 
 	option = {
 		name = FASCINATING
-		remove_deposit = d_active_volcano
+		if = {
+			limit = { 
+				has_deposit = d_active_volcano 
+				owner = { NOT = { has_valid_civic = civic_environmentalist } }
+			}
+			remove_deposit = d_active_volcano
+		}
 		owner = {
 			add_monthly_resource_mult = {
 				resource = minerals
@@ -3238,6 +3245,7 @@ planet_event = {
 				is_owned_by = from
 				owner = {
 					NOT = { has_country_flag = triggered_melting_glaciers }
+					NOT = { has_valid_civic = civic_environmentalist }
 				}
 			}
 			set_planet_flag = afflicted_by_storm_event
@@ -3291,7 +3299,10 @@ planet_event = {
 	option = {
 		name = FASCINATING
 		if = {
-			limit = { has_deposit = d_massive_glacier }
+			limit = { 
+				has_deposit = d_massive_glacier 
+				owner = { NOT = { has_valid_civic = civic_environmentalist } }
+			}
 			remove_deposit = d_massive_glacier
 		}
 		add_deposit = d_forgiving_tundra
