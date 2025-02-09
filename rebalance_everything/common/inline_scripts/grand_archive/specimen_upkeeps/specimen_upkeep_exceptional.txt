@@ -1,1 +1,1 @@
-energy = 8
+energy = 5

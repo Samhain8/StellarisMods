@@ -14,12 +14,12 @@ acidic_spores = {
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { is_lithoid = no }
-		planet_jobs_food_produces_mult = 0.02
+		planet_jobs_food_produces_mult = 0.03
 	}
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { is_lithoid = yes }
-		planet_jobs_minerals_produces_mult = 0.02
+		planet_jobs_minerals_produces_mult = 0.03
 	}
 }
 
@@ -64,7 +64,7 @@ alien_brain_scans = {
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		country_edict_fund_add = 10
+		country_edict_fund_add = 15
 	}
 }
 
@@ -79,7 +79,7 @@ alien_dining_set = {
 
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
-		planet_amenities_add = 3
+		planet_amenities_add = 4
 	}
 }
 
@@ -95,12 +95,12 @@ alien_jewelry = {
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
 		potential = { is_gestalt = no }
-		trade_value_mult = 0.03
+		trade_value_mult = 0.04
 	}
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
 		potential = { is_gestalt = yes }
-		planet_jobs_energy_produces_mult = 0.02
+		planet_jobs_energy_produces_mult = 0.03
 	}
 }
 
@@ -115,7 +115,7 @@ alien_toy = {
 
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
-		planet_amenities_add = 3
+		planet_amenities_add = 4
 	}
 }
 
@@ -130,7 +130,7 @@ altar_to_the_elder_one = {
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		pop_government_ethic_attraction = 0.5
+		pop_government_ethic_attraction = 0.25
 	}
 }
 
@@ -146,7 +146,7 @@ aluminium_plaque = {
 	resources = {
 		category = specimens
 		produces = {
-			unity = 5
+			unity = 6
 		}
 	}
 }
@@ -199,12 +199,12 @@ ancient_bust = {
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
 		potential = { is_gestalt = no }
-		trade_value_mult = 0.03
+		trade_value_mult = 0.04
 	}
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
 		potential = { is_gestalt = yes }
-		planet_jobs_energy_produces_mult = 0.02
+		planet_jobs_energy_produces_mult = 0.03
 	}
 }
 
@@ -220,7 +220,7 @@ ancient_kinetic_launcher = {
 	resources = {
 		category = specimens
 		produces = {
-			society_research = 5
+			society_research = 8
 		}
 	}
 }
@@ -237,12 +237,12 @@ ancient_laser_pointer = {
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
 		potential = { is_gestalt = no }
-		trade_value_mult = 0.03
+		trade_value_mult = 0.04
 	}
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
 		potential = { is_gestalt = yes }
-		planet_jobs_energy_produces_mult = 0.02
+		planet_jobs_energy_produces_mult = 0.03
 	}
 }
 
@@ -257,7 +257,7 @@ ancient_nanites = {
 
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
-		pop_environment_tolerance = 0.025
+		pop_environment_tolerance = 0.03
 	}
 }
 
@@ -272,7 +272,7 @@ ancient_nuclear_armament = {
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		country_unity_produces_mult = 0.02
+		country_unity_produces_mult = 0.03
 	}
 }
 
@@ -287,7 +287,7 @@ ancient_political_memoir = {
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		leaders_upkeep_mult = -0.05
+		leaders_upkeep_mult = -0.06
 	}
 }
 
@@ -333,7 +333,7 @@ ancient_sensor = {
 	resources = {
 		category = specimens
 		produces = {
-			engineering_research = 5
+			engineering_research = 8
 		}
 	}
 }
@@ -349,7 +349,7 @@ asteroid_fossils = {
 
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
-		planet_jobs_minerals_produces_mult = 0.02
+		planet_jobs_minerals_produces_mult = 0.03
 	}
 }
 
@@ -364,7 +364,7 @@ ballad_of_the_sable_knight = {
 
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
-		planet_amenities_add = 5
+		planet_amenities_add = 6
 	}
 }
 
@@ -379,7 +379,7 @@ beauty_of_planet = {
 
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
-		pop_growth_speed = 0.02
+		pop_growth_speed = 0.03
 	}
 }
 
@@ -430,7 +430,7 @@ black_needle_ledger = {
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		country_edict_fund_add = 15
+		country_edict_fund_add = 20
 	}
 }
 
@@ -446,7 +446,7 @@ burnt_migratory_trees = {
 	resources = {
 		category = specimens
 		produces = {
-			physics_research = 5
+			physics_research = 8
 		}
 	}
 }
@@ -478,7 +478,7 @@ captain_ness_logbook = {
 	resources = {
 		category = specimens
 		produces = {
-			unity = 5
+			unity = 6
 		}
 	}
 }
@@ -495,12 +495,12 @@ carnivorous_megaflora = {
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { country_uses_consumer_goods = yes }
-		planet_jobs_consumer_goods_produces_mult = 0.02
+		planet_jobs_consumer_goods_produces_mult = 0.03
 	}
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { country_uses_consumer_goods = no }
-		planet_jobs_energy_produces_mult = 0.02
+		planet_jobs_energy_produces_mult = 0.03
 	}
 }
 
@@ -515,7 +515,7 @@ castaway_robot = {
 
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
-		planet_jobs_energy_produces_mult = 0.02
+		planet_jobs_energy_produces_mult = 0.03
 	}
 }
 
@@ -530,7 +530,7 @@ cenotaph_display = {
 
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
-		space_fauna_ship_damage_mult = 0.03
+		space_fauna_ship_damage_mult = 0.04
 	}
 }
 
@@ -580,7 +580,7 @@ chambered_clay_pot = {
 	resources = {
 		category = specimens
 		produces = {
-			unity = 5
+			unity = 6
 		}
 	}
 }
@@ -611,7 +611,7 @@ confessions_benefactors = {
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		country_edict_fund_add = 15
+		country_edict_fund_add = 20
 	}
 }
 
@@ -627,12 +627,12 @@ coprolite = {
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { is_lithoid = no }
-		planet_jobs_food_produces_mult = 0.02
+		planet_jobs_food_produces_mult = 0.03
 	}
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { is_lithoid = yes }
-		planet_jobs_minerals_produces_mult = 0.02
+		planet_jobs_minerals_produces_mult = 0.03
 	}
 }
 
@@ -662,7 +662,7 @@ crimson_nimkips = {
 
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
-		planet_amenities_add = 5
+		planet_amenities_add = 6
 	}
 }
 
@@ -692,7 +692,7 @@ crystal_nest_fragments = {
 
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
-		planet_jobs_energy_produces_mult = 0.04
+		planet_jobs_energy_produces_mult = 0.05
 	}
 }
 
@@ -723,7 +723,7 @@ crystallized_cutholoid_eye = {
 	resources = {
 		category = specimens
 		produces = {
-			physics_research = 10
+			physics_research = 13
 		}
 	}
 }
@@ -739,7 +739,7 @@ cult_pendant = {
 
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
-		planet_jobs_minerals_produces_mult = 0.02
+		planet_jobs_minerals_produces_mult = 0.03
 	}
 }
 
@@ -755,7 +755,7 @@ cunning_flora_specimen = {
 	resources = {
 		category = specimens
 		produces = {
-			physics_research = 5
+			physics_research = 8
 		}
 	}
 }
@@ -772,7 +772,7 @@ curator_survey = {
 	resources = {
 		category = specimens
 		produces = {
-			engineering_research = 5
+			engineering_research = 8
 		}
 	}
 }
@@ -788,7 +788,7 @@ cutholoid_digestive_acids = {
 
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
-		space_fauna_ship_damage_mult = 0.05
+		space_fauna_ship_damage_mult = 0.06
 	}
 }
 
@@ -834,7 +834,7 @@ datacore_of_sinople = {
 	resources = {
 		category = specimens
 		produces = {
-			society_research = 5
+			society_research = 8
 		}
 	}
 }
@@ -866,7 +866,7 @@ dead_god_mantle = {
 	resources = {
 		category = specimens
 		produces = {
-			society_research = 5
+			society_research = 8
 		}
 	}
 }
@@ -898,7 +898,7 @@ decayed_satellite = {
 	resources = {
 		category = specimens
 		produces = {
-			unity = 5
+			unity = 6
 		}
 	}
 }
@@ -914,7 +914,7 @@ declaration_of_animosity = {
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		country_edict_fund_add = 5
+		country_edict_fund_add = 10
 	}
 }
 
@@ -962,7 +962,7 @@ desiccated_brain_slug = {
 	resources = {
 		category = specimens
 		produces = {
-			engineering_research = 10
+			engineering_research = 13
 		}
 	}
 }
@@ -1010,7 +1010,7 @@ dimensional_endothelial_lining = {
 
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
-		planet_jobs_energy_produces_mult = 0.04
+		planet_jobs_energy_produces_mult = 0.05
 	}
 }
 
@@ -1025,7 +1025,7 @@ dna_archive = {
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		leaders_upkeep_mult = -0.05
+		leaders_upkeep_mult = -0.06
 	}
 }
 
@@ -1072,7 +1072,7 @@ electric_life = {
 
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
-		planet_jobs_energy_produces_mult = 0.06
+		planet_jobs_energy_produces_mult = 0.07
 	}
 }
 
@@ -1088,12 +1088,12 @@ enormous_scrambled_albumen = {
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { is_lithoid = no }
-		planet_jobs_food_produces_mult = 0.04
+		planet_jobs_food_produces_mult = 0.05
 	}
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { is_lithoid = yes }
-		planet_jobs_minerals_produces_mult = 0.04
+		planet_jobs_minerals_produces_mult = 0.05
 	}
 }
 
@@ -1187,7 +1187,7 @@ fevorian_blueprints = {
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		ship_weapon_damage = 0.05
+		ship_weapon_damage = 0.06
 	}
 }
 
@@ -1247,7 +1247,7 @@ fish_in_the_sea_sheet_music = {
 
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
-		planet_amenities_add = 7
+		planet_amenities_add = 8
 	}
 }
 
@@ -1277,7 +1277,7 @@ flooded_settlement_mound = {
 
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
-		pop_environment_tolerance = 0.01
+		pop_environment_tolerance = 0.02
 	}
 }
 
@@ -1292,7 +1292,7 @@ fossilized_endoskeletons = {
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		army_damage_mult = 0.05
+		army_damage_mult = 0.1
 	}
 }
 
@@ -1308,7 +1308,7 @@ fossilized_megastomach = {
 	resources = {
 		category = specimens
 		produces = {
-			engineering_research = 10
+			engineering_research = 13
 		}
 	}
 }
@@ -1325,12 +1325,12 @@ fossilized_voidworm_tooth = {
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { is_lithoid = yes }
-		planet_jobs_minerals_produces_mult = 0.02
+		planet_jobs_minerals_produces_mult = 0.03
 	}
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { is_lithoid = no }
-		planet_jobs_food_produces_mult = 0.02
+		planet_jobs_food_produces_mult = 0.03
 	}
 }
 
@@ -1382,7 +1382,7 @@ fragmented_zroni_archive = {
 	resources = {
 		category = specimens
 		produces = {
-			unity = 5
+			unity = 6
 		}
 	}
 }
@@ -1415,7 +1415,7 @@ gamma_resistant_flora = {
 
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
-		planet_amenities_add = 5
+		planet_amenities_add = 6
 	}
 }
 
@@ -1430,7 +1430,7 @@ gargantua_megalus = {
 
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
-		planet_jobs_minerals_produces_mult = 0.02
+		planet_jobs_minerals_produces_mult = 0.03
 	}
 }
 
@@ -1605,7 +1605,7 @@ high_geode_of_the_molluscoids = {
 
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
-		planet_jobs_minerals_produces_mult = 0.04
+		planet_jobs_minerals_produces_mult = 0.05
 	}
 }
 
@@ -1620,7 +1620,7 @@ hot_ice = {
 
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
-		planet_amenities_add = 5
+		planet_amenities_add = 6
 	}
 }
 
@@ -1657,12 +1657,12 @@ hyperfertile_soil = {
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { is_lithoid = no }
-		planet_jobs_food_produces_mult = 0.06
+		planet_jobs_food_produces_mult = 0.07
 	}
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { is_lithoid = yes }
-		planet_jobs_minerals_produces_mult = 0.06
+		planet_jobs_minerals_produces_mult = 0.07
 	}
 }
 
@@ -1695,7 +1695,7 @@ impossible_object = {
 	resources = {
 		category = specimens
 		produces = {
-			engineering_research = 10
+			engineering_research = 13
 		}
 	}
 }
@@ -1712,7 +1712,7 @@ index_of_knowledge = {
 	resources = {
 		category = specimens
 		produces = {
-			physics_research = 10
+			physics_research = 13
 		}
 	}
 }
@@ -1729,12 +1729,12 @@ inet_trade_manifesto = {
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
 		potential = { is_gestalt = no }
-		trade_value_mult = 0.06
+		trade_value_mult = 0.07
 	}
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
 		potential = { is_gestalt = yes }
-		planet_jobs_energy_produces_mult = 0.04
+		planet_jobs_energy_produces_mult = 0.05
 	}
 }
 
@@ -1920,7 +1920,7 @@ kuurian_cybrex_blueprints = {
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		army_damage_mult = 0.05
+		army_damage_mult = 0.1
 	}
 }
 
@@ -1936,7 +1936,7 @@ landeer_arm = {
 	resources = {
 		category = specimens
 		produces = {
-			society_research = 10
+			society_research = 13
 		}
 	}
 }
@@ -2059,7 +2059,7 @@ localised_aurora_borealis = {
 
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
-		planet_amenities_add = 3
+		planet_amenities_add = 4
 	}
 }
 
@@ -2091,7 +2091,7 @@ lunatic_broker_therapy_box = {
 
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
-		planet_amenities_add = 3
+		planet_amenities_add = 4
 	}
 }
 
@@ -2107,7 +2107,7 @@ manifesti_piece = {
 	resources = {
 		category = specimens
 		produces = {
-			society_research = 10
+			society_research = 13
 		}
 	}
 }
@@ -2124,12 +2124,12 @@ manna_fruit = {
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { is_lithoid = no }
-		planet_jobs_food_produces_mult = 0.02
+		planet_jobs_food_produces_mult = 0.03
 	}
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { is_lithoid = yes }
-		planet_jobs_minerals_produces_mult = 0.02
+		planet_jobs_minerals_produces_mult = 0.03
 	}
 }
 
@@ -2145,7 +2145,7 @@ massive_metatarsal = {
 	resources = {
 		category = specimens
 		produces = {
-			engineering_research = 10
+			engineering_research = 13
 		}
 	}
 }
@@ -2161,7 +2161,7 @@ medal_for_services_to_diplomacy = {
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		country_edict_fund_add = 15
+		country_edict_fund_add = 20
 	}
 }
 
@@ -2176,7 +2176,7 @@ megacorpse_hyperguitar = {
 
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
-		planet_amenities_add = 5
+		planet_amenities_add = 6
 	}
 }
 
@@ -2209,7 +2209,7 @@ memorial_stone = {
 	resources = {
 		category = specimens
 		produces = {
-			engineering_research = 10
+			engineering_research = 13
 		}
 	}
 }
@@ -2255,7 +2255,7 @@ memory_orbs = {
 
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
-		planet_amenities_add = 3
+		planet_amenities_add = 4
 	}
 }
 
@@ -2271,7 +2271,7 @@ mercenary_story = {
 	resources = {
 		category = specimens
 		produces = {
-			unity = 5
+			unity = 6
 		}
 	}
 }
@@ -2302,7 +2302,7 @@ minamar_chandelier = {
 
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
-		pop_growth_speed = 0.04
+		pop_growth_speed = 0.05
 	}
 }
 
@@ -2334,7 +2334,7 @@ mini_moon_dust = {
 
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
-		planet_jobs_minerals_produces_mult = 0.04
+		planet_jobs_minerals_produces_mult = 0.05
 	}
 }
 
@@ -2349,7 +2349,7 @@ mining_transmitter = {
 
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
-		planet_jobs_minerals_produces_mult = 0.02
+		planet_jobs_minerals_produces_mult = 0.03
 	}
 }
 
@@ -2370,7 +2370,7 @@ miracle_cream = {
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
 		potential = { is_gestalt = yes }
-		planet_jobs_energy_produces_mult = 0.06
+		planet_jobs_energy_produces_mult = 0.07
 	}
 }
 
@@ -2401,7 +2401,7 @@ molten_slag = {
 	resources = {
 		category = specimens
 		produces = {
-			engineering_research = 5
+			engineering_research = 8
 		}
 	}
 }
@@ -2478,12 +2478,12 @@ namarian_sculpture = {
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
 		potential = { is_gestalt = no }
-		trade_value_mult = 0.03
+		trade_value_mult = 0.04
 	}
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
 		potential = { is_gestalt = yes }
-		planet_jobs_energy_produces_mult = 0.02
+		planet_jobs_energy_produces_mult = 0.03
 	}
 }
 
@@ -2513,7 +2513,7 @@ nanite_sludge = {
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		country_edict_fund_add = 5
+		country_edict_fund_add = 10
 	}
 }
 
@@ -2589,7 +2589,7 @@ orinthi_teeth = {
 	resources = {
 		category = specimens
 		produces = {
-			engineering_research = 5
+			engineering_research = 8
 		}
 	}
 }
@@ -2606,7 +2606,7 @@ osseus_construction_material = {
 	resources = {
 		category = specimens
 		produces = {
-			engineering_research = 10
+			engineering_research = 13
 		}
 	}
 }
@@ -2644,7 +2644,7 @@ peerless_atomic_clock = {
 	resources = {
 		category = specimens
 		produces = {
-			physics_research = 5
+			physics_research = 8
 		}
 	}
 }
@@ -2676,7 +2676,7 @@ perfectly_faceted_carbon = {
 	resources = {
 		category = specimens
 		produces = {
-			engineering_research = 5
+			engineering_research = 8
 		}
 	}
 }
@@ -2692,7 +2692,7 @@ pet_collar = {
 
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
-		space_fauna_ship_damage_mult = 0.04
+		space_fauna_ship_damage_mult = 0.05
 	}
 }
 
@@ -2739,7 +2739,7 @@ pilgrimage_last_days = {
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		country_unity_produces_mult = 0.02
+		country_unity_produces_mult = 0.03
 	}
 }
 
@@ -2755,12 +2755,12 @@ planet_crystalose = {
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { is_lithoid = no }
-		planet_jobs_food_produces_mult = 0.02
+		planet_jobs_food_produces_mult = 0.03
 	}
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { is_lithoid = yes }
-		planet_jobs_minerals_produces_mult = 0.02
+		planet_jobs_minerals_produces_mult = 0.03
 	}
 }
 
@@ -2791,12 +2791,12 @@ planet_super_roots = {
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { is_lithoid = no }
-		planet_jobs_food_produces_mult = 0.02
+		planet_jobs_food_produces_mult = 0.03
 	}
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { is_lithoid = yes }
-		planet_jobs_minerals_produces_mult = 0.02
+		planet_jobs_minerals_produces_mult = 0.03
 	}
 }
 
@@ -2826,7 +2826,7 @@ planetary_sculpture = {
 
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
-		pop_growth_speed = 0.02
+		pop_growth_speed = 0.03
 	}
 }
 
@@ -2857,7 +2857,7 @@ programmable_puzzle_cube = {
 	resources = {
 		category = specimens
 		produces = {
-			physics_research = 10
+			physics_research = 13
 		}
 	}
 }
@@ -2903,7 +2903,7 @@ rainaissance = {
 
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
-		planet_amenities_add = 3
+		planet_amenities_add = 4
 	}
 }
 
@@ -2918,7 +2918,7 @@ reactive_rock = {
 
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
-		planet_jobs_minerals_produces_mult = 0.04
+		planet_jobs_minerals_produces_mult = 0.05
 	}
 }
 
@@ -2933,7 +2933,7 @@ reparation_invoice = {
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		country_edict_fund_add = 5
+		country_edict_fund_add = 10
 	}
 }
 
@@ -2978,7 +2978,7 @@ retarax_hunting_trophies = {
 
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
-		starbase_shipyard_space_fauna_build_speed_mult = 0.02
+		starbase_shipyard_space_fauna_build_speed_mult = 0.06
 	}
 }
 
@@ -3059,7 +3059,7 @@ scent_based_information_device = {
 
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
-		planet_amenities_add = 5
+		planet_amenities_add = 6
 	}
 }
 
@@ -3090,7 +3090,7 @@ secrets_black_crown = {
 	resources = {
 		category = specimens
 		produces = {
-			society_research = 10
+			society_research = 13
 		}
 	}
 }
@@ -3190,7 +3190,7 @@ sniran_spikes = {
 	resources = {
 		category = specimens
 		produces = {
-			engineering_research = 5
+			engineering_research = 8
 		}
 	}
 }
@@ -3206,7 +3206,7 @@ sonic_reflective_prism = {
 
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
-		planet_amenities_add = 3
+		planet_amenities_add = 4
 	}
 }
 
@@ -3282,12 +3282,12 @@ star_mall_map = {
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
 		potential = { is_gestalt = no }
-		trade_value_mult = 0.03
+		trade_value_mult = 0.04
 	}
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
 		potential = { is_gestalt = yes }
-		planet_jobs_energy_produces_mult = 0.02
+		planet_jobs_energy_produces_mult = 0.03
 	}
 }
 
@@ -3319,7 +3319,7 @@ striated_sand = {
 
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
-		planet_jobs_minerals_produces_mult = 0.02
+		planet_jobs_minerals_produces_mult = 0.03
 	}
 }
 
@@ -3352,12 +3352,12 @@ symbiotic_fruit = {
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { is_lithoid = no }
-		planet_jobs_food_produces_mult = 0.04
+		planet_jobs_food_produces_mult = 0.05
 	}
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { is_lithoid = yes }
-		planet_jobs_minerals_produces_mult = 0.04
+		planet_jobs_minerals_produces_mult = 0.05
 	}
 }
 
@@ -3373,12 +3373,12 @@ tarblac_shimmer = {
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { country_uses_consumer_goods = yes }
-		planet_jobs_consumer_goods_produces_mult = 0.02
+		planet_jobs_consumer_goods_produces_mult = 0.03
 	}
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { country_uses_consumer_goods = no }
-		planet_jobs_energy_produces_mult = 0.02
+		planet_jobs_energy_produces_mult = 0.03
 	}
 }
 
@@ -3393,7 +3393,7 @@ terraforming_case_study = {
 
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
-		pop_environment_tolerance = 0.025
+		pop_environment_tolerance = 0.03
 	}
 }
 terraforming_case_study_dry = {
@@ -3407,7 +3407,7 @@ terraforming_case_study_dry = {
 
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
-		pop_environment_tolerance = 0.025
+		pop_environment_tolerance = 0.03
 	}
 }
 terraforming_case_study_frozen = {
@@ -3421,7 +3421,7 @@ terraforming_case_study_frozen = {
 
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
-		pop_environment_tolerance = 0.025
+		pop_environment_tolerance = 0.03
 	}
 }
 
@@ -3437,7 +3437,7 @@ terraforming_machinery = {
 	resources = {
 		category = specimens
 		produces = {
-			society_research = 10
+			society_research = 13
 		}
 	}
 }
@@ -3453,7 +3453,7 @@ terraforming_records = {
 
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
-		pop_environment_tolerance = 0.025
+		pop_environment_tolerance = 0.03
 	}
 }
 
@@ -3495,7 +3495,7 @@ the_mask_of_transformation = {
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
 		potential = { is_gestalt = yes }
-		planet_jobs_energy_produces_mult = 0.04
+		planet_jobs_energy_produces_mult = 0.05
 	}
 }
 
@@ -3511,7 +3511,7 @@ the_planet_orchestra = {
 	resources = {
 		category = specimens
 		produces = {
-			physics_research = 5
+			physics_research = 8
 		}
 	}
 }
@@ -3543,7 +3543,7 @@ tiny_ancient_sarcophagus = {
 	resources = {
 		category = specimens
 		produces = {
-			society_research = 10
+			society_research = 13
 		}
 	}
 }
@@ -3575,7 +3575,7 @@ torn_solar_sail = {
 	resources = {
 		category = specimens
 		produces = {
-			society_research = 5
+			society_research = 8
 		}
 	}
 }
@@ -3607,7 +3607,7 @@ tree_of_life_sample = {
 	resources = {
 		category = specimens
 		produces = {
-			physics_research = 5
+			physics_research = 8
 		}
 	}
 }
@@ -3644,7 +3644,7 @@ triggerless_gun = {
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		ship_weapon_damage = 0.03
+		ship_weapon_damage = 0.04
 	}
 }
 
@@ -3660,12 +3660,12 @@ uddloran_pelts = {
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { country_uses_consumer_goods = yes }
-		planet_jobs_consumer_goods_produces_mult = 0.02
+		planet_jobs_consumer_goods_produces_mult = 0.03
 	}
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { country_uses_consumer_goods = no }
-		planet_jobs_energy_produces_mult = 0.02
+		planet_jobs_energy_produces_mult = 0.03
 	}
 }
 
@@ -3712,7 +3712,7 @@ uranium_glassware = {
 
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
-		planet_amenities_add = 3
+		planet_amenities_add = 4
 	}
 }
 
@@ -3773,12 +3773,12 @@ vibrating_crystal = {
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { country_uses_consumer_goods = yes }
-		planet_jobs_consumer_goods_produces_mult = 0.06
+		planet_jobs_consumer_goods_produces_mult = 0.07
 	}
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { country_uses_consumer_goods = no }
-		planet_jobs_energy_produces_mult = 0.06
+		planet_jobs_energy_produces_mult = 0.07
 	}
 }
 
@@ -3793,7 +3793,7 @@ voidworm_amniotics = {
 
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
-		starbase_shipyard_space_fauna_build_speed_mult = 0.05
+		starbase_shipyard_space_fauna_build_speed_mult = 0.12
 	}
 }
 
@@ -3854,12 +3854,12 @@ warning_monolith = {
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { country_uses_consumer_goods = yes }
-		planet_jobs_consumer_goods_produces_mult = 0.02
+		planet_jobs_consumer_goods_produces_mult = 0.03
 	}
 	triggered_country_modifier = {
 		mult = value:xeno_geology_specimens_modifiers_mult
 		potential = { country_uses_consumer_goods = no }
-		planet_jobs_energy_produces_mult = 0.02
+		planet_jobs_energy_produces_mult = 0.03
 	}
 }
 
@@ -3875,7 +3875,7 @@ wormhole_anchor = {
 	resources = {
 		category = specimens
 		produces = {
-			society_research = 10
+			society_research = 13
 		}
 	}
 }
@@ -3938,7 +3938,7 @@ ytterite_royal_scepter = {
 
 	triggered_country_modifier = {
 		mult = value:historical_item_specimens_modifiers_mult
-		country_edict_fund_add = 20
+		country_edict_fund_add = 25
 	}
 }
 
@@ -3991,7 +3991,7 @@ yuht_crystal_skull = {
 	triggered_country_modifier = {
 		mult = value:aesthetic_wonder_specimens_modifiers_mult
 		potential = { is_gestalt = yes }
-		planet_jobs_energy_produces_mult = 0.04
+		planet_jobs_energy_produces_mult = 0.05
 	}
 }
 
@@ -4007,7 +4007,7 @@ zombie_probe = {
 	resources = {
 		category = specimens
 		produces = {
-			society_research = 5
+			society_research = 8
 		}
 	}
 }

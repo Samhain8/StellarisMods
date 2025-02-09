@@ -6,6 +6,7 @@ tr_archivism_adopt = {
 	modifier = {
 		country_exhibit_unlocking_cost_mult = -0.5
 		ship_anomaly_generation_chance_mult = 0.05
+		country_resource_max_minor_artifacts_add = 2000
 	}
 }
 
