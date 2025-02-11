@@ -172,7 +172,7 @@ utility_component_template = {
 		}
 
 		modifier = {
-			ship_hull_regen_add_perc = -1.25
+			ship_hull_regen_add_perc = -0.75
 		}
 
 		graphics = {
