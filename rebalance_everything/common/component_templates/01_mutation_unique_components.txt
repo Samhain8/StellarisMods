@@ -526,7 +526,7 @@ strike_craft_component_template = {
 	}
 
 	count = 8
-	regeneration_per_day = @regen
+	regeneration_per_day = 2
 	launch_time = @launch_time
 
 	damage = { min = 20 max = 30 }
@@ -536,7 +536,7 @@ strike_craft_component_template = {
 	accuracy = 0.70
 	tracking = 0.50
 
-	health = 20
+	health = 25
 	armor = 0
 	shield = 0
 	evasion = 0.50

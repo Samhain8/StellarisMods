@@ -167,6 +167,7 @@ astral_researcher = {
 	possible_precalc = can_fill_specialist_job
 	possible = {
 		complex_specialist_job_check_trigger = yes
+		nondomestic_specialist_job_check_trigger = yes
 	}
 
 	resources = {

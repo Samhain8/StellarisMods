@@ -7752,6 +7752,7 @@ country_event = { # Helpful relocation was a success
 				is_colony = no
 				habitable_planet = yes
 				has_anomaly = no
+				NOT = { exists = archaeological_site }
 				NOR = {
 					has_modifier = "holy_planet"
 					solar_system = {
@@ -7778,6 +7779,7 @@ country_event = { # Helpful relocation was a success
 				is_colony = no
 				habitable_planet = yes
 				has_anomaly = no
+				NOT = { exists = archaeological_site }
 				NOR = {
 					has_modifier = "holy_planet"
 					solar_system = {

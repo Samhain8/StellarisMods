@@ -204,6 +204,7 @@ d_fractal_seed = {
 
 	planet_modifier = {
 		planet_max_buildings_add = 1
+		planet_housing_mult = 0.1
 	}
 
 	potential = { always = no }

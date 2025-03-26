@@ -2084,7 +2084,7 @@ tech_epigenetic_triggers = {
 			has_valid_civic = civic_fanatic_purifiers
 			#has_valid_civic = civic_machine_terminator # covered by not being machine
 			#has_valid_civic = civic_hive_devouring_swarm # can uplift to make delicious
-			is_natural_design_empire = yes
+			#is_natural_design_empire = yes
 		}
 		OR = {
 			is_machine_empire = no

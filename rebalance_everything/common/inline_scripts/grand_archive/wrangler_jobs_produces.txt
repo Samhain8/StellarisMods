@@ -1,8 +1,8 @@
 resources = {
 	category = planet_primal_jobs
 	produces = {
-		society_research = 4
-		unity = 2
+		society_research = 2
+		unity = 3
 	}
 	upkeep = {
 		trigger = {
@@ -31,15 +31,6 @@ resources = {
 		}
 		energy = 4
 	}
-}
-
-triggered_planet_modifier = {
-	potential = {
-		exists = planet.owner
-		planet.owner = { is_gestalt = no }
-	}
-	planet_amenities_add = 4
-	mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 }
 
 triggered_planet_modifier = {

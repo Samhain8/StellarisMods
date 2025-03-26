@@ -54,8 +54,8 @@ tr_adaptability_survival_fittest = {
 	}
 	custom_tooltip_with_modifiers = tr_adaptability_survival_fittest_desc
 	modifier = {
-		planet_orbital_bombardment_damage = -0.25
-		#army_defense_damage_mult = 0.25
+		planet_orbital_bombardment_damage = -0.2
+		planet_storm_devastation_mult = -0.3
 		BIOLOGICAL_species_trait_points_add = 1
 		ROBOT_species_trait_points_add = 1
 	}
@@ -71,9 +71,9 @@ tr_adaptability_survival_fittest = {
 		}
 		custom_tooltip_with_modifiers = tr_adaptability_survival_fittest_desc
 		modifier = {
-			planet_orbital_bombardment_damage = -0.25
+			planet_orbital_bombardment_damage = -0.2
+			planet_storm_devastation_mult = -0.3
 			pop_growth_speed = 0.05
-			#army_defense_damage_mult = 0.25
 		}
 	}
 
@@ -86,8 +86,8 @@ tr_adaptability_survival_fittest = {
 		}
 		custom_tooltip_with_modifiers = tr_adaptability_survival_fittest_desc
 		modifier = {
-			planet_orbital_bombardment_damage = -0.25
-			#army_defense_damage_mult = 0.25
+			planet_orbital_bombardment_damage = -0.2
+			planet_storm_devastation_mult = -0.3
 			BIOLOGICAL_species_trait_points_add = 1
 		}
 		weight = {
@@ -104,8 +104,8 @@ tr_adaptability_survival_fittest = {
 		}
 		custom_tooltip_with_modifiers = tr_adaptability_survival_fittest_desc
 		modifier = {
-			planet_orbital_bombardment_damage = -0.25
-			#army_defense_damage_mult = 0.25
+			planet_orbital_bombardment_damage = -0.2
+			planet_storm_devastation_mult = -0.3
 			ROBOT_species_trait_points_add = 1
 		}
 		weight = {
