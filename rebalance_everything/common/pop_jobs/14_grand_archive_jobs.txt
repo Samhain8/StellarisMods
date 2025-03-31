@@ -1,7 +1,12 @@
 geologist = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = xeno_geology_holomuseum
+	
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = xeno_geology_holomuseum
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -43,10 +48,6 @@ geologist = {
 			can_take_servant_job = yes
 		}
 		modifier = {
-			factor = 1.5
-			has_job = geologist
-		}
-		modifier = {
 			factor = 0.8
 			is_enslaved = yes
 			has_slavery_type = { type = slavery_indentured }
@@ -62,9 +63,13 @@ geologist = {
 
 treasure_gatherer = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = treasure_gatherer
-	clothes_texture_index = 3
+	
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = treasure_gatherer
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -85,26 +90,24 @@ treasure_gatherer = {
 			minerals = 4
 			unity = 4
 			society_research = 1
+			trade = 3
 		}
 		upkeep = {
 			consumer_goods = 1
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = { always = yes }
-		trade_value_add = 3
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
-	}
-
 	weight = {
 		weight = @high_prio_specialist_job_weight
 		mult = value:job_weights_multiple_resources_modifier|JOB|treasure_gatherer|RESOURCE1|energy|WEIGHT1|1.6|RESOURCE2|minerals|WEIGHT2|1.0|
 		mult = value:job_weights_multiple_resources_modifier|JOB|treasure_gatherer|RESOURCE1|unity|WEIGHT1|1|RESOURCE2|society_research|WEIGHT2|0.1|
+		mult = value:job_weights_modifier|JOB|treasure_gatherer|RESOURCE|trade|
 		modifier = {
 			factor = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_trade_mult|
 			planet.solar_system = {
-				NOT = { has_uncollected_system_trade_value > 0 }
+				NOT = {
+					#has_uncollected_system_trade_value > 0 
+				}
 			}
 		}
 	}
@@ -114,8 +117,13 @@ treasure_gatherer = {
 
 wonder_curator = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = aesthetic_wonders_holomuseum
+	
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = aesthetic_wonders_holomuseum
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -142,7 +150,7 @@ wonder_curator = {
 
 	triggered_planet_modifier = {
 		potential = { always = yes }
-		planet_amenities_add = -10
+		planet_amenities_add = -1000
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -163,10 +171,6 @@ wonder_curator = {
 			can_take_servant_job = yes
 		}
 		modifier = {
-			factor = 1.5
-			has_job = wonder_curator
-		}
-		modifier = {
 			factor = 0.8
 			is_enslaved = yes
 			has_slavery_type = { type = slavery_indentured }
@@ -182,8 +186,13 @@ wonder_curator = {
 
 historical_curator = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = galactic_history_holomuseum
+	
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = galactic_history_holomuseum
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -228,10 +237,6 @@ historical_curator = {
 			can_take_servant_job = yes
 		}
 		modifier = {
-			factor = 1.5
-			has_job = historical_curator
-		}
-		modifier = {
 			factor = 0.8
 			is_enslaved = yes
 			has_slavery_type = { type = slavery_indentured }
@@ -247,9 +252,14 @@ historical_curator = {
 
 drone_geologist = {
 	category = complex_drone
-	condition_string = DRONE_JOB_TRIGGER
-	building_icon = xeno_geology_museum
-	icon = geologist
+	
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = xeno_geology_museum
+			icon = geologist
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -284,9 +294,14 @@ drone_geologist = {
 
 drone_wonder_curator = {
 	category = complex_drone
-	condition_string = DRONE_JOB_TRIGGER
-	building_icon = aesthetic_wonders_holomuseum
-	icon = wonder_curator
+	
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = aesthetic_wonders_holomuseum
+			icon = wonder_curator
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -313,7 +328,7 @@ drone_wonder_curator = {
 
 	triggered_planet_modifier = {
 		potential = { always = yes }
-		planet_amenities_no_happiness_add = -10
+		planet_amenities_no_happiness_add = -1000
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -327,9 +342,14 @@ drone_wonder_curator = {
 
 drone_historical_curator = {
 	category = complex_drone
-	condition_string = DRONE_JOB_TRIGGER
-	building_icon = galactic_history_holomuseum
-	icon = historical_curator
+	
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = galactic_history_holomuseum
+			icon = historical_curator
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -390,8 +410,13 @@ inline_script = {
 
 trophy_hunter = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = hunting_grounds
+	
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = hunting_grounds
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -419,7 +444,7 @@ trophy_hunter = {
 
 	triggered_planet_modifier = {
 		potential = { always = yes }
-		planet_amenities_add = 2
+		planet_amenities_add = 200
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -441,30 +466,28 @@ trophy_hunter = {
 			}
 		}
 		modifier = {
-			factor = 1.5
-			has_job = trophy_hunter
-		}
-		modifier = {
 			factor = 0.1
 			is_domestic_servant = yes
 		}
-		modifier = {
-			factor = 0.1
-			NOT = { has_job = trophy_hunter }
-			exists = planet
-			planet = {
-				free_amenities > 5
-			}
-		}
-		modifier = {
-			factor = 2
-			NOT = { has_job = trophy_hunter }
-			exists = planet
-			planet = {
-				free_amenities < 2
-				has_available_jobs = trophy_hunter
-			}
-		}
+# Markus
+#		modifier = {
+#			factor = 0.1
+#			NOT = { has_job = trophy_hunter }
+#			exists = planet
+#			planet = {
+#				free_amenities > 5
+#			}
+#		}
+# Markus
+#		modifier = {
+#			factor = 2
+#			NOT = { has_job = trophy_hunter }
+#			exists = planet
+#			planet = {
+#				free_amenities < 2
+#				has_available_jobs = trophy_hunter
+#			}
+#		}
 	}
 
 	inline_script = "jobs/automodding_priority_research"
@@ -472,8 +495,13 @@ trophy_hunter = {
 
 animal_handler = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = wildlife_sanctuary
+	
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = wildlife_sanctuary
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -501,7 +529,7 @@ animal_handler = {
 
 	triggered_planet_modifier = {
 		potential = { always = yes }
-		planet_amenities_add = -4
+		planet_amenities_add = -400
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -523,30 +551,27 @@ animal_handler = {
 			}
 		}
 		modifier = {
-			factor = 1.5
-			has_job = animal_handler
-		}
-		modifier = {
 			factor = 0.1
 			is_domestic_servant = yes
 		}
-		modifier = {
-			factor = 0.1
-			NOT = { has_job = animal_handler }
-			exists = planet
-			planet = {
-				free_amenities > 5
-			}
-		}
-		modifier = {
-			factor = 2
-			NOT = { has_job = animal_handler }
-			exists = planet
-			planet = {
-				free_amenities < 2
-				has_available_jobs = animal_handler
-			}
-		}
+# Markus
+#		modifier = {
+#			factor = 0.1
+#			NOT = { has_job = animal_handler }
+#			exists = planet
+#			planet = {
+#				free_amenities > 5
+#			}
+#		}
+#		modifier = {
+#			factor = 2
+#			NOT = { has_job = animal_handler }
+#			exists = planet
+#			planet = {
+#				free_amenities < 2
+#				has_available_jobs = animal_handler
+#			}
+#		}
 	}
 
 	inline_script = "jobs/automodding_priority_research"
@@ -554,8 +579,13 @@ animal_handler = {
 
 beastfighter = {
 	category = specialist
-	condition_string = BATTLE_THRALL_JOB_TRIGGER
-	building_icon = primal_arena
+	
+	swappable_data = {
+		default = {
+			condition_string = BATTLE_THRALL_JOB_TRIGGER
+			building_icon = primal_arena
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -587,7 +617,7 @@ beastfighter = {
 
 	triggered_planet_modifier = {
 		potential = { always = yes }
-		planet_amenities_add = 2
+		planet_amenities_add = 200
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -595,7 +625,7 @@ beastfighter = {
 		potential = {
 			has_councilor = { COUNCILOR = "councilor_warrior_culture" }
 		}
-		planet_amenities_add = 1
+		planet_amenities_add = 100
 		mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_amenities_mult|TYPE|councilor_warrior_culture|
 	}
 
@@ -613,18 +643,14 @@ beastfighter = {
 			is_enslaved = yes
 			has_slavery_type = { type = slavery_military }
 		}
-		modifier = {
-			factor = 1.5
-			has_job = beastfighter
-		}
-		modifier = {
-			factor = 0.5
-			NOT = { has_job = beastfighter }
-			exists = planet
-			planet = {
-				free_amenities > 5
-			}
-		}
+#		modifier = {
+#			factor = 0.5
+#			NOT = { has_job = beastfighter }
+#			exists = planet
+#			planet = {
+#				free_amenities > 5
+#			}
+#		}
 	}
 
 	inline_script = "jobs/automodding_priority_research"
@@ -635,9 +661,14 @@ beastfighter = {
 #############################
 drone_wrangler = {
 	category = complex_drone
-	condition_string = DRONE_JOB_TRIGGER
-	building_icon = wildlife_ranch
-	icon = wrangler
+	
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = wildlife_ranch
+			icon = wrangler
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -667,9 +698,14 @@ drone_wrangler = {
 
 hunter_drone = {
 	category = complex_drone
-	condition_string = DRONE_JOB_TRIGGER
-	building_icon = hunting_grounds
-	icon = trophy_hunter
+	
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = hunting_grounds
+			icon = trophy_hunter
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -708,9 +744,14 @@ hunter_drone = {
 
 symbiosis_integrator = {
 	category = complex_drone
-	condition_string = DRONE_JOB_TRIGGER
-	building_icon = wildlife_sanctuary
-	icon = animal_handler
+	
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = wildlife_sanctuary
+			icon = animal_handler
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -741,7 +782,7 @@ symbiosis_integrator = {
 
 	triggered_planet_modifier = {
 		potential = { always = yes }
-		planet_amenities_no_happiness_add = -4
+		planet_amenities_no_happiness_add = -400
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -755,9 +796,14 @@ symbiosis_integrator = {
 
 treasure_gatherer_gestalt = {
 	category = complex_drone
-	condition_string = DRONE_JOB_TRIGGER
-	building_icon = wildlife_sanctuary
-	icon = treasure_gatherer
+	
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = wildlife_sanctuary
+			icon = treasure_gatherer
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes

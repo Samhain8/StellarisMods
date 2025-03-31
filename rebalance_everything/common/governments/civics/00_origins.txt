@@ -560,10 +560,11 @@ origin_void_dwellers = {
 	}
 
 	modifier = {
-		megastructures_habitat_cost_mult = -0.25
-		habitat_districts_building_slots_add = 0.25
 		habitat_max_districts_add = 2
-		habitat_district_jobs_add = 1
+		megastructures_habitat_cost_mult = -0.25
+		planet_districts_hab_cost_mult = -0.25
+		habitat_districts_minor_add = 0.25
+		habitat_district_jobs_mult = 0.5	# TODO include zones
 	}
 
 	flags = { custom_start_screen }
@@ -614,10 +615,11 @@ origin_void_machines = {
 	}
 
 	modifier = {
-		megastructures_habitat_cost_mult = -0.25
-		habitat_districts_building_slots_add = 0.25
 		habitat_max_districts_add = 2
-		habitat_district_jobs_add = 1
+		megastructures_habitat_cost_mult = -0.25
+		planet_districts_hab_cost_mult = -0.25
+		habitat_districts_minor_add = 0.25
+		habitat_district_jobs_mult = 0.5
 	}
 
 	flags = { custom_start_screen }
@@ -1308,7 +1310,7 @@ origin_subterranean = {
 	}
 
 	modifier = {
-		mining_district_housing_add = 2
+		mining_district_housing_add = 200
 		mining_district_buildings_add = 0.34
 		planet_orbital_bombardment_damage = -0.75
 		planet_structures_cost_mult = 0.10
@@ -1350,7 +1352,7 @@ origin_subterranean_machines = {
 	}
 
 	modifier = {
-		mining_district_housing_add = 2
+		mining_district_housing_add = 200
 		mining_district_buildings_add = 0.34
 		planet_orbital_bombardment_damage = -0.75
 		planet_structures_cost_mult = 0.10

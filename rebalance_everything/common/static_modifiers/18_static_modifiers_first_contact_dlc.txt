@@ -322,7 +322,7 @@ fotd_alien_terrified = {
 fotd_forced_to_stay = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_crime.dds"
 	icon_frame = 3
-	job_criminal_add = 2
+	job_criminal_add = 200
 }
 
 fotd_refusal_to_work = {
@@ -400,7 +400,7 @@ ruined_mass_driver = {
 }
 
 fotd_extorted_seperatists = {
-	trade_value_mult = 0.10
+	planet_jobs_trade_produces_mult = 0.10
 }
 
 fotd_rationed_living = {
@@ -418,7 +418,7 @@ payback_curfew = {
 	pop_growth_from_immigration = -0.5
 	planet_pop_assembly_mult = -0.5
 	planet_pop_assembly_organic_mult = -0.5
-	job_soldier_add = 2
+	job_soldier_add = 200
 }
 
 payback_freedom_of_speech = {
@@ -468,7 +468,7 @@ payback_unified_purpose = {
 	pop_happiness = 0.15
 	planet_amenities_mult = 0.25
 	planet_jobs_produces_mult = 0.1
-	job_unifier_add = 2
+	job_unifier_add = 200
 }
 
 payback_revenge_words = {
@@ -597,7 +597,7 @@ art_is_dead = {
 artistic_boom = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_natural_beauty.dds"
 	icon_frame = 1
-	job_entertainer_add = 2
+	job_entertainer_add = 200
 }
 
 divine_will = {
@@ -687,7 +687,7 @@ stand_your_ground = {
 freeport_smuggling = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_smugglers_in_bar.dds"
 	icon_frame = 3
-	job_criminal_add = 1
+	job_criminal_add = 100
 }
 
 sweet_tooth_blockade = {
@@ -701,15 +701,15 @@ sweet_tooth_medecine = {
 fruitful_coop_planet_mod = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_smugglers_in_bar.dds"
 	icon_frame = 1
-	trade_value_mult = 0.15
+	planet_jobs_trade_produces_mult = 0.15
 }
 
 fruitful_coop_country_mod = {
-	trade_value_mult = 0.05
+	planet_jobs_trade_produces_mult = 0.05
 }
 
 preftl_hagglers_mod = {
-	trade_value_mult = 0.15
+	planet_jobs_trade_produces_mult = 0.15
 }
 
 preftl_action_trade_pact = {
@@ -729,7 +729,7 @@ plushie_tariff = {
 
 tech_abusers = {
 	icon = "gfx/interface/icons/modifiers/mod_add_base_country_intel.dds"
-	trade_value_mult = -0.05
+	planet_jobs_trade_produces_mult = -0.05
 }
 straight_talkers = {
 	icon = "gfx/interface/icons/modifiers/mod_cat_diplomacy.dds"
@@ -1031,7 +1031,7 @@ pre_ftl_diplomacy_01 = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_specialist_orator_neighbor.dds"
 	icon_frame = 1
 	planet_amenities_mult = 0.15
-	trade_value_mult = 0.1
+	planet_jobs_trade_produces_mult = 0.1
 	planet_jobs_produces_mult = 0.15
 }
 
@@ -1039,7 +1039,7 @@ pre_ftl_diplomacy_02 = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_specialist_orator_neighbor.dds"
 	icon_frame = 1
 	planet_jobs_produces_mult = 0.1
-	job_culture_worker_add = 2
+	job_culture_worker_add = 200
 }
 
 angered_solarpunk = {

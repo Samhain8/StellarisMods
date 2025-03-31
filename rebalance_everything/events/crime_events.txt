@@ -62,8 +62,8 @@ planet_event = {
 		is_under_colonization = no
 		is_colony = yes
 		owner = { is_country_type = default }
-		num_pops > 3
-		num_unemployed > 3 #early out before the expensive count_owned_pop to come
+		pop_amount > 300
+		unemployed_pop_amount > 300 #early out before the expensive count_owned_pop to come
 		NOR = {
 			has_planet_flag = criminal_underworld_disappeared # Cooldown
 			has_planet_flag = criminal_underworld_event_up
@@ -81,7 +81,7 @@ planet_event = {
 		OR = {
 			AND = {
 				owner = { is_gestalt = no }
-				count_owned_pop = {
+				count_owned_pop_amount = {
 					limit = {
 						is_unemployed = yes
 						is_shackled_robot = no
@@ -92,17 +92,17 @@ planet_event = {
 							has_living_standard = { type = living_standard_worker_ownership }
 						}
 					}
-					count > 3
+					count > 300
 				}
 			}
 			AND = {
 				owner = { is_gestalt = yes }
-				count_owned_pop = {
+				count_owned_pop_amount = {
 					limit = {
 						is_unemployed = yes
 						NOT = { has_living_standard = { type = living_standard_organic_trophy } }
 					}
-					count > 10
+					count > 1000
 				}
 			}
 		}
@@ -585,7 +585,7 @@ planet_event = {
 	}
 
 	trigger = {
-		num_pops > 0
+		pop_amount > 0
 		owner = { is_country_type = default }
 		planet_crime >= 30
 		NOR = {
@@ -730,6 +730,8 @@ planet_event = {
 	show_sound = event_cityscape
 	location = root
 	is_triggered_only = yes
+	auto_opens = no
+	notification_event_icon = "GFX_navbar_presence_indicator" # TODO_CD replace with unique icon AUG-50247
 
 	pre_triggers = {
 		has_owner = yes
@@ -746,7 +748,7 @@ planet_event = {
 			has_modifier = mob_rule
 		}
 		NOT = { has_planet_flag = criminal_underworld_appeared } # Cooldown
-		num_pops > 0
+		pop_amount > 0
 		planet_crime <= 10
 	}
 
@@ -1211,13 +1213,15 @@ planet_event = {
 
 	trigger = {
 		has_modifier = gang_wars
-		any_owned_pop = { has_job = enforcer }
+		any_owned_pop_group = {
+			# has_job = enforcer # Markus
+		}
 	}
 
 	immediate = {
-		random_owned_pop = {
-			limit = { has_job = enforcer }
-			kill_pop = yes
+		random_owned_pop_group = {
+			#limit = { has_job = enforcer } TODO Markus
+			kill_single_pop = yes
 		}
 	}
 
@@ -1286,9 +1290,9 @@ planet_event = {
 	}
 
 	immediate = {
-		random_owned_pop = { kill_pop = yes }
-		random_owned_pop = { kill_pop = yes }
-		random_owned_pop = { kill_pop = yes }
+		random_owned_pop_group = { kill_single_pop = yes }
+		random_owned_pop_group = { kill_single_pop = yes }
+		random_owned_pop_group = { kill_single_pop = yes }
 		add_planet_devastation = 15
 	}
 
@@ -1381,15 +1385,17 @@ planet_event = {
 
 	trigger = {
 		has_modifier = center_of_drug_trade
-		num_pops > 4
+		pop_amount > 400
 	}
 
 
 	immediate = {
-		random_owned_pop = { kill_pop = yes }
-		random_owned_pop = { kill_pop = yes }
-		random_owned_pop = { kill_pop = yes }
-		random_owned_pop = { kill_pop = yes }
+		while = {
+			count = 4
+			random_owned_pop_group = {
+				kill_single_pop = yes
+			}
+		}
 	}
 
 	option = {
@@ -1451,9 +1457,9 @@ planet_event = {
 	}
 
 	immediate = {
-		random_owned_pop = { kill_pop = yes }
-		random_owned_pop = { kill_pop = yes }
-		random_owned_pop = { kill_pop = yes }
+		random_owned_pop_group = { kill_single_pop = yes }
+		random_owned_pop_group = { kill_single_pop = yes }
+		random_owned_pop_group = { kill_single_pop = yes }
 		add_planet_devastation = 15
 	}
 
@@ -1598,6 +1604,74 @@ planet_event = {
 		name = crime.302.a
 		tooltip = {
 			add_modifier = { modifier = "corrupt_administration" days = 3600 }
+		}
+	}
+
+	option = {
+		name = crime.302.b
+
+		hidden_effect = {
+			remove_modifier = corrupt_administration
+			remove_planet_flag = planet_crime_flag
+			add_modifier = { modifier = "corrupt_administration" days = 1800 }
+			set_timed_planet_flag = {
+				flag = planet_crime_flag
+				days = 1800
+			}
+		}
+
+		inline_script = {
+			script = events/dynamic_resource_cost
+			RESOURCE = unity
+			COST1 = 50
+			INCOME1 = 1
+			COST2 = 200
+			INCOME2 = 10
+			COST3 = 400
+			INCOME3 = 20
+			COST4 = 600
+			INCOME4 = 40
+			COST5 = 1200
+			INCOME5 = 100
+			OWNER_SCOPE = planet.owner
+		}
+
+		tooltip = {
+			add_modifier = { modifier = "corrupt_administration" days = 1800 }
+		}
+	}
+
+	option = {
+		name = crime.302.c
+		trigger = {
+			owner = {
+				has_ethic = ethic_pacifist
+			}
+		}
+
+		hidden_effect = {
+			remove_modifier = corrupt_administration
+			remove_planet_flag = planet_crime_flag
+		}
+
+		inline_script = {
+			script = events/dynamic_resource_cost
+			RESOURCE = energy
+			COST1 = 100
+			INCOME1 = 10
+			COST2 = 500
+			INCOME2 = 50
+			COST3 = 1000
+			INCOME3 = 100
+			COST4 = 2000
+			INCOME4 = 200
+			COST5 = 5000
+			INCOME5 = 500
+			OWNER_SCOPE = planet.owner
+		}
+
+		tooltip = {
+			add_modifier = { modifier = "corrupt_administration" days = 365 }
 		}
 	}
 }

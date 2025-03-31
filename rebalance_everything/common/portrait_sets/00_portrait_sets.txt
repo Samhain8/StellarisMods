@@ -1252,3 +1252,19 @@ synthetic_aquatics = {
 		}
 	}
 }
+
+ep9_exclusive_molluscoid = {
+	species_class = MOL
+
+	conditional_portraits = {
+		randomizable = {
+			has_stargazer_dlc = yes
+		}
+		playable = {
+			has_stargazer_dlc = yes
+		}
+		portraits = {
+			"stargazer_01"
+		}
+	}
+}

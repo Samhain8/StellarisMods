@@ -2151,7 +2151,7 @@ planet_event = {
 		}
 		while = {
 			count = 5
-			create_pop = {
+			create_pop_group = {
 				species = event_target:formless_gaia_planet_species
 			}
 		}
@@ -2427,7 +2427,7 @@ country_event = {
 			set_capital = yes
 			while = {
 				count = 10
-				create_pop = {
+				create_pop_group = {
 					species = owner_main_species
 				}
 			}
@@ -3119,6 +3119,9 @@ country_event = {
 				days = 360
 			}
 		}
+	}
+	after = {
+		country_event = { id = timeline.65 } # Timeline The Formless Crisis
 	}
 }
 
@@ -4346,8 +4349,8 @@ planet_event = {
 
 	option = {
 		name = astral_planes.6045.a
-		random_owned_pop = {
-			kill_pop = yes
+		random_owned_pop_group = {
+			kill_single_pop = yes
 		}
 		hidden_effect = {
 			planet_event = {

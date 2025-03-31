@@ -31,7 +31,7 @@ planet_event = { #Irradiated
 	trigger = {
 		has_modifier = "irradiated_planet"
 		NOT = { has_planet_flag = irradiated_colony_flag }
-		num_pops > 0
+		pop_amount > 0
 	}
 
 	immediate = {
@@ -163,7 +163,7 @@ planet_event = { #titanic life
 	trigger = {
 		has_modifier = "titanic_life"
 		NOT = { has_planet_flag = titanic_life_colony_flag }
-		num_pops > 0
+		pop_amount > 0
 	}
 
 	immediate = {
@@ -344,7 +344,7 @@ planet_event = {
 	trigger = {
 		has_modifier = "unstable_tectonics"
 		NOT = { has_modifier = "recent_quake" }
-		num_pops > 0
+		pop_amount > 0
 	}
 
 	is_triggered_only = yes
@@ -446,7 +446,7 @@ planet_event = {
 	trigger = {
 		has_modifier = "asteroid_belt"
 		NOT = { has_modifier = "recent_comet" }
-		num_pops > 0
+		pop_amount > 0
 	}
 
 	is_triggered_only = yes
@@ -483,7 +483,7 @@ planet_event = {
 		owner = { NOT = { has_ethic = ethic_gestalt_consciousness } }
 		has_modifier = "atmospheric_hallucinogen"
 		NOT = { has_planet_flag = atmospheric_hallucinogen_colony_flag }
-		num_pops > 0
+		pop_amount > 0
 	}
 
 	immediate = {
@@ -580,7 +580,7 @@ planet_event = {
 #		NOT = { has_planet_flag = asteroid_defences_colony_flag }
 #		has_modifier = "asteroid_impacts"
 #		NOT = { has_modifier = "recent_impact" }
-#		num_pops > 1
+#		pop_amount > 100
 #	}
 #
 #	is_triggered_only = yes
@@ -654,7 +654,7 @@ planet_event = {
 #	trigger = {
 #		NOT = { has_planet_flag = asteroid_defences_colony_flag }
 #		has_modifier = "asteroid_impacts"
-#		num_pops > 1
+#		pop_amount > 100
 #		NOR = {
 #			has_modifier = "recent_impact"
 #			has_deposit = d_impact_crater
@@ -714,7 +714,7 @@ planet_event = { #strong magnetic field good
 		NOT = { has_modifier = "magnetic_research_boost" }
 		NOT = { has_modifier = "magnetic_disruption" }
 		NOT = { has_planet_flag = magnetic_mystery_solved }
-		num_pops > 0
+		pop_amount > 0
 	}
 
 	immediate = {
@@ -772,7 +772,7 @@ planet_event = { #strong magnetic field bad
 		NOT = { has_modifier = "magnetic_research_boost" }
 		NOT = { has_modifier = "magnetic_disruption" }
 		NOT = { has_planet_flag = magnetic_mystery_solved }
-		num_pops > 0
+		pop_amount > 0
 	}
 
 	immediate = {
@@ -876,7 +876,7 @@ planet_event = {
 				NOT = { has_modifier = "magnetic_research_boost" }
 				NOT = { has_modifier = "magnetic_disruption" }
 				has_ground_combat = no
-				num_pops > 0
+				pop_amount > 0
 			}
 			random_list = {
 				50 = { planet_event = { id = colony_mod.16 days = 30 random = 90 } }
@@ -888,7 +888,7 @@ planet_event = {
 		#	limit = {
 		#		has_modifier = asteroid_impacts
 		#		NOT = { has_planet_flag = asteroid_defences_colony_flag }
-		#		num_pops > 1
+		#		pop_amount > 100
 		#		NOT = { has_modifier = "recent_impact" }
 		#	}
 		#	random_list = {
@@ -913,14 +913,14 @@ planet_event = {
 				NOT = { has_planet_flag = titanic_life_colony_flag }
 			}
 			if = {
-				limit = {					
+				limit = {
 					owner = { has_origin = origin_primal_calling }
 				}
 				planet_event = { id = grand_archive.1010 days = 30 random = 90 }
 				break = yes
 			}
 			else_if = {
-				limit = {					
+				limit = {
 					NOT = { owner = { has_ethic = ethic_gestalt_consciousness } }
 				}
 				planet_event = { id = colony_mod.2 days = 30 random = 90 }
@@ -982,7 +982,7 @@ planet_event = { # Rogue moon
 		is_capital = no
 		has_ground_combat = no
 		is_occupied_flag = no
-		num_pops > 0
+		pop_amount > 0
 		NOR = {
 			is_planet_class = pc_habitat
 			is_planet_class = pc_ringworld_habitable
@@ -1119,7 +1119,7 @@ planet_event = { #Dimensional portal
 		is_capital = no
 		has_ground_combat = no
 		is_occupied_flag = no
-		num_pops > 0
+		pop_amount > 0
 		NOR = {
 			is_planet_class = pc_habitat
 			is_planet_class = pc_ringworld_habitable
@@ -1144,17 +1144,7 @@ planet_event = { #Dimensional portal
 			location = this
 			owner = root
 		}
-		if = {
-			limit = {
-				owner = {
-					is_gestalt = yes
-				}
-			}
-			add_deposit = d_portal_research_zone_gestalt
-		}
-		else = {
-			add_deposit = d_portal_research_zone
-		}
+		add_deposit = d_portal_research_zone
 	}
 }
 
@@ -1355,7 +1345,7 @@ planet_event = { #science
 			}
 		}
 		custom_tooltip = portal_closed_tooltip
-		hidden_effect = { 
+		hidden_effect = {
 			set_planet_flag = dportal_closed
 			remove_planet_flag = dportal_hell
 		}
@@ -1413,7 +1403,7 @@ planet_event = { #prayer
 			}
 		}
 		custom_tooltip = portal_closed_tooltip
-		hidden_effect = { 
+		hidden_effect = {
 			set_planet_flag = dportal_closed
 			remove_planet_flag = dportal_hell
 		}
@@ -1475,7 +1465,7 @@ planet_event = { #rocks
 			}
 		}
 		custom_tooltip = portal_closed_tooltip
-		hidden_effect = { 
+		hidden_effect = {
 			set_planet_flag = dportal_closed
 			remove_planet_flag = dportal_hell
 		}
@@ -2014,7 +2004,8 @@ planet_event = { #trade up
 	desc = "colony.3031.desc"
 	picture = GFX_evt_wormhole
 	location = ROOT
-
+	auto_opens = no
+	notification_event_icon = "GFX_message_diplomatic_contact"
 	is_triggered_only = yes
 
 	immediate = {
@@ -2552,7 +2543,7 @@ country_event = {
 			set_capital = yes
 			while = {
 				count = 28
-				create_pop = {
+				create_pop_group = {
 					species = event_target:demonic_incursion_species
 				}
 			}
@@ -2695,7 +2686,7 @@ planet_event = { #Demonic Refugees
 			}
 			while = {
 				count = 4
-				create_pop = {
+				create_pop_group = {
 					species = last_created_species
 				}
 			}
@@ -2714,7 +2705,7 @@ planet_event = { #Quest Complete!
 
 	option = {
 		name = colony.3060.a
-		hidden_effect = { 
+		hidden_effect = {
 			set_planet_flag = dportal_closed
 			remove_planet_flag = dportal_hell
 		}
@@ -3049,7 +3040,7 @@ planet_event = {
 			is_planet_class = pc_tropical
 
 		}
-		num_pops > 0
+		pop_amount > 0
 	}
 
 	immediate = {
@@ -3117,54 +3108,54 @@ planet_event = {
 		hidden_effect = {
 			if = {
 				limit = {
-					num_pops > 39
+					pop_amount > 3900
 				}
 				while = {
 					count = 10
-					random_owned_pop = {
-						kill_pop = yes
+					random_owned_pop_group = {
+						kill_single_pop = yes
 					}
 				}
 			}
 			else_if = {
 				limit = {
-					num_pops > 29
+					pop_amount > 2900
 				}
 				while = {
 					count = 7
-					random_owned_pop = {
-						kill_pop = yes
+					random_owned_pop_group = {
+						kill_single_pop = yes
 					}
 				}
 			}
 			else_if = {
 				limit = {
-					num_pops > 20
+					pop_amount > 2000
 				}
 				while = {
 					count = 5
-					random_owned_pop = {
-						kill_pop = yes
+					random_owned_pop_group = {
+						kill_single_pop = yes
 					}
 				}
 			}
 			else_if = {
 				limit = {
-					num_pops > 10
+					pop_amount > 1000
 				}
 				while = {
 					count = 3
-					random_owned_pop = {
-						kill_pop = yes
+					random_owned_pop_group = {
+						kill_single_pop = yes
 					}
 				}
 			}
 			else_if = {
 				limit = {
-					num_pops > 3
+					pop_amount > 300
 				}
-				random_owned_pop = {
-					kill_pop = yes
+				random_owned_pop_group = {
+					kill_single_pop = yes
 				}
 			}
 			else = {
@@ -3303,11 +3294,11 @@ planet_event = {
 			is_planet_class = pc_shattered_ring_habitable
 		}
 		NOT = { owner = { has_country_flag = bluelotus } }
-		num_pops > 0
-		any_owned_pop = {
+		pop_amount > 0
+		any_owned_pop_group = {
 			OR = {
-				has_job = miner
-				has_job = mining_drone
+				# has_job = miner # Markus
+				# has_job = mining_drone # Markus
 			}
 		}
 	}
@@ -3397,9 +3388,9 @@ planet_event = {
 		trigger = {
 			owner = { is_gestalt = yes }
 		}
-		random_owned_pop = {
-			limit = { has_job = alloy_drone }
-			kill_pop = yes
+		random_owned_pop_group = {
+			#limit = { has_job = alloy_drone } TODO Markus
+			kill_single_pop = yes
 		}
 		hidden_effect = {
 			planet_event = {
@@ -3554,9 +3545,9 @@ planet_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		random_owned_pop = {
-			limit = { has_job = bluelotus_technician }
-			kill_pop = yes
+		random_owned_pop_group = {
+			#limit = { has_job = bluelotus_technician } TODO Markus
+			kill_single_pop = yes
 		}
 	}
 
@@ -3593,7 +3584,7 @@ planet_event = {
 	}
 
 	trigger = {
-		num_pops > 0
+		pop_amount > 0
 		OR = {
 			is_planet_class = pc_continental
 			is_planet_class = pc_ocean
@@ -4131,7 +4122,7 @@ planet_event = {
 #			has_planet_flag = colony_event
 #			has_planet_flag = snake_infestation_fired
 #		}
-#		num_pops > 0
+#		pop_amount > 0
 #	}
 #
 #	is_triggered_only = yes
@@ -4305,7 +4296,7 @@ planet_event = {
 #
 #	trigger = {
 #		original_owner = yes
-#		num_pops > 0
+#		pop_amount > 0
 #	}
 #
 #	option = {
@@ -4819,8 +4810,8 @@ country_event = {
 			add_deposit = d_crystal_kraken_body
 			hidden_effect = {
 				remove_modifier = "crystal_kraken"
-				every_owned_pop = {
-					remove_pop_flag = event_purge
+				every_owned_pop_group = {
+					remove_pop_group_flag = event_purge
 				}
 			}
 		}
@@ -4852,8 +4843,8 @@ country_event = {
 			add_deposit = d_crystal_kraken_body_bombed
 			hidden_effect = {
 				remove_modifier = "crystal_kraken"
-				every_owned_pop = {
-					remove_pop_flag = event_purge
+				every_owned_pop_group = {
+					remove_pop_group_flag = event_purge
 				}
 			}
 		}
@@ -4958,10 +4949,10 @@ planet_event = {
 	immediate = {
 		while = {
 			limit = {
-				num_pops > 1
+				pop_amount > 100
 			}
-			random_owned_pop = {
-				kill_pop = yes
+			random_owned_pop_group = {
+				kill_single_pop = yes
 			}
 		}
 		add_modifier = {
@@ -5236,8 +5227,8 @@ planet_event = { # first problem - casual result - pop died, bad modifier
 
 	option = { # proceed
 		name = colony.9211.a
-		random_owned_pop = {
-			kill_pop = yes
+		random_owned_pop_group = {
+			kill_single_pop = yes
 		}
 		owner = {
 			add_modifier = {
@@ -5323,8 +5314,8 @@ planet_event = { # first problem - authoritarian result - pop died, no modifier
 
 	option = { # proceed
 		name = colony.9213.a
-		random_owned_pop = {
-			kill_pop = yes
+		random_owned_pop_group = {
+			kill_single_pop = yes
 		}
 		hidden_effect = {
 			planet_event = {
@@ -5362,8 +5353,8 @@ planet_event = { # first problem - gestalt result - pop died, no modifier
 
 	option = { # proceed
 		name = colony.9214.a
-		random_owned_pop = {
-			kill_pop = yes
+		random_owned_pop_group = {
+			kill_single_pop = yes
 		}
 		hidden_effect = {
 			planet_event = {
@@ -5833,8 +5824,8 @@ planet_event = { # third problem - casual 1 pop death
 
 	option = { # proceed
 		name = CURSES
-		random_owned_pop = {
-			kill_pop = yes
+		random_owned_pop_group = {
+			kill_single_pop = yes
 		}
 		hidden_effect = {
 			planet_event = {
@@ -6540,7 +6531,7 @@ planet_event = {
 		owner = {
 			is_machine_empire = no
 		}
-		num_pops > 0
+		pop_amount > 0
 		OR = {
 			is_planet_class = pc_continental
 			is_planet_class = pc_tropical
@@ -6753,7 +6744,7 @@ planet_event = {
 				has_country_flag = colony_junkyard_orbit
 			}
 		}
-		num_pops > 0
+		pop_amount > 0
 		NOT = {
 			has_planet_flag = colony_event
 		}
@@ -7255,13 +7246,13 @@ planet_event = {
 		if = {
 			limit = {
 				has_modifier = "planet_myrmeku_pest_control"
-				num_pops > 1
+				pop_amount > 100
 			}
-			random_owned_pop = {
+			random_owned_pop_group = {
 				limit = {
-					is_robot_pop = yes
+					is_robot_pop_group = yes
 				}
-				kill_pop = yes
+				kill_single_pop = yes
 			}
 		}
 		hidden_effect = {
@@ -8020,17 +8011,18 @@ country_event = {
 			capital_scope = {
 				while = {
 					count = 6
-					create_pop = {
+					create_pop_group = {
 						species = root.species
+						effect = { save_event_target_as = b_worlder_pop_group }
 					}
-					last_created_pop = { set_pop_flag = b_worlder }
+					event_target:b_worlder_pop_group = { set_pop_group_flag = b_worlder }
 				}
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = {
-						has_pop_flag = b_worlder
+						has_pop_group_flag = b_worlder
 					}
 					if = {
-						limit = { is_robot_pop = yes }
+						limit = { is_robot_pop_group = yes }
 						modify_species = {
 							species = this
 							add_trait = trait_robot_notofthisworld
@@ -8247,17 +8239,18 @@ country_event = {
 		event_target:b_planet = {
 			while = {
 				count = 18
-				create_pop = {
+				create_pop_group = {
 					species = root.species
+					effect = { save_event_target_as = b_worlder_pop_group }
 				}
-				last_created_pop = { set_pop_flag = b_worlder }
+				event_target:b_worlder_pop_group = { set_pop_group_flag = b_worlder }
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
-					has_pop_flag = b_worlder
+					has_pop_group_flag = b_worlder
 				}
 				if = {
-					limit = { is_robot_pop = yes }
+					limit = { is_robot_pop_group = yes }
 					modify_species = {
 						species = this
 						add_trait = trait_robot_notofthisworld
@@ -8597,8 +8590,8 @@ situation_event = {#Desperate Drones
 						}
 					}
 				}
-				random_owned_pop = {
-					kill_pop = yes
+				random_owned_pop_group = {
+					kill_single_pop = yes
 				}
 			}
 		}
@@ -8636,8 +8629,8 @@ situation_event = {#Desperate Drones
 						}
 					}
 				}
-				random_owned_pop = {
-					kill_pop = yes
+				random_owned_pop_group = {
+					kill_single_pop = yes
 				}
 			}
 		}
@@ -8944,7 +8937,7 @@ planet_event = {
 	}
 
 	trigger = {
-		num_pops > 4
+		pop_amount > 400
 		is_moon = no
 		has_moon = yes
 		is_artificial = no
@@ -8983,8 +8976,8 @@ planet_event = {
 				days = 180
 				random = 180
 			}
-			random_owned_pop = {
-				kill_pop = yes
+			random_owned_pop_group = {
+				kill_single_pop = yes
 			}
 		}
 	}
@@ -9002,8 +8995,8 @@ planet_event = {
 				days = 360
 				random = 360
 			}
-			random_owned_pop = {
-				kill_pop = yes
+			random_owned_pop_group = {
+				kill_single_pop = yes
 			}
 		}
 	}
@@ -9040,8 +9033,8 @@ planet_event = {
 			name = STASIS_PRISON_PROJECT
 		}
 		hidden_effect = {
-			random_owned_pop = {
-				kill_pop = yes
+			random_owned_pop_group = {
+				kill_single_pop = yes
 			}
 		}
 	}
@@ -9088,7 +9081,7 @@ planet_event = {
 	immediate = {
 		while = {
 			count = 2
-			create_pop = {
+			create_pop_group = {
 				species = owner_main_species
 			}
 		}
@@ -9210,7 +9203,7 @@ planet_event = {
 			}
 			while = {
 				count = 2
-				create_pop = {
+				create_pop_group = {
 					species = last_created_species
 				}
 			}
@@ -9275,7 +9268,7 @@ planet_event = {
 			}
 			while = {
 				count = 4
-				create_pop = {
+				create_pop_group = {
 					species = last_created_species
 				}
 			}
@@ -9319,7 +9312,7 @@ planet_event = {
 			}
 			while = {
 				count = 4
-				create_pop = {
+				create_pop_group = {
 					species = last_created_species
 				}
 			}
@@ -9359,7 +9352,7 @@ planet_event = {
 			}
 			while = {
 				count = 4
-				create_pop = {
+				create_pop_group = {
 					species = last_created_species
 				}
 			}
@@ -9393,7 +9386,7 @@ planet_event = {
 
 	trigger = {
 		has_modifier = "stratovents"
-		num_pops > 0
+		pop_amount > 0
 		NOR = {
 			has_planet_flag = colony_event
 			has_planet_flag = stratovent_world_colony
@@ -9840,8 +9833,8 @@ planet_event = {
 			blocked_deposit = random
 		}
 		owner = {
-			random_owned_pop = {
-				kill_pop = yes
+			random_owned_pop_group = {
+				kill_single_pop = yes
 			}
 		}
 		hidden_effect = {
@@ -9911,8 +9904,8 @@ planet_event = {
 
 	option = {
 		name = colony.7250.a
-		random_owned_pop = {
-			kill_pop = yes
+		random_owned_pop_group = {
+			kill_single_pop = yes
 		}
 		add_modifier = {
 			modifier = "cruel_actions"
@@ -10087,10 +10080,10 @@ planet_event = {
 					NOT = {
 						has_planet_flag = rampant_desertlings
 					}
-					num_pops > 1
+					pop_amount > 100
 					OR = {
 						has_planet_flag = desertling_fauna
-						any_owned_pop = { has_trait = trait_presapient_unintelligent }
+						any_owned_pop_group = { has_trait = trait_presapient_unintelligent }
 					}
 				}
 			set_planet_flag = rampant_desertlings

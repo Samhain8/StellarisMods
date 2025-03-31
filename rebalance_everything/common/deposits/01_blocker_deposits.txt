@@ -45,10 +45,9 @@ d_mountain_range = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_civic = civic_environmentalist }
+			biologist_is_ranger_trigger = yes
 		}
-		planet_rangers_minerals_produces_add = @ranger_large_production
+		planet_biologists_minerals_produces_add = @ranger_large_production
 	}
 
 	inline_script = deposits/environmental_architects_natural_blocker_modifier
@@ -111,10 +110,9 @@ d_active_volcano = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_civic = civic_environmentalist }
+			biologist_is_ranger_trigger = yes
 		}
-		planet_rangers_energy_produces_add = @ranger_large_production
+		planet_biologists_energy_produces_add = @ranger_large_production
 	}
 
 	inline_script = deposits/environmental_architects_natural_blocker_modifier
@@ -177,10 +175,9 @@ d_dangerous_wildlife_blocker = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_civic = civic_environmentalist }
+			biologist_is_ranger_trigger = yes
 		}
-		planet_rangers_society_research_produces_add = @ranger_large_production
+		planet_biologists_society_research_produces_add = @ranger_large_production
 	}
 
 	inline_script = deposits/environmental_architects_natural_blocker_modifier
@@ -253,10 +250,9 @@ d_dense_jungle = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_civic = civic_environmentalist }
+			biologist_is_ranger_trigger = yes
 		}
-		planet_rangers_food_produces_add = @ranger_small_production
+		planet_biologists_food_produces_add = @ranger_small_production
 	}
 
 	inline_script = deposits/environmental_architects_natural_blocker_modifier
@@ -325,10 +321,9 @@ d_toxic_kelp = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_civic = civic_environmentalist }
+			biologist_is_ranger_trigger = yes
 		}
-		planet_rangers_food_produces_add = @ranger_small_production
+		planet_biologists_food_produces_add = @ranger_small_production
 	}
 
 	inline_script = deposits/environmental_architects_natural_blocker_modifier
@@ -394,10 +389,9 @@ d_deep_sinkhole = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_civic = civic_environmentalist }
+			biologist_is_ranger_trigger = yes
 		}
-		planet_rangers_energy_produces_add = @ranger_small_production
+		planet_biologists_energy_produces_add = @ranger_small_production
 	}
 
 	inline_script = deposits/environmental_architects_natural_blocker_modifier
@@ -462,10 +456,9 @@ d_quicksand_basin = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_civic = civic_environmentalist }
+			biologist_is_ranger_trigger = yes
 		}
-		planet_rangers_minerals_produces_add = @ranger_small_production
+		planet_biologists_minerals_produces_add = @ranger_small_production
 	}
 
 	inline_script = deposits/environmental_architects_natural_blocker_modifier
@@ -526,10 +519,9 @@ d_noxious_swamp = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_civic = civic_environmentalist }
+			biologist_is_ranger_trigger = yes
 		}
-		planet_rangers_food_produces_add = @ranger_small_production
+		planet_biologists_food_produces_add = @ranger_small_production
 	}
 
 	inline_script = deposits/environmental_architects_natural_blocker_modifier
@@ -595,10 +587,9 @@ d_massive_glacier = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_civic = civic_environmentalist }
+			biologist_is_ranger_trigger = yes
 		}
-		planet_rangers_minerals_produces_add = @ranger_small_production
+		planet_biologists_minerals_produces_add = @ranger_small_production
 	}
 
 	inline_script = deposits/environmental_architects_natural_blocker_modifier
@@ -924,27 +915,27 @@ d_decrepit_dwellings = {
 		hidden_effect = {
 			if = {
 				limit = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						NOT = { has_trait = trait_hive_mind }
-						is_robot_pop = no
+						is_robot_pop_group = no
 					}
 				}
-				random_owned_pop = {
+				weighted_random_owned_pop_group = {
 					limit = {
 						NOT = { has_trait = trait_hive_mind }
-						is_robot_pop = no
+						is_robot_pop_group = no
 					}
 					root = {
-						create_pop = {
+						create_pop_group = {
 							species = prev
 						}
 					}
 				}
 			}
 			else = {
-				random_owned_pop = {
+				weighted_random_owned_pop_group = {
 					root = {
-						create_pop = {
+						create_pop_group = {
 							species = prev
 						}
 					}
@@ -981,7 +972,7 @@ d_tomb_world_ruins = {
 	}
 
 	on_cleared = {
-		create_pop = {
+		create_pop_group = {
 			species = owner
 		}
 	}
@@ -1150,25 +1141,25 @@ d_unsupervised_settlement = {
 		hidden_effect = {
 			if = {
 				limit = {
-					any_owned_pop = {
-						is_robot_pop = no
+					any_owned_pop_group = {
+						is_robot_pop_group = no
 					}
 				}
-				random_owned_pop = {
+				weighted_random_owned_pop_group = {
 					limit = {
-						is_robot_pop = no
+						is_robot_pop_group = no
 					}
 					root = {
-						create_pop = {
+						create_pop_group = {
 							species = prev
 						}
 					}
 				}
 			}
 			else = {
-				random_owned_pop = {
+				weighted_random_owned_pop_group = {
 					root = {
-						create_pop = {
+						create_pop_group = {
 							species = prev
 						}
 					}
@@ -1202,7 +1193,7 @@ d_collapsed_burrows = {
 	}
 
 	on_cleared = {
-		create_pop = {
+		create_pop_group = {
 			species = owner
 		}
 	}
@@ -1306,7 +1297,7 @@ d_ruined_building_blocker = {	#Added via event
 	}
 
 	on_cleared = {
-		create_pop = {
+		create_pop_group = {
 			species = owner
 		}
 	}
@@ -1435,7 +1426,7 @@ d_hibernating_lithoids = {
 			limit = {
 				is_homeworld = yes
 			}
-			create_pop = {
+			create_pop_group = {
 				species = owner
 			}
 		}
@@ -1468,7 +1459,7 @@ d_hibernating_lithoids = {
 			factor = 2
 			AND = {
 				from = {
-					num_unemployed = 0
+					unemployed_pop_amount = 0
 					is_homeworld = yes
 				}
 			}
@@ -1571,7 +1562,7 @@ d_tainted_snowcaps = {
 
 	planet_modifier = {
 		planet_max_districts_add = -2
-		planet_amenities_add = -5
+		planet_amenities_add = -500
 	}
 
 	resources = {
@@ -1681,6 +1672,7 @@ d_rotten_soil= {
 
 	potential = { always = no }
 
+	# TODO_CD: Blocker needs new purpose as max buildings modifier is now obsolete
 	planet_modifier = {
 		planet_max_buildings_add = -2
 	}
@@ -1712,7 +1704,7 @@ d_mass_graves = {
 
 	planet_modifier = {
 		habitability_ceil_add = -0.1
-		planet_amenities_add = -5
+		planet_amenities_add = -500
 		planet_max_districts_add = -2
 	}
 
@@ -1789,7 +1781,7 @@ d_seed_bombing_fungoid_blocker = {
 							is_flora_species = yes
 						}
 					}
-					create_pop = {
+					create_pop_group = {
 						species = owner_main_species
 					}
 				}
@@ -1809,7 +1801,7 @@ d_seed_bombing_fungoid_blocker = {
 							save_event_target_as = plants_species
 						}
 					}
-					create_pop = {
+					create_pop_group = {
 						species = event_target:plants_species
 					}
 					# no extra pops if you don't have flora species
@@ -1905,7 +1897,7 @@ d_seed_bombing_plantoid_blocker = {
 							is_flora_species = yes
 						}
 					}
-					create_pop = {
+					create_pop_group = {
 						species = owner.owner_main_species
 					}
 				}
@@ -1925,7 +1917,7 @@ d_seed_bombing_plantoid_blocker = {
 							save_event_target_as = plants_species
 						}
 					}
-					create_pop = {
+					create_pop_group = {
 						species = event_target:plants_species
 					}
 					# no extra pops if you don't have flora species

@@ -65,6 +65,7 @@ molluscoids = {
 	sets = {
 		molluscoids
 		synthetic_molluscoids
+		ep9_exclusive_molluscoid
 	}
 }
 

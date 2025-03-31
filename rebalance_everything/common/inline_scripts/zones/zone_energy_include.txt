@@ -1,0 +1,9 @@
+include = {
+	building_energy_grid
+	building_energy_nexus
+	building_resource_silo
+	building_bio_reactor
+	building_bio_reactor_2
+	building_automation_1
+	building_mote_harvesters
+}

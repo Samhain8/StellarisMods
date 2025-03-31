@@ -42,10 +42,10 @@
 # 		trigger = count_owned_planet
 # 		trigger_scope = owner 		#Lets you get the result of the trigger on a different scope. Default is "this"
 # 		parameters = { 				#Stick any further information necessary in here, like you'd do within the {} of the trigger normally
-# 			limit = { num_pops > 10 }
+# 			limit = { pop_amount > 1000 }
 # 		}
 # 		mode = add 					#Allows all numerical operations
-# 		mult = 5 					#Multiplies the outcome by this. In this example, this means adding 5 for each planet with more than 10 pops
+# 		mult = 5 					#Multiplies the outcome by this. In this example, this means adding 5 for each planet with more than 1000 pops
 # 	}
 # }
 
@@ -55,8 +55,8 @@
 # Then you can use $PARAM1$ in the script value and it will replace it with value1
 
 employed_pops_with_trade_mult = {
-	add = trigger:num_pops
-	subtract = trigger:num_unemployed
+	add = trigger:pop_amount
+	subtract = trigger:unemployed_pop_amount
 	mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
 }
 
@@ -284,7 +284,11 @@ balanced_researchers_skrand = {
 		trigger = count_owned_pop
 		parameters = {
 			limit = {
-				has_job = researcher
+				OR  ={
+					has_job = physicist
+					has_job = biologist
+					has_job = engineer
+				}
 			}
 		}
 		mult = 0.05
@@ -298,7 +302,11 @@ minimal_researchers_skrand = {
 		trigger = count_owned_pop
 		parameters = {
 			limit = {
-				has_job = researcher
+				OR  ={
+					has_job = physicist
+					has_job = biologist
+					has_job = engineer
+				}
 			}
 		}
 		mult = 0.01
@@ -562,7 +570,7 @@ mult_research_jobs = {
 		trigger = num_assigned_jobs
 		trigger_scope = FROMFROM
 		parameters = {
-			job = researcher
+			job = physicist
 		}
 		mode = add
 	}
@@ -570,7 +578,7 @@ mult_research_jobs = {
 		trigger = num_assigned_jobs
 		trigger_scope = FROMFROM
 		parameters = {
-			job = brain_drone
+			job = biologist
 		}
 		mode = add
 	}
@@ -578,7 +586,55 @@ mult_research_jobs = {
 		trigger = num_assigned_jobs
 		trigger_scope = FROMFROM
 		parameters = {
-			job = calculator
+			job = engineer
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = num_assigned_jobs
+		trigger_scope = FROMFROM
+		parameters = {
+			job = brain_drone_physicist
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = num_assigned_jobs
+		trigger_scope = FROMFROM
+		parameters = {
+			job = brain_drone_biologist
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = num_assigned_jobs
+		trigger_scope = FROMFROM
+		parameters = {
+			job = brain_drone_engineer
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = num_assigned_jobs
+		trigger_scope = FROMFROM
+		parameters = {
+			job = calculator_physicist
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = num_assigned_jobs
+		trigger_scope = FROMFROM
+		parameters = {
+			job = calculator_biologist
+		}
+		mode = add
+	}
+	complex_trigger_modifier = {
+		trigger = num_assigned_jobs
+		trigger_scope = FROMFROM
+		parameters = {
+			job = calculator_engineer
 		}
 		mode = add
 	}
@@ -870,21 +926,14 @@ add_planet_ascension_tier = {
 paragon_origin_count_egalitarians = {
 	base = 1
 	complex_trigger_modifier = {
-		trigger = count_owned_pop
+		trigger = count_owned_pop_amount
 		parameters = {
 			limit = {
-				pop_has_ethic = ethic_egalitarian
+				has_ethic = ethic_egalitarian
 			}
 		}
 		mode = add
 	}
-}
-
-paragon_take_10pr_pops = {
-	base = 0
-	add = trigger:num_pops
-	mult = 0.1
-	round = yes
 }
 
 count_ethics_on_council = {
@@ -1199,6 +1248,16 @@ tr_statecraft_amongst_peers_reward = {
 }
 
 perc_of_planet_pop = {
-	add = trigger:num_pops
+	add = trigger:pop_amount
 	multiply = 0.3
+}
+
+count_zones = {
+	complex_trigger_modifier = {
+		trigger = num_zones
+		parameters = {
+			type = zone_$TYPE$
+		}
+		mode = add
+	}
 }

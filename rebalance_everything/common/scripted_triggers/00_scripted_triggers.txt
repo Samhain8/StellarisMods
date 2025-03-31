@@ -389,6 +389,11 @@ has_aquatics = {
 	host_has_dlc = "Aquatics Species Pack"
 }
 
+has_apocalypse_dlc = {
+	optimize_memory
+	host_has_dlc = "Apocalypse"
+}
+
 has_space_monster_dlc = {
 	OR = {
 		host_has_dlc = "Leviathans Story Pack"		# Ether Drake
@@ -466,6 +471,11 @@ has_grand_archive_dlc = {
 has_rick_the_cube_dlc = {
 	optimize_memory
 	host_has_dlc = "Rick The Cube Species Portrait"
+}
+
+has_stargazer_dlc = {
+	optimize_memory
+	host_has_dlc = "Stargazer Species Portrait"
 }
 
 uninhabitable_regular_planet = {
@@ -677,7 +687,7 @@ can_be_leader = {
 		can_think = no
 	}
 	OR = {
-		is_robot_pop = no
+		is_robot_pop_group = no
 		root = {
 			OR = {
 				has_technology = tech_synthetic_leaders
@@ -702,7 +712,7 @@ can_be_military_leader = {
 	is_enslaved = no
 	is_sapient = yes
 	OR = {
-		is_robot_pop = no
+		is_robot_pop_group = no
 		owner = { has_policy_flag = ai_full_rights }
 		owner = { is_machine_empire = yes }
 		owner = { is_individual_machine = yes }
@@ -2018,6 +2028,11 @@ is_slaver = {
 	}
 }
 
+is_diplomatic = {
+	is_homicidal = no
+	NOT = { has_valid_civic = civic_inwards_perfection }
+}
+
 # country scope | see 'triggered_opinion_xenophage'
 is_xenophage = {
 	OR = {
@@ -2260,6 +2275,34 @@ can_build_unity_megastructures = {
 	}
 }
 
+can_build_fallen_empire_buildings = {
+	OR = {
+		is_fallen_empire = yes
+		has_country_flag = nano_forge_can_build
+		has_country_flag = skydome_can_build
+		has_country_flag = dimensional_fabricator_can_build
+		has_country_flag = affluence_center_can_build
+		has_country_flag = nourishment_center_can_build
+		has_country_flag = class_4_singularity_can_build
+		has_technology = tech_fe_affluence_1
+		has_technology = tech_fe_nourishment_1
+		has_technology = tech_fe_fabricator_1
+		has_technology = tech_fe_singularity_1
+		has_technology = tech_fe_forge_1
+		has_technology = tech_fe_dome_1
+		has_technology = tech_fe_fortress_1
+		has_technology = tech_fe_administration_1
+		has_technology = tech_fe_assembly_1
+		has_technology = tech_fe_clinic_1
+		has_technology = tech_fe_security_1
+		has_technology = tech_fe_market_1
+		has_technology = tech_fe_silo_1
+		has_technology = tech_fe_entertainment_1
+		has_technology = tech_fe_lab_1
+		has_technology = tech_fe_mine_1
+	}
+}
+
 has_gw_ring_world = {
 	OR = {
 		has_ascension_perk = ap_galactic_wonders_utopia
@@ -2315,7 +2358,6 @@ is_crossbreeding_possible = {
 		has_trait = trait_self_modified
 		has_trait = trait_clone_soldier_infertile
 		has_trait = trait_clone_soldier_infertile_full_potential
-		is_half_species = any
 	}
 }
 
@@ -2726,32 +2768,38 @@ embassy_upkeep_affordable = {
 enigmatic_modifier_jobs = { # Only pops with jobs affecting resources without modifiers qualify for enigmatic uplifting negative production modifiers.
 	OR = {
 		is_unemployed = yes
-		has_job = researcher
-		has_job = foundry
-		has_job = artisan
-		has_job = culture_worker
-		has_job = chemist
-		has_job = translucer
-		has_job = gas_refiner
-		has_job = technician
-		has_job = miner
-		has_job = crystal_miner
-		has_job = gas_extractor
-		has_job = mote_harvester
-		has_job = brain_drone
-		has_job = calculator
-		has_job = artisan_drone
-		has_job = fabricator
-		has_job = alloy_drone
-		has_job = chemist_drone
-		has_job = translucer_drone
-		has_job = gas_refiner_drone
-		has_job = crystal_mining_drone
-		has_job = mote_harvesting_drone
-		has_job = gas_extraction_drone
-		has_job = mining_drone
-		has_job = agri_drone
-		has_job = technician_drone
+		# has_job = physicist # Markus
+		# has_job = biologist
+		# has_job = engineer
+		# has_job = foundry
+		# has_job = artisan
+		# has_job = culture_worker
+		# has_job = chemist
+		# has_job = translucer
+		# has_job = gas_refiner
+		# has_job = technician
+		# has_job = miner
+		# has_job = crystal_miner
+		# has_job = gas_extractor
+		# has_job = mote_harvester
+		# has_job = brain_drone_physicist
+		# has_job = brain_drone_biologist
+		# has_job = brain_drone_engineer
+		# has_job = calculator_physicist
+		# has_job = calculator_biologist
+		# has_job = calculator_engineer
+		# has_job = artisan_drone
+		# has_job = fabricator
+		# has_job = alloy_drone
+		# has_job = chemist_drone
+		# has_job = translucer_drone
+		# has_job = gas_refiner_drone
+		# has_job = crystal_mining_drone
+		# has_job = mote_harvesting_drone
+		# has_job = gas_extraction_drone
+		# has_job = mining_drone
+		# has_job = agri_drone
+		# has_job = technician_drone
 	}
 }
 
@@ -2911,7 +2959,7 @@ baol_colony_3_trigger = {
 		}
 		OR = {
 			is_colony = no
-			num_sapient_pops < 10
+			sapient_pop_amount < 1000
 		}
 	}
 }
@@ -2936,7 +2984,7 @@ baol_colony_3_fallback_trigger = {
 		}
 		OR = {
 			is_colony = no
-			num_sapient_pops < 10
+			sapient_pop_amount < 1000
 		}
 	}
 }
@@ -3846,11 +3894,27 @@ ai_should_build_habitats = {
 
 has_any_industry_district = {
 	OR = {
-		has_district = district_industrial
-		has_district = district_hab_industrial
+#		has_district = district_hab_industrial
 		has_district = district_rw_industrial
 		has_district = district_arcology_arms_industry
 		has_district = district_arcology_civilian_industry
+	}
+}
+
+has_any_industry_zone = {
+	OR = {
+		num_zones = {
+			type = zone_industrial
+			value > 0
+		}
+		num_zones = {
+			type = zone_foundry
+			value > 0
+		}
+		num_zones = {
+			type = zone_factory
+			value > 0
+		}
 	}
 }
 
@@ -3898,8 +3962,8 @@ got_any_unprotected_drones = {
 			current_situation_approach = protect_simple_drones
 		}
 		target = {
-			any_owned_pop = {
-				is_robot_pop = yes
+			any_owned_pop_group = {
+				is_robot_pop_group = yes
 				is_pop_category = complex_drone
 			}
 		}
@@ -3909,16 +3973,16 @@ got_any_unprotected_drones = {
 			current_situation_approach = protect_complex_drones
 		}
 		target = {
-			any_owned_pop = {
-				is_robot_pop = yes
+			any_owned_pop_group = {
+				is_robot_pop_group = yes
 				is_pop_category = simple_drone
 			}
 		}
 	}
 	else = { # if not protecting anyone, check for any drone
 		target = {
-			any_owned_pop = {
-				is_robot_pop = yes
+			any_owned_pop_group = {
+				is_robot_pop_group = yes
 			}
 		}
 	}
@@ -4550,5 +4614,125 @@ can_obtain_rare_crystals = {
 			has_technology = tech_rare_crystals
 			has_country_flag = has_market_access
 		}
+	}
+}
+
+very_first_contact_paragon = {
+	NOR = {
+		has_country_flag = first_contact_protocol_event_happened
+		has_origin = origin_common_ground
+		has_origin = origin_hegemon
+	}
+	years_passed < 15
+}
+
+weapon_tech_increased = {
+	OR = {
+		last_increased_tech = tech_mass_drivers_2
+		last_increased_tech = tech_mass_drivers_3
+		last_increased_tech = tech_mass_drivers_4
+		last_increased_tech = tech_mass_drivers_5
+		last_increased_tech = tech_kinetic_artillery_1
+		last_increased_tech = tech_kinetic_artillery_2
+		last_increased_tech = tech_mass_accelerator_1
+		last_increased_tech = tech_mass_accelerator_2
+		last_increased_tech = tech_autocannons_1
+		last_increased_tech = tech_autocannons_2
+		last_increased_tech = tech_autocannons_3
+		last_increased_tech = tech_flak_batteries_1
+		last_increased_tech = tech_flak_batteries_2
+		last_increased_tech = tech_flak_batteries_3
+		last_increased_tech = tech_missiles_1
+		last_increased_tech = tech_missiles_2
+		last_increased_tech = tech_missiles_3
+		last_increased_tech = tech_missiles_4
+		last_increased_tech = tech_missiles_5
+		last_increased_tech = tech_swarmer_missiles_1
+		last_increased_tech = tech_swarmer_missiles_2
+		last_increased_tech = tech_torpedoes_1
+		last_increased_tech = tech_torpedoes_2
+		last_increased_tech = tech_torpedoes_3
+		last_increased_tech = tech_lasers_2
+		last_increased_tech = tech_lasers_3
+		last_increased_tech = tech_lasers_4
+		last_increased_tech = tech_lasers_5
+		last_increased_tech = tech_energy_lance_1
+		last_increased_tech = tech_energy_lance_2
+		last_increased_tech = tech_plasma_1
+		last_increased_tech = tech_plasma_2
+		last_increased_tech = tech_plasma_3
+		last_increased_tech = tech_arc_emitter_1
+		last_increased_tech = tech_arc_emitter_2
+		last_increased_tech = tech_disruptors_1
+		last_increased_tech = tech_disruptors_2
+		last_increased_tech = tech_disruptors_3
+		last_increased_tech = tech_energy_torpedoes_1
+		last_increased_tech = tech_energy_torpedoes_2
+		last_increased_tech = tech_pd_tracking_1
+		last_increased_tech = tech_pd_tracking_2
+		last_increased_tech = tech_pd_tracking_3
+		last_increased_tech = tech_extradimensional_weapon_1
+		last_increased_tech = tech_mining_drone_weapon_1
+		last_increased_tech = tech_space_cloud_weapon_1
+		last_increased_tech = null_void_beam
+		last_increased_tech = tech_amoeba_strike_craft_1
+		last_increased_tech = tech_swarm_strike_craft_1
+		last_increased_tech = tech_scourge_missile_1
+		last_increased_tech = tech_space_whale_weapon_1
+		last_increased_tech = tech_space_whale_weapon_1
+	}
+}
+
+system_has_science_nexus = {
+	solar_system = {
+		any_system_megastructure = {
+			OR = {
+				is_megastructure_type = think_tank_1
+				is_megastructure_type = think_tank_2
+				is_megastructure_type = think_tank_3
+				is_megastructure_type = think_tank_4
+			}
+		}
+	}
+}
+
+has_any_rare_strategic_resource = {
+	OR = {
+		has_resource = astral_threads
+		has_resource = sr_zro
+		has_resource = exotic_gases
+		has_resource = sr_dark_matter
+		has_resource = sr_living_metal
+		has_resource = rare_crystals
+		has_resource = volatile_motes
+		has_resource = nanites
+	}
+}
+
+has_deficits = {
+	OR = {
+		has_deficit = minerals
+		has_deficit = energy
+		has_deficit = food
+		has_deficit = consumer_goods
+		has_deficit = alloys
+		has_deficit = unity
+		has_deficit = influence
+		has_deficit = sr_zro
+		has_deficit = exotic_gases
+		has_deficit = sr_dark_matter
+		has_deficit = sr_living_metal
+		has_deficit = rare_crystals
+		has_deficit = volatile_motes
+		has_deficit = nanites
+	}
+}
+
+is_holy_world = {
+	OR = {
+		has_planet_flag = holy_world_1
+		has_planet_flag = holy_world_2
+		has_planet_flag = holy_world_3
+		has_planet_flag = holy_world_4
 	}
 }

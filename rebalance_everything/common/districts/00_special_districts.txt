@@ -6,83 +6,92 @@
 @hab_maintenance = 2
 @low_hab_maintenance = 0.2
 
-district_orders_demesne = {
-	base_buildtime = 240
-	is_capped_by_modifier = no
+# district_orders_demesne = {
+# 	base_buildtime = 240
+# 	is_capped_by_modifier = no
 
-	show_on_uncolonized = {
-		uses_district_set = habitat
-		OR = {
-			has_planet_flag = toxic_knights_habitat
-			has_building = building_order_castle
-		}
-	}
+# 	# TODO_CD: change to real slots
+# 	zone_slots = {
 
-	potential = {
-		uses_district_set = habitat
-		exists = owner
-		owner = { has_origin = origin_toxic_knights }
-		OR = {
-			has_planet_flag = toxic_knights_habitat
-			has_building = building_order_castle
-		}
-	}
+# 		slot_city_government
+# 		slot_city_01
+# 		slot_city_02
+# 		slot_city_03
+# 	}
 
-	convert_to = {
-		district_hab_housing
-	}
+# 	show_on_uncolonized = {
+# 		uses_district_set = habitat
+# 		OR = {
+# 			has_planet_flag = toxic_knights_habitat
+# 			has_building = building_order_castle
+# 		}
+# 	}
 
-	resources = {
-		category = planet_districts_orders_demesne
-		cost = {
-			minerals = @hab_cost
-		}
-		upkeep = {
-			energy = @hab_maintenance
-			alloys = @low_hab_maintenance
-		}
-	}
+# 	potential = {
+# 		uses_district_set = habitat
+# 		exists = owner
+# 		owner = { has_origin = origin_toxic_knights }
+# 		OR = {
+# 			has_planet_flag = toxic_knights_habitat
+# 			has_building = building_order_castle
+# 		}
+# 	}
 
-	planet_modifier = {
-		planet_max_buildings_add = 0.50
-		planet_housing_add = 6
-		job_squire_add = 2
-	}
+# 	convert_to = {
+# 		district_hab_housing
+# 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			owner = {
-				is_void_dweller_empire = yes
-			}
-		}
-		job_squire_add = 1
-	}
+# 	resources = {
+# 		category = planet_districts_orders_demesne
+# 		cost = {
+# 			minerals = @hab_cost
+# 		}
+# 		upkeep = {
+# 			energy = @hab_maintenance
+# 			alloys = @low_hab_maintenance
+# 		}
+# 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			has_deposit = d_dimensional_manipulation_device
-			exists = owner
-			NOT = {
-				owner = { has_deficit = sr_dark_matter }
-			}
-		}
-		planet_max_buildings_add = 0.5
-		planet_housing_add = 1
-	}
+# 	planet_modifier = {
+# 		planet_max_buildings_add = 0.50
+# 		planet_housing_add = 600
+# 		job_squire_add = @base_district_jobs
+# 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			has_deposit = d_dimensional_manipulation_device
-			exists = owner
-			owner = { has_deficit = sr_dark_matter }
-		}
-		planet_housing_add = -1
-	}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			owner = {
+# 				is_void_dweller_empire = yes
+# 			}
+# 		}
+# 		job_squire_add = 100
+# 	}
 
-	triggered_desc = {
-		text = job_squire_effect_desc
-	}
-}
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			has_deposit = d_dimensional_manipulation_device
+# 			exists = owner
+# 			NOT = {
+# 				owner = { has_deficit = sr_dark_matter }
+# 			}
+# 		}
+# 		planet_max_buildings_add = 0.5
+# 		planet_housing_add = 100
+# 	}
+
+# 	triggered_planet_modifier = {
+# 		potential = {
+# 			has_deposit = d_dimensional_manipulation_device
+# 			exists = owner
+# 			owner = { has_deficit = sr_dark_matter }
+# 		}
+# 		planet_housing_add = -100
+# 	}
+
+# 	triggered_desc = {
+# 		text = job_squire_effect_desc
+# 	}
+# }
 
 district_cosmogenesis_world_science = {
 	is_capped_by_modifier = no
@@ -93,11 +102,19 @@ district_cosmogenesis_world_science = {
 		uses_district_set = cosmogenesis_world
 	}
 
+	# TODO_CD: change to real slots
+	zone_slots = {
+		slot_city_government
+		slot_city_01
+		slot_city_02
+		slot_city_03
+	}
+
 	resources = {
 		category = planet_districts
 		cost = {
-			alloys = @lathe_alloy_cost 
-			advanced_logic = @lathe_logic_cost 
+			alloys = @lathe_alloy_cost
+			advanced_logic = @lathe_logic_cost
 		}
 		upkeep = {
 			energy = @lathe_upkeep
@@ -110,16 +127,17 @@ district_cosmogenesis_world_science = {
 		owner = { has_ascension_perk = ap_cosmogenesis }
 	}
 	planet_modifier = {
-		planet_housing_add = 15
+		planet_housing_add = 1500
 		pc_cosmogenesis_world_max_buildings_add = 1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			NOT = { owner = { has_deficit = energy } }
+		}
 		planet_neural_chips_physics_research_produces_add = 0.75
 		planet_neural_chips_society_research_produces_add = 0.75
 		planet_neural_chips_engineering_research_produces_add = 0.75
-
 	}
-	#triggered_desc = {
-	#	text = chip_science_output_increased_tt
-	#}
 
 	ai_estimate_without_unemployment = yes
 	additional_ai_weight = 200
@@ -135,11 +153,19 @@ district_cosmogenesis_world_logic = {
 		uses_district_set = cosmogenesis_world
 	}
 
+	# TODO_CD: change to real slots
+	zone_slots = {
+		slot_city_government
+		slot_city_01
+		slot_city_02
+		slot_city_03
+	}
+
 	resources = {
 		category = planet_districts
 		cost = {
-			alloys = @lathe_alloy_cost 
-			advanced_logic = @lathe_logic_cost 
+			alloys = @lathe_alloy_cost
+			advanced_logic = @lathe_logic_cost
 		}
 		upkeep = {
 			energy = @lathe_upkeep
@@ -152,13 +178,15 @@ district_cosmogenesis_world_logic = {
 		owner = { has_ascension_perk = ap_cosmogenesis }
 	}
 	planet_modifier = {
-		planet_housing_add = 15
+		planet_housing_add = 1500
 		pc_cosmogenesis_world_max_buildings_add = 1
+	}
+	triggered_planet_modifier = {
+		potential = {
+			NOT = { owner = { has_deficit = energy } }
+		}
 		planet_neural_chips_advanced_logic_produces_add = 0.025
 	}
-	#triggered_desc = {
-	#	text = chip_logic_output_increased_tt
-	#}
 
 	ai_estimate_without_unemployment = yes
 	additional_ai_weight = 200

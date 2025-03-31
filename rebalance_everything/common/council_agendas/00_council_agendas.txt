@@ -23,7 +23,7 @@ agenda_infinite_opportunities_gestalt = {
 		always = yes
 	}
 	modifier = {
-		planet_amenities_no_happiness_add = 4
+		planet_amenities_no_happiness_add = 400
 	}
 	finish_modifier = agenda_infinite_opportunities_gestalt_finish
 }
@@ -46,6 +46,9 @@ agenda_unlock_slot = {
 	}
 	effect = {
 		unlock_council_slots = 1
+		country_event = {
+			id = timeline.47 # Timeline Council Max Expansion
+		}
 	}
 	ai_weight = {
 		base = 9999

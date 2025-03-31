@@ -1,0 +1,41 @@
+is_unemployed = {
+	hidden_trigger = {
+		OR = {
+			is_pop_category = ruler_unemployment
+			is_pop_category = specialist_unemployment
+			is_pop_category = worker_unemployment
+			is_pop_category = simple_drone_unemployment
+		}
+	}
+}
+
+pop_amount = {
+	count_owned_pop_amount = { }
+}
+
+sapient_pop_amount = {
+	count_owned_pop_amount = {
+		limit = {
+			is_sapient = yes
+		}
+	}
+}
+
+psionic_pop_amount = {
+	count_owned_pop_amount = {
+		limit = {
+			OR = {
+				has_trait = trait_psionic
+				has_trait = trait_latent_psionic
+			}
+		}
+	}
+}
+
+unemployed_pop_amount = {
+	count_owned_pop_amount = {
+		limit = {
+			is_unemployed = yes
+		}
+	}
+}

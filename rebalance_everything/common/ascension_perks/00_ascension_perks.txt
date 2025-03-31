@@ -196,6 +196,7 @@ ap_become_the_crisis = {
 	on_enabled = {
 		hidden_effect = {
 			set_ai_personality = became_the_crisis
+			country_event = { id = timeline.69 } # Timeline Become the crisis
 		}
 		activate_crisis_progression = nemesis_path
 	}
@@ -906,7 +907,10 @@ ap_eternal_vigilance = {
 	possible = {
 		custom_tooltip = {
 			fail_text = "requires_technology_starbase_4"
-			has_technology = tech_starbase_4
+			OR = {
+				has_technology = tech_starbase_4
+				has_tradition = tr_unyielding_finish
+			}
 		}
 	}
 
@@ -916,6 +920,17 @@ ap_eternal_vigilance = {
 		shipclass_starbase_hull_mult = 0.25
 		shipclass_military_station_damage_mult = 0.25
 		starbase_defense_platform_capacity_add = 5
+		ship_military_station_small_upkeep_mult = -0.5
+	}
+
+	on_enabled = {
+		custom_tooltip = ap_eternal_vigilance_tt
+		hidden_effect = {
+			country_event = {
+				id = country.2050
+				days = 180
+			}
+		}
 	}
 
 	potential = {
@@ -1284,10 +1299,11 @@ ap_voidborn = {
 	}
 
 	modifier = {
-		megastructures_habitat_cost_mult = -0.20
-		habitat_districts_building_slots_add = 0.25
 		habitat_max_districts_add = 2
-		habitat_district_jobs_add = 1
+		megastructures_habitat_cost_mult = -0.20
+		planet_districts_hab_cost_mult = -0.20
+		habitat_districts_minor_add = 0.25
+		habitat_district_jobs_mult = 0.5
 	}
 
 	ai_weight = {
@@ -1684,7 +1700,7 @@ ap_xeno_compatibility = {
 	}
 
 	modifier = {
-		planet_immigration_pull_mult = 0.33
+		#planet_immigration_pull_mult = 0.33 # TODO: [AUG-48754] Use automigration modifier
 	}
 
 	possible = {
@@ -1694,7 +1710,7 @@ ap_xeno_compatibility = {
 		}
 		custom_tooltip = {
 			fail_text = "requires_xeno_species"
-			any_owned_pop = {
+			any_owned_pop_group = {
 				NOR = {
 					is_same_species = root.owner
 					has_trait = trait_mechanical
@@ -1738,7 +1754,6 @@ ap_universal_transactions = {
 
 	modifier = {
 		country_official_cap_add = 1
-		commercial_pact_mult = 0.20
 		planet_branch_offices_cost_mult = -0.15
 	}
 

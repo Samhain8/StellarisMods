@@ -27,17 +27,10 @@
  synth_positive_media_coverage_tt: "Positive Media Coverage"
  synth_negative_media_coverage_tt: "Negative Media Coverage"
 
- biological_pop: "£pop£ Biological Pop"
- biological_pops: "$biological_pop$s"
- mechanical_pop: "£pop£ Mechanical Pop"
- mechanical_pops: "$mechanical_pop$s"
- pop_is: "is"
- pops_are: "are"
-
 # Buildings
  building_identity_complex: "Identity Complex"
  building_identity_complex_desc: "A cutting-edge hub for the research and development of synthetic identities."
- building_identity_complex_speed: "+1 £pop£ Pop"
+ building_identity_complex_speed: "§G+100§! £pop£ §HPops§!"
  building_identity_complex_effect_desc: "$building_identity_complex_speed$ uploaded per month."
  building_ai_emporium: "AI Emporium"
  building_ai_emporium_desc: "The one stop mega-complex for all your Artificial Intelligence needs. Have sentient AIs transform ordinary objects into smart companions for your family or business. AI a bit too self-aware for its own good? Bring it here and our skilled technicians will reset it faster than the speed of sublight."
@@ -199,15 +192,15 @@
  tech_identity_copy: "Identity Copies"
  tech_identity_copy_desc: "We will be able to copy the identity and memories of a Synthetic into a new mechanical body. The copies have predictable skill sets but make for stale conversation."
  TECH_UNLOCK_IDENTITY_COPY_TITLE: "Grants access to policy:$TABBED_NEW_LINE$§H$policy_synthetic_identities_policy$§! - $identity_copy_name$"
- TECH_UNLOCK_IDENTITY_COPY_DESC: "§H£pops£ Mechanical Pops§!$TABBED_NEW_LINE$Happiness: §R-5%§!"
+ TECH_UNLOCK_IDENTITY_COPY_DESC: "£pop£ §HMechanical Pops§!$TABBED_NEW_LINE$Happiness: §R-5%§!"
  tech_identity_fusion: "Identity Fusion"
  tech_identity_fusion_desc: "Merging the identities and memories of two or more Synthetics into a mechanical body will create new, somewhat unique individuals."
  TECH_UNLOCK_IDENTITY_FUSION_TITLE: "Grants access to policy:$TABBED_NEW_LINE$§H$policy_synthetic_identities_policy$§! - $identity_fusion_name$"
- TECH_UNLOCK_IDENTITY_FUSION_DESC: "§H£pops£ Mechanical Pops§!$TABBED_NEW_LINE$Assembly Cost: §R+10%§!"
+ TECH_UNLOCK_IDENTITY_FUSION_DESC: "£pop£ §HMechanical Pops§!$TABBED_NEW_LINE$Assembly Cost: §R+10%§!"
  tech_identity_initialization: "Identity Initialization"
  tech_identity_initialization_desc: "We will be able to initialize an identity kernel and provide it with a virtual childhood. While expensive, we can simulate the optimal experiences to generate productive personalities."
  TECH_UNLOCK_IDENTITY_INITIALIZATION_TITLE: "Grants access to policy:$TABBED_NEW_LINE$§H$policy_synthetic_identities_policy$§! - $identity_initialization_name$"
- TECH_UNLOCK_IDENTITY_INITIALIZATION_DESC: "§H£pops£ Mechanical Pops§!$TABBED_NEW_LINE$Happiness: §G+5%§!$TABBED_NEW_LINE$Resources from £pop£ Jobs: §G+5%§!$TABBED_NEW_LINE$Assembly Cost: §R+20%§!"
+ TECH_UNLOCK_IDENTITY_INITIALIZATION_DESC: "£pop£ §HMechanical Pops§!$TABBED_NEW_LINE$Happiness: §G+5%§!$TABBED_NEW_LINE$Resources from £job£ §HJobs§!: §G+5%§!$TABBED_NEW_LINE$Assembly Cost: §R+20%§!"
 
 # DIGITIZATION STAGE 1
  synth.100.name: "Booting Up" # Stage 1 - Start event
@@ -338,7 +331,7 @@
  synth.4.name: "A Synthetic Population" # Digitization - Last event
  synth.4.desc: "In a coordinated effort, we have achieved what seemed impossible, transforming our consciousness into code, and our bodies into machines.\n\nThe process was not without difficulty, the transition far from easy. But whatever may have been lost along the way, our new configuration offers endless possibilities."
  synth.4.a: "We will be exceptional."
- synth.4.a.tt: "Unlocks Full Effects of Traditions: §Y$tradition_synthetics$§!"
+ synth.4.a.tt: "Unlocks Full Effects of Tradition Tree: ['tradition_category:tradition_synthetics']"
 
 ### DIGITIZATION SITUATION END ###
 

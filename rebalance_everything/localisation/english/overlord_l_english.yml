@@ -158,7 +158,7 @@
  trait_robot_cave_dweller_desc: "§LThese machines are masterfully crafted for cave exploration and mineral extraction, showcasing exceptional maneuverability which enables them to effortlessly traverse through underground spaces.§!"
  trait_robot_cave_dweller_tooltip: "$MOD_POP_ASSEMBLY_SPEED$: §R-20%§!"
  origin_subterranean_machines: "Subterranean Machines"
- origin_subterranean_machines_desc: "This civilization has flawlessly intergated into subterranean existence, initially driven by either calculated self-preservation or a directive to locate of hidden, abundant resources in the depths. The resulting mechanical adaptations have unearthed a versatile and unwavering community of machines."
+ origin_subterranean_machines_desc: "This civilization has flawlessly integrated into subterranean existence, initially driven by either calculated self-preservation or a directive to locate of hidden, abundant resources in the depths. The resulting mechanical adaptations have unearthed a versatile and unwavering community of machines."
  origin_tooltip_robot_subterranean_effects: "- $SPECIES_TRAITS$ ['concept_robot_cave_dweller']\n- ['concept_mining_district', £district£ Mining Districts]: Uncapped"
 
  START_SCREEN_SUBTERRANEAN:1 "While other beings on [GetHomeWorldName] would spend their nights out in the wilds, our ancestors soon learned the wisdom of underground dwellings, sheltered from harsh light and climates.\n\n$START_SCREEN_SUBTERRANEAN_END$"

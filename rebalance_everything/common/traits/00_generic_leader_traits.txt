@@ -293,7 +293,7 @@ leader_trait_capitalist = {
 			}
 			trait_is_gestalt_check = no
 		}
-		job_technician_add = 2
+		job_technician_add = 200
 	}
 	triggered_background_planet_modifier = {
 		potential = {
@@ -306,7 +306,7 @@ leader_trait_capitalist = {
 			}
 			trait_is_gestalt_check = yes
 		}
-		job_technician_drone_add = 2
+		job_technician_drone_add = 200
 	}
 	planet_modifier = {
 		planet_technician_energy_produces_mult = 0.05
@@ -357,7 +357,7 @@ leader_trait_capitalist_2 = {
 			}
 			trait_is_gestalt_check = no
 		}
-		job_technician_add = 4
+		job_technician_add = 400
 	}
 	triggered_background_planet_modifier = {
 		potential = {
@@ -370,7 +370,7 @@ leader_trait_capitalist_2 = {
 			}
 			trait_is_gestalt_check = yes
 		}
-		job_technician_drone_add = 4
+		job_technician_drone_add = 400
 	}
 	planet_modifier = {
 		planet_technician_energy_produces_mult = 0.10
@@ -411,7 +411,7 @@ leader_trait_private_mines = {
 			}
 			trait_is_gestalt_check = no
 		}
-		job_miner_add = 2
+		job_miner_add = 200
 	}
 	triggered_background_planet_modifier = {
 		potential = {
@@ -425,7 +425,7 @@ leader_trait_private_mines = {
 			}
 			trait_is_gestalt_check = yes
 		}
-		job_mining_drone_add = 2
+		job_mining_drone_add = 200
 	}
 	triggered_background_planet_modifier = {
 		potential = {
@@ -439,7 +439,7 @@ leader_trait_private_mines = {
 			}
 			trait_is_gestalt_check = no
 		}
-		job_scrap_miner_add = 2
+		job_scrap_miner_add = 200
 	}
 	triggered_background_planet_modifier = {
 		potential = {
@@ -453,7 +453,7 @@ leader_trait_private_mines = {
 			}
 			trait_is_gestalt_check = yes
 		}
-		job_scrap_miner_drone_add = 2
+		job_scrap_miner_drone_add = 200
 	}
 	planet_modifier = {
 		planet_miners_minerals_produces_mult = 0.05
@@ -505,7 +505,7 @@ leader_trait_private_mines_2 = {
 			}
 			trait_is_gestalt_check = no
 		}
-		job_miner_add = 4
+		job_miner_add = 400
 	}
 	triggered_background_planet_modifier = {
 		potential = {
@@ -519,7 +519,7 @@ leader_trait_private_mines_2 = {
 			}
 			trait_is_gestalt_check = yes
 		}
-		job_mining_drone_add = 4
+		job_mining_drone_add = 400
 	}
 	triggered_background_planet_modifier = {
 		potential = {
@@ -533,7 +533,7 @@ leader_trait_private_mines_2 = {
 			}
 			trait_is_gestalt_check = no
 		}
-		job_scrap_miner_add = 4
+		job_scrap_miner_add = 400
 	}
 	triggered_background_planet_modifier = {
 		potential = {
@@ -547,7 +547,7 @@ leader_trait_private_mines_2 = {
 			}
 			trait_is_gestalt_check = yes
 		}
-		job_scrap_miner_drone_add = 4
+		job_scrap_miner_drone_add = 400
 	}
 	planet_modifier = {
 		planet_miners_minerals_produces_mult = 0.10
@@ -584,57 +584,32 @@ leader_trait_homesteader = {
 		potential = {
 			exists = FROM
 			FROM = {
-				exists = owner
-				owner = {
-					is_same_value = root.owner
-					OR = {
-						is_anglers_empire = no
-						AND = {
-							is_anglers_empire = yes
-							NOT = { PREV = { planet = { is_wet = yes } } }
-						}
-					}
-				}
+				artisan_is_pearl_diver_trigger = yes
 			}
 			trait_is_gestalt_check = no
 		}
-		job_farmer_add = 2
+		job_farmer_add = 200
 	}
 	triggered_background_planet_modifier = {
 		potential = {
 			exists = FROM
 			FROM = {
-				exists = owner
-				owner = {
-					is_same_value = root.owner
-					OR = {
-						is_anglers_empire = no
-						AND = {
-							is_anglers_empire = yes
-							NOT = { PREV = { planet = { is_wet = yes } } }
-						}
-					}
-				}
+				artisan_is_pearl_diver_trigger = no
 			}
 			trait_is_gestalt_check = yes
 		}
-		job_agri_drone_add = 2
+		job_agri_drone_add = 200
 	}
 	triggered_background_planet_modifier = {
 		potential = {
 			exists = FROM
 			FROM = {
-				exists = owner
-				owner = {
-					is_same_value = root.owner
-					is_anglers_empire = yes
-					PREV = { planet = { is_wet = yes } }
-				}
+				artisan_is_pearl_diver_trigger = yes
 			}
 			trait_is_gestalt_check = no
 		}
-		job_angler_add = 1
-		job_pearl_diver_add = 1
+		job_angler_add = 100
+		job_artisan_add = 100
 	}
 	planet_modifier = {
 		planet_farmers_food_produces_mult = 0.05
@@ -678,57 +653,32 @@ leader_trait_homesteader_2 = {
 		potential = {
 			exists = FROM
 			FROM = {
-				exists = owner
-				owner = {
-					is_same_value = root.owner
-					OR = {
-						is_anglers_empire = no
-						AND = {
-							is_anglers_empire = yes
-							NOT = { PREV = { planet = { is_wet = yes } } }
-						}
-					}
-				}
+				artisan_is_pearl_diver_trigger = no
 			}
 			trait_is_gestalt_check = no
 		}
-		job_farmer_add = 4
+		job_farmer_add = 400
 	}
 	triggered_background_planet_modifier = {
 		potential = {
 			exists = FROM
 			FROM = {
-				exists = owner
-				owner = {
-					is_same_value = root.owner
-					OR = {
-						is_anglers_empire = no
-						AND = {
-							is_anglers_empire = yes
-							NOT = { PREV = { planet = { is_wet = yes } } }
-						}
-					}
-				}
+				artisan_is_pearl_diver_trigger = no
 			}
 			trait_is_gestalt_check = yes
 		}
-		job_agri_drone_add = 4
+		job_agri_drone_add = 400
 	}
 	triggered_background_planet_modifier = {
 		potential = {
 			exists = FROM
 			FROM = {
-				exists = owner
-				owner = {
-					is_same_value = root.owner
-					is_anglers_empire = yes
-					PREV = { planet = { is_wet = yes } }
-				}
+				artisan_is_pearl_diver_trigger = yes
 			}
 			trait_is_gestalt_check = no
 		}
-		job_angler_add = 2
-		job_pearl_diver_add = 2
+		job_angler_add = 200
+		job_artisan_add = 200
 	}
 	planet_modifier = {
 		planet_farmers_food_produces_mult = 0.10
@@ -898,7 +848,7 @@ trait_imperial_heir = {
 				has_valid_civic = civic_imperial_cult
 			}
 		}
-		job_priest_add = 1
+		job_priest_add = 100
 		mult = trigger:has_skill
 	}
 
@@ -913,7 +863,7 @@ trait_imperial_heir = {
 				has_valid_civic = civic_imperial_cult
 			}
 		}
-		job_haruspex_add = 1
+		job_haruspex_add = 100
 		mult = trigger:has_skill
 	}
 
@@ -954,7 +904,7 @@ leader_trait_scrapper = {
 			}
 			trait_is_gestalt_check = no
 		}
-		job_foundry_add = 1
+		job_foundry_add = 100
 	}
 	triggered_background_planet_modifier = {
 		potential = {
@@ -968,7 +918,7 @@ leader_trait_scrapper = {
 			}
 			trait_is_hive_check = yes
 		}
-		job_alloy_drone_add = 1
+		job_alloy_drone_add = 100
 	}
 	triggered_background_planet_modifier = {
 		potential = {
@@ -982,7 +932,7 @@ leader_trait_scrapper = {
 			}
 			trait_is_machine_check = yes
 		}
-		job_fabricator_add = 1
+		job_fabricator_add = 100
 	}
 	triggered_background_planet_modifier = {
 		potential = {
@@ -996,7 +946,7 @@ leader_trait_scrapper = {
 			}
 			trait_is_gestalt_check = no
 		}
-		job_catalytic_technician_add = 1
+		job_catalytic_technician_add = 100
 	}
 	triggered_background_planet_modifier = {
 		potential = {
@@ -1010,7 +960,7 @@ leader_trait_scrapper = {
 			}
 			trait_is_gestalt_check = yes
 		}
-		job_catalytic_drone_add = 1
+		job_catalytic_drone_add = 100
 	}
 	planet_modifier = {
 		planet_metallurgists_alloys_produces_mult = 0.05
@@ -1062,7 +1012,7 @@ leader_trait_scrapper_2 = {
 			}
 			trait_is_gestalt_check = no
 		}
-		job_foundry_add = 2
+		job_foundry_add = 200
 	}
 	triggered_background_planet_modifier = {
 		potential = {
@@ -1076,7 +1026,7 @@ leader_trait_scrapper_2 = {
 			}
 			trait_is_hive_check = yes
 		}
-		job_alloy_drone_add = 2
+		job_alloy_drone_add = 200
 	}
 	triggered_background_planet_modifier = {
 		potential = {
@@ -1090,7 +1040,7 @@ leader_trait_scrapper_2 = {
 			}
 			trait_is_machine_check = yes
 		}
-		job_fabricator_add = 2
+		job_fabricator_add = 200
 	}
 	triggered_background_planet_modifier = {
 		potential = {
@@ -1104,7 +1054,7 @@ leader_trait_scrapper_2 = {
 			}
 			trait_is_gestalt_check = no
 		}
-		job_catalytic_technician_add = 2
+		job_catalytic_technician_add = 200
 	}
 	triggered_background_planet_modifier = {
 		potential = {
@@ -1118,7 +1068,7 @@ leader_trait_scrapper_2 = {
 			}
 			trait_is_gestalt_check = yes
 		}
-		job_catalytic_drone_add = 2
+		job_catalytic_drone_add = 200
 	}
 	planet_modifier = {
 		planet_metallurgists_alloys_produces_mult = 0.10
@@ -1158,12 +1108,11 @@ leader_trait_entrepreneur = {
 				exists = owner
 				owner = {
 					is_same_value = root.owner
-					is_crafter_empire = no
 				}
 			}
 			trait_is_gestalt_check = no
 		}
-		job_artisan_add = 1
+		job_artisan_add = 100
 	}
 	triggered_background_planet_modifier = {
 		potential = {
@@ -1176,21 +1125,7 @@ leader_trait_entrepreneur = {
 			}
 			trait_is_gestalt_check = yes
 		}
-		job_artisan_drone_add = 1
-	}
-	triggered_background_planet_modifier = {
-		potential = {
-			exists = FROM
-			FROM = {
-				exists = owner
-				owner = {
-					is_same_value = root.owner
-					is_crafter_empire = yes
-				}
-			}
-			trait_is_gestalt_check = no
-		}
-		job_artificer_add = 1
+		job_artisan_drone_add = 100
 	}
 	planet_modifier = {
 		planet_artisans_consumer_goods_produces_mult = 0.05
@@ -1237,12 +1172,11 @@ leader_trait_entrepreneur_2 = {
 				exists = owner
 				owner = {
 					is_same_value = root.owner
-					is_crafter_empire = no
 				}
 			}
 			trait_is_gestalt_check = no
 		}
-		job_artisan_add = 2
+		job_artisan_add = 200
 	}
 	triggered_background_planet_modifier = {
 		potential = {
@@ -1255,21 +1189,7 @@ leader_trait_entrepreneur_2 = {
 			}
 			trait_is_gestalt_check = yes
 		}
-		job_artisan_drone_add = 2
-	}
-	triggered_background_planet_modifier = {
-		potential = {
-			exists = FROM
-			FROM = {
-				exists = owner
-				owner = {
-					is_same_value = root.owner
-					is_crafter_empire = yes
-				}
-			}
-			trait_is_gestalt_check = no
-		}
-		job_artificer_add = 2
+		job_artisan_drone_add = 200
 	}
 	planet_modifier = {
 		planet_artisans_consumer_goods_produces_mult = 0.10
@@ -1309,7 +1229,7 @@ leader_trait_venerated = {
 			}
 			trait_is_gestalt_check = no
 		}
-		job_culture_worker_add = 1
+		job_culture_worker_add = 100
 	}
 	triggered_background_planet_modifier = {
 		potential = {
@@ -1322,13 +1242,13 @@ leader_trait_venerated = {
 			}
 			trait_is_gestalt_check = yes
 		}
-		job_evaluator_add = 1
+		job_evaluator_add = 100
 	}
 	planet_modifier = {
-		planet_amenities_add = 3
+		planet_amenities_add = 300
 	}
 	sector_modifier = {
-		planet_amenities_add = 1
+		planet_amenities_add = 100
 	}
 	leader_class = { commander scientist official }
 	opposites = {
@@ -1373,7 +1293,7 @@ leader_trait_venerated_2 = {
 			}
 			trait_is_gestalt_check = no
 		}
-		job_culture_worker_add = 2
+		job_culture_worker_add = 200
 	}
 	triggered_background_planet_modifier = {
 		potential = {
@@ -1386,13 +1306,13 @@ leader_trait_venerated_2 = {
 			}
 			trait_is_gestalt_check = yes
 		}
-		job_evaluator_add = 2
+		job_evaluator_add = 200
 	}
 	planet_modifier = {
-		planet_amenities_add = 6
+		planet_amenities_add = 600
 	}
 	sector_modifier = {
-		planet_amenities_add = 3
+		planet_amenities_add = 300
 	}
 	leader_class = { commander scientist official }
 }
@@ -1434,6 +1354,11 @@ leader_trait_educator = {
 		COUNCIL = yes
 		TIER = none
 	}
+	on_gained_effect = {
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
+	}
 	leader_potential_add = {
 		has_paragon_dlc = yes
 		has_council_subclass = yes
@@ -1458,6 +1383,11 @@ leader_trait_master_bureaucrat = {
 		RARITY = paragon
 		COUNCIL = yes
 		TIER = none
+	}
+	on_gained_effect = {
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
 	}
 	councilor_modifier = {
 		leaders_upkeep_mult = -0.05

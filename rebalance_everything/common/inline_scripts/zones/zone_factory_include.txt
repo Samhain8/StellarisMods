@@ -1,0 +1,12 @@
+include = {
+	building_factory_1
+	building_factory_2
+	building_factory_3
+	building_automation_1
+	building_archaeo_refinery
+	building_refinery
+	building_chemical_plant
+	building_crystal_plant
+	building_coordinated_fulfillment_center_1
+	building_coordinated_fulfillment_center_2
+}

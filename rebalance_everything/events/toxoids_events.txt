@@ -472,6 +472,7 @@ ship_event = {
 	location = FROM
 
 	is_triggered_only = yes
+	event_message_type = MESSAGE_TERRAFORM_CANDIDATE_FOUND
 
 	trigger = {
 		from = { has_modifier = toxic_terraforming_candidate }
@@ -3233,16 +3234,17 @@ situation_event = {
 			destroy_situation = this
 			owner = {
 				set_country_flag = quest_abandoned
-				random_owned_planet = {
-					limit = { has_planet_flag = toxic_knights_habitat }
-					while = {
-						limit = {
-							has_district = district_orders_demesne
-						}
-						remove_district = district_orders_demesne
-					}
-					remove_building = building_order_keep
-				}
+				# TODO AUG-52065 REMOVE ZONE once remove_zone script support is in.
+				# random_owned_planet = {
+				# 	limit = { has_planet_flag = toxic_knights_habitat }
+				# 	while = {
+				# 		limit = {
+				# 			has_district = district_orders_demesne
+				# 		}
+				# 		remove_district = district_orders_demesne
+				# 	}
+				# 	remove_building = building_order_keep
+				# }
 			}
 		}
 	}

@@ -72,10 +72,10 @@ sacrifice_togetherness = {
 					}
 				}
 				any_subject = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						OR = {
-							has_job = overlord_mortal_initiate
-							has_job = overlord_mortal_initiate_drone
+							# has_job = overlord_mortal_initiate # Markus
+							# has_job = overlord_mortal_initiate_drone # Markus
 						}
 					}
 				}
@@ -171,10 +171,10 @@ sacrifice_harmony = {
 					}
 				}
 				any_subject = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						OR = {
-							has_job = overlord_mortal_initiate
-							has_job = overlord_mortal_initiate_drone
+							# has_job = overlord_mortal_initiate # Markus
+							# has_job = overlord_mortal_initiate_drone # Markus
 						}
 					}
 				}
@@ -272,10 +272,10 @@ sacrifice_bounty = {
 					}
 				}
 				any_subject = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						OR = {
-							has_job = overlord_mortal_initiate
-							has_job = overlord_mortal_initiate_drone
+							# has_job = overlord_mortal_initiate # Markus
+							# has_job = overlord_mortal_initiate_drone # Markus
 						}
 					}
 				}
@@ -370,10 +370,10 @@ sacrifice_bounty_zombie = {
 					}
 				}
 				any_subject = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						OR = {
-							has_job = overlord_mortal_initiate
-							has_job = overlord_mortal_initiate_drone
+							# has_job = overlord_mortal_initiate # Markus
+							# has_job = overlord_mortal_initiate_drone # Markus
 						}
 					}
 				}

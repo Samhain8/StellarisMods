@@ -1530,7 +1530,7 @@ situation_event = { #Rebuild Skrand species finished
 				}
 			}
 			owner.capital_scope = {
-				create_pop = {
+				create_pop_group = {
 					species = last_created_species
 				}
 			}

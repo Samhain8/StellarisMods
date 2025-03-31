@@ -197,8 +197,8 @@
 
  building_adakkaria_patriotic_institute: "Patriotic Institute of Celebration"
  building_adakkaria_patriotic_institute_desc: "The $building_adakkaria_patriotic_institute$ is a trove of advanced insights into the sentient condition. Here we empower people to cultivate their inner tempest while avoiding the luring song of the Convention's cruelty."
- building_adakkaria_patriotic_institute_effect_desc: "If a cosmic storm passes this system, there is a 10% chance a £pop£ gains the $Name_Storm_Fused$ trait."
- building_adakkaria_patriotic_institute_effect_upgrade_desc: "If a cosmic storm passes this system, there is a 40% chance one £pop£ gains the $Name_Storm_Fused$ trait. Additionally, there is a 20% chance every 10 years a £pop£ is transformed into a cosmic storm."
+ building_adakkaria_patriotic_institute_effect_desc: "If a cosmic storm passes this system, there is a 10% chance that §Y100§! £pop£ §HPops§! gain the $Name_Storm_Fused$ trait."
+ building_adakkaria_patriotic_institute_effect_upgrade_desc: "If a cosmic storm passes this system, there is a 40% chance that §Y100§! £pop£ §HPops§! gain the $Name_Storm_Fused$ trait. Additionally, there is a 20% chance every 10 years that §Y100§! £pop£ §HPops§! are transformed into a cosmic storm."
 
  building_astrometeorology_observation_center: "Astrometeorology Observatory"
  building_astrometeorology_observation_center_desc: "With delicate sensors, this observation center studies diverse environmental conditions to better our understanding of the natural universe."
@@ -220,12 +220,14 @@
  sm_storm_repelling_computer_desc: "This array of powerful lasers is able to create pockets of highly charged magnetic particles, creating a natural repellent force against cosmic storms."
 
 # Jobs
+ astrometeorologist: "$job_astrometeorologist$"
  job_astrometeorologist: "Astrometeorologist"
  job_astrometeorologist_plural: "Astrometeorologists"
  job_astrometeorologist_desc: "$job_astrometeorologist_plural$ are specialized in researching cosmic environmental effects."
- job_astrometeorologist_effect_desc: "$job_astrometeorologist_plural_with_icon$ turn $r_consumer_goods$ into $r_research$\n\nJob Output is increased when an §YEnvironmental Effect§! is present in this System"
+ job_astrometeorologist_effect_desc: "$job_astrometeorologist_plural_with_icon$ turn $r_consumer_goods$ into $r_physics$\n\nJob Output is increased when an §YEnvironmental Effect§! is present in this System."
  job_astrometeorologist_with_icon: "£job_astrometeorologist£ $job_astrometeorologist$"
  job_astrometeorologist_plural_with_icon: "£job_astrometeorologist£ $job_astrometeorologist_plural$"
+ physicist_is_astrometeorologist_tt: "$job_physicist_plural_with_icon$ are converted into $job_astrometeorologist_plural_with_icon$"
  job_astrometeorologist_hive: "$job_astrometeorologist$ Drone"
  job_astrometeorologist_hive_plural: "$job_astrometeorologist$ Drones"
  job_astrometeorologist_hive_desc: "These research drones are specialized to detect and catalog the effects of cosmic storms."
@@ -269,6 +271,7 @@
  mod_planet_astrometeorologists_produces_mult: "£job_astrometeorologist£ [GetAstrometeorologistPlural] Output"
  mod_planet_buildings_storm_tech_upkeep_mult: "Storm building upkeep"
 
+ NAME_adakkaria: "adAkkaria"
  patriotic_institute_true_potential_unleashed: "The True Potential of The adAkkaria"
  patriotic_institute_true_potential_unleashed_desc: "The truth behind the adAkkaria experiments brought us catharsis."
  storm_hunkered_down_modifier: "Hunker Down"
@@ -990,6 +993,7 @@
 #Hyperlane Detailer - Secrets Of Inetian Traders Reward
  sm_hyperlane_detailer: "Hyperlane Detailer"
 
+ NAME_inetian: "Inetian Traders"
 ###########################################
 # The adAkkaria Convention of Benevolence #
 ###########################################
@@ -1218,7 +1222,7 @@
  cstorms.2355.a: "Sacrifices must be made."
 
  MESSAGE_INSTITUTE_SPAWNED_STORM_TITLE: "Storm Invoked"
- MESSAGE_INSTITUTE_SPAWNED_STORM: "A £pops£ pop has invoked themselves on $PLANET$, becoming a new $STORM$ in $SYSTEM$."
+ MESSAGE_INSTITUTE_SPAWNED_STORM: "§Y100§! £pop£ §HPops§! have invoked themselves on $PLANET$, becoming a new $STORM$ in $SYSTEM$."
 
  artifact_adakkaria_research: "Secrets of the adAkkaria"
  artifact_adakkaria_research_desc: "Delve deeper into the secrets of the adAkkaria."
@@ -1236,7 +1240,7 @@
  cstorms.2365.desc.gestalt: "$cstorms.2365.desc.start$\n\n$cstorms.2365.desc.end.gestalt$"
  cstorms.2365.a: "Engage with this new knowledge. Gently!"
  cstorms.2365.b: "No, let these secrets rest."
- cstorms.2365.a.tt: "- Chance of a £pops£ pop gaining the $Name_Storm_Fused$ trait during a storm quadrupled.\n - Every 20 years there is a small chance a £pops£ pop dies and becomes a storm.\n - Cultivate Potential: +5% Happiness Empire modifier."
+ cstorms.2365.a.tt: "- Chance of §Y100§! £pop£ §HPops§! gaining the $Name_Storm_Fused$ trait during a storm quadrupled.\n - Every 20 years there is a small chance that §Y100§! £pop£ §HPops§! die and become a storm.\n - Cultivate Potential: +5% Happiness Empire modifier."
 
  Name_Storm_Fused: "Storm-Fused"
  Name_Storm_Fused_affix: "Storm-Fused " # The trailing space is intentional, to give a space before the species name on the species screen
@@ -1331,7 +1335,7 @@
  cstorms.3110.desc.outro: "By injecting energy into the natural storms, we can generate the conditions for electric storms.\n\nPlanetary core manipulation could reorient the magnetic field of [owner.capital_scope.GetName] to give rise to magnetic storms.\n\nFinally, by reversing the tachyon polarity at specific planetary sites, field changes can produce gravity storms."
  cstorms.3110.desc.regular: "We have learned how to kickstart the tempestuous vibrations of [owner.capital_scope.GetName], shaping them into the ultimate experience. But we must decide which storm type is the most glorious.\n\n$cstorms.3110.desc.outro$"
  cstorms.3110.desc.hive: "We have learned how to kickstart the tempestuous vibrations of [owner.capital_scope.GetName], shaping them into the ultimate experience. But we have yet to decide which storm type is the most glorious.\n\n$cstorms.3110.desc.outro$"
- cstorms.3110.desc.machine: "We have learned how to kickstart the tempestuous vibrations of [owner.capital_scope.GetName], shaping them into the ultimate experience. But our value judgement processes are stuck in recursive loops trying to determine which storm type is the most glorious.\n\n$cstorms.3110.desc.outro$"
+ cstorms.3110.desc.machine: "We have learned how to kickstart the tempestuous vibrations of [owner.capital_scope.GetName], shaping them into the ultimate experience. But our value judgment processes are stuck in recursive loops trying to determine which storm type is the most glorious.\n\n$cstorms.3110.desc.outro$"
  cstorms.3110.a: "Charge the clouds."
  cstorms.3110.a.tt: "Seed a planetary §Y$electric_storm$§!."
  cstorms.3110.b: "Magnetize the core."
@@ -1587,7 +1591,7 @@
  has_patriotic_institute: "The $building_adakkaria_patriotic_institute$"
  has_patriotic_institut_desc: "This planet was once the foundation of the adAkkaria Convention. The $building_adakkaria_patriotic_institute$ is all that is left of this once mighty civilization."
  has_patriotic_institute_tt: "Has building: $building_adakkaria_patriotic_institute$. Colonize this planet to gain ownership."
- adakkaria_patriotic_institute_desc.supercharged: "Chance every year a Storm is triggered in the system at the cost of one £pop£ pop."
+ adakkaria_patriotic_institute_desc.supercharged: "Chance every year a Storm is triggered in the system at the cost of §Y100§! £pop£ §HPops§!."
 
 #Planet Modifiers
  crimson_crawlers_sashimi_style: "Crimson Crawlers: Raw Consumption"

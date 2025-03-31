@@ -1332,6 +1332,11 @@ leader_trait_taskmaster = {
 		COUNCIL = no
 		TIER = none
 	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
+	}
 	planet_modifier = {
 		army_starting_experience_add = 500
 	}
@@ -1402,6 +1407,11 @@ leader_trait_fortress_cracker = {
 		COUNCIL = no
 		TIER = none
 	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
+	}
 	army_modifier = {
 		army_damage_mult = 0.4
 		army_collateral_damage_mult = 1
@@ -1438,6 +1448,11 @@ leader_trait_chainbreaker = {
 		COUNCIL = no
 		TIER = none
 	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
+	}
 	army_modifier = {
 		army_morale = 1
 	}
@@ -1470,6 +1485,11 @@ leader_trait_honored_warmaster = {
 		COUNCIL = no
 		TIER = none
 	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
+	}
 	planet_modifier = {
 		job_soldier_per_pop = 0.10
 	}
@@ -1499,6 +1519,11 @@ leader_trait_academia_recruiter = {
 		RARITY = paragon
 		COUNCIL = no
 		TIER = none
+	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
 	}
 	planet_modifier = {
 		job_researcher_naval_cap_add = 4
@@ -1535,6 +1560,11 @@ leader_trait_supreme_warrior = {
 		COUNCIL = no
 		TIER = none
 	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
+	}
 	army_modifier = {
 		army_damage_mult = 0.33
 		army_morale = 0.66
@@ -1566,6 +1596,11 @@ leader_trait_spymaster = {
 		COUNCIL = yes
 		TIER = none
 	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
+	}
 	councilor_modifier = {
 		spy_network_daily_value_mult = 1.5
 		operations_cost_mult = -0.25
@@ -1593,6 +1628,11 @@ leader_trait_totalitarian = {
 		RARITY = paragon
 		COUNCIL = yes
 		TIER = none
+	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
 	}
 	councilor_modifier = {
 		diplo_weight_mult = 0.2
@@ -1627,6 +1667,11 @@ leader_trait_bellicose = {
 		RARITY = paragon
 		COUNCIL = yes
 		TIER = none
+	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
 	}
 	custom_tooltip = leader_trait_bellicose_effect
 	leader_potential_add = {
@@ -1987,6 +2032,11 @@ leader_trait_aturion_organizer = {
 		COUNCIL = yes
 		TIER = none
 	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
+	}
 	councilor_modifier = {
 		empire_size_penalty_mult = -0.1
 		pop_government_ethic_attraction = 0.50
@@ -2017,6 +2067,11 @@ leader_trait_tzrynn_tithe = {
 		RARITY = paragon
 		COUNCIL = no
 		TIER = none
+	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
 	}
 	army_modifier = {
 		army_collateral_damage_mult = -0.2

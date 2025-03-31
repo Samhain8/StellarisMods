@@ -207,7 +207,7 @@
  astral_rift.3076.b: "$astral_rift.3075.b$"
 
  astral_rift.3080.name: "Punishment"
- astral_rift.3080.desc.default: "The Grunur were simply not interested in listening to reason.\n\nThe admiral rose from the terminal with a series of croaks, punctuated with sharp snaps from their pincers.\n\n§E"JUDGEMENT IS. PUNISHMENT AWAITS."§!\n\nWe were led to a holding cell. Based on the 'laughter' of our guards, our fate is unlikely to be a pretty one. Our equipment is being taken. This will be our last transmission."
+ astral_rift.3080.desc.default: "The Grunur were simply not interested in listening to reason.\n\nThe admiral rose from the terminal with a series of croaks, punctuated with sharp snaps from their pincers.\n\n§E"JUDGMENT IS. PUNISHMENT AWAITS."§!\n\nWe were led to a holding cell. Based on the 'laughter' of our guards, our fate is unlikely to be a pretty one. Our equipment is being taken. This will be our last transmission."
  astral_rift.3080.desc.organic: "$astral_rift.3080.desc.default$\n\nSend our best to our families."
  astral_rift.3080.a: "Remain strong. We will find a way to recover you."
 

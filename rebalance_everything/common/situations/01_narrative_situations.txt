@@ -905,8 +905,8 @@ situation_geomagnetic_storm = {
 		icon_background = GFX_situation_approach_bg_green
 		potential = {
 			target = {
-				any_owned_pop = {
-					is_robot_pop = yes
+				any_owned_pop_group = {
+					is_robot_pop_group = yes
 				}
 			}
 		}
@@ -933,8 +933,8 @@ situation_geomagnetic_storm = {
 		icon_background = GFX_situation_approach_bg_yellow
 		potential = {
 			target = {
-				any_owned_pop = {
-					is_robot_pop = yes
+				any_owned_pop_group = {
+					is_robot_pop_group = yes
 					is_pop_category = simple_drone
 				}
 			}
@@ -963,8 +963,8 @@ situation_geomagnetic_storm = {
 		icon = GFX_situation_approach_pop
 		potential = {
 			target = {
-				any_owned_pop = {
-					is_robot_pop = yes
+				any_owned_pop_group = {
+					is_robot_pop_group = yes
 					is_pop_category = complex_drone
 				}
 			}
@@ -1321,7 +1321,7 @@ situation_kaleidoscope = {
 			has_situation_flag = kaleidoscope_dazzling_patterns
 		}
 		modifier = {
-			planet_immigration_pull_add = 10
+			#planet_immigration_pull_add = 10 # TODO: [AUG-48754] Use automigration modifier
 		}
 	}
 

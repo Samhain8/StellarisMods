@@ -41,9 +41,9 @@
  situation_cyberization_triggered_modifier: "§Y$situation_cyberization$§! situation modifier added:\n"
  situation_cyberization_triggered_modifier_removed: "§Y$situation_cyberization$§! situation modifier removed:\n"
  augmentation_center_triggered_modifier: "§Y$building_augmentation_center$§! modifier added:\n"
- cyber_control_government_effects: "£unity£ Unity from £pops£ Jobs: §G+10%§!"
- cyber_control_corporate_effects: "£consumer_goods£ Consumer Goods from £pops£ Jobs: §G+10%§!"
- cyber_control_independent_effects: "Upkeep from £pops£ Jobs: §G-5%§!"
+ cyber_control_government_effects: "£unity£ Unity from £job£ Jobs: §G+10%§!"
+ cyber_control_corporate_effects: "£consumer_goods£ Consumer Goods from £job£ Jobs: §G+10%§!"
+ cyber_control_independent_effects: "Upkeep from £job£ Jobs: §G-5%§!"
 
 # Buildings
  building_augmentation_center: "Augmentation Center"
@@ -297,7 +297,7 @@
  cyber.205.c: "Power up the workers."
  cyber.205.c.tt: "$pop_cat_worker$ Resource Output: §G+10%§! with $building_augmentation_center$"
  cyber.205.d: "Augments for all."
- cyber.205.d.tt: "Resources From £pop£ Jobs: §G+5%§! with $building_augmentation_center$"
+ cyber.205.d.tt: "Resources From £job£ §HJobs§!: §G+5%§! with $building_augmentation_center$"
 
  cyber.210.name: "Parallel Development"
  cyber.210.desc.gov.rival: "Journalists have uncovered proof of government-funded experiments that involve thought-monitoring microchips. Fully developed, these devices could be installed in the minds of citizens to gather detailed security and personality insights."
@@ -420,7 +420,7 @@
  cyber.21.desc: "Today marks a turning point for our society. We are now able to augment our bodies with fully-integrated machine parts.\n\nThe process was not without difficulty, the transition far from easy. But whatever may have been lost along the way, our new existence offers endless possibilities."
  cyber.21.a: "We will be stronger."
  cyber.21.a.start: "§Y$building_augmentation_center$§! modifier added:$TABBED_NEW_LINE$"
- cyber.21.a.end: "Unlocks Full Effects of Traditions: §Y$tradition_cybernetics$§!"
+ cyber.21.a.end: "Unlocks Full Effects of Tradition Tree: ['tradition_category:tradition_cybernetics']"
  cyber.21.a.gov.tt: "$cyber.21.a.start$$cyber_control_government_effects$\n$cyber.21.a.end$"
  cyber.21.a.cor.tt: "$cyber.21.a.start$$cyber_control_corporate_effects$\n$cyber.21.a.end$"
  cyber.21.a.ind.tt: "$cyber.21.a.start$$cyber_control_independent_effects$\n$cyber.21.a.end$"
@@ -450,14 +450,14 @@
 # Cyber Democratic Collectivist
  auth_cyber_democratic_collectivist: "Democratic Interlink"
  auth_cyber_democratic_collectivist_desc: "Consciousness interfaces allow real-time sharing of sensory data, emotional responses, and thought patterns between full cyborgs. As a safeguard against the sensitivity of intense extra-body responses, emotional firewalls filter out unwanted responses to shared emotive data packets.\n\nThis democratic government holds regular elections where all citizens can vote on who should represent them."
- auth_cyber_democratic_collectivist_tt: "$auth_democratic_election_tt$\nCyborg $pops_with_icon$ are not affected by Happiness\n$unlock_edict_self_preservation_override$"
+ auth_cyber_democratic_collectivist_tt: "$auth_democratic_election_tt$\n£pop£ §HCyborg Pops§! are not affected by Happiness\n$unlock_edict_self_preservation_override$"
  concept_auth_cyber_democratic_collectivist: "$auth_cyber_democratic_collectivist$"
  gov_cyber_democracy_collectivist: "$auth_cyber_democratic_collectivist$"
  gov_cyber_democracy_collectivist_desc: "$auth_cyber_democratic_collectivist_desc$"
 
 # OLIGARCHIC
  cyber_oligarchic_lifespan_tt: "Cyborg Councilor Lifespan: §G+40 Years§!"
- cyber_oligarchic_ruleroutput_tt: "Ruler Resource Output per Specialist Pop: §G+1%§!"
+ cyber_oligarchic_ruleroutput_tt: "Ruler Resource Output per §Y100§! £pop£ §HSpecialist Pops§!: §G+1%§!"
 # Cyber Oligarchic Individualist
  auth_cyber_oligarchic_individualist: "Oligarchic Overclocking"
  auth_cyber_oligarchic_individualist_desc: "Specialist biochips are remotely overclocked for increased production while the ruling strata reaps the benefits, allowing them to allocate more time to politics and leisure."
@@ -738,10 +738,10 @@
  cyber.655.d: "Use this data to improve our cyberization efforts."
  worse_parts: "Worse Parts"
  worse_parts_desc: "We have intentionally chosen to supply our citizens with inferior cybernetic components meaning that they have to buy replacements more often."
- worse_parts_effect_tt: "$r_trade_value$ from §Y£pop£ Pops§! with the §Y$trait_auto_mod_cyborg$§! trait: §G+0.5§!"
+ worse_parts_effect_tt: "$r_trade_value$ from £pop£ §HPops§! with the §Y$trait_auto_mod_cyborg$§! trait: §G+0.5§!"
  optimized_parts: "Optimized Parts"
  optimized_parts_desc: "We have kept innovating and improving on our cybernetic components leading to a quicker and simpler install process."
- optimized_parts_effect_tt: "$r_energy$ Upkeep for §Y£pop£ Pops§! with the §Y$trait_auto_mod_cyborg$§! trait: §R+0.1§!"
+ optimized_parts_effect_tt: "$r_energy$ Upkeep for £pop£ §HPops§! with the §Y$trait_auto_mod_cyborg$§! trait: §R+0.1§!"
 
  cyber.660.name: "Unforeseeable Societal Failure"
  cyber.660.desc: "It seems that our citizens have discovered our obsolescence initiative.\n\nThe streets are filled with [Owner.GetSpeciesNamePlural] who are outraged at the recent changes we have made to cyberware quality and cost. They are clamoring for us to revert these changes."
@@ -1204,7 +1204,7 @@
  cyber.2015.name: "Advanced Assimilators"
  cyber.2015.desc: "Fused with the machine, our organic population has achieved a state of near perfection. The time has come to incorporate advanced cybernetics into the very fabric of our civilization.\n\nBy streamlining the mental acuity of our cyborgs, we could form an 'Memory in Aggregate', channeling their collected experience into increased logistical capacity. Alternatively, we could allow for greater variance in thought and emotional response by facilitating the creation of a 'Neural Chorus.'\n\nEither course is sure to have a profound effect on our future."
  cyber.2015.a: "Aggregate our minds."
- cyber.2015.a.tt: "$change_auth_tt$ ['concept_auth_memory_aggregator']\n\n§YResources§! generated from Assimilating Organic £pops£ Pops are further increased\n\n$unlock_edict_tt$['concept_edict_aggregated_memory']"
+ cyber.2015.a.tt: "$change_auth_tt$ ['concept_auth_memory_aggregator']\n\n§YResources§! generated from assimilating £pop£ §HOrganic Pops§! are further increased\n\n$unlock_edict_tt$['concept_edict_aggregated_memory']"
  cyber.2015.b: "Let the Chorus sing."
  cyber.2015.b.tt: "$change_auth_tt$ ['concept_auth_neural_chorus']\n\n$unlock_edict_tt$['concept_edict_choral_harmony']"
  cyber.2015.c: "We shall remain as we are."
@@ -1213,7 +1213,7 @@
  gov_memory_aggregator_desc: "By streamlining the mental acuity of an assimilated population, a 'Memory in Aggregate' is formed, one capable of greatly improving all administrative and logistical tasks."
  auth_memory_aggregator: "Memory Aggregator"
  auth_memory_aggregator_desc: "$gov_memory_aggregator_desc$"
- auth_memory_aggregator_tt: "Resources generated from Assimilating Organic £pops£ Pops are further increased"
+ auth_memory_aggregator_tt: "Resources generated from assimilating £pop£ §HOrganic Pops§! are further increased"
  gov_neural_chorus: "Neural Chorus"
  gov_neural_chorus_desc: "Allowing for greater variance in thought and a wider range of emotional responses facilitates the creation of a 'Neural Chorus' - a great song of minds, as powerful as it is beautiful."
  auth_neural_chorus: "Neural Chorus"

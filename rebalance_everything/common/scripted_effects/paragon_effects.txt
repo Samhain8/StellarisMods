@@ -280,6 +280,10 @@ ethic_leader_hire_effect = {
 			value = "GFX_border_veteran"
 		}
 	}
+
+	event_target:$GLOBAL_EVENT_TARGET$ = {
+		leader_event = { id = focus.46 } # Empire Focus
+	}
 }
 
 ethic_leader_kill_effect = {
@@ -321,6 +325,10 @@ hire_event_leader_effect = {
 
 	hire_event_leader_message = {
 		LEADER = $LEADER$
+	}
+
+	event_target:$LEADER$ = {
+		leader_event = { id = focus.46 } # Empire Focus
 	}
 }
 
@@ -1194,16 +1202,29 @@ paragon_origin_civil_war = {
 					change_background_ethic = ethic_egalitarian
 				}
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
+				limit = { has_any_ethic = yes }
 				random_list = {
 					2 = {
-						pop_change_ethic = ethic_egalitarian
+						pop_group_transfer_ethic = {
+							POP_GROUP = this
+							ETHOS = ethic_egalitarian
+							PERCENTAGE = 1 # 100%
+						}
 					}
 					1 = {
-						pop_change_ethic = ethic_xenophobe
+						pop_group_transfer_ethic = {
+							POP_GROUP = this
+							ETHOS = ethic_xenophobe
+							PERCENTAGE = 1 # 100%
+						}
 					}
 					2 = {
-						pop_change_ethic = ethic_militarist
+						pop_group_transfer_ethic = {
+							POP_GROUP = this
+							ETHOS = ethic_militarist
+							PERCENTAGE = 1 # 100%
+						}
 					}
 				}
 			}
@@ -1864,16 +1885,29 @@ paragon_origin_launch_rebelion = {
 				change_background_ethic = ethic_authoritarian
 			}
 		}
-		every_owned_pop = {
+		every_owned_pop_group = {
+			limit = { has_any_ethic = yes }
 			random_list = {
 				2 = {
-					pop_change_ethic = ethic_authoritarian
+					pop_group_transfer_ethic = {
+						POP_GROUP = this
+						ETHOS = ethic_authoritarian
+						PERCENTAGE = 1 # 100%
+					}
 				}
 				1 = {
-					pop_change_ethic = ethic_xenophobe
+					pop_group_transfer_ethic = {
+						POP_GROUP = this
+						ETHOS = ethic_xenophobe
+						PERCENTAGE = 1 # 100%
+					}
 				}
 				2 = {
-					pop_change_ethic = ethic_militarist
+					pop_group_transfer_ethic = {
+						POP_GROUP = this
+						ETHOS = ethic_militarist
+						PERCENTAGE = 1 # 100%
+					}
 				}
 			}
 		}
@@ -2394,7 +2428,9 @@ set_random_scientist_background_effect = {
 	random_list = {
 		1 = { change_background_job = chemist }
 		1 = { change_background_job = head_researcher }
-		1 = { change_background_job = researcher }
+		1 = { change_background_job = physicist }
+		1 = { change_background_job = biologist }
+		1 = { change_background_job = engineer }
 		1 = { change_background_job = government_employee }
 		1 = { change_background_job = clerk }
 	}

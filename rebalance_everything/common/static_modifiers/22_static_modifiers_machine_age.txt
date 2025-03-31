@@ -289,7 +289,7 @@ cybercreed_tithe_labor = {
 
 cybercreed_tithe_wealth = {
 	icon = "gfx/interface/icons/modifiers/mod_trade_value_mult.dds"
-	trade_value_mult = 0.1
+	planet_jobs_trade_produces_mult = 0.1
 }
 
 cybercreed_tithe_craft = {
@@ -546,14 +546,14 @@ synth_reprogram_minds = {
 
 worse_parts = {
 	icon = "gfx/interface/icons/modifiers/mod_auto_mod_monthly_add_negative.dds"
-	auto_mod_monthly_add = -1
+	auto_mod_monthly_add = -100
 	custom_tooltip = worse_parts_effect_tt
 	show_only_custom_tooltip = no
 }
 
 optimized_parts = {
 	icon = "gfx/interface/icons/modifiers/mod_auto_mod_monthly_add.dds"
-	auto_mod_monthly_add = 1
+	auto_mod_monthly_add = 100
 	custom_tooltip = optimized_parts_effect_tt
 	show_only_custom_tooltip = no
 }
@@ -614,13 +614,13 @@ icon = "gfx/interface/icons/modifiers/mod_pop_amenities_usage_mult.dds"
 
 cyber_subscription_ban = {
 	icon = "gfx/interface/icons/modifiers/mod_trade_value_mult_negative.dds"
-	trade_value_mult = -0.15
+	planet_jobs_trade_produces_mult = -0.15
 	pop_factions_produces_mult = 0.15
 }
 
 cyber_subscription_limited = {
 	icon = "gfx/interface/icons/modifiers/mod_trade_value_mult.dds"
-	trade_value_mult = 0.05
+	planet_jobs_trade_produces_mult = 0.05
 }
 
 cyber_wanderers = {
@@ -649,14 +649,14 @@ sold_sky_1_mega = {
 sold_sky_2 = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_energy_drink.dds"
 	icon_frame = 2
-	trade_value_add = 40
+	planet_jobs_trade_produces_add = 40
 	planet_stability_add = -10
 }
 
 sold_sky_2_mega = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_energy_drink.dds"
 	icon_frame = 2
-	trade_value_add = 80
+	planet_jobs_trade_produces_add = 80
 	planet_stability_add = -10
 }
 
@@ -687,18 +687,18 @@ cyber_censure_authoritarian = {
 cyber_subliminhack_banned = {
 	icon = "gfx/interface/icons/modifiers/mod_pop_happiness.dds"
 	pop_cyborg_happiness = 0.05
-	trade_value_mult = -0.1
+	planet_jobs_trade_produces_mult = -0.1
 }
 
 cyber_subliminhack_allowed = {
 	icon = "gfx/interface/icons/modifiers/mod_trade_value_mult.dds"
-	trade_value_mult = 0.15
+	planet_jobs_trade_produces_mult = 0.15
 	pop_cyborg_happiness = -0.05
 }
 
 cyber_subliminhack_licensed = {
 	icon = "gfx/interface/icons/modifiers/mod_trade_value_mult.dds"
-	trade_value_mult = 0.05
+	planet_jobs_trade_produces_mult = 0.05
 }
 
 cyber_subliminhack_hallowed = {
@@ -863,7 +863,7 @@ cyber_hive_individual_leader_drones = {
 synth_mandatory_volunteers = {
 	icon = "gfx/interface/icons/modifiers/mod_negative_pop_happiness.dds"
 	pop_happiness = -0.1
-	planet_emigration_push_add = 25
+	#planet_emigration_push_add = 25 # TODO: [AUG-48754] Use automigration modifier
 }
 
 synth_mass_demonstrations = {
@@ -1021,7 +1021,7 @@ synth_health_both = {
 }
 synth_health_corporate = {
 	icon = "gfx/interface/icons/modifiers/mod_trade_value_mult.dds"
-	trade_value_mult = 0.05
+	planet_jobs_trade_produces_mult = 0.05
 	country_society_tech_research_speed = 0.05
 }
 
@@ -1032,13 +1032,13 @@ synth_virtual_world_outlaw = {
 }
 synth_virtual_world_promote = {
 	icon = "gfx/interface/icons/modifiers/mod_trade_value_mult.dds"
-	trade_value_mult = 0.15
+	planet_jobs_trade_produces_mult = 0.15
 	planet_jobs_productive_produces_mult = -0.05
 }
 synth_virtual_world_regulate = {
 	icon = "gfx/interface/icons/modifiers/mod_trade_value_mult.dds"
 	pop_amenities_usage_mult = 0.05
-	trade_value_mult = 0.1
+	planet_jobs_trade_produces_mult = 0.1
 }
 
 synth_home_centralized = {
@@ -1054,7 +1054,7 @@ synth_home_distributed = {
 synth_digital_homes = {
 	icon = "gfx/interface/icons/modifiers/mod_trade_value_mult.dds"
 	pop_housing_usage_mult = -0.25
-	trade_value_mult = 0.1
+	planet_jobs_trade_produces_mult = 0.1
 }
 synth_respawn_push = {
 	icon = "gfx/interface/icons/modifiers/mod_volatile_motes_produces_mult.dds"
@@ -1116,7 +1116,6 @@ state_handouts = {
 }
 branching_out = {
 	icon = "gfx/interface/icons/modifiers/mod_trade_value_mult.dds"
-	trade_value_mult = 0.15
 }
 handy_workers = {
 	icon = "gfx/interface/icons/modifiers/mod_planet_jobs_worker_produces_mult.dds"
@@ -1135,7 +1134,7 @@ murdered_martyrs = {
 artificial_pain_relief = {
 	icon = "gfx/interface/icons/modifiers/mod_trade_value_mult.dds"
 	pop_cyborg_worker_happiness = -0.1
-	trade_value_mult = 0.25
+	planet_jobs_trade_produces_mult = 0.25
 }
 chained_experiments = {
 	icon = "gfx/interface/icons/modifiers/mod_country_physics_tech_research_speed.dds"
@@ -1172,21 +1171,21 @@ cyber_event_worklife_own = {
 	icon = "gfx/interface/icons/modifiers/mod_pop_citizen_happiness.dds"
 	pop_cyborg_worker_happiness = 0.2
 	intel_encryption_add = -1
-	trade_value_mult = -0.05
+	planet_jobs_trade_produces_mult = -0.05
 }
 
 cyber_event_worklife_leave = {
 	icon = "gfx/interface/icons/modifiers/mod_trade_value_mult.dds"
 	pop_cyborg_worker_happiness = -0.1
 	intel_encryption_add = 1
-	trade_value_mult = 0.05
+	planet_jobs_trade_produces_mult = 0.05
 }
 
 cyber_event_worklife_isolate = {
 	icon = "gfx/interface/icons/modifiers/mod_trade_value_mult.dds"
 	pop_cyborg_worker_happiness = -0.2
 	intel_encryption_add = 2
-	trade_value_mult = 0.1
+	planet_jobs_trade_produces_mult = 0.1
 }
 
 cyber_event_parental_control = {
@@ -1378,6 +1377,6 @@ agenda_nanotech_unstoppable_swarm_finish = {
 agenda_modularity_reshape_form_finish = {
 	planet_pops_robotics_upkeep_mult = -0.10
 	planet_jobs_sr_living_metal_produces_mult = 0.10
-	auto_mod_monthly_add = 2
+	auto_mod_monthly_add = 200
 	icon = "gfx/interface/icons/modifiers/mod_reshape_form_agenda.dds"
 }

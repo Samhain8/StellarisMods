@@ -59,6 +59,7 @@ tr_adaptability_adaptive_ecology = {
 		has_tradition = tr_adaptability_environmental_diversification
 	}
 
+	# TODO_CD: Tech needs new purpose as max buildings modifier is now obsolete
 	modifier = {
 		planet_max_buildings_add = 1
 	}

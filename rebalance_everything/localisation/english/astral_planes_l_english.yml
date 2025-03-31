@@ -921,7 +921,7 @@
 
  pm_formless_haven: "Formless Haven"
  pm_formless_haven_desc: "The last bastion of the beings known as the Formless. Other-dimensional species will be settled here from time to time under their protection."
- pm_formless_haven_tt: "§YSpawn 5 Pops§! from another species on this planet"
+ pm_formless_haven_tt: "Spawn §Y500§! £pop£ §HPops§! from another species on this planet"
 
  preset_luminarium: "Luminarium"
  preset_luminarium_desc: "A Luminarium is a subject type created by the owner of the Eternal Throne. Those who claim this seat hold influence over the Formless, whose dimension-spanning empire has since fallen into ruin."
@@ -1031,7 +1031,7 @@
 
  astral_planes.6030.name: "Astralnomical Marvel"
  astralnomical_interest_modifier: "Astralnomical Interest"
- astralnomical_interest_tt: "Each Organic Non-Slave £pop£ Pop produces 1 £physics_research£ §YPhysics Research§! per month."
+ astralnomical_interest_tt: "Each Non-Slave £pop£ §HOrganic Pop§! produces 1 £physics_research£ §YPhysics Research§! per month."
  astral_planes.6030.desc.common_1: "Colonists on [this.GetName] have developed a fascination with the"
  astral_planes.6030.desc.common_2: "visible in the sky from the planet's southern hemisphere. Rampant speculation exists about its origins, as well as what dangers or opportunities it might present.\n\nAmateur astronomers from across the [owner.GetName] have flocked to the planet to see it for themselves."
  astral_planes.6030.desc.rift: "$astral_planes.6030.desc.common_1$ $astral_rift$ $astral_planes.6030.desc.common_2$"
@@ -1125,6 +1125,7 @@
  d_weapon_extraction_facility: "Weapon Extraction Facility"
  d_weapon_extraction_facility_desc: "This facility processes ancient weapons from caches left by a lost civilization."
 
+ munitions_decommissioner: "$job_munitions_decommissioner$"
  job_munitions_decommissioner: "Munitions Decommissioner"
  job_munitions_decommissioner_plural: "Munitions Decommissioners"
  job_munitions_decommissioner_desc: "These practical researchers inspect and reverse-engineer ancient weapons to fit our modern specifications."
@@ -1138,15 +1139,18 @@
  job_munitions_decommissioning_drone_desc: "These drones efficiently disassemble ancient weapons to fit our modern specifications."
  mod_job_munitions_decommissioning_drone_add: "$job_munitions_decommissioning_drone$ Jobs"
 
+ astral_researcher: "$job_astral_researcher$"
  job_astral_researcher: "Astral Researcher"
  job_astral_researcher_plural: "Astral Researchers"
  job_astral_researcher_icon: "£job_astral_researcher£"
  job_astral_researcher_with_icon: "$job_astral_researcher_icon$ $job_astral_researcher$"
+ job_astral_researcher_plural_with_icon: "$job_astral_researcher_icon$ $job_astral_researcher_plural$"
  job_astral_researcher_desc: "The strands of space-time contain the secrets of every dimension, including our own. These researchers work tirelessly to decipher their significance while minimizing paradoxes."
  job_astral_researcher_effect_desc: "£job_astral_researcher£ $job_astral_researcher_plural$ turn $r_consumer_goods$ into $r_research$ and $r_astral_threads$"
  mod_job_astral_researcher_add: "$job_astral_researcher$ Jobs"
  mod_job_astral_researcher_per_pop: "§G+1§! $job_astral_researcher$ Job per $VALUE$ Pops"
  mod_job_astral_researcher_per_pop_short: "\n§G+1§! £mod_job_astral_researcher_add£ per $VALUE$ £pop£"
+ physicist_is_astral_researcher_tt: "$job_physicist_plural_with_icon$ are converted into $job_astral_researcher_plural_with_icon$"
 
  job_astral_drone: "Astral Drone"
  job_astral_drone_plural: "Astral Drones"

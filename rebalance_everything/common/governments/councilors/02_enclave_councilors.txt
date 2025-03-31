@@ -76,7 +76,7 @@ councilor_enclave_trader = {
 		has_leader_flag = trader_leader
 	}
 	modifier = {
-		trade_value_mult = 0.02
+		country_trade_produces_mult = 0.02
 		country_trade_fee = -0.01
 	}
 	icon = "GFX_icon_enclave_trader"

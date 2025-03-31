@@ -19,7 +19,7 @@ event = {
 		if = { #FTP spawner
 			limit = {
 				has_lithoids = yes
-				num_ai_empires_setting >= 1
+				num_ai_empires_setting >= 2
 				any_country = { #First check that UNE has spawned
 					has_country_flag = human_1
 					is_human_species = yes
@@ -40,7 +40,7 @@ event = {
 							has_country_flag = human_1
 							is_ai = no
 						}
-						factor = 5
+						factor = 4
 					}
 					random_system = {
 						limit = {
@@ -92,18 +92,47 @@ event = {
 				}
 			}
 			random_list = {
-				50 = { }
-				40 = {
+				49 = { }	# No Sol
+				40 = {		# Pre-FTLs
+					complex_trigger_modifier = {
+						trigger = check_galaxy_setup_value
+						parameters = {
+							setting = primitive_worlds_scale
+						}
+						mode = factor
+					}
 					random_system = {
 						limit = { has_owner = no }
 						spawn_system = { initializer = "pre_ftl_init_sol" }
 					}
 					add_extra_hyperlane_to_spawned_system_effect = yes
 				}
-				10 = {
+				10 = {		# Tomb World
+					complex_trigger_modifier = {
+						trigger = check_galaxy_setup_value
+						parameters = {
+							setting = primitive_worlds_scale
+						}
+						mode = factor
+					}
 					random_system = {
 						limit = { has_owner = no }
 						spawn_system = { initializer = "special_init_04" }
+					}
+					add_extra_hyperlane_to_spawned_system_effect = yes
+				}
+				1 = {		# Geocentric Experiment
+					complex_trigger_modifier = {
+						trigger = check_galaxy_setup_value
+						parameters = {
+							setting = habitable_worlds_scale
+						}
+						mode = factor
+						mult = 0.4 # e.g. 0.5x habitable = factor of 0.2; 5x habitable worlds = factor of 2
+					}
+					random_system = {
+						limit = { has_owner = no }
+						spawn_system = { initializer = "init_sol_geocentric" }
 					}
 					add_extra_hyperlane_to_spawned_system_effect = yes
 				}
@@ -915,6 +944,7 @@ country_event = {
 			limit = {
 				has_deposit_for = shipclass_mining_station
 				has_mining_station = no
+				has_any_rare_strategic_resource = no
 			}
 			create_mining_station = {
 				owner = ROOT
@@ -924,6 +954,7 @@ country_event = {
 			limit = {
 				has_deposit_for = shipclass_research_station
 				has_research_station = no
+				has_any_rare_strategic_resource = no
 			}
 			create_research_station = {
 				owner = ROOT
@@ -1227,7 +1258,7 @@ country_event = {
 					save_event_target_as = beastmasters_starting_fleet
 				}
 			}
-		
+
 			if = {
 				limit = { has_origin = origin_fruitful }
 				event_target:beastmasters_starting_fleet = {
@@ -1423,8 +1454,8 @@ country_event = {
 			limit = {
 				is_machine_empire = no
 			}
-			every_owned_pop = {
-				set_pop_flag = organic_fallen_empire_pop
+			every_owned_pop_group = {
+				set_pop_group_flag = organic_fallen_empire_pop
 			}
 		}
 		# contact other fallen empires & marauders
@@ -1516,19 +1547,6 @@ planet_event = {
 			limit = { has_planet_flag = toxic_knights_homeworld }
 			toxic_knights_order_habitat_setup = yes
 		}
-
-		if = {
-			limit = {
-				owner = {
-					is_astrometeorologist_empire = yes
-				}
-				has_building = building_research_lab_1
-			}
-
-			remove_building = building_research_lab_1
-			add_building = building_astrometeorology_observation_center
-		}
-
 	}
 }
 
@@ -1635,11 +1653,6 @@ planet_event = {
 			}
 
 			if = {
-				limit = { owner = { is_gestalt = no } }
-				add_building = building_factory_1
-				add_building = building_commercial_zone
-			}
-			if = {
 				limit = {
 					owner = { is_subterranean_empire = yes }
 				}
@@ -1668,12 +1681,6 @@ planet_event = {
 			while = {
 				count = 2
 				add_district_if_possible_effect = {
-					district = district_industrial
-				}
-			}
-			while = {
-				count = 2
-				add_district_if_possible_effect = {
 					district = district_mining_uncapped
 				}
 			}
@@ -1694,7 +1701,7 @@ planet_event = {
 						}
 					}
 					add_district_if_possible_effect = {
-						district = district_srw_commercial
+						district = district_city
 					}
 				}
 				else = {
@@ -1734,52 +1741,6 @@ planet_event = {
 						district = district_nexus
 					}
 				}
-			}
-
-			add_building = building_foundry_1
-			add_building = building_factory_1
-			if = {
-				limit = {
-					owner = {
-						is_megacorp = no
-						is_spiritualist = no
-						is_gestalt = no
-					}
-				}
-				add_building = building_bureaucratic_1
-			}
-			else_if = {
-				limit = {
-					owner = { is_spiritualist = yes }
-				}
-				add_building = building_temple
-			}
-			else_if = {
-				limit = {
-					owner = { is_megacorp = yes }
-				}
-				add_building = building_corporate_monument
-			}
-			else_if = {
-				limit = {
-					owner = { is_hive_empire = yes }
-				}
-				add_building = building_hive_node
-			}
-			else_if = {
-				limit = {
-					owner = {
-						is_machine_empire = yes
-						NOT = { has_valid_civic = civic_machine_servitor }
-					}
-				}
-				add_building = building_simulation_1
-			}
-			if = {
-				limit = {
-					owner = { is_gestalt = no }
-				}
-				add_building = building_holo_theatres
 			}
 		}
 		else = {
@@ -1843,14 +1804,14 @@ planet_event = {
 				limit = { owner = { is_machine_empire = yes } }
 				while = {
 					count = 13
-					create_pop = { species = owner_main_species }
+					create_pop_group = { species = owner_main_species }
 				}
 			}
 			else_if = {
 				limit = { owner = { is_hive_empire = yes } }
 				while = {
 					count = 16
-					create_pop = { species = owner_main_species }
+					create_pop_group = { species = owner_main_species }
 				}
 			}
 			else_if = {
@@ -1863,13 +1824,13 @@ planet_event = {
 				}
 				while = {
 					count = 6
-					create_pop = {
+					create_pop_group = {
 						species = event_target:mechanical_species
 					}
 				}
 				while = {
 					count = 12
-					create_pop = { species = owner_main_species }
+					create_pop_group = { species = owner_main_species }
 				}
 			}
 			else_if = {
@@ -1889,17 +1850,17 @@ planet_event = {
 				}
 				while = {
 					count = 8
-					create_pop = { species = event_target:syncretic_species }
+					create_pop_group = { species = event_target:syncretic_species }
 				}
 				while = {
 					count = 10
-					create_pop = { species = owner_main_species }
+					create_pop_group = { species = owner_main_species }
 				}
 			}
 			else = {
 				while = {
 					count = 18
-					create_pop = { species = owner_main_species }
+					create_pop_group = { species = owner_main_species }
 				}
 			}
 		}
@@ -1908,14 +1869,14 @@ planet_event = {
 				limit = { owner = { is_machine_empire = yes } }
 				while = {
 					count = 15
-					create_pop = { species = owner_main_species }
+					create_pop_group = { species = owner_main_species }
 				}
 			}
 			else_if = {
 				limit = { owner = { is_hive_empire = yes } }
 				while = {
 					count = 18
-					create_pop = { species = owner_main_species }
+					create_pop_group = { species = owner_main_species }
 				}
 			}
 			else_if = {
@@ -1928,13 +1889,13 @@ planet_event = {
 				}
 				while = {
 					count = 4
-					create_pop = {
+					create_pop_group = {
 						species = event_target:mechanical_species
 					}
 				}
 				while = {
 					count = 7
-					create_pop = { species = owner_main_species }
+					create_pop_group = { species = owner_main_species }
 				}
 			}
 			else_if = {
@@ -1954,17 +1915,17 @@ planet_event = {
 				}
 				while = {
 					count = 4
-					create_pop = { species = event_target:syncretic_species }
+					create_pop_group = { species = event_target:syncretic_species }
 				}
 				while = {
 					count = 6
-					create_pop = { species = owner_main_species }
+					create_pop_group = { species = owner_main_species }
 				}
 			}
 			else = {
 				while = {
 					count = 10
-					create_pop = { species = owner_main_species }
+					create_pop_group = { species = owner_main_species }
 				}
 			}
 		}
@@ -2312,23 +2273,23 @@ country_event = {
 						}
 					}
 				}
-				random_owned_pop = {
+				weighted_random_owned_pop_group = {
 					limit = {
 						NOT = { is_same_species = prev }
 					}
 					species = { save_event_target_as = correct_prepatent_species }
 				}
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
 					NOT = { is_same_species = owner_species }
 				}
 				planet = {
-					create_pop = {
+					create_pop_group = {
 						species = event_target:correct_prepatent_species
 					}
 				}
-				kill_pop = yes
+				kill_single_pop = yes
 			}
 			remove_country_flag = necrophage_une
 			remove_country_flag = necrophage_commonwealth
@@ -2754,7 +2715,7 @@ country_event = {
 				remove_district = district_generator
 				add_district = district_city
 			}
-			add_building = building_clinic
+			add_building = building_medical_1
 		}
 		give_technology = { message = no tech = tech_frontier_health }
 		add_research_option = tech_subdermal_stimulation

@@ -1939,7 +1939,7 @@ country_event = {
 			event_target:NomadMissionPlanet = {
 				while = {
 					count = 3
-					create_pop = {
+					create_pop_group = {
 						species = event_target:nomad_fleet_species
 						ethos = {
 							ethic = "ethic_egalitarian"
@@ -2410,7 +2410,7 @@ country_event = {
 
 				while = {
 					count = 14
-					create_pop = {
+					create_pop_group = {
 						species = owner_main_species
 						ethos = {
 							ethic = "ethic_egalitarian"
@@ -2419,7 +2419,7 @@ country_event = {
 				}
 				set_owner = event_target:nomad_new_country
 				event_target:nomad_new_country = {
-					every_owned_pop = {
+					every_owned_pop_group = {
 						modify_species = {
 							species = prev
 							ideal_planet_class = prevprev

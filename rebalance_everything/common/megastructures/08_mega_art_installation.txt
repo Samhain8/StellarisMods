@@ -175,6 +175,7 @@ mega_art_installation_1 = {
 
 	country_modifier = {
 		planet_amenities_mult = 0.05
+		planetary_ascension_cost_mult = -0.05
 	}
 
 	on_build_complete = {
@@ -214,6 +215,7 @@ mega_art_installation_2 = {
 
 	country_modifier = {
 		planet_amenities_mult = 0.10
+		planetary_ascension_cost_mult = -0.1
 	}
 
 	on_build_complete = {
@@ -254,6 +256,7 @@ mega_art_installation_3 = {
 
 	country_modifier = {
 		planet_amenities_mult = 0.15
+		planetary_ascension_cost_mult = -0.15
 	}
 
 	on_build_complete = {
@@ -310,6 +313,7 @@ mega_art_installation_4 = {
 
 	country_modifier = {
 		planet_amenities_mult = 0.2
+		planetary_ascension_cost_mult = -0.2
 	}
 
 	on_build_complete = {
@@ -383,6 +387,7 @@ mega_art_installation_restored = {
 
 	country_modifier = {
 		planet_amenities_mult = 0.15
+		planetary_ascension_cost_mult = -0.15
 	}
 
 	on_build_complete = {
@@ -447,6 +452,7 @@ mega_art_installation_restored_2 = {
 
 	country_modifier = {
 		planet_amenities_mult = 0.2
+		planetary_ascension_cost_mult = -0.2
 	}
 
 	possible = {

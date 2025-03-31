@@ -155,7 +155,7 @@ hyper_relay = {
 				is_gestalt = no
 			}
 			is_capital_system = no
-			has_trade_route = no
+			#has_trade_route = no
 		}
 	}
 

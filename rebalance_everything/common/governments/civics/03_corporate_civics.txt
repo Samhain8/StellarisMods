@@ -94,8 +94,7 @@ civic_trading_posts = {
 	}
 	modifier = {
 		country_starbase_capacity_add = 4
-		starbase_trade_collection_range_add = 1
-		starbase_trade_protection_add = 8
+		starbase_buildings_trade_produces_add = 2
 	}
 }
 
@@ -230,7 +229,6 @@ civic_free_traders = {
 		}
 	}
 	modifier = {
-		trade_value_mult = 0.10
 		branch_office_value_mult = 0.10
 	}
 }
@@ -335,7 +333,7 @@ civic_gospel_of_the_masses = {
 	}
 	modifier = {
 		pop_ethic_spiritualist_attraction_mult = 0.5
-		job_preacher_trade_value_add = 1
+		planet_priests_trade_produces_add = 1
 	}
 
 	description = "civic_tooltip_gospel_of_the_masses_effects"
@@ -880,6 +878,10 @@ civic_corporate_crafters = {
 	possible = {
 		civics = { NOT = { value = civic_crafters }	}
 	}
+	modifier = {
+		planet_artisans_consumer_goods_produces_add = 2
+		planet_artisans_trade_produces_add = 2
+	}
 	random_weight = {
 		base = @civic_uncommon_random_weight
 	}
@@ -1388,7 +1390,6 @@ civic_crusader_spirit_corporate = {
 		}
 	}
 	modifier = {
-		local_trade_protection_add = 20
 		ships_upkeep_mult = -0.05
 	}
 	swap_type = {
@@ -1461,6 +1462,7 @@ civic_private_healthcare_corporate = {
 	}
 	modifier = {
 		leader_lifespan_add = 10
+		planet_doctors_trade_produces_add = 4
 	}
 }
 
@@ -1622,7 +1624,7 @@ civic_augmentation_bazaars = {
 	}
 
 	modifier = {
-		job_augmentor_trade_value_add = 4
+		planet_augmentors_trade_produces_add = 4
 	}
 }
 

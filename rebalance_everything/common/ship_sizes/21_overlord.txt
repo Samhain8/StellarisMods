@@ -12,7 +12,7 @@ offspring_corvette = {
 	max_hitpoints = @corvette_hp
 	modifier = {
 		ship_evasion_add = @corvette_evasion
-		ship_piracy_suppression_add = 10
+		#ship_piracy_suppression_add = 10
 		ship_hull_mult = 0.5
 		ship_weapon_range_mult = 0.25
 		ship_shield_mult = 0.5
@@ -46,7 +46,7 @@ offspring_corvette = {
 			name = explosive_stealth
 			trigger = {
 				has_technology = tech_cloaking_1
-				has_technology = tech_torpedoes_1 
+				has_technology = tech_torpedoes_1
 			}
 		}
 		{
@@ -79,6 +79,9 @@ offspring_corvette = {
 			alloys = @corvette_upkeep_alloys
 			mult = 2
 		}
+		logistics = {
+			trade = @corvette_logistic_upkeep_trade
+		}
 	}
 
 	min_upgrade_cost = {
@@ -106,7 +109,7 @@ offspring_destroyer = {
 	max_hitpoints = @destroyer_hp
 	modifier = {
 		ship_evasion_add = @destroyer_evasion
-		ship_piracy_suppression_add = 8
+		#ship_piracy_suppression_add = 8
 		ship_hull_mult = 0.5
 		ship_weapon_range_mult = 0.25
 		ship_shield_mult = 0.5
@@ -158,6 +161,9 @@ offspring_destroyer = {
 			alloys = @destroyer_upkeep_alloys
 			mult = 2
 		}
+		logistics = {
+			trade = @destroyer_logistic_upkeep_trade
+		}
 	}
 	min_upgrade_cost = {
 		alloys = 2
@@ -174,7 +180,7 @@ offspring_cruiser = {
 	max_hitpoints = @cruiser_hp
 	modifier = {
 		ship_evasion_add = @cruiser_evasion
-		ship_piracy_suppression_add = 6
+		#ship_piracy_suppression_add = 6
 		ship_hull_mult = 0.5
 		ship_weapon_range_mult = 0.25
 		ship_shield_mult = 0.5
@@ -241,6 +247,9 @@ offspring_cruiser = {
 			alloys = @cruiser_upkeep_alloys
 			mult = 2
 		}
+		logistics = {
+			trade = @cruiser_logistic_upkeep_trade
+		}
 	}
 
 	min_upgrade_cost = {
@@ -258,7 +267,7 @@ offspring_battleship = {
 	max_hitpoints = @battleship_hp
 	modifier = {
 		ship_evasion_add = @battleship_evasion
-		ship_piracy_suppression_add = 4
+		#ship_piracy_suppression_add = 4
 		ship_hull_mult = 0.5
 		ship_weapon_range_mult = 0.25
 		ship_shield_mult = 0.5
@@ -302,6 +311,9 @@ offspring_battleship = {
 			energy = @battleship_upkeep_energy
 			alloys = @battleship_upkeep_alloys
 			mult = 2
+		}
+		logistics = {
+			trade = @battleship_logistic_upkeep_trade
 		}
 	}
 

@@ -148,7 +148,7 @@ country_event = {
 			event_target:planet_option_1 = {
 				while = {
 					count = 3
-					create_pop = {
+					create_pop_group = {
 						species = event_target:omnicodex_species
 					}
 				}
@@ -184,7 +184,7 @@ country_event = {
 			event_target:planet_option_2 = {
 				while = {
 					count = 3
-					create_pop = {
+					create_pop_group = {
 						species = event_target:omnicodex_species
 					}
 				}
@@ -220,7 +220,7 @@ country_event = {
 			event_target:planet_option_3 = {
 				while = {
 					count = 3
-					create_pop = {
+					create_pop_group = {
 						species = event_target:omnicodex_species
 					}
 				}
@@ -256,7 +256,7 @@ country_event = {
 			event_target:planet_option_4 = {
 				while = {
 					count = 3
-					create_pop = {
+					create_pop_group = {
 						species = event_target:omnicodex_species
 					}
 				}
@@ -292,7 +292,7 @@ country_event = {
 			event_target:planet_option_5 = {
 				while = {
 					count = 3
-					create_pop = {
+					create_pop_group = {
 						species = event_target:omnicodex_species
 					}
 				}
@@ -463,7 +463,7 @@ planet_event = {
 
 	trigger = {
 		has_ancrel = yes
-		num_pops > 0
+		pop_amount > 0
 		OR = {
 			is_planet_class = pc_desert
 			is_planet_class = pc_tropical
@@ -8639,13 +8639,12 @@ fleet_event = {
 				}
 				while = {
 					count = 5
-					add_district = district_industrial
 					add_district = district_generator_uncapped
 					add_district = district_mining_uncapped
 				}
 				while = {
 					count = 80
-					create_pop = {
+					create_pop_group = {
 						species = event_target:new_machines
 					}
 				}
@@ -8687,7 +8686,7 @@ fleet_event = {
 				while = {
 					count = 80
 					random_owned_planet = {
-						create_pop = {
+						create_pop_group = {
 							species = event_target:new_machines
 						}
 						weights = {
@@ -8732,7 +8731,7 @@ fleet_event = {
 				while = {
 					count = 80
 					random_owned_planet = {
-						create_pop = {
+						create_pop_group = {
 							species = event_target:new_robots
 						}
 						weights = {
@@ -8815,7 +8814,7 @@ fleet_event = {
 				change_pc = pc_machine
 				while = {
 					count = 80
-					create_pop = {
+					create_pop_group = {
 						species = event_target:new_machines
 					}
 				}
@@ -8825,7 +8824,6 @@ fleet_event = {
 				}
 				while = {
 					count = 2
-					add_district = district_industrial
 					add_district = district_generator_uncapped
 					add_district = district_mining_uncapped
 				}
@@ -10006,7 +10004,7 @@ planet_event = {
 	}
 
 	trigger = {
-		num_pops > 0
+		pop_amount > 0
 		OR = {
 			is_planet_class = pc_tropical
 			is_planet_class = pc_gaia

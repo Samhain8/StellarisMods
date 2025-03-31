@@ -143,7 +143,7 @@ tech_prescient_data_modeling = {
 	}
 
 	modifier = {
-		trade_value_mult = 0.05
+		planet_jobs_trade_produces_mult = 0.05
 	}
 }
 
@@ -909,7 +909,7 @@ tech_alien_life_studies = {
 					OR = {
 						has_deposit = d_alien_pets_deposit
 						has_deposit = d_avian_reserve
-						any_owned_pop = {
+						any_owned_pop_group = {
 							OR = {
 								is_sapient = no
 								is_livestock = yes
@@ -1111,13 +1111,27 @@ tech_tomb_world_adaption = {
 	}
 }
 
+# Medical Care
+tech_basic_health = {
+	cost = 0
+	area = society
+	start_tech = yes
+	tier = 0
+	category = { biology }
+
+	potential = {
+		is_regular_empire = yes
+		is_individual_machine = no
+	}
+}
+
 #Frontier Health
 tech_frontier_health = {
 	cost = @tier1cost2
 	area = society
 	tier = 1
 	category = { biology }
-	prerequisites = { "tech_genome_mapping" }
+	prerequisites = { "tech_basic_health" "tech_genome_mapping" }
 	weight = @tier1weight2
 
 	potential = {
@@ -2120,7 +2134,7 @@ tech_epigenetic_triggers = {
 			NOR = {
 				has_country_flag = found_presapients
 				any_planet_within_border = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						is_sapient = no
 					}
 				}
@@ -3558,18 +3572,18 @@ tech_psionic_theory = {
 		}
 		modifier = {
 			factor = 2
-			any_owned_pop = {
-				pop_has_trait = trait_psionic
+			any_owned_pop_group = {
+				pop_group_has_trait = trait_psionic
 			}
 		}
 		modifier = {
 			factor = 1.25
-			any_owned_pop = {
-				pop_has_trait = trait_latent_psionic
+			any_owned_pop_group = {
+				pop_group_has_trait = trait_latent_psionic
 			}
 			NOT = {
-				any_owned_pop = {
-					pop_has_trait = trait_psionic
+				any_owned_pop_group = {
+					pop_group_has_trait = trait_psionic
 				}
 			}
 		}
@@ -3587,10 +3601,10 @@ tech_psionic_theory = {
 				NOR = {
 					has_tier1or2or3_in_council = { TRAIT = leader_trait_expertise_psionics }
 					has_councilor = { COUNCILOR = "councilor_shroudwalker_teacher" }
-					any_owned_pop = {
+					any_owned_pop_group = {
 						OR = {
-							pop_has_trait = trait_psionic
-							pop_has_trait = trait_latent_psionic
+							pop_group_has_trait = trait_psionic
+							pop_group_has_trait = trait_latent_psionic
 						}
 					}
 				}
@@ -4084,6 +4098,84 @@ tech_galactic_campaigns = {
 			has_ethic = ethic_fanatic_militarist
 		}
 
+	}
+}
+
+tech_existential_campaigns = {
+	cost = @tier5cost3
+	area = society
+	category = { military_theory }
+	tier = 5
+	weight = @tier5weight3
+	is_rare = yes
+	is_dangerous = yes
+	prerequisites = { tech_galactic_campaigns }
+
+	modifier = {
+		show_only_custom_tooltip = yes
+		custom_tooltip = tech_existential_campaigns_effect
+	}
+
+	weight_modifier = {
+		modifier = {
+			factor = 0
+			OR = {
+				has_valid_civic = "civic_fanatic_purifiers"
+				has_valid_civic = "civic_hive_devouring_swarm"
+				has_valid_civic = "civic_machine_terminator"
+			}
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 2
+			num_communications > 2
+		}
+		modifier = {
+			factor = 2
+			num_communications > 3
+		}
+		modifier = {
+			factor = 2
+			num_communications > 4
+		}
+		modifier = {
+			factor = 0
+			num_communications < 1
+		}
+		modifier = {
+			factor = 0.5
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 0
+			has_ethic = ethic_fanatic_pacifist
+		}
+	}
+
+	ai_weight = {
+		modifier = {
+			factor = 2
+			has_ethic = ethic_fanatic_militarist
+		}
+		modifier = {
+			factor = 1.5
+			has_ethic = ethic_militarist
+		}
+		modifier = {
+			factor = 0.5
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 0
+			has_ethic = ethic_fanatic_pacifist
+		}
 	}
 }
 
@@ -4761,29 +4853,29 @@ tech_neural_implants = {
 	weight_modifier = {
 		modifier = {
 			factor = 1.5
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = {
 					is_enslaved = yes
 				}
-				count > 9
+				count >= 1000
 			}
 		}
 		modifier = {
 			factor = 2
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = {
 					is_enslaved = yes
 				}
-				count > 19
+				count >= 2000
 			}
 		}
 		modifier = {
 			factor = 2
-			count_owned_pop = {
+			count_owned_pop_amount = {
 				limit = {
 					is_enslaved = yes
 				}
-				count > 29
+				count >= 3000
 			}
 		}
 
@@ -4791,7 +4883,7 @@ tech_neural_implants = {
 			factor = 0.0
 			OR = {
 				allows_slavery = no
-				NOT = { any_owned_pop = { is_enslaved = yes } }
+				NOT = { any_owned_pop_group = { is_enslaved = yes } }
 			}
 		}
 	}
@@ -5022,7 +5114,7 @@ tech_paradise_dome = {
 
 		modifier = {
 			factor = @housing_ai_tech_factor
-			num_pops >= 100
+			pop_amount >= 10000
 		}
 	}
 }
@@ -5458,7 +5550,7 @@ tech_slave_colonies = {
 			factor = 0.0
 			OR = {
 				allows_slavery = no
-				NOT = { any_owned_pop = { is_enslaved = yes } }
+				NOT = { any_owned_pop_group = { is_enslaved = yes } }
 			}
 		}
 	}
@@ -5492,7 +5584,80 @@ tech_housing_agrarian_idyll = {
 
 		modifier = {
 			factor = @housing_ai_tech_factor
-			num_pops >= 100
+			pop_amount >= 10000
+		}
+	}
+}
+
+tech_federation_code = {
+	cost = @tier1cost2
+	area = society
+	tier = 1
+	category = { statecraft }
+	prerequisites = { "tech_colonial_centralization" }
+	weight = @tier2weight1
+
+	potential = {
+
+	}
+
+	modifier = {
+		show_only_custom_tooltip = yes
+		custom_tooltip = tech_federation_code_effect
+	}
+
+	## unlock embassy building and edict
+
+	weight_modifier = {
+		factor = 2
+
+		modifier = {
+			factor = 2
+			is_galactic_community_member = yes
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_fanatic_xenophile
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_xenophile
+		}
+		modifier = {
+			factor = 0.5
+			has_ethic = ethic_xenophobe
+		}
+		modifier = {
+			factor = 0.25
+			has_ethic = ethic_fanatic_xenophobe
+		}
+		modifier = {
+			factor = 0.01
+			is_diplomatic = no
+		}
+	}
+
+	ai_weight = {
+
+		modifier = {
+			factor = 2
+			has_ethic = ethic_fanatic_xenophile
+		}
+		modifier = {
+			factor = 1.25
+			has_ethic = ethic_xenophile
+		}
+		modifier = {
+			factor = 0.5
+			has_ethic = ethic_xenophobe
+		}
+		modifier = {
+			factor = 0.25
+			has_ethic = ethic_fanatic_xenophobe
+		}
+		modifier = {
+			factor = 0.01
+			is_diplomatic = no
 		}
 	}
 }
@@ -5502,7 +5667,7 @@ tech_xeno_diplomacy = {
 	area = society
 	tier = 2
 	category = { statecraft }
-	prerequisites = { "tech_colonial_centralization" }
+	prerequisites = { "tech_federation_code" }
 	weight = @tier2weight1
 
 	potential = {
@@ -5845,7 +6010,7 @@ tech_node_reformatting_1 = {
 			any_owned_leader = {
 				is_councilor = yes
 				is_ruler = no
-				has_skill  >= 5
+				has_skill >= 5
 			}
 		}
 		modifier = {
@@ -5853,7 +6018,7 @@ tech_node_reformatting_1 = {
 			any_owned_leader = {
 				is_councilor = yes
 				is_ruler = no
-				has_skill  >= 7
+				has_skill >= 7
 			}
 		}
 		modifier = {
@@ -5861,7 +6026,7 @@ tech_node_reformatting_1 = {
 			any_owned_leader = {
 				is_councilor = yes
 				is_ruler = no
-				has_skill  >= 9
+				has_skill >= 9
 			}
 		}
 	}
@@ -5902,7 +6067,7 @@ tech_node_reformatting_2 = {
 			any_owned_leader = {
 				is_councilor = yes
 				is_ruler = no
-				has_skill  >= 5
+				has_skill >= 5
 			}
 		}
 		modifier = {
@@ -5910,7 +6075,7 @@ tech_node_reformatting_2 = {
 			any_owned_leader = {
 				is_councilor = yes
 				is_ruler = no
-				has_skill  >= 7
+				has_skill >= 7
 			}
 		}
 		modifier = {
@@ -5918,7 +6083,7 @@ tech_node_reformatting_2 = {
 			any_owned_leader = {
 				is_councilor = yes
 				is_ruler = no
-				has_skill  >= 9
+				has_skill >= 9
 			}
 		}
 	}
@@ -5960,7 +6125,7 @@ tech_node_reformatting_3 = {
 			any_owned_leader = {
 				is_councilor = yes
 				is_ruler = no
-				has_skill  >= 7
+				has_skill >= 7
 			}
 		}
 		modifier = {
@@ -5968,7 +6133,7 @@ tech_node_reformatting_3 = {
 			any_owned_leader = {
 				is_councilor = yes
 				is_ruler = no
-				has_skill  >= 9
+				has_skill >= 9
 			}
 		}
 		modifier = {
@@ -6033,7 +6198,7 @@ tech_node_culling_1 = {
 			any_owned_leader = {
 				is_councilor = yes
 				is_ruler = no
-				has_skill  >= 5
+				has_skill >= 5
 			}
 		}
 		modifier = {
@@ -6041,7 +6206,7 @@ tech_node_culling_1 = {
 			any_owned_leader = {
 				is_councilor = yes
 				is_ruler = no
-				has_skill  >= 7
+				has_skill >= 7
 			}
 		}
 		modifier = {
@@ -6049,7 +6214,7 @@ tech_node_culling_1 = {
 			any_owned_leader = {
 				is_councilor = yes
 				is_ruler = no
-				has_skill  >= 9
+				has_skill >= 9
 			}
 		}
 	}
@@ -6090,7 +6255,7 @@ tech_node_culling_2 = {
 			any_owned_leader = {
 				is_councilor = yes
 				is_ruler = no
-				has_skill  >= 5
+				has_skill >= 5
 			}
 		}
 		modifier = {
@@ -6098,7 +6263,7 @@ tech_node_culling_2 = {
 			any_owned_leader = {
 				is_councilor = yes
 				is_ruler = no
-				has_skill  >= 7
+				has_skill >= 7
 			}
 		}
 		modifier = {
@@ -6106,7 +6271,7 @@ tech_node_culling_2 = {
 			any_owned_leader = {
 				is_councilor = yes
 				is_ruler = no
-				has_skill  >= 9
+				has_skill >= 9
 			}
 		}
 	}
@@ -6148,7 +6313,7 @@ tech_node_culling_3 = {
 			any_owned_leader = {
 				is_councilor = yes
 				is_ruler = no
-				has_skill  >= 7
+				has_skill >= 7
 			}
 		}
 		modifier = {
@@ -6156,7 +6321,7 @@ tech_node_culling_3 = {
 			any_owned_leader = {
 				is_councilor = yes
 				is_ruler = no
-				has_skill  >= 9
+				has_skill >= 9
 			}
 		}
 		modifier = {

@@ -1,0 +1,85 @@
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+		}
+	}
+	job_bureaucrat_add = $AMOUNT$
+}
+
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+		}
+		is_planet_class = pc_city
+		NOT = {	has_modifier = penal_colony }
+	}
+	job_bureaucrat_add = $AMOUNT$
+	mult = 2	# Ecus get 3× as many jobs
+}
+
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+		}
+		is_planet_class = pc_ringworld_habitable
+		NOT = {	has_modifier = penal_colony }
+	}
+	job_bureaucrat_add = $AMOUNT$
+	mult = 4	# Ringworlds get 5× as many jobs
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_regular_empire = yes
+		}
+	}
+	text = job_bureaucrat_effect_desc
+}
+
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+		}
+	}
+	job_synapse_drone_add = $AMOUNT$
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_regular_empire = no
+		}
+	}
+	text = job_synapse_drone_effect_desc
+}
+
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+		}
+	}
+	job_coordinator_add = $AMOUNT$
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = {
+			is_regular_empire = no
+		}
+	}
+	text = job_coordinator_effect_desc
+}

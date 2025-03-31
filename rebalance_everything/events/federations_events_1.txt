@@ -2928,7 +2928,7 @@ event = {
 			exists = federation
 			has_federation = yes
 			any_system_within_border = {
-				has_system_trade_value >= 75
+				#has_system_trade_value >= 75
 			}
 			is_at_war = no
 			federation = {
@@ -2956,7 +2956,7 @@ event = {
 					any_member = {
 						is_at_war = no
 						any_system_within_border = {
-							has_system_trade_value >= 75
+							#has_system_trade_value >= 75
 						}
 					}
 				}
@@ -2996,7 +2996,7 @@ event = {
 					any_member = {
 						is_at_war = no
 						any_system_within_border = {
-							has_system_trade_value >= 75
+							#has_system_trade_value >= 75
 						}
 					}
 				}
@@ -3046,7 +3046,7 @@ country_event = {
 				any_owned_starbase = {
 					has_starbase_module = trading_hub
 					solar_system = {
-						has_system_trade_value >= 50
+						#has_system_trade_value >= 50
 					}
 				}
 			}
@@ -3054,7 +3054,7 @@ country_event = {
 				limit = {
 					has_starbase_module = trading_hub
 					solar_system = {
-						has_system_trade_value >= 50
+						#has_system_trade_value >= 50
 					}
 				}
 				save_event_target_as = trial_trade_hub

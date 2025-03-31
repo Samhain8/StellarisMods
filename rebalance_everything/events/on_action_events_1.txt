@@ -4465,7 +4465,7 @@ country_event = {
 			# Add districts (planets)
 			if = {
 				limit = {
-					num_pops <= 5
+					pop_amount <= 500
 				}
 				add_district = district_city
 				add_district = district_farming
@@ -4473,8 +4473,8 @@ country_event = {
 			}
 			if = {
 				limit = {
-					num_pops >= 5
-					num_pops <= 10
+					pop_amount >= 500
+					pop_amount <= 1000
 				}
 				add_district = district_city
 				add_district = district_farming
@@ -4482,8 +4482,8 @@ country_event = {
 			}
 			if = {
 				limit = {
-					num_pops >= 10
-					num_pops <= 15
+					pop_amount >= 1000
+					pop_amount <= 1500
 				}
 				add_district = district_city
 				add_district = district_city
@@ -4493,23 +4493,9 @@ country_event = {
 			}
 			if = {
 				limit = {
-					num_pops >= 15
-					num_pops <= 20
+					pop_amount >= 1500
+					pop_amount <= 2000
 				}
-				add_district = district_city
-				add_district = district_city
-				add_district = district_farming
-				add_district = district_farming
-				add_district = district_mining
-				add_district = district_mining
-				break = yes
-			}
-			if = {
-				limit = {
-					num_pops >= 20
-					num_pops <= 25
-				}
-				add_district = district_city
 				add_district = district_city
 				add_district = district_city
 				add_district = district_farming
@@ -4520,8 +4506,22 @@ country_event = {
 			}
 			if = {
 				limit = {
-					num_pops >= 25
-					num_pops <= 30
+					pop_amount >= 2000
+					pop_amount <= 2500
+				}
+				add_district = district_city
+				add_district = district_city
+				add_district = district_city
+				add_district = district_farming
+				add_district = district_farming
+				add_district = district_mining
+				add_district = district_mining
+				break = yes
+			}
+			if = {
+				limit = {
+					pop_amount >= 2500
+					pop_amount <= 3000
 				}
 				add_district = district_city
 				add_district = district_city
@@ -4536,7 +4536,7 @@ country_event = {
 			}
 			if = {
 				limit = {
-					num_pops >= 30
+					pop_amount >= 3000
 				}
 				add_district = district_city
 				add_district = district_city
@@ -4705,7 +4705,7 @@ planet_event = {
 	trigger = {
 		exists = fromfrom #crisis.202 can remove the last pop
 		FROMFROM = {
-			is_robot_pop = no
+			is_robot_pop_group = no
 			is_sapient = yes
 			NOT = { has_trait = "trait_hive_mind" }
 			OR = {
@@ -4992,7 +4992,7 @@ country_event = {
 
 	immediate = {
 		from = {
-			every_owned_pop = {
+			every_owned_pop_group = {
 				remove_modifier = "pop_recently_conquered"
 			}
 		}
@@ -5481,9 +5481,9 @@ planet_event = {
 			}
 		}
 		OR = {
-			num_pops > 10
+			pop_amount > 1000
 			AND = {
-				num_pops > 3
+				pop_amount > 300
 				free_housing < 1
 			}
 		}
@@ -5501,14 +5501,14 @@ planet_event = {
 					if = {
 						limit = {
 							OR = {
-								num_pops > 10
+								pop_amount > 1000
 								AND = {
-									num_pops > 3
+									pop_amount > 300
 									free_housing < 1
 								}
 							}
 						}
-						random_owned_pop = {
+						random_owned_pop_group = {
 							limit = {
 								is_sapient = yes
 								has_citizenship_rights = no
@@ -5519,7 +5519,7 @@ planet_event = {
 									}
 								}
 							}
-							pop_event = { id = refugees.4 }
+							pop_group_event = { id = refugees.4 }
 							root = {
 								change_variable = {
 									which = land_appropriated
@@ -5536,14 +5536,14 @@ planet_event = {
 					if = {
 						limit = {
 							OR = {
-								num_pops > 10
+								pop_amount > 1000
 								AND = {
-									num_pops > 3
+									pop_amount > 300
 									free_housing < 1
 								}
 							}
 						}
-						random_owned_pop = {
+						random_owned_pop_group = {
 							limit = {
 								is_sapient = yes
 								has_citizenship_rights = no
@@ -5554,7 +5554,7 @@ planet_event = {
 									}
 								}
 							}
-							pop_event = { id = refugees.4 }
+							pop_group_event = { id = refugees.4 }
 							root = {
 								change_variable = {
 									which = land_appropriated
@@ -5571,14 +5571,14 @@ planet_event = {
 					if = {
 						limit = {
 							OR = {
-								num_pops > 10
+								pop_amount > 1000
 								AND = {
-									num_pops > 3
+									pop_amount > 300
 									free_housing < 1
 								}
 							}
 						}
-						random_owned_pop = {
+						random_owned_pop_group = {
 							limit = {
 								is_sapient = yes
 								has_citizenship_rights = no
@@ -5589,7 +5589,7 @@ planet_event = {
 									}
 								}
 							}
-							pop_event = { id = refugees.4 }
+							pop_group_event = { id = refugees.4 }
 							root = {
 								change_variable = {
 									which = land_appropriated
@@ -5610,7 +5610,7 @@ planet_event = {
 					limit = {
 						any_owned_planet = {
 							free_housing < 1
-							any_owned_pop = {
+							any_owned_pop_group = {
 								is_sapient = yes
 								has_citizenship_rights = yes
 								OR = {
@@ -5625,7 +5625,7 @@ planet_event = {
 					random_owned_planet = {
 						limit = {
 							free_housing < 1
-							any_owned_pop = {
+							any_owned_pop_group = {
 								is_sapient = yes
 								has_citizenship_rights = yes
 								OR = {
@@ -5636,7 +5636,7 @@ planet_event = {
 							}
 						}
 
-						random_owned_pop = {
+						random_owned_pop_group = {
 							limit = {
 								is_sapient = yes
 								has_citizenship_rights = yes
@@ -5647,9 +5647,10 @@ planet_event = {
 								can_live_on_planet = root
 							}
 
-							resettle_pop = {
-								pop = this
-								planet = root
+							resettle_pop_group = {
+								POP_GROUP = this
+								PLANET = root
+								AMOUNT = 100
 							}
 						}
 					}
@@ -5657,7 +5658,7 @@ planet_event = {
 				else_if = {
 					limit = {
 						any_owned_planet = {
-							any_owned_pop = {
+							any_owned_pop_group = {
 								is_sapient = yes
 								has_citizenship_rights = yes
 								OR = {
@@ -5671,7 +5672,7 @@ planet_event = {
 
 					random_owned_planet = {
 						limit = {
-							any_owned_pop = {
+							any_owned_pop_group = {
 								is_sapient = yes
 								has_citizenship_rights = yes
 								OR = {
@@ -5682,7 +5683,7 @@ planet_event = {
 							}
 						}
 
-						random_owned_pop = {
+						random_owned_pop_group = {
 							limit = {
 								is_sapient = yes
 								has_citizenship_rights = yes
@@ -5693,9 +5694,10 @@ planet_event = {
 								can_live_on_planet = root
 							}
 
-							resettle_pop = {
-								pop = this
-								planet = root
+							resettle_pop_group = {
+								POP_GROUP = this
+								PLANET = root
+								AMOUNT = 100
 							}
 						}
 					}
@@ -6648,7 +6650,7 @@ planet_event = {
 				while = {
 					count = 3
 					limit = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							has_citizenship_type = {
 								type = citizenship_assimilation
 								country = root.owner
@@ -6671,7 +6673,7 @@ planet_event = {
 				while = {
 					count = 6
 					limit = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							has_citizenship_type = {
 								type = citizenship_assimilation
 								country = root.owner
@@ -6694,7 +6696,7 @@ planet_event = {
 				while = {
 					count = 12
 					limit = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							has_citizenship_type = {
 								type = citizenship_assimilation
 								country = root.owner
@@ -6728,7 +6730,7 @@ planet_event = {
 					while = {
 						count = 1
 						limit = {
-							any_owned_pop = {
+							any_owned_pop_group = {
 								has_citizenship_type = {
 									type = citizenship_assimilation
 									country = root.owner
@@ -6750,7 +6752,7 @@ planet_event = {
 					while = {
 						count = 2
 						limit = {
-							any_owned_pop = {
+							any_owned_pop_group = {
 								has_citizenship_type = {
 									type = citizenship_assimilation
 									country = root.owner
@@ -6772,7 +6774,7 @@ planet_event = {
 					while = {
 						count = 3
 						limit = {
-							any_owned_pop = {
+							any_owned_pop_group = {
 								has_citizenship_type = {
 									type = citizenship_assimilation
 									country = root.owner
@@ -6791,6 +6793,33 @@ planet_event = {
 				which = assimilation_counter
 				value = 0
 			}
+		}
+	}
+}
+
+# Pops Sub-Species integration on Yearly Pulse
+event = {
+	id = action.66
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		any_playable_country = {
+			any_owned_species = {
+				is_being_integrated_by = prev
+			}
+		}
+	}
+
+	immediate = {
+		log = "action.66"
+		every_playable_country = {
+			limit = {
+				any_owned_species = {
+					is_being_integrated_by = prev
+				}
+			}
+			integrate_species = yes
 		}
 	}
 }
@@ -6840,7 +6869,7 @@ planet_event = {
 			remove_modifier = "paradise_made"
 			if = {
 				limit = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						NOR = {
 							has_trait = trait_cybernetic
 							has_trait = trait_machine_unit
@@ -6849,7 +6878,7 @@ planet_event = {
 					}
 				}
 				add_deposit = d_organic_slurry
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = {
 						NOR = {
 							has_trait = trait_cybernetic
@@ -6865,7 +6894,7 @@ planet_event = {
 							add_resource = { unity = 100 }
 						}
 					}
-					kill_pop = yes
+					kill_single_pop = yes
 				}
 			}
 		}
@@ -7725,9 +7754,6 @@ event = {
 						is_planet_class = pc_shattered_ring_habitable
 					}
 				}
-				every_owned_pop = {
-					kill_pop = yes
-				}
 				destroy_colony = yes
 				change_pc = pc_ringworld_habitable_damaged
 				reset_planet = yes
@@ -7799,45 +7825,241 @@ event = {
 }
 
 ship_event = {
+	id = action.941
+	hide_window = yes
+	is_triggered_only = yes
+
+	trigger = {
+		from = { # basically a pre-trigger
+			has_strategic_resource = yes
+			if = {
+				limit = {
+					is_scope_type = planet
+				}
+				has_anomaly = no
+			}
+		}
+		owner = {
+			OR = {
+				AND = {
+					root.from = {
+						has_resource = {
+							amount > 0
+							type = volatile_motes
+						}
+					}
+					NOT = {
+						has_country_flag = volatile_motes_found
+					}
+				}
+				AND = {
+					root.from = {
+						has_resource = {
+							amount > 0
+							type = exotic_gases
+						}
+					}
+					NOT = {
+						has_country_flag = exotic_gases_found
+					}
+				}
+				AND = {
+					root.from = {
+						has_resource = {
+							amount > 0
+							type = rare_crystals
+						}
+					}
+					NOT = {
+						has_country_flag = rare_crystals_found
+					}
+				}
+				AND = {
+					root.from = {
+						has_resource = {
+							amount > 0
+							type = sr_living_metal
+						}
+					}
+					NOT = {
+						has_country_flag = living_metal_found
+					}
+				}
+				AND = {
+					root.from = {
+						has_resource = {
+							amount > 0
+							type = sr_zro
+						}
+					}
+					NOT = {
+						has_country_flag = zro_found
+					}
+				}
+				AND = {
+					root.from = {
+						has_resource = {
+							amount > 0
+							type = sr_dark_matter
+						}
+					}
+					NOT = {
+						has_country_flag = dark_matter_found
+					}
+				}
+				AND = {
+					root.from = {
+						has_resource = {
+							amount > 0
+							type = astral_threads
+						}
+					}
+					NOT = {
+						has_country_flag = astral_threads_found
+					}
+				}
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				owner = {
+					NOT = { has_country_flag = strategic_resource_found }
+				}
+			}
+			owner = {
+				set_country_flag = strategic_resource_found
+			}
+			if = {
+				limit = {
+					from = {
+						NOT = { is_scope_type = country }
+					}
+				}
+				ship_event = { id = action.94 scopes = { from = from } }
+			}
+			else = {
+				ship_event = { id = action.94 scopes = { from = fromfrom }  }
+			}
+		}
+		else = {
+			from = {
+				if = {
+					limit = { has_resource = { type = rare_crystals amount > 0 } }
+					root.owner = {
+						set_country_flag =	rare_crystals_found
+						create_strategic_resource_message = {
+							RESOURCE_TYPE = MESSAGE_STRATEGIC_RESOURCE_FOUND_RARE_CRYSTALS
+							RESOURCE_DESC = MESSAGE_STRATEGIC_RESOURCE_FOUND_RARE_CRYSTALS_DESC
+						}
+					}
+				}
+				else_if = {
+					limit = { has_resource = { type = exotic_gases amount > 0 } }
+					root.owner = {
+						set_country_flag =	exotic_gases_found
+						create_strategic_resource_message = {
+							RESOURCE_TYPE = MESSAGE_STRATEGIC_RESOURCE_FOUND_EXOTIC_GASES
+							RESOURCE_DESC = MESSAGE_STRATEGIC_RESOURCE_FOUND_EXOTIC_GASES_DESC
+						}
+				    }
+				}
+				else_if = {
+					limit = { has_resource = { type = volatile_motes amount > 0 } }
+					root.owner = {
+						set_country_flag =	volatile_motes_found
+						create_strategic_resource_message = {
+							RESOURCE_TYPE = MESSAGE_STRATEGIC_RESOURCE_FOUND_VOLATILE_MOTES
+							RESOURCE_DESC = MESSAGE_STRATEGIC_RESOURCE_FOUND_VOLATILE_MOTES_DESC
+						}
+				    }
+				}
+				else_if = {
+					limit = { has_resource = { type = sr_zro amount > 0 } }
+					root.owner = {
+						set_country_flag =	zro_found
+						create_strategic_resource_message = {
+							RESOURCE_TYPE = MESSAGE_STRATEGIC_RESOURCE_FOUND_ZRO
+							RESOURCE_DESC = MESSAGE_STRATEGIC_RESOURCE_FOUND_ZRO_DESC
+						}
+				    }
+				}
+				else_if = {
+					limit = { has_resource = { type = sr_dark_matter amount > 0 } }
+					root.owner = {
+						set_country_flag =	dark_matter_found
+						create_strategic_resource_message = {
+							RESOURCE_TYPE = MESSAGE_STRATEGIC_RESOURCE_FOUND_DARK_MATTER
+							RESOURCE_DESC = MESSAGE_STRATEGIC_RESOURCE_FOUND_DARK_MATTER_DESC
+						}
+				    }
+				}
+				else_if = {
+					limit = { has_resource = { type = sr_living_metal amount > 0 } }
+					root.owner = {
+						set_country_flag =	living_metal_found
+						create_strategic_resource_message = {
+							RESOURCE_TYPE = MESSAGE_STRATEGIC_RESOURCE_FOUND_LIVING_METAL
+							RESOURCE_DESC = MESSAGE_STRATEGIC_RESOURCE_FOUND_LIVING_METAL_DESC
+						}
+				    }
+				}
+				else_if = {
+					limit = { has_resource = { type = astral_threads amount > 0 } }
+					root.owner = {
+						set_country_flag =	astral_threads_found
+						create_strategic_resource_message = {
+							RESOURCE_TYPE = MESSAGE_STRATEGIC_RESOURCE_FOUND_ASTRAL_THREADS
+							RESOURCE_DESC = MESSAGE_STRATEGIC_RESOURCE_FOUND_ASTRAL_THREADS_DESC
+						}
+				    }
+				}
+			}
+		}
+	}
+}
+
+ship_event = {
 	id = action.94
 	title = action.92.name
 	desc = {
 		trigger = {
 			success_text = {
-				text =							 action.92.rare_crystals
+				text = action.92.rare_crystals
 				hidden:from = { has_resource = { type = rare_crystals amount > 0 } }
 			}
 			success_text = {
-				text =							 action.92.exotic_gases
+				text = action.92.exotic_gases
 				hidden:from = { has_resource = { type = exotic_gases amount > 0 } }
 			}
 			success_text = {
-				text =							 action.92.volatile_motes
+				text = action.92.volatile_motes
 				hidden:from = { has_resource = { type = volatile_motes amount > 0 } }
 			}
 			success_text = {
-				text =							 action.92.zro
+				text = action.92.zro
 				hidden:from = { has_resource = { type = sr_zro amount > 0 } }
 			}
 			success_text = {
-				text =							 action.92.dark_matter
+				text = action.92.dark_matter
 				hidden:from = { has_resource = { type = sr_dark_matter amount > 0 } }
 			}
 			success_text = {
-				text =							 action.92.living_metal
+				text = action.92.living_metal
 				hidden:from = { has_resource = { type = sr_living_metal amount > 0 } }
 			}
 			success_text = {
-				text =							 action.92.astral_threads
+				text = action.92.astral_threads
 				hidden:from = { has_resource = { type = astral_threads amount > 0 } }
 			}
 			success_text = {
 				text = action.92.has_tech
 				OR = {
-					hidden:from = { has_resource = { type = alloys amount > 0 } }
 					AND = {
 						hidden:from = { has_resource = { type = rare_crystals amount > 0 } }
-						hidden:owner = { has_technology = tech_rare_crystals}
+						hidden:owner = { has_technology = tech_rare_crystals }
 					}
 					AND = {
 						hidden:from = { has_resource = { type = exotic_gases amount > 0 } }
@@ -7907,134 +8129,41 @@ ship_event = {
 
 	is_triggered_only = yes
 
-	trigger = {
-		from = { # basically a pre-trigger
-			has_strategic_resource = yes
-			if = {
-				limit = {
-					is_scope_type = planet
-				}
-				has_anomaly = no
-			}
-		}
-		owner = {
-			OR = {
-				AND = {
-					root.from = {
-						has_resource = {
-							amount > 0
-							type =	volatile_motes
-						}
-					}
-					NOT = {
-						has_country_flag =		volatile_motes_found
-					}
-				}
-				AND = {
-					root.from = {
-						has_resource = {
-							amount > 0
-							type =	exotic_gases
-						}
-					}
-					NOT = {
-						has_country_flag =		exotic_gases_found
-					}
-				}
-				AND = {
-					root.from = {
-						has_resource = {
-							amount > 0
-							type =	rare_crystals
-						}
-					}
-					NOT = {
-						has_country_flag =		rare_crystals_found
-					}
-				}
-				AND = {
-					root.from = {
-						has_resource = {
-							amount > 0
-							type =	sr_living_metal
-						}
-					}
-					NOT = {
-						has_country_flag =		living_metal_found
-					}
-				}
-				AND = {
-					root.from = {
-						has_resource = {
-							amount > 0
-							type =	sr_zro
-						}
-					}
-					NOT = {
-						has_country_flag =		zro_found
-					}
-				}
-				AND = {
-					root.from = {
-						has_resource = {
-							amount > 0
-							type =	sr_dark_matter
-						}
-					}
-					NOT = {
-						has_country_flag =		dark_matter_found
-					}
-				}
-				AND = {
-					root.from = {
-						has_resource = {
-							amount > 0
-							type =	astral_threads
-						}
-					}
-					NOT = {
-						has_country_flag =		astral_threads_found
-					}
-				}
-			}
-		}
-	}
-
 	immediate = {
 		from = {
 			if = {
 				limit = { has_resource = { type = rare_crystals amount > 0 } }
-				root.owner = { set_country_flag =	rare_crystals_found }
+				root.owner = { set_country_flag = rare_crystals_found }
 			}
 			else_if = {
 				limit = { has_resource = { type = exotic_gases amount > 0 } }
-				root.owner = { set_country_flag =	exotic_gases_found }
+				root.owner = { set_country_flag = exotic_gases_found }
 			}
 			else_if = {
 				limit = { has_resource = { type = volatile_motes amount > 0 } }
-				root.owner = { set_country_flag =	volatile_motes_found }
+				root.owner = { set_country_flag = volatile_motes_found }
 			}
 			else_if = {
 				limit = { has_resource = { type = sr_zro amount > 0 } }
-				root.owner = { set_country_flag =	zro_found }
+				root.owner = { set_country_flag = zro_found }
 			}
 			else_if = {
 				limit = { has_resource = { type = sr_dark_matter amount > 0 } }
-				root.owner = { set_country_flag =	dark_matter_found }
+				root.owner = { set_country_flag = dark_matter_found }
 			}
 			else_if = {
 				limit = { has_resource = { type = sr_living_metal amount > 0 } }
-				root.owner = { set_country_flag =	living_metal_found }
+				root.owner = { set_country_flag = living_metal_found }
 			}
 			else_if = {
 				limit = { has_resource = { type = astral_threads amount > 0 } }
-				root.owner = { set_country_flag =	astral_threads_found }
+				root.owner = { set_country_flag = astral_threads_found }
 			}
 		}
 	}
 
 	option = {
-		name = OK
+		name = action.92.a
 		from = {
 			hidden_effect = {
 				if = {
@@ -8080,7 +8209,7 @@ planet_event = {
 		has_modifier = planet_culture_shock
 		FromFrom.species = { has_species_flag = primitive_species }
 		NOT = {
-			any_owned_pop = {
+			any_owned_pop_group = {
 				species = {
 					has_species_flag = primitive_species
 				}

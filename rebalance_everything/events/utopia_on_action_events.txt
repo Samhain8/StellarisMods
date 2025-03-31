@@ -10,7 +10,7 @@
 namespace = utopia
 
 ### Withdrawal added when Unblissed
-pop_event = {
+pop_group_event = {
 	id = utopia.91
 	hide_window = yes
 	is_triggered_only = yes
@@ -103,7 +103,7 @@ planet_event = {
 		}
 		exists = fromfrom #crisis.202 can remove the last pop
 		FROMFROM = {
-			is_robot_pop = no
+			is_robot_pop_group = no
 			NOT = {
 				is_same_species = owner_species
 			}
@@ -135,7 +135,7 @@ planet_event = {
 		}
 		exists = fromfrom #crisis.202 can remove the last pop
 		FROMFROM = {
-			is_robot_pop = no
+			is_robot_pop_group = no
 			NOT = {
 				is_same_species = owner_species
 			}
@@ -156,7 +156,7 @@ planet_event = {
 }
 
 ### Withdrawal removed when Blissed
-pop_event = {
+pop_group_event = {
 	id = utopia.90
 	hide_window = yes
 	is_triggered_only = yes
@@ -284,18 +284,18 @@ country_event = {
 	immediate = {
 		if = {
 			limit = {
-				any_owned_pop = {
+				any_owned_pop_group = {
 					is_exact_same_species = root
 				}
 			}
-			random_owned_pop = {
+			weighted_random_owned_pop_group = {
 				limit = { is_exact_same_species = root }
 				create_cybernetic_species_mod = yes
 				species = { save_event_target_as = new_main_species }
 			}
 		}
 		else = {
-			random_owned_pop = {
+			weighted_random_owned_pop_group = {
 				limit = { is_same_species = root }
 				create_cybernetic_species_mod = yes
 				species = { save_event_target_as = new_main_species }
@@ -309,7 +309,7 @@ country_event = {
 			}
 			while = {
 				limit = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						is_sapient = yes
 						species = {
 							NOR = {
@@ -321,7 +321,7 @@ country_event = {
 						}
 					}
 				}
-				random_owned_pop = {
+				weighted_random_owned_pop_group = {
 					limit = {
 						is_sapient = yes
 						species = {
@@ -344,7 +344,7 @@ country_event = {
 			}
 			while = {
 				limit = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						is_sapient = yes
 						species = {
 							has_trait = trait_hive_mind
@@ -356,7 +356,7 @@ country_event = {
 						}
 					}
 				}
-				random_owned_pop = {
+				weighted_random_owned_pop_group = {
 					limit = {
 						is_sapient = yes
 						species = {
@@ -396,12 +396,15 @@ country_event = {
 					}
 				}
 				root.capital_scope = { #workaround to prevent main species from accidentally flipping
-					create_pop = {
+					create_pop_group = {
 						species = prev
+						effect = {
+							save_event_target_as = last_created_pop_group
+						}
 					}
-					last_created_pop = {
+					event_target:last_created_pop_group = {
 						create_cybernetic_species_mod = yes
-						kill_pop = yes
+						kill_all_pop = yes
 					}
 				}
 			}
@@ -430,12 +433,15 @@ country_event = {
 					}
 				}
 				root.capital_scope = { #workaround to prevent main species from accidentally flipping
-					create_pop = {
+					create_pop_group = {
 						species = prev
+						effect = {
+							save_event_target_as = last_created_pop_group
+						}
 					}
-					last_created_pop = {
+					event_target:last_created_pop_group = {
 						create_cybernetic_species_mod = yes
-						kill_pop = yes
+						kill_all_pop = yes
 					}
 				}
 			}
@@ -466,12 +472,15 @@ country_event = {
 					}
 				}
 				root.capital_scope = { #workaround to prevent main species from accidentally flipping
-					create_pop = {
+					create_pop_group = {
 						species = prev.species
+						effect = {
+							save_event_target_as = last_created_pop_group
+						}
 					}
-					last_created_pop = {
+					event_target:last_created_pop_group = {
 						create_cybernetic_species_mod = yes
-						kill_pop = yes
+						kill_all_pop = yes
 					}
 				}
 			}
@@ -489,13 +498,16 @@ country_event = {
 				}
 			}
 			root.capital_scope = { #workaround to prevent main species from accidentally flipping
-				create_pop = {
+				create_pop_group = {
 					species = prev
+					effect = {
+						save_event_target_as = last_created_pop_group
+					}
 				}
-				last_created_pop = {
-					create_cybernetic_species_mod = yes
-					kill_pop = yes
-				}
+				event_target:last_created_pop_group = {
+				create_cybernetic_species_mod = yes
+				kill_all_pop = yes
+			}
 			}
 		}
 
@@ -820,7 +832,7 @@ country_event = {
 
 		create_synth_species_effect = yes
 
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				is_being_purged = no
 				species = {
@@ -1219,7 +1231,7 @@ country_event = {
 	}
 
 	immediate = {
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				is_same_species = root
 				species = {
@@ -1314,7 +1326,7 @@ country_event = {
 		text = utopia.2602.1.desc
 		trigger = {
 			NOR = {
-				any_owned_pop = { is_same_species = from }
+				any_owned_pop_group = { is_same_species = from }
 				any_owned_leader = { is_same_species = from }
 			}
 		}
@@ -1323,7 +1335,7 @@ country_event = {
 		text = utopia.2602.2.desc
 		trigger = {
 			OR = {
-				any_owned_pop = { is_same_species = from }
+				any_owned_pop_group = { is_same_species = from }
 				any_owned_leader = { is_same_species = from }
 			}
 		}
@@ -1440,7 +1452,7 @@ country_event = {
 	}
 
 	immediate = {
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				is_same_species = root
 				has_trait = trait_latent_psionic
@@ -1773,17 +1785,17 @@ country_event = {
 			random_owned_planet = { #OM NOM NOM NOM
 				limit = {
 					is_capital = no
-					any_owned_pop = {
+					any_owned_pop_group = {
 						is_sapient = yes
-						is_robot_pop = no
+						is_robot_pop_group = no
 					}
 				}
-				random_owned_pop = {
+				random_owned_pop_group = {
 					limit = {
 						is_sapient = yes
-						is_robot_pop = no
+						is_robot_pop_group = no
 					}
-					kill_pop = yes
+					kill_single_pop = yes
 				}
 			}
 			set_variable = {
@@ -2192,13 +2204,19 @@ country_event = {
 			}
 			if = { #Other things liked
 				limit = {
-					num_buildings = {
-						type = building_clinic
-						value = 0
-					}
-					num_buildings = {
-						type = building_hospital
-						value = 0
+					OR = {
+						num_buildings = {
+							type = building_medical_1
+							value = 0
+						}
+						num_buildings = {
+							type = building_medical_2
+							value = 0
+						}
+						num_buildings = {
+							type = building_medical_3
+							value = 0
+						}
 					}
 				}
 				change_variable = {

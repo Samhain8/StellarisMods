@@ -10,7 +10,6 @@ trait_incubator = {
 	species_possible_merge_remove = {
 		always = yes
 	}
-	potential_crossbreeding_chance = 1.0 #1.0 100% of being considered for new traits when forming half-species. Does not guarantee the trait will be added if it costs points.
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	randomized = no
 	opposites = { "trait_slow_breeders" "trait_rapid_breeders" "trait_fertile" "trait_plantoid_budding" "trait_lithoid_budding" "trait_advanced_budding" "trait_rapid_breeders_lithoid" "trait_humanoid_existential_iteroparity" }
@@ -37,13 +36,22 @@ trait_inorganic_breath = {
 	species_possible_merge_remove = {
 		always = yes
 	}
-	potential_crossbreeding_chance = 1.0 #1.0 100% of being considered for new traits when forming half-species. doe snot guarantee the trait will be added if it costs points.
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	randomized = no
 	custom_tooltip_with_modifiers = inorganic_breath_tooltip
 
 	modifier = {
 		planet_pops_upkeep_mult = 0.5
+	}
+
+	resources = {
+		category = planet_pops
+		produces = {
+			trigger = {
+				is_slave_or_better = yes
+			}
+			exotic_gases = @inorganic_breath
+		}
 	}
 
 	slave_cost = {
@@ -63,11 +71,10 @@ trait_noxious = {
 	species_possible_merge_remove = {
 		always = yes
 	}
-	potential_crossbreeding_chance = 1.0 #1.0 100% of being considered for new traits when forming half-species. doe snot guarantee the trait will be added if it costs points.
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	randomized = no
 	custom_tooltip_with_modifiers = noxious_tooltip
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		pop_happiness = @noxious_happiness_bonus
 		mult = planet.value:counter_noxious
 	}
@@ -93,7 +100,6 @@ trait_exotic_metabolism = {
 	species_possible_merge_remove = {
 		always = yes
 	}
-	potential_crossbreeding_chance = 1.0 #1.0 100% of being considered for new traits when forming half-species. doe snot guarantee the trait will be added if it costs points.
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	initial = no
 	randomized = no
@@ -106,6 +112,16 @@ trait_exotic_metabolism = {
 
 	modifier = {
 		leader_lifespan_add = 50
+	}
+
+	resources = {
+		category = planet_pops
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+			}
+			exotic_gases = @exotic_metabolism
+		}
 	}
 
 	slave_cost = {
@@ -133,7 +149,6 @@ trait_auto_mod_overtuned = {
 	species_possible_merge_remove = {
 		always = yes
 	}
-	potential_crossbreeding_chance = 1.0
 	modifier = {
 		leader_lifespan_add = -20
 	}
@@ -150,7 +165,6 @@ trait_spliced_adaptability = {
 	host_has_dlc = "Toxoids Species Pack"
 	cost = 1
     category = overtuned
-	potential_crossbreeding_chance = 1.0	# 1.0 = 100% chance of being considered for new traits when forming half-species. does not guarantee the trait will be added if it costs points.
 	allowed_archetypes = { BIOLOGICAL }
 	allowed_origins = { origin_overtuned }
 	randomized = no
@@ -190,7 +204,6 @@ trait_juiced_power = {
 	host_has_dlc = "Toxoids Species Pack"
 	cost = 1
     category = overtuned
-	potential_crossbreeding_chance = 1.0	# 1.0 = 100% chance of being considered for new traits when forming half-species. does not guarantee the trait will be added if it costs points.
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	allowed_origins = { origin_overtuned }
 	randomized = no
@@ -204,19 +217,19 @@ trait_juiced_power = {
 		always = yes
 	}
 	custom_tooltip_with_modifiers = juiced_power_tooltip
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = { NOT = { has_edict = damn_the_consequences } }
 		}
-		planet_jobs_worker_produces_mult = 0.05
+		pop_bonus_workforce_mult = 0.05 #TODO Change to Category AUG-51639
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = { has_edict = damn_the_consequences }
 		}
-		planet_jobs_worker_produces_mult = 0.1
+		pop_bonus_workforce_mult = 0.1 #TODO Change to Category AUG-51639
 	}
 	modifier = {
 		army_damage_mult = 0.40
@@ -236,7 +249,6 @@ trait_farm_hands = {
 	host_has_dlc = "Toxoids Species Pack"
 	cost = 1
     category = overtuned
-	potential_crossbreeding_chance = 1.0	# 1.0 = 100% chance of being considered for new traits when forming half-species. does not guarantee the trait will be added if it costs points.
 	allowed_archetypes = { BIOLOGICAL }
 	allowed_origins = { origin_overtuned }
 	randomized = no
@@ -250,19 +262,21 @@ trait_farm_hands = {
 		always = yes
 	}
 	custom_tooltip_with_modifiers = farm_hands_tooltip
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = { NOT = { has_edict = damn_the_consequences } }
 		}
-		planet_jobs_food_produces_mult = 0.15
+		pop_farmer_bonus_workforce_mult = 0.15
+		pop_agri_drone_bonus_workforce_mult = 0.15
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = { has_edict = damn_the_consequences }
 		}
-		planet_jobs_food_produces_mult = 0.30
+		pop_farmer_bonus_workforce_mult = 0.30
+		pop_agri_drone_bonus_workforce_mult = 0.30
 	}
 	modifier = {
 		leader_lifespan_add = -10
@@ -286,7 +300,6 @@ trait_crack_miner = {
 	host_has_dlc = "Toxoids Species Pack"
 	cost = 1
     category = overtuned
-	potential_crossbreeding_chance = 1.0	# 1.0 = 100% chance of being considered for new traits when forming half-species. does not guarantee the trait will be added if it costs points.
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	allowed_origins = { origin_overtuned }
 	randomized = no
@@ -300,19 +313,21 @@ trait_crack_miner = {
 		always = yes
 	}
 	custom_tooltip_with_modifiers = crack_miner_tooltip
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = { NOT = { has_edict = damn_the_consequences } }
 		}
-		planet_jobs_minerals_produces_mult = 0.15
+		pop_miner_bonus_workforce_mult = 0.15
+		pop_mining_drone_bonus_workforce_mult = 0.15
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = { has_edict = damn_the_consequences }
 		}
-		planet_jobs_minerals_produces_mult = 0.3
+		pop_miner_bonus_workforce_mult = 0.3
+		pop_mining_drone_bonus_workforce_mult = 0.3
 	}
 	modifier = {
 		leader_lifespan_add = -10
@@ -337,7 +352,6 @@ trait_technical_skill = {
 	host_has_dlc = "Toxoids Species Pack"
 	cost = 1
     category = overtuned
-	potential_crossbreeding_chance = 1.0	# 1.0 = 100% chance of being considered for new traits when forming half-species. does not guarantee the trait will be added if it costs points.
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	allowed_origins = { origin_overtuned }
 	randomized = no
@@ -351,22 +365,24 @@ trait_technical_skill = {
 		always = yes
 	}
 	custom_tooltip_with_modifiers = technical_skill_tooltip
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = { NOT = { has_edict = damn_the_consequences } }
 		}
 		modifier = {
-			planet_jobs_energy_produces_mult = 0.15
+			pop_technician_bonus_workforce_mult = 0.15
+			pop_technician_drone_bonus_workforce_mult = 0.15
 		}
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = { has_edict = damn_the_consequences }
 		}
 		modifier = {
-			planet_jobs_energy_produces_mult = 0.3
+			pop_technician_bonus_workforce_mult = 0.3
+			pop_technician_drone_bonus_workforce_mult = 0.3
 		}
 	}
 	modifier = {
@@ -391,7 +407,6 @@ trait_commercial_genius = {
 	host_has_dlc = "Toxoids Species Pack"
 	cost = 1
     category = overtuned
-	potential_crossbreeding_chance = 1.0	# 1.0 = 100% chance of being considered for new traits when forming half-species. does not guarantee the trait will be added if it costs points.
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	allowed_origins = { origin_overtuned }
 	opposites = { "trait_hive_mind" }
@@ -409,22 +424,24 @@ trait_commercial_genius = {
 		always = yes
 	}
 	custom_tooltip_with_modifiers = trait_commercial_genius_tooltip
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = { NOT = { has_edict = damn_the_consequences } }
 		}
 		modifier = {
-			pop_job_trade_mult = 0.25
+			pop_trader_bonus_workforce_mult = 0.25
+			pop_maintenance_drone_bonus_workforce_mult = 0.25
 		}
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = { has_edict = damn_the_consequences }
 		}
 		modifier = {
-			pop_job_trade_mult = 0.50
+			pop_trader_bonus_workforce_mult = 0.50
+			pop_maintenance_drone_bonus_workforce_mult = 0.50
 		}
 	}
 	modifier = {
@@ -445,7 +462,6 @@ trait_crafted_smiles = {
 	host_has_dlc = "Toxoids Species Pack"
 	cost = 1
     category = overtuned
-	potential_crossbreeding_chance = 1.0	# 1.0 = 100% chance of being considered for new traits when forming half-species. does not guarantee the trait will be added if it costs points.
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	allowed_origins = { origin_overtuned }
 	randomized = no
@@ -460,22 +476,24 @@ trait_crafted_smiles = {
 	}
 	modifier = { leader_lifespan_add = -10 }
 	custom_tooltip_with_modifiers = crafted_smiles_tooltip
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = { NOT = { has_edict = damn_the_consequences } }
 		}
 		modifier = {
-			pop_job_amenities_mult = 0.15
+			pop_entertainer_bonus_workforce_mult = 0.15
+			pop_maintenance_drone_bonus_workforce_mult = 0.15
 		}
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = { has_edict = damn_the_consequences }
 		}
 		modifier = {
-			pop_job_amenities_mult = 0.3
+			pop_entertainer_bonus_workforce_mult = 0.3
+			pop_maintenance_drone_bonus_workforce_mult = 0.30
 		}
 	}
 	slave_cost = {
@@ -487,7 +505,6 @@ trait_low_maintenance = {
 	host_has_dlc = "Toxoids Species Pack"
 	cost = 1
     category = overtuned
-	potential_crossbreeding_chance = 1.0	# 1.0 = 100% chance of being considered for new traits when forming half-species. does not guarantee the trait will be added if it costs points.
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	allowed_origins = { origin_overtuned }
 	randomized = no
@@ -501,7 +518,7 @@ trait_low_maintenance = {
 		always = yes
 	}
 	custom_tooltip_with_modifiers = low_maintenance_tooltip
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = { NOT = { has_edict = damn_the_consequences } }
@@ -510,7 +527,7 @@ trait_low_maintenance = {
 			planet_pops_consumer_goods_upkeep_mult = -0.10
 		}
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = { has_edict = damn_the_consequences }
@@ -531,7 +548,6 @@ trait_artificial_intelligence = {
 	host_has_dlc = "Toxoids Species Pack"
 	cost = 1
     category = overtuned
-	potential_crossbreeding_chance = 1.0	# 1.0 = 100% chance of being considered for new traits when forming half-species. does not guarantee the trait will be added if it costs points.
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	allowed_origins = { origin_overtuned }
 	randomized = no
@@ -545,26 +561,38 @@ trait_artificial_intelligence = {
 		always = yes
 	}
 	custom_tooltip_with_modifiers = artificial_intelligence_tooltip
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = { NOT = { has_edict = damn_the_consequences } }
 		}
 		modifier = {
-			planet_jobs_physics_research_produces_mult = 0.1
-			planet_jobs_society_research_produces_mult = 0.1
-			planet_jobs_engineering_research_produces_mult = 0.1
+			pop_physicist_bonus_workforce_mult = 0.1
+			pop_biologist_bonus_workforce_mult = 0.1
+			pop_engineer_bonus_workforce_mult = 0.1
+			pop_brain_drone_physicist_bonus_workforce_mult = 0.1
+			pop_brain_drone_biologist_bonus_workforce_mult = 0.1
+			pop_brain_drone_engineer_bonus_workforce_mult = 0.1
+			pop_calculator_physicist_bonus_workforce_mult = 0.1
+			pop_calculator_biologist_bonus_workforce_mult = 0.1
+			pop_calculator_engineer_bonus_workforce_mult = 0.1
 		}
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = { has_edict = damn_the_consequences }
 		}
 		modifier = {
-			planet_jobs_physics_research_produces_mult = 0.2
-			planet_jobs_society_research_produces_mult = 0.2
-			planet_jobs_engineering_research_produces_mult = 0.2
+			pop_physicist_bonus_workforce_mult = 0.2
+			pop_biologist_bonus_workforce_mult = 0.2
+			pop_engineer_bonus_workforce_mult = 0.2
+			pop_brain_drone_physicist_bonus_workforce_mult = 0.2
+			pop_brain_drone_biologist_bonus_workforce_mult = 0.2
+			pop_brain_drone_engineer_bonus_workforce_mult = 0.2
+			pop_calculator_physicist_bonus_workforce_mult = 0.2
+			pop_calculator_biologist_bonus_workforce_mult = 0.2
+			pop_calculator_engineer_bonus_workforce_mult = 0.2
 		}
 	}
 	modifier = {
@@ -589,7 +617,6 @@ trait_gene_mentorship = {
 	host_has_dlc = "Toxoids Species Pack"
 	cost = 1
     category = overtuned
-	potential_crossbreeding_chance = 1.0	# 1.0 = 100% chance of being considered for new traits when forming half-species. does not guarantee the trait will be added if it costs points.
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	allowed_origins = { origin_overtuned }
 	randomized = no
@@ -633,7 +660,6 @@ trait_expressed_tradition = {
 	host_has_dlc = "Toxoids Species Pack"
 	cost = 1
     category = overtuned
-	potential_crossbreeding_chance = 1.0 #1.0 100% of being considered for new traits when forming half-species. doe snot guarantee the trait will be added if it costs points.
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	allowed_origins = { origin_overtuned }
 	randomized = no
@@ -647,22 +673,24 @@ trait_expressed_tradition = {
 		always = yes
 	}
 	custom_tooltip_with_modifiers = expressed_tradition_tooltip
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = { NOT = { has_edict = damn_the_consequences } }
 		}
 		modifier = {
-			planet_jobs_unity_produces_mult = 0.1
+			pop_bureaucrat_bonus_workforce_mult = 0.1
+			pop_synapse_drone_bonus_workforce_mult = 0.1
 		}
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = { has_edict = damn_the_consequences }
 		}
 		modifier = {
-			planet_jobs_unity_produces_mult = 0.2
+			pop_bureaucrat_bonus_workforce_mult = 0.2
+			pop_synapse_drone_bonus_workforce_mult = 0.2
 		}
 	}
 	modifier = {
@@ -687,7 +715,6 @@ trait_elevated_synapses = {
 	host_has_dlc = "Toxoids Species Pack"
 	cost = 2
     category = overtuned
-	potential_crossbreeding_chance = 1.0 #1.0 100% of being considered for new traits when forming half-species. doe snot guarantee the trait will be added if it costs points.
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	allowed_origins = { origin_overtuned }
 	randomized = no
@@ -701,26 +728,38 @@ trait_elevated_synapses = {
 		always = yes
 	}
 	custom_tooltip_with_modifiers = elevated_synapses_tooltip
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = { NOT = { has_edict = damn_the_consequences } }
 		}
 		modifier = {
-			planet_jobs_physics_research_produces_mult = 0.2
-			planet_jobs_society_research_produces_mult = 0.2
-			planet_jobs_engineering_research_produces_mult = 0.2
+			pop_physicist_bonus_workforce_mult  = 0.2
+			pop_biologist_bonus_workforce_mult = 0.2
+			pop_engineer_bonus_workforce_mult = 0.2
+			pop_brain_drone_physicist_bonus_workforce_mult = 0.2
+			pop_brain_drone_biologist_bonus_workforce_mult = 0.2
+			pop_brain_drone_engineer_bonus_workforce_mult = 0.2
+			pop_calculator_physicist_bonus_workforce_mult = 0.2
+			pop_calculator_biologist_bonus_workforce_mult = 0.2
+			pop_calculator_engineer_bonus_workforce_mult = 0.2
 		}
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = { has_edict = damn_the_consequences }
 		}
 		modifier = {
-			planet_jobs_physics_research_produces_mult = 0.4
-			planet_jobs_society_research_produces_mult = 0.4
-			planet_jobs_engineering_research_produces_mult = 0.4
+			pop_physicist_bonus_workforce_mult  = 0.4
+			pop_biologist_bonus_workforce_mult = 0.4
+			pop_engineer_bonus_workforce_mult = 0.4
+			pop_brain_drone_physicist_bonus_workforce_mult = 0.4
+			pop_brain_drone_biologist_bonus_workforce_mult = 0.4
+			pop_brain_drone_engineer_bonus_workforce_mult = 0.4
+			pop_calculator_physicist_bonus_workforce_mult = 0.4
+			pop_calculator_biologist_bonus_workforce_mult = 0.4
+			pop_calculator_engineer_bonus_workforce_mult = 0.4
 		}
 	}
 	modifier = {
@@ -747,7 +786,6 @@ trait_preplanned_growth = {
 	host_has_dlc = "Toxoids Species Pack"
 	cost = 2
     category = overtuned
-	potential_crossbreeding_chance = 1.0 #1.0 100% of being considered for new traits when forming half-species. doe snot guarantee the trait will be added if it costs points.
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	allowed_origins = { origin_overtuned }
 	randomized = no
@@ -770,7 +808,7 @@ trait_preplanned_growth = {
 			pop_growth_speed = 0.30
 		}
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = { NOT = { has_edict = damn_the_consequences } }
@@ -788,7 +826,7 @@ trait_preplanned_growth = {
 			pop_growth_speed = 0.60
 		}
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = { has_edict = damn_the_consequences }
@@ -809,7 +847,6 @@ trait_excessive_endurance = {
 	host_has_dlc = "Toxoids Species Pack"
 	cost = 3
     category = overtuned
-	potential_crossbreeding_chance = 1.0 #1.0 100% of being considered for new traits when forming half-species. doe snot guarantee the trait will be added if it costs points.
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	allowed_origins = { origin_overtuned }
 	randomized = no
@@ -823,13 +860,13 @@ trait_excessive_endurance = {
 		always = yes
 	}
 	custom_tooltip_with_modifiers = excessive_endurance_tooltip
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = { NOT = { has_edict = damn_the_consequences } }
 		}
 		modifier = {
-			planet_jobs_produces_mult = 0.05
+			pop_bonus_workforce_mult = 0.05
 		}
 	}
 	triggered_planet_growth_habitability_modifier = {
@@ -841,13 +878,13 @@ trait_excessive_endurance = {
 			pop_environment_tolerance = 0.30
 		}
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = { has_edict = damn_the_consequences }
 		}
 		modifier = {
-			planet_jobs_produces_mult = 0.1
+			pop_bonus_workforce_mult = 0.1
 		}
 	}
 	triggered_planet_growth_habitability_modifier = {

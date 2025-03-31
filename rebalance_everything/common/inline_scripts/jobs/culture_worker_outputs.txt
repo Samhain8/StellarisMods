@@ -2,8 +2,11 @@ triggered_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = { is_materialist = yes }
+		planet = {
+			has_building = building_autochthon_monument
+		}
 	}
-	planet_amenities_add = 2
+	planet_amenities_add = 10
 	mult = value:scripted_modifier_ethics_weight_mult|MODIFIER|pop_job_amenities_mult|ETHIC|materialist|
 }
 
@@ -11,8 +14,11 @@ triggered_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = { is_spiritualist = yes }
+		planet = {
+			has_building = building_autochthon_monument
+		}
 	}
-	pop_amenities_usage_mult = -0.025
+	pop_amenities_usage_mult = -0.001
 	mult = value:scripted_ethics_weight_mult|ETHIC|spiritualist|
 }
 
@@ -20,8 +26,11 @@ triggered_country_modifier = {
 	potential = {
 		exists = owner
 		owner = { is_militarist = yes }
+		planet = {
+			has_building = building_autochthon_monument
+		}
 	}
-	country_naval_cap_add = 1
+	country_naval_cap_add = 0.5
 	mult = value:scripted_ethics_weight_mult|ETHIC|militarist|
 }
 
@@ -29,8 +38,11 @@ triggered_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = { is_pacifist = yes }
+		planet = {
+			has_building = building_autochthon_monument
+		}
 	}
-	pop_lifestyle_trade_value_mult = 0.05
+	pop_trader_bonus_workforce_mult = 0.05
 	mult = value:scripted_ethics_weight_mult|ETHIC|pacifist|
 }
 
@@ -38,6 +50,9 @@ triggered_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = { is_egalitarian = yes }
+		planet = {
+			has_building = building_autochthon_monument
+		}
 	}
 	pop_housing_usage_mult = -0.0125
 	mult = value:scripted_ethics_weight_mult|ETHIC|egalitarian|
@@ -47,8 +62,11 @@ triggered_country_modifier = {
 	potential = {
 		exists = owner
 		owner = { is_authoritarian = yes }
+		planet = {
+			has_building = building_autochthon_monument
+		}
 	}
-	country_edict_fund_add = 3
+	country_edict_fund_add = 1
 	mult = value:scripted_ethics_weight_mult|ETHIC|authoritarian|
 }
 
@@ -56,6 +74,9 @@ triggered_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = { is_xenophobe = yes }
+		planet = {
+			has_building = building_autochthon_monument
+		}
 	}
 	pop_citizen_happiness = 0.0125
 	mult = value:scripted_ethics_weight_mult|ETHIC|xenophobe|
@@ -65,6 +86,9 @@ triggered_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = { is_xenophile = yes }
+		planet = {
+			has_building = building_autochthon_monument
+		}
 	}
 	planet_pops_upkeep_mult = -0.0125
 	mult = value:scripted_ethics_weight_mult|ETHIC|xenophile|

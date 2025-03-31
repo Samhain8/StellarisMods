@@ -797,6 +797,7 @@ ship_event = {
 	}
 	picture = GFX_evt_drilling_for_gas
 	location = FROM
+	event_message_type = MESSAGE_TERRAFORM_CANDIDATE_FOUND
 
 	is_triggered_only = yes
 
@@ -3472,7 +3473,7 @@ ship_event = {
 		}
 		hidden_effect = {
 			owner = { remove_country_flag = opt2 }
-			ship_event = { id = distar.305 days = 1 }
+			ship_event = { id = action.941 days = 1 scopes = { from = fromfrom } }
 		}
 	}
 
@@ -3496,7 +3497,8 @@ ship_event = {
 		}
 		hidden_effect = {
 			owner = { remove_country_flag = opt3 }
-			ship_event = { id = distar.305 days = 1 }
+			
+			ship_event = { id = action.941 days = 1 scopes = { from = fromfrom } }
 		}
 	}
 }

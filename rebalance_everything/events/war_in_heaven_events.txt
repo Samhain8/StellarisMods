@@ -715,6 +715,9 @@ country_event = {
 			}
 		}
 	}
+	after = {
+		country_event = { id = timeline.76 } # Timeline War in Heaven
+	}
 }
 
 # Victory for one side

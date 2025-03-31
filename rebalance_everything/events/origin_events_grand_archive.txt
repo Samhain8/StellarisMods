@@ -482,7 +482,7 @@ planet_event = {
 		has_modifier = "titanic_life"
 		owner = { has_origin = origin_primal_calling }
 		NOT = { has_planet_flag = titanic_life_colony_flag }
-		num_pops > 0
+		pop_amount > 0
 	}
 
 	immediate = {
@@ -2195,6 +2195,11 @@ country_event = {
 		set_country_flag = Story3
 		set_country_flag = Story5
 		set_country_flag = Story7
+
+		if = {
+			limit = { is_ai = yes }
+			set_country_flag = grand_archive_8025_end_dialog
+		}
 	}
 
 	option = {
@@ -2256,21 +2261,19 @@ country_event = {
 	}
 
 	option = {
-		name = CLOSE_COMMUNICATIONS
-		trigger = {
-			has_country_flag = grand_archive_8025_end_dialog
-			NOT = { has_valid_civic = civic_crusader_spirit_corporate }
+		trigger = { has_country_flag = grand_archive_8025_end_dialog }
+		name = {
+			text = CLOSE_COMMUNICATIONS
+			trigger = {
+				NOT = { has_valid_civic = civic_crusader_spirit_corporate }
+			}
 		}
-	}
-	option = {
-		name = grand_archive.8025.f.lom
-		trigger = {
-			has_country_flag = grand_archive_8025_end_dialog
-			has_valid_civic = civic_crusader_spirit_corporate
+		name = {
+			text = grand_archive.8025.f.lom
+			trigger = {
+				has_valid_civic = civic_crusader_spirit_corporate
+			}
 		}
-	}
-
-	after = {
 		hidden_effect = {
 			remove_country_flag = grand_archive_8025_end_dialog
 			country_event = {
@@ -4153,6 +4156,11 @@ country_event = {
 				save_event_target_as = black_needle_base
 			}
 		}
+
+		if = {
+			limit = { is_ai = yes }
+			set_country_flag = grand_archive_8245_end_dialog
+		}
 	}
 
 	picture_event_data = {
@@ -5493,7 +5501,7 @@ situation_event = {
 							any_system_planet = {
 								is_owned_by = root.owner
 								is_colony = yes
-								num_pops >= 10
+								pop_amount >= 1000
 							}
 						}
 					}
@@ -5521,7 +5529,7 @@ situation_event = {
 							any_system_planet = {
 								is_owned_by = root.owner
 								is_colony = yes
-								num_pops >= 10
+								pop_amount >= 1000
 							}
 						}
 						set_star_flag = available_for_sabotage
@@ -5764,8 +5772,12 @@ country_event = {
 		}
 		hidden_effect = {
 			every_owned_planet = {
-				limit = { num_pops > 1 }
-				random_owned_pop = { kill_pop = yes }
+				limit = {
+					pop_amount > 100
+				}
+				random_owned_pop_group = {
+					kill_single_pop = yes
+				}
 			}
 			country_event = {
 				id = grand_archive.8525

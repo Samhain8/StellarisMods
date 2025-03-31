@@ -761,6 +761,18 @@ country_event = {
 			}
 		}
 	}
+	after = {
+		save_event_target_as = this_country
+		add_timeline_event = {
+			type = timeline_origin_specific
+			override_id = timeline_galactic_doorstep_restored_gateway
+			override_tooltip = "TIMELINE_EVENT_GALACTIC_DOORSTEP_TOOLTIP" 
+			override_types = { }
+			override_text = { "text:TIMELINE_EVENT_GALACTIC_DOORSTEP" } 
+			override_texture = { "background:GFX_origin_galactic_doorstep" }
+			targets = {}
+		}
+	}
 }
 
 

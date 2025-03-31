@@ -30,9 +30,14 @@ building_astral_siphon_1 = {
 		country_resource_max_astral_threads_add = 100
 	}
 
-	inline_script = {
-		script = jobs/astral_researchers_add
-		AMOUNT = @b1_jobs
+	planet_modifier = {
+		planet_physicists_physics_research_produces_add = 1
+		planet_physicists_astral_threads_produces_add = 0.5
+		planet_physicists_consumer_goods_upkeep_add = 1
+	}
+
+	triggered_desc = {
+		text = physicist_is_astral_researcher_tt
 	}
 
 	upgrades = {
@@ -68,9 +73,14 @@ building_astral_siphon_2 = {
 		country_resource_max_astral_threads_add = 200
 	}
 
-	inline_script = {
-		script = jobs/astral_researchers_add
-		AMOUNT = @b2_jobs
+	planet_modifier = {
+		planet_physicists_physics_research_produces_add = 2
+		planet_physicists_astral_threads_produces_add = 1
+		planet_physicists_consumer_goods_upkeep_add = 2
+	}
+
+	triggered_desc = {
+		text = physicist_is_astral_researcher_tt
 	}
 
 	upgrades = {
@@ -106,8 +116,13 @@ building_astral_siphon_3 = {
 		country_resource_max_astral_threads_add = 300
 	}
 
-	inline_script = {
-		script = jobs/astral_researchers_add
-		AMOUNT = @b3_jobs
+	planet_modifier = {
+		planet_physicists_physics_research_produces_add = 4
+		planet_physicists_astral_threads_produces_add = 2
+		planet_physicists_consumer_goods_upkeep_add = 4
+	}
+
+	triggered_desc = {
+		text = physicist_is_astral_researcher_tt
 	}
 }

@@ -285,6 +285,20 @@ utility_component_template = {
 	size_restriction = { juggernaut star_eater cosmo_crisis_titan }
 	upgrades_to = "JUGGERNAUT_FUSION_REACTOR"
 
+	friendly_aura = {
+		name = "juggernaut_logistics"
+		system_wide = yes
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = juggernaut_logistics
+			priority = 1
+		}
+
+		modifier = {
+			ships_logistics_mult = -0.75
+		}
+	}
+
 	ai_weight = {
 		weight = 1
 	}
@@ -509,6 +523,20 @@ utility_component_template = {
 	component_set = "power_core"
 	size_restriction = { juggernaut star_eater cosmo_crisis_titan }
 	upgrades_to = "JUGGERNAUT_COLD_FUSION_REACTOR"
+
+	friendly_aura = {
+		name = "juggernaut_logistics"
+		system_wide = yes
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = juggernaut_logistics
+			priority = 1
+		}
+
+		modifier = {
+			ships_logistics_mult = -0.75
+		}
+	}
 
 	ai_weight = {
 		weight = 2
@@ -735,6 +763,20 @@ utility_component_template = {
 	size_restriction = { juggernaut star_eater cosmo_crisis_titan }
 	upgrades_to = "JUGGERNAUT_ANTIMATTER_REACTOR"
 
+	friendly_aura = {
+		name = "juggernaut_logistics"
+		system_wide = yes
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = juggernaut_logistics
+			priority = 1
+		}
+
+		modifier = {
+			ships_logistics_mult = -0.75
+		}
+	}
+
 	ai_weight = {
 		weight = 3
 	}
@@ -959,6 +1001,20 @@ utility_component_template = {
 	component_set = "power_core"
 	size_restriction = { juggernaut star_eater cosmo_crisis_titan }
 	upgrades_to = "JUGGERNAUT_ZERO_POINT_REACTOR"
+
+	friendly_aura = {
+		name = "juggernaut_logistics"
+		system_wide = yes
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = juggernaut_logistics
+			priority = 1
+		}
+
+		modifier = {
+			ships_logistics_mult = -0.75
+		}
+	}
 
 	ai_weight = {
 		weight = 4
@@ -1200,6 +1256,20 @@ utility_component_template = {
 	component_set = "power_core"
 	size_restriction = { juggernaut star_eater cosmo_crisis_titan }
 	upgrades_to = "JUGGERNAUT_DARK_MATTER_REACTOR"
+
+	friendly_aura = {
+		name = "juggernaut_logistics"
+		system_wide = yes
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = juggernaut_logistics
+			priority = 1
+		}
+
+		modifier = {
+			ships_logistics_mult = -0.75
+		}
+	}
 
 	ai_weight = {
 		weight = 5
@@ -1506,6 +1576,20 @@ utility_component_template = {
 	prerequisites = { "tech_dark_matter_power_core" }
 	component_set = "power_core"
 	size_restriction = { juggernaut star_eater synth_queen_titan cosmo_crisis_titan }
+
+	friendly_aura = {
+		name = "juggernaut_logistics"
+		system_wide = yes
+
+		stack_info = {			#A ship can only be affected by one aura of a certain id. If multiple auras have the same ID the one with the highest priority will be applied.
+			id = juggernaut_logistics
+			priority = 1
+		}
+
+		modifier = {
+			ships_logistics_mult = -0.75
+		}
+	}
 
 	ai_weight = {
 		weight = 6

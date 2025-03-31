@@ -23,7 +23,7 @@ grand_archive_0 = {
 		}
 	}
 
-	construction_blocks_and_blocked_by = self_type
+	construction_blocks_and_blocked_by = multi_stage_type
 	prerequisites = { "tech_galactic_archivism" }
 	show_prereqs = yes
 
@@ -37,7 +37,9 @@ grand_archive_0 = {
 	}
 
 	possible = {
-		exists = starbase
+		hidden_trigger = {
+			exists = starbase
+		}
 		custom_tooltip = {
 			fail_text = "requires_inside_border"
 			is_inside_border = from
@@ -58,7 +60,7 @@ grand_archive_0 = {
 	placement_rules = {
 		planet_possible = {
 			is_colony = yes
-			num_pops >= 25
+			pop_amount >= 2500
 		}
 	}
 

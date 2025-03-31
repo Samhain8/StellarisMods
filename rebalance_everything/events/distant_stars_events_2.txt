@@ -222,278 +222,6 @@ event = {
 	}
 }
 
-ship_event = { #Duplicated action.94 for SRs that are created by events, not on system init
-	id = distar.305
-	title = distar.305.name
-	desc = {
-		trigger = {
-			success_text = {
-				text = distar.305.volatile_motes
-				hidden:fromfrom = { has_resource = { type = volatile_motes amount > 0 } }
-			}
-			success_text = {
-				text = distar.305.exotic_gases
-				hidden:fromfrom = { has_resource = { type = exotic_gases amount > 0 } }
-			}
-			success_text = {
-				text = distar.305.rare_crystals
-				hidden:fromfrom = { has_resource = { type = rare_crystals amount > 0 } }
-			}
-			success_text = {
-				text = distar.305.living_metal
-				hidden:fromfrom = { has_resource = { type = sr_living_metal amount > 0 } }
-			}
-			success_text = {
-				text = distar.305.zro
-				hidden:fromfrom = { has_resource = { type = sr_zro amount > 0 } }
-			}
-			success_text = {
-				text = distar.305.dark_matter
-				hidden:fromfrom = { has_resource = { type = sr_dark_matter amount > 0 } }
-			}
-			success_text = {
-				text = distar.305.astral_threads
-				hidden:fromfrom = { has_resource = { type = astral_threads amount > 0 } }
-			}
-			success_text = {
-				text = action.92.has_tech
-				OR = {
-					AND = {
-						hidden:fromfrom = { has_resource = { type = volatile_motes amount > 0 } }
-						hidden:owner = { has_technology = tech_volatile_motes }
-					}
-					AND = {
-						hidden:fromfrom = { has_resource = { type = exotic_gases amount > 0 } }
-						hidden:owner = { has_technology = tech_exotic_gases }
-					}
-					AND = {
-						hidden:fromfrom = { has_resource = { type = rare_crystals amount > 0 } }
-						hidden:owner = { has_technology = tech_rare_crystals }
-					}
-					AND = {
-						hidden:fromfrom = { has_resource = { type = sr_living_metal amount > 0 } }
-						hidden:owner = { has_technology = tech_mine_living_metal }
-					}
-					AND = {
-						hidden:fromfrom = { has_resource = { type = sr_zro amount > 0 } }
-						hidden:owner = { has_technology = tech_mine_zro }
-					}
-					AND = {
-						hidden:fromfrom = { has_resource = { type = sr_dark_matter amount > 0 } }
-						hidden:owner = { has_technology = tech_mine_dark_matter }
-					}
-					AND = {
-						hidden:fromfrom = { has_resource = { type = astral_threads amount > 0 } }
-						hidden:owner = { has_technology = tech_astral_harvesting }
-					}
-				}
-			}
-			success_text = {
-				text = action.92.no_tech
-				# same trigger as above
-				NOR = {
-					AND = {
-						hidden:fromfrom = { has_resource = { type = volatile_motes amount > 0 } }
-						hidden:owner = { has_technology = tech_volatile_motes }
-					}
-					AND = {
-						hidden:fromfrom = { has_resource = { type = exotic_gases amount > 0 } }
-						hidden:owner = { has_technology = tech_exotic_gases }
-					}
-					AND = {
-						hidden:fromfrom = { has_resource = { type = rare_crystals amount > 0 } }
-						hidden:owner = { has_technology = tech_rare_crystals }
-					}
-					AND = {
-						hidden:fromfrom = { has_resource = { type = sr_living_metal amount > 0 } }
-						hidden:owner = { has_technology = tech_mine_living_metal }
-					}
-					AND = {
-						hidden:fromfrom = { has_resource = { type = sr_zro amount > 0 } }
-						hidden:owner = { has_technology = tech_mine_zro }
-					}
-					AND = {
-						hidden:fromfrom = { has_resource = { type = sr_dark_matter amount > 0 } }
-						hidden:owner = { has_technology = tech_mine_dark_matter }
-					}
-					AND = {
-						hidden:fromfrom = { has_resource = { type = astral_threads amount > 0 } }
-						hidden:owner = { has_technology = tech_astral_harvesting }
-					}
-				}
-			}
-		}
-	}
-	picture = GFX_evt_surreal_visions
-	show_sound = event_default
-	location = fromfrom
-
-	is_triggered_only = yes
-
-	trigger = {
-		fromfrom = { # basically a pre-trigger
-			has_strategic_resource = yes
-			if = {
-				limit = {
-					is_scope_type = planet
-				}
-				has_anomaly = no
-			}
-		}
-		owner = {
-			OR = {
-				AND = {
-					root.fromfrom = {
-						has_resource = {
-							amount > 0
-									type = volatile_motes
-						}
-					}
-					NOT = {
-						has_country_flag = volatile_motes_found
-					}
-				}
-				AND = {
-					root.fromfrom = {
-						has_resource = {
-							amount > 0
-									type = exotic_gases
-						}
-					}
-					NOT = {
-						has_country_flag = exotic_gases_found
-					}
-				}
-				AND = {
-					root.fromfrom = {
-						has_resource = {
-							amount > 0
-									type = rare_crystals
-						}
-					}
-					NOT = {
-						has_country_flag = rare_crystals_found
-					}
-				}
-				AND = {
-					root.fromfrom = {
-						has_resource = {
-							amount > 0
-									type = sr_living_metal
-						}
-					}
-					NOT = {
-						has_country_flag = living_metal_found
-					}
-				}
-				AND = {
-					root.fromfrom = {
-						has_resource = {
-							amount > 0
-									type = sr_zro
-						}
-					}
-					NOT = {
-						has_country_flag = zro_found
-					}
-				}
-				AND = {
-					root.fromfrom = {
-						has_resource = {
-							amount > 0
-									type = sr_dark_matter
-						}
-					}
-					NOT = {
-						has_country_flag = dark_matter_found
-					}
-				}
-				AND = {
-					root.fromfrom = {
-						has_resource = {
-							amount > 0
-									type = astral_threads
-						}
-					}
-					NOT = {
-						has_country_flag = astral_threads_found
-					}
-				}
-			}
-		}
-	}
-
-	immediate = {
-		fromfrom = {
-			if = {
-				limit = { has_resource = { type = volatile_motes amount > 0 } }
-				root.owner = { set_country_flag = volatile_motes_found }
-			}
-			else_if = {
-				limit = { has_resource = { type = exotic_gases amount > 0 } }
-				root.owner = { set_country_flag = exotic_gases_found }
-			}
-			else_if = {
-				limit = { has_resource = { type = rare_crystals amount > 0 } }
-				root.owner = { set_country_flag = rare_crystals_found }
-			}
-			else_if = {
-				limit = { has_resource = { type = sr_living_metal amount > 0 } }
-				root.owner = { set_country_flag =	living_metal_found }
-			}
-			else_if = {
-				limit = { has_resource = { type = sr_zro amount > 0 } }
-				root.owner = { set_country_flag =	zro_found }
-			}
-			else_if = {
-				limit = { has_resource = { type = sr_dark_matter amount > 0 } }
-				root.owner = { set_country_flag =	dark_matter_found }
-			}
-			else_if = {
-				limit = { has_resource = { type = astral_threads amount > 0 } }
-				root.owner = { set_country_flag =	astral_threads_found }
-			}
-		}
-	}
-
-	option = {
-		name = OK
-		fromfrom = {
-			hidden_effect = {
-				if = {
-					limit = { has_resource = { type = volatile_motes amount > 0 } }
-					custom_tooltip = action.92.volatile_motes.tooltip
-				}
-				else_if = {
-					limit = { has_resource = { type = exotic_gases amount > 0 } }
-					custom_tooltip = action.92.exotic_gases.tooltip
-				}
-				else_if = {
-					limit = { has_resource = { type = rare_crystals amount > 0 } }
-					custom_tooltip = action.92.rare_crystals.tooltip
-				}
-				else_if = {
-					limit = { has_resource = { type = sr_living_metal amount > 0 } }
-					custom_tooltip = action.92.living_metal.tooltip
-				}
-				else_if = {
-					limit = { has_resource = { type = sr_zro amount > 0 } }
-					custom_tooltip = action.92.zro.tooltip
-				}
-				else_if = {
-					limit = { has_resource = { type = sr_dark_matter amount > 0 } }
-					custom_tooltip = action.92.dark_matter.tooltip
-				}
-				else_if = {
-					limit = { has_resource = { type = astral_threads amount > 0 } }
-					custom_tooltip = action.92.astral_threads.tooltip
-				}
-			}
-		}
-	}
-}
-
-
 country_event = { #Atomic Clock follow-up: Selection
 	id = distar.310
 	hide_window = yes
@@ -929,9 +657,7 @@ country_event = { #A habitable planet is nuked
 					is_colony = no
 					is_under_colonization = no
 				}
-				every_owned_pop = {
-					kill_pop = yes
-				}
+				destroy_colony = yes
 				save_event_target_as = nuked_planet
 				change_pc = pc_toxic
 				reset_planet = yes
@@ -1250,7 +976,7 @@ country_event = {
 			}
 			while = {
 				count = 4
-				create_pop = {
+				create_pop_group = {
 					species = last_created_species
 				}
 			}
@@ -1324,7 +1050,7 @@ ship_event = {
 		exists = event_target:mardak_vol_species
 		event_target:utopian_planet = {
 			NOT = { has_planet_flag = triggered_vol_transmission }
-			any_owned_pop = {
+			any_owned_pop_group = {
 				species = { is_same_value = event_target:mardak_vol_species }
 			}
 		}
@@ -1356,7 +1082,7 @@ planet_event = {
 		solar_system = {
 			exists = owner
 		}
-		any_owned_pop = {
+		any_owned_pop_group = {
 			species = { is_same_value = event_target:mardak_vol_species }
 		}
 		NOT = { has_planet_flag = triggered_vol_transmission }
@@ -1410,7 +1136,7 @@ country_event = {
 			solar_system = {
 				exists = owner
 			}
-			any_owned_pop = {
+			any_owned_pop_group = {
 				is_same_species = event_target:mardak_vol_species
 			}
 		}
@@ -1569,20 +1295,20 @@ country_event = {
 		if = {
 			limit = {
 				any_planet_within_border = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						is_same_species = event_target:mardak_vol_species
 					}
 				}
 			}
 			every_planet_within_border = {
 				limit = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						is_same_species = event_target:mardak_vol_species
 					}
 				}
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = { is_same_species = event_target:mardak_vol_species }
-					kill_pop = yes
+					kill_all_pop = yes
 				}
 				add_deposit = d_fungoid_extermination
 			}
@@ -1652,7 +1378,7 @@ country_event = {
 			solar_system = {
 				exists = owner
 			}
-			any_owned_pop = {
+			any_owned_pop_group = {
 				is_same_species = event_target:mardak_vol_species
 			}
 		}
@@ -1890,20 +1616,20 @@ planet_event = {
 		}
 		if = {
 			limit = {
-				any_owned_pop = {
+				any_owned_pop_group = {
 					is_same_species = event_target:mardak_vol_species
 				}
 			}
 			owner = {
 				every_planet_within_border = {
 					limit = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							is_same_species = event_target:mardak_vol_species
 						}
 					}
-					every_owned_pop = {
+					every_owned_pop_group = {
 						limit = { is_same_species = event_target:mardak_vol_species }
-						kill_pop = yes
+						kill_all_pop = yes
 					}
 					add_deposit = d_fungoid_extermination
 				}
@@ -3174,7 +2900,7 @@ country_event = {
 		random_owned_planet = {
 			limit = {
 				is_colony = yes
-				num_sapient_pops > 1
+				sapient_pop_amount > 100
 			}
 			weights = {
 				base = 1
@@ -3214,7 +2940,7 @@ country_event = {
 				while = {
 					count = 4
 					#limit = { free_housing > 0 }
-					create_pop = {
+					create_pop_group = {
 						species = event_target:azizians_species
 					}
 				}
@@ -3380,7 +3106,7 @@ planet_event = {
 	trigger = {
 		has_owner = yes
 		has_planet_flag = azizian_pops_planet
-		any_owned_pop = {
+		any_owned_pop_group = {
 			species = { has_species_flag = azizans_@root.owner }
 			is_being_purged = no
 		}
@@ -3390,7 +3116,7 @@ planet_event = {
 	}
 
 	immediate = {
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				species = { has_species_flag = azizans_@root.owner }
 			}
@@ -4398,7 +4124,7 @@ country_event = {
 			set_capital = yes
 			while = {
 				count = 52
-				create_pop = {
+				create_pop_group = {
 					species = event_target:time_loop_species
 				}
 			}
@@ -4406,12 +4132,6 @@ country_event = {
 				count = 3
 				add_district_and_planet_size_if_needed_effect = {
 					district = district_city
-				}
-			}
-			while = {
-				count = 4
-				add_district_and_planet_size_if_needed_effect = {
-					district = district_industrial
 				}
 			}
 			while = {
@@ -4782,7 +4502,7 @@ country_event = {
 			set_capital = yes
 			while = {
 				count = 52
-				create_pop = {
+				create_pop_group = {
 					species = event_target:time_loop_species
 				}
 			}
@@ -4791,12 +4511,6 @@ country_event = {
 				count = 3
 				add_district_and_planet_size_if_needed_effect = {
 					district = district_city
-				}
-			}
-			while = {
-				count = 5
-				add_district_and_planet_size_if_needed_effect = {
-					district = district_industrial
 				}
 			}
 			while = {
@@ -5100,7 +4814,7 @@ planet_event = {
 					}
 				}
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
 					OR = {
 						has_ethic = ethic_fanatic_xenophobe
@@ -5402,7 +5116,7 @@ planet_event = {
 			owner = { abort_special_project = { type = ENIGMATIC_CACHE_PROJECT } }
 		}
 		remove_modifier = enigmatic_cache_in_orbit
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				has_modifier = enigmatic_cache_in_orbit_phobe
 			}
@@ -5490,7 +5204,7 @@ ship_event = {
 			}
 			orbit = {
 				remove_modifier = enigmatic_cache_in_orbit
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = {
 						OR = {
 							has_modifier = enigmatic_cache_in_orbit_phobe
@@ -5833,9 +5547,9 @@ event = {
 		}
 		### There is a player empire that has already been scanned
 		any_playable_country = {
-			any_owned_pop = {
+			any_owned_pop_group = {
 				is_same_species = owner_species
-				is_robot_pop = no
+				is_robot_pop_group = no
 				is_sapient = yes
 				NOT = { has_trait = trait_machine_unit }
 			}
@@ -5856,9 +5570,9 @@ event = {
 		if = {
 			limit = {
 				any_playable_country = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						is_same_species = owner_species
-						is_robot_pop = no
+						is_robot_pop_group = no
 						is_sapient = yes
 						NOT = { has_trait = trait_machine_unit }
 					}
@@ -5886,9 +5600,9 @@ event = {
 			}
 			random_playable_country = {
 				limit = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						is_same_species = owner_species
-						is_robot_pop = no
+						is_robot_pop_group = no
 						is_sapient = yes
 						NOT = { has_trait = trait_machine_unit }
 					}
@@ -5935,9 +5649,9 @@ event = {
 		else_if = {
 			limit = {
 				any_playable_country = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						is_same_species = owner_species
-						is_robot_pop = no
+						is_robot_pop_group = no
 						is_sapient = yes
 						NOT = { has_trait = trait_machine_unit }
 					}
@@ -5955,9 +5669,9 @@ event = {
 			}
 			random_playable_country = {
 				limit = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						is_same_species = owner_species
-						is_robot_pop = no
+						is_robot_pop_group = no
 						is_sapient = yes
 						NOT = { has_trait = trait_machine_unit }
 					}
@@ -6167,9 +5881,9 @@ country_event = {
 			set_country_flag = enigmatic_fatigue
 			while = {
 				limit = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						is_same_species = owner_species
-						is_robot_pop = no
+						is_robot_pop_group = no
 						is_sapient = yes
 						NOR = {
 							has_modifier = enigmatic_fatigue
@@ -6179,10 +5893,10 @@ country_event = {
 					}
 				}
 				count = 60
-				random_owned_pop = {
+				weighted_random_owned_pop_group = {
 					limit = {
 						is_same_species = owner_species
-						is_robot_pop = no
+						is_robot_pop_group = no
 						is_sapient = yes
 						NOR = {
 							has_modifier = enigmatic_fatigue
@@ -6190,7 +5904,7 @@ country_event = {
 						}
 						enigmatic_modifier_jobs = yes
 					}
-					add_modifier = {
+					add_modifier = { # TODO [AA]: [AUG-50352] Do this using pop groups
 						modifier = enigmatic_fatigue
 					}
 				}
@@ -6234,9 +5948,9 @@ country_event = {
 		set_country_flag = enigmatic_slumber
 		while = {
 			limit = {
-				any_owned_pop = {
+				any_owned_pop_group = {
 					is_same_species = owner_species
-					is_robot_pop = no
+					is_robot_pop_group = no
 					is_sapient = yes
 					NOR = {
 						has_modifier = enigmatic_slumber
@@ -6246,10 +5960,10 @@ country_event = {
 				}
 			}
 			count = 4
-			random_owned_pop = {
+			weighted_random_owned_pop_group = {
 				limit = {
 					is_same_species = owner_species
-					is_robot_pop = no
+					is_robot_pop_group = no
 					is_sapient = yes
 					NOR = {
 						has_modifier = enigmatic_slumber
@@ -6263,7 +5977,7 @@ country_event = {
 					}
 					remove_modifier = enigmatic_fatigue
 				}
-				add_modifier = {
+				add_modifier = { # TODO [AA]: [AUG-50352] Do this using pop groups
 					modifier = enigmatic_slumber
 					days = -1
 				}
@@ -6291,13 +6005,13 @@ country_event = {
 		hidden_effect = {
 			set_country_flag = aborted_enigmatic_uplift
 			country_event = { id = distar.5069 days = 2 }
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
 					has_modifier = enigmatic_slumber
 				}
 				remove_modifier = enigmatic_slumber
 			}
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
 					has_modifier = enigmatic_fatigue
 				}
@@ -6442,10 +6156,10 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				is_same_species = owner_species
-				is_robot_pop = no
+				is_robot_pop_group = no
 				is_sapient = yes
 				NOT = { has_trait = trait_machine_unit }
 			}
@@ -6469,14 +6183,14 @@ country_event = {
 				}
 			}
 		}
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				has_modifier = enigmatic_fatigue
 			}
 			remove_modifier = enigmatic_fatigue
 		}
 
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				has_modifier = enigmatic_slumber
 			}
@@ -6508,10 +6222,10 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				is_same_species = owner_species
-				is_robot_pop = no
+				is_robot_pop_group = no
 				is_sapient = yes
 				NOT = { has_trait = trait_machine_unit }
 			}
@@ -6549,13 +6263,13 @@ country_event = {
 			species = last_created_species
 			change_all = yes
 		}
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				has_modifier = enigmatic_fatigue
 			}
 			remove_modifier = enigmatic_fatigue
 		}
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				has_modifier = enigmatic_slumber
 			}
@@ -6589,10 +6303,10 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				is_same_species = owner_species
-				is_robot_pop = no
+				is_robot_pop_group = no
 				is_sapient = yes
 				NOT = {
 					has_trait = trait_machine_unit
@@ -6648,7 +6362,7 @@ country_event = {
 			species = last_created_species
 			change_all = yes
 		}
-		#every_owned_pop = {
+		#every_owned_pop_group = {
 		#	limit = {
 		#		has_trait = trait_machine_unit
 		#	}
@@ -6706,13 +6420,13 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				has_modifier = enigmatic_fatigue
 			}
 			remove_modifier = enigmatic_fatigue
 		}
-		every_owned_pop = {
+		every_owned_pop_group = {
 			limit = {
 				has_modifier = enigmatic_slumber
 			}
@@ -6735,9 +6449,9 @@ country_event = {
 			}
 			while = {
 				limit = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						is_same_species = owner_species
-						is_robot_pop = no
+						is_robot_pop_group = no
 						is_sapient = yes
 						NOR = {
 							has_modifier = enigmatic_fatigue
@@ -6747,10 +6461,10 @@ country_event = {
 					}
 				}
 				count = 60
-				random_owned_pop = {
+				weighted_random_owned_pop_group = {
 					limit = {
 						is_same_species = owner_species
-						is_robot_pop = no
+						is_robot_pop_group = no
 						is_sapient = yes
 						NOR = {
 							has_modifier = enigmatic_fatigue
@@ -6758,7 +6472,7 @@ country_event = {
 						}
 						enigmatic_modifier_jobs = yes
 					}
-					add_modifier = {
+					add_modifier = { # TODO [AA]: [AUG-50352] Do this using pop groups
 						modifier = enigmatic_fatigue
 					}
 				}
@@ -6770,9 +6484,9 @@ country_event = {
 			}
 			while = {
 				limit = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						is_same_species = owner_species
-						is_robot_pop = no
+						is_robot_pop_group = no
 						is_sapient = yes
 						NOR = {
 							has_modifier = enigmatic_slumber
@@ -6782,10 +6496,10 @@ country_event = {
 					}
 				}
 				count = 4
-				random_owned_pop = {
+				weighted_random_owned_pop_group = {
 					limit = {
 						is_same_species = owner_species
-						is_robot_pop = no
+						is_robot_pop_group = no
 						is_sapient = yes
 						NOR = {
 							has_modifier = enigmatic_slumber
@@ -6799,7 +6513,7 @@ country_event = {
 						}
 						remove_modifier = enigmatic_fatigue
 					}
-					add_modifier = {
+					add_modifier = { # TODO [AA]: [AUG-50352] Do this using pop groups
 						modifier = enigmatic_slumber
 						days = -1
 					}
@@ -7431,7 +7145,7 @@ country_event = { # First words
 			event_target:nivlac_joint_planet = {
 				while = {
 					count = new_pops
-					create_pop = {
+					create_pop_group = {
 						species = event_target:nivlac_species
 					}
 				}
@@ -7463,7 +7177,7 @@ country_event = { # First words
 			event_target:nivlac_joint_planet = {
 				while = {
 					count = new_pops
-					create_pop = {
+					create_pop_group = {
 						species = event_target:nivlac_species
 					}
 				}
@@ -7491,7 +7205,7 @@ country_event = { # First words
 			event_target:nivlac_joint_planet = {
 				while = {
 					count = new_pops
-					create_pop = {
+					create_pop_group = {
 						species = event_target:nivlac_species
 					}
 				}
@@ -7522,7 +7236,7 @@ country_event = { # First words
 			event_target:nivlac_joint_planet = {
 				while = {
 					count = new_pops
-					create_pop = {
+					create_pop_group = {
 						species = event_target:nivlac_species
 					}
 				}
@@ -7667,7 +7381,7 @@ country_event = { # Planetfall on planet X after being shoot into deep space. Re
 			}
 			while = {
 				count = 22
-				create_pop = {
+				create_pop_group = {
 					species = event_target:nivlac_species
 				}
 			}
@@ -7679,21 +7393,9 @@ country_event = { # Planetfall on planet X after being shoot into deep space. Re
 				}
 			}
 			while = {
-				count = 2
-				add_district_and_planet_size_if_needed_effect = {
-					district = district_industrial
-				}
-			}
-			while = {
 				count = 3
 				add_district_and_planet_size_if_needed_effect = {
 					district = district_farming
-				}
-			}
-			while = {
-				count = 2
-				add_district_and_planet_size_if_needed_effect = {
-					district = district_mining
 				}
 			}
 			while = {
@@ -7826,7 +7528,7 @@ country_event = { # Helpful relocation was a success
 			clear_blockers = yes
 			while = {
 				count = 22
-				create_pop = {
+				create_pop_group = {
 					species = event_target:nivlac_species
 				}
 			}
@@ -7835,12 +7537,6 @@ country_event = { # Helpful relocation was a success
 				count = 2
 				add_district_and_planet_size_if_needed_effect = {
 					district = district_city
-				}
-			}
-			while = {
-				count = 2
-				add_district_and_planet_size_if_needed_effect = {
-					district = district_industrial
 				}
 			}
 			while = {
@@ -7853,12 +7549,6 @@ country_event = { # Helpful relocation was a success
 				count = 2
 				add_district_and_planet_size_if_needed_effect = {
 					district = district_mining
-				}
-			}
-			while = {
-				count = 2
-				add_district_and_planet_size_if_needed_effect = {
-					district = district_generator
 				}
 			}
 			add_building = building_capital
@@ -8277,7 +7967,7 @@ country_event = { # Integration into our society complete
 				#limit = {
 				#	free_housing > 0
 				#}
-				create_pop = {
+				create_pop_group = {
 					species = event_target:molluscoid_miners_species
 				}
 			}
@@ -8719,12 +8409,12 @@ country_event = { # Alien Box opened
 			}
 			while = {
 				limit = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						is_subspecies = root
 						NOT = { has_trait = trait_social_pheromones }
 					}
 				}
-				random_owned_pop = {
+				weighted_random_owned_pop_group = {
 					limit = {
 						is_subspecies = root
 						NOT = { has_trait = trait_social_pheromones }
@@ -8787,12 +8477,12 @@ country_event = { # Alien Box opened
 			}
 			while = {
 				limit = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						is_subspecies = root
 						NOT = { has_trait = trait_bioadaptability }
 					}
 				}
-				random_owned_pop = {
+				weighted_random_owned_pop_group = {
 					limit = {
 						is_subspecies = root
 						NOT = { has_trait = trait_bioadaptability }
@@ -8854,12 +8544,12 @@ country_event = { # Alien Box opened
 			}
 			while = {
 				limit = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						is_subspecies = root
 						NOT = { has_trait = trait_limited_regeneration }
 					}
 				}
-				random_owned_pop = {
+				weighted_random_owned_pop_group = {
 					limit = {
 						is_subspecies = root
 						NOT = { has_trait = trait_limited_regeneration }

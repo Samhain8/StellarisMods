@@ -2926,7 +2926,7 @@ astral_rift_event = {
 		trigger = {
 			NOT = {
 				leader.species = {
-					OR = { 
+					OR = {
 						has_trait = trait_aquatic
 						has_trait = trait_robot_aquatic
 					}
@@ -2956,7 +2956,7 @@ astral_rift_event = {
 		name = astral_rift.1560.b
 		trigger = {
 			leader.species = {
-				OR = { 
+				OR = {
 					has_trait = trait_aquatic
 					has_trait = trait_robot_aquatic
 				}
@@ -5038,11 +5038,11 @@ country_event = {
 
 	immediate = {
 		random_owned_planet = {
-			random_owned_pop = {
+			random_owned_pop_group = {
 				planet = {
 					save_event_target_as = sacrificed_pop_planet
 				}
-				kill_pop = yes
+				kill_single_pop = yes
 			}
 		}
 		create_message = {
@@ -5187,11 +5187,11 @@ country_event = {
 				}
 			}
 			random_owned_planet = {
-				random_owned_pop = {
+				random_owned_pop_group = {
 					planet = {
 						save_event_target_as = sacrificed_pop_planet
 					}
-					kill_pop = yes
+					kill_single_pop = yes
 				}
 			}
 			create_message = {

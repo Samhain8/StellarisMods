@@ -829,7 +829,7 @@ planet_event = {
 			days_from_present = 180
 			expires = 180
 		}
-		random_owned_pop = {
+		weighted_random_owned_pop_group = {
 			limit = {
 				is_organic_species = yes
 				is_being_assimilated = no
@@ -858,7 +858,7 @@ planet_event = {
 		}
 		if = {
 			limit = {
-				count_owned_pop = {
+				count_owned_pop_amount = {
 					count = 0
 					limit = {
 						is_organic_species = yes
@@ -2424,17 +2424,13 @@ country_event = {
 	after = {
 		while = {
 			count = 5
-			random_owned_pop = {
+			random_owned_pop_group = {
 				limit = { planet = { is_same_value = event_target:nucleus_building_planet } }
-				kill_pop = yes
+				kill_single_pop = yes
 			}
 		}
 		event_target:nucleus_building_planet = {
 			if = {
-				limit = { has_district = district_industrial }
-				remove_district = district_industrial
-			}
-			else_if = {
 				limit = { has_district = district_farming }
 				remove_district = district_farming
 			}

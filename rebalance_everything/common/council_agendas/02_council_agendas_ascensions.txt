@@ -704,7 +704,7 @@ agenda_modularity_reshape_form = {
 	modifier = {
 		planet_pops_robotics_upkeep_mult = -0.05
 		planet_jobs_sr_living_metal_produces_mult = 0.05
-		auto_mod_monthly_add = 1
+		auto_mod_monthly_add = 100
 	}
 	finish_modifier = agenda_modularity_reshape_form_finish
 }

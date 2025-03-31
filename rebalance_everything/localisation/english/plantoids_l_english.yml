@@ -98,10 +98,10 @@
  origin.7400.desc: "Our distant [owner.GetColonistPlural] on §Y[Root.GetName]§! deployed an §Y$starbase_outpost$§! around the star, gaining control of the §Y[Root.GetStarName]§! system."
 
  origin.7500.name: "Safety For The Spaceborne Fauna"
- origin.7500.desc: "Our relationship with spaceborne creatures is fairly unique, but we are not alone in respecting their right to exist; a resolution that has just passed in the Galacitc Community will help protect the lives of these wondrous creatures."
+ origin.7500.desc: "Our relationship with spaceborne creatures is fairly unique, but we are not alone in respecting their right to exist; a resolution that has just passed in the Galactic Community will help protect the lives of these wondrous creatures."
 
  origin.7510.name: "Danger For The Spaceborne Fauna"
- origin.7510.desc: "Spaceborne creatures have always be our friends, but not all members of the Galactic Community share our love for the void-dwellers. The resolution they just passed puts the livehood of our friends - and ours - at a risk."
+ origin.7510.desc: "Spaceborne creatures have always be our friends, but not all members of the Galactic Community share our love for the void-dwellers. The resolution they just passed puts the livelihood of our friends - and ours - at a risk."
 
  origin.7600.name: "You Reap What You Sow"
  origin.7600.desc: "Our enemies think we will bend to their strength, like reeds blown down by the wind. They forget that plants have thorns.\n\nOur soldiers sleep in their ground. Should the need arise, we can turn our §HInvasive Xenoflora§! into armies, to protect what is ours and to strangle what they call their own. We need only to direct an energy beam to the desired planet in order to begin our invasion."
@@ -164,11 +164,11 @@
  origin.7000.a: "Dedicate further time to their study."
  origin.7000.b: "We have other priorities."
 
- TIYANKIS_PROJECT: "Tyanki Observation"
- TIYANKIS_PROJECT_DESC: "Dedicating some space station personnel to the study of the Tyankis could give us further insights into the life of these pacific, mysterious voidborne creatures."
+ TIYANKIS_PROJECT: "Tiyanki Observation"
+ TIYANKIS_PROJECT_DESC: "Dedicating some space station personnel to the study of the Tiyankis could give us further insights into the life of these pacific, mysterious voidborne creatures."
 
  origin.7005.name: "$story.501.name$"
- origin.7005.desc: "By studying the feeding habits of our voidborne friends, our scientists have made a scientific breaktrough. $tech_space_whale_weapon_1_desc$. This technology will doubtlessly prove useful."
+ origin.7005.desc: "By studying the feeding habits of our voidborne friends, our scientists have made a scientific breakthrough. $tech_space_whale_weapon_1_desc$. This technology will doubtlessly prove useful."
 
  ### Civics
 
@@ -187,7 +187,7 @@
  gaia_seeder_bloomed_pops_effect: "Having completed transformation of [This.GetName] into a $pc_gaia$, the Gaia Seeder will now transform our population to better adapt them to this world.\n\nIncreases the effects of the §Y$trait_plantoid_bloomed$§! and §Y$trait_plantoid_budding$§! Traits by §G+50%§!."
  gaia_seeder_bloom_timer_tooltip: "\nThe next Bloom on §Y[This.GetName]§! will occur on §Y[This.gaia_seeder_bloom_timer]§!."
  MESSAGE_POPS_IDYLLIC_BLOOMED_TITLE: "Pops Bloomed"
- MESSAGE_POPS_IDYLLIC_BLOOMED: "Our Gaia Seeder on $PLANET|Y$ has released another Bloom, improving $VALUE|Y$ £pops£ Pops."
+ MESSAGE_POPS_IDYLLIC_BLOOMED: "Our Gaia Seeder on $PLANET|Y$ has released another Bloom, improving $VALUE|Y$ £pop£ Pops."
 
  gaiaseeders_tomb_world:0 "$TRIGGER_FAIL$Requires £society£ §Y$tech_climate_restoration$§! to build on §YTomb Worlds§!."
  gaiaseeders_same_climate_start:0 "$TRIGGER_FAIL$Requires £society£ §Y$tech_terrestrial_sculpting$§! to build on"

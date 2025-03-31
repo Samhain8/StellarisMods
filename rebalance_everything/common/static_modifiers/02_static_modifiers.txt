@@ -184,7 +184,7 @@ new_resonance_study = {
 }
 celebrate_idyllic_bloom = {
 	pop_happiness = 0.1
-	planet_immigration_pull_mult = 0.5
+	#planet_immigration_pull_mult = 0.5 # TODO: [AUG-48754] Use automigration modifier
 	icon = "gfx/interface/icons/planet_modifiers/pm_natural_beauty.dds"
 	icon_frame = 1
 }
@@ -210,11 +210,11 @@ fumongus_monitor_pops = {
 engineered_nature = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_natural_beauty.dds"
 	icon_frame = 1
-	planet_amenities_add = 10
+	planet_amenities_add = 1000
 }
 second_home = {
 	pop_environment_tolerance = 0.2
-	planet_immigration_pull_mult = 0.5
+	#planet_immigration_pull_mult = 0.5 # TODO: [AUG-48754] Use automigration modifier
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_planet_from_space.dds"
 	icon_frame = 1
@@ -244,7 +244,7 @@ paradise_made = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_unity_symbol.dds"
 	planet_jobs_unity_produces_mult = 0.25
 	pop_ethic_spiritualist_attraction_mult = 0.50
-	planet_immigration_pull_mult = 0.5
+	#planet_immigration_pull_mult = 0.5 # TODO: [AUG-48754] Use automigration modifier
 	planet_districts_cost_mult = 0.25
 	icon_frame = 1
 
@@ -256,7 +256,7 @@ crystal_kraken = {
 	planet_jobs_produces_mult = -1
    	planet_jobs_upkeep_mult = -1
    	pop_growth_speed_reduction = 1
-   	planet_immigration_pull_mult = -10
+   	#planet_immigration_pull_mult = -10 # TODO: [AUG-48754] Use automigration modifier
 }
 
 energy_poor = {
@@ -302,7 +302,7 @@ locust_planet_cracked = {
 nascent_locust = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_nanite_world.dds"
 	icon_frame = 3
-	planet_immigration_pull_mult = -0.25
+	#planet_immigration_pull_mult = -0.25 # TODO: [AUG-48754] Use automigration modifier
 	pop_happiness = -0.10
 	army_defense_health_mult = 0.15
 	planet_orbital_bombardment_damage = -0.15
@@ -333,7 +333,7 @@ ether_trophy = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_ether_trophy.dds"
 	icon_frame = 1
 	planet_stability_add = 10
-	planet_immigration_pull_mult = 0.25
+	#planet_immigration_pull_mult = 0.25 # TODO: [AUG-48754] Use automigration modifier
 }
 
 shard_trophy = {
@@ -413,7 +413,7 @@ horror_too_late = {
 	planet_jobs_physics_research_produces_mult = 1
 	planet_jobs_engineering_research_produces_mult = 1
 	planet_stability_add = -20
-	planet_immigration_pull_mult = -2
+	#planet_immigration_pull_mult = -2 # TODO: [AUG-48754] Use automigration modifier
 	pop_government_ethic_attraction = -1000
 }
 horror_stabilized = {
@@ -427,8 +427,8 @@ horror_stabilized = {
 fortress_trophy = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_fortress_trophy.dds"
 	icon_frame = 1
-	planet_amenities_add = 15
-	planet_housing_add = 15
+	planet_amenities_add = 1500
+	planet_housing_add = 1500
 }
 voidspawn_trophy = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_voidspawn_trophy.dds"
@@ -507,12 +507,12 @@ collective_autophobia = {
 freed_stasis_criminals = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_free_at_last.dds"
 	icon_frame = 3
-	job_criminal_add = 2
+	job_criminal_add = 200
 }
 freed_stasis_dissidents = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_free_at_last.dds"
 	icon_frame = 1
-	job_culture_worker_add = 2
+	job_culture_worker_add = 200
 }
 star_mall_habitat = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_artist_monument_erected.dds"
@@ -563,37 +563,88 @@ stratovents = {
 
 stratovent_world_modifier_tourism = {
 	planet_jobs_society_research_produces_mult = 0.1
-	job_stratovent_researcher_add = 2
+	planet_biologists_society_research_produces_add = -1
+	planet_biologists_trade_produces_add = 3
+	planet_biologists_consumer_goods_upkeep_add = 1
+	job_biologist_add = 200
+	custom_tooltip = stratovent_world_modifier_tourism_tt
+	show_only_custom_tooltip = no
 	icon = "gfx/interface/icons/planet_modifiers/pm_seismological_disturbances.dds"
 	icon_frame = 1
 }
 
 stratovent_world_modifier_tourism_boost = {
 	planet_jobs_society_research_produces_mult = 0.15
-	job_stratovent_researcher_add = 4
+	planet_biologists_society_research_produces_add = -1
+	planet_biologists_trade_produces_add = 3
+	planet_biologists_consumer_goods_upkeep_add = 1
+	job_biologist_add = 400
+	custom_tooltip = stratovent_world_modifier_tourism_boost_tt
+	show_only_custom_tooltip = no
 	icon = "gfx/interface/icons/planet_modifiers/pm_seismological_disturbances.dds"
 	icon_frame = 1
 }
 
 stratovent_world_modifier_refining = {
 	planet_jobs_engineering_research_produces_mult = 0.15
-	job_stratovent_refiner_add = 2
+	job_stratovent_refiner_add = 200
 	icon = "gfx/interface/icons/planet_modifiers/pm_drilling_for_gas.dds"
 	icon_frame = 1
 }
 
 stratovent_world_modifier_refining_upg = {
 	planet_jobs_engineering_research_produces_mult = 0.15
-	job_stratovent_refiner_upg_add = 2
+	job_stratovent_refiner_upg_add = 200
 	icon = "gfx/interface/icons/planet_modifiers/pm_drilling_for_gas.dds"
 	icon_frame = 1
 }
 
 stratovent_world_modifier_refining_minerals = {
 	planet_jobs_engineering_research_produces_mult = 0.1
-	job_stratovent_refiner_minerals_add = 2
+	job_stratovent_refiner_minerals_add = 200
 	icon = "gfx/interface/icons/planet_modifiers/pm_drilling_for_gas.dds"
 	icon_frame = 1
+}
+
+planet_new_colony_spiritualist_attraction = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_victorious_army.dds"
+	icon_frame = 1
+	pop_ethic_spiritualist_attraction_mult = 1
+}
+planet_new_colony_materialist_attraction = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_victorious_army.dds"
+	icon_frame = 1
+	pop_ethic_materialist_attraction_mult = 1
+}
+planet_new_colony_militarist_attraction = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_victorious_army.dds"
+	icon_frame = 1
+	pop_ethic_militarist_attraction_mult = 1
+}
+planet_new_colony_pacifist_attraction = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_victorious_army.dds"
+	icon_frame = 1
+	pop_ethic_pacifist_attraction_mult = 1
+}
+planet_new_colony_authoritarian_attraction = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_victorious_army.dds"
+	icon_frame = 1
+	pop_ethic_authoritarian_attraction_mult = 1
+}
+planet_new_colony_egalitarian_attraction = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_victorious_army.dds"
+	icon_frame = 1
+	pop_ethic_egalitarian_attraction_mult = 1
+}
+planet_new_colony_xenophile_attraction = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_victorious_army.dds"
+	icon_frame = 1
+	pop_ethic_xenophile_attraction_mult = 1
+}
+planet_new_colony_xenophobe_attraction = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_victorious_army.dds"
+	icon_frame = 1
+	pop_ethic_xenophobe_attraction_mult = 1
 }
 
 ##########################################################################
@@ -703,7 +754,7 @@ gestalt_black_hole_bad = {
 	country_unity_produces_mult = -0.05
 }
 harmonious_tune = {
-	planet_amenities_add = 1
+	planet_amenities_add = 100
 	planet_crime_add = -1
 }
 engineered_species_revelation = {

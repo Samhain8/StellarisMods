@@ -89,7 +89,7 @@
  paragon.40200.b:0 "Why do you want to join us?"
  paragon.40200.b.response:0 "You have an openness and honesty that I find appealing. Like me, you see the possibilities in collaboration. It will be a privilege to live among such open souls."
  paragon.40200.c:0 "How did you come by your cultural expertise?"
- paragon.40200.c.response:0 "The best way to understand a foreign culture is to embrace it. I discovered love for the first time on an alien world. I was fascinated by my partner and their culture, and even though we're no longer together, that relationship taught the meaning of tolerance and respect. Since then, I have tried to assimilate as much as I can in the places I visit, free from the burden of judgement."
+ paragon.40200.c.response:0 "The best way to understand a foreign culture is to embrace it. I discovered love for the first time on an alien world. I was fascinated by my partner and their culture, and even though we're no longer together, that relationship taught the meaning of tolerance and respect. Since then, I have tried to assimilate as much as I can in the places I visit, free from the burden of judgment."
  paragon.40200.hire_custom_tooltip:0 "§Y$NAME_xenophile2$§! joins our empire as a §HLeader§!."
 
  paragon.40300.name:0 "$NAME_militarist1$"
@@ -513,7 +513,7 @@
  paragon.3004.name:0 "Forgotten Admiral"
  paragon.3004.intro: "Our engineering team has ably assisted the alien crew. The vessel's designation translates roughly to 'First Talon', and their commander has identified himself as Skrand Sharpbeak, an admiral of renown.\n\nBy comparing data from the First Talon's databanks and our own, we have confirmed that Skrand and his crew were trapped within the gate for several millennia. For them, it was a short trip - but for the rest of the galaxy, thousands of years passed by."
  paragon.3004.a.desc: "$paragon.3004.intro$\n\nThanks to our excavation on Skravird, at least we can point Admiral Sharpbeak towards his home planet, but everything and everyone he has have ever loved is long since gone."
- paragon.3004.b.desc: "$paragon.3004.intro$\n\nThey have no home to return to. Everything and everyone they have have ever loved is long since gone." 
+ paragon.3004.b.desc: "$paragon.3004.intro$\n\nThey have no home to return to. Everything and everyone they have have ever loved is long since gone."
  paragon.3004.a:0 "A sad fate."
 
  paragon.3005.name:0 "Skrand Sharpbeak"
@@ -772,6 +772,7 @@
 
  mod_planet_clerks_unity_produces_add:0 "£unity£ $unity$ from £job_clerk£ $job_clerk_plural$"
  planet_clerks:0 "Clerk Jobs"
+ planet_civilians: "Civilian Jobs"
 
  commanding_presence:0 "Commanding Presence"
  commanding_presence_desc:0 "Through the sheer willpower of our leader, we are able to extend our empire's agenda across space, and force others to heed our command."
@@ -1487,4 +1488,3 @@
  mod_leader_generals_food_upkeep_add:0 "$r_food$ $UPKEEP$"
  mod_leader_scientists_food_upkeep_add:0 "$r_food$ $UPKEEP$"
  mod_leader_officials_food_upkeep_add:0 "$r_food$ $UPKEEP$"
- 

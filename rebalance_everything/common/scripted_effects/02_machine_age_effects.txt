@@ -781,10 +781,7 @@ synth_queen_wipe_planet = {
 	save_global_event_target_as = synth_queen_capital
 	if = {
 		limit = {
-			num_pops > 0
-		}
-		every_owned_pop = {
-			kill_pop = yes
+			pop_amount > 0
 		}
 		remove_all_buildings = yes
 		destroy_colony = yes
@@ -814,12 +811,9 @@ synth_queen_wipe_system = {
 		# Kill everyone
 		every_system_planet = {
 			limit = {
-				num_pops > 0
+				pop_amount > 0
 				exists = owner
 				owner = { is_primitive = no }
-			}
-			every_owned_pop = {
-				kill_pop = yes
 			}
 			remove_all_buildings = yes
 			destroy_colony = yes
@@ -1685,12 +1679,9 @@ synth_queen_mini_wipe_system = {
 		set_star_flag = synth_queen_system
 		every_system_planet = {
 			limit = {
-				num_pops > 0
+				pop_amount > 0
 				exists = owner
 				owner = { is_primitive = no }
-			}
-			every_owned_pop = {
-				kill_pop = yes
 			}
 			destroy_colony = yes
 		}
@@ -1964,9 +1955,8 @@ make_fallen_empire = {
 					}
 				}
 				9 = {
-					create_pop = {
+					create_pop_group = {
 						species = root.species
-						ethos = random
 					}
 				}
 			}
@@ -1977,15 +1967,6 @@ make_fallen_empire = {
 		limit = {
 			exists = owner
 			is_planet_class = pc_cosmogenesis_world
-		}
-
-		while = {
-			limit = {
-				num_pops > 0
-			}
-			random_owned_pop = {
-				kill_pop = yes
-			}
 		}
 		destroy_colony = yes
 
@@ -2017,7 +1998,6 @@ make_fallen_empire = {
 		create_colony = {
 			owner = root
 			species = root.species
-		#	ethos = random
 		}
 
 		create_fallen_empire_planet = yes
@@ -2226,9 +2206,8 @@ create_fallen_empire_planet = {
 				}
 			}
 			9 = {
-				create_pop = {
+				create_pop_group = {
 					species = root.species
-					ethos = random
 				}
 			}
 		}
@@ -3178,11 +3157,11 @@ arc_welders_start_effect = {
 		set_planet_size = 15
 		while = {
 			count = 3
-			random_owned_pop = {
+			random_owned_pop_group = {
 				limit = {
 					is_same_species = event_target:arc_welders_empire.species
 				}
-				kill_pop = yes
+				kill_single_pop = yes
 			}
 		}
 		while = {
@@ -3225,22 +3204,17 @@ obsessional_directive_start_effect = {
 			}
 		}
 	}
-	capital_scope = {
-		if = {
-			limit = {
-				is_planet_class = pc_habitat
-			}
-			add_district = {
-				district_type = district_hab_industrial
-				ignore_cap = yes
-			}
-		}
-		else = {
-			add_district_and_planet_size_if_needed_effect = {
-				district = district_industrial
-			}
-		}
-	}
+	# capital_scope = {
+	# 	if = {
+	# 		limit = {
+	# 			is_planet_class = pc_habitat
+	# 		}
+	# 		add_district = {
+	# 			district_type = district_hab_industrial
+	# 			ignore_cap = yes
+	# 		}
+	# 	}
+	# }
 }
 
 doomclock_reveal = {

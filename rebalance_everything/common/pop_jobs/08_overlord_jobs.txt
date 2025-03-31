@@ -3,8 +3,12 @@ overlord_propagandist = {
 
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = holding_propaganda_office
-	clothes_texture_index = 1
+
+	swappable_data = {
+		default = {
+			building_icon = holding_propaganda_office
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -45,9 +49,13 @@ overlord_propagandist_drone = {
 
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = holding_propaganda_office
-	clothes_texture_index = 1
-	icon = overlord_propagandist
+
+	swappable_data = {
+		default = {
+			building_icon = holding_propaganda_office
+			icon = overlord_propagandist
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -88,8 +96,12 @@ overlord_academic = {
 
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = holding_satellite_campus
-	clothes_texture_index = 1
+
+	swappable_data = {
+		default = {
+			building_icon = holding_satellite_campus
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -137,9 +149,13 @@ overlord_academic_drone = {
 
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = holding_satellite_campus
-	clothes_texture_index = 1
-	icon = overlord_academic
+
+	swappable_data = {
+		default = {
+			building_icon = holding_satellite_campus
+			icon = overlord_academic
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -192,8 +208,12 @@ overlord_trader = {
 
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = holding_emporium
-	clothes_texture_index = 1
+
+	swappable_data = {
+		default = {
+			building_icon = holding_emporium
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -212,7 +232,7 @@ overlord_trader = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 10
+		planet_amenities_add = 1000
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -243,9 +263,13 @@ overlord_trader_drone = {
 
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = holding_emporium
-	clothes_texture_index = 1
-	icon = overlord_trader
+
+	swappable_data = {
+		default = {
+			building_icon = holding_emporium
+			icon = overlord_trader
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -264,7 +288,7 @@ overlord_trader_drone = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_no_happiness_add = 10
+		planet_amenities_no_happiness_add = 1000
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -295,8 +319,12 @@ aid_worker = {
 
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = holding_aid_agency
-	clothes_texture_index = 1
+
+	swappable_data = {
+		default = {
+			building_icon = holding_aid_agency
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -312,7 +340,7 @@ aid_worker = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 5
+		planet_amenities_add = 500
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -336,9 +364,13 @@ aid_worker_drone = {
 
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = holding_aid_agency
-	clothes_texture_index = 1
-	icon = aid_worker
+
+	swappable_data = {
+		default = {
+			building_icon = holding_aid_agency
+			icon = aid_worker
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -354,7 +386,7 @@ aid_worker_drone = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_no_happiness_add = 5
+		planet_amenities_no_happiness_add = 500
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -378,8 +410,12 @@ overlord_breeder = {
 
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = holding_splinter_hive
-	clothes_texture_index = 1
+
+	swappable_data = {
+		default = {
+			building_icon = holding_splinter_hive
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -438,9 +474,13 @@ overlord_breeder_drone = {
 
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = holding_splinter_hive
-	clothes_texture_index = 1
-	icon = overlord_breeder
+
+	swappable_data = {
+		default = {
+			building_icon = holding_splinter_hive
+			icon = overlord_breeder
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -499,8 +539,12 @@ mind_thrall = {
 
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = holding_distributed_processing
-	clothes_texture_index = 1
+
+	swappable_data = {
+		default = {
+			building_icon = holding_distributed_processing
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -530,9 +574,13 @@ mind_thrall_drone = {
 
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = holding_distributed_processing
-	clothes_texture_index = 1
-	icon = mind_thrall
+
+	swappable_data = {
+		default = {
+			building_icon = holding_distributed_processing
+			icon = mind_thrall
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -562,9 +610,13 @@ overlord_offspring_drone_feeder = {
 
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = building_offspring_nest
-	clothes_texture_index = 1
-	icon = spawning_drone
+
+	swappable_data = {
+		default = {
+			building_icon = building_offspring_nest
+			icon = spawning_drone
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -620,9 +672,13 @@ overlord_offspring_drone_feeder_drone = {
 
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = building_offspring_nest
-	clothes_texture_index = 1
-	icon = spawning_drone
+
+	swappable_data = {
+		default = {
+			building_icon = building_offspring_nest
+			icon = spawning_drone
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -677,10 +733,14 @@ overlord_metallurgist = {
 	can_set_priority = no
 	is_capped_by_modifier = yes
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = holding_offworld_foundry
-	clothes_texture_index = 3
-	icon = foundry
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = holding_offworld_foundry
+			icon = foundry
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -719,9 +779,14 @@ overlord_foundry_drone = {
 	can_set_priority = no
 	is_capped_by_modifier = yes
 	category = complex_drone
-	condition_string = DRONE_JOB_TRIGGER
-	building_icon = holding_offworld_foundry
-	icon = alloy_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = holding_offworld_foundry
+			icon = alloy_drone
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -759,9 +824,14 @@ overlord_fabricator = {
 	can_set_priority = no
 	is_capped_by_modifier = yes
 	category = complex_drone
-	condition_string = DRONE_JOB_TRIGGER
-	building_icon = holding_offworld_foundry
-	icon = fabricator
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = holding_offworld_foundry
+			icon = fabricator
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -799,10 +869,14 @@ overlord_catalytic_technician = {
 	can_set_priority = no
 	is_capped_by_modifier = yes
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = holding_offworld_foundry
-	clothes_texture_index = 3
-	icon = catalytic_technician
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = holding_offworld_foundry
+			icon = catalytic_technician
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -841,9 +915,14 @@ overlord_catalytic_drone = {
 	can_set_priority = no
 	is_capped_by_modifier = yes
 	category = complex_drone
-	condition_string = DRONE_JOB_TRIGGER
-	building_icon = holding_offworld_foundry
-	icon = catalytic_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = holding_offworld_foundry
+			icon = catalytic_drone
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -899,8 +978,12 @@ overlord_beholder = {
 
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = holding_overlord_vigil_command
-	clothes_texture_index = 1
+
+	swappable_data = {
+		default = {
+			building_icon = holding_overlord_vigil_command
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -965,9 +1048,13 @@ overlord_beholder_drone = {
 
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = holding_overlord_vigil_command
-	clothes_texture_index = 1
-	icon = overlord_beholder
+
+	swappable_data = {
+		default = {
+			building_icon = holding_overlord_vigil_command
+			icon = overlord_beholder
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1029,11 +1116,15 @@ overlord_beholder_drone = {
 
 overlord_necromancer = {
 	category = specialist
-	icon = necromancer
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = building_dread_encampment
-	clothes_texture_index = 1
+
+	swappable_data = {
+		default = {
+			building_icon = building_dread_encampment
+			icon = necromancer
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1070,9 +1161,10 @@ overlord_necromancer = {
 		}
 	}
 
-	pop_modifier = {
-		pop_defense_armies_add = 2
-	}
+# Markus
+#	pop_group_modifier = {
+#		pop_defense_armies_add = 2
+#	}
 	overlord_resources = {
 		category = planet_overlord_necromancers
 		produces = {
@@ -1093,9 +1185,13 @@ overlord_necromancer_drone = {
 
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = building_dread_encampment
-	clothes_texture_index = 1
-	icon = overlord_beholder
+
+	swappable_data = {
+		default = {
+			building_icon = building_dread_encampment
+			icon = overlord_beholder
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1132,9 +1228,10 @@ overlord_necromancer_drone = {
 		}
 	}
 
-	pop_modifier = {
-		pop_defense_armies_add = 2
-	}
+#Markus
+#	pop_group_modifier = {
+#		pop_defense_armies_add = 2
+#	}
 	overlord_resources = {
 		category = planet_overlord_necromancers
 		produces = {
@@ -1153,11 +1250,15 @@ overlord_necromancer_drone = {
 
 overlord_reassigner = {
 	category = specialist
-	icon = necromancer
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = building_posthumous_employment_center
-	clothes_texture_index = 1
+
+	swappable_data = {
+		default = {
+			building_icon = building_posthumous_employment_center
+			icon = necromancer
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1204,9 +1305,13 @@ overlord_reassigner_drone = {
 
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = building_dread_encampment
-	clothes_texture_index = 1
-	icon = overlord_beholder
+
+	swappable_data = {
+		default = {
+			building_icon = building_dread_encampment
+			icon = overlord_beholder
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1250,11 +1355,15 @@ overlord_reassigner_drone = {
 
 overlord_recruiter = {
 	category = specialist
-	icon = soldier
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = holding_recruitment_office
-	clothes_texture_index = 1
+
+	swappable_data = {
+		default = {
+			building_icon = holding_recruitment_office
+			icon = soldier
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1277,9 +1386,10 @@ overlord_recruiter = {
 		}
 	}
 
-	pop_modifier = {
-		pop_defense_armies_add = 3
-	}
+#Markus
+#	pop_group_modifier = {
+#		pop_defense_armies_add = 3
+#	}
 
 	weight = {
 		weight = @overlord_job_weight
@@ -1291,9 +1401,13 @@ overlord_recruiter_drone = {
 
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = holding_recruitment_office
-	clothes_texture_index = 1
-	icon = overlord_beholder
+
+	swappable_data = {
+		default = {
+			building_icon = holding_recruitment_office
+			icon = overlord_beholder
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1316,9 +1430,10 @@ overlord_recruiter_drone = {
 		}
 	}
 
-	pop_modifier = {
-		pop_defense_armies_add = 3
-	}
+# Markus
+#	pop_group_modifier = {
+#		pop_defense_armies_add = 3
+#	}
 
 	weight = {
 		weight = @overlord_job_weight
@@ -1329,9 +1444,13 @@ overlord_ranger = {
 	category = worker
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = holding_park_ranger_lodge
-	clothes_texture_index = 1
-	icon = ranger
+
+	swappable_data = {
+		default = {
+			building_icon = holding_park_ranger_lodge
+			icon = ranger
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1365,9 +1484,13 @@ overlord_ranger_drone = {
 	category = simple_drone
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = holding_park_ranger_lodge
-	clothes_texture_index = 1
-	icon = ranger
+
+	swappable_data = {
+		default = {
+			building_icon = holding_park_ranger_lodge
+			icon = ranger
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1407,9 +1530,13 @@ overlord_arborist = {
 	category = worker
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = holding_tree_of_life_sapling
-	clothes_texture_index = 1
-	icon = ranger
+
+	swappable_data = {
+		default = {
+			building_icon = holding_tree_of_life_sapling
+			icon = ranger
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1445,9 +1572,13 @@ overlord_arborist_drone = {
 	category = simple_drone
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = holding_tree_of_life_sapling
-	clothes_texture_index = 1
-	icon = ranger
+
+	swappable_data = {
+		default = {
+			building_icon = holding_tree_of_life_sapling
+			icon = ranger
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1484,9 +1615,13 @@ overlord_bio_trophy = {
 	category = worker
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = building_organic_sanctuary
-	clothes_texture_index = 1
-	icon = bio_trophy
+
+	swappable_data = {
+		default = {
+			building_icon = building_organic_sanctuary
+			icon = bio_trophy
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1518,11 +1653,12 @@ overlord_bio_trophy = {
 	planet_modifier = {
 		pop_happiness = 0.01
 	}
-	triggered_pop_modifier = {
-		pop_happiness = 0.40
-		pop_housing_usage_add = -1
-		planet_pops_upkeep_mult = -2
-	}
+# Markus
+#	triggered_pop_group_modifier = {
+#		pop_happiness = 0.40
+#		pop_housing_usage_add = -1
+#		planet_pops_upkeep_mult = -2
+#	}
 
 	weight = {
 		weight = @overlord_job_weight
@@ -1533,9 +1669,13 @@ overlord_bio_trophy_drone = {
 	category = simple_drone
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = building_organic_sanctuary
-	clothes_texture_index = 1
-	icon = bio_trophy
+
+	swappable_data = {
+		default = {
+			building_icon = building_organic_sanctuary
+			icon = bio_trophy
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1565,10 +1705,11 @@ overlord_bio_trophy_drone = {
 		}
 	}
 
-	triggered_pop_modifier = {
-		pop_housing_usage_add = -1
-		planet_pops_upkeep_mult = -2
-	}
+# Markus
+#	triggered_pop_group_modifier = {
+#		pop_housing_usage_add = -1
+#		planet_pops_upkeep_mult = -2
+#	}
 
 	weight = {
 		weight = @overlord_job_weight
@@ -1580,9 +1721,13 @@ overlord_manager = {
 
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = holding_franchise_headquarters
-	clothes_texture_index = 3
-	icon = manager
+
+	swappable_data = {
+		default = {
+			building_icon = holding_franchise_headquarters
+			icon = manager
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1593,18 +1738,11 @@ overlord_manager = {
 
 	possible_precalc = can_fill_specialist_job
 
-	triggered_planet_modifier = {
-		potential = {
-			always = yes
-		}
-		trade_value_add = 1
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
-	}
-
 	resources = {
 		category = planet_overlord_managers
 		produces = {
 			unity = 4
+			trade = 1
 		}
 		upkeep = {
 			consumer_goods = 2
@@ -1629,9 +1767,13 @@ overlord_mortal_initiate = {
 	category = worker
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = building_sacrificial_temple_2
-	clothes_texture_index = 1
-	icon = mortal_initiate
+
+	swappable_data = {
+		default = {
+			building_icon = building_sacrificial_temple_2
+			icon = mortal_initiate
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1661,7 +1803,7 @@ overlord_mortal_initiate = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 2
+		planet_amenities_add = 200
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -1676,9 +1818,13 @@ overlord_mortal_initiate_drone = {
 	category = simple_drone
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = building_sacrificial_temple_2
-	clothes_texture_index = 1
-	icon = mortal_initiate
+
+	swappable_data = {
+		default = {
+			building_icon = building_sacrificial_temple_2
+			icon = mortal_initiate
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1707,7 +1853,7 @@ overlord_mortal_initiate_drone = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_no_happiness_add = 2
+		planet_amenities_no_happiness_add = 200
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -1722,9 +1868,13 @@ overlord_bath_attendant = {
 	category = specialist
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = building_toxic_bath
-	clothes_texture_index = 1
-	icon = bath_attendant
+
+	swappable_data = {
+		default = {
+			building_icon = building_toxic_bath
+			icon = bath_attendant
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1769,9 +1919,13 @@ overlord_bath_attendant_hive = {
 	category = complex_drone
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = building_toxic_bath
-	clothes_texture_index = 1
-	icon = bath_attendant
+
+	swappable_data = {
+		default = {
+			building_icon = building_toxic_bath
+			icon = bath_attendant
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1817,9 +1971,13 @@ overlord_bath_attendant_machine = {
 	category = complex_drone
 	can_set_priority = no
 	is_capped_by_modifier = yes
-	building_icon = building_toxic_bath
-	clothes_texture_index = 1
-	icon = bath_attendant
+
+	swappable_data = {
+		default = {
+			building_icon = building_toxic_bath
+			icon = bath_attendant
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1864,9 +2022,13 @@ overlord_bath_attendant_machine = {
 overlord_knight = {
 	category = specialist
 	can_set_priority = no
-	building_icon = building_order_keep
-	clothes_texture_index = 3
-	icon = knight
+
+	swappable_data = {
+		default = {
+			building_icon = building_order_keep
+			icon = knight
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1911,9 +2073,10 @@ overlord_knight = {
 		}
 	}
 
-	pop_modifier = {
-		pop_defense_armies_add = 2
-	}
+#Markus
+#	pop_group_modifier = {
+#		pop_defense_armies_add = 2
+#	}
 
 	planet_modifier = {
 		planet_stability_add = 3
@@ -1927,10 +2090,6 @@ overlord_knight = {
 			factor = 0
 			is_enslaved = yes
 		}
-		modifier = {
-			factor = 5
-			has_job = overlord_knight
-		}
 	}
 
 	inline_script = "jobs/automodding_priority_unity"
@@ -1939,9 +2098,13 @@ overlord_knight = {
 overlord_knight_drone = {
 	category = complex_drone
 	can_set_priority = no
-	building_icon = building_order_keep
-	clothes_texture_index = 3
-	icon = knight
+
+	swappable_data = {
+		default = {
+			building_icon = building_order_keep
+			icon = knight
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1986,9 +2149,10 @@ overlord_knight_drone = {
 		}
 	}
 
-	pop_modifier = {
-		pop_defense_armies_add = 2
-	}
+# Markus
+#	pop_group_modifier = {
+#		pop_defense_armies_add = 2
+#	}
 
 	planet_modifier = {
 		planet_stability_add = 3
@@ -2002,10 +2166,6 @@ overlord_knight_drone = {
 		}
 		mult = value:job_weights_modifier|JOB|overlord_knight_drone|RESOURCE|unity|
 		mult = value:job_weights_research_modifier|JOB|overlord_knight_drone|
-		modifier = {
-			factor = 5
-			has_job = overlord_knight_drone
-		}
 	}
 
 	inline_script = "jobs/automodding_priority_unity"
@@ -2013,9 +2173,13 @@ overlord_knight_drone = {
 
 overlord_healthcare = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = building_clinic
-	clothes_texture_index = 3
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_medical_2
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -2037,6 +2201,20 @@ overlord_healthcare = {
 		upkeep = {
 			consumer_goods = 1
 		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_private_healthcare_corporate }
+			}
+			trade = 4
+		}
+		produces = {
+			trigger = {
+				exists = planet
+				planet = { has_planet_flag = has_private_clinics }
+			}
+			trade = 2
+		}
 	}
 
 	triggered_planet_modifier = {
@@ -2046,7 +2224,7 @@ overlord_healthcare = {
 				NOT = { has_valid_civic = civic_dystopian_society }
 			}
 		}
-		planet_amenities_add = 5
+		planet_amenities_add = 500
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 	triggered_planet_modifier = {
@@ -2054,41 +2232,16 @@ overlord_healthcare = {
 			exists = owner
 			owner = { has_valid_civic = civic_private_healthcare_corporate }
 		}
-		planet_amenities_add = 2
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_valid_civic = civic_private_healthcare_corporate }
-		}
-		trade_value_add = 4
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
-	}
-	triggered_planet_modifier = {
-		potential = {
-			planet = { has_planet_flag = has_private_clinics }
-		}
-		planet_amenities_add = 1
+		planet_amenities_add = 200
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 	triggered_planet_modifier = {
 		potential = {
 			planet = { has_planet_flag = has_private_clinics }
 		}
-		trade_value_add = 2
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+		planet_amenities_add = 100
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_modifier = revolutionary_medigel_modifier }
-		}
-		pop_growth_speed = 0.025
-		planet_pop_assembly_organic_mult = 0.025
-		pop_environment_tolerance = 0.0125
-	}
-
 
 	weight = {
 		weight = @high_prio_specialist_job_weight
@@ -2101,10 +2254,6 @@ overlord_healthcare = {
 		modifier = {
 			factor = 0.1
 			can_take_servant_job = yes
-		}
-		modifier = {
-			factor = 1.5
-			has_job = healthcare
 		}
 		modifier = {
 			factor = 2
@@ -2124,21 +2273,27 @@ overlord_healthcare = {
 			is_enslaved = yes
 			has_slavery_type = { type = slavery_indentured }
 		}
-		modifier = {
-			factor = 10
-			NOT = { has_job = healthcare }
-			planet = {
-				free_amenities < 0
-				has_available_jobs = healthcare
-			}
-		}
+# Markus
+#		modifier = {
+#			factor = 10
+#			NOT = { has_job = healthcare }
+#			planet = {
+#				free_amenities < 0
+#				has_available_jobs = healthcare
+#			}
+#		}
 	}
 }
 
 overlord_replicator = {
 	category = complex_drone
-	condition_string = DRONE_JOB_TRIGGER
-	building_icon = building_robot_assembly_plant
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_robot_assembly_plant
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -2181,8 +2336,13 @@ overlord_replicator = {
 
 overlord_spawning_drone = {
 	category = complex_drone
-	condition_string = DRONE_JOB_TRIGGER
-	building_icon = building_spawning_pool
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_spawning_pool
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -2194,13 +2354,112 @@ overlord_spawning_drone = {
 
 	possible_precalc = can_fill_drone_job
 
-	possible = { can_think = yes }
+	possible = {
+		can_think = yes
+	}
 
 	triggered_planet_modifier = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_no_happiness_add = 5
+		planet_amenities_no_happiness_add = 500
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			can_assemble_hive_pop = yes
+		}
+		modifier = {
+			planet_pop_assembly_organic_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_origin = origin_necrophage }
+			exists = planet.growing_species
+			planet.growing_species = {
+				NOT = { has_trait = trait_hive_mind }
+			}
+		}
+		modifier = {
+			pop_growth_speed = 0.1
+		}
+	}
+
+	resources = {
+		category = planet_pop_assemblers
+		upkeep = {
+			trigger = {
+				exists = planet.assembling_species
+				planet.assembling_species = { is_lithoid = no }
+			}
+			food = 5
+		}
+		upkeep = {
+			trigger = {
+				exists = planet.assembling_species
+				planet.assembling_species = { is_lithoid = yes }
+			}
+			minerals = 5
+		}
+	}
+
+	weight = {
+		weight = @spawner_drone_job_weight
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+		modifier = {
+			factor = 0.5 # job is less useful if pop control is active, but still gives amenities
+			planet = {
+				has_modifier = planet_population_control_gestalt
+			}
+		}
+		modifier = {
+			factor = 0.01 # crisis purge
+			exists = planet
+			exists = planet.controller
+			planet.controller = {
+				OR = {
+					is_country_type = swarm
+					is_country_type = ai_empire
+				}
+			}
+		}
+	}
+}
+
+overlord_spawning_drone_lithoid = {
+	category = complex_drone
+
+	swappable_data = {
+		default = {
+			condition_string = DRONE_JOB_TRIGGER
+			building_icon = building_spawning_pool
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_enslaved = no
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = {
+		can_think = yes
+		is_lithoid = yes
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_no_happiness_add = 500
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -2230,15 +2489,6 @@ overlord_spawning_drone = {
 	resources = {
 		category = planet_jobs
 		upkeep = {
-			trigger = {
-				is_lithoid = no
-			}
-			food = 5
-		}
-		upkeep = {
-			trigger = {
-				is_lithoid = yes
-			}
 			minerals = 5
 		}
 	}

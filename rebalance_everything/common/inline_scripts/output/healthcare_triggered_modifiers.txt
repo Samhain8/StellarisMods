@@ -1,0 +1,47 @@
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			NOT = { has_valid_civic = civic_dystopian_society }
+		}
+	}
+	planet_amenities_add = 750
+	mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = planet
+		planet = {
+			has_branch_office = yes
+			has_holding = {
+				holding = building_corporate_clinics
+				owner = branch_office_owner
+			}
+		}
+	}
+	planet_amenities_add = 100
+	mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = planet
+		planet = {
+			has_building = building_medical_2
+		}
+	}
+	pop_growth_speed = @building_medical_2_pop_growth_speed
+	planet_pop_assembly_organic_mult = @building_medical_2_organic_pop_assembly_mult
+}
+
+triggered_planet_modifier = {
+	potential = {
+		exists = planet
+		planet = {
+			has_building = building_medical_3
+		}
+	}
+	pop_environment_tolerance = @building_medical_3_environment_tolerance
+	planet_pops_organics_upkeep_mult = @building_medical_3_organics_upkeep
+}

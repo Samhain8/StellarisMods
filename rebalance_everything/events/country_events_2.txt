@@ -37,7 +37,15 @@ country_event = {
 						is_eager_explorer_empire = yes
 					}
 				}
-				country_event = { id = country.200 days = 30 random = 10 }
+				modifier = {
+					factor = 2
+					is_spiritualist = yes
+				}
+				modifier = {
+					factor = 0.5
+					is_materialist = yes
+				}
+				country_event = { id = country.200 days = 360 random = 10 }
 			}
 			# Wanderlust
 			1 = { country_event = { id = country.1000 days = 30 random = 10 } }
@@ -161,6 +169,12 @@ country_event = {
 	option = {
 		name = country.999.a.material
 		trigger = { has_ethic = ethic_fanatic_materialist }
+		add_monthly_resource_mult = {
+			resource = physics_research
+			value = @tier1researchreward
+			min = @tier1researchmin
+			max = @tier1researchmax
+		}
 	}
 
 	option = {
@@ -1734,7 +1748,7 @@ country_event = {
 	title = "country.1100.name"
 	desc = "country.1100.desc"
 	show_sound = event_scanner
-	picture = GFX_evt_galactic_senate
+	picture = GFX_evt_board_meeting
 	location = root
 	event_chain = mass_extinction_chain
 

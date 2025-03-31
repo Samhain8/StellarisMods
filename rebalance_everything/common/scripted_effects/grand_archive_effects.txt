@@ -1966,6 +1966,7 @@ create_black_needle_country = {
 				}
 			}
 			effect = {
+				set_country_flag = disable_pirate_starbase_spawning
 				save_global_event_target_as = black_needle_country
 			}
 		}

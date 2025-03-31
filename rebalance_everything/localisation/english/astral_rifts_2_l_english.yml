@@ -520,7 +520,7 @@
  astral_rift.2790.desc: "[this.GetName], who recently brokered a complex agreement on the other side of the rift we were studying in [from.solar_system.GetName], [this.GetHasHave] requested a change of duty. After navigating such a difficult arbitration process, [this.GetHeShe] [this.GetHasHave] discovered a new-found passion for negotiation. If we allow it, [this.GetHeShe] would leave the world of science behind to become a permanent envoy in our existing diplomatic infrastructure."
  astral_rift.2790.a: "Very well."
  astral_rift.2790.a.tt: "[This.GetName] is removed from your leader pool and becomes an §YEnvoy§!."
- astral_rift.2790.b: "[this.GetHeShe] [this.GetIsAre] more valuable to us as a scientist."
+ astral_rift.2790.b: "[this.GetHeSheCap] [this.GetIsAre] more valuable to us as a scientist."
 
 ###############
 # Tiny Planet #
@@ -607,7 +607,6 @@
 #######################
  astral_rift_interdimensional_circus: "Entertainment Nexus"
  revolutionary_medigel_modifier: "Revolutionary Medi-Gel"
- revolutionary_medigel_tt: "£job_healthcare£ §Y$job_healthcare_plural$§! Output: §G+50%§!"
 
  edict_spontaneous_crystallization: "Spontaneous Crystallization"
  edict_spontaneous_crystallization_desc: "By applying a unique matrix of catalysts onto freshly harvested rock, we have a chance at generating much more valuable crystalline structures."

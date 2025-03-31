@@ -1540,7 +1540,9 @@ country_event = {
 		trigger = {
 			is_megacorp = no
 			capital_scope = {
-				any_owned_pop = { has_job = politician }
+				any_owned_pop_group = {
+					# has_job = politician # Markus
+				}
 			}
 		}
 		allow = {
@@ -1549,11 +1551,12 @@ country_event = {
 		add_resource = { energy = -250 }
 		custom_tooltip = espionage.1060.a.tooltip
 		capital_scope = {
-			random_owned_pop = {
-				limit = { has_job = politician }
-				unemploy_pop = yes
-				clear_pop_category = yes #Drops them to worker-class
-			}
+			# weighted_random_owned_pop_group = {
+			# 	limit = {
+			# 		# has_job = politician # Markus
+			# 	}
+			# 	# unemploy_pop = yes # AUG-51864
+			# }
 		}
 		root = {
 			add_modifier = {
@@ -1580,16 +1583,16 @@ country_event = {
 					is_megacorp = yes # failsafe check, which also causes a flavorful event icon to appear
 					is_worker_coop_empire = no
 					capital_scope = {
-						any_owned_pop = {
-							has_job = executive
+						any_owned_pop_group = {
+							# has_job = executive # Markus
 						}
 					}
 				}
 				AND = { # has a Steward
 					is_worker_coop_empire = yes
 					capital_scope = {
-						any_owned_pop = {
-							has_job = steward
+						any_owned_pop_group = {
+							# has_job = steward # Markus
 						}
 					}
 				}
@@ -1605,24 +1608,22 @@ country_event = {
 				is_worker_coop_empire = yes
 			}
 			capital_scope = {
-				random_owned_pop = {
-					limit = {
-						has_job = steward
-					}
-					unemploy_pop = yes
-					clear_pop_category = yes # Drops them to worker-class
-				}
+				# weighted_random_owned_pop_group = {
+				# 	limit = {
+				# 		# has_job = steward # Markus
+				# 	}
+				# 	# unemploy_pop = yes # AUG-51864
+				# }
 			}
 		}
 		else = {
 			capital_scope = {
-				random_owned_pop = {
-					limit = {
-						has_job = executive
-					}
-					unemploy_pop = yes
-					clear_pop_category = yes # Drops them to worker-class
-				}
+				# weighted_random_owned_pop_group = {
+				# 	limit = {
+				# 		# has_job = executive # Markus
+				# 	}
+				# 	# unemploy_pop = yes # AUG-51864
+				# }
 			}
 		}
 		root = {

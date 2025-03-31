@@ -333,15 +333,14 @@ offworld_trading_company = {
 		cost = {
 			alloys = 100
 		}
-	}
-
-	triggered_station_modifier = {
-		potential = {
-			hidden_trigger = { exists = this }
-			has_starbase_module = trading_hub
+		produces = {
+			trigger = {
+				hidden_trigger = { exists = this }
+				has_starbase_module = trading_hub
+			}
+			trade = 2
+			mult = value:num_starbase_modules_of_type|TYPE|trading_hub|
 		}
-		trade_value_add = 2
-		mult = value:num_starbase_modules_of_type|TYPE|trading_hub|
 	}
 
 	custom_tooltip = sm_offworld_trading_company_desc_modifier
@@ -1156,6 +1155,7 @@ shroud_beacon = {
 		fleet.owner = {
 			country_event = { id = enclave.4200 }
 			country_event = { id = origin.5625 }
+			country_event = { id = timeline.60	 } # Origin Event Shroud Tunnel Built
 		}
 	}
 
@@ -1704,14 +1704,15 @@ warp_fluctuator = {
 		cost = {
 			alloys = 100
 		}
-
+		produces = {
+			trade = 2
+		}
 		upkeep = {
 			energy = 2
 		}
 	}
 
 	station_modifier = {
-		starbase_trade_collection_range_add = 1
 	}
 	triggered_system_modifier = {
 		# Gives some Stability per "Hyperspace Specialty" Councilor level.
@@ -1922,6 +1923,9 @@ trader_proxy_office = {
 		cost = {
 			alloys = 100
 		}
+		produces = {
+			trade = 5
+		}
 	}
 
 	country_modifier = {
@@ -1942,8 +1946,6 @@ trader_proxy_office = {
 				is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
 			}
 		}
-
-		trade_value_add = 5
 	}
 
 	ai_weight = {

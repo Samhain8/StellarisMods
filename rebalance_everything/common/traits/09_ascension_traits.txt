@@ -15,7 +15,6 @@ trait_adaptive_lithoid = {
 	initial = no
 	randomized = no
 	advanced_trait = yes
-	potential_crossbreeding_chance = 0.5
 	opposites = { "trait_nonadaptive" "trait_extremely_adaptive" "trait_robust" "trait_adaptive" }
 	allowed_archetypes = { LITHOID }
 	modifier = {
@@ -41,7 +40,6 @@ trait_rapid_breeders_lithoid = {
 	initial = no
 	randomized = no
 	advanced_trait = yes
-	potential_crossbreeding_chance = 0.5
 	opposites = { "trait_slow_breeders" "trait_rapid_breeders" "trait_fertile" "trait_plantoid_budding" "trait_lithoid_budding" "trait_tiyanki" }
 	allowed_archetypes = { LITHOID }
 	modifier = {
@@ -65,13 +63,12 @@ trait_delicious = {
 	species_possible_merge_remove = {
 		always = yes
 	}
-	potential_crossbreeding_chance = 0.5
 	initial = no
 	randomized = no
 	advanced_trait = yes
 	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
-		planet_livestock_food_produces_add = 2
+		pop_livestock_bonus_workforce_add = 2
 	}
 	slave_cost = {
 		energy = 1000
@@ -89,14 +86,13 @@ trait_nerve_stapled = {
 	species_possible_merge_remove = {
 		always = yes
 	}
-	potential_crossbreeding_chance = 0.5
 	opposites = { "trait_intelligent" "trait_erudite" "trait_natural_engineers" "trait_natural_physicists" "trait_natural_sociologists" "trait_talented" "trait_zombie" }
 	initial = no
 	randomized = no
 	advanced_trait = yes
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		planet_jobs_produces_mult = 0.05
+		pop_bonus_workforce_mult = 0.05
 		species_leader_exp_gain = -1
 	}
 	custom_tooltip = TRAIT_NERVE_STAPLED_EFFECT
@@ -104,7 +100,7 @@ trait_nerve_stapled = {
 		energy = 1500
 	}
 
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			OR = {
 				is_pop_category = ruler
@@ -139,7 +135,6 @@ trait_fertile = {
 	species_possible_merge_remove = {
 		always = yes
 	}
-	potential_crossbreeding_chance = 0.5
 	initial = no
 	randomized = no
 	advanced_trait = yes
@@ -165,7 +160,6 @@ trait_robust = {
 	species_possible_merge_remove = {
 		always = yes
 	}
-	potential_crossbreeding_chance = 0.5
 	initial = no
 	randomized = no
 	advanced_trait = yes
@@ -173,7 +167,7 @@ trait_robust = {
 	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		pop_environment_tolerance = 0.30
-		planet_jobs_produces_mult = 0.05
+		pop_bonus_workforce_mult = 0.05
 		leader_lifespan_add = 50
 	}
 	slave_cost = {
@@ -197,7 +191,6 @@ trait_erudite = {
 	species_possible_merge_remove = {
 		always = yes
 	}
-	potential_crossbreeding_chance = 0.5
 	initial = no
 	randomized = no
 	improves_leaders = yes
@@ -205,9 +198,12 @@ trait_erudite = {
 	opposites = { "trait_nerve_stapled" "trait_intelligent" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		planet_jobs_physics_research_produces_mult = 0.2
-		planet_jobs_society_research_produces_mult = 0.2
-		planet_jobs_engineering_research_produces_mult = 0.2
+		pop_physicist_bonus_workforce_mult = 0.2
+		pop_biologist_bonus_workforce_mult = 0.2
+		pop_engineer_bonus_workforce_mult = 0.2
+		pop_brain_drone_physicist_bonus_workforce_mult = 0.2
+		pop_brain_drone_biologist_bonus_workforce_mult = 0.2
+		pop_brain_drone_engineer_bonus_workforce_mult = 0.2
 		negative_leader_traits_species = -1
 		leaders_upkeep_mult = -0.1
 	}
@@ -242,13 +238,23 @@ trait_advanced_scintillating = {
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
 	}
-	potential_crossbreeding_chance = 1.0
 	initial = no
 	randomized = no
 	advanced_trait = yes
 	opposites = { "trait_lithoid_gaseous_byproducts" "trait_lithoid_scintillating" "trait_lithoid_volatile_excretions" "trait_advanced_volatile_excretions" "trait_advanced_gaseous_byproducts" "trait_drake_scaled" }
 	allowed_archetypes = { BIOLOGICAL }
 	custom_tooltip = TRAIT_LITHOID_SCINTILLATING_EFFECT
+
+	resources = {
+		category = planet_pops
+		produces = {
+			trigger = {
+				is_slave_or_better = yes
+			}
+			rare_crystals = @lithoid_trait_resource_production
+			multiplier = value:lithoid_trait_mult
+		}
+	}
 
 	slave_cost = {
 		energy = 1000
@@ -268,13 +274,23 @@ trait_advanced_gaseous_byproducts = {
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
 	}
-	potential_crossbreeding_chance = 1.0
 	initial = no
 	randomized = no
 	advanced_trait = yes
 	opposites = { "trait_lithoid_gaseous_byproducts" "trait_lithoid_scintillating" "trait_lithoid_volatile_excretions" "trait_advanced_volatile_excretions" "trait_advanced_scintillating" "trait_drake_scaled" }
 	allowed_archetypes = { BIOLOGICAL }
 	custom_tooltip = TRAIT_LITHOID_GASEOUS_BYPRODUCTS_EFFECT
+
+	resources = {
+		category = planet_pops
+		produces = {
+			trigger = {
+				is_slave_or_better = yes
+			}
+			exotic_gases = @lithoid_trait_resource_production
+			multiplier = value:lithoid_trait_mult
+		}
+	}
 
 	slave_cost = {
 		energy = 1000
@@ -294,13 +310,23 @@ trait_advanced_volatile_excretions = {
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
 	}
-	potential_crossbreeding_chance = 1.0
 	initial = no
 	randomized = no
 	advanced_trait = yes
 	opposites = { "trait_lithoid_gaseous_byproducts" "trait_lithoid_scintillating" "trait_lithoid_volatile_excretions" "trait_advanced_gaseous_byproducts" "trait_advanced_scintillating" "trait_drake_scaled" }
 	allowed_archetypes = { BIOLOGICAL }
 	custom_tooltip = TRAIT_LITHOID_VOLATILE_EXCRETIONS_EFFECT
+
+	resources = {
+		category = planet_pops
+		produces = {
+			trigger = {
+				is_slave_or_better = yes
+			}
+			volatile_motes = @lithoid_trait_resource_production
+			multiplier = value:lithoid_trait_mult
+		}
+	}
 
 	slave_cost = {
 		energy = 1000
@@ -321,7 +347,6 @@ trait_advanced_phototrophic = {
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
 	}
-	potential_crossbreeding_chance = 1.0
 	initial = no
 	randomized = no
 	advanced_trait = yes
@@ -352,7 +377,6 @@ trait_advanced_radiotrophic = {
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
 	}
-	potential_crossbreeding_chance = 1.0
 	initial = no
 	randomized = no
 	advanced_trait = yes
@@ -377,7 +401,6 @@ trait_advanced_budding = {
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
 	}
-	potential_crossbreeding_chance = 0.5
 	initial = no
 	randomized = no
 	advanced_trait = yes
@@ -403,7 +426,6 @@ trait_vat_grown = {
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
 	}
-	potential_crossbreeding_chance = 0
 	initial = no
 	randomized = no
 	advanced_trait = yes
@@ -427,14 +449,13 @@ trait_felsic = {
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
 	}
-	potential_crossbreeding_chance = 0.5
 	initial = no
 	randomized = no
 	advanced_trait = yes
 	allowed_archetypes = { LITHOID }
 
 	modifier = {
-		planet_livestock_minerals_produces_add = 2
+		pop_livestock_lithoid_bonus_workforce_add = 2
 	}
 	slave_cost = {
 		energy = 1000
@@ -449,15 +470,16 @@ trait_natural_machinist = {
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
 	}
-	potential_crossbreeding_chance = 0.5
 	initial = no
 	randomized = no
 	advanced_trait = yes
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 	modifier = {
-		planet_jobs_alloys_produces_mult = 0.10
-		planet_jobs_consumer_goods_produces_mult = 0.10
+		pop_foundry_bonus_workforce_mult = 0.10
+		pop_alloy_drone_bonus_workforce_mult = 0.10
+		pop_artisan_bonus_workforce_mult = 0.10
+		pop_artisan_drone_bonus_workforce_mult = 0.10
 	}
 	slave_cost = {
 		energy = 2000
@@ -483,7 +505,6 @@ trait_drake_scaled = {
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
 	}
-	potential_crossbreeding_chance = 1.0
 	initial = no
 	randomized = no
 	advanced_trait = yes
@@ -494,6 +515,16 @@ trait_drake_scaled = {
 
 	modifier = {
 		army_health = 0.5
+	}
+
+	resources = {
+		category = planet_pops
+		produces = {
+			trigger = {
+				is_slave_or_better = yes
+			}
+			alloys = @drake_scaled_trait_resource_production
+		}
 	}
 
 	slave_cost = {
@@ -514,7 +545,6 @@ trait_voidling = {
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
 	}
-	potential_crossbreeding_chance = 1.0
 	initial = no
 	randomized = no
 	advanced_trait = yes
@@ -543,7 +573,6 @@ trait_tiyanki = {
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
 	}
-	potential_crossbreeding_chance = 1.0
 	initial = no
 	randomized = no
 	advanced_trait = yes

@@ -296,30 +296,6 @@ defined_text = {
 }
 
 defined_text = {
-	name = GetPopIsAre
-	text = {
-		trigger = {
-			check_variable = {
-				which = "synth_opposition"
-				value = 1
-			}
-		}
-		localization_key = pop_is
-	}
-	text = {
-		trigger = {
-			NOT = {
-				check_variable = {
-					which = "synth_opposition"
-					value = 1
-				}
-			}
-		}
-		localization_key = pops_are
-	}
-}
-
-defined_text = {
 	name = GetNumSynthOpposition
 	value = value:num_synth_opposition
 }

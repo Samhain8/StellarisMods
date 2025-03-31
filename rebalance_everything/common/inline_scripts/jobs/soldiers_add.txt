@@ -1,0 +1,32 @@
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = no }
+	}
+	job_soldier_add = $AMOUNT$
+}
+
+
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	job_warrior_drone_add = $AMOUNT$
+}
+
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	text = job_warrior_drone_effect_desc
+}
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_gestalt = no }
+	}
+	text = job_soldier_effect_desc
+}

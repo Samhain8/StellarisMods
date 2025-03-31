@@ -351,6 +351,11 @@ country_event = {
 			country_event = { id = crisis.1008 }
 		}
 	}
+	after = {
+		every_playable_country = {
+			country_event = { id = timeline.67 } # Timeline Unbidden Crisis
+		}
+	}
 }
 
 # Fleet Reinforcements
@@ -877,9 +882,6 @@ planet_event = {
 
 	immediate = {
 		add_threat = { who = from amount = 2 }
-		every_owned_pop = {
-			kill_pop = yes
-		}
 		destroy_colony = yes
 		if = {
 			limit = {

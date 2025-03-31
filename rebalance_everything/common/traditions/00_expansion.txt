@@ -34,7 +34,7 @@ tr_expansion_finish = {
 
 tr_expansion_colonization_fever = {
 	modifier = {
-		colony_start_num_pops_add = 1
+		#colony_start_num_pops_add = 1 # TODO: [AUG-48551] This modifier has been removed
 	}
 	custom_tooltip = tr_expansion_colonization_fever_desc
 

@@ -36,7 +36,8 @@ trait_presapient_earthbound = {
 	}
 	allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
 	modifier = {
-		planet_jobs_energy_produces_mult = 0.1
+		pop_technician_bonus_workforce_mult = 0.1
+		pop_technician_drone_bonus_workforce_mult = 0.1
 		army_defense_damage_mult = 0.5
 	}
 }
@@ -57,11 +58,19 @@ trait_presapient_natural_intellectuals = {
 	}
 	allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
 	modifier = {
-		planet_jobs_unity_produces_mult = 0.05
-		planet_jobs_physics_research_produces_mult = 0.1
-		planet_jobs_society_research_produces_mult = 0.1
-		planet_jobs_engineering_research_produces_mult = 0.1
-		planet_jobs_minerals_produces_mult = -0.1
+		pop_bureaucrat_bonus_workforce_mult = 0.05
+		pop_coordinator_bonus_workforce_mult = 0.05
+		pop_physicist_bonus_workforce_mult = 0.1
+		pop_biologist_bonus_workforce_mult = 0.1
+		pop_engineer_bonus_workforce_mult = 0.1
+		pop_brain_drone_physicist_bonus_workforce_mult = 0.1
+		pop_brain_drone_biologist_bonus_workforce_mult = 0.1
+		pop_calculator_engineer_bonus_workforce_mult = 0.1
+		pop_calculator_physicist_bonus_workforce_mult = 0.1
+		pop_calculator_biologist_bonus_workforce_mult = 0.1
+		pop_calculator_engineer_bonus_workforce_mult = 0.1
+		pop_miner_bonus_workforce_Mult = -0.1
+		pop_mining_drone_bonus_workforce_Mult = -0.1
 	}
 }
 
@@ -82,11 +91,19 @@ trait_presapient_proles = {
 	allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
 	modifier = {
 		army_damage_mult = 0.10
-		planet_jobs_minerals_produces_mult = 0.10
-		planet_jobs_food_produces_mult = 0.10
-		planet_jobs_physics_research_produces_mult = -0.15
-		planet_jobs_society_research_produces_mult = -0.15
-		planet_jobs_engineering_research_produces_mult = -0.15
+		pop_miner_bonus_workforce_mult = 0.10
+		pop_mining_drone_bonus_workforce_mult = 0.10
+		pop_farmer_bonus_workforce_mult = 0.10
+		pop_agri_drone_bonus_workforce_mult = 0.10
+		pop_physicist_bonus_workforce_mult = -0.15
+		pop_biologist_bonus_workforce_mult = -0.15
+		pop_engineer_bonus_workforce_mult = -0.15
+		pop_brain_drone_physicist_bonus_workforce_mult = -0.15
+		pop_brain_drone_biologist_bonus_workforce_mult = -0.15
+		pop_calculator_engineer_bonus_workforce_mult = -0.15
+		pop_calculator_physicist_bonus_workforce_mult = -0.15
+		pop_calculator_biologist_bonus_workforce_mult = -0.15
+		pop_calculator_engineer_bonus_workforce_mult = -0.15
 	}
 }
 
@@ -150,11 +167,19 @@ trait_presapient_docile_livestock = {
 	allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
 	modifier = {
 		pop_growth_speed = 0.3
-		planet_jobs_unity_produces_mult = 0.1
-		planet_jobs_energy_produces_mult = -0.5
-		planet_jobs_physics_research_produces_mult = -0.75
-		planet_jobs_society_research_produces_mult = -0.75
-		planet_jobs_engineering_research_produces_mult = -0.75
+		pop_bureaucrat_bonus_workforce_Mult = 0.1
+		pop_coordinator_bonus_workforce_Mult = 0.1
+		pop_technician_bonus_workforce_mult = -0.5
+		pop_technician_drone_bonus_workforce_mult = -0.5
+		pop_physicist_bonus_workforce_mult = -0.75
+		pop_biologist_bonus_workforce_mult = -0.75
+		pop_engineer_bonus_workforce_mult = -0.75
+		pop_brain_drone_physicist_bonus_workforce_mult = -0.75
+		pop_brain_drone_biologist_bonus_workforce_mult = -0.75
+		pop_calculator_engineer_bonus_workforce_mult = -0.75
+		pop_calculator_physicist_bonus_workforce_mult = -0.75
+		pop_calculator_biologist_bonus_workforce_mult = -0.75
+		pop_calculator_engineer_bonus_workforce_mult = -0.75
 	}
 }
 
@@ -175,7 +200,7 @@ trait_presapient_forcefully_devolved = {
 	allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
 	modifier = {
 		army_damage_mult = -0.10
-		planet_jobs_produces_mult = -0.1
+		pop_bonus_workforce_mult = -0.1
 		pop_growth_speed = -0.1
 		species_leader_exp_gain = -0.20
 	}
@@ -201,9 +226,16 @@ trait_presapient_unintelligent = {
 	allowed_archetypes = { BIOLOGICAL PRESAPIENT LITHOID }
 	modifier = {
 		pop_growth_speed = 0.2
-		planet_jobs_energy_produces_mult = -1
-		planet_jobs_physics_research_produces_mult = -1
-		planet_jobs_society_research_produces_mult = -1
-		planet_jobs_engineering_research_produces_mult = -1
+		pop_technician_bonus_workforce_mult = -1
+		pop_technician_drone_bonus_workforce_mult = -1
+		pop_physicist_bonus_workforce_mult = -1
+		pop_biologist_bonus_workforce_mult = -1
+		pop_engineer_bonus_workforce_mult = -1
+		pop_brain_drone_physicist_bonus_workforce_mult = -1
+		pop_brain_drone_biologist_bonus_workforce_mult = -1
+		pop_calculator_engineer_bonus_workforce_mult = -1
+		pop_calculator_physicist_bonus_workforce_mult = -1
+		pop_calculator_biologist_bonus_workforce_mult = -1
+		pop_calculator_engineer_bonus_workforce_mult = -1
 	}
 }

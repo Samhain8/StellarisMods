@@ -13,7 +13,7 @@
  origin_necrophage:0 "Necrophage"
  origin_necrophage_desc:1 "This civilization evolved as a parasite, forced to feed off other sapient life forms to sustain itself. As it arrives on the galactic stage, other species will either be brought into the fold, or become its food. For the necrophage, there can be no other way."
  origin_tooltip_necrophage_effects:3 "- $HOMEWORLD$ ['concept_necrophage_elevation_chamber'] $NEW_LINE$- $SPECIES_TRAITS$ ['concept_necrophage_trait'] $NEW_LINE$- Prepatent £pop£ §IPops§!: 12 $NEW_LINE$- ['concept_guaranteed_colonies']: Replaced with ['concept_preftl_civilizations']"
- origin_tooltip_necrophage_negative_effects: "- Only §INecrophage $pops_with_icon$§! can be £pop_cat_ruler£ §IRulers§! or recruited as §ILeaders§!"
+ origin_tooltip_necrophage_negative_effects: "- Only £pop£ §INecrophage Pops§! can be £pop_cat_ruler£ §IRulers§! or recruited as §ILeaders§!"
 
  civic_necrophage_secondary_species:0 "Prepatent Species"
  trait_necrophage:0 "Necrophage"
@@ -48,7 +48,7 @@
  opinion_necrophage_our_species:0 "Necrophaged our Species"
  disables_necrophage_features:0 "§RChoosing this Ascension Perk will disable Necrophage mechanics.§!"
  MESSAGE_NECROPHAGE_POPS_NECROPHAGED_TITLE:0 "Pops Necrophaged"
- MESSAGE_NECROPHAGE_POPS_NECROPHAGED:1 "We have converted $VALUE|Y$ £pops£ Pops to our species in an Elevation Ceremony on $PLANET|Y$."
+ MESSAGE_NECROPHAGE_POPS_NECROPHAGED:1 "We have converted $VALUE|Y$ £pop£ §HPops§! to our species in an Elevation Ceremony on $PLANET|Y$."
 
  START_SCREEN_NECROPHAGE_BASE:0 "In the not-so-distant past, [GetHomeWorldName] was dominated by a fairly unremarkable species. To all onlookers, they would have seemed to be following a standard meandering course of development, with occasionally rapid periods of innovation interspersed with much longer periods of seemingly insurmountable setbacks. However, unbeknownst to them, their planet was home to a second intelligent species: us.\n\nFor millennia, we - the [GetSpeciesNamePlural] - remained undetected by the planet's proprietors. Little more than vague rumors of terrors in the night, we were a fairytale told only to scare misbehaving juveniles. But they were wrong to discount us.\n\nAs their rate of technological progress quickened, so too did our infiltration of their society."
  START_SCREEN_NECROPHAGE:1 "$START_SCREEN_NECROPHAGE_BASE$ When their fall came, it was swift and bloody. We ruthlessly took control of the planet - our precursors reduced to subservience and gradual absorption into the [GetSpeciesName] race.\n\nNow armed with the recently-discovered secret of FTL travel, we are ready to take to the stars and remake all species of the galaxy in our likeness!"
@@ -274,7 +274,7 @@
  job_reassigner:0 "Reassigner"
  job_reassigner_desc:0 "Reassigners ensure that once a Megacorporation's citizen has passed on, their remains will stay at work until the fulfillment of their contract."
  job_reassigner_plural:0 "Reassigners"
- job_reassigner_effect_desc:0 "£job_necromancer£ $job_reassigner_plural$ turn £consumer_goods£ §Y$consumer_goods$§! and either £food£ §Y$food$§! or £minerals£ §Y$minerals$§! into £mod_pop_growth_speed£ §Y$MOD_PLANET_POP_ASSEMBLY_ORGANIC_ADD$§!. All assembled £pop£  pops will have the §YZombie§! trait."
+ job_reassigner_effect_desc:0 "£job_necromancer£ $job_reassigner_plural$ turn £consumer_goods£ §Y$consumer_goods$§! and either £food£ §Y$food$§! or £minerals£ §Y$minerals$§! into £mod_pop_growth_speed£ §Y$MOD_PLANET_POP_ASSEMBLY_ORGANIC_ADD$§!. All assembled £pop£ Pops have the §Y$trait_zombie$§! trait."
  planet_reassigners:0 "Reassigner Jobs"
  mod_job_reassigner_add:0 "$job_reassigner$ Jobs"
  trait_zombie:0 "Zombie"
@@ -297,7 +297,7 @@
  ### Cordypectic Drones by Victor Haeggman
  civic_hive_cordyceptic_drones:0 "Cordyceptic Drones"
  civic_hive_cordyceptic_drones_desc:0 "Highly specialized drones capable of infecting simple hosts and issuing rudimentary commands make up the backbone of this hive's stellar defense."
- civic_tooltip_cordyceptic_drones:0 "- Start the game with §G3§! §HReanimated Amoebas§!.\n- Defeated organic Space Fauna are automatically reanimated.\n- Defeated organic Leviathans can sometimes be resurrected.\n- $reanimator_effect_desc$\n- Gain $c_dna$ from killing Space Fauna.\n"
+ civic_tooltip_cordyceptic_drones:0 "- Start the game with §G3§! §HReanimated Amoebas§!.\n- Defeated organic Space Fauna are automatically reanimated.\n- Defeated organic Leviathans can sometimes be resurrected.\n- $reanimator_effect_desc$\n- Gain £genetic_material£ ['concept_dna'] from killing Space Fauna.\n"
 
  MESSAGE_REANIMATION_COMPLETE_TITLE:0 "Reanimation Complete"
  MESSAGE_REANIMATION_COMPLETE_TIYANKI_DESC:0 "A new batch of reanimated Tiyanki is ready for us in $SYSTEM|Y$. The next lot is already underway."
@@ -322,6 +322,8 @@
  count_galaxy_species_trigger:0 "Number of Species in the Galaxy$CONDITIONS$ $IS_NOT$ $COMPARATOR$ $NUM|Y$"
  count_galaxy_species_all_trigger:0 "$IS_ALL_NOT$ Species in the Galaxy fulfill the following conditions"
  count_owned_pop_trigger:0 "Number of Owned Pops$CONDITIONS$ $IS_NOT$ $COMPARATOR$ $NUM|Y$"
+ count_owned_pop_amount_trigger: "Number of Owned Pops$CONDITIONS$ $IS_NOT$ $COMPARATOR$ $NUM|Y$"
+ count_owned_pop_group_trigger: "Number of Owned Pop Groups $CONDITIONS$ $IS_NOT$ $COMPARATOR$ $NUM|Y$"
  count_owned_pop_all_trigger:0 "$IS_ALL_NOT$ Owned Pops fulfill the following conditions"
  HAS_NUM_ASSIGNED_JOBS:0 "Number of $JOB_PLURAL$ is $COMPARE$ $VALUE|Y$"
  HAS_NOT_NUM_ASSIGNED_JOBS:0 "Number of $JOB_PLURAL$ is NOT $COMPARE$ $VALUE|Y$"

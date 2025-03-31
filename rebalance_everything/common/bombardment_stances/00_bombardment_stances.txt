@@ -189,13 +189,13 @@ pox = {
 
 	kill_pop_chance = { # Should only target organics
 		base = 1.5
-		modifier = {
-			factor = 0
-			OR = {
-				pop_has_trait = trait_machine_unit
-				pop_has_trait = trait_mechanical
-			}
-		}
+		# modifier = { # Jonas
+		# 	factor = 0
+		# 	OR = {
+		# 		pop_group_has_trait = trait_machine_unit
+		# 		pop_group_has_trait = trait_mechanical
+		# 	}
+		# }
 	}
 	min_pops_to_kill_pop = 0
 
@@ -257,7 +257,7 @@ raiding = {
 			exists = from
 			from = {
 				OR = {
-					num_pops < 2
+					pop_amount < 200
 					owner = { NOT = { is_hostile = root.owner } }
 				}
 			}

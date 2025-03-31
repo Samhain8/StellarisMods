@@ -1,0 +1,8 @@
+include = {
+	building_stronghold
+	building_fortress
+	building_military_academy
+	building_planetary_shield_generator
+	building_dread_encampment
+	building_automation_1
+}

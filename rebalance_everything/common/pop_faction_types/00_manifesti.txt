@@ -66,7 +66,7 @@ manifesti = {
 		is_shackled_robot = no
 		can_think = yes
 		NOT = {
-			has_pop_flag = manifesti_bored
+			has_pop_group_flag = manifesti_bored
 		}
 	}
 
@@ -307,7 +307,7 @@ manifesti = {
 	}
 
 	on_create = {
-		pop_faction_event = { id = factions.1 }
+		pop_faction_event = { id = factions.0 }
 		owner = { country_event = { id = manifesti.30 days = 940 } }
 	}
 
@@ -361,6 +361,7 @@ manifesti = {
 
 			effect = {
 				add_modifier = { modifier = embraced_faction days = 3600 }
+				owner = { set_country_flag = has_embraced_faction }
 				parameter:empire = {
 					shift_ethic = ethic_egalitarian
 					hidden_effect = {
@@ -429,6 +430,7 @@ manifesti = {
 			}
 
 			effect = {
+				owner = { set_country_flag = has_promoted_faction }
 				parameter:empire = {
 					add_modifier = { modifier = promoted_egalitarian days = -1 }
 				}

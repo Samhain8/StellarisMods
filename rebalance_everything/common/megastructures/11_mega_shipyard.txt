@@ -280,6 +280,7 @@ mega_shipyard_3 = {
 		from = {
 			set_country_flag = has_built_or_repaired_megastructure
 			country_event = { id = feda.3 }
+			country_event = { id = focus.665 }
 		}
 	}
 }
@@ -373,6 +374,7 @@ mega_shipyard_restored = {
 		from = {
 			set_country_flag = has_built_or_repaired_megastructure
 			country_event = { id = feda.6 }
+			country_event = { id = focus.665 }
 		}
 	}
 }

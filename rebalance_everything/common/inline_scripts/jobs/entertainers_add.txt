@@ -5,9 +5,7 @@ triggered_planet_modifier = {
 			NOT = { has_valid_civic = civic_warrior_culture }
 		}
 	}
-	modifier = {
-		job_entertainer_add = $AMOUNT$
-	}
+	job_entertainer_add = $AMOUNT$
 }
 triggered_desc = {
 	trigger = {
@@ -26,9 +24,7 @@ triggered_planet_modifier = {
 			has_valid_civic = civic_warrior_culture
 		}
 	}
-	modifier = {
-		job_duelist_add = $AMOUNT$
-	}
+	job_duelist_add = $AMOUNT$
 }
 triggered_desc = {
 	trigger = {

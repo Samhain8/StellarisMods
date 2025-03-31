@@ -84,7 +84,7 @@ country_event = {
 
 			# Figure out Clone Army Population (only OWN species are compatible, not imported ones)
 			set_variable = { which = num_clone_pops value = 0 }
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
 					owner_main_species = { is_same_species = prev }
 					OR = {
@@ -495,7 +495,7 @@ country_event = {
 									is_same_value = prevprev
 								}
 							}
-							any_species_pop = {
+							any_species_pop_group = {
 								NOT = { is_owned_by = root }
 							}
 						}
@@ -566,36 +566,9 @@ country_event = {
 	option = {
 		name = EXCELLENT
 		hidden_effect = {
-			modify_species = {
-				remove_trait = trait_clone_soldier_infertile
-				add_trait = trait_clone_soldier_infertile_full_potential
-				add_traits_at_start_of_list = yes
-				effect = {
-					root = {
-						change_dominant_species = {
-							species = prev
-						}
-					}
-				}
-			}
-			owner_main_species = {
-				every_galaxy_species = {
-					limit = {
-						is_same_species = prev
-						NOT = { is_same_value = prev }
-						has_trait = trait_clone_soldier_infertile
-						NOR = {
-							any_country = {
-								NOT = { is_same_value = root }
-								owner_main_species = {
-									is_same_value = prevprev
-								}
-							}
-							any_species_pop = {
-								NOT = { is_owned_by = root }
-							}
-						}
-					}
+			every_owned_pop_group = {
+				limit = { has_trait = trait_clone_soldier_infertile }
+				species = {
 					change_species_characteristics = {
 						remove_trait = trait_clone_soldier_infertile
 						add_trait = trait_clone_soldier_infertile_full_potential
@@ -690,7 +663,7 @@ planet_event = {
 	trigger = {
 		is_variable_set = clone_pops_missing
 		OR = {
-			num_pops = 0
+			pop_amount = 0
 			AND = {
 				exists = from
 				NOT = { is_owned_by = from }

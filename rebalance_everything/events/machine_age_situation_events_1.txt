@@ -1077,7 +1077,7 @@ situation_event = { # Traditionalists are Cybernetic Objectors
 			limit = {
 				owner = {
 					NOR = {
-						any_owned_pop = { has_ethic = ethic_spiritualist }
+						any_owned_pop_group = { has_ethic = ethic_spiritualist }
 						any_owned_leader = { has_ethic = ethic_spiritualist }
 					}
 				}
@@ -1395,7 +1395,7 @@ situation_event = { # Stage 3 Challenge
 		trigger = {
 			owner = {
 				OR = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						has_citizenship_type = {
 							country = owner
 							type = citizenship_slavery
@@ -1854,7 +1854,7 @@ situation_event = { # Cyberization - Final hidden event - Full
 			limit = {
 				owner = {
 					NOR = {
-						any_owned_pop = { has_ethic = ethic_spiritualist }
+						any_owned_pop_group = { has_ethic = ethic_spiritualist }
 						any_owned_leader = { has_ethic = ethic_spiritualist }
 					}
 				}
@@ -2027,7 +2027,7 @@ situation_event = { # Event to cyberize pops except Spiritualists
 
 	immediate = {
 		owner = {
-			random_owned_pop = {
+			weighted_random_owned_pop_group = {
 				limit = {
 					is_same_species = owner.species
 					is_spiritualist = no
@@ -2053,7 +2053,7 @@ situation_event = { # Event to cyberize pops except Spiritualists
 						has_situation_flag = cyberization_final
 					}
 				}
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = {
 						is_same_species = owner.species
 						NOR = {
@@ -2067,7 +2067,7 @@ situation_event = { # Event to cyberize pops except Spiritualists
 			else = {
 				while = {
 					limit = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							exists = event_target:cyberspecies@species
 							exists = event_target:changing_species
 							is_exact_same_species = event_target:changing_species
@@ -2079,7 +2079,7 @@ situation_event = { # Event to cyberize pops except Spiritualists
 						}
 					}
 					count = value:pop_to_cyberize_per_month
-					random_owned_pop = {
+					weighted_random_owned_pop_group = {
 						limit = {
 							is_exact_same_species = event_target:changing_species
 							is_spiritualist = no
@@ -2101,7 +2101,7 @@ situation_event = { # Event to cyberize pops except Spiritualists
 			limit = {
 				NOT = {
 					owner = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							is_same_species = owner.species
 							is_spiritualist = no
 							NOR = {
@@ -2149,7 +2149,7 @@ situation_event = { # Event to minimally cyberize spiritualist pops
 
 	immediate = {
 		owner = {
-			random_owned_pop = {
+			weighted_random_owned_pop_group = {
 				limit = {
 					is_same_species = owner.species
 					is_spiritualist = yes
@@ -2175,7 +2175,7 @@ situation_event = { # Event to minimally cyberize spiritualist pops
 						has_situation_flag = cyberization_final
 					}
 				}
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = {
 						is_same_species = owner.species
 						NOR = {
@@ -2189,7 +2189,7 @@ situation_event = { # Event to minimally cyberize spiritualist pops
 			else = {
 				while = {
 					limit = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							exists = event_target:cyberspecies@species
 							is_exact_same_species = event_target:changing_species
 							NOR = {
@@ -2199,7 +2199,7 @@ situation_event = { # Event to minimally cyberize spiritualist pops
 						}
 					}
 					count = value:pop_to_cyberize_per_month
-					random_owned_pop = {
+					weighted_random_owned_pop_group = {
 						limit = {
 							is_exact_same_species = event_target:changing_species
 							NOR = {
@@ -2227,7 +2227,7 @@ situation_event = { # Event to minimally cyberize spiritualist pops
 			limit = {
 				NOT = {
 					owner = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							is_same_species = owner.species
 							is_spiritualist = yes
 							NOR = {
@@ -2258,7 +2258,7 @@ situation_event = { # Event to force cyberize spiritualist pops
 
 	immediate = {
 		owner = {
-			random_owned_pop = {
+			weighted_random_owned_pop_group = {
 				limit = {
 					is_same_species = owner.species
 					is_spiritualist = yes
@@ -2284,7 +2284,7 @@ situation_event = { # Event to force cyberize spiritualist pops
 						has_situation_flag = cyberization_final
 					}
 				}
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = {
 						is_same_species = owner.species
 						NOR = {
@@ -2298,7 +2298,7 @@ situation_event = { # Event to force cyberize spiritualist pops
 			else = {
 				while = {
 					limit = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							exists = event_target:cyberspecies@species
 							is_exact_same_species = event_target:changing_species
 							NOR = {
@@ -2308,7 +2308,7 @@ situation_event = { # Event to force cyberize spiritualist pops
 						}
 					}
 					count = value:pop_to_cyberize_per_month
-					random_owned_pop = {
+					weighted_random_owned_pop_group = {
 						limit = {
 							is_exact_same_species = event_target:changing_species
 							NOR = {
@@ -2330,7 +2330,7 @@ situation_event = { # Event to force cyberize spiritualist pops
 			limit = {
 				NOT = {
 					owner = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							is_same_species = owner.species
 							is_spiritualist = yes
 							NOR = {
@@ -2385,44 +2385,44 @@ planet_event = {
 # Fired when a Pop has a change in their ethics
 #This = Pop
 #From = Planet Owner
-pop_event = {
-	id = cyber.8
-	hide_window = yes
-	is_triggered_only = yes
+# pop_event = { # AUG-50332 and also Jonas
+# 	id = cyber.8
+# 	hide_window = yes
+# 	is_triggered_only = yes
 
-	trigger = {
-		from = {
-			has_policy_flag = cyberization_standards_limited
-		}
-	}
+# 	trigger = {
+# 		from = {
+# 			has_policy_flag = cyberization_standards_limited
+# 		}
+# 	}
 
-	immediate = {
-		if = {
-			limit = {
-				has_ethic = ethic_spiritualist
-				has_trait = trait_cybernetic
-			}
-			modify_species = {
-				species = this
-				remove_trait = trait_cybernetic
-				add_trait = trait_limited_cybernetic
-				add_traits_at_start_of_list = yes
-			}
-		}
-		else_if = {
-			limit = {
-				NOT = { has_ethic = ethic_spiritualist }
-				has_trait = trait_limited_cybernetic
-			}
-			modify_species = {
-				species = this
-				remove_trait = trait_limited_cybernetic
-				add_trait = trait_cybernetic
-				add_traits_at_start_of_list = yes
-			}
-		}
-	}
-}
+# 	immediate = {
+# 		if = {
+# 			limit = {
+# 				has_ethic = ethic_spiritualist
+# 				has_trait = trait_cybernetic
+# 			}
+# 			modify_species = {
+# 				species = this
+# 				remove_trait = trait_cybernetic
+# 				add_trait = trait_limited_cybernetic
+# 				add_traits_at_start_of_list = yes
+# 			}
+# 		}
+# 		else_if = {
+# 			limit = {
+# 				NOT = { has_ethic = ethic_spiritualist }
+# 				has_trait = trait_limited_cybernetic
+# 			}
+# 			modify_species = {
+# 				species = this
+# 				remove_trait = trait_limited_cybernetic
+# 				add_trait = trait_cybernetic
+# 				add_traits_at_start_of_list = yes
+# 			}
+# 		}
+# 	}
+# }
 
 # Fired by: on_added_to_leader_pool
 # A leader is added to the leader pool, available for recruitment
@@ -2468,13 +2468,13 @@ situation_event = { # Hive Cyberization - Event to minimally cyberize some non-c
 					NOT = { exists = event_target:cyberspecies@root.owner }
 				}
 
-				random_owned_pop = {
+				weighted_random_owned_pop_group = {
 					limit = {
 						is_same_species = owner.species
 						NOR = {
 							has_trait = trait_cybernetic
 							has_trait = trait_limited_cybernetic
-							has_pop_flag = cyber_hive_defective_pop
+							has_pop_group_flag = cyber_hive_defective_pop
 						}
 					}
 					species = {
@@ -2535,7 +2535,7 @@ situation_event = { # Hive Cyberization - Event to minimally cyberize some non-c
 						has_situation_flag = cyberization_final
 					}
 				}
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = {
 						is_same_species = owner.species
 						NOR = {
@@ -2545,7 +2545,7 @@ situation_event = { # Hive Cyberization - Event to minimally cyberize some non-c
 					}
 					if = {
 						limit = {
-							has_pop_flag = cyber_hive_defective_pop
+							has_pop_group_flag = cyber_hive_defective_pop
 						}
 						change_species = event_target:limited_cyberspecies@root.owner
 					}
@@ -2557,7 +2557,7 @@ situation_event = { # Hive Cyberization - Event to minimally cyberize some non-c
 			else = {
 				while = {
 					limit = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							exists = event_target:cyberspecies@root.owner
 							is_same_species = owner.species
 							NOR = {
@@ -2567,7 +2567,7 @@ situation_event = { # Hive Cyberization - Event to minimally cyberize some non-c
 						}
 					}
 					count = value:pop_to_cyberize_per_month
-					random_owned_pop = {
+					weighted_random_owned_pop_group = {
 						limit = {
 							is_same_species = owner.species
 							NOR = {
@@ -2577,7 +2577,7 @@ situation_event = { # Hive Cyberization - Event to minimally cyberize some non-c
 						}
 						if = {
 							limit = {
-								has_pop_flag = cyber_hive_defective_pop
+								has_pop_group_flag = cyber_hive_defective_pop
 							}
 							change_species = event_target:limited_cyberspecies@root.owner
 						}
@@ -2690,7 +2690,7 @@ situation_event = { # Hive Cyberization - Event to minimally cyberize some non-c
 				NOT = {
 					owner = {
 						exists = event_target:cyberspecies@root.owner
-						any_owned_pop = {
+						any_owned_pop_group = {
 							is_same_species = owner.species
 							NOR = {
 								has_trait = trait_cybernetic
@@ -4070,11 +4070,13 @@ country_event = {
 				resource = energy
 				value >= 300
 				mult = value:ten_percent_main_species
+				mult = 0.01 # Compensate for 100 pops
 			}
 		}
 		add_resource = {
 			energy = -300
 			mult = value:ten_percent_main_species
+			mult = 0.01 # Compensate for 100 pops
 		}
 		hidden_effect = {
 			change_variable = {
@@ -4283,16 +4285,14 @@ country_event = {
 			save_event_target_as = warmer_planet
 		}
 		event_target:cold_planet = {
-			while = {
-				count = value:twenty_percent_species
-				random_owned_pop = {
-					limit = {
-						is_same_species = event_target:cold_species
-					}
-					resettle_pop = {
-						pop = this
-						planet = event_target:warmer_planet
-					}
+			every_owned_pop_group = {
+				limit = {
+					is_same_species = event_target:cold_species
+				}
+				resettle_pop_group = {
+					POP_GROUP = this
+					PLANET = event_target:warmer_planet
+					PERCENTAGE = 0.2
 				}
 			}
 		}
@@ -4826,7 +4826,7 @@ country_event = { # For Sale: The Sky, Follow-up
 
 	immediate = {
 		ordered_owned_planet = {
-			order_by = trigger:num_pops
+			order_by = trigger:pop_amount
 			position = 0
 			save_event_target_as = most_populous
 		}
@@ -6661,7 +6661,7 @@ situation_event = { # Stage 2 Challenge
 	trigger = {
 		situation_progress > 250
 		owner = {
-			any_owned_pop = {
+			any_owned_pop_group = {
 				has_trait = trait_hive_mind
 				NOT = { has_trait = trait_cybernetic }
 			}
@@ -6692,13 +6692,13 @@ situation_event = { # Stage 2 Challenge
 		name = "cyber.2260.a"
 		custom_tooltip = "cyber.2260.a.tt"
 		owner = {
-			while = {
-				count = value:five_percent_species
-				random_owned_pop = {
-					limit = {
-						has_trait = trait_hive_mind
-					}
-					kill_pop = yes
+			every_owned_pop_group = {
+				limit = {
+					has_trait = trait_hive_mind
+				}
+				kill_pop_group = {
+					pop_group = this
+					percentage = 0.05
 				}
 			}
 		}
@@ -6725,12 +6725,12 @@ situation_event = { # Stage 2 Challenge
 		owner = {
 			while = {
 				count = value:five_percent_species
-				random_owned_pop = {
+				weighted_random_owned_pop_group = {
 					limit = {
 						NOT = { has_trait = trait_cybernetic }
 						has_trait = trait_hive_mind
 					}
-					set_pop_flag = cyber_hive_defective_pop
+					set_pop_group_flag = cyber_hive_defective_pop
 				}
 			}
 		}

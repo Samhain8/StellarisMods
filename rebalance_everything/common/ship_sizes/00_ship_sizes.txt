@@ -45,7 +45,7 @@ corvette = {
 	max_hitpoints = @corvette_hp
 	modifier = {
 		ship_evasion_add = @corvette_evasion
-		ship_piracy_suppression_add = 10
+		#ship_piracy_suppression_add = 10
 	}
 	size_multiplier = 1
 	fleet_slot_size = 1
@@ -84,6 +84,9 @@ corvette = {
 		upkeep = {
 			energy = @corvette_upkeep_energy
 			alloys = @corvette_upkeep_alloys
+		}
+		logistics = {
+			trade = @corvette_logistic_upkeep_trade
 		}
 	}
 
@@ -133,7 +136,7 @@ frigate = {
 	max_hitpoints = @frigate_hp
 	modifier = {
 		ship_evasion_add = @frigate_evasion
-		ship_piracy_suppression_add = 10
+		#ship_piracy_suppression_add = 10
 	}
 	size_multiplier = 1
 	hull_scale = 1.25
@@ -178,6 +181,10 @@ frigate = {
 			energy = @corvette_upkeep_energy
 			alloys = @corvette_upkeep_alloys
 		}
+
+		logistics = {
+			trade = @frigate_logistic_upkeep_trade
+		}
 	}
 
 	min_upgrade_cost = {
@@ -212,7 +219,7 @@ destroyer = {
 	max_hitpoints = @destroyer_hp
 	modifier = {
 		ship_evasion_add = @destroyer_evasion
-		ship_piracy_suppression_add = 8
+		#ship_piracy_suppression_add = 8
 	}
 	size_multiplier = 2
 	fleet_slot_size = 2
@@ -250,6 +257,9 @@ destroyer = {
 		upkeep = {
 			energy = @destroyer_upkeep_energy
 			alloys = @destroyer_upkeep_alloys
+		}
+		logistics = {
+			trade = @destroyer_logistic_upkeep_trade
 		}
 	}
 	min_upgrade_cost = {
@@ -294,7 +304,7 @@ cruiser = {
 	max_hitpoints = @cruiser_hp
 	modifier = {
 		ship_evasion_add = @cruiser_evasion
-		ship_piracy_suppression_add = 6
+		#ship_piracy_suppression_add = 6
 	}
 	size_multiplier = 4
 	fleet_slot_size = 3
@@ -354,6 +364,9 @@ cruiser = {
 			energy = @cruiser_upkeep_energy
 			alloys = @cruiser_upkeep_alloys
 		}
+		logistics = {
+			trade = @cruiser_logistic_upkeep_trade
+		}
 	}
 
 	min_upgrade_cost = {
@@ -393,7 +406,7 @@ battleship = {
 	max_hitpoints = @battleship_hp
 	modifier = {
 		ship_evasion_add = @battleship_evasion
-		ship_piracy_suppression_add = 4
+		#ship_piracy_suppression_add = 4
 	}
 	size_multiplier = 8
 	fleet_slot_size = 4
@@ -426,6 +439,9 @@ battleship = {
 		upkeep = {
 			energy = @battleship_upkeep_energy
 			alloys = @battleship_upkeep_alloys
+		}
+		logistics = {
+			trade = @battleship_logistic_upkeep_trade
 		}
 	}
 
@@ -557,6 +573,9 @@ titan = {
 		upkeep = {
 			energy = @titan_upkeep_energy
 			alloys = @titan_upkeep_alloys
+		}
+		logistics = {
+			trade = @titan_logistic_upkeep_trade
 		}
 	}
 
@@ -1262,6 +1281,7 @@ transport = {
 	required_component_set = "ftl_components"
 	required_component_set = "thruster_components"
 	required_component_set = "sensor_components"
+	required_component_set = "science_cloaking_components"
 	auto_upgrade = yes
 }
 
@@ -1277,7 +1297,7 @@ military_station_small = {
 	modifier = {
 		ship_evasion_mult = -1
 		ships_upkeep_mult = -0.25
-		ship_piracy_suppression_add = 2
+		#ship_piracy_suppression_add = 2
 	}
 	ship_modifier = {
 		ship_weapon_range_mult = 0.30

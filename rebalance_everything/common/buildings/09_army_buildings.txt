@@ -3,18 +3,16 @@
 #############
 building_military_academy = {
 	base_buildtime = @b2_time
-	empire_limit = {
-		base = 1
-	}
+	base_cap_amount = 1
 	can_be_ruined = no
 	category = army
 
 	potential = {
 		exists = owner
 		owner = { NOT = { has_valid_civic = civic_reanimated_armies } }
-		NOR = { 
-			has_modifier = resort_colony 
-			has_modifier = penal_colony 
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = penal_colony
 		}
 	}
 
@@ -27,30 +25,6 @@ building_military_academy = {
 					has_valid_civic = civic_machine_tactical_algorithms
 				}
 			}
-		}
-	}
-
-	country_modifier = {
-		country_commander_cap_add = 1
-		country_naval_cap_mult = 0.05
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		modifier = {
-			job_politician_add = 1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		modifier = {
-			job_evaluator_add = 2
 		}
 	}
 
@@ -140,10 +114,6 @@ building_dread_encampment = {
 		has_upgraded_capital = yes
 	}
 
-	planet_modifier = {
-		job_necromancer_add = 2
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -152,6 +122,13 @@ building_dread_encampment = {
 		upkeep = {
 			energy = @b1_upkeep
 		}
+	}
+
+	planet_modifier = {
+		planet_physicists_physics_research_produces_add = 3
+		planet_biologists_society_research_produces_add = 3
+		planet_physicists_consumer_goods_upkeep_add = 6
+		planet_biologists_consumer_goods_upkeep_add = 6
 	}
 
 	triggered_desc = {
@@ -165,6 +142,7 @@ building_dread_encampment = {
 building_stronghold = {
 	base_buildtime = 240
 	position_priority = 100
+	base_cap_amount = 1
 	can_be_ruined = no
 	category = army
 	exempt_from_ai_planet_specialization = no
@@ -173,36 +151,8 @@ building_stronghold = {
 		NOT = { has_modifier = resort_colony }
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = no }
-			NOT = { has_modifier = slave_colony }
-		}
-		modifier = {
-			job_soldier_add = @b1_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = no }
-			has_modifier = slave_colony
-		}
-		modifier = {
-			job_battle_thrall_add = @b1_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		modifier = {
-			job_warrior_drone_add = @b1_jobs
-		}
+	planet_modifier = {
+		planet_soldiers_produces_mult = 0.20
 	}
 
 	resources = {
@@ -219,8 +169,9 @@ building_stronghold = {
 		"tech_planetary_defenses"
 	}
 
-	upgrades = {
-		"building_fortress"
+	inline_script = {
+		script = jobs/soldiers_add
+		AMOUNT = @building_static_jobs
 	}
 
 	triggered_desc = {
@@ -239,7 +190,7 @@ building_stronghold = {
 		}
 		text = job_soldier_effect_desc
 	}
-	
+
 	triggered_desc = {
 		trigger = {
 			exists = owner
@@ -252,7 +203,7 @@ building_stronghold = {
 
 building_fortress = {
 	base_buildtime = @b1_time
-	can_build = no
+	base_cap_amount = 1
 	planetary_ftl_inhibitor = yes
 	position_priority = 100
 	can_be_ruined = no
@@ -260,38 +211,6 @@ building_fortress = {
 
 	allow = {
 		has_upgraded_capital = yes
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = no }
-			NOT = { has_modifier = slave_colony }
-		}
-		modifier = {
-			job_soldier_add = @b2_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = no }
-			has_modifier = slave_colony
-		}
-		modifier = {
-			job_battle_thrall_add = @b2_jobs
-		}
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		modifier = {
-			job_warrior_drone_add = @b2_jobs
-		}
 	}
 
 	resources = {
@@ -304,6 +223,10 @@ building_fortress = {
 			energy = 1
 			volatile_motes = @b2_rare_upkeep
 		}
+	}
+
+	planet_modifier = {
+		pop_soldier_bonus_workforce_mult = 0.16
 	}
 
 	prerequisites = {
@@ -326,7 +249,7 @@ building_fortress = {
 		}
 		text = job_soldier_effect_desc
 	}
-	
+
 	triggered_desc = {
 		trigger = {
 			exists = owner

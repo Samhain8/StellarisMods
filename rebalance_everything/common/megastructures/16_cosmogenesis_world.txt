@@ -195,7 +195,7 @@ cosmogenesis_world_0 = {
 
 				set_owner = fromfrom
 				set_controller = fromfrom
-				create_pop = {
+				create_pop_group = {
 					species = owner_main_species
 				}
 				from = {

@@ -1,0 +1,83 @@
+slot_habitat_01 = {
+	inline_script = zones/allowed_zones_habitat_urban
+	unlock = { # planet scope
+		always = yes
+	}
+}
+
+slot_habitat_02 = {
+	inline_script = zones/allowed_zones_habitat_urban
+	unlock = { # planet scope
+		custom_tooltip = {
+			fail_text = zone_unavailable_tech_habitat_2
+			OR = {
+				is_capital = yes
+				AND = {
+					exists = owner
+					owner = {
+						has_technology = tech_habitat_2
+					}
+				}
+			}
+		}
+	}
+}
+
+
+slot_habitat_03 = {
+	inline_script = zones/allowed_zones_habitat_urban
+	unlock = { # planet scope
+		custom_tooltip = {
+			fail_text = zone_unavailable_tech_habitat_3
+			exists = owner
+			owner = {
+				has_technology = tech_habitat_3
+			}
+		}
+	}
+}
+
+slot_habitat_energy = {
+	include = {
+		zone_habitat_energy
+	}
+	unlock = { # planet scope
+		custom_tooltip = {
+			fail_text = zone_unavailable_tech_power_hub_1
+			exists = owner
+			owner = {
+				has_technology = tech_power_hub_1
+			}
+		}
+	}
+}
+
+slot_habitat_minerals = {
+	include = {
+		zone_habitat_minerals
+	}
+	unlock = { # planet scope
+		custom_tooltip = {
+			fail_text = zone_unavailable_tech_mineral_purification_1
+			exists = owner
+			owner = {
+				has_technology = tech_mineral_purification_1
+			}
+		}
+	}
+}
+
+slot_habitat_research = {
+	include = {
+        zone_habitat_research
+    }
+	unlock = { # planet scope
+        custom_tooltip = {
+            fail_text = zone_unavailable_tech_space_science_1
+            exists = owner
+            owner = {
+                has_technology = tech_space_science_1
+            }
+        }
+    }
+}

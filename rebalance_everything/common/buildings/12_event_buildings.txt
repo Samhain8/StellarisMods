@@ -25,9 +25,9 @@ building_junkheap = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 15
-		planet_amenities_add = 20
-		job_ratling_scavenger_add = 10
+		planet_housing_add = 1500
+		planet_amenities_add = 2000
+		job_ratling_scavenger_add = 1000
 	}
 
 	upgrades = {
@@ -115,7 +115,7 @@ building_artist_patron = {
 			owner = { is_gestalt = no }
 		}
 		planet_jobs_unity_produces_mult = 0.15
-		job_culture_worker_add = 3
+		job_culture_worker_add = 300
 	}
 
 	triggered_planet_modifier = {
@@ -124,7 +124,7 @@ building_artist_patron = {
 			owner = { is_gestalt = yes }
 		}
 		planet_jobs_unity_produces_mult = 0.15
-		job_evaluator_add = 3
+		job_evaluator_add = 300
 	}
 
 	resources = {
@@ -188,8 +188,8 @@ building_waste_reprocessing_center = {
 	}
 
 	planet_modifier = {
-		planet_amenities_add = 5
-		job_technician_drone_add = 2
+		planet_amenities_add = 500
+		job_technician_drone_add = 200
 	}
 
 	resources = {
@@ -228,7 +228,9 @@ building_nuumismatic_shrine = {
 	}
 
 	planet_modifier = {
-		job_numistic_priest_add = 4
+		planet_administrators_unity_produces_add = -2
+		planet_administrators_trade_produces_add = 8
+		planet_administrators_consumer_goods_upkeep_add = 0.5
 	}
 
 	resources = {
@@ -263,7 +265,7 @@ building_crystal_plant_2 = {
 
 	inline_script = {
 		script = jobs/translucer_add
-		AMOUNT = 3
+		AMOUNT = 300
 	}
 
 	resources = {
@@ -316,7 +318,7 @@ building_composer_sanctum = {
 	}
 
 	planet_modifier = {
-		job_telepath_add = 3
+		job_telepath_add = 300
 	}
 
 	country_modifier = {
@@ -372,7 +374,7 @@ building_eater_sanctum = {
 	}
 
 	planet_modifier = {
-		job_telepath_add = 3
+		job_telepath_add = 300
 	}
 
 	country_modifier = {
@@ -428,12 +430,12 @@ building_instrument_sanctum = {
 	}
 
 	planet_modifier = {
-		job_telepath_add = 3
+		job_telepath_add = 300
 	}
 
 	country_modifier = {
 		pop_happiness = 0.05
-		trade_value_mult = 0.1
+		planet_jobs_trade_produces_mult = 0.1
 	}
 
 	resources = {
@@ -483,7 +485,7 @@ building_whisperers_sanctum = {
 	}
 
 	planet_modifier = {
-		job_telepath_add = 3
+		job_telepath_add = 300
 	}
 
 	country_modifier = {

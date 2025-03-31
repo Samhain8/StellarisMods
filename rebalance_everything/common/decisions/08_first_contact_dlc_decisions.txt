@@ -41,7 +41,7 @@ decision_unshackled_memorial = {
 				NUM_DISTRICTS_1 = 2
 				DISTRICT_1 = district_mining
 				NUM_DISTRICTS_2 = 2
-				DISTRICT_2 = district_industrial
+				DISTRICT_2 = district_city
 			}
 			replace_building_with_district_effect = {
 				NUM_BUILDINGS = 1

@@ -797,7 +797,7 @@ auth_machine_intelligence = {
 	}
 
 	country_modifier = {
-		colony_start_num_pops_add = 1
+		#colony_start_num_pops_add = 1 # TODO: [AUG-48551] This modifier has been removed
 		planet_pop_assembly_add = 1
 		station_gatherers_produces_mult = 0.1
 		pop_growth_speed_reduction = 0.5
@@ -827,7 +827,7 @@ auth_machine_intelligence = {
 		modifier = {
 			custom_tooltip = auth_memory_aggregator_tt
 			show_only_custom_tooltip = no
-			colony_start_num_pops_add = 1
+			#colony_start_num_pops_add = 1 # TODO: [AUG-48551] This modifier has been removed
 
 			planet_pop_assembly_add = 1
 			pop_growth_speed_reduction = 0.25
@@ -858,7 +858,7 @@ auth_machine_intelligence = {
 		modifier = {
 			custom_tooltip = auth_driven_neural_chorus_tt
 			show_only_custom_tooltip = no
-			colony_start_num_pops_add = 1
+			#colony_start_num_pops_add = 1 # TODO: [AUG-48551] This modifier has been removed
 			planet_pops_cyborgs_upkeep_mult = 0.1
 		}
 		tags = {
@@ -926,7 +926,7 @@ auth_corporate = {
 	}
 
 	country_modifier = {
-		commercial_pact_mult = 0.20
+		planet_jobs_trade_produces_mult = 0.10
 		empire_size_colonies_mult = 0.50
 		external_leader_pool_add = 1
 	}
@@ -960,7 +960,7 @@ auth_corporate = {
 		}
 		modifier = {
 			custom_tooltip = auth_cyber_corporate_individualist_tt
-			starbase_trade_protection_add = 15
+			country_trade_produces_mult = 0.1
 			planet_crime_add = 20
 			pop_lifestyle_trade_value_add = 1
 			pop_cyborg_happiness = 0.1
@@ -979,7 +979,7 @@ auth_corporate = {
 		}
 		modifier = {
 			custom_tooltip = auth_cyber_corporate_collectivist_tt
-			starbase_trade_protection_add = 15
+			country_trade_produces_mult = 0.1
 			planet_crime_add = 20
 			council_agenda_progress_speed = 0.25
 			show_only_custom_tooltip = no
@@ -997,7 +997,7 @@ auth_corporate = {
 		}
 		modifier = {
 			custom_tooltip = auth_synth_corporate_physical_tt
-			trade_value_mult = 0.05
+			country_trade_produces_mult = 0.1
 			show_only_custom_tooltip = no
 		}
 	}

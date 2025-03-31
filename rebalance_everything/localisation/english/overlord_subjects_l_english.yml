@@ -578,7 +578,7 @@
 
  holding_reemployment_center:0 "Reemployment Center"
  holding_reemployment_center_desc:1 "Never leave a resource unexploited, even if that resource is the Subject's dead. With the Reemployment Center, the Overlord can ensure that the Subject's planets are always filled with employees even though the quality of work might vary."
- holding_reemployment_center_effect:0 "\nA new £pop£ §YZombie Pop§! will be reanimated on §Y[Planet.reemployment_center_timer]§!"
+ holding_reemployment_center_effect:0 "\n§Y100§! new £pop£ §YZombie Pops§! will be reanimated on §Y[Planet.reemployment_center_timer]§!"
 
  holding_recruitment_office:0 "Recruitment Office"
  holding_recruitment_office_desc:0 "Everyone must do their part. That is why the Overlord is offering military training in exchange for a tour in their fleet. Service guarantees citizenship."
@@ -879,7 +879,7 @@
  job_overlord_reassigner_drone_plural:0 "$job_overlord_reassigner$ Drones"
  mod_job_overlord_reassigner_drone_add:0 "$job_overlord_reassigner$ Jobs"
  job_overlord_reassigner_drone_desc:0 "$job_overlord_reassigner_desc$"
- job_overlord_reassigner_effect_desc:1 "£job_necromancer£ $job_overlord_reassigner_plural$ provide the subject with £pop£ §YZombie Pops§!."
+ job_overlord_reassigner_effect_desc:1 "£job_necromancer£ $job_overlord_reassigner_plural$ provide the subject with £pop£ §HZombie Pops§!."
 
 # Overlord Recruiters
  job_overlord_recruiter:0 "Overlord Recruiter"

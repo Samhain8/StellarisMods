@@ -1,6 +1,4 @@
 ### CIVIC CONCEPTS
-#
-# 1. Add new entries in alphabetical order.
 
 concept_angler_civics = { }
 

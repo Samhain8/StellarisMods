@@ -2053,3 +2053,193 @@ defined_text = {
 	name = GetOpionLossTrader
 	value = value:enclave_cancel_trade_trust
 }
+
+# Faction Type
+defined_text = {
+	name = GetFactionType
+	text = {
+		trigger = {
+			is_pop_faction_type = traditionalist
+		}
+		localization_key = pft_traditionalist
+	}
+	text = {
+		trigger = {
+			is_pop_faction_type = imperialist
+		}
+		localization_key = pft_imperialist
+	}
+	text = {
+		trigger = {
+			is_pop_faction_type = supremacist
+		}
+		localization_key = pft_supremacist
+	}
+	text = {
+		trigger = {
+			is_pop_faction_type = isolationist
+		}
+		localization_key = pft_isolationist
+	}
+	text = {
+		trigger = {
+			is_pop_faction_type = totalitarian
+		}
+		localization_key = pft_totalitarian
+	}
+	text = {
+		trigger = {
+			is_pop_faction_type = progressive
+		}
+		localization_key = pft_progressive
+	}
+	text = {
+		trigger = {
+			is_pop_faction_type = prosperity
+		}
+		localization_key = pft_prosperity
+	}
+	text = {
+		trigger = {
+			is_pop_faction_type = technologist
+		}
+		localization_key = pft_technologist
+	}
+	text = {
+		trigger = {
+			is_pop_faction_type = xenoist
+		}
+		localization_key = pft_xenoist
+	}
+	text = {
+		trigger = {
+			is_pop_faction_type = manifesti
+		}
+		localization_key = pft_manifesti
+	}
+}
+
+# Faction Ethic Equivelent
+defined_text = {
+	name = GetEthicEquivelent
+	text = {
+		trigger = {
+			is_pop_faction_type = imperialist
+		}
+		localization_key = ethic_militarist
+	}
+	text = {
+		trigger = {
+			is_pop_faction_type = supremacist
+		}
+		localization_key = ethic_xenophobe
+	}
+	text = {
+		trigger = {
+			is_pop_faction_type = isolationist
+		}
+		localization_key = ethic_xenophobe
+	}
+	text = {
+		trigger = {
+			is_pop_faction_type = totalitarian
+		}
+		localization_key = ethic_authoritarian
+	}
+	text = {
+		trigger = {
+			is_pop_faction_type = progressive
+		}
+		localization_key = ethic_egalitarian
+	}
+	text = {
+		trigger = {
+			is_pop_faction_type = prosperity
+		}
+		localization_key = ethic_pacifist
+	}
+	text = {
+		trigger = {
+			is_pop_faction_type = technologist
+		}
+		localization_key = ethic_materialist
+	}
+	text = {
+		trigger = {
+			is_pop_faction_type = xenoist
+		}
+		localization_key = ethic_xenophile
+	}
+}
+
+defined_text = {
+	name = GetSlotCity02Prereq
+	text = {
+		trigger = {
+			is_capital = no
+			exists = owner
+			owner = {
+				NOT = { has_technology = tech_colonial_centralization }
+			}
+		}
+		localization_key = zone_unavailable_tech_colonial_centralization
+	}
+	text = {
+		trigger = {
+			is_capital = no
+			exists = owner
+			owner = {
+				has_technology = tech_colonial_centralization
+			}
+			has_upgraded_capital = no
+		}
+		localization_key = zone_unavailable_capital
+	}
+}
+
+
+defined_text = {
+	name = GetSlotCity03Prereq
+	text = {
+		trigger = {
+			is_capital = yes
+			exists = owner
+			owner = {
+				NOT = { has_technology = tech_planetary_unification }
+			}
+		}
+		localization_key = zone_unavailable_tech_planetary_unification
+	}
+	text = {
+		trigger = {
+			is_capital = yes
+			exists = owner
+			owner = {
+				has_technology = tech_planetary_unification
+			}
+			has_upgraded_capital = no
+		}
+		localization_key = zone_unavailable_capital
+	}
+	text = {
+		trigger = {
+			is_capital = no
+			exists = owner
+			owner = {
+				NOT = { has_technology = tech_colonial_bureaucracy }
+			}
+		}
+		localization_key = zone_unavailable_tech_colonial_bureaucracy
+	}
+	text = {
+		trigger = {
+			is_capital = no
+			exists = owner
+			owner = {
+				has_technology = tech_colonial_bureaucracy
+			}
+			has_upgraded_capital = no
+		}
+		localization_key = zone_unavailable_capital
+	}
+}

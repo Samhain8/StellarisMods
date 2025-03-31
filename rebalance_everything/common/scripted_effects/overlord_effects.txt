@@ -194,18 +194,18 @@ experiments_kill_pop_effect = { # Research demands sacrifice (kills 1 pop in cap
 	capital_scope = {
 		if = {
 			limit = {
-				count_owned_pop = {
-					count > 1
+				count_owned_pop_amount = {
+					count > 100
 					limit = {
 						is_same_species = root.species
 					}
 				}
 			}
-			random_owned_pop = {
+			random_owned_pop_group = {
 				limit = {
 					is_same_species = root.species
 				}
-				kill_pop = yes
+				kill_single_pop = yes
 			}
 		}
 	}

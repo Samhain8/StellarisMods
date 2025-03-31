@@ -2,145 +2,81 @@
 ## Limited by deposits ##
 #########################
 
-# building_mote_harvesters = {
-# 	base_buildtime = @b1_time
-# 	icon = building_mote_harvesting_traps
+building_mote_harvesters = {
+	base_buildtime = @b1_time
+	icon = building_mote_harvesting_traps
+	base_cap_amount = 1
 
-# 	is_capped_by_modifier = yes
+ 	category = resource
 
-# 	category = resource
+ 	potential = {
+ 		always = yes
+ 	}
 
-# 	potential = {
-# 		always = no
-# 	}
+ 	planet_modifier = {
+ 		planet_technician_volatile_motes_produces_add = 0.5
+ 	}
 
-# 	triggered_planet_modifier = {
-# 		potential = {
-# 			exists = owner
-# 			owner = { is_regular_empire = yes }
-# 		}
-# 		modifier = {
-# 			job_mote_harvester_add = 1
-# 		}
-# 	}
+ 	resources = {
+ 		category = planet_buildings
+ 		cost = {
+ 			minerals = 200
+ 		}
+ 		upkeep = {
+ 			energy = 1
+ 		}
+ 	}
+}
 
-# 	triggered_planet_modifier = {
-# 		potential = {
-# 			exists = owner
-# 			owner = { is_gestalt = yes }
-# 		}
-# 		modifier = {
-# 			job_mote_harvesting_drone_add = 1
-# 		}
-# 	}
+building_gas_extractors = {
+	base_buildtime = @b1_time
+	icon = building_gas_extractors
+	base_cap_amount = 1
 
-# 	resources = {
-# 		category = planet_buildings
-# 		cost = {
-# 			minerals = 200
-# 		}
-# 		upkeep = {
-# 			energy = 1
-# 		}
-# 	}
+	category = resource
 
-# 	#prerequisites = {
-# 	#	"tech_mine_volatile_motes"
-# 	#}
-# }
+	potential = {
+ 		always = yes
+	}
 
-# building_gas_extractors = {
-# 	base_buildtime = @b1_time
-# 	icon = building_gas_extractors
+	planet_modifier = {
+ 		planet_farmers_exotic_gases_produces_add = 0.5
+ 	}
 
-# 	is_capped_by_modifier = yes
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = 200
+		}
+		upkeep = {
+			energy = 1
+		}
+	}
+}
 
-# 	category = resource
+building_crystal_mines = {
+	base_buildtime = @b1_time
+	base_cap_amount = 1
+	category = resource
+	potential = {
+ 		always = yes
+ 	}
 
-# 	potential = {
-# 		always = no
-# 	}
+ 	planet_modifier = {
+ 		planet_miners_rare_crystals_produces_add = 0.5
+ 	}
 
-# 	triggered_planet_modifier = {
-# 		potential = {
-# 			exists = owner
-# 			owner = { is_regular_empire = yes }
-# 		}
-# 		modifier = {
-# 			job_gas_extractor_add = 1
-# 		}
-# 	}
+ 	resources = {
+ 		category = planet_buildings
+ 		cost = {
+ 			minerals = 200
+ 		}
+ 		upkeep = {
+ 			energy = 1
+ 		}
+ 	}
 
-# 	triggered_planet_modifier = {
-# 		potential = {
-# 			exists = owner
-# 			owner = { is_gestalt = yes }
-# 		}
-# 		modifier = {
-# 			job_gas_extraction_drone_add = 1
-# 		}
-# 	}
-
-# 	resources = {
-# 		category = planet_buildings
-# 		cost = {
-# 			minerals = 200
-# 		}
-# 		upkeep = {
-# 			energy = 1
-# 		}
-# 	}
-
-# 	# prerequisites = {
-# 	# 	"tech_mine_exotic_gases"
-# 	# }
-# }
-
-# building_crystal_mines = {
-# 	base_buildtime = @b1_time
-
-# 	is_capped_by_modifier = yes
-
-# 	category = resource
-
-# 	potential = {
-# 		always = no
-# 	}
-
-# 	triggered_planet_modifier = {
-# 		potential = {
-# 			exists = owner
-# 			owner = { is_regular_empire = yes }
-# 		}
-# 		modifier = {
-# 			job_crystal_miner_add = 1
-# 		}
-# 	}
-
-# 	triggered_planet_modifier = {
-# 		potential = {
-# 			exists = owner
-# 			owner = { is_gestalt = yes }
-# 		}
-# 		modifier = {
-# 			job_crystal_mining_drone_add = 1
-# 		}
-# 	}
-
-# 	resources = {
-# 		category = planet_buildings
-# 		cost = {
-# 			minerals = 200
-# 		}
-# 		upkeep = {
-# 			energy = 1
-# 		}
-# 	}
-
-# 	# prerequisites = {
-# 	# 	"tech_mine_rare_crystals"
-# 	# }
-# }
+}
 
 building_betharian_power_plant = {
 	base_buildtime = @b1_time
@@ -171,7 +107,7 @@ building_betharian_power_plant = {
 
 	inline_script = {
 		script = jobs/technicians_add
-		AMOUNT = 4
+		AMOUNT = 400
 	}
 
 	 prerequisites = {
@@ -197,11 +133,11 @@ building_xeno_zoo = {
 				AND = {
 					exists = owner
 					owner = { has_policy_flag = pre_sapients_protect }
-					any_owned_pop = {
+					any_owned_pop_group = {
 						is_sapient = no
 					}
 				}
-				any_owned_pop = {
+				any_owned_pop_group = {
 					is_livestock = yes
 				}
 			}
@@ -226,11 +162,11 @@ building_xeno_zoo = {
 					AND = {
 						exists = owner
 						owner = { has_policy_flag = pre_sapients_protect }
-						any_owned_pop = {
+						any_owned_pop_group = {
 							is_sapient = no
 						}
 					}
-					any_owned_pop = {
+					any_owned_pop_group = {
 						is_livestock = yes
 					}
 				}
@@ -249,19 +185,16 @@ building_xeno_zoo = {
 	}
 
 	planet_modifier = {
-		job_xeno_zoo_keeper_add = 1
-	}
-
-	inline_script = {
-		script = jobs/entertainers_add
-		AMOUNT = 1
+		planet_biologists_society_research_produces_add = 4
+		planet_biologists_consumer_goods_upkeep_add = 2
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			planet = {
-				any_owned_pop = {
+				any_owned_pop_group = {
 					is_livestock = yes
+					is_lithoid = no
 				}
 			}
 			exists = owner
@@ -270,15 +203,34 @@ building_xeno_zoo = {
 			}
 		}
 		modifier = {
-			job_livestock_zoo_animal_add = 3
+			job_livestock_zoo_animal_add = 300
 		}
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			planet = {
-				any_owned_pop = {
+				any_owned_pop_group = {
+					is_livestock = yes
+					is_lithoid = yes
+				}
+			}
+			exists = owner
+			owner = {
+				NOT = { has_valid_civic = civic_warrior_culture }
+			}
+		}
+		modifier = {
+			job_livestock_zoo_animal_lithoid_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			planet = {
+				any_owned_pop_group = {
 					is_livestock = no
+					is_lithoid = no
 				}
 			}
 			exists = owner
@@ -287,7 +239,25 @@ building_xeno_zoo = {
 			}
 		}
 		modifier = {
-			job_livestock_zoo_beast_add = 3
+			job_livestock_zoo_beast_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			planet = {
+				any_owned_pop_group = {
+					is_livestock = no
+					is_lithoid = yes
+				}
+			}
+			exists = owner
+			owner = {
+				has_valid_civic = civic_warrior_culture
+			}
+		}
+		modifier = {
+			job_livestock_zoo_beast_lithoid_add = 300
 		}
 	}
 
@@ -302,7 +272,7 @@ building_xeno_zoo = {
 	triggered_desc = {
 		trigger = {
 			planet = {
-				any_owned_pop = {
+				any_owned_pop_group = {
 					is_sapient = no
 				}
 			}
@@ -315,7 +285,7 @@ building_xeno_zoo = {
 	triggered_desc = {
 		trigger = {
 			planet = {
-				any_owned_pop = {
+				any_owned_pop_group = {
 					is_livestock = yes
 				}
 			}
@@ -328,7 +298,7 @@ building_xeno_zoo = {
 	triggered_desc = {
 		trigger = {
 			planet = {
-				any_owned_pop = {
+				any_owned_pop_group = {
 					is_sapient = no
 				}
 			}
@@ -341,7 +311,7 @@ building_xeno_zoo = {
 	triggered_desc = {
 		trigger = {
 			planet = {
-				any_owned_pop = {
+				any_owned_pop_group = {
 					is_livestock = yes
 				}
 			}

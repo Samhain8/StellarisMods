@@ -2,6 +2,14 @@ district_arcology_housing = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
+	
+	# TODO_CD: change to real slots
+	zone_slots = {
+		slot_city_government
+		slot_city_01
+		slot_city_02
+		slot_city_03
+	}
 
 	show_on_uncolonized = {
 		uses_district_set = city_world
@@ -29,7 +37,7 @@ district_arcology_housing = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 15
+		planet_housing_add = 1500
 	}
 
 	triggered_planet_modifier = {
@@ -38,7 +46,7 @@ district_arcology_housing = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_maintenance_drone_add = 9
+			job_maintenance_drone_add = 900
 		}
 	}
 
@@ -51,7 +59,7 @@ district_arcology_housing = {
 			}
 		}
 		modifier = {
-			job_maintenance_drone_add = 6
+			job_maintenance_drone_add = 600
 		}
 	}
 
@@ -61,7 +69,7 @@ district_arcology_housing = {
 			owner = { has_active_tradition = tr_prosperity_public_works }
 		}
 		modifier = {
-			planet_housing_add = 3
+			planet_housing_add = 300
 		}
 	}
 
@@ -73,7 +81,7 @@ district_arcology_housing = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 3
+			planet_housing_add = 300
 		}
 	}
 
@@ -86,7 +94,7 @@ district_arcology_housing = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 3
+			planet_housing_add = 300
 		}
 	}
 
@@ -99,7 +107,7 @@ district_arcology_housing = {
 			}
 		}
 		modifier = {
-			job_maintenance_drone_add = 3
+			job_maintenance_drone_add = 300
 		}
 	}
 
@@ -111,7 +119,7 @@ district_arcology_housing = {
 			}
 		}
 		modifier = {
-			job_clerk_add = 3
+			job_clerk_add = 300
 		}
 	}
 
@@ -124,7 +132,7 @@ district_arcology_housing = {
 			}
 		}
 		modifier = {
-			job_clerk_add = 6
+			job_clerk_add = 600
 		}
 	}
 
@@ -151,12 +159,21 @@ district_arcology_arms_industry = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
 
+	# TODO_CD: change to real slots
+	zone_slots = {
+		slot_city_government
+		slot_city_01
+		slot_city_02
+		slot_city_03
+	}
+
 	show_on_uncolonized = {
 		uses_district_set = city_world
 	}
 
 	potential = {
-		uses_district_set = city_world
+		always = no
+#		uses_district_set = city_world
 	}
 
 	conversion_ratio = 1
@@ -188,12 +205,12 @@ district_arcology_arms_industry = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 10
+		planet_housing_add = 1000
 	}
 
 	inline_script = {
 		script = jobs/industrial_districts_foundry_add
-		AMOUNT = 6
+		AMOUNT = 600
 	}
 
 	triggered_planet_modifier = {
@@ -205,7 +222,7 @@ district_arcology_arms_industry = {
 			}
 		}
 		modifier = {
-			job_maintenance_drone_add = 1
+			job_maintenance_drone_add = 100
 		}
 	}
 
@@ -225,6 +242,14 @@ district_arcology_civilian_industry = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
 
+	# TODO_CD: change to real slots
+	zone_slots = {
+		slot_city_government
+		slot_city_01
+		slot_city_02
+		slot_city_03
+	}
+
 	show_on_uncolonized = {
 		uses_district_set = city_world
 		exists = owner
@@ -234,14 +259,8 @@ district_arcology_civilian_industry = {
 	}
 
 	potential = {
-		uses_district_set = city_world
-		exists = owner
-		owner = {
-			OR = {
-				is_gestalt = no
-				country_uses_consumer_goods = yes
-			}
-		}
+		always = no
+#		uses_district_set = city_world
 	}
 
 	conversion_ratio = 1
@@ -273,18 +292,26 @@ district_arcology_civilian_industry = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 10
+		planet_housing_add = 1000
 	}
 
 	inline_script = {
 		script = jobs/industrial_districts_factory_add
-		AMOUNT = 6
+		AMOUNT = 600
 	}
 }
 
 district_arcology_leisure = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
+
+	# TODO_CD: change to real slots
+	zone_slots = {
+		slot_city_government
+		slot_city_01
+		slot_city_02
+		slot_city_03
+	}
 
 	show_on_uncolonized = {
 		uses_district_set = city_world
@@ -295,12 +322,8 @@ district_arcology_leisure = {
 	}
 
 	potential = {
-		uses_district_set = city_world
-		owner = {
-			exists = owner
-			is_regular_empire = yes
-			NOT = { has_civic = civic_dystopian_society }
-		}
+		always = no
+#		uses_district_set = city_world
 	}
 
 	conversion_ratio = 1
@@ -325,18 +348,26 @@ district_arcology_leisure = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 10
+		planet_housing_add = 1000
 	}
 
 	inline_script = {
 		script = jobs/entertainers_add
-		AMOUNT = 6
+		AMOUNT = 600
 	}
 }
 
 district_arcology_organic_housing = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
+
+	# TODO_CD: change to real slots
+	zone_slots = {
+		slot_city_government
+		slot_city_01
+		slot_city_02
+		slot_city_03
+	}
 
 	show_on_uncolonized = {
 		uses_district_set = city_world
@@ -375,7 +406,7 @@ district_arcology_organic_housing = {
 	}
 
 	planet_modifier = {
-		job_bio_trophy_add = 15
+		job_bio_trophy_add = 1500
 	}
 
 	triggered_desc = {
@@ -390,6 +421,14 @@ district_arcology_organic_housing = {
 district_arcology_administrative = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
+
+	# TODO_CD: change to real slots
+	zone_slots = {
+		slot_city_government
+		slot_city_01
+		slot_city_02
+		slot_city_03
+	}
 
 	show_on_uncolonized = {
 		uses_district_set = city_world
@@ -409,23 +448,9 @@ district_arcology_administrative = {
 			}
 		}
 	}
-
 	potential = {
-		uses_district_set = city_world
-		owner = {
-			exists = owner
-			OR = {
-				AND = {
-					is_regular_empire = yes
-					is_spiritualist = no
-					has_make_spiritualist_perk = no
-				}
-				AND = {
-					is_machine_empire = yes
-					NOT = { has_valid_civic = civic_machine_servitor }
-				}
-			}
-		}
+		always = no
+#		uses_district_set = city_world
 	}
 
 	conversion_ratio = 1
@@ -448,7 +473,7 @@ district_arcology_administrative = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 10
+		planet_housing_add = 1000
 	}
 
 	triggered_planet_modifier = {
@@ -461,7 +486,7 @@ district_arcology_administrative = {
 			}
 		}
 		modifier = {
-			job_bureaucrat_add = 6
+			job_bureaucrat_add = 600
 		}
 	}
 
@@ -475,7 +500,7 @@ district_arcology_administrative = {
 			}
 		}
 		modifier = {
-			job_manager_add = 6
+			job_manager_add = 600
 		}
 	}
 
@@ -488,7 +513,7 @@ district_arcology_administrative = {
 			}
 		}
 		modifier = {
-			job_steward_add = 6
+			job_steward_add = 600
 		}
 	}
 
@@ -500,7 +525,7 @@ district_arcology_administrative = {
 			}
 		}
 		modifier = {
-			job_coordinator_add = 6
+			job_coordinator_add = 600
 		}
 	}
 
@@ -516,7 +541,7 @@ district_arcology_administrative = {
 			}
 		}
 		modifier = {
-			job_bureaucrat_add = 3
+			job_bureaucrat_add = 300
 		}
 	}
 
@@ -531,7 +556,7 @@ district_arcology_administrative = {
 			}
 		}
 		modifier = {
-			job_manager_add = 3
+			job_manager_add = 300
 		}
 	}
 
@@ -545,7 +570,7 @@ district_arcology_administrative = {
 			}
 		}
 		modifier = {
-			job_steward_add = 3
+			job_steward_add = 300
 		}
 	}
 
@@ -558,7 +583,7 @@ district_arcology_administrative = {
 			}
 		}
 		modifier = {
-			job_coordinator_add = 3
+			job_coordinator_add = 300
 		}
 	}
 
@@ -611,6 +636,14 @@ district_arcology_religious = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
 
+	# TODO_CD: change to real slots
+	zone_slots = {
+		slot_city_government
+		slot_city_01
+		slot_city_02
+		slot_city_03
+	}
+
 	show_on_uncolonized = {
 		uses_district_set = city_world
 		from = {
@@ -622,14 +655,8 @@ district_arcology_religious = {
 	}
 
 	potential = {
-		uses_district_set = city_world
-		owner = {
-			exists = owner
-			OR = {
-				is_spiritualist = yes
-				has_make_spiritualist_perk = yes
-			}
-		}
+		always = no
+#		uses_district_set = city_world
 	}
 
 	conversion_ratio = 1
@@ -652,7 +679,7 @@ district_arcology_religious = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 10
+		planet_housing_add = 1000
 	}
 
 	triggered_planet_modifier = {
@@ -665,7 +692,7 @@ district_arcology_religious = {
 			}
 		}
 		modifier = {
-			job_priest_add = 6
+			job_priest_add = 600
 		}
 	}
 
@@ -680,7 +707,7 @@ district_arcology_religious = {
 		}
 		modifier = {
 			# Megacorp YES, Death Cult NO.
-			job_preacher_add = 6
+			job_preacher_add = 600
 		}
 	}
 	triggered_planet_modifier = {
@@ -691,7 +718,7 @@ district_arcology_religious = {
 			}
 		}
 		modifier = {
-			job_haruspex_add = 6
+			job_haruspex_add = 600
 		}
 	}
 	triggered_planet_modifier = {
@@ -703,8 +730,8 @@ district_arcology_religious = {
 		}
 		modifier = {
 			# Death Cult YES.
-			job_death_priest_add = 3
-			job_mortal_initiate_add = 3
+			job_death_priest_add = 300
+			job_mortal_initiate_add = 300
 		}
 	}
 
@@ -720,7 +747,7 @@ district_arcology_religious = {
 			}
 		}
 		modifier = {
-			job_priest_add = 3
+			job_priest_add = 300
 		}
 	}
 
@@ -736,7 +763,7 @@ district_arcology_religious = {
 		}
 		modifier = {
 			# Megacorp YES, Death Cult NO.
-			job_preacher_add = 3
+			job_preacher_add = 300
 		}
 	}
 	triggered_planet_modifier = {
@@ -749,7 +776,7 @@ district_arcology_religious = {
 		}
 		modifier = {
 			# Death Cult YES.
-			job_death_priest_add = 1.5
+			job_death_priest_add = 150
 		}
 	}
 
@@ -795,5 +822,462 @@ district_arcology_religious = {
 			}
 		}
 		text = jobs_death_priest_and_mortal_initiate_effect_desc
+	}
+}
+
+district_arcology_urban_1 = {
+	base_buildtime = 600
+	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
+
+	zone_slots = {
+		slot_arcology_urban_01
+	}
+
+	show_on_uncolonized = {
+		uses_district_set = city_world
+	}
+
+	potential = {
+		uses_district_set = city_world
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+		district_city
+		district_nexus
+		district_hive
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1500
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_maintenance_drone_add = 900
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				has_active_tradition = tr_virtuality_4
+			}
+		}
+		modifier = {
+			job_maintenance_drone_add = 600
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
+			}
+		}
+		modifier = {
+			planet_housing_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+		modifier = {
+			job_maintenance_drone_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			job_clerk_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				has_active_tradition = tr_virtuality_4
+			}
+		}
+		modifier = {
+			job_clerk_add = 600
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = job_clerk_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_maintenance_drone_effect_desc
+	}
+}
+district_arcology_urban_2 = {
+	base_buildtime = 600
+	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
+
+	zone_slots = {
+		slot_arcology_urban_02
+	}
+
+	show_on_uncolonized = {
+		uses_district_set = city_world
+	}
+
+	potential = {
+		uses_district_set = city_world
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+		district_city
+		district_nexus
+		district_hive
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1500
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_maintenance_drone_add = 900
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				has_active_tradition = tr_virtuality_4
+			}
+		}
+		modifier = {
+			job_maintenance_drone_add = 600
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
+			}
+		}
+		modifier = {
+			planet_housing_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+		modifier = {
+			job_maintenance_drone_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			job_clerk_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				has_active_tradition = tr_virtuality_4
+			}
+		}
+		modifier = {
+			job_clerk_add = 600
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = job_clerk_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_maintenance_drone_effect_desc
+	}
+}
+district_arcology_urban_3 = {
+	base_buildtime = 600
+	is_capped_by_modifier = no
+	exempt_from_ai_planet_specialization = yes
+
+	zone_slots = {
+		slot_arcology_urban_03
+	}
+
+	show_on_uncolonized = {
+		uses_district_set = city_world
+	}
+
+	potential = {
+		uses_district_set = city_world
+	}
+
+	conversion_ratio = 1
+	convert_to = {
+		district_city
+		district_nexus
+		district_hive
+	}
+
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = 1000
+		}
+		upkeep = {
+			energy = 5
+		}
+	}
+
+	planet_modifier = {
+		planet_housing_add = 1500
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		modifier = {
+			job_maintenance_drone_add = 900
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+				has_active_tradition = tr_virtuality_4
+			}
+		}
+		modifier = {
+			job_maintenance_drone_add = 600
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_active_tradition = tr_prosperity_public_works }
+		}
+		modifier = {
+			planet_housing_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_1
+			}
+		}
+		modifier = {
+			planet_housing_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				NOT = { has_valid_civic = civic_agrarian_idyll }
+			}
+		}
+		modifier = {
+			planet_housing_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				has_technology = tech_housing_2
+				has_ethic = ethic_gestalt_consciousness
+			}
+		}
+		modifier = {
+			job_maintenance_drone_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		modifier = {
+			job_clerk_add = 300
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				has_active_tradition = tr_virtuality_4
+			}
+		}
+		modifier = {
+			job_clerk_add = 600
+		}
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+			}
+		}
+		text = job_clerk_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_maintenance_drone_effect_desc
 	}
 }

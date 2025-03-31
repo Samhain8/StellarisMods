@@ -91,7 +91,7 @@
  # Decisions
  decision_crystalline_refugees:0 "Settle Crystalline Refugees"
  decision_crystalline_refugees_desc:0 "Find a home for the $NAME_Central_Crystal_Species$ refugees, who have been banished from their homeland in the $NAME_Central_Crystal_Country$."
- decision_crystalling_refugees_effect_tt:0 "§G5§! §H$NAME_Central_Crystal_Species$§! £pops£ Pops will move to §Y[Root.GetName]§!."
+ decision_crystalling_refugees_effect_tt:0 "§G500§! £pop£ §H$NAME_Central_Crystal_Species$ Pops§! will move to §Y[Root.GetName]§!."
 
  decision_crystalline_architecture:0 "Crystalline Construction"
  decision_crystalline_architecture_desc:0 "A team of engineers sent by the $NAME_Central_Crystal_Country$ will improve the layout of the habitat."
@@ -502,9 +502,13 @@
  nemma_world_chain_title: "Nemma World"
  nemma_world_chain_desc: "The titanic Nemma inhabit one of our worlds and we have already built the foundation of a colony on their backs. We will need to decide what to do with them."
 
+ stratovent_researcher: "$job_stratovent_researcher$"
  job_stratovent_researcher: "Vent Researcher"
+ job_stratovent_researcher_with_icon: "£job_xeno_zoo_keeper£ $job_stratovent_researcher$"
  job_stratovent_researcher_plural: "Vent Researchers"
+ job_stratovent_researcher_plural_with_icon: "£job_xeno_zoo_keeper£ $job_stratovent_researcher_plural$"
  job_stratovent_researcher_desc: "Researchers specialized in studying spaceborne fauna and guiding travelers to see them."
+ biologist_is_vent_researcher_tt: "$job_biologist_plural_with_icon$ are converted into $job_stratovent_researcher_plural_with_icon$"
  job_stratovent_refiner: "Vent Refiner"
  job_stratovent_refiner_plural: "Vent Refiners"
  job_stratovent_refiner_desc: "Workers specialized in gathering and refining precious gasses from the Stratospheric Vents."
@@ -724,7 +728,7 @@
  terra.80.name:0 "Radioactive Flora"
  terra.80.desc:0 "While cleaning out the radiation in §Y[From.GetName]'s§! atmosphere and soil, our [Root.GetTerraformerPlural] had to call in our xenobiologists. They had found a species that seemed to thrive off the radiation and was now wilting. Even more curious, this species appears to be presapient and on the cusp of achieving sentience. Now, as the final soil scrubbers are approaching, we have to decide what to do with this new life."
  terra.80.a:0 "We have destroyed their habitat, now we have to preserve them."
- terra.80.a.tooltip:0 "4 presapient §YRadiotrophic £pops£ pops§! will be added to the [This.GetName]."
+ terra.80.a.tooltip:0 "400 presapient £pop£ §HRadiotrophic Pops§! will be added to the [This.GetName]."
  terra.80.b:0 "Why not let them join us?"
  terra.80.c.indifferent:0 "Harvest their genetic material."
  terra.80.c.xenophile:0 "Study their biology."
@@ -734,7 +738,7 @@
  terra.85.name:0 "A Radiating Reception"
  terra.85.desc:0 "Having spent years acclimating and adjusting the radiotropic plants found on §Y[FromFromFrom.GetName]§!, we now are ready to allow them into our society. While an incredibly young species, they seem to excel in harvesting energy."
  terra.85.a:0 "Welcome!"
- terra.85.a.tooltip:0 "6 §YRadiotrophic £pops£ pops§! will be added to our Empire."
+ terra.85.a.tooltip:0 "§G600§! £pop£ §HRadiotrophic Pops§! will be added to our Empire."
  terra.90.name:0 "Weapons Cache"
  terra.90.desc:0 "Restoring a Tomb World is always hard work and often very repetitive: section off an area, clear out any rubble, replace the soil, purify any remaining water, and add new fauna. As the terraforming process on §Y[From.GetName]§! was winding to a close, our [Root.GetTerraformerPlural] discovered a sizeable underground metal container, and based on its fortifications, it is assumed that this is a weapons cache."
  terra.90.a:0 "Curious."
@@ -1177,7 +1181,7 @@
  colony.9880.desc:0 "In their continued distress, the other [Owner.GetGovernmentName] has lashed out and manically taken a hold of the [Owner.GetSoldierPlural] on [Target.GetName]! We must organize our defense drones before we are overrun."
  colony.9880.a.machine:0 "Emergency Protocols: Defend [Target.GetName]"
  colony.9880.a.hive:0 "Defeat the divergences, suppress the Beta-World."
- colony.9880.a.tt:0 "Gain §Y4§! defensive armies at the cost of §R1§! £pops£ pop."
+ colony.9880.a.tt:0 "Gain §Y400§! defensive armies at the cost of §R100§! £pop£ §HPops§!."
  colony.9880.b:0 "Analyze why the Beta-Universe reacted like this."
 
  colony.9885.desc.hive:0 "The final divergent drone has been defeated. Our communication drones are once again detecting the presence of the other Overmind, but it's acting a lot submissively this time, waiting for us to initiate communication.\n\n"§BThis Mind apologises - instinctive reactions are getting harder to suppress as §RThe Static§! nears. We will ensure that we restrain ourselves in the future.§!""
@@ -1474,6 +1478,7 @@
  job_manufactorium_complex_drone_desc:0 "These highly specialized drones operate delicate and ancient machinery, creating resources at a fraction of the usual cost."
  mod_job_manufactorium_complex_drone_add:0 "$job_manufactorium_complex_drone$ Jobs"
 
+ manufactorium_scraper: "$job_manufactorium_scraper$"
  job_manufactorium_scraper:0 "Dismantler"
  job_manufactorium_scraper_plural:0 "Dismantlers"
  job_manufactorium_scraper_desc:0 "Breaking the ancient machinery apart is a risky but rewarding task. These workers will have a lot on their hands, given the size of the facility."
@@ -1582,9 +1587,9 @@
  colony.9900.name: "Missed The Morning Check-in"
  colony.9900.desc: "Recently, numerous [Owner.GetPopTypeNamePlural] have gone missing on [Root.GetName]. The only discernible pattern is that each was alone at the time of their disappearance. As news began to spread, a collective fear of going unescorted has gripped the colony. This state of unrest is causing considerable problems for our day-to-day operations."
  colony.9900.a: "Implement tracking procedures."
- colony.9900.a.tooltip: "One pop has gone missing from [Root.GetName]. An expensive tracking system will be used to help us solve this mystery."
+ colony.9900.a.tooltip: "§Y100§! £pop£ §HPops§! have gone missing from [Root.GetName]. An expensive tracking system will be used to help us solve this mystery."
  colony.9900.b: "There is no need to panic."
- colony.9900.b.tooltip: "One pop has gone missing from [Root.GetName]."
+ colony.9900.b.tooltip: "§Y100§! £pop£ §HPops§! have gone missing from [Root.GetName]."
  colony.9905.name: "Lucky Scan"
  colony.9905.desc.a: "Thanks to the implementation of the tracking system on [Root.GetName] we have a substantial lead.\n\nAs the most recent of our [Owner.GetPopTypeNamePlural] disappeared, and we quickly followed up with a scan of their last location ping. A decaying residue of charged particles was found in each instance.\n\nWe've established a special project to determine the true nature of the particles and their involvement in our missing [Owner.GetPopTypeNamePlural]."
  colony.9905.desc.b: "We've had a lucky break on [Root.GetName]! We have uncovered the location of the most recent [Owner.GetPopTypeNamePlural] to go missing. A detailed scan of the area revealed a decaying residue of charged particles.\n\nWe've established a special project to determine the true nature of the particles and their involvement in our missing [Owner.GetPopTypeNamePlural]."
@@ -1946,3 +1951,23 @@
  anomaly.7200.name: "Closing Aperture"
  anomaly.7200.desc: "Seddom is an eerie spectacle. The swirling planets are wreathed in darkness; nearby is a breach in the very fabric of our universe, a cosmic maw that devours the very radiance of the system's star.\n\nDespite the seemingly natural arrangement of planetoids, further analysis has revealed that they are arranged with mathematical precision. Millennia ago, some incredible force orchestrated the orbital bodies of this system into a specialized pattern, one which has not only mitigated the effects of the tear, but prevented it from spreading into the wider galaxy.\n\nWe arrive here at an auspicious moment - a monumental work nears completion. This system's restoration is imminent."
  anomaly.7200.a: "Thank you for fixing our galaxy."
+
+# Geocentric Experiment
+ NAME_Orrery_Site: "Celestial Orrery Site"
+ GEOCENTRIC_EXPERIMENT_CAT: "Celestial Orrery"
+ GEOCENTRIC_EXPERIMENT_CAT_DESC: "Strange gravimetric readings have been detected throughout the [from.Solar_System.GetName] system, pulsing from the inner astroid belt to the desolate planet at the heart of the system."
+ anomaly.8000.name: "$GEOCENTRIC_EXPERIMENT_CAT$"
+ anomaly.8000.desc: "The gravitational stability of the [from.Solar_System.GetName] system is maintained by §Y$sr_dark_matter$§! emitters positioned within its asteroid belt. These emitters are controlled by a supercomputer located on the central planet. Records from this central computer suggest the entire system was an experimental site for gravity manipulation, established by an ancient civilization."
+ anomaly.8000.tt: "Adds §Y$d_physics_1$§! and §Y$d_dark_matter_deposit_1$§! to every §Y$GRAVITY_STABILIZER$ Asteroid§!"
+
+ anomaly.8000.b: "Take the machinary apart."
+ anomaly.8000.b.tt: "§RThis is a bad idea§!"
+
+ GRAVITY_STABILIZER: "Gravity Manipulator"
+ NAME_GRAVITY_STABILIZER_I: "$GRAVITY_STABILIZER$ I"
+ NAME_GRAVITY_STABILIZER_II: "$GRAVITY_STABILIZER$ II"
+ NAME_GRAVITY_STABILIZER_III: "$GRAVITY_STABILIZER$ III"
+ NAME_GRAVITY_STABILIZER_IIII: "$GRAVITY_STABILIZER$ IIII"
+
+ d_geocentric_experiment: "Celestial Orrery Supercomputer"
+ d_geocentric_experiment_desc: "The supercomputer that has kept the Celestial Orrery from gravitational collapse."

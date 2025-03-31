@@ -97,10 +97,6 @@ starbase_starport = {
 		starbase_module_capacity_add = 2
 		starbase_building_capacity_add = 1
 		starbase_defense_platform_capacity_add = 6
-		#trade system
-		starbase_trade_collection_range_add = 1
-		starbase_trade_protection_range_add = 1
-		starbase_trade_protection_add = 8
 		ship_sensor_range_add = 1
 	}
 	ship_modifier = {
@@ -170,10 +166,6 @@ starbase_starhold = {
 		starbase_module_capacity_add = 4
 		starbase_building_capacity_add = 2
 		starbase_defense_platform_capacity_add = 9
-		#trade system
-		starbase_trade_collection_range_add = 1
-		starbase_trade_protection_range_add = 1
-		starbase_trade_protection_add = 16
 		ship_sensor_range_add = 1
 	}
 	ship_modifier = {
@@ -244,10 +236,6 @@ starbase_starfortress = {
 		starbase_module_capacity_add = 6
 		starbase_building_capacity_add = 3
 		starbase_defense_platform_capacity_add = 12
-		#trade system
-		starbase_trade_collection_range_add = 1
-		starbase_trade_protection_range_add = 1
-		starbase_trade_protection_add = 24
 		ship_sensor_range_add = 1
 	}
 	ship_modifier = {
@@ -320,10 +308,6 @@ starbase_citadel = {
 		starbase_module_capacity_add = 6
 		starbase_building_capacity_add = 4
 		starbase_defense_platform_capacity_add = 15
-		#trade system
-		starbase_trade_collection_range_add = 1
-		starbase_trade_protection_range_add = 1
-		starbase_trade_protection_add = 32
 		ship_sensor_range_add = 1
 	}
 	ship_modifier = {
@@ -888,7 +872,7 @@ starbase_fe_outpost = {
 
 
 ##################
-# Defensive Platform
+# Defense Platform
 ##################
 
 ion_cannon = {

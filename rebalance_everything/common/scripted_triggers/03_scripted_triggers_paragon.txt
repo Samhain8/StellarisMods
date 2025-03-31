@@ -243,6 +243,31 @@ has_trait_tier1or2or3 = {
 	}
 }
 
+local_or_sector_governor_has_trait = {
+	exists = planet
+	planet = {
+		OR = {
+			AND = {
+				exists = leader
+				leader = {
+					has_trait = $TRAIT$
+				}
+			}
+			AND = {
+				is_sector_capital = no
+				NOT = { exists = leader }
+				exists = sector
+				sector.sector_capital = {
+					exists = leader
+					leader = {
+						has_trait = $TRAIT$
+					}
+				}
+			}
+		}
+	}
+}
+
 # leader scope
 can_have_health_issues = {
 	NOR = {

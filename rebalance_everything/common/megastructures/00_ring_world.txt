@@ -239,6 +239,7 @@ ring_world_3_intermediate = {
 	on_build_complete = {
 		from = {
 			set_country_flag = has_built_or_repaired_megastructure
+			set_country_flag = has_ring_world
 		}
 
 		spawn_planet = {
@@ -471,6 +472,7 @@ ring_world_restored = {
 		from = {
 			set_country_flag = has_built_or_repaired_megastructure
 			country_event = { id = utopia.2017 }
+			set_country_flag = has_ring_world
 		}
 		if = {
 			limit = {

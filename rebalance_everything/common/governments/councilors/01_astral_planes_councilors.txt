@@ -97,6 +97,7 @@ councilor_dimensional_worship_corporate = {
 	civic = civic_corporate_dimensional_worship
 	custom_tooltip = "councilor_dimensional_worship_corporate_custom_modifier_desc"
 	modifier = {
+		planet_jobs_trade_produces_mult = @councilor_dimensional_worship_priest_trade_value
 		planet_priests_physics_research_produces_add = @councilor_dimensional_worship_priest_physics
 	}
 	ai_hiring_weight = {

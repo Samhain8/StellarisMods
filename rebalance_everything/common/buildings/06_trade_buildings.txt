@@ -10,9 +10,9 @@ building_commercial_zone = {
 	potential = {
 		exists = owner
 		owner = { is_regular_empire = yes }
-		NOR = { 
-			has_modifier = slave_colony 
-			has_modifier = penal_colony	
+		NOR = {
+			has_modifier = slave_colony
+			has_modifier = penal_colony
 		}
 		NOT = { has_building = building_low_tech_capital }
 	}
@@ -22,8 +22,11 @@ building_commercial_zone = {
 		OR = {
 			owner = { is_regular_empire = no }
 			has_modifier = slave_colony
-			has_modifier = penal_colony	
+			has_modifier = penal_colony
 		}
+	}
+
+	allow = {
 	}
 
 	resources = {
@@ -37,28 +40,12 @@ building_commercial_zone = {
 	}
 
 	planet_modifier = {
-		job_clerk_add = 2
-		job_trader_add = 1
+		planet_traders_produces_mult = 0.20
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_active_tradition = tr_mercantile_commercial_enterprise
-			}
-		}
-		modifier = {
-			job_trader_add = 1
-		}
-	}
-
-	triggered_desc = {
-		text = job_clerk_effect_desc
-	}
-
-	triggered_desc = {
-		text = job_trader_effect_desc
+	inline_script = {
+		script = jobs/trader_add
+		AMOUNT = @building_static_jobs
 	}
 
 	prerequisites = {
@@ -69,25 +56,20 @@ building_commercial_zone = {
 		is_regular_empire = yes
 	}
 
-	upgrades = {
-		"building_commercial_megaplex"
-	}
 }
 
 building_commercial_megaplex = {
 	base_buildtime = @b2_time
-	can_build = no
-
+	base_cap_amount = 1
 	category = trade
 
 	potential = {
 		exists = owner
 		owner = { is_regular_empire = yes }
-		NOR = { 
-			has_modifier = slave_colony 
-			has_modifier = penal_colony	
+		NOR = {
+			has_modifier = slave_colony
+			has_modifier = penal_colony
 		}
-		has_building = building_commercial_zone
 	}
 
 	destroy_trigger = {
@@ -95,7 +77,19 @@ building_commercial_megaplex = {
 		OR = {
 			owner = { is_regular_empire = no }
 			has_modifier = slave_colony
-			has_modifier = penal_colony	
+			has_modifier = penal_colony
+		}
+	}
+
+	allow = {
+		custom_tooltip = {
+			fail_text = need_trade_zone
+			planet = {
+				num_zones = {
+					type = zone_trade
+					value > 0
+				}
+			}
 		}
 	}
 
@@ -112,8 +106,7 @@ building_commercial_megaplex = {
 	}
 
 	planet_modifier = {
-		job_clerk_add = 4
-		job_trader_add = 2
+		planet_traders_upkeep_mult = -0.20
 	}
 
 	triggered_planet_modifier = {
@@ -124,7 +117,7 @@ building_commercial_megaplex = {
 			}
 		}
 		modifier = {
-			job_trader_add = 2
+			job_trader_add = 200
 		}
 	}
 
@@ -148,7 +141,7 @@ building_commercial_megaplex = {
 		energy = 6
 		trigger = {
 			OR = {
-				num_unemployed >= 10
+				unemployed_pop_amount >= 1000
 				num_assigned_jobs = {
 				job = servant
 					value >= 10
@@ -161,30 +154,23 @@ building_commercial_megaplex = {
 building_galactic_stock_exchange = {
 	base_buildtime = @b2_time
 	base_cap_amount = 1
-
 	category = trade
 
 	potential = {
-		NOR = { 
-			has_modifier = resort_colony 
-			has_modifier = slave_colony 
-			has_modifier = penal_colony	
+		NOR = {
+			has_modifier = resort_colony
+			has_modifier = slave_colony
+			has_modifier = penal_colony
 		}
 	}
 
 	allow = {
-		has_major_upgraded_capital = yes
-		if = {
-			limit = {
-				exists = orbital_defence
-			}
-			orbital_defence = {
-				exists = starbase
-				starbase = {
-					NOR = {
-						has_starbase_building = ring_galactic_stock_exchange
-						is_starbase_building_building = ring_galactic_stock_exchange
-					}
+		custom_tooltip = {
+			fail_text = need_trade_zone
+			planet = {
+				num_zones = {
+					type = zone_trade
+					value > 0
 				}
 			}
 		}
@@ -196,14 +182,12 @@ building_galactic_stock_exchange = {
 			owner = { is_regular_empire = no }
 			has_modifier = slave_colony
 			has_modifier = resort_colony
-			has_modifier = penal_colony	
+			has_modifier = penal_colony
 		}
 	}
 
-
 	planet_modifier = {
-		job_merchant_add = 1
-		trade_value_mult = 0.20
+		pop_trader_bonus_workforce_mult = 0.16
 	}
 
 	resources = {
@@ -230,7 +214,7 @@ building_galactic_stock_exchange = {
 		energy = 5
 		trigger = {
 			solar_system = {
-				has_system_trade_value >= 50
+				#has_system_trade_value >= 50
 			}
 		}
 	}
@@ -239,7 +223,7 @@ building_galactic_stock_exchange = {
 		energy = 3
 		trigger = {
 			solar_system = {
-				has_system_trade_value >= 80
+				#has_system_trade_value >= 80
 			}
 		}
 	}

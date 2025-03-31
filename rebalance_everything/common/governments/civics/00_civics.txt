@@ -706,6 +706,8 @@ civic_environmentalist = {
 	}
 	modifier = {
 		planet_pops_consumer_goods_upkeep_mult = -0.20
+		planet_entertainers_society_research_produces_add = 2
+		planet_entertainers_consumer_goods_upkeep_add = 0.5
 	}
 	description = "civic_tooltip_environmentalist_effects"
 }
@@ -1025,7 +1027,7 @@ civic_free_haven = {
 	}
 	modifier = {
 		pop_growth_from_immigration = 0.15
-		planet_immigration_pull_mult = 0.50
+		#planet_immigration_pull_mult = 0.50 # TODO: [AUG-48754] Use automigration modifier
 		pop_cat_worker_happiness = 0.05
 	}
 	swap_type = {
@@ -2021,6 +2023,11 @@ civic_death_cult = {
 			}
 		}
 	}
+
+	modifier = {
+		planet_administrators_unity_produces_add = -1
+		planet_administrators_society_research_produces_add = 1
+	}
 	random_weight = {
 		base = @civic_rare_random_weight
 	}
@@ -2130,6 +2137,14 @@ civic_catalytic_processing = {
 			}
 		}
 	}
+	modifier = {
+		planet_metallurgists_alloys_produces_add = 0.75
+		planet_metallurgists_minerals_upkeep_add = -6
+		planet_metallurgists_food_upkeep_add = 9
+		planet_artisans_consumer_goods_produces_add = 0.75
+		planet_artisans_minerals_upkeep_add = -6
+		planet_artisans_food_upkeep_add = 9
+	}
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = {
 		base = 0	# Too dangerous to switch this mid-game
@@ -2149,6 +2164,10 @@ civic_crafters = {
 	}
 	possible = {
 		civics = { NOT = { value = civic_corporate_crafters }	}
+	}
+	modifier = {
+		planet_artisans_consumer_goods_produces_add = 2
+		planet_artisans_trade_produces_add = 3
 	}
 	random_weight = {
 		base = @civic_uncommon_random_weight

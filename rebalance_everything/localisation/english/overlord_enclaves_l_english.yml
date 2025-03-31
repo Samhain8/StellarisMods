@@ -109,7 +109,7 @@
  enclave.255.desc:0 "Prethoryn fleets rely on slow moving projectiles and hosts of smaller ships to take down their foes. One option to fend them off is to use point defense, coupled with armor and improvements to your ship's hull resilience; another is to engage them at extreme range. With sufficiently powerful energy weapons, one might manage to destroy their fleets before they can even get in range."
  enclave.260.desc:0 "The Unbidden's exclusive reliance on energy gives us an obvious weakness to exploit. Weapons dealing extra damage to their shields should prove devastating, but if you can fit weapons that completely bypass their shields, they won't be long for this dimension. Defensively, you should look at bringing your own shields to the fight to adequately counter their energy beams."
  enclave.265.desc:0 "Contingency ships exclusively use energy weapons- as such, it is best to use shields to mitigate incoming damage. Simulations indicate that despite having strong defense, their ship's hulls are relatively fragile. Our analysts estimate that penetrating weapons might perform very well against them."
- enclave.266.desc: "Cetana's ships rely on long range, high damage energy weapons and sturdy regenerating armor. They are adept at taking down large targets, and you would do well to instead harass them with swarms of smaller crafts. Torpedos or energy weapons should perform adequately against her fleets, and shielding your vessels might help them survive a little longer."
+ enclave.266.desc: "Cetana's ships rely on long range, high damage energy weapons and sturdy regenerating armor. They are adept at taking down large targets, and you would do well to instead harass them with swarms of smaller crafts. Torpedoes or energy weapons should perform adequately against her fleets, and shielding your vessels might help them survive a little longer."
 
  enclave.270.desc:0 "Looking to pacify a colony or uproot terrorists? Our planetside support services offer companies of trained professionals, ready to work in challenging and high-risk environments to help you bring order to the galaxy."
  enclave.270.a:0 "A small contingent of mercenaries."
@@ -675,7 +675,7 @@
  enclave.5502.b:0 "We must work to ease the colonists' fears."
  enclave.5502.c:0 "Implement lockdown measures, immediately."
  enclave.5502.gestalt.c:0 "The colony must be consolidated."
- enclave.5502.pop_removed:0 "A §H[root.owner.GetSpeciesName] £pop£ Pop vanishes§! from §Y[root.GetName]§!."
+ enclave.5502.pop_removed:0 "§R100§! §H[root.owner.GetSpeciesName] £pop£ Pops vanish§! from §Y[root.GetName]§!."
  shattered_frontier_benefits:0 "Psionic Abatement Fund"
  shattered_frontier_benefits_desc:0 "Social benefits have been implemented on this world in the hopes of easing psychic suffering during a time of apparent scrutiny from the Shroud."
  shattered_frontier_lockdown:0 "Psionic Abatement Lockdown"

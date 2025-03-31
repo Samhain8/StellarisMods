@@ -178,7 +178,7 @@ triggered_planet_modifier = {
 			has_active_tradition = tr_synthetics_prefabricated_components_machine
 		}
 	}
-	job_replicator_add = 1
+	job_replicator_add = 100
 }
 
 # Primal Calling origin: Give Ethic-based jobs

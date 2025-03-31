@@ -478,7 +478,7 @@
  primal_calling_shelter_bonus_tt: "[GetAnimalHandlerContext]\n- $GET_UNIQUE_EDICT$, ['edict:creature_welfare']"
  triggered_opinion_primal_calling_origin: "$primal_calling_shelter_modifier$"
 
- trophy_hunter_common_effect_desc: "- Gain $c_dna$ and culling rewards by killing Space Fauna in combat\n- §G$@primal_calling_fauna_kill_unity_reward|0$§! $r_unity$ and harvest rewards when killing Space Fauna"
+ trophy_hunter_common_effect_desc: "- Gain £genetic_material£ ['concept_dna'] and culling rewards by killing Space Fauna in combat\n- §G$@primal_calling_fauna_kill_unity_reward|0$§! $r_unity$ and harvest rewards when killing Space Fauna"
  primal_calling_hunt_modifier: "Big Game Hunters"
  primal_calling_hunt_modifier_tt: "$trophy_hunter_common_effect_desc$"
  primal_calling_hunt_bonus_tt: "[GetTrophyHunterContext]\n- $GET_UNIQUE_EDICT$, ['edict:crack_the_whip']"
@@ -783,14 +783,14 @@
  voidworms_titan: "Voidworm Troika"
  voidworms_titan_plural: "Voidworm Troikas"
 
- reanimated_voidworms_small: "Reanimated $voidworms_small$"
- reanimated_voidworms_small_plural: "Reanimated $voidworms_small_plural$"
- reanimated_voidworms_medium: "Reanimated $voidworms_medium$"
- reanimated_voidworms_medium_plural: "Reanimated $voidworms_medium_plural$"
- reanimated_voidworms_large: "Reanimated $voidworms_large$"
- reanimated_voidworms_large_plural: "Reanimated $voidworms_large_plural$"
- reanimated_voidworms_titan: "Reanimated $voidworms_titan$"
- reanimated_voidworms_titan_plural: "Reanimated $voidworms_titan_plural$"
+ reanimated_voidworms_small: "$voidworms_small$"
+ reanimated_voidworms_small_plural: "$voidworms_small_plural$"
+ reanimated_voidworms_medium: "$voidworms_medium$"
+ reanimated_voidworms_medium_plural: "$voidworms_medium_plural$"
+ reanimated_voidworms_large: "$voidworms_large$"
+ reanimated_voidworms_large_plural: "$voidworms_large_plural$"
+ reanimated_voidworms_titan: "$voidworms_titan$"
+ reanimated_voidworms_titan_plural: "$voidworms_titan_plural$"
 
  NAME_Voidworms: "$voidworms_plural$"
  NAME_Voidworms_Starbase: "Voidworm Nest"
@@ -834,6 +834,8 @@
  voidworms_hunting_buff: "$NAME_Voidworms$ Hunter"
  voidworms_hunting_buff_tt: "$mod_damage_vs_country_type_voidworms_mult$: §G+$@hunting_buff_damage_vs_voidworms_mult|0%$§!"
  voidworms_hunting_buff_desc: "Highly rich in nutrients, Voidworm flesh is harvested after every battle, bringing in §G$@voidworms_hunting_buff_food_reward|0$§! £food£ for every fleet destroyed."
+ grand_archive.2005.a.voidwormhunt: "§G+$@voidworms_hunting_buff_food_reward|0$§! £food£ for every Voidworm fleet destroyed"
+
  voidworm_enzymes: "Voidworm Enzymes"
  voidworm_slayers_modifier: "Voidworm Slayers"
  voidworm_slayers_modifier_tt: "$mod_damage_vs_country_type_voidworms_mult$: §G+$@voidworm_slayers_damage_vs_voidworms_mult|0%$§!\n$mod_voidworms_planet_orbital_bombardment_damage$: §G-25%§!\n$mod_country_unity_produces_mult$: §G+10%§!"
@@ -887,7 +889,7 @@
  bombardment_damage_massive: "§RMassive§!"
  bombardment_voidworm_invasion_desc_common: "$bombardment_voidworm_invasion$ destroy population and create new Voidworm Nymphs.\n- §YModerate§! damage to §YArmies§!\n- [GetVoidwormFleetBombardmentDamageIntensity] damage to §YPlanet§! until §Y25%§! devastation\n- §YModerate§! damage to §YPops§!"
  bombardment_voidworm_invasion: "Voidworm Spores"
- bombardment_voidworm_invasion_desc: "$bombardment_voidworm_invasion_desc_common$\n- Will §RNOT§! kill the last §Y$MIN_POPS$§! Pops"
+ bombardment_voidworm_invasion_desc: "$bombardment_voidworm_invasion_desc_common$\n- Will §RNOT§! kill the last §Y$MIN_POPS$§! £pop£ §HPops§!"
  bombardment_voidworm_invasion_crisis: "$bombardment_voidworm_invasion$ (Crisis)"
  bombardment_voidworm_invasion_crisis_desc: "$bombardment_voidworm_invasion_desc_common$"
  bombardment_frenzied_voidworm_invasion: "Mutated $bombardment_voidworm_invasion$"
@@ -1038,12 +1040,12 @@
  cutholoids: "Cutholoid"
  cutholoids_plural: "Cutholoids"
 
- reanimated_cutholoids_hatchling: "Reanimated $cutholoids_hatchling$"
- reanimated_cutholoids_hatchling_plural: "Reanimated $cutholoids_hatchling_plural$"
- reanimated_cutholoids_juvenile: "Reanimated $cutholoids_juvenile$"
- reanimated_cutholoids_juvenile_plural: "Reanimated $cutholoids_juvenile_plural$"
- reanimated_cutholoids: "Reanimated $cutholoids$"
- reanimated_cutholoids_plural: "Reanimated $cutholoids_plural$"
+ reanimated_cutholoids_hatchling: "$cutholoids_hatchling$"
+ reanimated_cutholoids_hatchling_plural: "$cutholoids_hatchling_plural$"
+ reanimated_cutholoids_juvenile: "$cutholoids_juvenile$"
+ reanimated_cutholoids_juvenile_plural: "$cutholoids_juvenile_plural$"
+ reanimated_cutholoids: "$cutholoids$"
+ reanimated_cutholoids_plural: "$cutholoids_plural$"
 
  NAME_Cutholoids_Hatchling: "$cutholoids_hatchling$"
  NAME_Cutholoids_Juvenile: "$cutholoids_juvenile$"
@@ -1117,6 +1119,7 @@
 
  cutholoids_hunting_buff: "Cutholoid Hunter"
  cutholoids_hunting_buff_desc: "The mineral-rich shells of Cutholoids are salvaged after battle, bringing in §G$@cutholoids_hunting_buff_mineral_reward|0$§! £minerals£ for every fleet destroyed."
+ grand_archive.2900.b.cutholoidhunt: "§G+$@cutholoids_hunting_buff_mineral_reward|0$§! £minerals£ for every Cutholoid fleet destroyed"
 
  mod_damage_vs_country_type_cutholoids_mult: "Damage to Cutholoids"
  RESEARCH_CUTHOLOIDS_PROJECT: "Cutholoid Research"
@@ -1157,7 +1160,7 @@
 ###########
 
  REMOVE_SPECIMEN_EFFECT: "Removes ['concept_specimen'] $NAME|Y$"
- GIVE_DNA_EFFECT: "Give $RARITY$ $CATEGORY$ $c_dna$"
+ GIVE_DNA_EFFECT: "Give $RARITY$ $CATEGORY$ £genetic_material£ ['concept_dna']"
  REFRESH_LEADER_POOL_EFFECT: "Refresh Leader Pool"
  CULL_VIVARIUM_FAUNA_EFFECT: "Resources gained from culled fauna in our Vivarium: $RESOURCES$"
  UNLOCK_EXHIBIT_EFFECT: "Display an exhibit"
@@ -1269,13 +1272,13 @@
  CULL: "Cull"
  CULL_SPECIMEN: "Cull Specimen?"
  CULL_SPECIMEN_DESC: "This will destroy the selected creature.\nYou will gain:\n$CULL_RESULT$"
- CULL_SPECIMEN_TT: "The euthanization and subsequent dissection of captured and bred §YSpace Fauna§! allows us to gather research, materials, and $y_dna$."
+ CULL_SPECIMEN_TT: "The euthanization and subsequent dissection of captured and bred §YSpace Fauna§! allows us to gather research, materials, and £genetic_material£ §Y$genetic_material$§!."
  AUTO_CULL: "Auto-Culling"
  AUTO_CULL_SETTINGS: "Auto-Culling Priority"
  AUTO_CULL_TT: "Choose which §YSpace Fauna§! species will be automatically culled for resources when §Y$vivarium$§! Capacity becomes full."
  AUTO_CULL_KEEP_BELOW_REQS: "Do not cull below breeding minimums"
  UNLOCKED_DNA: "$RARITY$ $NAME$ £genetic_material£"
- UNLOCKED_DNA_TT: "$c_dna$ allows us to clone spaceborne organisms for use as military fleets with £society£ ['technology:tech_alien_cloning']. Higher grade space fauna have increased combat statistics, and a higher culling reward."
+ UNLOCKED_DNA_TT: "£genetic_material£ ['concept_dna'] allows us to clone spaceborne organisms for use as military fleets with £society£ ['technology:tech_alien_cloning']. Higher grade space fauna have increased combat statistics, and a higher culling reward."
  CULLING_STAT_LABEL: "Culling: "
  RARITY_TYPE_SUFFIX: " ($RARITY$)"
 
@@ -1289,11 +1292,11 @@
  CRITTER_CATEGORY_CULL_REWARD_TT: "Culling reward: $RESOURCE|H$"
 
  MESSAGE_NEW_GENETIC_MATERIAL_TITLE: "New Genetic Material Acquired"
- MESSAGE_NEW_GENETIC_MATERIAL_DESC: "We have obtained $RARITY$ $CATEGORY$ $w_dna$."
+ MESSAGE_NEW_GENETIC_MATERIAL_DESC: "We have obtained $RARITY$ $CATEGORY$ £genetic_material£ $genetic_material$."
  VIVARIUM_CRITTER_NOTIFICATION_ENTRY: " - $RARITY$ §Y$CATEGORY$§!"
 
  CULLING_RESOURCES_GAINED: "Resources gained:"
- RESOURCES_GAINED_TT: "Cull §YSpace Fauna§! in order to gain research, resources and new $y_dna$ for cloning them in §YHatcheries§!."
+ RESOURCES_GAINED_TT: "Cull §YSpace Fauna§! in order to gain research, resources and new £genetic_material£ §Y$genetic_material$§! for cloning them in §YHatcheries§!."
  LAST_YEAR_SUMMARY: "Last Year: $RESOURCES$"
  LAST_MONTH_SUMMARY: "Last Month: $RESOURCES$"
  LAST_YEAR_CULLED_TT: "The total amount of resources gained from culling §YSpace Fauna§! in the last year."
@@ -1306,7 +1309,7 @@
 ############
  sm_hatchery: "Hatchery"
  sm_hatchery_plural: "Hatcheries"
- sm_hatchery_desc: "Hatcheries incubate §YSpace Fauna§! $c_dna$ we have collected and produce viable new specimens under our control. We can produce more powerful creatures by collecting more advanced genetic samples with our ['technology:tech_gravity_wells', £physics£$tech_gravity_wells$]."
+ sm_hatchery_desc: "Hatcheries incubate §YSpace Fauna§! £genetic_material£ ['concept_dna'] we have collected and produce viable new specimens under our control. We can produce more powerful creatures by collecting more advanced genetic samples with our ['technology:tech_gravity_wells', £physics£$tech_gravity_wells$]."
  shatchery: "$sm_hatchery$"
 
  sm_orbital_ring_hatchery: "Orbital Hatchery"
@@ -1317,9 +1320,9 @@
  STARBASE_HATCHERY_CAPACITY: "Hatcheries: $COUNT|Y$"
  STARBASE_HATCHERY_CAPACITY_DESC: "The amount of Hatcheries controls how many creatures the Starbase can clone in parallel."
  OUTLINER_STARBASE_HATCHERY_CONSTRUCTION: "Hatchery Cloning"
- STARBASE_CRITTERS: "Creatures"
+ STARBASE_CRITTERS: "Creature Designs"
  HATCHERY_QUEUE: "$sm_hatchery$ Queue"
- STARBASE_OPEN_CREATURE_DESIGNS: "Open Creature Designs"
+ STARBASE_OPEN_CREATURE_DESIGNS: "Creature Designs"
 
 #############
 # Beastport #
@@ -1890,7 +1893,7 @@
  civic_corporate_beastmasters_desc: "Originally an elite guild of animal ranchers, this Megacorporation has developed the technology to raise and care for the voidborne creatures in its home system."
 
  civic_beastmasters_common_effects_1: "- $ADDITONAL_TECHNOLOGIES_STRING$$TABBED_NEW_LINE$- ['technology:tech_gravity_wells', £physics£$tech_gravity_wells$]$TABBED_NEW_LINE$- ['technology:tech_alien_cloning', £society£$tech_alien_cloning$]\n- $AVAILABLE_STARBASE_BUILDINGS$ ['concept_beastport', Beastports]\n- $HOME_SYSTEM$ Start with a ['concept_beastport']\n- Starting corvettes are replaced with Space Amoebas"
- civic_beastmasters_common_effects_2: "- Starting $c_dna$:$TABBED_NEW_LINE$- §0Common§! Space Amoeba"
+ civic_beastmasters_common_effects_2: "- Starting £genetic_material£ ['concept_dna']:$TABBED_NEW_LINE$- §0Common§! Space Amoeba"
  civic_beastmasters_effects: "$civic_beastmasters_common_effects_1$\n$civic_beastmasters_common_effects_2$"
  civic_cordyceptic_beastmasters_effects: "$civic_beastmasters_common_effects_1$$TABBED_NEW_LINE$- Will start with §YCloned Space Amoeba§! instead of §YUndead Space Amoeba§!\n$civic_beastmasters_common_effects_2$"
 
@@ -2173,7 +2176,7 @@
 
  TREASURE_HUNTERS_EXHIBITION_PROJECT: "Exhibition Enhancement Blueprint"
  TREASURE_HUNTERS_EXHIBITION_PROJECT_DESC: "Alongside the Ytterite specimen, we discovered an advanced design for a complex display cabinet that would aid in its preservation.\n\nResearching the techniques used in this blueprint will likely aid future conservation and exhibition efforts."
- TREASURE_HUNTERS_EXHIBITION_PROJECT_TOOLTIP: "Use a §YConstruction Ship§! to build a §YGrand Archive§! around a planet with 25 or more §Y$pops_with_icon$§!.\nRequires: §H£society_research£$tech_galactic_archivism$§!."
+ TREASURE_HUNTERS_EXHIBITION_PROJECT_TOOLTIP: "Use a §YConstruction Ship§! to build a §YGrand Archive§! around a planet with 2.5K or more £pop£ §HPops§!.\nRequires: §H£society_research£$tech_galactic_archivism$§!."
 
  grand_archive.8080.name: "Exhibition Enhancement"
  grand_archive.8080.desc: "After careful analysis of the Ytterite blueprint, we have constructed an advanced containment unit with precise atmospheric monitoring down to the atom. This would allow curators to monitor the atmospheric conditions of the delicate Ytterite specimen on a highly detailed level and detect any warning signs of potential decay. It will be just as it was, forever.\n\nWe can apply these techniques to further improve the storage conditions of every item in our collection."
@@ -2506,7 +2509,7 @@
  grand_archive.8520.a.default: "Execute the traitors."
  grand_archive.8520.a.machine: "Deactivate the deviant units."
  grand_archive.8520.a.hive: "Eliminate the deviant drones."
- grand_archive.8520.a.tt: "A £pop£ Pop is killed in every populated planet."
+ grand_archive.8520.a.tt: "§R100§! £pop£ §HPops§! are killed in every populated planet."
  grand_archive.8520.b.default: "Re-educate the traitors."
  grand_archive.8520.b.machine: "Reprogram the deviant units."
  grand_archive.8520.b.hive: "Re-assimilate deviant drones."
@@ -2775,6 +2778,8 @@
  grand_archive.10007.desc: "$unique_mutation_project_unlock_desc$"
  grand_archive.10008.name: "$cutholoid_UNIQUE_MUTATION_PROJECT$"
  grand_archive.10008.desc: "$unique_mutation_project_unlock_desc$"
+ grand_archive.10009.name: "$crystalline_entity_UNIQUE_MUTATION_PROJECT$"
+ grand_archive.10009.desc: "$unique_mutation_project_unlock_desc$"
 
  grand_archive.10010.name: "Space Amoeba Mutation Project Completed"
  grand_archive.10010.desc: "Our experimental mutation project on §YSpace Amoebas§! is complete, and has yielded some interesting new organelles: deployable §Y$tech_unique_mutation_space_amoeba$§!.\n\nThese symbiotic organisms are able to drain energy from nearby objects and return it to its host, enhancing survivability and regeneration."

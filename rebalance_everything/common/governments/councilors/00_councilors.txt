@@ -342,7 +342,6 @@ councilor_corporate_dominion = {
 	}
 	civic = civic_corporate_dominion
 	modifier = {
-		trade_value_mult = 0.02
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -654,6 +653,9 @@ councilor_merchant_guilds = {
 		leader_class = official
 	}
 	civic = civic_merchant_guilds
+	modifier = {
+		planet_jobs_trade_produces_mult = 0.04
+	}
 	custom_tooltip = "councilor_merchant_guilds_custom_modifier_desc"
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -906,7 +908,10 @@ councilor_toxic_baths = {
 		}
 	}
 	civic = civic_toxic_baths
-	custom_tooltip = "councilor_toxic_baths_custom_modifier_desc"
+
+	modifier = {
+		planet_doctors_unity_produces_add = @councilor_toxic_baths_attendant_unity
+	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
 	}
@@ -1043,7 +1048,6 @@ councilor_crusader_spirit_corporate = {
 	civic = civic_crusader_spirit_corporate
 	modifier = {
 		ship_fire_rate_mult = 0.01
-		local_trade_protection_add = 1
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -1103,6 +1107,10 @@ councilor_corporate_anglers = {
 		leader_class = official
 	}
 	civic = civic_corporate_anglers
+	modifier = {
+		planet_anglers_trade_produces_mult = 0.02
+		planet_pearl_divers_trade_produces_mult = 0.04
+	}
 	custom_tooltip = "councilor_corporate_anglers_custom_modifier_desc"
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -1173,6 +1181,9 @@ councilor_corporate_hedonism = {
 		}
 	}
 	civic = civic_corporate_hedonism
+	modifier = {
+		planet_jobs_trade_produces_add = @councilor_corporate_hedonism_entertainer_trade_value
+	}
 	custom_tooltip = "councilor_corporate_hedonism_custom_modifier_desc"
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -1222,7 +1233,9 @@ councilor_corporate_toxic_baths = {
 		}
 	}
 	civic = civic_corporate_toxic_baths
-	custom_tooltip = "councilor_toxic_baths_custom_modifier_desc"
+	modifier = {
+		planet_doctors_unity_produces_add = @councilor_toxic_baths_attendant_unity
+	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
 	}
@@ -1278,7 +1291,6 @@ councilor_free_traders = {
 	}
 	civic = civic_free_traders
 	modifier = {
-		commercial_pact_mult = 0.02
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -1447,6 +1459,9 @@ councilor_worker_coop = {
 		}
 	}
 	civic = civic_worker_coop
+	modifier = {
+		planet_administrators_trade_produces_add = 0.25
+	}
 	custom_tooltip = "councilor_worker_coop_custom_modifier_desc"
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights

@@ -339,6 +339,7 @@ cyber_creed_labor = {
 
 			effect = {
 				add_modifier = { modifier = embraced_faction days = 3600 }
+				owner = { owner = { set_country_flag = has_embraced_faction } }
 				parameter:empire = {
 					shift_ethic = ethic_spiritualist
 					hidden_effect = {
@@ -407,6 +408,7 @@ cyber_creed_labor = {
 			}
 
 			effect = {
+				owner = { set_country_flag = has_promoted_faction }
 				parameter:empire = {
 					add_modifier = { modifier = promoted_spiritualist days = -1 }
 				}
@@ -873,6 +875,7 @@ cyber_creed_war = {
 
 			effect = {
 				add_modifier = { modifier = embraced_faction days = 3600 }
+				owner = { set_country_flag = has_embraced_faction }
 				parameter:empire = {
 					shift_ethic = ethic_spiritualist
 					hidden_effect = {
@@ -941,6 +944,7 @@ cyber_creed_war = {
 			}
 
 			effect = {
+				owner = { set_country_flag = has_promoted_faction }
 				parameter:empire = {
 					add_modifier = { modifier = promoted_spiritualist days = -1 }
 				}
@@ -1407,6 +1411,7 @@ cyber_creed_construction = {
 
 			effect = {
 				add_modifier = { modifier = embraced_faction days = 3600 }
+				owner = { set_country_flag = has_embraced_faction }
 				parameter:empire = {
 					shift_ethic = ethic_spiritualist
 					hidden_effect = {
@@ -1475,6 +1480,7 @@ cyber_creed_construction = {
 			}
 
 			effect = {
+				owner = { set_country_flag = has_promoted_faction }
 				parameter:empire = {
 					add_modifier = { modifier = promoted_spiritualist days = -1 }
 				}
@@ -1944,6 +1950,7 @@ cyber_creed_research = {
 
 			effect = {
 				add_modifier = { modifier = embraced_faction days = 3600 }
+				owner = { set_country_flag = has_embraced_faction }
 				parameter:empire = {
 					shift_ethic = ethic_spiritualist
 					hidden_effect = {
@@ -2012,6 +2019,7 @@ cyber_creed_research = {
 			}
 
 			effect = {
+				owner = { set_country_flag = has_promoted_faction }
 				parameter:empire = {
 					add_modifier = { modifier = promoted_spiritualist days = -1 }
 				}
@@ -2337,6 +2345,7 @@ cyber_creed_general = {
 
 			effect = {
 				add_modifier = { modifier = embraced_faction days = 3600 }
+				owner = { set_country_flag = has_embraced_faction }
 				parameter:empire = {
 					shift_ethic = ethic_spiritualist
 					hidden_effect = {
@@ -2405,6 +2414,7 @@ cyber_creed_general = {
 			}
 
 			effect = {
+				owner = { set_country_flag = has_promoted_faction }
 				parameter:empire = {
 					add_modifier = { modifier = promoted_spiritualist days = -1 }
 				}
@@ -2864,6 +2874,7 @@ cyber_creed_labor_2 = {
 
 			effect = {
 				add_modifier = { modifier = embraced_faction days = 3600 }
+				owner = { set_country_flag = has_embraced_faction }
 				parameter:empire = {
 					shift_ethic = ethic_spiritualist
 					hidden_effect = {
@@ -2932,6 +2943,7 @@ cyber_creed_labor_2 = {
 			}
 
 			effect = {
+				owner = { set_country_flag = has_promoted_faction }
 				parameter:empire = {
 					add_modifier = { modifier = promoted_spiritualist days = -1 }
 				}
@@ -3395,6 +3407,7 @@ cyber_creed_war_2 = {
 
 			effect = {
 				add_modifier = { modifier = embraced_faction days = 3600 }
+				owner = { set_country_flag = has_embraced_faction }
 				parameter:empire = {
 					shift_ethic = ethic_spiritualist
 					hidden_effect = {
@@ -3463,6 +3476,7 @@ cyber_creed_war_2 = {
 			}
 
 			effect = {
+				owner = { set_country_flag = has_promoted_faction }
 				parameter:empire = {
 					add_modifier = { modifier = promoted_spiritualist days = -1 }
 				}
@@ -3926,6 +3940,7 @@ cyber_creed_construction_2 = {
 
 			effect = {
 				add_modifier = { modifier = embraced_faction days = 3600 }
+				owner = { set_country_flag = has_embraced_faction }
 				parameter:empire = {
 					shift_ethic = ethic_spiritualist
 					hidden_effect = {
@@ -3994,6 +4009,7 @@ cyber_creed_construction_2 = {
 			}
 
 			effect = {
+				owner = { set_country_flag = has_promoted_faction }
 				parameter:empire = {
 					add_modifier = { modifier = promoted_spiritualist days = -1 }
 				}
@@ -4460,6 +4476,7 @@ cyber_creed_research_2 = {
 
 			effect = {
 				add_modifier = { modifier = embraced_faction days = 3600 }
+				owner = { set_country_flag = has_embraced_faction }
 				parameter:empire = {
 					shift_ethic = ethic_spiritualist
 					hidden_effect = {
@@ -4528,6 +4545,7 @@ cyber_creed_research_2 = {
 			}
 
 			effect = {
+				owner = { set_country_flag = has_promoted_faction }
 				parameter:empire = {
 					add_modifier = { modifier = promoted_spiritualist days = -1 }
 				}

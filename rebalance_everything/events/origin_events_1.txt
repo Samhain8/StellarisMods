@@ -2390,15 +2390,15 @@ planet_event = {
 			else_if = {
 				limit = {
 					owner = { num_owned_planets > 1 }
-					num_pops >= 20
+					pop_amount >= 2000
 				}
 				set_planet_flag = doomsday_lost_many_pops
 			}
 			else_if = {
 				limit = {
 					owner = { num_owned_planets > 1 }
-					num_pops <= 19
-					num_pops > 0
+					pop_amount < 2000
+					pop_amount > 0
 				}
 				set_planet_flag = doomsday_lost_some_pops
 			}
@@ -2451,7 +2451,6 @@ planet_event = {
 				}
 			}
 		}
-		every_owned_pop = { kill_pop = yes }
 		remove_modifier = doomsday_5
 		destroy_colony = yes
 		change_pc = pc_shattered
@@ -2664,6 +2663,18 @@ country_event = {
 	option = {
 		name = origin_90.a
 	}
+	after = {
+		save_event_target_as = this_country
+		add_timeline_event = {
+			type = timeline_origin_specific
+			override_id = timeline_doomsday_homeworld_destroyed
+			override_tooltip = "TIMELINE_EVENT_DOOMSDAY_TOOLTIP"
+			override_types = { }
+			override_text = { "text:TIMELINE_EVENT_DOOMSDAY" }
+			override_texture = { "background:GFX_origin_doomsday" }
+			targets = { }
+		}
+	}
 }
 
 # Doomsday - Neighbors Informed, Planet Completely Evacuated
@@ -2769,7 +2780,7 @@ country_event = {
 				set_star_flag = broken_shackles_system
 			}
 			while = {
-				limit = { num_pops < 28 }
+				limit = { pop_amount < 4800 }
 				if = {
 					limit = {
 						any_country = {
@@ -2814,9 +2825,8 @@ country_event = {
 							set_awareness = 75
 						}
 					}
-					create_pop = {
+					create_pop_group = {
 						species = event_target:random_primitive_species
-						ethos = random
 					}
 				}
 			}
@@ -2839,7 +2849,7 @@ country_event = {
 			set_council_position_to_council = councilor_state
 		}
 
-		random_owned_pop = {
+		weighted_random_owned_pop_group = {
 			species = {
 				save_event_target_as = researcher_species
 			}
@@ -2853,9 +2863,20 @@ country_event = {
 			}
 		}
 
-		random_owned_pop = {
+		weighted_random_owned_pop_group = {
 			species = {
 				save_event_target_as = defense_species
+			}
+			weights = {
+				base = 1
+				modifier = {
+					add = 100
+					species = {
+						NOT = {
+							is_same_value = event_target:researcher_species
+						}
+					}
+				}
 			}
 		}
 		create_leader = {
@@ -2867,9 +2888,22 @@ country_event = {
 			}
 		}
 
-		random_owned_pop = {
+		weighted_random_owned_pop_group = {
 			species = {
 				save_event_target_as = state_species
+			}
+
+			weights = {
+				base = 1
+				modifier = {
+					add = 100
+					species = {
+						NOR = {
+							is_same_value = event_target:researcher_species
+							is_same_value = event_target:defense_species
+						}
+					}
+				}
 			}
 		}
 		create_leader = {
@@ -2941,10 +2975,9 @@ country_event = {
 		# Safety pops in case there are literally no other primitives in the galaxy
 		capital_scope = {
 			while = {
-				limit = { num_pops < 28 }
-				create_pop = {
+				limit = { pop_amount < 2800 }
+				create_pop_group = {
 					species = owner_main_species
-					ethos = random
 				}
 			}
 			check_planet_employment = yes

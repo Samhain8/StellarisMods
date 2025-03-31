@@ -3,10 +3,14 @@
 ###################
 head_researcher = {
 	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	building_icon = building_institute
-	clothes_texture_index = 1
-	icon = researcher
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_institute
+			icon = researcher
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -53,9 +57,12 @@ head_researcher = {
 	}
 
 	triggered_country_modifier = {
-		modifier = {
-			country_naval_cap_add = 1
+		potential = {
+			local_or_sector_governor_has_trait = {
+				TRAIT = leader_trait_academia_recruiter
+			}
 		}
+		country_naval_cap_add = 1
 		mult = planet.modifier:job_researcher_naval_cap_add
 	}
 
@@ -64,7 +71,7 @@ head_researcher = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 3
+		planet_amenities_add = 300
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -81,10 +88,6 @@ head_researcher = {
 		modifier = {
 			factor = 2
 			has_living_standard = { type = living_standard_academic_privilege }
-		}
-		modifier = {
-			factor = 5
-			has_job = head_researcher
 		}
 		modifier = {
 			factor = 0.01
@@ -108,9 +111,13 @@ head_researcher = {
 
 high_priest = {
 	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	building_icon = building_citadel_of_faith
-	clothes_texture_index = 1
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_citadel_of_faith
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -139,17 +146,8 @@ high_priest = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 3
+		planet_amenities_add = 300
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_councilor = { COUNCILOR = "councilor_dimensional_worship_corporate" } }
-		}
-		trade_value_add = @councilor_dimensional_worship_priest_trade_value
-		mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_trade_mult|TYPE|councilor_dimensional_worship_corporate|
 	}
 
 	weight = {
@@ -160,10 +158,6 @@ high_priest = {
 			factor = 0.1
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
-		}
-		modifier = {
-			factor = 5
-			has_job = high_priest
 		}
 		# crisis purge
 		modifier = {
@@ -184,10 +178,14 @@ high_priest = {
 
 politician = {
 	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	building_icon = building_capital
-	clothes_texture_index = 1
-	icon = administrator
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_capital
+			icon = administrator
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -207,15 +205,18 @@ politician = {
 		upkeep = {
 			consumer_goods = 2
 		}
+		inline_script = "output/politician_output"
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 3
+		planet_amenities_add = 300
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
+
+	inline_script = "output/politician_output_modifier"
 
 	weight = {
 		weight = @ruler_job_weight
@@ -225,10 +226,6 @@ politician = {
 			factor = 0.1
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
-		}
-		modifier = {
-			factor = 5
-			has_job = politician
 		}
 		# crisis purge
 		modifier = {
@@ -249,9 +246,13 @@ politician = {
 
 noble = {
 	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	building_icon = building_palace
-	clothes_texture_index = 1
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_palace
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -281,7 +282,7 @@ noble = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 3
+		planet_amenities_add = 300
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -293,10 +294,6 @@ noble = {
 			factor = 0.1
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
-		}
-		modifier = {
-			factor = 5
-			has_job = noble
 		}
 		# crisis purge
 		modifier = {
@@ -324,9 +321,13 @@ noble = {
 
 merchant = {
 	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	building_icon = building_galactic_stock_exchange
-	clothes_texture_index = 1
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_galactic_stock_exchange
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -340,6 +341,9 @@ merchant = {
 
 	resources = {
 		category = planet_merchants
+		produces = {
+			trade = 12
+		}
 		upkeep = {
 			consumer_goods = 2
 		}
@@ -349,38 +353,27 @@ merchant = {
 		potential = {
 			always = yes
 		}
-		trade_value_add = 12
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			always = yes
-		}
-		planet_amenities_add = 3
+		planet_amenities_add = 300
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				has_valid_civic = civic_augmentation_bazaars
-			}
-		}
-		trade_value_mult = 0.01
-		pop_growth_speed = 0.005
-		mult = value:num_cyborg_traits_species
-	}
+# Markus
+#	triggered_planet_modifier = {
+#		potential = {
+#			exists = owner
+#			owner = {
+#				has_valid_civic = civic_augmentation_bazaars
+#			}
+#		}
+#		planet_jobs_trade_produces_mult = 0.01
+#		pop_growth_speed = 0.005
+#		mult = value:num_cyborg_traits_species
+#	}
 
 	weight = {
 		weight = @ruler_job_weight
+		mult = value:job_weights_modifier|JOB|merchant|RESOURCE|trade|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
-		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_trade_mult|
-		modifier = {
-			factor = 5
-			has_job = merchant
-		}
 		# crisis purge
 		modifier = {
 			factor = 0.01
@@ -407,9 +400,13 @@ merchant = {
 
 executive = {
 	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	building_icon = building_capital
-	clothes_texture_index = 1
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_capital
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -425,6 +422,7 @@ executive = {
 		category = planet_executives
 		produces = {
 			unity = 5
+			trade = 4
 		}
 		upkeep = {
 			consumer_goods = 2
@@ -436,27 +434,14 @@ executive = {
 		potential = {
 			always = yes
 		}
-		trade_value_add = 4
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			always = yes
-		}
-		planet_amenities_add = 3
+		planet_amenities_add = 300
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
 	weight = {
 		weight = @ruler_job_weight
-		mult = value:job_weights_modifier|JOB|executive|RESOURCE|unity|
+		mult = value:job_weights_multiple_resources_modifier|JOB|executive|RESOURCE1|unity|WEIGHT1|0.5|RESOURCE2|trade|WEIGHT2|0.5|
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
-		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_trade_mult|
-		modifier = {
-			factor = 5
-			has_job = executive
-		}
 		# crisis purge
 		modifier = {
 			factor = 0.01
@@ -483,9 +468,13 @@ executive = {
 
 knight_commander = {
 	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	building_icon = building_order_keep
-	clothes_texture_index = 1
+
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_order_keep
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -536,7 +525,7 @@ knight_commander = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 5
+		planet_amenities_add = 500
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -555,10 +544,13 @@ knight_commander = {
 
 warden = {
 	category = ruler
-	condition_string = RULER_JOB_TRIGGER
-	building_icon = building_capital
-	clothes_texture_index = 1
-	icon = enforcer
+	swappable_data = {
+		default = {
+			condition_string = RULER_JOB_TRIGGER
+			building_icon = building_capital
+			icon = enforcer
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -585,7 +577,7 @@ warden = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 3
+		planet_amenities_add = 300
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -598,10 +590,7 @@ warden = {
 			has_citizenship_rights = no
 			NOT = { has_trait = trait_mechanical }
 		}
-		modifier = {
-			factor = 5
-			has_job = politician
-		}
+
 		# crisis purge
 		modifier = {
 			factor = 0.01

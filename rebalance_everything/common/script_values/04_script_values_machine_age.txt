@@ -333,19 +333,6 @@ crisobj_thesis_value_bonus = {
 	add = 3500
 }
 
-augmentor_trade_value = {
-	base = 0
-	add = owner.modifier:job_augmentor_trade_value_add
-	# We want to inherit the bonuses from the branch office owner if they exist as well.
-	modifier = {
-		planet = {
-			has_branch_office = yes
-		}
-		add = planet.branch_office_owner.modifier:job_augmentor_trade_value_add
-	}
-	mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
-}
-
 roboticist_branch_office_value_mult = {
 	base = 0
 	add = planet.modifier:job_roboticist_branch_office_value_mult

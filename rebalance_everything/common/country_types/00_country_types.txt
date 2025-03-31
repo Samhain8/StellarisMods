@@ -152,7 +152,6 @@ default = {
 		standard_leader_module = {}
 		standard_diplomacy_module = { contact_rule = does_first_contact_sites }
 		standard_technology_module = {}
-		standard_trade_routes_module = {}
 		standard_pop_factions_module = {}
 		standard_expansion_module = {}
 		standard_species_rights_module = {}
@@ -178,7 +177,7 @@ default = {
 					has_valid_civic = civic_machine_servitor
 				}
 			}
-			consumer_goods = 10
+			consumer_goods = 15
 		}
 		produces = {
 			trigger = {
@@ -209,7 +208,7 @@ default = {
 					}
 				}
 			}
-			food = 10
+			food = 20
 		}
 		produces = {
 			trigger = {
@@ -238,21 +237,21 @@ default = {
 					}
 				}
 			}
-			minerals = 10
+			minerals = 20
 		}
 		produces = {
 			trigger = {
 				is_machine_empire = yes
 			}
-			energy = 10
+			energy = 20
 		}
 		produces = {
 			trigger = {
 				is_lithoid_empire = yes
 				has_valid_civic = civic_hive_cordyceptic_drones
 			}
-			food = 5
-			minerals = -5
+			food = 10
+			minerals = -10
 		}
 	}
 
@@ -870,7 +869,6 @@ rebel = {
 			contact_rule = on_action_only
 		}
 		standard_technology_module = {}
-		standard_trade_routes_module = {}
 		#standard_species_rights_module = {}
 	}
 }

@@ -4,6 +4,7 @@
 
 building_hydroponics_farm = {
 	base_buildtime = @b1_time
+	base_cap_amount = 1
 	category = resource
 	potential = {
 		exists = owner
@@ -38,11 +39,11 @@ building_hydroponics_farm = {
 			}
 		}
 	}
-	inline_script = {
-		script = jobs/farmers_add
-		FARMER_AMOUNT = 3
-		ANGLER_AMOUNT = 2
+
+	planet_modifier = {
+		planet_farmers_food_produces_add = 2
 	}
+
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -95,14 +96,14 @@ building_food_processing_facility = {
 		}
 	}
 
-	inline_script = {
-		script = jobs/farmers_add
-		FARMER_AMOUNT = 1
-		ANGLER_AMOUNT = 1
+	planet_modifier = {
+		planet_farmers_produces_mult = 0.20
 	}
 
-	planet_modifier = {
-		planet_farmers_food_produces_add = 1
+	inline_script = {
+		script = jobs/farmers_add
+		FARMER_AMOUNT = @building_static_jobs
+		ANGLER_AMOUNT = @building_static_jobs
 	}
 
 	resources = {
@@ -126,7 +127,7 @@ building_food_processing_facility = {
 
 building_food_processing_center = {
 	base_buildtime = @b2_time
-	can_build = no
+	base_cap_amount = 1
 	category = resource
 
 	allow = {
@@ -157,22 +158,7 @@ building_food_processing_center = {
 	}
 
 	planet_modifier = {
-		planet_farmers_food_produces_add = 2
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			has_ringworld_output_boost = yes
-		}
-		modifier = {
-			planet_farmers_food_produces_add = 2
-		}
-	}
-
-	inline_script = {
-		script = jobs/farmers_add
-		FARMER_AMOUNT = 2
-		ANGLER_AMOUNT = 2
+		pop_farmer_bonus_workforce_mult = 0.16
 	}
 
 	resources = {
@@ -279,12 +265,6 @@ building_baol_organic_plant = {
 		planet_farmers_energy_produces_add = 1
 	}
 
-	inline_script = {
-		script = jobs/farmers_add
-		FARMER_AMOUNT = 2
-		ANGLER_AMOUNT = 2
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -358,12 +338,7 @@ building_mineral_purification_plant = {
 	}
 
 	planet_modifier = {
-		planet_miners_minerals_produces_add = 1
-	}
-
-	inline_script = {
-		script = jobs/miners_add
-		AMOUNT = 1
+		planet_miners_produces_mult = 0.20
 	}
 
 	triggered_planet_modifier = {
@@ -407,10 +382,6 @@ building_mineral_purification_plant = {
 	prerequisites = {
 		tech_mineral_purification_1
 	}
-
-	upgrades = {
-		building_mineral_purification_hub
-	}
 }
 
 building_mineral_purification_hub = {
@@ -426,7 +397,7 @@ building_mineral_purification_hub = {
 	}
 
 	base_buildtime = @b2_time
-	can_build = no
+	base_cap_amount = 1
 	category = resource
 
 	allow = {
@@ -478,9 +449,8 @@ building_mineral_purification_hub = {
 		}
 	}
 
-	inline_script = {
-		script = jobs/miners_add
-		AMOUNT = 2
+	planet_modifier = {
+		pop_miner_bonus_workforce_mult = 0.16
 	}
 
 	triggered_planet_modifier = {
@@ -591,12 +561,7 @@ building_energy_grid = {
 	}
 
 	planet_modifier = {
-		planet_technician_energy_produces_add = 1
-	}
-
-	inline_script = {
-		script = jobs/technicians_add
-		AMOUNT = 1
+		planet_technician_produces_mult = 0.20
 	}
 
 	triggered_planet_modifier = {
@@ -639,15 +604,11 @@ building_energy_grid = {
 	prerequisites = {
 		tech_power_hub_1
 	}
-
-	upgrades = {
-		building_energy_nexus
-	}
 }
 
 building_energy_nexus = {
 	base_buildtime = @b2_time
-	can_build = no
+	base_cap_amount = 1
 	category = resource
 
 	allow = {
@@ -680,9 +641,8 @@ building_energy_nexus = {
 		}
 	}
 
-	inline_script = {
-		script = jobs/technicians_add
-		AMOUNT = 2
+	planet_modifier = {
+		pop_technician_bonus_workforce_mult = 0.16
 	}
 
 	triggered_planet_modifier = {
@@ -776,25 +736,6 @@ building_resource_silo = {
 		}
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_regular_empire = yes }
-		}
-		modifier = {
-			job_clerk_add = 1
-		}
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		modifier = {
-			job_maintenance_drone_add = 1
-		}
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -821,21 +762,6 @@ building_resource_silo = {
 
 	prerequisites = {
 		"tech_basic_industry"
-	}
-
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = yes }
-		}
-		text = job_maintenance_drone_effect_desc
-	}
-	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_gestalt = no }
-		}
-		text = job_clerk_effect_desc
 	}
 }
 
@@ -888,12 +814,6 @@ building_bio_reactor = {
 		}
 	}
 
-	inline_script = {
-		script = jobs/farmers_add
-		FARMER_AMOUNT = 1
-		ANGLER_AMOUNT = 1
-	}
-
 	planet_modifier = {
 		planet_farmers_food_produces_add = -2
 		planet_farmers_energy_produces_add = 2
@@ -923,7 +843,6 @@ building_bio_reactor_2 = {
 			is_planet_class = pc_machine
 			has_modifier = resort_colony
 		}
-
 		OR = {
 			owner = {
 				is_ai = no
@@ -960,12 +879,6 @@ building_bio_reactor_2 = {
 		}
 	}
 
-	inline_script = {
-		script = jobs/farmers_add
-		FARMER_AMOUNT = 2
-		ANGLER_AMOUNT = 2
-	}
-
 	planet_modifier = {
 		planet_farmers_food_produces_add = -3
 		planet_farmers_energy_produces_add = 2
@@ -973,6 +886,6 @@ building_bio_reactor_2 = {
 	}
 
 	prerequisites = {
-		tech_bio_reactor_2
+		"tech_bio_reactor_2"
 	}
 }

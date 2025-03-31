@@ -578,7 +578,10 @@ orbital_arc_furnace_4 = {
 	}
 	on_build_complete = {
 		remove_star_flag = arc_furnace_construction
-		from = { country_event = { id = cybernetics.1015 } }
+		from = {
+			country_event = { id = cybernetics.1015 }
+			country_event = { id = focus.535 }
+		}
 		if = {
 			limit = {
 				any_system_megastructure = {

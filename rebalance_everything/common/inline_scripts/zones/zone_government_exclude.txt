@@ -1,0 +1,27 @@
+exclude = {
+	building_hydroponics_farm
+	building_food_processing_facility
+	building_food_processing_center
+	building_baol_organic_plant
+	building_bio_reactor
+	building_bio_reactor_2
+	building_mineral_purification_plant
+	building_mineral_purification_hub
+	building_resource_silo
+	building_energy_grid
+	building_energy_nexus
+	building_betharian_power_plant
+	building_low_tech_power_plant
+	building_foundry_1
+	building_foundry_2
+	building_foundry_3
+	building_automation_1
+	building_factory_1
+	building_factory_2
+	building_factory_3
+	building_automation_1
+	building_primitive_factory
+	building_primitive_offices
+	building_primitive_research
+	building_order_keep
+}

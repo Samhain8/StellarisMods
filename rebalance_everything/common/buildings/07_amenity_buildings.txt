@@ -3,7 +3,7 @@
 #############
 building_luxury_residence = {
 	base_buildtime = @b1_time
-
+	base_cap_amount = 1
 	category = amenity
 
 	potential = {
@@ -16,9 +16,9 @@ building_luxury_residence = {
 				}
 			}
 		}
-		NOR = {	
-			has_modifier = slave_colony	
-			has_modifier = penal_colony	
+		NOR = {
+			has_modifier = slave_colony
+			has_modifier = penal_colony
 		}
 		exists = owner
 		owner = {
@@ -52,8 +52,8 @@ building_luxury_residence = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 3
-		planet_amenities_add = 5
+		planet_housing_add = 3000
+		planet_amenities_add = 2500
 	}
 
 	triggered_planet_modifier = {
@@ -64,7 +64,7 @@ building_luxury_residence = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 100
 		}
 	}
 
@@ -100,9 +100,9 @@ building_paradise_dome = {
 				}
 			}
 		}
-		NOR = {	
-			has_modifier = slave_colony	
-			has_modifier = penal_colony	
+		NOR = {
+			has_modifier = slave_colony
+			has_modifier = penal_colony
 		}
 	}
 
@@ -127,8 +127,8 @@ building_paradise_dome = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 6
-		planet_amenities_add = 10
+		planet_housing_add = 6000
+		planet_amenities_add = 5000
 	}
 
 	triggered_planet_modifier = {
@@ -139,7 +139,7 @@ building_paradise_dome = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 100
 		}
 	}
 
@@ -183,9 +183,9 @@ building_communal_housing = {
 				}
 			}
 		}
-		NOR = {	
-			has_modifier = slave_colony	
-			has_modifier = penal_colony	
+		NOR = {
+			has_modifier = slave_colony
+			has_modifier = penal_colony
 		}
 		exists = owner
 		owner = {
@@ -220,8 +220,8 @@ building_communal_housing = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 5
-		planet_amenities_add = 3
+		planet_housing_add = 500
+		planet_amenities_add = 300
 	}
 
 	triggered_planet_modifier = {
@@ -232,7 +232,7 @@ building_communal_housing = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 100
 		}
 	}
 
@@ -274,9 +274,9 @@ building_communal_housing_large = {
 				}
 			}
 		}
-		NOR = {	
-			has_modifier = slave_colony	
-			has_modifier = penal_colony	
+		NOR = {
+			has_modifier = slave_colony
+			has_modifier = penal_colony
 		}
 	}
 
@@ -311,8 +311,8 @@ building_communal_housing_large = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 10
-		planet_amenities_add = 6
+		planet_housing_add = 1000
+		planet_amenities_add = 600
 	}
 
 	triggered_planet_modifier = {
@@ -323,7 +323,7 @@ building_communal_housing_large = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 100
 		}
 	}
 
@@ -379,8 +379,8 @@ building_drone_storage = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 4
-		planet_amenities_add = 3
+		planet_housing_add = 400
+		planet_amenities_no_happiness_add = 300
 	}
 
 	resources = {
@@ -422,8 +422,8 @@ building_drone_megastorage = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 8
-		planet_amenities_add = 6
+		planet_housing_add = 800
+		planet_amenities_no_happiness_add = 600
 	}
 
 	triggered_planet_modifier = {
@@ -434,7 +434,7 @@ building_drone_megastorage = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 100
 		}
 	}
 
@@ -479,8 +479,8 @@ building_hive_warren = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 3
-		planet_amenities_add = 5
+		planet_housing_add = 300
+		planet_amenities_no_happiness_add = 500
 	}
 
 	resources = {
@@ -528,8 +528,8 @@ building_expanded_warren = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 6
-		planet_amenities_add = 10
+		planet_housing_add = 600
+		planet_amenities_no_happiness_add = 1000
 	}
 
 	triggered_planet_modifier = {
@@ -540,7 +540,7 @@ building_expanded_warren = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 100
 		}
 	}
 
@@ -564,17 +564,17 @@ building_expanded_warren = {
 
 building_holo_theatres = {
 	base_buildtime = @b1_time
-
+	base_cap_amount = 1
 	category = amenity
 
 	potential = {
-		NOR = {	
-			has_modifier = slave_colony	
-			has_modifier = penal_colony	
+		NOR = {
+			has_modifier = slave_colony
+			has_modifier = penal_colony
 		}
 		owner = {
 			is_regular_empire = yes
-			NOT = { 
+			NOT = {
 				has_valid_civic = civic_dystopian_society
 			}
 		}
@@ -599,9 +599,12 @@ building_holo_theatres = {
 		}
 	}
 
-	inline_script = {
-		script = jobs/entertainers_add
-		AMOUNT = @b1_jobs
+	allow = {
+	}
+
+	planet_modifier = {
+		planet_entertainers_produces_mult = 0.20
+		pop_job_amenities_mult = 0.20
 	}
 
 	resources = {
@@ -614,8 +617,9 @@ building_holo_theatres = {
 		}
 	}
 
-	upgrades = {
-		"building_hyper_entertainment_forum"
+	inline_script = {
+		script = jobs/entertainers_add
+		AMOUNT = @building_static_jobs
 	}
 
 	prerequisites = {
@@ -625,31 +629,19 @@ building_holo_theatres = {
 
 building_hyper_entertainment_forum = {
 	base_buildtime = @b2_time
-	can_build = no
+	base_cap_amount = 1
 
 	category = amenity
 
-	potential = {
-		has_building = building_holo_theatres
-	}
-
 	allow = {
-		has_upgraded_capital = yes
-		owner = {
-			NOT = { has_valid_civic = civic_dystopian_society }
-		}
-		OR = {
-			owner = {
-				NOT = { is_ai = yes }
+		custom_tooltip = {
+			fail_text = need_amenities_zone
+			planet = {
+				num_zones = {
+					type = zone_amenities
+					value > 0
+				}
 			}
-			AND = {
-				NOT = { has_available_jobs = entertainer }
-				NOT = { has_forbidden_jobs = entertainer }
-			}
-		}
-		NOR = {	
-			has_modifier = slave_colony	
-			has_modifier = penal_colony	
 		}
 	}
 
@@ -662,9 +654,8 @@ building_hyper_entertainment_forum = {
 		}
 	}
 
-	inline_script = {
-		script = jobs/entertainers_add
-		AMOUNT = @b2_jobs
+	planet_modifier = {
+		planet_entertainers_upkeep_mult = -0.20
 	}
 
 	resources = {
@@ -684,8 +675,73 @@ building_hyper_entertainment_forum = {
 	}
 }
 
-building_clinic = {
+building_medical_1 = {
 	base_buildtime = @b1_time
+	base_cap_amount = 1
+	category = amenity
+
+	allow = {
+		NOR = {
+			has_modifier = slave_colony
+			has_modifier = penal_colony
+		}
+		owner = {
+			is_regular_empire = yes
+			is_individual_machine = no
+			NOT = {
+				has_valid_civic = civic_dystopian_society
+			}
+		}
+		OR = {
+			owner = {
+				NOT = { is_ai = yes }
+			}
+			AND = {
+				NOT = { has_available_jobs = entertainer }
+				NOT = { has_forbidden_jobs = entertainer }
+			}
+		}
+		NOT = { has_building = building_low_tech_capital }
+	}
+
+	destroy_trigger = {
+		exists = owner
+		OR = {
+			owner = { is_regular_empire = no }
+			AND = {
+				buildings_stop_pop = yes
+				owner = { is_ai = yes }
+			}
+		}
+	}
+
+	resources = {
+		category = planet_buildings
+		cost = {
+			minerals = @b1_minerals
+		}
+		upkeep = {
+			energy = @b1_upkeep
+		}
+	}
+
+	inline_script = {
+		script = jobs/healthcare_add
+		AMOUNT = @building_static_jobs
+	}
+
+	planet_modifier = {
+		planet_doctors_upkeep_mult = -0.20
+		pop_amenities_usage_organic_mult = -0.10
+	}
+
+	prerequisites = {
+		"tech_basic_health"
+	}
+}
+
+building_medical_2 = {
+	base_buildtime = @b2_time
 	base_cap_amount = 1
 
 	category = amenity
@@ -721,6 +777,10 @@ building_clinic = {
 				}
 			}
 		}
+	}
+
+	allow = {
+		has_building = building_medical_1
 	}
 
 	destroy_trigger = {
@@ -762,7 +822,9 @@ building_clinic = {
 	}
 
 	planet_modifier = {
-		job_healthcare_add = 2
+		# Modifier implmented in /inline_scripts/output/healthcare_triggered_modifiers.txt
+		job_healthcare_pop_growth_speed = @building_medical_2_pop_growth_speed
+		job_healthcare_organic_pop_assembly_mult = @building_medical_2_organic_pop_assembly_mult
 	}
 
 	triggered_planet_modifier = {
@@ -771,12 +833,12 @@ building_clinic = {
 			owner = {
 				has_technology = tech_gene_tailoring
 			}
-			any_owned_pop = {
+			any_owned_pop_group = {
 				has_auto_modding_trait = yes
 			}
 		}
 		modifier = {
-			auto_mod_monthly_add = 1
+			auto_mod_monthly_add = 100
 		}
 	}
 
@@ -786,35 +848,29 @@ building_clinic = {
 			owner = {
 				has_origin = origin_overtuned
 			}
-			any_owned_pop = {
+			any_owned_pop_group = {
 				has_auto_modding_trait = yes
 			}
 		}
 		modifier = {
-			auto_mod_monthly_add = 1
+			auto_mod_monthly_add = 100
 		}
 	}
 
 	resources = {
 		category = planet_buildings
 		cost = {
-			minerals = @b1_minerals
+			minerals = @b2_minerals
+			exotic_gases = @b2_rare_cost
 		}
 		upkeep = {
-			energy = @b1_upkeep
+			energy = @b2_upkeep
+			exotic_gases = @b2_rare_upkeep
 		}
 	}
 
 	prerequisites = {
 		"tech_frontier_health"
-	}
-
-	upgrades = {
-		"building_hospital"
-	}
-
-	triggered_desc = {
-		text = job_healthcare_effect_desc
 	}
 
 	on_destroy = {
@@ -872,17 +928,13 @@ building_clinic = {
 	}
 }
 
-building_hospital = {
-	base_buildtime = @b2_time
-	can_build = no
+building_medical_3 = {
+	base_buildtime = @b3_time
+	base_cap_amount = 1
 
 	category = amenity
 
 	potential = {
-		has_building = building_clinic
-	}
-
-	allow = {
 		has_upgraded_capital = yes
 		OR = {
 			owner = {
@@ -906,6 +958,10 @@ building_hospital = {
 		}
 	}
 
+	allow = {
+		has_building = building_medical_1
+	}
+
 	destroy_trigger = {
 		exists = owner
 		OR = {
@@ -918,7 +974,9 @@ building_hospital = {
 	}
 
 	planet_modifier = {
-		job_healthcare_add = @b2_jobs
+		# Modifier implmented in /inline_scripts/output/healthcare_triggered_modifiers.txt
+		job_healthcare_pop_environment_tolerance = @building_medical_3_environment_tolerance
+		job_healthcare_organics_upkeep_mult = @building_medical_3_organics_upkeep
 	}
 
 	triggered_planet_modifier = {
@@ -927,12 +985,12 @@ building_hospital = {
 			owner = {
 				has_technology = tech_gene_tailoring
 			}
-			any_owned_pop = {
+			any_owned_pop_group = {
 				has_auto_modding_trait = yes
 			}
 		}
 		modifier = {
-			auto_mod_monthly_add = 2
+			auto_mod_monthly_add = 200
 		}
 	}
 
@@ -942,12 +1000,12 @@ building_hospital = {
 			owner = {
 				has_origin = origin_overtuned
 			}
-			any_owned_pop = {
+			any_owned_pop_group = {
 				has_auto_modding_trait = yes
 			}
 		}
 		modifier = {
-			auto_mod_monthly_add = 2
+			auto_mod_monthly_add = 200
 		}
 	}
 
@@ -969,10 +1027,6 @@ building_hospital = {
 
 	show_tech_unlock_if = {
 		is_regular_empire = yes
-	}
-
-	triggered_desc = {
-		text = job_healthcare_effect_desc
 	}
 }
 
@@ -999,7 +1053,7 @@ building_maintenance_depot = {
 	}
 
 	planet_modifier = {
-		job_maintenance_drone_add = 5
+		planet_jobs_simple_drone_produces_mult = 0.20
 	}
 
 	resources = {
@@ -1036,8 +1090,8 @@ building_overseer_homes = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 2
-		job_slave_overseer_add = 2
+		planet_housing_add = 200
+		job_slave_overseer_add = 200
 	}
 
 	resources = {
@@ -1120,7 +1174,7 @@ building_ranger_lodge = {
 	}
 
 	planet_modifier = {
-		job_ranger_add = 1 # 1 Ranger no matter what
+		job_biologist_add = 100 # 100 Rangers no matter what
 		deposit_blockers_natural_unity_produces_add = 2
 	}
 
@@ -1128,7 +1182,7 @@ building_ranger_lodge = {
 		potential = {
 			always = yes
 		}
-		job_ranger_add = 1 # +1 Ranger per natural blocker
+		job_biologist_add = 100 # +100 Rangers per natural blocker
 		mult = value:natural_blocker_count
 	}
 
@@ -1136,7 +1190,7 @@ building_ranger_lodge = {
 		potential = {
 			owner_has_resolution = { RES = resolution_ecology_paradise_initiative }
 		}
-		job_ranger_add = 1 # +1 Ranger per natural blocker if GalCom approves
+		job_biologist_add = 100 # +100 Rangers per natural blocker if GalCom approves
 		mult = value:natural_blocker_count
 	}
 
@@ -1164,6 +1218,10 @@ building_ranger_lodge = {
 		upkeep = {
 			energy = @b1_upkeep
 		}
+	}
+
+	triggered_desc = {
+		text = biologist_is_ranger_tt
 	}
 
 	triggered_desc = {
@@ -1223,20 +1281,16 @@ building_toxic_bath = {
 			has_modifier = slave_colony
 		}
 	}
+
 	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_individual_machine = no }
-		}
-		job_bath_attendant_add = @b1_jobs
+		pop_growth_speed = 0.030
+		pop_environment_tolerance = -0.005
+		pop_happiness = -0.015
+		mult = planet.value:toxic_attendant_growth
 	}
 
 	triggered_desc = {
-		trigger = {
-			exists = owner
-			owner = { is_megacorp = no }
-		}
-		text = job_toxic_baths_effect_desc
+		text = building_toxic_bath_tt
 	}
 
 	resources = {

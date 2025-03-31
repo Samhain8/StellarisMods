@@ -640,6 +640,11 @@ country_event = {
 			country_event = { id = crisis.19 days = 400 random = 200 }
 		}
 	}
+	after = {
+		every_playable_country = {
+			country_event = { id = timeline.70 } # Timeline Prethoryn Scourge
+		}
+	}
 }
 
 # Vanguard Arrives
@@ -2813,9 +2818,6 @@ planet_event = {
 
 	immediate = {
 		set_planet_flag = previously_infested
-		every_owned_pop = {
-			kill_pop = yes
-		}
 		destroy_colony = yes
 		random_list = {
 			50 = { change_pc = pc_barren }
@@ -2855,7 +2857,7 @@ planet_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		num_pops = 1 # Last Pop is still alive when this event is fired
+		pop_amount = 100 # Last Pop is still alive when this event is fired
 		exists = controller
 		controller = { is_country_type = "swarm" }
 	}
@@ -2875,9 +2877,6 @@ planet_event = {
 			# they are destroyed instead
 			limit = {
 				is_ringworld = yes
-			}
-			every_owned_pop = {
-				kill_pop = yes
 			}
 			destroy_colony = yes
 			change_pc = pc_ringworld_habitable_damaged
@@ -2943,7 +2942,7 @@ planet_event = {
 	}
 
 	immediate = {
-		every_owned_pop = { kill_pop = yes }
+		every_owned_pop_group = { kill_all_pop = yes }
 		if = {
 			limit = {
 				is_artificial = no

@@ -278,10 +278,14 @@ trait_brainslug = {
 	allowed_archetypes = { BIOLOGICAL }
 
 	modifier = {
-		planet_jobs_physics_research_produces_mult = 0.10
-		planet_jobs_society_research_produces_mult = 0.10
-		planet_jobs_engineering_research_produces_mult = 0.10
-		planet_jobs_unity_produces_mult = 0.10
+		pop_physicist_bonus_workforce_mult = 0.10
+		pop_biologist_bonus_workforce_mult = 0.10
+		pop_engineer_bonus_workforce_mult = 0.10
+		pop_brain_drone_physicist_bonus_workforce_mult = 0.10
+		pop_brain_drone_biologist_bonus_workforce_mult = 0.10
+		pop_brain_drone_engineer_bonus_workforce_mult = 0.10
+		pop_bureaucrat_bonus_workforce_mult = 0.10
+		pop_synapse_drone_bonus_workforce_mult = 0.10
 		pop_growth_speed = -0.25
 	}
 }
@@ -306,7 +310,6 @@ trait_nivlac = {
 	species_possible_merge_add = {
 		always = no
 	}
-	potential_crossbreeding_chance = 1.0
 
 	allowed_archetypes = { BIOLOGICAL }
 
@@ -341,6 +344,16 @@ trait_robot_notofthisworld = {
 	modifier = {
 		planet_pops_upkeep_mult = 0.10
 	}
+
+	resources = {
+		category = planet_pops
+		produces = {
+			trigger = {
+				is_slave_or_better = yes
+			}
+			physics_research = 0.5
+		}
+	}
 }
 
 trait_notofthisworld = {
@@ -365,5 +378,15 @@ trait_notofthisworld = {
 	modifier = {
 		leader_lifespan_add = -10
 		planet_pops_upkeep_mult = 0.10
+	}
+
+	resources = {
+		category = planet_pops
+		produces = {
+			trigger = {
+				is_slave_or_better = yes
+			}
+			physics_research = 0.5
+		}
 	}
 }

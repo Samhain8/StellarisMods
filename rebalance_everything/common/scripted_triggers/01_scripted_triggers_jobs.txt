@@ -137,7 +137,7 @@ divinity_right_to_work_job_check_trigger_exempt = {
 divinity_right_to_work_job_check_trigger_worker = {
 	NOT = {
 		planet = {
-			any_owned_pop = {
+			any_owned_pop_group = {
 				is_unemployed = yes
 				is_robotic_species = no
 				is_pop_category = worker
@@ -149,7 +149,7 @@ divinity_right_to_work_job_check_trigger_worker = {
 divinity_right_to_work_job_check_trigger_specialist = {
 	NOT = {
 		planet = {
-			any_owned_pop = {
+			any_owned_pop_group = {
 				is_unemployed = yes
 				is_robotic_species = no
 				OR = {
@@ -164,7 +164,7 @@ divinity_right_to_work_job_check_trigger_specialist = {
 divinity_right_to_work_job_check_trigger_ruler = {
 	NOT = {
 		planet = {
-			any_owned_pop = {
+			any_owned_pop_group = {
 				is_unemployed = yes
 				is_robotic_species = no
 			}
@@ -325,7 +325,7 @@ prosperity_gospel_check_trigger = {
 
 has_unemployed_or_servants = {
 	OR = {
-		num_unemployed > 0
+		unemployed_pop_amount > 0
 		num_assigned_jobs = {
 			job = servant
 			value > 0
@@ -352,9 +352,15 @@ has_sr_producing_job = {
 
 has_research_job = {
 	OR = {
-		has_job = researcher
-		has_job = brain_drone
-		has_job = calculator
+		has_job = physicist
+		has_job = biologist
+		has_job = engineer
+		has_job = brain_drone_physicist
+		has_job = brain_drone_biologist
+		has_job = brain_drone_engineer
+		has_job = calculator_physicist
+		has_job = calculator_biologist
+		has_job = calculator_engineer
 		has_job = dimensional_portal_researcher
 		has_job = dimensional_portal_researcher_gestalt
 		has_job = space_time_anomaly_researcher
@@ -368,11 +374,127 @@ has_research_job = {
 		has_job = munitions_decommissioner
 		has_job = munitions_decommissioning_unit
 		has_job = munitions_decommissioning_drone
-		has_job = astral_researcher
 		has_job = astral_drone
 		has_job = astral_unit
-		has_job = astrometeorologist
 		has_job = astrometeorologist_hive
 		has_job = astrometeorologist_machine
+	}
+}
+
+# Job/Pop Group scope triggers
+physicist_is_astrometeorologist_trigger = {
+	exists = planet
+	planet = {
+		has_building = building_astrometeorology_observation_center
+	}
+}
+
+physicist_is_astral_researcher_trigger = {
+	exists = planet
+	planet = {
+		OR = {
+			has_building = building_astral_siphon_1
+			has_building = building_astral_siphon_2
+			has_building = building_astral_siphon_3
+		}
+	}
+}
+
+physicist_is_dimensional_portal_researcher_trigger = {
+	OR = {
+		AND = {
+			exists = planet
+			planet = {
+				has_deposit = d_portal_research_zone
+			}
+		}
+		AND = {
+			exists = owner
+			owner = {
+				is_regular_empire = yes
+				is_galactic_community_member = yes
+			}
+			is_active_resolution = "resolution_galacticstudies_extradimensional_experimentation"
+			has_modifier = pm_extradimensional_experimentation
+		}
+	}
+}
+
+physicist_is_space_time_researcher_trigger = {
+	exists = planet
+	planet = {
+		has_deposit = d_space_time_anomaly
+	}
+}
+
+biologist_is_archaeo_engineer_trigger = {
+	exists = planet
+	planet = {
+		has_building = building_archaeostudies_faculty
+	}
+}
+
+biologist_is_ranger_trigger = {
+	exists = planet
+	planet = {
+		has_building = building_ranger_lodge
+	}
+}
+
+biologist_is_vent_researcher_trigger = {
+	exists = planet
+	planet = {
+		OR = {
+			has_modifier = stratovent_world_modifier_tourism
+			has_modifier = stratovent_world_modifier_tourism_boost
+		}
+	}
+}
+
+biologist_is_zookeeper_trigger = {
+	exists = planet
+	planet = {
+		OR = {
+			has_building = building_xeno_zoo
+			has_deposit = d_alien_sanctuary
+		}
+	}
+}
+
+engineer_is_munitions_decommissioner_trigger = {
+	exists = planet
+	planet = {
+		has_deposit = d_weapon_extraction_facility
+	}
+}
+
+engineer_is_manufactorium_scraper_trigger = {
+	exists = planet
+	planet = {
+		has_deposit = d_ancient_manufactorium_scrapyard
+	}
+}
+
+artisan_is_artificer_trigger = {
+	exists = owner
+	owner = {
+		is_crafter_empire = yes
+	}
+}
+
+artisan_is_pearl_diver_trigger = {
+	exists = planet
+	planet = {
+		num_zones = {
+			type = zone_anglers
+			value > 0
+		}
+	}
+}
+
+healthcare_is_mutagenic_trigger = {
+	exists = planet
+	planet = {
+		has_building = building_toxic_bath
 	}
 }

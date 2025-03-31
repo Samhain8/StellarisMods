@@ -21,7 +21,7 @@ situation_planetary_revolt = { # Referenced in code - Do not change key
 		trigger = {
 			owner = { is_gestalt = yes }
 			target = {
-				any_owned_pop = {
+				any_owned_pop_group = {
 					is_sapient = yes
 					NOT = { has_ethic = ethic_gestalt_consciousness }
 				}
@@ -33,7 +33,7 @@ situation_planetary_revolt = { # Referenced in code - Do not change key
 		trigger = {
 			owner = { is_gestalt = yes }
 			target = {
-				count_owned_pop = {
+				count_owned_pop_amount = {
 					limit = {
 						is_sapient = yes
 						NOT = { has_ethic = ethic_gestalt_consciousness }
@@ -110,6 +110,13 @@ situation_planetary_revolt = { # Referenced in code - Do not change key
 				}
 			}
 			owner = {
+				# Timeline Rebellion
+				country_event = {
+					id = timeline.7
+					scopes = {
+						from = from.target
+					}
+				}
 				every_owned_planet = {
 					limit = { has_modifier = instability_join_revolt }
 					set_timed_planet_flag = {
@@ -243,7 +250,7 @@ situation_planetary_revolt = { # Referenced in code - Do not change key
 				owner = { is_gestalt = no }
 			}
 			modifier = {
-				planet_amenities_add = 20
+				planet_amenities_add = 2000
 			}
 		}
 		triggered_target_modifier = {
@@ -251,7 +258,7 @@ situation_planetary_revolt = { # Referenced in code - Do not change key
 				owner = { is_gestalt = yes }
 			}
 			modifier = {
-				planet_amenities_no_happiness_add = 20
+				planet_amenities_no_happiness_add = 2000
 			}
 		}
 		resources = {
@@ -352,14 +359,14 @@ situation_planetary_revolt = { # Referenced in code - Do not change key
 		modifier = {
 			add = 1
 			desc = STRING_UNEMPLOYMENT
-			target = { num_unemployed >= 2 }
+			target = { unemployed_pop_amount >= 200 }
 		}
 		modifier = {
 			add = 2
 			desc = STRING_PURGING
 			target = {
 				has_current_purge = yes
-				any_owned_pop = {
+				any_owned_pop_group = {
 					is_being_purged = yes
 					NOT = {
 						has_purge_type = { type = purge_neutering }
@@ -433,7 +440,7 @@ situation_planetary_revolt = { # Referenced in code - Do not change key
 				limit = {
 					NOT = { is_same_value = root.target }
 					planet_stability >= @stabilitylevel3
-					num_pops > 5
+					pop_amount > 500
 				}
 			}
 			potential = {
@@ -441,7 +448,7 @@ situation_planetary_revolt = { # Referenced in code - Do not change key
 					any_system_colony = {
 						NOT = { is_same_value = root.target }
 						planet_stability >= @stabilitylevel3
-						num_pops > 5
+						pop_amount > 500
 					}
 				}
 			}
@@ -456,7 +463,7 @@ situation_planetary_revolt = { # Referenced in code - Do not change key
 				limit = {
 					NOT = { is_same_value = root.target }
 					planet_stability < @stabilitylevel2
-					num_pops > 5
+					pop_amount > 500
 				}
 			}
 			potential = {
@@ -464,7 +471,7 @@ situation_planetary_revolt = { # Referenced in code - Do not change key
 					any_system_colony = {
 						NOT = { is_same_value = root.target }
 						planet_stability < @stabilitylevel2
-						num_pops > 5
+						pop_amount > 500
 					}
 				}
 			}
@@ -480,7 +487,7 @@ situation_planetary_revolt = { # Referenced in code - Do not change key
 		modifier = {
 			subtract = 1
 			desc = STRING_WEAK_PLANET
-			target = { num_pops < 30 }
+			target = { pop_amount < 3000 }
 			NOT = {
 				owner = {
 					any_owned_planet = {
@@ -492,7 +499,7 @@ situation_planetary_revolt = { # Referenced in code - Do not change key
 		modifier = {
 			add = 1
 			desc = STRING_STRONG_PLANET
-			target = { num_pops > 60 }
+			target = { pop_amount > 6000 }
 		}
 		modifier = {
 			desc = STRING_REBELLIOUS_JOINER_PLANETS_IN_OWNER

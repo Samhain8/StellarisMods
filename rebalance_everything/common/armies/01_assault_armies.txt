@@ -123,7 +123,7 @@ slave_army = {
 				}
 			}
 		}
-		any_owned_pop = { is_pop_category = slave }
+		any_owned_pop_group = { is_pop_category = slave }
 	}
 	potential_country = {
 		has_policy_flag = slavery_allowed
@@ -131,7 +131,7 @@ slave_army = {
 	}
 	potential = {
 		owner = {
-			any_owned_pop = {
+			any_owned_pop_group = {
 				is_pop_category = slave
 				is_same_species = from
 			}

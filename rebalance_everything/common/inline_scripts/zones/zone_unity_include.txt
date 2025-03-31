@@ -1,0 +1,12 @@
+include = {
+	building_autochthon_monument
+	building_bureaucratic_1
+	building_bureaucratic_2
+	building_heritage_site
+	building_hypercomms_forum
+	building_automation_1
+	building_nuumismatic_shrine
+	building_sacrificial_temple_1
+	building_autocurating_vault
+	building_citadel_of_faith
+}

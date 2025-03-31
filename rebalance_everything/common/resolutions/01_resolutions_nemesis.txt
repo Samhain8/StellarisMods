@@ -1587,7 +1587,6 @@ resolution_custodian_anti_piracy = {
 
 	modifier = {
 		description = resolution_custodian_anti_piracy_modifier_desc
-		local_trade_protection_add = 5
 		damage_vs_country_type_pirate_mult = 0.2
 		damage_vs_country_type_dormant_marauders_mult = 0.2
 		damage_vs_country_type_awakened_marauders_mult = 0.2

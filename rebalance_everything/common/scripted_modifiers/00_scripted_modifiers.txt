@@ -25,14 +25,7 @@ pop_job_amenities_mult = {
 	icon = mod_planet_amenities_mult
 	percentage = yes
 	good = yes
-	category = pop
-}
-
-pop_job_trade_mult = {
-	icon = mod_trade_value_mult
-	percentage = yes
-	good = yes
-	category = pop
+	category = planet
 }
 
 pop_lifestyle_trade_value_mult = {
@@ -140,7 +133,8 @@ habitat_max_districts_add = {
 	category = country
 }
 
-habitat_districts_building_slots_add = {
+# TODO_CD: needs new purpose as max buildings modifier is now obsolete
+habitat_districts_minor_add = {
 	icon = mod_planet_max_buildings_add
 	good = yes
 	category = country
@@ -152,9 +146,10 @@ habitat_districts_housing_add = {
 	category = country
 }
 
-habitat_district_jobs_add = {
+habitat_district_jobs_mult = {
 	icon = mod_planet_max_buildings_add
 	good = yes
+	percentage = yes
 	category = country
 }
 
@@ -422,4 +417,59 @@ voidworm_nymph_chance_on_bombardment = {
 	good = yes
 	percentage = yes
 	category = ship
+}
+
+# This is a fake modifier used for tooltips
+zone_building_slots_add = {
+	icon = mod_planet_max_buildings_add
+	good = yes
+	category = planet
+}
+
+# Amenities from Medical Workers
+job_healthcare_amenities_add = {
+	icon = mod_planet_amenities_add
+	percentage = no
+	good = yes
+	category = planet
+}
+
+# Pop Growth Speed from Medical Workers
+job_healthcare_pop_growth_speed = {
+	icon = mod_pop_growth_speed
+	percentage = yes
+	good = yes
+	category = planet
+}
+
+# Monthly Organic Pop Assembly (add) from Medical Workers
+job_healthcare_pop_assembly_organic_add = {
+	icon = mod_planet_pop_assembly_organic_add
+	percentage = no
+	good = yes
+	category = planet
+}
+
+# Monthly Organic Pop Assembly (mult) from Medical Workers
+job_healthcare_organic_pop_assembly_mult = {
+	icon = mod_planet_pop_assembly_organic_mult
+	percentage = yes
+	good = yes
+	category = planet
+}
+
+# Habitability from Medical Workers
+job_healthcare_pop_environment_tolerance = {
+	icon = mod_pop_environment_tolerance
+	percentage = yes
+	good = yes
+	category = planet
+}
+
+# Organic Pop Upkeep from Medical Workers
+job_healthcare_organics_upkeep_mult = {
+	icon = mod_planet_pops_organics_upkeep_mult
+	percentage = yes
+	good = no
+	category = planet
 }

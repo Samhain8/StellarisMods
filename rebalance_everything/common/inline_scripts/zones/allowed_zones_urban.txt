@@ -1,0 +1,18 @@
+include = {
+	zone_urban
+	zone_industrial
+	zone_foundry
+	zone_factory
+	zone_unity
+	zone_research
+	zone_trade
+	zone_amenities
+	zone_fortress
+}
+
+exclude = {
+	zone_default
+	zone_minerals
+	zone_food
+	zone_energy
+}

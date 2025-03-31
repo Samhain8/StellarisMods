@@ -44,12 +44,10 @@ council_in_tatter = {
 }
 paragon_origin_pirates = {
 	icon = "gfx/interface/icons/modifiers/mod_max_trade_piracy_mult.dds"
-	local_trade_protection_add = -20
 	pop_citizen_happiness = -0.05
 }
 paragon_origin_prisoners = {
 	icon = "gfx/interface/icons/modifiers/mod_max_trade_piracy_mult.dds"
-	local_trade_protection_add = -20
 	pop_citizen_happiness = -0.05
 	pop_ethic_egalitarian_attraction_mult = 0.5
 	pop_government_ethic_attraction = -0.25
@@ -75,8 +73,8 @@ paragon_origin_rich_monument = {
 paragon_origin_residential_monument = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_arcology_project.dds"
 	icon_frame = 1
-	planet_housing_add = 8
-	planet_amenities_add = 8
+	planet_housing_add = 800
+	planet_amenities_add = 800
 }
 paragon_origin_reformists = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_alien_propaganda.dds"
@@ -334,7 +332,7 @@ paragon_death_name_wall = {
 }
 
 paragon_death_landmark_building = {
-	trade_value_mult = 0.15
+	planet_jobs_trade_produces_mult = 0.15
 	planet_jobs_energy_produces_mult = 0.05
 }
 
@@ -362,7 +360,7 @@ agenda_infinite_opportunities_finish = {
 }
 
 agenda_infinite_opportunities_gestalt_finish = {
-	planet_amenities_no_happiness_add = 10
+	planet_amenities_no_happiness_add = 1000
 }
 
 agenda_we_come_in_peace_finish = {
@@ -380,7 +378,7 @@ agenda_display_of_power_finish = {
 
 agenda_open_arms_finish = {
 	pop_growth_from_immigration = 0.20
-	trade_value_mult = 0.1
+	planet_jobs_trade_produces_mult = 0.1
 	external_leader_pool_add = 2
 	pop_ethic_xenophile_attraction_mult = 0.4
 }
@@ -389,7 +387,7 @@ agenda_strong_on_our_own_finish = {
 	pop_growth_speed = 0.1
 	planet_stability_add = 10
 	intel_encryption_add = 2
-	trade_value_mult = -0.1
+	planet_jobs_trade_produces_mult = -0.1
 	pop_ethic_xenophobe_attraction_mult = 0.4
 }
 
@@ -458,7 +456,6 @@ agenda_inner_stability_finish = {
 
 agenda_open_markets_finish = {
 	icon = "gfx/interface/icons/modifiers/mod_agenda_open_markets.dds"
-	commercial_pact_mult = 0.5
 }
 
 agenda_open_markets_criminal_heritage_finish = {
@@ -544,7 +541,7 @@ agenda_psionic_supremacy_finish_eater = {
 agenda_psionic_supremacy_finish_instrument = {
 	planet_psionic_jobs_produces_mult = 0.2
 	category_psionics_research_speed_mult = 0.4
-	trade_value_mult = 0.25
+	planet_jobs_trade_produces_mult = 0.25
 }
 
 agenda_psionic_supremacy_finish_whisperers = {
@@ -724,6 +721,7 @@ paragon_stylish_trends = {
 }
 
 paragon_inspired_rhetoric = {
+	icon = "gfx/interface/icons/modifiers/mod_ship_weapon_damage.dds"
 	armies_cost_mult = -0.10
 	army_morale = 0.2
 	ship_fire_rate_mult = 0.05
@@ -812,7 +810,6 @@ borin_administrator_beryllia = {
 
 judge_improved_crime_fighting_laws = {
 	planet_crime_add = -5
-	local_trade_protection_add = 10
 }
 
 vas_population_united = {
@@ -823,7 +820,7 @@ vas_population_united = {
 qla_minder_vanity_palace = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_museum.dds"
 	pop_happiness = 0.05
-	planet_immigration_pull_mult = 0.05
+	#planet_immigration_pull_mult = 0.05 # TODO: [AUG-48754] Use automigration modifier
 	planet_jobs_energy_produces_mult = -0.05
 }
 

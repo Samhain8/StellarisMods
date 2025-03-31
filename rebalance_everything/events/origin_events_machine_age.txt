@@ -228,7 +228,7 @@ situation_event = {
 		hidden_effect = {
 			owner = {
 				every_owned_planet = {
-					every_owned_pop = {
+					every_owned_pop_group = {
 						force_faction_evaluation = yes
 					}
 				}
@@ -782,7 +782,7 @@ situation_event = {
 		owner = {
 			set_country_flag = cybercreed_final_form
 			set_country_flag = cybernetics_traditions_unlocked
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
 					has_trait = trait_cybernetic
 					has_ethic = ethic_spiritualist
@@ -1034,7 +1034,7 @@ situation_event = {
 						exists = event_target:cybercreedspecies@root.owner
 					}
 				}
-				random_owned_pop = {
+				weighted_random_owned_pop_group = {
 					limit = {
 						is_same_species = owner.species
 						NOT = {	has_trait = trait_cybernetic }
@@ -1076,14 +1076,14 @@ situation_event = {
 
 			while = {
 				limit = {
-					any_owned_pop = {
+					any_owned_pop_group = {
 						exists = event_target:cybercreedspecies@root.owner
 						is_same_species = owner.species
 						NOT = {	has_trait = trait_cybernetic }
 					}
 				}
 				count = value:pop_to_cyberize_per_month_creed
-				random_owned_pop = {
+				weighted_random_owned_pop_group = {
 					limit = {
 						is_same_species = owner.species
 						NOT = {	has_trait = trait_cybernetic }
@@ -1185,7 +1185,7 @@ situation_event = {
 			limit = {
 				NOT = {
 					owner = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							exists = event_target:cybercreedspecies@root.owner
 							is_same_species = owner.species
 							NOT = {	has_trait = trait_cybernetic }
@@ -1205,154 +1205,154 @@ situation_event = {
 #This event changes traits if the pop changes ethics, makes sure spiritualist pops always have cyborg traits.
 #This = Pop
 #From = Planet Owner
-pop_event = {
-	id = machine_age.2100
-	hide_window = yes
+# pop_event = { # AUG-50332 and also Jonas
+# 	id = machine_age.2100
+# 	hide_window = yes
 
-	is_triggered_only = yes
+# 	is_triggered_only = yes
 
-	trigger = {
-		owner = { has_origin = origin_cybernetic_creed }
-		has_cybernetic_creed_trait = no
-		has_ethic = ethic_spiritualist
-		is_robot_pop = no
-	}
+# 	trigger = {
+# 		from = { has_origin = origin_cybernetic_creed }
+# 		has_cybernetic_creed_trait = no
+# 		has_ethic = ethic_spiritualist
+# 		is_robot_pop_group = no
+# 	}
 
-	immediate = {
-		#Before Situation Ends
-		if = {
-			limit = {
-				OR = {
-					has_citizenship_type = { type = citizenship_full }
-					has_citizenship_type = { type = citizenship_limited }
-				}
-				owner = { NOT = { has_country_flag = cyber_creed_finished_situation } }
-			}
-			owner = {
-				switch = {
-					trigger = has_country_flag
-					cybernetic_creed_construction = {
-						prev = {
-							modify_species = {
-								species = this
-								add_trait = trait_cyborg_creed_of_construction
-								add_traits_at_start_of_list = yes
-							}
-						}
-					}
-					cybernetic_creed_war = {
-						prev = {
-							modify_species = {
-								species = this
-								add_trait = trait_cyborg_creed_of_war
-								add_traits_at_start_of_list = yes
-							}
-						}
-					}
-					cybernetic_creed_research = {
-						prev = {
-							modify_species = {
-								species = this
-								add_trait = trait_cyborg_creed_of_research
-								add_traits_at_start_of_list = yes
-							}
-						}
-					}
-					cybernetic_creed_labor = {
-						prev = {
-							modify_species = {
-								species = this
-								add_trait = trait_cyborg_creed_of_labor
-								add_traits_at_start_of_list = yes
-							}
-						}
-					}
-					default = {
-						prev = {
-							modify_species = {
-								species = this
-								add_trait = trait_cyborg_ritualistic_implants
-								add_traits_at_start_of_list = yes
-							}
-						}
-					}
-				}
-			}
-		}
-		#After Situation Ends
-		else_if = {
-			limit = {
-				OR = {
-					has_citizenship_type = { type = citizenship_full }
-					has_citizenship_type = { type = citizenship_limited }
-				}
-				has_trait = trait_cybernetic
-				owner = { has_country_flag = cyber_creed_finished_situation	}
-			}
-			owner = {
-				switch = {
-					trigger = has_country_flag
-					cybernetic_creed_construction = {
-						prev = {
-							inline_script = traits/cybernetic_creed_construction_traits
-						}
-					}
-					cybernetic_creed_war = {
-						prev = {
-							inline_script = traits/cybernetic_creed_war_traits
-						}
-					}
-					cybernetic_creed_research = {
-						prev = {
-							inline_script = traits/cybernetic_creed_research_traits
-						}
-					}
-					cybernetic_creed_labor = {
-						prev = {
-							inline_script = traits/cybernetic_creed_labor_traits
-						}
-					}
-					cybernetic_creed_general = {
-						prev = {
-							modify_species = {
-								species = this
-								add_trait = trait_cyborg_ritualistic_implants
-								add_traits_at_start_of_list = yes
-							}
-						}
-					}
-				}
-			}
-		}
-	}
-}
+# 	immediate = {
+# 		#Before Situation Ends
+# 		if = {
+# 			limit = {
+# 				OR = {
+# 					has_citizenship_type = { type = citizenship_full }
+# 					has_citizenship_type = { type = citizenship_limited }
+# 				}
+# 				owner = { NOT = { has_country_flag = cyber_creed_finished_situation } }
+# 			}
+# 			owner = {
+# 				switch = {
+# 					trigger = has_country_flag
+# 					cybernetic_creed_construction = {
+# 						prev = {
+# 							modify_species = {
+# 								species = this
+# 								add_trait = trait_cyborg_creed_of_construction
+# 								add_traits_at_start_of_list = yes
+# 							}
+# 						}
+# 					}
+# 					cybernetic_creed_war = {
+# 						prev = {
+# 							modify_species = {
+# 								species = this
+# 								add_trait = trait_cyborg_creed_of_war
+# 								add_traits_at_start_of_list = yes
+# 							}
+# 						}
+# 					}
+# 					cybernetic_creed_research = {
+# 						prev = {
+# 							modify_species = {
+# 								species = this
+# 								add_trait = trait_cyborg_creed_of_research
+# 								add_traits_at_start_of_list = yes
+# 							}
+# 						}
+# 					}
+# 					cybernetic_creed_labor = {
+# 						prev = {
+# 							modify_species = {
+# 								species = this
+# 								add_trait = trait_cyborg_creed_of_labor
+# 								add_traits_at_start_of_list = yes
+# 							}
+# 						}
+# 					}
+# 					default = {
+# 						prev = {
+# 							modify_species = {
+# 								species = this
+# 								add_trait = trait_cyborg_ritualistic_implants
+# 								add_traits_at_start_of_list = yes
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 		#After Situation Ends
+# 		else_if = {
+# 			limit = {
+# 				OR = {
+# 					has_citizenship_type = { type = citizenship_full }
+# 					has_citizenship_type = { type = citizenship_limited }
+# 				}
+# 				has_trait = trait_cybernetic
+# 				owner = { has_country_flag = cyber_creed_finished_situation	}
+# 			}
+# 			owner = {
+# 				switch = {
+# 					trigger = has_country_flag
+# 					cybernetic_creed_construction = {
+# 						prev = {
+# 							inline_script = traits/cybernetic_creed_construction_traits
+# 						}
+# 					}
+# 					cybernetic_creed_war = {
+# 						prev = {
+# 							inline_script = traits/cybernetic_creed_war_traits
+# 						}
+# 					}
+# 					cybernetic_creed_research = {
+# 						prev = {
+# 							inline_script = traits/cybernetic_creed_research_traits
+# 						}
+# 					}
+# 					cybernetic_creed_labor = {
+# 						prev = {
+# 							inline_script = traits/cybernetic_creed_labor_traits
+# 						}
+# 					}
+# 					cybernetic_creed_general = {
+# 						prev = {
+# 							modify_species = {
+# 								species = this
+# 								add_trait = trait_cyborg_ritualistic_implants
+# 								add_traits_at_start_of_list = yes
+# 							}
+# 						}
+# 					}
+# 				}
+# 			}
+# 		}
+# 	}
+# }
 
 #This event removes the Cybercreed Traits from non-spiritualist pops | Fired by on_pop_ethic_changed
 #This = Pop
 #From = Planet Owner
-pop_event = {
-	id = machine_age.2101
-	hide_window = yes
+# pop_event = { # AUG-50332 and also Jonas
+# 	id = machine_age.2101
+# 	hide_window = yes
 
-	is_triggered_only = yes
+# 	is_triggered_only = yes
 
-	trigger = {
-		has_cybernetic_creed_trait = yes
-		NOT = { has_ethic = ethic_spiritualist }
-	}
+# 	trigger = {
+# 		has_cybernetic_creed_trait = yes
+# 		NOT = { has_ethic = ethic_spiritualist }
+# 	}
 
-	immediate = {
-		# Remove only special Cybercreed traits
-		modify_species = {
-			species = this
-			remove_trait = trait_cyborg_creed_of_construction
-			remove_trait = trait_cyborg_creed_of_war
-			remove_trait = trait_cyborg_creed_of_research
-			remove_trait = trait_cyborg_creed_of_labor
-			remove_trait = trait_cyborg_ritualistic_implants
-		}
-	}
-}
+# 	immediate = {
+# 		# Remove only special Cybercreed traits
+# 		modify_species = {
+# 			species = this
+# 			remove_trait = trait_cyborg_creed_of_construction
+# 			remove_trait = trait_cyborg_creed_of_war
+# 			remove_trait = trait_cyborg_creed_of_research
+# 			remove_trait = trait_cyborg_creed_of_labor
+# 			remove_trait = trait_cyborg_ritualistic_implants
+# 		}
+# 	}
+# }
 
 #Monthly Pulse to ensure that no spiritualist cybercreed pops have fallen between the cracks
 #This = country
@@ -1371,7 +1371,7 @@ country_event = {
 		#Before Situation Ends
 		if = {
 			limit = { NOT = { has_country_flag = cyber_creed_finished_situation } }
-			every_owned_pop = {
+			every_owned_pop_group = {
 				if = {
 					limit = {
 						OR = {
@@ -1435,7 +1435,7 @@ country_event = {
 			}
 		}
 		else = {
-			every_owned_pop = {
+			every_owned_pop_group = {
 				#After Situation Ends
 				if = {
 					limit = {
@@ -2042,7 +2042,7 @@ country_event = {
 				add_building = building_robot_assembly_plant
 				while = {
 					count = 3
-					create_pop = {
+					create_pop_group = {
 						species = last_created_species
 					}
 				}
@@ -2201,7 +2201,7 @@ country_event = {
 				create_synth_species_effect = yes
 			}
 			capital_scope = {
-				create_pop = {
+				create_pop_group = {
 					species = event_target:synthspecies@root.owner
 				}
 			}
@@ -2315,14 +2315,6 @@ situation_event = {
 
 	is_triggered_only = yes
 
-	immediate = {
-		owner = {
-			every_owned_planet = {
-				reset_decline = yes
-			}
-		}
-	}
-
 	option = {
 		name = "machine_age.3305.a"
 		custom_tooltip = "machine_age.3305.a.tooltip"
@@ -2338,16 +2330,16 @@ situation_event = {
 			owner = {
 				while = {
 					limit = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							NOT = { is_same_species = owner.species }
-							is_robot_pop = yes
+							is_robot_pop_group = yes
 						}
 					}
 					count = num_dead_identities
-					random_owned_pop = {
+					weighted_random_owned_pop_group = {
 						limit = {
 							NOT = { is_same_species = owner.species }
-							is_robot_pop = yes
+							is_robot_pop_group = yes
 						}
 						change_species = event_target:synthspecies@root.owner
 					}
@@ -2359,7 +2351,7 @@ situation_event = {
 				while = {
 					count = num_dead_identities
 					capital_scope = {
-						create_pop = {
+						create_pop_group = {
 							species = event_target:synthspecies@root.owner
 						}
 					}

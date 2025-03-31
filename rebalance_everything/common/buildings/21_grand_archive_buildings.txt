@@ -36,7 +36,7 @@ xeno_geology_holomuseum = {
 			}
 		}
 		modifier = {
-			job_geologist_add = 2
+			job_geologist_add = 200
 		}
 	}
 	triggered_planet_modifier = {
@@ -47,7 +47,7 @@ xeno_geology_holomuseum = {
 			}
 		}
 		modifier = {
-			job_drone_geologist_add = 2
+			job_drone_geologist_add = 200
 		}
 	}
 	triggered_desc = {
@@ -104,7 +104,7 @@ aesthetic_wonders_holomuseum = {
 			}
 		}
 		modifier = {
-			job_wonder_curator_add = 2
+			job_wonder_curator_add = 200
 		}
 	}
 	triggered_planet_modifier = {
@@ -115,7 +115,7 @@ aesthetic_wonders_holomuseum = {
 			}
 		}
 		modifier = {
-			job_drone_wonder_curator_add = 2
+			job_drone_wonder_curator_add = 200
 		}
 	}
 	triggered_desc = {
@@ -172,7 +172,7 @@ galactic_history_holomuseum = {
 			}
 		}
 		modifier = {
-			job_historical_curator_add = 2
+			job_historical_curator_add = 200
 		}
 	}
 	triggered_planet_modifier = {
@@ -183,7 +183,7 @@ galactic_history_holomuseum = {
 			}
 		}
 		modifier = {
-			job_drone_historical_curator_add = 2
+			job_drone_historical_curator_add = 200
 		}
 	}
 	triggered_desc = {
@@ -248,7 +248,7 @@ wildlife_ranch = {
 
 	inline_script = {
 		script = jobs/wranglers_add
-		AMOUNT = 2
+		AMOUNT = 200
 	}
 
 	upgrades = {
@@ -303,7 +303,7 @@ wildlife_ranch_2 = {
 
 	inline_script = {
 		script = jobs/wranglers_add
-		AMOUNT = 4
+		AMOUNT = 400
 	}
 
 	upgrades = {
@@ -362,7 +362,7 @@ wildlife_ranch_3 = {
 
 	inline_script = {
 		script = jobs/wranglers_add
-		AMOUNT = 6
+		AMOUNT = 600
 	}
 
 	prerequisites = {
@@ -410,7 +410,7 @@ hunting_grounds = {
 
 	inline_script = {
 		script = jobs/wranglers_add
-		AMOUNT = 2
+		AMOUNT = 200
 	}
 
 	upgrades = {
@@ -463,7 +463,7 @@ hunting_grounds_2 = {
 
 	inline_script = {
 		script = jobs/wranglers_add
-		AMOUNT = 4
+		AMOUNT = 400
 	}
 
 	upgrades = {
@@ -520,7 +520,7 @@ hunting_grounds_3 = {
 
 	inline_script = {
 		script = jobs/wranglers_add
-		AMOUNT = 6
+		AMOUNT = 600
 	}
 
 	prerequisites = {
@@ -564,7 +564,7 @@ wildlife_sanctuary = {
 
 	inline_script = {
 		script = jobs/wranglers_add
-		AMOUNT = 2
+		AMOUNT = 200
 	}
 
 	upgrades = {
@@ -613,7 +613,7 @@ wildlife_sanctuary_2 = {
 
 	inline_script = {
 		script = jobs/wranglers_add
-		AMOUNT = 4
+		AMOUNT = 400
 	}
 
 	upgrades = {
@@ -666,7 +666,7 @@ wildlife_sanctuary_3 = {
 
 	inline_script = {
 		script = jobs/wranglers_add
-		AMOUNT = 6
+		AMOUNT = 600
 	}
 
 	prerequisites = {
@@ -710,7 +710,7 @@ primal_arena = {
 
 	inline_script = {
 		script = jobs/wranglers_add
-		AMOUNT = 2
+		AMOUNT = 200
 	}
 
 	upgrades = {
@@ -759,7 +759,7 @@ primal_arena_2 = {
 
 	inline_script = {
 		script = jobs/wranglers_add
-		AMOUNT = 4
+		AMOUNT = 400
 	}
 
 	upgrades = {
@@ -812,7 +812,7 @@ primal_arena_3 = {
 
 	inline_script = {
 		script = jobs/wranglers_add
-		AMOUNT = 6
+		AMOUNT = 600
 	}
 
 	prerequisites = {
@@ -857,7 +857,7 @@ symbiosis_nexus = {
 
 	inline_script = {
 		script = jobs/wranglers_add
-		AMOUNT = 2
+		AMOUNT = 200
 	}
 
 	upgrades = {
@@ -907,7 +907,7 @@ symbiosis_nexus_2 = {
 
 	inline_script = {
 		script = jobs/wranglers_add
-		AMOUNT = 4
+		AMOUNT = 400
 	}
 
 	upgrades = {
@@ -961,7 +961,7 @@ symbiosis_nexus_3 = {
 
 	inline_script = {
 		script = jobs/wranglers_add
-		AMOUNT = 6
+		AMOUNT = 600
 	}
 
 	prerequisites = {

@@ -1,7 +1,12 @@
 $JOB_KEY$ = {
 	category = specialist
-	condition_string = SPECIALIST_JOB_TRIGGER
-	building_icon = wildlife_ranch
+	
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = wildlife_ranch
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -35,31 +40,34 @@ $JOB_KEY$ = {
 				is_shackled_robot = yes
 			}
 		}
-		modifier = {
-			factor = 1.5
-			has_job = $JOB_KEY$
-		}
+# Markus
+#		modifier = {
+#			factor = 1.5
+#			has_job = $JOB_KEY$
+#		}
 		modifier = {
 			factor = 0.1
 			is_domestic_servant = yes
 		}
-		modifier = {
-			factor = 0.1
-			NOT = { has_job = $JOB_KEY$ }
-			exists = planet
-			planet = {
-				free_amenities > 5
-			}
-		}
-		modifier = {
-			factor = 2
-			NOT = { has_job = $JOB_KEY$ }
-			exists = planet
-			planet = {
-				free_amenities < 2
-				has_available_jobs = $JOB_KEY$
-			}
-		}
+# Markus
+#		modifier = {
+#			factor = 0.1
+#			NOT = { has_job = $JOB_KEY$ }
+#			exists = planet
+#			planet = {
+#				free_amenities > 5
+#			}
+#		}
+# Markus
+#		modifier = {
+#			factor = 2
+#			NOT = { has_job = $JOB_KEY$ }
+#			exists = planet
+#			planet = {
+#				free_amenities < 2
+#				has_available_jobs = $JOB_KEY$
+#			}
+#		}
 	}
 
 	inline_script = "jobs/automodding_priority_research"

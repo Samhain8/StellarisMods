@@ -8,18 +8,19 @@ col_default = {
 	icon = GFX_colony_type_normal_colony
 
 	potential = {
-		exists = owner
-		owner = { is_regular_empire = yes}
-		has_upgraded_capital = no
+		exists = space_owner
+		space_owner = { is_regular_empire = yes }
+		# TODO_CD (AUG-51213) Currently gives errors after change from owner to space_owner
+		#has_upgraded_capital = no
 		is_special_colony_type = no
-		num_sapient_pops < 5
+		sapient_pop_amount < 500
 		is_capital = no
 		NOT = { is_planet_class = pc_nanotech }
 	}
 
 	planet_modifier = {
 		planet_stability_add = 5
-		planet_amenities_add = 10
+		planet_amenities_add = 1000
 		pop_happiness = 0.10
 		planet_resettlement_unemployed_destination_mult = 0.25
 	}
@@ -33,8 +34,8 @@ col_default = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = { pop_happiness = 0.05 }
 	}
@@ -50,18 +51,19 @@ col_default_machine = {
 	icon = GFX_colony_type_normal_colony
 
 	potential = {
-		exists = owner
-		owner = { is_machine_empire = yes }
-		has_upgraded_capital = no
+		exists = space_owner
+		space_owner = { is_machine_empire = yes }
+		# TODO_CD (AUG-51213) Currently gives errors after change from owner to space_owner
+		#has_upgraded_capital = no
 		is_special_colony_type = no
-		num_sapient_pops < 5 # Non-sapient machines are included
+		sapient_pop_amount < 500 # Non-sapient machines are included
 		is_capital = no
 		NOT = { is_planet_class = pc_nanotech }
 	}
 
 	planet_modifier = {
 		planet_stability_add = 5
-		planet_amenities_no_happiness_add = 10
+		planet_amenities_no_happiness_add = 1000
 		planet_resettlement_unemployed_destination_mult = 0.25
 	}
 
@@ -82,8 +84,8 @@ col_city = {
 	icon = GFX_colony_type_urban
 
 	potential = {
-		exists = owner
-		owner = { is_regular_empire = yes }
+		exists = space_owner
+		space_owner = { is_regular_empire = yes }
 		NOR = {
 			uses_district_set = city_world
 			uses_district_set = ring_world
@@ -98,15 +100,15 @@ col_city = {
 	planet_modifier = {
 		planet_structures_upkeep_mult = -0.10
 		planet_district_city_build_speed_mult = 0.25
-		trade_value_mult = 0.20
+		planet_jobs_trade_produces_mult = 0.20
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
-		modifier = { trade_value_mult = 0.05 }
+		modifier = { planet_jobs_trade_produces_mult = 0.05 }
 	}
 
 	weight_modifier = {
@@ -151,7 +153,7 @@ col_mining = {
 	icon = GFX_colony_type_mine
 
 	potential = {
-		exists = owner
+		exists = space_owner
 		NOR = {
 			uses_district_set = city_world
 			uses_district_set = ring_world
@@ -169,8 +171,8 @@ col_mining = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 				is_gestalt = no
 			}
@@ -187,8 +189,8 @@ col_mining = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 				is_gestalt = yes
 			}
@@ -205,8 +207,8 @@ col_mining = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = { planet_miners_produces_mult = 0.1 }
 	}
@@ -269,8 +271,8 @@ col_farming = {
 	icon = GFX_colony_type_farm
 
 	potential = {
-		exists = owner
-		owner = { country_uses_food = yes }
+		exists = space_owner
+		space_owner = { country_uses_food = yes }
 		NOR = {
 			uses_district_set = city_world
 			uses_district_set = ring_world
@@ -290,8 +292,8 @@ col_farming = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 				is_gestalt = no
 			}
@@ -308,8 +310,8 @@ col_farming = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 				is_gestalt = yes
 			}
@@ -326,8 +328,8 @@ col_farming = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = { planet_farmers_produces_mult = 0.1 }
 	}
@@ -399,14 +401,14 @@ col_generator = {
 	icon = GFX_colony_type_generator
 
 	potential = {
-		exists = owner
+		exists = space_owner
 		NOR = {
 			uses_district_set = city_world
 			uses_district_set = ring_world
 			uses_district_set = habitat
 			uses_district_set = cosmogenesis_world
 			AND = {
-				owner = {
+				space_owner = {
 					is_gestalt = no
 				}
 				uses_district_set = shattered_ring_world
@@ -424,8 +426,8 @@ col_generator = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 				is_gestalt = no
 			}
@@ -442,8 +444,8 @@ col_generator = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 				is_gestalt = yes
 			}
@@ -460,8 +462,8 @@ col_generator = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = { planet_technician_produces_mult = 0.1 }
 	}
@@ -529,8 +531,8 @@ col_hive = {
 			uses_district_set = habitat
 			uses_district_set = cosmogenesis_world
 		}
-		exists = owner
-		owner = { is_hive_empire = yes }
+		exists = space_owner
+		space_owner = { is_hive_empire = yes }
 		is_special_colony_type = no
 		is_capital = no
 	}
@@ -542,8 +544,8 @@ col_hive = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = { planet_jobs_complex_drone_produces_mult = 0.025 }
 	}
@@ -575,8 +577,8 @@ col_nexus = {
 			uses_district_set = habitat
 			uses_district_set = cosmogenesis_world
 		}
-		exists = owner
-		owner = { is_machine_empire = yes }
+		exists = space_owner
+		space_owner = { is_machine_empire = yes }
 		is_special_colony_type = no
 		is_capital = no
 		NOT = { is_planet_class = pc_nanotech }
@@ -607,8 +609,8 @@ col_industrial = {
 	icon = GFX_colony_type_industrial
 
 	potential = {
-		exists = owner
-		owner = { country_uses_consumer_goods = yes }
+		exists = space_owner
+		space_owner = { country_uses_consumer_goods = yes }
 		NOR = {
 			uses_district_set = city_world
 			uses_district_set = habitat
@@ -622,7 +624,7 @@ col_industrial = {
 	}
 
 	planet_modifier = {
-		planet_district_industrial_build_speed_mult = 0.25
+#		planet_district_industrial_build_speed_mult = 0.25
 		planet_artisans_upkeep_mult = -0.10
 		planet_metallurgists_upkeep_mult = -0.10
 	}
@@ -636,8 +638,8 @@ col_industrial = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 			}
 			OR = {
@@ -653,8 +655,8 @@ col_industrial = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = {
 			planet_artisans_produces_mult = 0.05
@@ -666,14 +668,6 @@ col_industrial = {
 		modifier = {
 			add = @stickiness
 			has_designation = col_industrial
-		}
-		complex_trigger_modifier = {
-			trigger = num_districts
-			parameters = {
-				type = district_industrial
-			}
-			mode = add
-			mult = 3
 		}
 		modifier = {
 			add = 15
@@ -703,7 +697,7 @@ col_foundry = {
 		alloys = 2
 
 		trigger = {
-			owner = {
+			space_owner = {
 				is_gestalt = no
 			}
 		}
@@ -714,14 +708,14 @@ col_foundry = {
 		consumer_goods = -2
 
 		trigger = {
-			owner = {
+			space_owner = {
 				is_gestalt = no
 			}
 		}
 	}
 
 	potential = {
-		exists = owner
+		exists = space_owner
 		NOR = {
 			uses_district_set = city_world
 			uses_district_set = habitat
@@ -736,7 +730,7 @@ col_foundry = {
 
 	custom_tooltip = col_foundry_custom
 	planet_modifier = {
-		planet_district_industrial_build_speed_mult = 0.25
+#		planet_district_industrial_build_speed_mult = 0.25
 		planet_metallurgists_upkeep_mult = -0.20
 	}
 
@@ -748,8 +742,8 @@ col_foundry = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 			}
 			OR = {
@@ -763,8 +757,8 @@ col_foundry = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = {
 			planet_metallurgists_produces_mult = 0.05
@@ -775,14 +769,6 @@ col_foundry = {
 		modifier = {
 			add = @stickiness
 			has_designation = col_foundry
-		}
-		complex_trigger_modifier = {
-			trigger = num_districts
-			parameters = {
-				type = district_industrial
-			}
-			mode = add
-			mult = 3
 		}
 		modifier = {
 			add = 10
@@ -803,8 +789,8 @@ col_foundry = {
 		modifier = {
 			add = 11
 			has_designation = col_factory
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				has_monthly_income = { resource = alloys value < 0 }
 				has_monthly_income = { resource = consumer_goods value >= 0 }
 			}
@@ -822,7 +808,7 @@ col_factory = {
 		alloys = 0
 
 		trigger = {
-			owner = {
+			space_owner = {
 				is_gestalt = no
 			}
 		}
@@ -834,15 +820,15 @@ col_factory = {
 		alloys = -0.5
 
 		trigger = {
-			owner = {
+			space_owner = {
 				is_gestalt = no
 			}
 		}
 	}
 
 	potential = {
-		exists = owner
-		owner = { country_uses_consumer_goods = yes }
+		exists = space_owner
+		space_owner = { country_uses_consumer_goods = yes }
 		NOR = {
 			uses_district_set = city_world
 			uses_district_set = habitat
@@ -857,7 +843,7 @@ col_factory = {
 
 	custom_tooltip = col_factory_custom
 	planet_modifier = {
-		planet_district_industrial_build_speed_mult = 0.25
+#		planet_district_industrial_build_speed_mult = 0.25
 		planet_artisans_upkeep_mult = -0.20
 	}
 
@@ -869,8 +855,8 @@ col_factory = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 			}
 			OR = {
@@ -884,8 +870,8 @@ col_factory = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = {
 			planet_artisans_produces_mult = 0.05
@@ -896,14 +882,6 @@ col_factory = {
 		modifier = {
 			add = @stickiness
 			has_designation = col_factory
-		}
-		complex_trigger_modifier = {
-			trigger = num_districts
-			parameters = {
-				type = district_industrial
-			}
-			mode = add
-			mult = 3
 		}
 		modifier = {
 			add = 10
@@ -924,8 +902,8 @@ col_factory = {
 		modifier = {
 			add = 11
 			has_designation = col_foundry
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				has_monthly_income = { resource = consumer_goods value < 0 }
 				has_monthly_income = { resource = alloys value >= 0 }
 			}
@@ -938,8 +916,8 @@ col_bureau = {
 	icon = GFX_colony_type_bureaucratic
 
 	potential = {
-		exists = owner
-		owner = {
+		exists = space_owner
+		space_owner = {
 			is_regular_empire = yes
 			is_spiritualist = no
 			has_make_spiritualist_perk = no
@@ -967,16 +945,16 @@ col_bureau = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner.federation
-			owner.federation = { has_federation_perk = all_the_priests_1 }
-			owner = { NOT = { has_origin = origin_cybernetic_creed } }
+			exists = space_owner.federation
+			space_owner.federation = { has_federation_perk = all_the_priests_1 }
+			space_owner = { NOT = { has_origin = origin_cybernetic_creed } }
 		}
 		job_priest_per_pop = 0.04
 	}
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = {
 			planet_administrators_produces_mult = 0.05
@@ -985,9 +963,9 @@ col_bureau = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner.federation
-			owner.federation = { has_federation_perk = all_the_priests_1 }
-			owner = { has_origin = origin_cybernetic_creed }
+			exists = space_owner.federation
+			space_owner.federation = { has_federation_perk = all_the_priests_1 }
+			space_owner = { has_origin = origin_cybernetic_creed }
 		}
 		job_haruspex_per_pop = 0.04
 	}
@@ -1007,8 +985,8 @@ col_bureau_spiritualist = {
 	icon = GFX_colony_type_bureaucratic
 
 	potential = {
-		exists = owner
-		owner = {
+		exists = space_owner
+		space_owner = {
 			is_regular_empire = yes
 			OR = {
 				is_spiritualist = yes
@@ -1038,26 +1016,26 @@ col_bureau_spiritualist = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner.federation
-			owner.federation = { has_federation_perk = all_the_priests_1 }
-			owner = { NOT = { has_origin = origin_cybernetic_creed } }
+			exists = space_owner.federation
+			space_owner.federation = { has_federation_perk = all_the_priests_1 }
+			space_owner = { NOT = { has_origin = origin_cybernetic_creed } }
 		}
 		job_priest_per_pop = 0.04
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner.federation
-			owner.federation = { has_federation_perk = all_the_priests_1 }
-			owner = { has_origin = origin_cybernetic_creed }
+			exists = space_owner.federation
+			space_owner.federation = { has_federation_perk = all_the_priests_1 }
+			space_owner = { has_origin = origin_cybernetic_creed }
 		}
 		job_haruspex_per_pop = 0.04
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = {
 			planet_administrators_produces_mult = 0.05
@@ -1079,8 +1057,8 @@ col_bureau_hive = {
 	icon = GFX_colony_type_bureaucratic
 
 	potential = {
-		exists = owner
-		owner = { is_hive_empire = yes }
+		exists = space_owner
+		space_owner = { is_hive_empire = yes }
 		NOR = {
 			uses_district_set = habitat
 			uses_district_set = cosmogenesis_world
@@ -1103,8 +1081,8 @@ col_bureau_hive = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = {
 			planet_administrators_produces_mult = 0.05
@@ -1126,8 +1104,8 @@ col_bureau_machine = {
 	icon = GFX_colony_type_bureaucratic
 
 	potential = {
-		exists = owner
-		owner = {
+		exists = space_owner
+		space_owner = {
 			is_machine_empire = yes
 			NOT = { has_valid_civic = civic_machine_servitor }
 		}
@@ -1168,7 +1146,7 @@ col_refinery = {
 	icon = GFX_colony_type_refinery
 
 	potential = {
-		exists = owner
+		exists = space_owner
 		NOR = {
 			uses_district_set = city_world
 			uses_district_set = ring_world
@@ -1189,8 +1167,8 @@ col_refinery = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 			}
 			OR = {
@@ -1208,8 +1186,8 @@ col_refinery = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = {
 			planet_refiners_produces_mult = 0.05
@@ -1225,14 +1203,14 @@ col_refinery = {
 			has_designation = col_refinery
 		}
 		complex_trigger_modifier = {
-			trigger = count_owned_pop
+			trigger = count_owned_pop_amount
 			parameters = {
 				limit = {
-					has_sr_producing_job = yes
+					# has_sr_producing_job = yes # Markus jobs
 				}
 			}
 			mode = add
-			mult = 3
+			mult = 0.03
 		}
 	}
 }
@@ -1242,7 +1220,7 @@ col_research = {
 	icon = GFX_colony_type_research
 
 	potential = {
-		exists = owner
+		exists = space_owner
 		NOR = {
 			uses_district_set = city_world
 			uses_district_set = ring_world
@@ -1261,8 +1239,8 @@ col_research = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = {
 			planet_researchers_produces_mult = 0.05
@@ -1285,7 +1263,7 @@ col_fortress = {
 	icon = GFX_colony_type_fortress
 
 	potential = {
-		exists = owner
+		exists = space_owner
 		NOR = {
 			uses_district_set = city_world
 			uses_district_set = ring_world
@@ -1305,8 +1283,8 @@ col_fortress = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = {
 			planet_orbital_bombardment_damage = -0.1
@@ -1346,8 +1324,8 @@ col_capital = {
 	potential = {
 		is_capital = yes
 		NAND = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				OR = {
 					NOT = { is_country_type = default }
 					is_gestalt = yes
@@ -1358,7 +1336,7 @@ col_capital = {
 
 	planet_modifier = {
 		planet_stability_add = 5
-		planet_amenities_add = 10
+		planet_amenities_add = 1000
 		pop_government_ethic_attraction = 1
 		planet_resettlement_unemployed_destination_mult = 0.1
 		planet_jobs_produces_mult = 0.1
@@ -1373,8 +1351,8 @@ col_capital = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = {
 			planet_jobs_produces_mult = 0.05
@@ -1392,8 +1370,8 @@ col_capital_foundry = {
 	potential = {
 		is_capital = yes
 
-		exists = owner
-		owner = {
+		exists = space_owner
+		space_owner = {
 			AND = {
 				is_country_type = default
 
@@ -1415,7 +1393,7 @@ col_capital_foundry = {
 
 	triggered_planet_modifier = {
 		potential = {
-			owner = {
+			space_owner = {
 				is_country_type = default
 				is_machine_empire = no
 			}
@@ -1425,7 +1403,7 @@ col_capital_foundry = {
 
 	triggered_planet_modifier = {
 		potential = {
-			owner = {
+			space_owner = {
 				is_country_type = default
 				is_machine_empire = yes
 			}
@@ -1435,23 +1413,23 @@ col_capital_foundry = {
 
 	triggered_planet_modifier = {
 		potential = {
-			owner = {
+			space_owner = {
 				is_country_type = default
 				is_gestalt = no
 			}
 		}
-		planet_amenities_add = 10
+		planet_amenities_add = 1000
 		pop_government_ethic_attraction = 1
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			owner = {
+			space_owner = {
 				is_country_type = default
 				is_gestalt = yes
 			}
 		}
-		planet_amenities_no_happiness_add = 10
+		planet_amenities_no_happiness_add = 1000
 		planet_crime_no_happiness_add = -20
 	}
 
@@ -1464,8 +1442,8 @@ col_capital_foundry = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = {
 			planet_jobs_produces_mult = 0.05
@@ -1478,7 +1456,7 @@ col_capital_foundry = {
 		alloys = 2
 
 		trigger = {
-			owner = {
+			space_owner = {
 				country_uses_consumer_goods = yes
 			}
 		}
@@ -1489,7 +1467,7 @@ col_capital_foundry = {
 		consumer_goods = -2
 
 		trigger = {
-			owner = {
+			space_owner = {
 				country_uses_consumer_goods = yes
 			}
 		}
@@ -1508,8 +1486,8 @@ col_capital_factory = {
 	potential = {
 		is_capital = yes
 
-		exists = owner
-		owner = {
+		exists = space_owner
+		space_owner = {
 			AND = {
 				is_country_type = default
 				country_uses_consumer_goods = yes
@@ -1532,7 +1510,7 @@ col_capital_factory = {
 
 	triggered_planet_modifier = {
 		potential = {
-			owner = {
+			space_owner = {
 				is_country_type = default
 				is_machine_empire = no
 			}
@@ -1542,7 +1520,7 @@ col_capital_factory = {
 
 	triggered_planet_modifier = {
 		potential = {
-			owner = {
+			space_owner = {
 				is_country_type = default
 				is_machine_empire = yes
 			}
@@ -1552,23 +1530,23 @@ col_capital_factory = {
 
 	triggered_planet_modifier = {
 		potential = {
-			owner = {
+			space_owner = {
 				is_country_type = default
 				is_gestalt = no
 			}
 		}
-		planet_amenities_add = 10
+		planet_amenities_add = 1000
 		pop_government_ethic_attraction = 1
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			owner = {
+			space_owner = {
 				is_country_type = default
 				is_gestalt = yes
 			}
 		}
-		planet_amenities_no_happiness_add = 10
+		planet_amenities_no_happiness_add = 1000
 		planet_crime_no_happiness_add = -20
 	}
 
@@ -1581,8 +1559,8 @@ col_capital_factory = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = {
 			planet_jobs_produces_mult = 0.05
@@ -1595,7 +1573,7 @@ col_capital_factory = {
 		alloys = 0
 
 		trigger = {
-			owner = {
+			space_owner = {
 				country_uses_consumer_goods = yes
 			}
 		}
@@ -1609,7 +1587,7 @@ col_capital_factory = {
 		alloys = -0.5
 
 		trigger = {
-			owner = {
+			space_owner = {
 				country_uses_consumer_goods = yes
 			}
 		}
@@ -1626,8 +1604,8 @@ col_capital_trade = {
 	potential = {
 		is_capital = yes
 
-		exists = owner
-		owner = {
+		exists = space_owner
+		space_owner = {
 			AND = {
 				is_country_type = default
 				is_gestalt = no
@@ -1645,10 +1623,10 @@ col_capital_trade = {
 
 	planet_modifier = {
 		planet_stability_add = 5
-		planet_amenities_add = 10
+		planet_amenities_add = 1000
 		pop_government_ethic_attraction = 1
 		planet_resettlement_unemployed_destination_mult = 0.1
-		trade_value_mult = 0.15
+		planet_jobs_trade_produces_mult = 0.15
 	}
 
 	triggered_planet_modifier = {
@@ -1660,8 +1638,8 @@ col_capital_trade = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = {
 			planet_jobs_produces_mult = 0.05
@@ -1679,8 +1657,8 @@ col_capital_extraction = {
 	potential = {
 		is_capital = yes
 
-		exists = owner
-		owner = {
+		exists = space_owner
+		space_owner = {
 			AND = {
 				is_country_type = default
 				OR = {
@@ -1701,7 +1679,7 @@ col_capital_extraction = {
 
 	triggered_planet_modifier = {
 		potential = {
-			owner = {
+			space_owner = {
 				is_country_type = default
 				is_machine_empire = no
 			}
@@ -1711,7 +1689,7 @@ col_capital_extraction = {
 
 	triggered_planet_modifier = {
 		potential = {
-			owner = {
+			space_owner = {
 				is_country_type = default
 				is_machine_empire = yes
 			}
@@ -1721,23 +1699,23 @@ col_capital_extraction = {
 
 	triggered_planet_modifier = {
 		potential = {
-			owner = {
+			space_owner = {
 				is_country_type = default
 				is_gestalt = no
 			}
 		}
-		planet_amenities_add = 10
+		planet_amenities_add = 1000
 		pop_government_ethic_attraction = 1
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			owner = {
+			space_owner = {
 				is_country_type = default
 				is_gestalt = yes
 			}
 		}
-		planet_amenities_no_happiness_add = 10
+		planet_amenities_no_happiness_add = 1000
 		planet_crime_no_happiness_add = -20
 	}
 
@@ -1750,8 +1728,8 @@ col_capital_extraction = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = {
 			planet_jobs_produces_mult = 0.05
@@ -1769,8 +1747,8 @@ col_capital_hive = {
 
 	potential = {
 		is_capital = yes
-		exists = owner
-		owner = {
+		exists = space_owner
+		space_owner = {
 			is_country_type = default
 			is_hive_empire = yes
 		}
@@ -1778,7 +1756,7 @@ col_capital_hive = {
 
 	planet_modifier = {
 		planet_stability_add = 5
-		planet_amenities_no_happiness_add = 10
+		planet_amenities_no_happiness_add = 1000
 		planet_crime_no_happiness_add = -20
 		planet_jobs_produces_mult = 0.1
 		planet_resettlement_unemployed_destination_mult = 0.1
@@ -1793,8 +1771,8 @@ col_capital_hive = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = {
 			planet_jobs_produces_mult = 0.05
@@ -1812,8 +1790,8 @@ col_capital_machine = {
 
 	potential = {
 		is_capital = yes
-		exists = owner
-		owner = {
+		exists = space_owner
+		space_owner = {
 			is_country_type = default
 			is_machine_empire = yes
 		}
@@ -1821,7 +1799,7 @@ col_capital_machine = {
 
 	planet_modifier = {
 		planet_stability_add = 5
-		planet_amenities_no_happiness_add = 10
+		planet_amenities_no_happiness_add = 1000
 		planet_crime_no_happiness_add = -20
 		planet_jobs_produces_mult = 0.15
 		planet_resettlement_unemployed_destination_mult = 0.1
@@ -1851,12 +1829,12 @@ col_habitat = {
 	potential = {
 		uses_district_set = habitat
 		is_capital = no
-		num_sapient_pops < 5
+		sapient_pop_amount < 500
 	}
 
 	planet_modifier = {
 		planet_stability_add = 5
-		planet_amenities_add = 10
+		planet_amenities_add = 1000
 	}
 
 	weight_modifier = {
@@ -1870,7 +1848,7 @@ col_habitat_energy = {
 
 	potential = {
 		uses_district_set = habitat
-		exists = owner
+		exists = space_owner
 		check_modifier_value = {
 			modifier = district_hab_energy_max
 			value > 0
@@ -1884,8 +1862,8 @@ col_habitat_energy = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 				is_gestalt = no
 			}
@@ -1902,8 +1880,8 @@ col_habitat_energy = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 				is_gestalt = yes
 			}
@@ -1955,13 +1933,13 @@ col_habitat_trade = {
 	custom_tooltip = col_habitat_trade_custom
 	potential = {
 		uses_district_set = habitat
-		exists = owner
-		owner = { is_gestalt = no }
+		exists = space_owner
+		space_owner = { is_gestalt = no }
 		is_capital = no
 	}
 
 	planet_modifier = {
-		trade_value_mult = 0.20
+		planet_jobs_trade_produces_mult = 0.20
 	}
 
 	weight_modifier = {
@@ -2000,7 +1978,7 @@ col_habitat_research = {
 
 	potential = {
 		uses_district_set = habitat
-		exists = owner
+		exists = space_owner
 		check_modifier_value = {
 			modifier = district_hab_science_max
 			value > 0
@@ -2063,8 +2041,8 @@ col_habitat_mining = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 				is_gestalt = no
 			}
@@ -2081,8 +2059,8 @@ col_habitat_mining = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 				is_gestalt = yes
 			}
@@ -2134,8 +2112,8 @@ col_habitat_farming = {
 	custom_tooltip = col_habitat_farming_desc_custom
 	potential = {
 		uses_district_set = habitat
-		exists = owner
-		owner = {
+		exists = space_owner
+		space_owner = {
 			is_gestalt = no
 		}
 		is_capital = no
@@ -2148,8 +2126,8 @@ col_habitat_farming = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 			}
 			OR = {
@@ -2196,8 +2174,8 @@ col_habitat_gestalt_farming = {
 	custom_tooltip = col_habitat_gestalt_farming_desc_custom
 	potential = {
 		uses_district_set = habitat
-		exists = owner
-		owner = {
+		exists = space_owner
+		space_owner = {
 			is_gestalt = yes
 		}
 		is_capital = no
@@ -2209,8 +2187,8 @@ col_habitat_gestalt_farming = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 			}
 			OR = {
@@ -2313,22 +2291,22 @@ col_habitat_industrial = {
 	icon = GFX_colony_type_hab_industrial
 
 	potential = {
-		exists = owner
-		owner = { country_uses_consumer_goods = yes }
+		exists = space_owner
+		space_owner = { country_uses_consumer_goods = yes }
 		uses_district_set = habitat
 		is_capital = no
 	}
-
+	# TODO UPDATE COLONY DESIGNATIONS
 	planet_modifier = {
-		planet_district_hab_industrial_build_speed_mult = 0.25
+#		planet_district_hab_industrial_build_speed_mult = 0.25
 		planet_metallurgists_upkeep_mult = -0.1
 		planet_artisans_upkeep_mult = -0.1
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 			}
 			OR = {
@@ -2347,14 +2325,14 @@ col_habitat_industrial = {
 			add = @stickiness
 			has_designation = col_habitat_industrial
 		}
-		complex_trigger_modifier = {
-			trigger = num_districts
-			parameters = {
-				type = district_hab_industrial
-			}
-			mode = add
-			mult = 3
-		}
+		# complex_trigger_modifier = {
+		# 	trigger = num_districts
+		# 	parameters = {
+		# 		type = district_hab_industrial
+		# 	}
+		# 	mode = add
+		# 	mult = 3
+		# }
 		modifier = {
 			add = 15
 			AND = {
@@ -2383,7 +2361,7 @@ col_habitat_foundry = {
 		alloys = 2
 
 		trigger = {
-			owner = {
+			space_owner = {
 				is_gestalt = no
 			}
 		}
@@ -2394,7 +2372,7 @@ col_habitat_foundry = {
 		consumer_goods = -2
 
 		trigger = {
-			owner = {
+			space_owner = {
 				is_gestalt = no
 			}
 		}
@@ -2404,17 +2382,17 @@ col_habitat_foundry = {
 		uses_district_set = habitat
 		is_capital = no
 	}
-
+	# TODO UPDATE COLONY DESIGNATIONS
 	custom_tooltip = col_habitat_foundry_custom
 	planet_modifier = {
-		planet_district_hab_industrial_build_speed_mult = 0.25
+#		planet_district_hab_industrial_build_speed_mult = 0.25
 		planet_metallurgists_upkeep_mult = -0.2
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 			}
 			OR = {
@@ -2432,14 +2410,14 @@ col_habitat_foundry = {
 			add = @stickiness
 			has_designation = col_habitat_foundry
 		}
-		complex_trigger_modifier = {
-			trigger = num_districts
-			parameters = {
-				type = district_hab_industrial
-			}
-			mode = add
-			mult = 3
-		}
+		# complex_trigger_modifier = {
+		# 	trigger = num_districts
+		# 	parameters = {
+		# 		type = district_hab_industrial
+		# 	}
+		# 	mode = add
+		# 	mult = 3
+		# }
 		modifier = {
 			add = 10
 			OR = {
@@ -2459,8 +2437,8 @@ col_habitat_foundry = {
 		modifier = {
 			add = 11
 			has_designation = col_habitat_factory
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				has_monthly_income = { resource = alloys value < 0 }
 				has_monthly_income = { resource = consumer_goods value >= 0 }
 			}
@@ -2478,7 +2456,7 @@ col_habitat_factory = {
 		alloys = 0
 
 		trigger = {
-			owner = {
+			space_owner = {
 				is_gestalt = no
 			}
 		}
@@ -2490,7 +2468,7 @@ col_habitat_factory = {
 		alloys = -0.5
 
 		trigger = {
-			owner = {
+			space_owner = {
 				is_gestalt = no
 			}
 		}
@@ -2498,21 +2476,21 @@ col_habitat_factory = {
 
 	potential = {
 		uses_district_set = habitat
-		exists = owner
-		owner = { country_uses_consumer_goods = yes }
+		exists = space_owner
+		space_owner = { country_uses_consumer_goods = yes }
 		is_capital = no
 	}
-
+	# TODO UPDATE COLONY DESIGNATIONS
 	custom_tooltip = col_habitat_factory_custom
 	planet_modifier = {
-		planet_district_hab_industrial_build_speed_mult = 0.25
+#		planet_district_hab_industrial_build_speed_mult = 0.25
 		planet_artisans_upkeep_mult = -0.2
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 			}
 			OR = {
@@ -2530,14 +2508,14 @@ col_habitat_factory = {
 			add = @stickiness
 			has_designation = col_habitat_factory
 		}
-		complex_trigger_modifier = {
-			trigger = num_districts
-			parameters = {
-				type = district_hab_industrial
-			}
-			mode = add
-			mult = 3
-		}
+		# complex_trigger_modifier = {
+		# 	trigger = num_districts
+		# 	parameters = {
+		# 		type = district_hab_industrial
+		# 	}
+		# 	mode = add
+		# 	mult = 3
+		# }
 		modifier = {
 			add = 10
 			OR = {
@@ -2557,8 +2535,8 @@ col_habitat_factory = {
 		modifier = {
 			add = 11
 			has_designation = col_habitat_foundry
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				has_monthly_income = { resource = consumer_goods value < 0 }
 				has_monthly_income = { resource = alloys value >= 0 }
 			}
@@ -2570,8 +2548,8 @@ col_habitat_bureau = {
 	icon = GFX_colony_type_hab_bureaucratic
 
 	potential = {
-		exists = owner
-		owner = {
+		exists = space_owner
+		space_owner = {
 			is_regular_empire = yes
 			is_spiritualist = no
 			has_make_spiritualist_perk = no
@@ -2588,18 +2566,18 @@ col_habitat_bureau = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner.federation
-			owner.federation = { has_federation_perk = all_the_priests_1 }
-			owner = { NOT = { has_origin = origin_cybernetic_creed } }
+			exists = space_owner.federation
+			space_owner.federation = { has_federation_perk = all_the_priests_1 }
+			space_owner = { NOT = { has_origin = origin_cybernetic_creed } }
 		}
 		job_priest_per_pop = 0.04
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner.federation
-			owner.federation = { has_federation_perk = all_the_priests_1 }
-			owner = { has_origin = origin_cybernetic_creed }
+			exists = space_owner.federation
+			space_owner.federation = { has_federation_perk = all_the_priests_1 }
+			space_owner = { has_origin = origin_cybernetic_creed }
 		}
 		job_haruspex_per_pop = 0.04
 	}
@@ -2619,8 +2597,8 @@ col_habitat_bureau_spiritualist = {
 	icon = GFX_colony_type_hab_bureaucratic
 
 	potential = {
-		exists = owner
-		owner = {
+		exists = space_owner
+		space_owner = {
 			is_regular_empire = yes
 			OR = {
 				is_spiritualist = yes
@@ -2639,18 +2617,18 @@ col_habitat_bureau_spiritualist = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner.federation
-			owner.federation = { has_federation_perk = all_the_priests_1 }
-			owner = { NOT = { has_origin = origin_cybernetic_creed } }
+			exists = space_owner.federation
+			space_owner.federation = { has_federation_perk = all_the_priests_1 }
+			space_owner = { NOT = { has_origin = origin_cybernetic_creed } }
 		}
 		job_priest_per_pop = 0.04
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner.federation
-			owner.federation = { has_federation_perk = all_the_priests_1 }
-			owner = { has_origin = origin_cybernetic_creed }
+			exists = space_owner.federation
+			space_owner.federation = { has_federation_perk = all_the_priests_1 }
+			space_owner = { has_origin = origin_cybernetic_creed }
 		}
 		job_haruspex_per_pop = 0.04
 	}
@@ -2670,8 +2648,8 @@ col_habitat_bureau_hive = {
 	icon = GFX_colony_type_hab_bureaucratic
 
 	potential = {
-		exists = owner
-		owner = { is_hive_empire = yes }
+		exists = space_owner
+		space_owner = { is_hive_empire = yes }
 		uses_district_set = habitat
 		is_special_colony_type = no
 		is_capital = no
@@ -2697,8 +2675,8 @@ col_habitat_bureau_machine = {
 	icon = GFX_colony_type_hab_bureaucratic
 
 	potential = {
-		exists = owner
-		owner = { is_machine_empire = yes }
+		exists = space_owner
+		space_owner = { is_machine_empire = yes }
 		uses_district_set = habitat
 		is_special_colony_type = no
 	}
@@ -2737,8 +2715,8 @@ col_habitat_refinery = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 			}
 			OR = {
@@ -2760,14 +2738,14 @@ col_habitat_refinery = {
 			has_designation = col_habitat_refinery
 		}
 		complex_trigger_modifier = {
-			trigger = count_owned_pop
+			trigger = count_owned_pop_amount
 			parameters = {
 				limit = {
-					has_sr_producing_job = yes
+					# has_sr_producing_job = yes # Markus jobs
 				}
 			}
 			mode = add
-			mult = 3
+			mult = 0.03
 		}
 	}
 }
@@ -2783,8 +2761,8 @@ col_rural_gestalt = {
 			uses_district_set = machine_world
 			uses_district_set = hive_world
 		}
-		exists = owner
-		owner = { is_gestalt = yes }
+		exists = space_owner
+		space_owner = { is_gestalt = yes }
 		is_special_colony_type = no
 		is_capital = no
 		NOT = { is_planet_class = pc_nanotech }
@@ -2799,8 +2777,8 @@ col_rural_gestalt = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = {
 			planet_jobs_simple_drone_produces_mult = 0.05
@@ -2839,8 +2817,8 @@ col_rural = {
 	icon = GFX_colony_type_rural
 
 	potential = {
-		exists = owner
-		owner = { is_gestalt = no }
+		exists = space_owner
+		space_owner = { is_gestalt = no }
 		NOR = {
 			uses_district_set = habitat
 			uses_district_set = ring_world
@@ -2861,8 +2839,8 @@ col_rural = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = {
 			planet_jobs_worker_produces_mult = 0.05
@@ -2906,7 +2884,7 @@ col_ring_mix = {
 	}
 
 	planet_modifier = {
-		planet_immigration_pull_mult = 0.2
+		#planet_immigration_pull_mult = 0.2 # TODO: [AUG-48754] Use automigration modifier
 		planet_jobs_produces_mult = 0.05
 		pop_growth_speed = 0.15
 		planet_pop_assembly_mult = 0.15
@@ -2921,7 +2899,7 @@ col_ring_mix = {
 
 		modifier = {
 			add = 10
-			num_sapient_pops < 15
+			sapient_pop_amount < 1500
 		}
 	}
 }
@@ -2979,8 +2957,8 @@ col_ring_farming = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 				is_gestalt = no
 			}
@@ -2997,8 +2975,8 @@ col_ring_farming = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 				is_gestalt = yes
 			}
@@ -3046,13 +3024,13 @@ col_ring_trade = {
 
 	potential = {
 		uses_district_set = ring_world
-		exists = owner
-		owner = { is_gestalt = no }
+		exists = space_owner
+		space_owner = { is_gestalt = no }
 		is_capital = no
 	}
 
 	planet_modifier = {
-		trade_value_mult = 0.2
+		planet_jobs_trade_produces_mult = 0.2
 		pop_growth_speed = 0.1
 		planet_pop_assembly_mult = 0.1
 		planet_pop_assembly_organic_mult = 0.1
@@ -3079,8 +3057,8 @@ col_ring_generator = {
 
 	potential = {
 		uses_district_set = ring_world
-		exists = owner
-		owner = { is_gestalt = yes }
+		exists = space_owner
+		space_owner = { is_gestalt = yes }
 		is_capital = no
 	}
 
@@ -3093,8 +3071,8 @@ col_ring_generator = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 				is_gestalt = no
 			}
@@ -3111,8 +3089,8 @@ col_ring_generator = {
 	}
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 				is_gestalt = yes
 			}
@@ -3155,7 +3133,7 @@ col_ecu_mix = {
 
 	planet_modifier = {
 		planet_structures_upkeep_mult = -0.25
-		trade_value_mult = 0.20
+		planet_jobs_trade_produces_mult = 0.20
 	}
 
 	weight_modifier = {
@@ -3201,8 +3179,8 @@ col_ecu_industrial = {
 	icon = GFX_colony_type_industrial
 
 	potential = {
-		exists = owner
-		owner = { country_uses_consumer_goods = yes }
+		exists = space_owner
+		space_owner = { country_uses_consumer_goods = yes }
 		uses_district_set = city_world
 		is_capital = no
 	}
@@ -3216,8 +3194,8 @@ col_ecu_industrial = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 			}
 			OR = {
@@ -3307,8 +3285,8 @@ col_ecu_foundry = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 			}
 			OR = {
@@ -3361,8 +3339,8 @@ col_ecu_foundry = {
 		modifier = {
 			add = 10
 			num_districts = { type = district_arcology_arms_industry value >= 1 }
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				OR = {
 					country_uses_consumer_goods = no
 					has_monthly_income = { resource = consumer_goods value >= 0 }
@@ -3386,7 +3364,7 @@ col_ecu_factory = {
 		alloys = 0
 
 		trigger = {
-			owner = {
+			space_owner = {
 				is_gestalt = no
 			}
 		}
@@ -3398,7 +3376,7 @@ col_ecu_factory = {
 		alloys = -0.5
 
 		trigger = {
-			owner = {
+			space_owner = {
 				is_gestalt = no
 			}
 		}
@@ -3406,8 +3384,8 @@ col_ecu_factory = {
 
 	potential = {
 		uses_district_set = city_world
-		exists = owner
-		owner = { country_uses_consumer_goods = yes }
+		exists = space_owner
+		space_owner = { country_uses_consumer_goods = yes }
 		is_capital = no
 	}
 
@@ -3419,8 +3397,8 @@ col_ecu_factory = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 			}
 			OR = {
@@ -3509,13 +3487,13 @@ col_mac = {
 	}
 
 	planet_modifier = {
-		planet_district_industrial_build_speed_mult = 0.25
+#		planet_district_industrial_build_speed_mult = 0.25
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_machine_empire = yes
 				NOT = { has_valid_civic = civic_machine_servitor }
 			}
@@ -3545,7 +3523,7 @@ col_mac = {
 		}
 		modifier = {
 			add = 10
-			num_sapient_pops < 10
+			sapient_pop_amount < 1000
 		}
 	}
 }
@@ -3561,14 +3539,14 @@ col_mac_foundry = {
 
 	custom_tooltip = col_foundry_custom
 	planet_modifier = {
-		planet_district_industrial_build_speed_mult = 0.25
+#		planet_district_industrial_build_speed_mult = 0.25
 		planet_metallurgists_upkeep_mult = -0.2
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 			}
 			OR = {
@@ -3586,14 +3564,6 @@ col_mac_foundry = {
 			add = @stickiness
 			has_designation = col_mac_foundry
 		}
-		complex_trigger_modifier = {
-			trigger = num_districts
-			parameters = {
-				type = district_industrial
-			}
-			mode = add
-			mult = 3
-		}
 		modifier = {
 			add = 10
 			OR = {
@@ -3613,8 +3583,8 @@ col_mac_foundry = {
 		modifier = {
 			add = 11
 			has_designation = col_mac_factory
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				has_monthly_income = { resource = alloys value < 0 }
 				has_monthly_income = { resource = consumer_goods value >= 0 }
 			}
@@ -3628,20 +3598,20 @@ col_mac_factory = {
 
 	potential = {
 		uses_district_set = machine_world
-		owner = { country_uses_consumer_goods = yes }
+		space_owner = { country_uses_consumer_goods = yes }
 		is_capital = no
 	}
 
 	custom_tooltip = col_factory_custom
 	planet_modifier = {
-		planet_district_industrial_build_speed_mult = 0.25
+#		planet_district_industrial_build_speed_mult = 0.25
 		planet_artisans_upkeep_mult = -0.2
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 			}
 			OR = {
@@ -3658,14 +3628,6 @@ col_mac_factory = {
 		modifier = {
 			add = @stickiness
 			has_designation = col_mac_factory
-		}
-		complex_trigger_modifier = {
-			trigger = num_districts
-			parameters = {
-				type = district_industrial
-			}
-			mode = add
-			mult = 3
 		}
 		modifier = {
 			add = 10
@@ -3686,8 +3648,8 @@ col_mac_factory = {
 		modifier = {
 			add = 11
 			has_designation = col_mac_foundry
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				has_monthly_income = { resource = consumer_goods value < 0 }
 				has_monthly_income = { resource = alloys value >= 0 }
 			}
@@ -3713,8 +3675,8 @@ col_hiv = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = {
 			planet_jobs_simple_drone_produces_mult = 0.05
@@ -3739,14 +3701,14 @@ col_hiv_foundry = {
 	}
 
 	planet_modifier = {
-		planet_district_industrial_build_speed_mult = 0.25
+#		planet_district_industrial_build_speed_mult = 0.25
 		planet_metallurgists_upkeep_mult = -0.20
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				is_galactic_community_member = yes
 			}
 			OR = {
@@ -3761,8 +3723,8 @@ col_hiv_foundry = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = {
 			planet_metallurgists_produces_mult = 0.05
@@ -3774,14 +3736,6 @@ col_hiv_foundry = {
 			add = @stickiness
 			has_designation = col_hiv_foundry
 		}
-		complex_trigger_modifier = {
-			trigger = num_districts
-			parameters = {
-				type = district_industrial
-			}
-			mode = add
-			mult = 3
-		}
 		modifier = {
 			add = 10
 			OR = {
@@ -3792,9 +3746,8 @@ col_hiv_foundry = {
 		}
 		modifier = {
 			add = 10
-			num_districts = { type = district_industrial value >= 1 }
-			exists = owner
-			owner = {
+			exists = space_owner
+			space_owner = {
 				resource_revenue_compare = {
 					resource = alloys
 					value < trigger:years_passed
@@ -3808,8 +3761,8 @@ col_trophy_machine = {
 	icon = GFX_colony_type_bureaucratic
 
 	potential = {
-		exists = owner
-		owner = { has_valid_civic = civic_machine_servitor }
+		exists = space_owner
+		space_owner = { has_valid_civic = civic_machine_servitor }
 		NOT = {
 			uses_district_set = habitat
 		}
@@ -3888,14 +3841,14 @@ col_resort = {
 	}
 
 	planet_modifier = {
-		trade_value_mult = 0.10
+		planet_jobs_trade_produces_mult = 0.10
 		planet_jobs_unity_produces_mult = 0.05
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
 		modifier = { planet_jobs_unity_produces_mult = 0.05 }
 	}
@@ -3913,17 +3866,17 @@ col_penal = {
 		has_modifier = penal_colony
 	}
 
-	planet_modifier = { 
+	planet_modifier = {
 		planet_jobs_worker_produces_mult = 0.10
 		job_warden_per_pop = 0.04
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { has_tradition = tr_adaptability_finish }
+			exists = space_owner
+			space_owner = { has_tradition = tr_adaptability_finish }
 		}
-		modifier = { 
+		modifier = {
 			planet_jobs_worker_produces_mult = 0.05
 			job_warden_per_pop = 0.01
 		}

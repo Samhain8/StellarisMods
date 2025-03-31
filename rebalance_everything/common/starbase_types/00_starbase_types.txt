@@ -56,6 +56,7 @@ sshipyard = {
 		modifier = {
 			add = 1000
 			owner = {
+				is_ai = yes
 				NOT = {
 					any_owned_starbase = {
 						has_starbase_module = shipyard
@@ -759,7 +760,11 @@ smining_hub = {
 		}
 		modifier = {
 			add = 1000
+			solar_system = {
+				is_capital_system = no
+			}
 			owner = {
+				is_ai = yes
 				NOT = {
 					any_owned_starbase = {
 						has_starbase_module = astromining_bay
@@ -770,6 +775,10 @@ smining_hub = {
 		modifier = {
 			add = 1000
 			solar_system = {
+				owner ={
+					is_ai = yes
+				}
+				is_capital_system = no
 				count_ship_in_system= {
 					count > 3
 					limit = {

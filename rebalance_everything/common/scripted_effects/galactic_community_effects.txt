@@ -697,7 +697,7 @@ breach_fix_resolution_divinity_a_defined_purpose_machine = {
 			force_add_civic = civic_machine_servitor
 
 			capital_scope = {
-				create_pop = {
+				create_pop_group = {
 					species = event_target:defined_purpose_random_species
 				}
 			}
@@ -737,7 +737,7 @@ breach_fix_resolution_divinity_a_defined_purpose_machine = {
 			}
 
 			capital_scope = {
-				create_pop = {
+				create_pop_group = {
 					species = event_target:defined_purpose_backup_species
 				}
 			}

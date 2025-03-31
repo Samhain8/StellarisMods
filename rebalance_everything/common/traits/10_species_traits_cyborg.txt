@@ -22,6 +22,30 @@ trait_auto_mod_cyborg = {
 	assembly_score = {
 		base = 2
 	}
+
+	resources = {
+		category = planet_pops
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_modifier = worse_parts
+				}
+			}
+			trade = 0.5
+		}
+		upkeep = {
+			energy = @cyborg_energy_upkeep
+		}
+		upkeep = {
+			trigger = {
+				exists = owner
+				owner = { has_modifier = optimized_parts }
+			}
+			energy = 0.1
+		}
+	}
+
 	custom_tooltip_with_modifiers = automodding_trait_cyborg_tooltip
 }
 
@@ -45,7 +69,8 @@ trait_cyborg_power_drills = {
 	randomized = no
 	category = cyborg
 	modifier = {
-		planet_jobs_minerals_produces_mult = 0.1
+		pop_miner_bonus_workforce_mult = 0.1
+		pop_mining_drone_bonus_workforce_mult = 0.1
 	}
 
 	slave_cost = {
@@ -83,7 +108,8 @@ trait_cyborg_harvesters = {
 	randomized = no
 	category = cyborg
 	modifier = {
-		planet_jobs_food_produces_mult = 0.1
+		pop_farmer_bonus_workforce_mult = 0.1
+		pop_agri_drone_bonus_workforce_mult = 0.1
 	}
 
 	slave_cost = {
@@ -121,7 +147,8 @@ trait_cyborg_superconductive = {
 	randomized = no
 	category = cyborg
 	modifier = {
-		planet_jobs_energy_produces_mult = 0.1
+		pop_technician_bonus_workforce_mult = 0.1
+		pop_technician_drone_bonus_workforce_mult = 0.1
 	}
 
 	slave_cost = {
@@ -154,7 +181,14 @@ trait_cyborg_efficient_processors = {
 	category = cyborg
 	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
 	modifier = {
-		planet_jobs_produces_mult = 0.05
+		pop_bonus_workforce_mult = 0.05
+	}
+
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @cyborg_energy_upkeep
+		}
 	}
 
 	slave_cost = {
@@ -178,14 +212,28 @@ trait_cyborg_logic_engines = {
 	category = cyborg
 	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
 	modifier = {
-		planet_jobs_physics_research_produces_mult = 0.10
-		planet_jobs_society_research_produces_mult = 0.10
-		planet_jobs_engineering_research_produces_mult = 0.10
+		pop_physicist_bonus_workforce_mult = 0.10
+		pop_biologist_bonus_workforce_mult = 0.10
+		pop_engineer_bonus_workforce_mult = 0.10
+		pop_brain_drone_physicist_bonus_workforce_mult = 0.10
+		pop_brain_drone_biologist_bonus_workforce_mult = 0.10
+		pop_brain_drone_engineer_bonus_workforce_mult = 0.10
+		pop_calculator_physicist_bonus_workforce_mult = 0.10
+		pop_calculator_biologist_bonus_workforce_mult = 0.10
+		pop_calculator_engineer_bonus_workforce_mult = 0.10
+	}
+
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @cyborg_energy_upkeep
+		}
 	}
 
 	slave_cost = {
 		energy = 750
 	}
+	custom_tooltip = TRAIT_CYBORG_LOGIC_ENGINES_EFFECT
 	assembly_score = {
 		modifier = {
 			add = 1.5
@@ -214,6 +262,13 @@ trait_cyborg_loyalty_circuits = {
 		pop_happiness = 0.1
 	}
 
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @cyborg_energy_upkeep
+		}
+	}
+
 	slave_cost = {
 		energy = 500
 	}
@@ -238,6 +293,13 @@ trait_cyborg_double_jointed = {
 		pop_housing_usage_mult = -0.1
 		pop_growth_from_immigration = 0.15
 		pop_resettlement_cost_mult = -0.25
+	}
+
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @cyborg_energy_upkeep
+		}
 	}
 
 	slave_cost = {
@@ -293,6 +355,13 @@ trait_cyborg_enhanced_memory = {
 		leaders_upkeep_mult = -0.25
 	}
 
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @cyborg_energy_upkeep
+		}
+	}
+
 	ai_weight = {
 		factor = 0
 	}
@@ -318,6 +387,12 @@ trait_cyborg_durable = {
 	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
 	modifier = {
 		pop_amenities_usage_add = -0.5
+	}
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @cyborg_energy_upkeep
+		}
 	}
 	slave_cost = {
 		energy = 750
@@ -369,7 +444,12 @@ trait_cyborg_learning_algorithms = {
 		negative_leader_traits_species = -1
 		leaders_upkeep_mult = -0.1
 	}
-
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @cyborg_energy_upkeep
+		}
+	}
 	slave_cost = {
 		energy = 1500
 	}
@@ -446,6 +526,12 @@ trait_cyborg_streamlined_protocols = {
 	modifier = {
 		species_empire_size_mult = -0.10
 	}
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @cyborg_energy_upkeep
+		}
+	}
 	slave_cost = {
 		energy = 750
 	}
@@ -492,7 +578,14 @@ trait_cyborg_trading_algorithms = {
 	category = cyborg
 	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
 	modifier = {
-		pop_job_trade_mult = 0.25
+		pop_trader_bonus_workforce_mult = 0.25
+		pop_maintenance_drone_bonus_workforce_mult = 0.25
+	}
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @cyborg_energy_upkeep
+		}
 	}
 	slave_cost = {
 		energy = 500
@@ -516,9 +609,15 @@ trait_cyborg_stainless_steel_smile = {
 	randomized = no
 	category = cyborg
 	modifier = {
-		pop_job_amenities_mult = 0.20
+		pop_entertainer_bonus_workforce_mult = 0.20
+		pop_maintenance_drone_bonus_workforce_mult = 0.20
 	}
-
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @cyborg_energy_upkeep
+		}
+	}
 	slave_cost = {
 		energy = 750
 	}
@@ -540,7 +639,8 @@ trait_cyborg_welded_countenance = {
 	randomized = no
 	category = cyborg
 	modifier = {
-		pop_job_amenities_mult = -0.20
+		pop_entertainer_bonus_workforce_mult = -0.20
+		pop_maintenance_drone_bonus_workforce_mult = -0.20
 	}
 
 	slave_cost = {
@@ -592,7 +692,7 @@ trait_cyborg_bionic_engineers = {
 	randomized = no
 	category = cyborg
 	modifier = {
-		planet_jobs_engineering_research_produces_mult = 0.15
+		pop_engineer_bonus_workforce_mult = 0.15
 	}
 
 	slave_cost = {
@@ -619,7 +719,7 @@ trait_cyborg_bionic_physicists = {
 	randomized = no
 	category = cyborg
 	modifier = {
-		planet_jobs_physics_research_produces_mult = 0.15
+		pop_physicist_bonus_workforce_mult = 0.15
 	}
 
 	slave_cost = {
@@ -646,7 +746,7 @@ trait_cyborg_bionic_sociologists = {
 	randomized = no
 	category = cyborg
 	modifier = {
-		planet_jobs_society_research_produces_mult = 0.15
+		pop_biologist_bonus_workforce_mult = 0.15
 	}
 
 	slave_cost = {
@@ -673,7 +773,12 @@ trait_cyborg_integrated_weaponry = {
 	modifier = {
 		army_damage_mult = 1.0
 	}
-
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @cyborg_energy_upkeep
+		}
+	}
 	slave_cost = {
 		energy = 1000
 	}
@@ -696,7 +801,7 @@ trait_cyborg_delicate_frames = {
 	category = cyborg
 	modifier = {
 		army_damage_mult = -0.5
-		planet_jobs_worker_produces_mult = -0.05
+		pop_bonus_workforce_mult = -0.05 #Switch out with category bonus
 	}
 
 	slave_cost = {
@@ -747,7 +852,9 @@ trait_cyborg_scarcity_algorithms = {
 	randomized = no
 	category = cyborg
 	modifier = {
-		pop_job_trade_mult = -0.25
+		pop_trader_bonus_workforce_mult = -0.25
+		pop_merchant_bonus_workforce_mult = -0.25
+		pop_maintenance_drone_bonus_workforce_mult = -0.25
 	}
 
 	slave_cost = {
@@ -786,7 +893,12 @@ trait_cyborg_climate_adjustment_dry = {
 		pc_ocean_habitability = -0.1
 		pc_alpine_habitability = -0.1
 	}
-
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @cyborg_energy_upkeep
+		}
+	}
 	slave_cost = {
 		energy = 500
 	}
@@ -823,7 +935,12 @@ trait_cyborg_climate_adjustment_wet = {
 		pc_tundra_habitability = -0.1
 		pc_alpine_habitability = -0.1
 	}
-
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @cyborg_energy_upkeep
+		}
+	}
 	slave_cost = {
 		energy = 500
 	}
@@ -860,7 +977,12 @@ trait_cyborg_climate_adjustment_frozen = {
 		pc_continental_habitability = -0.1
 		pc_tropical_habitability = -0.1
 	}
-
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @cyborg_energy_upkeep
+		}
+	}
 	slave_cost = {
 		energy = 500
 	}
@@ -877,20 +999,24 @@ trait_cyborg_ancient_dreadnought = {
 		}
 		can_add_cybernetic_traits = yes
 	}
-	potential_crossbreeding_chance = 1.0
 	initial = no
 	randomized = no
 	category = cyborg
-	opposites = { "trait_lithoid_gaseous_byproducts" "trait_lithoid_scintillating" "trait_lithoid_volatile_excretions" "trait_advanced_gaseous_byproducts" "trait_advanced_scintillating" "trait_advanced_volatile_excretions" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
 
 	modifier = {
 		army_damage_mult = 5
-		planet_metallurgists_produces_mult = 0.15
+		pop_foundry_bonus_workforce_mult = 0.15
+		pop_alloy_drone_bonus_workforce_mult = 0.15
 	}
-
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @cyborg_energy_upkeep
+		}
+	}
 	slave_cost = {
 		energy = 1500
 	}
@@ -907,11 +1033,9 @@ trait_cyborg_enigmatic_fortress = {
 		}
 		can_add_cybernetic_traits = yes
 	}
-	potential_crossbreeding_chance = 1.0
 	initial = no
 	randomized = no
 	category = cyborg
-	opposites = { "trait_lithoid_gaseous_byproducts" "trait_lithoid_scintillating" "trait_lithoid_volatile_excretions" "trait_advanced_gaseous_byproducts" "trait_advanced_scintillating" "trait_advanced_volatile_excretions" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
@@ -919,7 +1043,12 @@ trait_cyborg_enigmatic_fortress = {
 	modifier = {
 		pop_amenities_usage_mult = -0.5
 	}
-
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @cyborg_energy_upkeep
+		}
+	}
 	slave_cost = {
 		energy = 1500
 	}
@@ -936,11 +1065,9 @@ trait_cyborg_infinity_sphere = {
 		}
 		can_add_cybernetic_traits = yes
 	}
-	potential_crossbreeding_chance = 1.0
 	initial = no
 	randomized = no
 	category = cyborg
-	opposites = { "trait_lithoid_gaseous_byproducts" "trait_lithoid_scintillating" "trait_lithoid_volatile_excretions" "trait_advanced_gaseous_byproducts" "trait_advanced_scintillating" "trait_advanced_volatile_excretions" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
@@ -948,7 +1075,12 @@ trait_cyborg_infinity_sphere = {
 	modifier = {
 		planet_researchers_upkeep_mult = -0.5
 	}
-
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @cyborg_energy_upkeep
+		}
+	}
 	slave_cost = {
 		energy = 1500
 	}
@@ -965,11 +1097,9 @@ trait_cyborg_scavenger_bot = {
 		}
 		can_add_cybernetic_traits = yes
 	}
-	potential_crossbreeding_chance = 1.0
 	initial = no
 	randomized = no
 	category = cyborg
-	opposites = { "trait_lithoid_gaseous_byproducts" "trait_lithoid_scintillating" "trait_lithoid_volatile_excretions" "trait_advanced_gaseous_byproducts" "trait_advanced_scintillating" "trait_advanced_volatile_excretions" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
 	custom_tooltip_with_modifiers = CYBORG_ENERGY_UPKEEP_EFFECT
@@ -977,7 +1107,12 @@ trait_cyborg_scavenger_bot = {
 	modifier = {
 		pop_growth_speed = 1
 	}
-
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = @cyborg_energy_upkeep
+		}
+	}
 	slave_cost = {
 		energy = 1500
 	}
@@ -986,7 +1121,6 @@ trait_cyborg_scavenger_bot = {
 #Cybernetic Creed Traits
 trait_cyborg_creed_of_construction = {
 	cost = 0
-	potential_crossbreeding_chance = 0
 	initial = no
 	randomized = no
 	category = cyborg
@@ -1004,9 +1138,12 @@ trait_cyborg_creed_of_construction = {
 
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		planet_jobs_alloys_produces_mult = 0.2
-		planet_jobs_consumer_goods_produces_mult = 0.2
-		planet_jobs_unity_produces_mult = 0.1
+		pop_foundry_bonus_workforce_mult = 0.2
+		pop_alloy_drone_bonus_workforce_mult = 0.2
+		pop_artisan_bonus_workforce_mult = 0.2
+		pop_artisan_drone_bonus_workforce_mult = 0.2
+		pop_bureaucrat_bonus_workforce_mult = 0.1
+		pop_coordinator_bonus_workforce_mult = 0.1
 	}
 
 	icon = "gfx/interface/icons/traits/trait_cyborg_creed_of_construction.dds"
@@ -1017,7 +1154,6 @@ trait_cyborg_creed_of_construction = {
 
 trait_cyborg_creed_of_war = {
 	cost = 0
-	potential_crossbreeding_chance = 0
 	initial = no
 	randomized = no
 	category = cyborg
@@ -1037,7 +1173,8 @@ trait_cyborg_creed_of_war = {
 	modifier = {
 		army_health = 0.25
 		army_defense_damage_mult = 0.25
-		planet_jobs_unity_produces_mult = 0.10
+		pop_bureaucrat_bonus_workforce_mult = 0.1
+		pop_coordinator_bonus_workforce_mult = 0.1
 	}
 
 	icon = "gfx/interface/icons/traits/trait_cyborg_creed_of_war.dds"
@@ -1048,7 +1185,6 @@ trait_cyborg_creed_of_war = {
 
 trait_cyborg_creed_of_research = {
 	cost = 0
-	potential_crossbreeding_chance = 0
 	initial = no
 	randomized = no
 	category = cyborg
@@ -1066,10 +1202,17 @@ trait_cyborg_creed_of_research = {
 
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		planet_jobs_engineering_research_produces_mult = 0.2
-		planet_jobs_physics_research_produces_mult = 0.2
-		planet_jobs_society_research_produces_mult = 0.2
-		planet_jobs_unity_produces_mult = 0.10
+		pop_physicist_bonus_workforce_mult = 0.2
+		pop_biologist_bonus_workforce_mult = 0.2
+		pop_engineer_bonus_workforce_mult = 0.2
+		pop_brain_drone_physicist_bonus_workforce_mult = 0.2
+		pop_brain_drone_biologist_bonus_workforce_mult = 0.2
+		pop_brain_drone_engineer_bonus_workforce_mult = 0.2
+		pop_calculator_physicist_bonus_workforce_mult = 0.2
+		pop_calculator_biologist_bonus_workforce_mult = 0.2
+		pop_calculator_engineer_bonus_workforce_mult = 0.2
+		pop_bureaucrat_bonus_workforce_mult = 0.10
+		pop_coordinator_bonus_workforce_mult = 0.10
 	}
 
 	icon = "gfx/interface/icons/traits/trait_cyborg_creed_of_research.dds"
@@ -1080,7 +1223,6 @@ trait_cyborg_creed_of_research = {
 
 trait_cyborg_creed_of_labor = {
 	cost = 0
-	potential_crossbreeding_chance = 0
 	initial = no
 	randomized = no
 	category = cyborg
@@ -1098,8 +1240,9 @@ trait_cyborg_creed_of_labor = {
 
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		planet_jobs_worker_produces_mult = 0.2
-		planet_jobs_unity_produces_mult = 0.10
+		pop_bonus_workforce_mult = 0.2 #Change to category bonus
+		pop_bureaucrat_bonus_workforce_mult = 0.10
+		pop_coordinator_bonus_workforce_mult = 0.10
 	}
 
 	icon = "gfx/interface/icons/traits/trait_cyborg_creed_of_labor.dds"
@@ -1110,7 +1253,6 @@ trait_cyborg_creed_of_labor = {
 
 trait_cyborg_ritualistic_implants = {
 	cost = 0
-	potential_crossbreeding_chance = 0
 	initial = no
 	randomized = no
 	category = cyborg
@@ -1130,10 +1272,13 @@ trait_cyborg_ritualistic_implants = {
 
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		planet_jobs_alloys_produces_mult = 0.05
-		planet_jobs_engineering_research_produces_mult = 0.05
-		planet_jobs_unity_produces_mult = 0.1
-		planet_jobs_worker_produces_mult = 0.05
+		pop_foundry_bonus_workforce_mult = 0.05
+		pop_alloy_drone_bonus_workforce_mult = 0.05
+		pop_engineer_bonus_workforce_mult = 0.05
+		pop_brain_drone_engineer_bonus_workforce_mult = 0.05
+		pop_bureaucrat_bonus_workforce_mult = 0.1
+		pop_coordinator_bonus_workforce_mult = 0.1
+		pop_bonus_workforce_mult = 0.05 #Change to category TODO AUG-51639
 		army_damage_mult = 0.05
 		# concept_cybernetic_creed_traits_desc should be updated if trait effects are changed
 	}

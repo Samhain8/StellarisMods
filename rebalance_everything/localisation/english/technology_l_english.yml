@@ -444,8 +444,8 @@
  tech_global_research_initiative_desc:2 "A bid for interplanetary resource pools and more flexible research grants."
  tech_neuro_quantum_links:0 "Quantum Neuro-Links"
  tech_neuro_quantum_links_desc:0 "Advanced neurological implants with connection to quantum computing clusters allow for multi-threaded thoughts."
- tech_cryostasis_1:0 "AI-Controlled Colony Ships"
- tech_cryostasis_1_desc:1 "By giving control of the colony ship to an Artificial Intelligence, the crew and colonists can be placed in suspended animation."
+ tech_cryostasis_1:0 "Automated Colony Ships"
+ tech_cryostasis_1_desc:1 "By giving control of the colony ship to the on-board computer, the crew and colonists can be placed in suspended animation."
  tech_cryostasis_1_machine_intelligence:0 "Colony Fabrication Drones"
  tech_cryostasis_1_desc_machine_intelligence:0 "Fleets of small but efficient construction drones that are stored in the cargo bays of colony ships. Once activated on a planetary surface, they greatly speed up the initial settlement process."
  tech_cryostasis_2:0 "Self-Aware Colony Ships"
@@ -754,6 +754,8 @@
  tech_desert_colonization_desc:1 "$tech_arctic_colonization_desc$"
  tech_continental_colonization:0 "Continental Colonization"
  tech_continental_colonization_desc:1 "$tech_arctic_colonization_desc$"
+ tech_basic_health: "Medical Care"
+ tech_basic_health_desc: "$job_healthcare_desc$"
  tech_frontier_health:1 "Genetic Healthcare"
  tech_frontier_health_desc:1 "The colonization of alien worlds has opened up an entirely new field of biomedical research."
  tech_frontier_health_machine_intelligence:0 "Modular Components"
@@ -909,6 +911,9 @@
  tech_xeno_supremacy_desc:1 "We navigate a minefield of galactic power dynamics with a singular purpose; to come out on top."
  tech_xeno_diplomacy:0 "Xeno Diplomacy"
  tech_xeno_diplomacy_desc:1 "Advancing our understanding of interactions with - and manipulations of - the xeno is a necessary step in forming more permanent interstellar alliances."
+ tech_federation_code: "Federation Code"
+ tech_federation_code_desc: "A Federation must be more than goodwill and shared ambition. This code provides the groundwork for a unified interstellar order, ensuring cooperation and stability among its members."
+ tech_federation_code_effect: "§HUnlocks Diplomacy:§! Form Federation"
  tech_galactic_ambitions:1 "Stellar Expansion"
  tech_galactic_ambitions_desc:3 "Our future lies in the sea of stars."
  tech_manifest_destiny:0 "Manifest Destiny"
@@ -917,6 +922,9 @@
  tech_interstellar_campaigns_desc:0 "A well-oiled war machine is the key to exerting influence on a galactic scale. Backed by the might of our military, we can lay claim to almost anything we want."
  tech_galactic_campaigns:0 "Galactic Campaigns"
  tech_galactic_campaigns_desc:0 "Further improvements to administration grant an extended power projection across the stars, and the military clout needed to enforce our demands."
+ tech_existential_campaigns: "Existential Campaigns"
+ tech_existential_campaigns_desc: "When survival itself is at stake, the very concept of war loses its meaning. These campaigns are waged not for dominion, but to secure the continued existence of our civilization."
+ tech_existential_campaigns_effect: "§HUnlocks Casus Belli:§! Existential Expulsion"
 
  # Empire Management
  tech_planetary_government:0 "Planetary Government"
@@ -1202,6 +1210,12 @@
  tech_micro_replicators_desc:0 "Microscopic tools that can assist our replication units in creating the more complex circuitry needed for new drones."
  tech_self_assembling_components:0 "Self-Assembling Components"
  tech_self_assembling_components_desc:0 "Modelled on organic DNA, these microscopic machine intellects are capable of autonomously assembling most components needed for new drones."
+
+ #####################################
+ # Score
+ #####################################
+ HAS_HIGHEST_TECHNOLOGY_SCORE: "$COUNTRY|Y$ has the highest technology score."
+ DOES_NOT_HAVE_HIGHEST_TECHNOLOGY_SCORE: "$COUNTRY|Y$ does not have the highest technology score."
 
  #####################################
  # Required technologies

@@ -6481,21 +6481,21 @@ country_event = {
 				value = 0.75
 			}
 		}
-		#Cap the cost at 3k energy (num_pops * @SalvagerInsightEnergyCost * salvager_insight_cost_mult)
+		#Cap the cost at 3k energy (pop_amount * @SalvagerInsightEnergyCost * salvager_insight_cost_mult)
 		if = {
 			limit = {
 				OR = {
 					AND = {
 						mid_game_years_passed < 0
-						num_pops > 150
+						pop_amount > 15000
 					}
 					AND = {
 						end_game_years_passed < 0
-						num_pops > 200
+						pop_amount > 20000
 					}
 					AND = {
 						end_game_years_passed >= 0
-						num_pops > 280
+						pop_amount > 28000
 					}
 				}
 			}
@@ -6505,14 +6505,18 @@ country_event = {
 			}
 		}
 		else = {
-			#Fetch num_pops as a variable, then multiply by salvager_insight_cost_mult
+			#Fetch pop_amount as a variable, then multiply by salvager_insight_cost_mult
 			export_trigger_value_to_variable = {
-				trigger = num_pops
+				trigger = pop_amount
 				variable = salvager_insight_pop_value_var
 			}
 			multiply_variable = {
 				which = salvager_insight_pop_value_var
 				value = salvager_insight_cost_mult
+			}
+			divide_variable = {
+				which = salvager_insight_pop_value_var # Correction from old num_pops to pop_amount
+				value = 100
 			}
 			round_variable_to_closest = {
 				which = salvager_insight_pop_value_var
@@ -7483,21 +7487,21 @@ country_event = {
 				value = 0.7
 			}
 		}
-		#Cap the cost at 9k energy (num_pops * @DivinationEnergyCost * divination_cost_mult)
+		#Cap the cost at 9k energy (pop_amount * @DivinationEnergyCost * divination_cost_mult)
 		if = {
 			limit = {
 				OR = {
 					AND = {
 						mid_game_years_passed < 0
-						num_pops > 210
+						pop_amount > 21000
 					}
 					AND = {
 						end_game_years_passed < 0
-						num_pops > 300
+						pop_amount > 30000
 					}
 					AND = {
 						end_game_years_passed >= 0
-						num_pops > 420
+						pop_amount > 42000
 					}
 				}
 			}
@@ -7507,9 +7511,9 @@ country_event = {
 			}
 		}
 		else = {
-			#Fetch num_pops as a variable, then multiply by divination_cost_mult
+			#Fetch pop_amount as a variable, then multiply by divination_cost_mult
 			export_trigger_value_to_variable = {
-				trigger = num_pops
+				trigger = pop_amount
 				variable = divination_pop_value_var
 			}
 			multiply_variable = {
@@ -7519,6 +7523,10 @@ country_event = {
 			divide_variable = {
 				which = divination_pop_value_var
 				value = 2
+			}
+			divide_variable = {
+				which = divination_pop_value_var # Correction from old num_pops to pop_amount
+				value = 100
 			}
 			round_variable_to_closest = {
 				which = divination_pop_value_var
@@ -8312,7 +8320,7 @@ situation_event = {
 			is_gestalt = no
 			is_individual_machine = no
 			NOT = { has_country_flag = too_lucid_flag }
-			num_pops > 4
+			pop_amount > 400
 			count_owned_planet = {
 				count > 1
 				limit = { is_colony = yes }
@@ -8803,7 +8811,7 @@ situation_event = {
 				has_country_flag = rogue_shaman_flag
 				has_country_flag = active_divination_event
 			}
-			num_pops > 1
+			pop_amount > 100
 			count_owned_planet = {
 				count > 1
 				limit = { is_colony = yes }
@@ -9119,7 +9127,7 @@ situation_event = {
 		}
 		owner = {
 			NOT = { has_country_flag = great_schism_flag }
-			num_pops > 1
+			pop_amount > 100
 			count_owned_planet = {
 				count > 1
 				limit = { is_colony = yes }
@@ -10274,8 +10282,8 @@ situation_event = {
 					has_modifier = penal_colony
 					has_modifier = resort_colony
 				}
-				count_owned_pop = {
-					count > 4
+				count_owned_pop_amount = {
+					count >= 500
 				}
 			}
 		}
@@ -10299,8 +10307,8 @@ situation_event = {
 						has_modifier = penal_colony
 						has_modifier = resort_colony
 					}
-					count_owned_pop = {
-						count > 4
+					count_owned_pop_amount = {
+						count >= 500
 					}
 				}
 				set_planet_flag = colony_event
@@ -10513,11 +10521,11 @@ planet_event = {
 	after = {
 		custom_tooltip = enclave.5502.pop_removed
 		hidden_effect = {
-			random_owned_pop = {
+			random_owned_pop_group = {
 				limit = {
 					NOT = { is_pop_category = ruler }
 				}
-				kill_pop = yes
+				kill_single_pop = yes
 			}
 			planet_event = {
 				id = enclave.5503
@@ -10563,9 +10571,9 @@ planet_event = {
 			}
 		}
 		hidden_effect = {
-			every_owned_pop = {
+			every_owned_pop_group = {
 				limit = {
-					is_robot_pop = no
+					is_robot_pop_group = no
 				}
 				add_modifier = {
 					modifier = shattered_frontier_pop_community

@@ -5502,6 +5502,18 @@ weapon_component_template = {
 			script = "grand_archive/mutations/component_dynamic_cost"
 			COST = @cost7
 		}
+		cost = {
+			nanites = 0.22
+			mult = @fauna_cost_scaling
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
 	}
 }
 
@@ -5522,6 +5534,18 @@ weapon_component_template = {
 		inline_script = {
 			script = "grand_archive/mutations/component_dynamic_cost"
 			COST = @cost13
+		}
+		cost = {
+			nanites = 0.43
+			mult = @fauna_cost_scaling
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = nanites }
 		}
 	}
 }
@@ -5544,6 +5568,18 @@ weapon_component_template = {
 			script = "grand_archive/mutations/component_dynamic_cost"
 			COST = @cost26
 		}
+		cost = {
+			nanites = 0.85
+			mult = @fauna_cost_scaling
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = nanites }
+		}
 	}
 }
 
@@ -5564,6 +5600,18 @@ weapon_component_template = {
 		inline_script = {
 			script = "grand_archive/mutations/component_dynamic_cost"
 			COST = @cost52
+		}
+		cost = {
+			nanites = 1.69
+			mult = @fauna_cost_scaling
+		}
+	}
+
+	ai_weight = {
+		weight = 1
+		modifier = {
+			factor = 0
+			no_resource_for_component = { RESOURCE = nanites }
 		}
 	}
 }

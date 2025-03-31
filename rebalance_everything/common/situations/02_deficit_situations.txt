@@ -11,7 +11,8 @@ situation_energy_deficit = {
 		set_situation_flag = deficit_situation
 		owner = {
 			country_event = { id = advisor.20 days = 10 random = 20 }
-			save_event_target_as = kaleidoscope_new_owner	
+			save_event_target_as = kaleidoscope_new_owner
+			country_event = { id = timeline.19 } # Timeline Deficit
 		}
 		random_playable_country = {
 			limit = {
@@ -51,6 +52,38 @@ situation_energy_deficit = {
 				ship_disengage_chance_mult = -0.1
 				ship_weapon_damage = -0.20
 				ship_speed_mult = -0.20
+			}
+			triggered_modifier = {
+				potential = {
+					owner = {
+						any_owned_planet = {
+							is_planet_class = pc_cosmogenesis_world
+						}
+					}
+				}
+				planet_neural_chips_physics_research_produces_add = -0.75
+				planet_neural_chips_society_research_produces_add = -0.75
+				planet_neural_chips_engineering_research_produces_add = -0.75
+			}
+			triggered_modifier = {
+				potential = {
+					owner = {
+						any_owned_planet = {
+							is_planet_class = pc_cosmogenesis_world
+						}
+					}
+				}
+				planet_neural_chips_advanced_logic_produces_add = -0.025
+			}
+			triggered_modifier = {
+				potential = {
+					owner = {
+						any_owned_planet = {
+							is_planet_class = pc_cosmogenesis_world
+						}
+					}
+				}
+				pop_purge_speed = 2
 			}
 		}
 		deficit_second = {
@@ -202,6 +235,9 @@ situation_mineral_deficit = {
 
 	on_start = {
 		set_situation_flag = deficit_situation
+		owner = {
+			country_event = { id = timeline.19 } # Timeline Deficit
+		}
 	}
 	on_abort = {
 		owner = {
@@ -564,6 +600,9 @@ situation_food_deficit = {
 
 	on_start = {
 		set_situation_flag = deficit_situation
+		owner = {
+			country_event = { id = timeline.19 } # Timeline Deficit
+		}
 	}
 	abort_trigger = {
 		owner = { country_uses_food = no }
@@ -851,6 +890,9 @@ situation_consumer_goods_deficit = {
 
 	on_start = {
 		set_situation_flag = deficit_situation
+		owner = {
+			country_event = { id = timeline.19 } # Timeline Deficit
+		}
 	}
 	abort_trigger = {
 		owner = { country_uses_consumer_goods = no }
@@ -1095,6 +1137,9 @@ situation_alloys_deficit = {
 
 	on_start = {
 		set_situation_flag = deficit_situation
+		owner = {
+			country_event = { id = timeline.19 } # Timeline Deficit
+		}
 	}
 	on_abort = {
 		owner = {
@@ -1302,6 +1347,9 @@ situation_rare_crystals_deficit = {
 
 	on_start = {
 		set_situation_flag = deficit_situation
+		owner = {
+			country_event = { id = timeline.19 } # Timeline Deficit
+		}
 	}
 	on_abort = {
 		owner = {
@@ -1475,6 +1523,9 @@ situation_volatile_motes_deficit = {
 
 	on_start = {
 		set_situation_flag = deficit_situation
+		owner = {
+			country_event = { id = timeline.19 } # Timeline Deficit
+		}
 	}
 	on_abort = {
 		owner = {
@@ -1649,6 +1700,9 @@ situation_exotic_gases_deficit = {
 
 	on_start = {
 		set_situation_flag = deficit_situation
+		owner = {
+			country_event = { id = timeline.19 } # Timeline Deficit
+		}
 	}
 	on_abort = {
 		owner = {

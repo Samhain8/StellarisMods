@@ -290,7 +290,7 @@ the_seal_pump_exotic_gases_modifier = {
 }
 
 revolutionary_medigel_modifier = {
-	custom_tooltip = revolutionary_medigel_tt
+	pop_healthcare_bonus_workforce_mult = 0.25
 	icon = "gfx/interface/icons/modifiers/mod_job_healthcare_add.dds"
 }
 
@@ -338,12 +338,12 @@ eternal_throne_modifier = {
 
 instable_astral_scar_modifier = {
 	ship_speed_mult = -0.5
-	trade_value_mult = -1.0
+	planet_jobs_trade_produces_mult = -1.0
 }
 
 astralnomical_interest_modifier = {
 	icon = "gfx/interface/icons/planet_modifiers/pm_astralnomical_interest.dds"
-	planet_immigration_pull_mult = 0.25
+	#planet_immigration_pull_mult = 0.25 # TODO: [AUG-48754] Use automigration modifier
 	custom_tooltip = astralnomical_interest_tt
 	show_only_custom_tooltip = no
 }

@@ -54,11 +54,11 @@ leader_trait_preftl_haggler = {
 		TIER = none
 	}
 	planet_modifier = {
-		trade_value_mult = 0.15
+		planet_jobs_trade_produces_mult = 0.15
 		planet_pops_consumer_goods_upkeep_mult = -0.05
 	}
 	sector_modifier = {
-		trade_value_mult = 0.075
+		planet_jobs_trade_produces_mult = 0.075
 		planet_pops_consumer_goods_upkeep_mult = -0.025
 	}
 	leader_class = { official }
@@ -120,7 +120,6 @@ leader_trait_plague_hardened = {
 
 trait_stargazer = {
 	cost = 0
-	potential_crossbreeding_chance = 0
 	opposites = { "trait_presapient_earthbound" "trait_presapient_starborn" "trait_sedentary" }
 	sorting_priority = 10
 	species_potential_add = {

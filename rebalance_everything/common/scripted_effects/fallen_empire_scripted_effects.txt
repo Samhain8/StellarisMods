@@ -382,17 +382,13 @@ create_fe_fringe_colony = {
 			ignore_cap = yes
 		}
 	}
-	while = {
-		count = 8
-		create_pop = {
-			species = owner_main_species
-		}
+	create_pop_group = {
+		size = 800
+		species = owner_main_species
 	}
-	while = {
-		count = 8
-		create_pop = {
-			species = event_target:fe_servants
-		}
+	create_pop_group = {
+		size = 800
+		species = event_target:fe_servants
 	}
 }
 
@@ -427,11 +423,9 @@ create_fe_spiritualist_fringe_colony = {
 			district = district_farming
 		}
 	}
-	while = {
-		count = 20
-		create_pop = {
-			species = owner_main_species
-		}
+	create_pop_group = {
+		size = 2000
+		species = owner_main_species
 	}
 }
 

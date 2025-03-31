@@ -26,10 +26,10 @@ building_ancient_control_center = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 12
-		planet_amenities_add = 150
-		job_fe_maintenance_bot_add = 4
-		job_fe_guardian_bot_add = 5
+		planet_housing_add = 1200
+		planet_amenities_add = 15000
+		job_fe_maintenance_bot_add = 400
+		job_fe_guardian_bot_add = 500
 		planet_max_buildings_add = 11
 	}
 
@@ -75,12 +75,31 @@ building_ancient_hive_capital = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 12
-		planet_amenities_add = 150
-		job_synapse_drone_add = 5
-		job_maintenance_drone_add = 7
-		job_patrol_drone_add = 4
+		planet_housing_add = 1200
+		planet_amenities_add = 15000
+		job_maintenance_drone_add = 700
+		job_patrol_drone_add = 400
 		planet_max_buildings_add = 11
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_lithoid_empire = no }
+		}
+		modifier = {
+			job_synapse_drone_add = 500
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_lithoid_empire = yes }
+		}
+		modifier = {
+			job_synapse_drone_lithoid_add = 500
+		}
 	}
 
 	resources = {
@@ -124,8 +143,8 @@ building_ancient_palace = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 12
-		planet_amenities_add = 150
+		planet_housing_add = 1200
+		planet_amenities_add = 15000
 		planet_max_buildings_add = 11
 	}
 
@@ -135,8 +154,8 @@ building_ancient_palace = {
 			owner = { is_fallen_empire_spiritualist = no }
 		}
 		modifier = {
-			job_fe_overseer_add = 2
-			job_fe_protector_add = 2
+			job_fe_overseer_add = 200
+			job_fe_protector_add = 200
 		}
 	}
 
@@ -146,8 +165,8 @@ building_ancient_palace = {
 			owner = { is_fallen_empire_spiritualist = yes }
 		}
 		modifier = {
-			job_fe_sky_cardinal_add = 2
-			job_fe_protector_add = 2
+			job_fe_sky_cardinal_add = 200
+			job_fe_protector_add = 200
 		}
 	}
 
@@ -189,9 +208,9 @@ building_fe_xeno_zoo = {
 	}
 
 	planet_modifier = {
-		planet_amenities_add = 15
-		job_fe_xeno_keeper_add = 2
-		planet_housing_add = 30
+		planet_amenities_add = 1500
+		job_fe_xeno_keeper_add = 200
+		planet_housing_add = 3000
 		planet_max_buildings_add = 15
 	}
 
@@ -242,8 +261,8 @@ building_hab_fe_capital = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 5
-		planet_amenities_add = 25
+		planet_housing_add = 500
+		planet_amenities_add = 2500
 		planet_max_buildings_add = 11
 	}
 
@@ -254,8 +273,8 @@ building_hab_fe_capital = {
 			owner = { is_fallen_empire_machine = no }
 		}
 		modifier = {
-			job_fe_overseer_add = 1
-			job_fe_protector_add = 1
+			job_fe_overseer_add = 100
+			job_fe_protector_add = 100
 		}
 	}
 
@@ -265,8 +284,8 @@ building_hab_fe_capital = {
 			owner = { is_fallen_empire_spiritualist = yes }
 		}
 		modifier = {
-			job_fe_sky_cardinal_add = 1
-			job_fe_protector_add = 1
+			job_fe_sky_cardinal_add = 100
+			job_fe_protector_add = 100
 		}
 	}
 
@@ -275,8 +294,8 @@ building_hab_fe_capital = {
 			exists = owner
 			owner = { is_fallen_empire_machine = yes }
 		}
-		job_fe_guardian_bot_add = 2
-		job_fe_maintenance_bot_add = 1
+		job_fe_guardian_bot_add = 200
+		job_fe_maintenance_bot_add = 100
 	}
 
 	upgrades = {
@@ -300,7 +319,7 @@ building_master_archive = {
 			exists = owner
 			owner = { is_fallen_empire = yes }
 		}
-		job_fe_archivist_add = 10
+		job_fe_archivist_add = 1000
 	}
 
 	triggered_planet_modifier = {
@@ -327,7 +346,9 @@ building_master_archive = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_drone_add = @fe2_jobs
+			job_brain_drone_physicist_add = @fe2_jobs
+			job_brain_drone_biologist_add = @fe2_jobs
+			job_brain_drone_engineer_add = @fe2_jobs
 		}
 	}
 
@@ -345,7 +366,9 @@ building_master_archive = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_calculator_add = @fe2_jobs
+			job_calculator_physicist_add = @fe2_jobs
+			job_calculator_biologist_add = @fe2_jobs
+			job_calculator_engineer_add = @fe2_jobs
 		}
 	}
 
@@ -391,7 +414,7 @@ building_empyrean_shrine = {
 			exists = owner
 			owner = { is_fallen_empire = yes }
 		}
-		job_fe_augur_add = 3
+		job_fe_augur_add = 300
 	}
 
 	triggered_planet_modifier = {
@@ -598,7 +621,7 @@ building_affluence_center = {
 	}
 
 	planet_modifier = {
-		planet_amenities_add = 10
+		planet_amenities_add = 1000
 	}
 
 	inline_script = {
@@ -1278,8 +1301,8 @@ building_fe_sky_dome = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 20
-		planet_amenities_add = 20
+		planet_housing_add = 2000
+		planet_amenities_add = 2000
 	}
 
 	triggered_planet_modifier = {
@@ -1288,7 +1311,7 @@ building_fe_sky_dome = {
 				has_valid_civic = civic_machine_servitor
 			}
 		}
-		job_bio_trophy_add = 20
+		job_bio_trophy_add = 2000
 	}
 
 	resources = {
@@ -1361,8 +1384,8 @@ building_fe_dome = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 50
-		planet_amenities_add = 50
+		planet_housing_add = 5000
+		planet_amenities_add = 5000
 		planet_pops_upkeep_mult = -0.05
 	}
 
@@ -1373,7 +1396,7 @@ building_fe_dome = {
 				has_valid_civic = civic_machine_servitor
 			}
 		}
-		job_bio_trophy_add = 50
+		job_bio_trophy_add = 5000
 	}
 
 	resources = {
@@ -1924,8 +1947,26 @@ building_fe_administration_hive_1 = {
 		}
 	}
 
-	planet_modifier = {
-		job_synapse_drone_add = @fe_jobs
+	planet_modifier = {}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_lithoid_empire = no }
+		}
+		modifier = {
+			job_synapse_drone_add = @fe_jobs
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_lithoid_empire = yes }
+		}
+		modifier = {
+			job_synapse_drone_lithoid_add = @fe_jobs
+		}
 	}
 
 	upgrades = {
@@ -1996,8 +2037,27 @@ building_fe_administration_hive_2 = {
 	}
 
 	planet_modifier = {
-		job_synapse_drone_add = @fe2_jobs
 		pop_housing_usage_mult = -0.1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_lithoid_empire = no }
+		}
+		modifier = {
+			job_synapse_drone_add = @fe2_jobs
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_lithoid_empire = yes }
+		}
+		modifier = {
+			job_synapse_drone_lithoid_add = @fe2_jobs
+		}
 	}
 
 	triggered_desc = {
@@ -2357,12 +2417,12 @@ building_fe_assembly_1 = {
 					has_country_flag = synthetic_empire
 				}
 			}
-			any_owned_pop = {
+			any_owned_pop_group = {
 				has_auto_modding_trait = yes
 			}
 		}
 		modifier = {
-			auto_mod_monthly_add = 2
+			auto_mod_monthly_add = 200
 		}
 	}
 
@@ -2399,7 +2459,7 @@ building_fe_assembly_1 = {
 			}
 		}
 		modifier = {
-			job_roboticist_add = 2
+			job_roboticist_add = 200
 		}
 	}
 
@@ -2431,12 +2491,12 @@ building_fe_assembly_1 = {
 			owner = {
 				is_machine_empire = yes
 			}
-			any_owned_pop = {
+			any_owned_pop_group = {
 				has_auto_modding_trait = yes
 			}
 		}
 		modifier = {
-			auto_mod_monthly_add = 2
+			auto_mod_monthly_add = 200
 		}
 	}
 
@@ -2448,7 +2508,7 @@ building_fe_assembly_1 = {
 			}
 		}
 		modifier = {
-			job_replicator_add = 2
+			job_replicator_add = 200
 		}
 	}
 
@@ -2544,7 +2604,7 @@ building_fe_assembly_2 = {
 			}
 		}
 		modifier = {
-			job_roboticist_add = 5
+			job_roboticist_add = 500
 		}
 	}
 
@@ -2558,12 +2618,12 @@ building_fe_assembly_2 = {
 					has_country_flag = synthetic_empire
 				}
 			}
-			any_owned_pop = {
+			any_owned_pop_group = {
 				has_auto_modding_trait = yes
 			}
 		}
 		modifier = {
-			auto_mod_monthly_add = 5
+			auto_mod_monthly_add = 500
 		}
 	}
 
@@ -2610,7 +2670,7 @@ building_fe_assembly_2 = {
 			}
 		}
 		modifier = {
-			job_replicator_add = 5
+			job_replicator_add = 500
 		}
 	}
 
@@ -2620,12 +2680,12 @@ building_fe_assembly_2 = {
 			owner = {
 				is_machine_empire = yes
 			}
-			any_owned_pop = {
+			any_owned_pop_group = {
 				has_auto_modding_trait = yes
 			}
 		}
 		modifier = {
-			auto_mod_monthly_add = 5
+			auto_mod_monthly_add = 500
 		}
 	}
 
@@ -2701,7 +2761,7 @@ building_fe_clinic_1 = {
 			}
 		}
 		modifier = {
-			job_spawning_drone_add = 2
+			job_spawning_drone_add = 200
 		}
 	}
 
@@ -2725,7 +2785,7 @@ building_fe_clinic_1 = {
 			}
 		}
 		modifier = {
-			job_offspring_drone_add = 2
+			job_offspring_drone_add = 200
 		}
 	}
 
@@ -2748,7 +2808,7 @@ building_fe_clinic_1 = {
 			}
 		}
 		modifier = {
-			job_healthcare_add = 4
+			job_healthcare_add = 400
 		}
 	}
 
@@ -2758,12 +2818,12 @@ building_fe_clinic_1 = {
 			owner = {
 				has_technology = tech_gene_tailoring
 			}
-			any_owned_pop = {
+			any_owned_pop_group = {
 				has_auto_modding_trait = yes
 			}
 		}
 		modifier = {
-			auto_mod_monthly_add = 4
+			auto_mod_monthly_add = 400
 		}
 	}
 
@@ -2773,12 +2833,12 @@ building_fe_clinic_1 = {
 			owner = {
 				has_origin = origin_overtuned
 			}
-			any_owned_pop = {
+			any_owned_pop_group = {
 				has_auto_modding_trait = yes
 			}
 		}
 		modifier = {
-			auto_mod_monthly_add = 4
+			auto_mod_monthly_add = 400
 		}
 	}
 
@@ -2847,7 +2907,7 @@ building_fe_clinic_2 = {
 		leader_lifespan_add = 2
 	}
 
-		triggered_planet_modifier = {
+	triggered_planet_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -2856,7 +2916,7 @@ building_fe_clinic_2 = {
 			}
 		}
 		modifier = {
-			job_spawning_drone_add = 3
+			job_spawning_drone_add = 300
 		}
 	}
 
@@ -2880,7 +2940,7 @@ building_fe_clinic_2 = {
 			}
 		}
 		modifier = {
-			job_offspring_drone_add = 3
+			job_offspring_drone_add = 300
 		}
 	}
 
@@ -2913,12 +2973,12 @@ building_fe_clinic_2 = {
 			owner = {
 				has_technology = tech_gene_tailoring
 			}
-			any_owned_pop = {
+			any_owned_pop_group = {
 				has_auto_modding_trait = yes
 			}
 		}
 		modifier = {
-			auto_mod_monthly_add = 6
+			auto_mod_monthly_add = 600
 		}
 	}
 
@@ -2928,12 +2988,12 @@ building_fe_clinic_2 = {
 			owner = {
 				has_origin = origin_overtuned
 			}
-			any_owned_pop = {
+			any_owned_pop_group = {
 				has_auto_modding_trait = yes
 			}
 		}
 		modifier = {
-			auto_mod_monthly_add = 6
+			auto_mod_monthly_add = 600
 		}
 	}
 
@@ -3210,7 +3270,7 @@ building_fe_market_1 = {
 	}
 
 	planet_modifier = {
-		job_merchant_add = 4
+		job_merchant_add = 400
 	}
 
 	triggered_desc = {
@@ -3273,7 +3333,7 @@ building_fe_market_2 = {
 	}
 
 	country_modifier = {
-		trade_value_mult = 0.01
+		country_trade_produces_mult = 0.01
 	}
 
 	triggered_country_modifier = {
@@ -3485,7 +3545,7 @@ building_fe_entertainment_2 = {
 
 	planet_modifier = {
 		job_entertainer_add = @fe_jobs
-		planet_amenities_add = 100
+		planet_amenities_add = 10000
 	}
 
 	triggered_desc = {
@@ -3542,7 +3602,7 @@ building_fe_lab_1 = {
 			}
 		}
 		modifier = {
-			job_head_researcher_add = 1
+			job_head_researcher_add = 100
 		}
 	}
 
@@ -3562,7 +3622,9 @@ building_fe_lab_1 = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_researcher_add = 4
+			job_physicist_add = 400
+			job_biologist_add = 400
+			job_engineer_add = 400
 		}
 	}
 
@@ -3572,7 +3634,9 @@ building_fe_lab_1 = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_drone_add = @fe_jobs
+			job_brain_drone_physicist_add = @fe_jobs
+			job_brain_drone_biologist_add = @fe_jobs
+			job_brain_drone_engineer_add = @fe_jobs
 		}
 	}
 
@@ -3582,7 +3646,9 @@ building_fe_lab_1 = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_calculator_add = @fe_jobs
+			job_calculator_physicist_add = @fe_jobs
+			job_calculator_biologist_add = @fe_jobs
+			job_calculator_engineer_add = @fe_jobs
 		}
 	}
 
@@ -3597,7 +3663,7 @@ building_fe_lab_1 = {
 			has_modifier = pm_extradimensional_experimentation
 		}
 		modifier = {
-			job_dimensional_portal_researcher_add = 1
+			job_physicist_add = 100
 		}
 	}
 
@@ -3612,7 +3678,7 @@ building_fe_lab_1 = {
 			has_modifier = pm_extradimensional_experimentation
 		}
 		modifier = {
-			job_dimensional_portal_researcher_gestalt_add = 1
+			job_dimensional_portal_researcher_gestalt_add = 100
 		}
 	}
 
@@ -3697,7 +3763,7 @@ building_fe_lab_2 = {
 			}
 		}
 		modifier = {
-			job_head_researcher_add = 1
+			job_head_researcher_add = 100
 		}
 	}
 
@@ -3717,7 +3783,9 @@ building_fe_lab_2 = {
 			owner = { is_regular_empire = yes }
 		}
 		modifier = {
-			job_researcher_add = 4
+			job_physicist_add = 400
+			job_biologist_add = 400
+			job_engineer_add = 400
 		}
 	}
 
@@ -3727,7 +3795,9 @@ building_fe_lab_2 = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_drone_add = @fe_jobs
+			job_brain_drone_physicist_add = @fe_jobs
+			job_brain_drone_biologist_add = @fe_jobs
+			job_brain_drone_engineer_add = @fe_jobs
 		}
 	}
 
@@ -3737,7 +3807,9 @@ building_fe_lab_2 = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_calculator_add = @fe_jobs
+			job_calculator_physicist_add = @fe_jobs
+			job_calculator_biologist_add = @fe_jobs
+			job_calculator_engineer_add = @fe_jobs
 		}
 	}
 
@@ -3752,7 +3824,7 @@ building_fe_lab_2 = {
 			has_modifier = pm_extradimensional_experimentation
 		}
 		modifier = {
-			job_dimensional_portal_researcher_add = 2
+			job_physicist_add = 200
 		}
 	}
 
@@ -3767,7 +3839,7 @@ building_fe_lab_2 = {
 			has_modifier = pm_extradimensional_experimentation
 		}
 		modifier = {
-			job_dimensional_portal_researcher_gestalt_add = 2
+			job_dimensional_portal_researcher_gestalt_add = 200
 		}
 	}
 

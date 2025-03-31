@@ -1,6 +1,15 @@
 ﻿l_english:
 
- # Shorthand with §I highlighting
+### CONCEPTS
+#
+# Above each concept definition are instructions on usage, including an icon where one exists.
+#   Note that between the icon and the term there's a non-breaking space. When you copy the usage example, it will keep the non-breaking space.
+#   This is important to not get a line break between the icon and the concept.
+# Use a concept link with icon the first time a new concept is mentioned, then use §H without an icon for repeated uses.
+# Use §H with an icon the first time a concept is used withing its own description.
+# Use §H without an icon if the concept is used more than once.
+
+# Shorthand with §I highlighting
  i_energy: "£energy£ §I$energy$§!"
  i_minerals: "£minerals£ §I$minerals$§!"
  i_food: "£food£ §I$food$§!"
@@ -32,7 +41,7 @@
  i_unlocks_feature: "§IUnlocks Feature:§!"
  i_unlocks_orbital: "§IUnlocks Orbital:§!"
 
- ### Civic and Origin Concepts
+### Civic and Origin Concepts
 
 # Prosperous Unification
  concept_planetary_unification: "$tech_planetary_unification$"
@@ -40,13 +49,6 @@
 
  concept_prosp_uni: "$prosp_uni_mod$"
  concept_prosp_uni_desc: "- $MOD_POP_HAPPINESS$: §G+15%§!\n- $MOD_PLANET_AMENITIES_MULT$: §G+25%§!\n- $mod_planet_jobs_produces_mult$: §G+10%§!\n- Will expire in §I20§! Years.\n\n§L$prosp_uni_mod_desc$§!"
-
- concept_generator_district: "$district_generator$"
- concept_generator_district_desc: "- £housing£ $MOD_PLANET_HOUSING_ADD$: §G+2§!\n- £mod_job_technician_add£ ['concept_technician', $job_technician$] Jobs: §G+2§!\n\n§L$district_generator_desc$§!"
- concept_farming_district: "$district_farming$"
- concept_farming_district_desc: "- £housing£ $MOD_PLANET_HOUSING_ADD$: §G+2§!\n- £mod_job_farmer_add£ ['concept_farmer', $job_farmer$] Jobs: §G+2§!\n\n§L$district_farming_desc$§!"
- concept_mining_district: "$district_mining$"
- concept_mining_district_desc: "- £housing£ $MOD_PLANET_HOUSING_ADD$: §G+2§!\n- £mod_job_miner_add£ ['concept_miner', $job_miner$] Jobs: §G+2§!\n\n§L$district_mining_desc$§!"
 
 # Mechanist
  concept_robots: "$feature_robots$"
@@ -114,10 +116,10 @@
  concept_pc_habitat_desc: "- $MOD_PLANET_COLONY_DEVELOPMENT_SPEED_MULT$: §G+200%§!\n- Base Habitability: §Y40%§!\n\n§L$pc_habitat_desc$§!"
 
  concept_void_dweller: "$trait_void_dweller_1$"
- concept_void_dweller_desc: "- $mod_habitat_jobs_produces_mult$: §G+15%§!\n- $mod_non_artificial_planet_jobs_produces_mult$: §R-15%§!\n- $void_dweller_trait_tooltip$\n\n§L$trait_void_dweller_1_desc$§!"
+ concept_void_dweller_desc: "- Pop Happiness on Non-Artificial Worlds: §R-30%§!\n- $MOD_POP_BONUS_WORKFORCE_MULT$ on Habitats: §G+15%§!\n- $MOD_POP_BONUS_WORKFORCE_MULT$ on Non-Artificial Worlds: §R-15%§!\n\n§L$trait_void_dweller_1_desc$§!"
 
  concept_void_dweller_2: "$trait_void_dweller_2$"
- concept_void_dweller_2_desc: "- $mod_habitat_jobs_produces_mult$: §G+15%§!\n- $mod_non_artificial_planet_jobs_produces_mult$: §R-15%§!\n- $void_dweller_2_trait_tooltip$\n\n§L$trait_void_dweller_2_desc$§!"
+ concept_void_dweller_2_desc: "Robot Upkeep on Non-Artificial Worlds: §R+15%§!\n- $MOD_POP_BONUS_WORKFORCE_MULT$ on Habitats: §G+15%§!\n- $MOD_POP_BONUS_WORKFORCE_MULT$ on Non-Artificial Worlds: §R-15%§!\n\n§L$trait_void_dweller_2_desc$§!"
 
  concept_habitat_preference: "$trait_pc_habitat_preference$"
  concept_habitat_preference_desc: "- $mod_pc_habitat_habitability$: §G+80%§!\n\n$trait_pc_habitat_preference_desc$"
@@ -174,7 +176,7 @@
  concept_massive_crater_desc: "- Effects of ['concept_lithoid_traits']: §G+50%§!\n- $MOD_PLANET_MAX_DISTRICTS_ADD$: §G+6§!\n- $mod_district_mining_max$: §G+6§!\n- $mod_district_farming_max$: §R-6§!\n- $MOD_POP_GROWTH_SPEED$: §G+25%§!\n\n§L$d_lithoid_crater_desc$§!"
 
  concept_buried_lithoids: "$d_buried_lithoids$"
- concept_buried_lithoids_desc: "- Time to Clear: £time£ 360 §IDays§!\n- Cost to Clear: 1000 $i_minerals$\n- On Clearing: §G+1§! §ILithoid§! £pop£ §IPop§!\n\n§L$d_buried_lithoids_desc$§!"
+ concept_buried_lithoids_desc: "- Time to Clear: £time£ 360 §IDays§!\n- Cost to Clear: 1000 $i_minerals$\n- On Clearing: §G+100§! £pop£ §ILithoid Pop§!\n\n§L$d_buried_lithoids_desc$§!"
 
  concept_lithoid_crater: "$lithoid_crater$"
  concept_lithoid_crater_desc: "- Habitability for non-Lithoid Pops: §R-50%§!\n\n§L$lithoid_crater_desc$§!"
@@ -294,7 +296,7 @@
 # Knights of the Toxic God
 
  concept_order_keep: "$building_order_keep$"
- concept_order_keep_desc: "§RThis building cannot be removed or disabled!§!\n- £mod_planet_immigration_pull_add£ $MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+5§!\n- £mod_planet_resettlement_unemployed_destination_mult£ $MOD_PLANET_RESETTLEMENT_UNEMPLOYED_DESTINATION_MULT$: §G+100%§!\n- £mod_job_knight_add£ ['concept_knight', $job_knight$] Jobs: §G+2§!\n$t$- per 10 $pops_with_icon$: §G+1§!\n- £mod_job_squire_add£ ['concept_squire', $job_squire$] Jobs: §G+1§!\n\n§L$building_order_keep_desc$§!"
+ concept_order_keep_desc: "§RThis building cannot be removed or disabled!§!\n- £mod_planet_immigration_pull_add£ $MOD_PLANET_IMMIGRATION_PULL_ADD$: §G+5§!\n- £mod_planet_resettlement_unemployed_destination_mult£ $MOD_PLANET_RESETTLEMENT_UNEMPLOYED_DESTINATION_MULT$: §G+100%§!\n- £mod_job_knight_add£ ['concept_knight', $job_knight$] Jobs: §G+2§!\n$t$- per §Y10§! £pop£ §HPops§!: §G+1§!\n- £mod_job_squire_add£ ['concept_squire', $job_squire$] Jobs: §G+1§!\n\n§L$building_order_keep_desc$§!"
 
  concept_orders_demesne: "$district_orders_demesne$"
  concept_orders_demesne_desc: "- £mod_planet_housing_add£ $MOD_PLANET_HOUSING_ADD$: §G+4§!\n- £mod_pop_environment_tolerance£ $MOD_POP_ENVIRONMENT_TOLERANCE$: §G+2.5%§!\n- £mod_job_squire_add£ ['concept_squire', $job_squire$] Jobs: §G+3§!\n\n§L$district_orders_demesne_desc$§!"
@@ -355,8 +357,8 @@
  concept_corvettes: "$tech_corvettes$"
  concept_corvettes_desc: "- §IUnlocks Ship Type§!: $corvette$\n\n§L$tech_corvettes_desc$§!"
 
- concept_clinic: "$building_clinic$"
- concept_clinic_desc: "- £mod_job_healthcare_add£ ['concept_healthcare', $job_healthcare$] Jobs: §G+2§!\n\n§L$building_clinic_desc$§!"
+ concept_clinic: "$building_medical_2$"
+ concept_clinic_desc: "- £mod_job_healthcare_add£ ['concept_healthcare', $job_healthcare$] Jobs: §G+2§!\n\n§L$building_medical_2_desc$§!"
 
  concept_mineral_purification_plant: "$building_mineral_purification_plant$"
  concept_mineral_purification_plant_desc: "- £mod_job_miner_add£ ['concept_miner', $job_miner$] Jobs: §G+1§!\n- £minerals£ Minerals from £job_miner£ $job_miner_plural$: §G+1§!\n\n§L$building_mineral_purification_plant_desc$§!"
@@ -374,7 +376,7 @@
  concept_payback_unified_purpose_desc: "- $MOD_POP_HAPPINESS$ §G+15%§!\n- $MOD_PLANET_AMENITIES_MULT$ §G+25%§!\n- $mod_planet_jobs_produces_mult$ §G+10%§!\n- ['concept_unifier', $job_unifier$] Jobs: §G+2§!\n- Will expire in §I20§! Years\n\n§L$payback_unified_purpose_desc$§!"
 
  concept_advanced_infrastructure: "Advanced Infrastructure"
- concept_advanced_infrastructure_desc: "$NEW_LINE$- ['concept_bureaucratic_1', £building£ $building_bureaucratic_1$] and ['concept_commercial_zone', £building£ $building_commercial_zone$] replaced by:$TABBED_NEW_LINE$- ['concept_clinic', £building£ $building_clinic$]$TABBED_NEW_LINE$- ['concept_mineral_purification_plant', £building£ $building_mineral_purification_plant$]$TABBED_NEW_LINE$- ['concept_energy_grid', £building£ $building_energy_grid$]"
+ concept_advanced_infrastructure_desc: "$NEW_LINE$- ['concept_bureaucratic_1', £building£ $building_bureaucratic_1$] and ['concept_commercial_zone', £building£ $building_commercial_zone$] replaced by:$TABBED_NEW_LINE$- ['concept_clinic', £building£ $building_medical_2$]$TABBED_NEW_LINE$- ['concept_mineral_purification_plant', £building£ $building_mineral_purification_plant$]$TABBED_NEW_LINE$- ['concept_energy_grid', £building£ $building_energy_grid$]"
 
  concept_payback_debris_field: "$payback_debris_field$"
  concept_payback_debris_field_desc: "- $MOD_POP_ENVIRONMENT_TOLERANCE$: §R-30%§!\n- $mod_planet_structures_cost_mult$: §R+15%§!\n- $mod_planet_structures_upkeep_mult$: §R+50%§!\n- Starting Devastation: §R33%§!\n\n§L$payback_debris_field_desc$§!"
@@ -430,8 +432,10 @@
 
 # Common Ground/Hegemony
 
+ # Singular: ['concept_federation'] or §H$concept_federation$§!
+ # Plural: -
  concept_federation: "Federation"
- concept_federation_desc: "A Federation is a supranational alliance of space-faring civilizations."
+ concept_federation_desc: "A §H$concept_federation$§! is a supranational alliance of space-faring civilizations.\n\nBy assigning an £official£ ['concept_official'] to coordinate diplomatic affairs, the stability and §HCohesion§! of the §H$concept_federation$§! is increased, which can unlock §HFederation Perks§!."
 
  concept_common_ground_federation: "$concept_federation$"
  concept_common_ground_federation_desc: "$concept_federation_desc$\n\n There are different types of Federations:\n- ['concept_default_federation']\n- ['concept_military_federation']\n- ['concept_research_federation']\n- ['concept_spiritualist_federation']\n- ['concept_trade_federation']"
@@ -556,8 +560,11 @@
 
 # Riftworld
 
- concept_astral_rift: "$ASTRAL_RIFT$"
- concept_astral_rift_desc: "$ASTRAL_RIFTS$ are extraordinary tears in time and space that leak material between dimensions. They can be explored by crewed §YScience Ships§! after researching the £physics£ §Y$tech_rift_sphere$§! technology."
+ # Singular: ['concept_astral_rift'] or §H$concept_astral_rift$§!
+ # Plural: ['concept_astral_rifts'] or §H$concept_astral_rifts$§!
+ concept_astral_rift: "Astral Rift"
+ concept_astral_rifts: "Astral Rifts"
+ concept_astral_rift_desc: "§Hconcept_astral_rift§! are extraordinary tears in time and space that leak material between dimensions. They can be explored by crewed £science_ship£ ['concept_science_ships'] after researching the £physics£ §H$tech_rift_sphere$§! technology."
 
  concept_riftworld_digsite: "$riftworld_digsite$"
  concept_riftworld_digsite_desc: "Anomalous seismic activity has been detected from deep inside an ancient crater on our homeworld. Underground sonar revealed a previously unknown cavity that can be explored."
@@ -575,7 +582,7 @@
 
 # Primal Calling
  concept_untamed_wilds_mod: "$untamed_wilds$"
- concept_untamed_wilds_mod_desc: "- $MOD_PLANET_MAX_DISTRICTS_ADD$: §R$@untamed_wilds_districts|0$§!\n- $mod_planet_jobs_unity_produces_mult$: §G+15%§!\n- ['concept_ethic_based_jobs']: §G+1§!$TABBED_NEW_LINE$\t- per 20 $pops_with_icon$: §G+1§!\n\n§L$untamed_wilds_desc$§!"
+ concept_untamed_wilds_mod_desc: "- $MOD_PLANET_MAX_DISTRICTS_ADD$: §R$@untamed_wilds_districts|0$§!\n- $mod_planet_jobs_unity_produces_mult$: §G+15%§!\n- ['concept_ethic_based_jobs']: §G+1§!$TABBED_NEW_LINE$\t- per §Y20§! £pop£ §HPops§!: §G+1§!\n\n§L$untamed_wilds_desc$§!"
 
  concept_ethic_based_jobs: "Wrangler Jobs"
  concept_ethic_based_jobs_desc: "These Jobs are given depending on the Empire's stance towards Space Fauna.$TABBED_NEW_LINE$- ['concept_wrangler', £job_wrangler£ $job_wrangler$]$TABBED_NEW_LINE$- ['concept_rancher', £job_rancher£ $job_rancher$]$TABBED_NEW_LINE$- ['concept_trophy_hunter', £job_trophy_hunter£ $job_trophy_hunter$]$TABBED_NEW_LINE$- ['concept_animal_handler', £job_animal_handler£ $job_animal_handler$]$TABBED_NEW_LINE$- ['concept_beastfighter', £job_beastfighter£ $job_beastfighter$]"
@@ -619,8 +626,11 @@
  concept_megastructure_grand_archive_desc: "- Allows the display of acquired ['concept_specimen',Specimens].\n- Vivarium Capacity: §G+$@grand_archive_vivarium_capacity$§!\n\n§LThe Grand Archive preserves and exhibits the most valuable artifacts we have collected throughout the galaxy. Reserved within is also a dedicated Vivarium for live Space Fauna containment and observation.§!"
 
 # Beastmasters
+
+ # Singular: ['concept_beastport'] or §H$concept_beastport$§!
+ # Plural: -
  concept_beastport: "$sm_beastport$"
- concept_beastport_desc: "- Replaces ['concept_hatchery'] Starbase Building\n- Can build Civilian Ships along with cloning Space Fauna using $c_dna$."
+ concept_beastport_desc: "- Replaces ['concept_hatchery'] Starbase Building\n- Can build Civilian Ships along with cloning Space Fauna using £genetic_material£ ['concept_dna']."
 
  concept_xeno_geology_holomuseum: "$xeno_geology_holomuseum$"
  concept_xeno_geology_holomuseum_desc: "$xeno_geology_holomuseum_desc$"

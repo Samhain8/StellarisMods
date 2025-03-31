@@ -206,6 +206,7 @@ voidworm_nest_owned = {
 		trigger = count_owned_fleet
 		parameters = {
 			limit = {
+				num_ships > 0
 				is_ship_size = voidworm_nest
 			}
 		}
@@ -383,18 +384,6 @@ modularium_multiplier = {
 		is_variable_set = $VARIABLE$
 	}
 	round = yes
-}
-
-twenty_percent_organics_pop = {
-	complex_trigger_modifier = {
-		trigger = count_owned_pop
-		parameters = {
-			limit = { is_robot_pop = no }
-		}
-		mode = add
-	}
-	mult = 0.20
-	floor = yes
 }
 
 celestial_resonator_value = {

@@ -1,0 +1,7 @@
+include = {
+	building_commercial_zone
+	building_commercial_megaplex
+	building_galactic_stock_exchange
+	building_automation_1
+	building_augmentation_bazaars
+}

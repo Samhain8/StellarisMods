@@ -366,6 +366,25 @@ has_virtual_species_trait = {
 	}
 }
 
+is_slave_or_better = {
+	OR = {
+		is_pop_category = ruler
+		is_pop_category = ruler_unemployment
+		is_pop_category = specialist
+		is_pop_category = specialist_unemployment
+		is_pop_category = worker
+		is_pop_category = worker_unemployment
+		is_pop_category = civilian
+		is_pop_category = complex_drone
+		is_pop_category = simple_drone
+		is_pop_category = simple_drone_unemployment
+		is_pop_category = slave
+		is_pop_category = robot_servant
+		is_pop_category = bio_trophy
+		is_pop_category = chip_slave
+	}
+}
+
 # Check for a specific range of Cyborg traits, as used in script value 'num_cyborg_traits_species'. SEE ALSO 'is_cyborg_empire' (scripted trigger).
 has_cyborg_trait = {
 	OR = {

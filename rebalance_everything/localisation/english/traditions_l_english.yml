@@ -54,7 +54,7 @@
  tr_expansion_adopt:0 "Expansion Traditions"
 
  tr_expansion_colonization_fever:0 "Colonization Fever"
- tr_expansion_colonization_fever_desc:1 "New colonies start with §Y1§! additional £pops£ Pop."
+ tr_expansion_colonization_fever_desc:1 "New colonies start with §G100§! additional £pop£ §HPops§!."
  tr_expansion_colonization_fever_delayed:0 "Colonization fever seems to have gripped the populace. Their enthusiasm and patriotic fervor draws additional population to new colonies."
  tr_expansion_colonization_fever_machine:1 "Automated Colonization Units"
  tr_expansion_colonization_fever_machine_delayed:1 "The production of highly specialized first wave colonization units with narrow but deep hard-coded behavior adapting them to specific world types will speed the integration of new planets into our collective."
@@ -62,10 +62,10 @@
  tr_expansion_colonization_fever_hive_delayed:0 "The overmind is a chorus of thought that even the cold emptiness of space cannot silence."
 
  tr_expansion_a_new_life:0 "A New Life"
- tr_expansion_a_new_life_desc:3 "£pops£ §Y$MOD_POP_GROWTH_SPEED$§! increased by §G+10%§!."
+ tr_expansion_a_new_life_desc:3 "£pop£ §Y$MOD_POP_GROWTH_SPEED$§! increased by §G+10%§!."
  tr_expansion_a_new_life_delayed:0 "A new life awaits our citizens in the off-world colonies. A chance to begin again in a golden land of opportunity and adventure! With the help of an aggressive marketing campaign, the less fortunate elements of our society will be flocking to our colony ships."
  tr_expansion_a_new_life_machine:1 "Hotjoin Protocols"
- tr_expansion_a_new_life_machine_desc:0 "£pops£ §Y$MOD_POP_ASSEMBLY_SPEED$§! increased by §G+10%§!."
+ tr_expansion_a_new_life_machine_desc:0 "£pop£ §Y$MOD_POP_ASSEMBLY_SPEED$§! increased by §G+10%§!."
  tr_expansion_a_new_life_machine_delayed:2 "The process of assembling new pops can be sped up by loading their operating instructions while their chassis is still under construction."
  tr_expansion_a_new_life_hive:0 "Spawning Frenzy"
  tr_expansion_a_new_life_hive_desc:0 "$tr_expansion_a_new_life_desc$"
@@ -226,7 +226,7 @@
  tr_harmony_mind_and_body_immortal: "Medical Meditation"
  tr_harmony_mind_and_body_immortal_delayed: "By utilizing our nanomedical capabilities we can remove harmful stress from both the mind and the body of our people."
  tr_harmony_unity_of_self:0 "Unity of Self"
- tr_harmony_unity_of_self_desc:1 "Necrophaging £pop£ §YPops§! provides £unity£ Unity."
+ tr_harmony_unity_of_self_desc:1 "Necrophaging £pop£ §HPops§! provides £unity£ Unity."
  tr_harmony_unity_of_self_delayed:0 "Interstellar harmony would be greatly increased if all sentient beings looked, thought and acted as we do."
  tr_harmony_harmonious_directives:0 "Harmonious Directives"
  tr_harmony_harmonious_directives_delayed:0 "The enlightened decrees of our benevolent leadership will spread peace, freedom, justice, and security throughout the entire star nation and beyond."
@@ -474,7 +474,7 @@
  tr_versatility_adaptive_programming_desc:1 "§Y$MOD_COUNTRY_TRADE_FEE$§! reduced by §G10%§!."
  tr_versatility_adaptive_programming_delayed:1 "We may not have been tempered by eons of evolution, but adaptive programming techniques will let us adjust to new situations and environments as well as any organic life form."
  tr_versatility_spatial_optimization:0 "Spatial Optimization"
- tr_versatility_spatial_optimization_desc:0 "£pops£ §Y$MOD_POP_HOUSING_USAGE_MULT$§! reduced by §G10%§!."
+ tr_versatility_spatial_optimization_desc:0 "£pop£ §Y$MOD_POP_HOUSING_USAGE_MULT$§! reduced by §G10%§!."
  tr_versatility_spatial_optimization_delayed:1 "Retractable antennas, collapsible unit frames, foldable storage spaces. There are many creative solutions to make the most out of a limited space."
  tr_versatility_operational_proxies:0 "Operational Proxies"
  tr_versatility_operational_proxies_delayed:2 "The delegation of additional category R-7 low priority functions to semi-autonomous agents will free up processing power for more important tasks such as drone relocation operations."
@@ -535,10 +535,10 @@
  tr_discovery_faith_in_science:0 "Faith in Science"
  tr_discovery_faith_in_science_delayed:0 "The public has come to regard science as something almost akin to a religion - their faith in it is absolute. There is no question in this universe so big that it cannot be answered by science."
  tr_discovery_faith_in_science_machine:0 "Uplink Latency Reduction"
- tr_discovery_faith_in_science_machine_desc:1 "Our planets will have §Y1§! £job_calculator£ §Y$job_calculator$ Job§! per §Y20§! £pop£ Pops."
+ tr_discovery_faith_in_science_machine_desc:1 "Our planets will have §Y1§! £job_calculator£ §Y$job_calculator$ Job§! per §Y20§! £pop£ §HPops§!."
  tr_discovery_faith_in_science_machine_delayed:0 "Cutting lag in orbit-to-surface data transmission by 3.878% resulted in a research data processing speed increase of 5.226%. We will deploy the surplus computing power gained to attempt to explain the surplus computing power gained."
  tr_discovery_faith_in_science_hive:0 "Synaptic Broadcast"
- tr_discovery_faith_in_science_hive_desc:1 "Our planets will have §Y1§! £job_brain_drone£ §Y$job_brain_drone$ Job§! per §Y20§! £pop£ Pops."
+ tr_discovery_faith_in_science_hive_desc:1 "Our planets will have §Y1§! £job_brain_drone£ §Y$job_brain_drone$ Job§! per §Y20§! £pop£ §HPops§!."
  tr_discovery_faith_in_science_hive_delayed:0 "Through strategic application of synaptic transmitters, we can broadcast the will of the Hive across an entire planet from orbit."
 
  tr_discovery_finish:0 "Discovery Traditions Finished"
@@ -625,7 +625,7 @@
  tr_mercantile_adopt:0 "Mercantile Traditions"
  tr_mercantile_finish:0 "Mercantile Traditions Finished"
  tr_mercantile_federations_finish:0 "$tr_mercantile_finish$"
- tr_mercantile_federations_finish_desc:0 "$MOD_TRADE_VALUE_MULT$: §G+10%§!\nGrants access to the §Y$trade_federation$§! Federation type.\nAscension Perks Unlocked: §G+1§!"
+ tr_mercantile_federations_finish_desc:0 "$mod_country_trade_produces_mult$: §G10%§!\nGrants access to the §Y$trade_federation$§! Federation type.\nAscension Perks Unlocked: §G+1§!"
 
  tr_mercantile_marketplace_of_better_ideas:0 "Marketplace of Better Ideas"
  tr_mercantile_marketplace_of_better_ideas_delayed:0 "The best ideas are born from exposure to the marketplace. The more exposure, the better the ideas!"
@@ -645,7 +645,7 @@
  tr_mercantile_trade_fleets_delayed:0 "To secure our profits we must come together with our federation allies to make sure our interests are properly protected."
 
  tr_mercantile_worker_coop_improved_ownership: "Adaptive Shareholder Schemes"
- tr_mercantile_worker_coop_improved_ownership_desc: "£pops£ Pops with the §Y$living_standard_worker_ownership$§! Living Standard: §G+5%§! Happiness and §G+5%§! Resources from Jobs."
+ tr_mercantile_worker_coop_improved_ownership_desc: "£pop£ §HPops§! with the §Y$living_standard_worker_ownership$§! Living Standard: §G+5%§! Happiness and §G+5%§! Resources from Jobs."
  tr_mercantile_worker_coop_improved_ownership_delayed: "By adopting a more flexible approach to our shareholder contracts, our citizens can be inspired to work more effectively."
 
  mod_planet_worker_ownership_jobs_produces_mult: "Resources from Pops with the $living_standard_worker_ownership$ Living Standard"
@@ -696,7 +696,7 @@
  tr_unyielding_finish:0 "Unyielding Traditions Finished"
  #tr_unyielding_finish_desc: "§M(Not implemented yet)§!\nAscension Perks Unlocked: §G+1§!"
  tr_unyielding_federations_finish:0 "$tr_unyielding_finish$"
- tr_unyielding_federations_finish_desc:0 "$MOD_STARBASE_DEFENSE_PLATFORM_CAPACITY_MULT$ §G+50%§!\n$mod_starbases_upkeep_mult$ §G-20%§!\nGrants access to the §Y$military_federation$§! Federation type.\nAscension Perks Unlocked: §G+1§!"
+ tr_unyielding_federations_finish_desc:0 "$MOD_STARBASE_DEFENSE_PLATFORM_CAPACITY_MULT$ §G+50%§!\n$mod_starbases_upkeep_mult$ §G-20%§!\nGrants access to the §Y$military_federation$§! Federation type.\nAllows access to the £unity£ ['ascension_perk:ap_eternal_vigilance'] Ascension Perk.\nAscension Perks Unlocked: §G+1§!"
 
  tr_unyielding_resistance_is_frugal:0 "Resistance is Frugal"
  tr_unyielding_resistance_is_frugal_desc:2 "£defense_army£ §YDefense Armies§! now produce §Y0.5§! £unity£ Unity."
@@ -844,7 +844,7 @@
 
  tr_cybernetics_integrated_anatomy:0 "Integrated Anatomy"
  tr_cybernetics_integrated_anatomy_delayed:0 "Only by alloying [Owner.Species.GetFleshTypeCyberCreed], steel, and nano-carbon composite can we truly reach perfection."
- tr_cybernetics_integrated_anatomy_desc:0 "Allows selection of §YCyborg§! traits for Species Modification that can be applied to species with the §YCybernetic§! trait.\n"
+ tr_cybernetics_integrated_anatomy_desc:0 "Allows selection of §YCyborg§! traits for Species Modification that can be applied to species with the §Y$trait_cybernetic$§! trait.\n"
  tr_cybernetics_integrated_anatomy_situation_effects: "$tr_cybernetics_situation$$tr_cybernetics_integrated_anatomy_desc$$mod_BIOLOGICAL_species_trait_picks_add$: §G+1§!"
  requires_tr_cybernetics_integrated_anatomy: "$TRIGGER_FAIL$Requires the §Y$tr_cybernetics_integrated_anatomy$§! Tradition."
 
@@ -886,12 +886,12 @@
  tradition_cybernetics_assimilator:0 "Cybernetics"
  tradition_cybernetics_assimilator_desc:0 "Our future lies in the fusion of flesh and machine."
  tr_cybernetics_assimilator_adopt:0 "Cybernetic Traditions"
- tr_cybernetics_assimilator_adopt_desc:0 "Assimilating Organic £pop£ Pops now generates £engineering£ §YEngineering Research§!.\n§YResources§! generated from Assimilating Organic £pops£ Pops are increased."
+ tr_cybernetics_assimilator_adopt_desc:0 "Assimilating £pop£ §HOrganic Pops§! now generates £engineering£ §YEngineering Research§!.\n§YResources§! generated from Assimilating £pop£ §HOrganic Pops§! are increased."
  tr_cybernetics_assimilator_finish:0 "Cybernetic Traditions Finished"
 
  tr_cybernetics_assimilator_inevitable_assimilation:0 "Inevitable Assimilation"
  tr_cybernetics_assimilator_inevitable_assimilation_delayed:0 "By refactoring our assimilation processes, we can more efficiently overwrite the mind of any organic."
- tr_cybernetics_assimilator_inevitable_assimilation_desc:0 "Allows the Assimilation of §YHive-Minded§! Pops.\n£pops£ Pops assimilated each year per planet increased by between §G+1§! and §G+3§!."
+ tr_cybernetics_assimilator_inevitable_assimilation_desc:0 "Allows the Assimilation of £pop£ §HHive-Minded Pops§!.\n£pop£ §HPops§! assimilated each year per planet increased by between §G+1§! and §G+3§!."
 
  tr_cybernetics_assimilator_metabolic_reprocessing:0 "Metabolic Reprocessing"
  tr_cybernetics_assimilator_metabolic_reprocessing_delayed:0 "Reprocessing metabolic waste into digestible chemical components reduces population upkeep."
@@ -1022,7 +1022,7 @@
 # tradition_statecraft_machine: "Assembly of Conciousness"
  tradition_statecraft_desc:0 "A powerful Council allows our empire to be more responsive."
  tradition_statecraft_hive_desc:0 "The Council of Voices defines our empire."
- tradition_statecraft_machine_desc:0 "The Assembly of Conciousness defines our empire."
+ tradition_statecraft_machine_desc:0 "The Assembly of Consciousness defines our empire."
  tr_statecraft_adopt:0 "Statecraft Traditions"
  tr_statecraft_finish:0 "Statecraft Traditions Finished"
  tr_statecraft_constitutional_focus:0 "Constitutional Focus"
@@ -1044,7 +1044,7 @@
  tr_statecraft_amongst_peers_hive:0 "Propagated Insights"
  tr_statecraft_amongst_peers_machine:0 "$tr_statecraft_amongst_peers_hive$"
  tr_statecraft_amongst_peers_delayed:0 "Trust, respect, and learning from mistakes are held to the highest standards even at the top echelons of our empire."
- tr_statecraft_amongst_peers_hive_delayed:0 "Multiple aspects of the conciousness should never make the same mistakes."
+ tr_statecraft_amongst_peers_hive_delayed:0 "Multiple aspects of the consciousness should never make the same mistakes."
  tr_statecraft_amongst_peers_machine_delayed:0 "$tr_statecraft_amongst_peers_hive_delayed$"
  tr_statecraft_shared_benefits:0 "Shared Benefits"
  tr_statecraft_shared_benefits_hive:0 "Shared Deduction"
@@ -1094,43 +1094,43 @@
 # Enmity
 ################################################################
 
-tradition_enmity: "Enmity"
-tradition_enmity_desc: "[Root.GetSpeciesNamePlural] never move so fast as when other [Root.GetSpeciesNamePlural] are setting the pace."
-tradition_enmity_desc_machine: "The [Root.GetName] develops faster when tested by competent competition."
+ tradition_enmity: "Enmity"
+ tradition_enmity_desc: "[Root.GetSpeciesNamePlural] never move so fast as when other [Root.GetSpeciesNamePlural] are setting the pace."
+ tradition_enmity_desc_machine: "The [Root.GetName] develops faster when tested by competent competition."
 
-tr_enmity_adopt: "$tradition_enmity$ Traditions"
-tr_enmity_adopt_desc: "£mod_pop_growth_speed£ §YPop Growth§! per neighboring Rival: §G+3%§!\n£mod_planet_pop_assembly_mult£ §YPop Assembly§! per neighboring Rival: §G+3%§!"
-tr_enmity_finish: "$tradition_enmity$ Finished"
-tr_enmity_finish_desc: "Available Envoys: §G+1§!\nUnlocks the §YAntagonistic§! Diplomatic Stance.\n$TRADITIONS_FINISH_AP$"
+ tr_enmity_adopt: "$tradition_enmity$ Traditions"
+ tr_enmity_adopt_desc: "£mod_pop_growth_speed£ §YPop Growth§! per neighboring Rival: §G+3%§!\n£mod_planet_pop_assembly_mult£ §YPop Assembly§! per neighboring Rival: §G+3%§!"
+ tr_enmity_finish: "$tradition_enmity$ Finished"
+ tr_enmity_finish_desc: "Available Envoys: §G+1§!\nUnlocks the §YAntagonistic§! Diplomatic Stance.\n$TRADITIONS_FINISH_AP$"
 
-tr_enmity_rise_to_the_occasion: "Rise to the Occasion"
-tr_enmity_rise_to_the_occasion_delayed: "In the face of an ever-increasing number of adversaries, we stand united."
-tr_enmity_rise_to_the_occasion_effect: "$mod_country_official_cap_add$ per Rival: §G+0.50§!\n$mod_country_commander_cap_add$ per Rival: §G+0.50§!\n$mod_country_scientist_cap_add$ per Rival: §G+0.50§!"
+ tr_enmity_rise_to_the_occasion: "Rise to the Occasion"
+ tr_enmity_rise_to_the_occasion_delayed: "In the face of an ever-increasing number of adversaries, we stand united."
+ tr_enmity_rise_to_the_occasion_effect: "$mod_country_official_cap_add$ per Rival: §G+0.50§!\n$mod_country_commander_cap_add$ per Rival: §G+0.50§!\n$mod_country_scientist_cap_add$ per Rival: §G+0.50§!"
 
-tr_enmity_consumate_contrarian: "Consummate Contrarian"
-tr_enmity_consumate_contrarian_delayed: "Blocking the plans of the opposition can be just as satisfying as enacting one's own."
+ tr_enmity_consumate_contrarian: "Consummate Contrarian"
+ tr_enmity_consumate_contrarian_delayed: "Blocking the plans of the opposition can be just as satisfying as enacting one's own."
 
-tr_enmity_match: "Match"
-tr_enmity_match_delayed: "First, establish an equal playing field."
-tr_enmity_match_effect: "While Militarily weaker than a Rival:\n$t$Ship Build Cost: §G-5%§!\n$t$Ship Build Speed: §G+10%§!\nWhile Technologically weaker than a Rival:\n$t$Researcher Upkeep: §G-15%§!\n$t$Research Labs Build Speed: §G+100%§!\nWhile Economically weaker than a Rival:\n$t$[GetWorker] Output: §G+10%§!"
+ tr_enmity_match: "Match"
+ tr_enmity_match_delayed: "First, establish an equal playing field."
+ tr_enmity_match_effect: "While Militarily weaker than a Rival:\n$t$Ship Build Cost: §G-5%§!\n$t$Ship Build Speed: §G+10%§!\nWhile Technologically weaker than a Rival:\n$t$Researcher Upkeep: §G-15%§!\n$t$Research Labs Build Speed: §G+100%§!\nWhile Economically weaker than a Rival:\n$t$[GetWorker] Output: §G+10%§!"
 
-tr_enmity_outpace: "Outpace"
-tr_enmity_outpace_delayed: "Second, make the move your foe is unwilling to."
+ tr_enmity_outpace: "Outpace"
+ tr_enmity_outpace_delayed: "Second, make the move your foe is unwilling to."
 
-tr_enmity_eclipse: "Eclipse"
-tr_enmity_eclipse_delayed: "Third, cast a shadow over your adversary once and for all."
-tr_enmity_eclipse_effect: "Grants §G2%§! increased $r_research$ and $r_unity$ output per §YRival§! for §Y10§! Years after winning a §YHumiliation War§!."
+ tr_enmity_eclipse: "Eclipse"
+ tr_enmity_eclipse_delayed: "Third, cast a shadow over your adversary once and for all."
+ tr_enmity_eclipse_effect: "Grants §G2%§! increased $r_research$ and $r_unity$ output per §YRival§! for §Y10§! Years after winning a §YHumiliation War§!."
 
-enmity_humiliate: "[GetName] gets the §YReaffirmed Superiority§! modifier for §Y10§! years granting them §G2%§! increased $r_research$ and $r_unity$ output per §YRival§!."
-reaffirmed_superiority: "Reaffirmed Superiority"
-reaffirmed_superiority_desc: "Our superiority is unassailable. No one is greater than us."
+ enmity_humiliate: "[GetName] gets the §YReaffirmed Superiority§! modifier for §Y10§! years granting them §G2%§! increased $r_research$ and $r_unity$ output per §YRival§!."
+ reaffirmed_superiority: "Reaffirmed Superiority"
+ reaffirmed_superiority_desc: "Our superiority is unassailable. No one is greater than us."
 
 
 ####################################
 # Ascension Perks
 ####################################
 
- requires_tradition_the_federation:1 "$TRIGGER_FAIL$§RRequires the §YFederation§! Diplomacy Tradition.§!"
+ requires_tradition_the_federation:1 "$TRIGGER_FAIL$§RRequires either the §YFederation§! Diplomacy Tradition or the §Y$tech_federation_code$§! Technology.§!"
  requires_tradition_universal_compatibility:0 "§RRequires the §YUniversal Compatibility§! Versatility Tradition.§!"
  requires_independence:0 "$TRIGGER_FAIL$[This.GetName] must be independent."
  requires_ascension_perks_1:0 "$TRIGGER_FAIL$Requires one other Ascension Perk to be selected first."
@@ -1167,7 +1167,7 @@ reaffirmed_superiority_desc: "Our superiority is unassailable. No one is greater
  requires_technology_gene_expressions:2 "$TRIGGER_FAIL$Requires the £society£ §Y$tech_gene_expressions$§! technology."
  requires_technology_gene_seed_purification:1 "$TRIGGER_FAIL$Requires the £society£ §Y$tech_gene_seed_purification$§! technology."
  requires_technology_gene_tailoring:1 "$TRIGGER_FAIL$Requires the £society£ §Y$tech_gene_tailoring$§! technology."
- requires_technology_starbase_4:0 "$TRIGGER_FAIL$Requires the £engineering£ §Y$tech_starbase_4$§! technology."
+ requires_technology_starbase_4:0 "$TRIGGER_FAIL$Requires the £engineering£ §Y$tech_starbase_4$§! technology or the £unity£ ['tradition_category:tradition_unyielding'] tradition tree."
  requires_technology_starbase_5:0 "$TRIGGER_FAIL$Requires the £engineering£ §Y$tech_starbase_5$§! technology."
  requires_technology_habitat_1:0 "$TRIGGER_FAIL$Requires the £engineering£ §Y$tech_habitat_1$§! technology."
  requires_technology_battleships:0 "$TRIGGER_FAIL$Requires the £engineering£ §Y$tech_battleships$§! technology."
@@ -1220,6 +1220,19 @@ reaffirmed_superiority_desc: "Our superiority is unassailable. No one is greater
  ap_interstellar_dominion:0 "Interstellar Dominion"
  ap_eternal_vigilance:0 "Eternal Vigilance"
  ap_eternal_vigilance_desc:0 "To display weakness is to invite attack. The price of invading our space must be so high that as few as possible are prepared to meet it."
+ ap_eternal_vigilance_tt: "Every 6 months a §YDefense Platform§! will be built around every §YStarbase§! depending on the §Y$ap_eternal_vigilance$§! policy"
+ policy_eternal_vigilance_policy: "$ap_eternal_vigilance$"
+ policy_eternal_vigilance_policy_desc: "A shield is only as strong as the one that holds it."
+ eternal_vigilance_full_spending: "Full Spending"
+ eternal_vigilance_full_spending_name: "$eternal_vigilance_full_spending$"
+ eternal_vigilance_full_spending_desc: "Every starbase needs to be properly defended. Spare no cost.\nAutomatically builds §YDefense Platforms§! around every §YStarbase§!"
+ eternal_vigilance_half_spending: "Half Spending"
+ eternal_vigilance_half_spending_name: "$eternal_vigilance_half_spending$"
+ eternal_vigilance_half_spending_desc: "Only our strongest redoubts require our support.\nAutomatically builds §YDefense Platforms§! around §YBastion Starbases§!"
+ eternal_vigilance_no_spending: "No Spending"
+ eternal_vigilance_no_spending_name: "$eternal_vigilance_no_spending$"
+ eternal_vigilance_no_spending_desc: "There is no need to further enhance our defenses.\nAutomatically builds §YDefense Platforms§! around no §YStarbases§!"
+
  ap_grasp_the_void:0 "Grasp the Void"
  ap_grasp_the_void_desc:0 "The vast expanse of the galaxy holds limitless riches for those empires that understand how to maintain their grasp on the void."
 
@@ -1232,8 +1245,8 @@ reaffirmed_superiority_desc: "Our superiority is unassailable. No one is greater
 
  ap_synthetic_age:0 "Synthetic Age"
  ap_synthetic_age_desc:0 "The age of organics has come and gone, the future of the galaxy belongs to the machines. This is the dawn of a synthetic age."
- synthetic_age_tooltip:1 "Gain access to the §Y$tradition_synthetics$§! tradition tree.\n$UNLOCKS_AGENDA$ $council_agenda_agenda_synthetic_age_name$, which grants Machine Modification technologies as Research Options."
- synthetic_age_tooltip_machine_age: "Starts the §YTransformation Situation§! which unlocks the §Y$tradition_modularity$§!, §Y$tradition_virtuality$§! or §Y$tradition_nanotech$§! tradition trees.\n§RRequires an available tradition slot§!\n$UNLOCKS_AGENDA$ $council_agenda_agenda_synthetic_age_name$, which grants Machine Modification technologies as Research Options."
+ synthetic_age_tooltip:1 "$access_tradition_tree$ ['tradition_category:tradition_synthetics']\n$UNLOCKS_AGENDA$ $council_agenda_agenda_synthetic_age_name$, which grants Machine Modification technologies as Research Options."
+ synthetic_age_tooltip_machine_age: "Starts the §Y$situation_transformation$§! situation which unlocks the ['tradition_category:tradition_modularity'], ['tradition_category:tradition_virtuality'], or ['tradition_category:tradition_nanotech'] tradition trees.\n§RRequires an available tradition slot§!\n$UNLOCKS_AGENDA$ $council_agenda_agenda_synthetic_age_name$, which grants Machine Modification technologies as Research Options."
  ap_machine_worlds:0 "Machine Worlds"
  ap_machine_worlds_desc:0 "We shall shape our worlds into a mirror image of ourselves, replacing the frailty of biology with the immutable perfection of metal."
  ap_hive_worlds:0 "Hive Worlds"
@@ -1290,4 +1303,4 @@ reaffirmed_superiority_desc: "Our superiority is unassailable. No one is greater
 
  ap_mechromancy: "Mechromancy"
  ap_mechromancy_desc: "Biologicals are merely a different kind of machine. We can stimulate the appropriate synapses and reanimate these creatures, for our own benefit."
- ap_mechromancy_tt:1 "Defeated organic Leviathans can sometimes be resurrected.\nPurged Sapient Biological or Lithoid $pops_with_icon$ have a 33% chance to be restored as Cyborg Zombies.\n$reanimator_effect_desc$"
+ ap_mechromancy_tt:1 "Defeated organic Leviathans can sometimes be resurrected.\nPurged Sapient Biological or Lithoid £pop£ Pops have a 33% chance to be restored as Cyborg Zombies.\n$reanimator_effect_desc$"

@@ -1097,7 +1097,7 @@ land_of_opportunity = {
 	}
 
 	modifier = {
-		planet_immigration_pull_mult = 1
+		#planet_immigration_pull_mult = 1 # TODO: [AUG-48754] Use automigration modifier
 		pop_growth_from_immigration = 0.25
 	}
 
@@ -1991,7 +1991,7 @@ storm_repel_field = {
 	prerequisites = {
 		"tech_storm_manipulation"
 	}
-	
+
 	ai_weight = {
 		weight = @EdictLowPrio
 		modifier = {

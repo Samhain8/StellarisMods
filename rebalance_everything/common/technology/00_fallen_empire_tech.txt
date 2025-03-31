@@ -107,7 +107,7 @@ tech_fe_affluence_1 = {
 			factor = 2
 			any_owned_planet = {
 				is_planet_class = pc_cosmogenesis_world
-				num_pops > 50
+				pop_amount > 5000
 			}
 		}
 	}
@@ -149,7 +149,7 @@ tech_fe_nourishment_1 = {
 			factor = 2
 			any_owned_planet = {
 				is_planet_class = pc_cosmogenesis_world
-				num_pops > 50
+				pop_amount > 5000
 			}
 		}
 	}
@@ -191,7 +191,7 @@ tech_fe_fabricator_1 = {
 			factor = 2
 			any_owned_planet = {
 				is_planet_class = pc_cosmogenesis_world
-				num_pops > 50
+				pop_amount > 5000
 			}
 		}
 	}
@@ -233,7 +233,7 @@ tech_fe_singularity_1 = {
 			factor = 2
 			any_owned_planet = {
 				is_planet_class = pc_cosmogenesis_world
-				num_pops > 50
+				pop_amount > 5000
 			}
 		}
 	}
@@ -275,7 +275,7 @@ tech_fe_forge_1 = {
 			factor = 2
 			any_owned_planet = {
 				is_planet_class = pc_cosmogenesis_world
-				num_pops > 50
+				pop_amount > 5000
 			}
 		}
 	}
@@ -317,7 +317,7 @@ tech_fe_dome_1 = {
 			factor = 2
 			any_owned_planet = {
 				is_planet_class = pc_cosmogenesis_world
-				num_pops > 50
+				pop_amount > 5000
 			}
 		}
 	}
@@ -359,7 +359,7 @@ tech_fe_fortress_1 = {
 			factor = 2
 			any_owned_planet = {
 				is_planet_class = pc_cosmogenesis_world
-				num_pops > 50
+				pop_amount > 5000
 			}
 		}
 	}
@@ -401,7 +401,7 @@ tech_fe_administration_1 = {
 			factor = 2
 			any_owned_planet = {
 				is_planet_class = pc_cosmogenesis_world
-				num_pops > 50
+				pop_amount > 5000
 			}
 		}
 	}
@@ -447,7 +447,7 @@ tech_fe_assembly_1 = { #Not for Hives
 			factor = 2
 			any_owned_planet = {
 				is_planet_class = pc_cosmogenesis_world
-				num_pops > 50
+				pop_amount > 5000
 			}
 		}
 	}
@@ -493,7 +493,7 @@ tech_fe_clinic_1 = { #Not for Machines
 			factor = 2
 			any_owned_planet = {
 				is_planet_class = pc_cosmogenesis_world
-				num_pops > 50
+				pop_amount > 5000
 			}
 		}
 	}
@@ -511,7 +511,7 @@ tech_fe_clinic_2 = { #Not for Machines
 	prerequisites = { "tech_fe_clinic_1" }
 }
 
-tech_fe_security_1 = { 
+tech_fe_security_1 = {
 	area = society
 	cost = @fallentechcost
 	tier = @fallentechtier
@@ -535,13 +535,13 @@ tech_fe_security_1 = {
 			factor = 2
 			any_owned_planet = {
 				is_planet_class = pc_cosmogenesis_world
-				num_pops > 50
+				pop_amount > 5000
 			}
 		}
 	}
 }
 
-tech_fe_security_2 = { 
+tech_fe_security_2 = {
 	area = society
 	cost = @fallentechcost
 	tier = @fallentechtier
@@ -581,7 +581,7 @@ tech_fe_market_1 = { # Not for gestalt
 			factor = 2
 			any_owned_planet = {
 				is_planet_class = pc_cosmogenesis_world
-				num_pops > 50
+				pop_amount > 5000
 			}
 		}
 	}
@@ -623,7 +623,7 @@ tech_fe_silo_1 = {
 			factor = 2
 			any_owned_planet = {
 				is_planet_class = pc_cosmogenesis_world
-				num_pops > 50
+				pop_amount > 5000
 			}
 		}
 	}
@@ -669,7 +669,7 @@ tech_fe_entertainment_1 = { # Not for gestalt
 			factor = 2
 			any_owned_planet = {
 				is_planet_class = pc_cosmogenesis_world
-				num_pops > 50
+				pop_amount > 5000
 			}
 		}
 	}
@@ -711,7 +711,7 @@ tech_fe_lab_1 = {
 			factor = 2
 			any_owned_planet = {
 				is_planet_class = pc_cosmogenesis_world
-				num_pops > 50
+				pop_amount > 5000
 			}
 		}
 	}
@@ -753,7 +753,7 @@ tech_fe_mine_1 = {
 			factor = 2
 			any_owned_planet = {
 				is_planet_class = pc_cosmogenesis_world
-				num_pops > 50
+				pop_amount > 5000
 			}
 		}
 	}

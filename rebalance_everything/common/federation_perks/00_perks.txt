@@ -272,37 +272,37 @@ president_unity_1 = {
 
 trade_value_1 = {
 	members_modifier = {
-		trade_value_mult = 0.05
+		country_trade_produces_mult = 0.05
 	}
 }
 
 trade_value_2 = {
 	members_modifier = {
-		trade_value_mult = 0.05
+		country_trade_produces_mult = 0.05
 	}
 }
 
 trade_value_3 = {
 	members_modifier = {
-		trade_value_mult = 0.05
+		country_trade_produces_mult = 0.05
 	}
 }
 
 trade_value_4 = {
 	members_modifier = {
-		trade_value_mult = 0.05
+		country_trade_produces_mult = 0.05
 	}
 }
 
 trade_protection_1 = {
 	members_modifier = {
-		local_trade_protection_add = 5
+		planet_clerks_trade_produces_mult = 0.10
 	}
 }
 
 president_trade_value_1 = {
 	leader_modifier = {
-		trade_value_mult = 0.10
+		country_trade_produces_mult = 0.10
 	}
 }
 

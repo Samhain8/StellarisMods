@@ -214,6 +214,7 @@ interstellar_assembly_2 = {
 
 	country_modifier = {
 		diplo_weight_mult = 0.20
+		empire_size_mult = -0.05
 		envoys_add = 1
 		# enables triggered_opinion_of_interstellar_assembly_2
 	}
@@ -251,6 +252,7 @@ interstellar_assembly_3 = {
 
 	country_modifier = {
 		diplo_weight_mult = 0.30
+		empire_size_mult = -0.05
 		envoys_add = 1
 		# enables triggered_opinion_of_interstellar_assembly_3
 	}
@@ -289,6 +291,7 @@ interstellar_assembly_4 = {
 
 	country_modifier = {
 		diplo_weight_mult = 0.40
+		empire_size_mult = -0.10
 		envoys_add = 2
 		# enables triggered_opinion_of_interstellar_assembly_4
 	}
@@ -298,6 +301,7 @@ interstellar_assembly_4 = {
 		from = {
 			set_country_flag = has_built_or_repaired_megastructure
 			country_event = { id = mega.9009 }
+			set_country_flag = has_assembly
 		}
 	}
 }
@@ -364,6 +368,7 @@ interstellar_assembly_restored = {
 
 	country_modifier = {
 		diplo_weight_mult = 0.40
+		empire_size_mult = -0.10
 		envoys_add = 2
 		# enables triggered_opinion_of_interstellar_assembly_4
 	}
@@ -389,6 +394,7 @@ interstellar_assembly_restored = {
 		from = {
 			set_country_flag = has_built_or_repaired_megastructure
 			country_event = { id = mega.9131 }
+			set_country_flag = has_assembly
 		}
 	}
 }

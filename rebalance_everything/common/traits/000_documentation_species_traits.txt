@@ -67,7 +67,7 @@
 # Will show in trait tooltips if active. Tooltips will always use the player country as the country scope.
 # scope is species, from is country
 
-# triggered_pop_modifier = {}
+# triggered_pop_group_modifier = {}
 # Applied to pops if the trigger is true.
 # Won't show in trait tooltips, use custom_tooltip/custom_tooltip_with_modifiers.
 # scope is pop

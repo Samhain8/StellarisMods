@@ -430,6 +430,28 @@ dyson_swarm_3 = {
 				}
 			}
 		}
+		##Deal with Dyson Sphere flag shenanigans
+		if = {
+			limit = {
+				solar_system = {
+					has_star_flag = dyson_sphere_construction
+				}
+			}
+			from = {
+				if = {
+					limit = {
+						has_country_flag = built_dyson_sphere_contingency_swarm
+					}
+					remove_country_flag = built_dyson_sphere_contingency_swarm
+				}
+				if = {
+					limit = {
+						has_country_flag = built_dyson_sphere_swarm
+					}
+					remove_country_flag = built_dyson_sphere_swarm
+				}
+			}
+		}
 	}
 
 	build_time = 1080 # 3 years

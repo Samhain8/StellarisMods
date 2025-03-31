@@ -1754,8 +1754,8 @@ country_event = {
 				OR = {
 					is_subject = yes
 					NOR = {
-						any_owned_pop = { has_trait = trait_latent_psionic }
-						any_owned_pop = { has_trait = trait_psionic }
+						any_owned_pop_group = { has_trait = trait_latent_psionic }
+						any_owned_pop_group = { has_trait = trait_psionic }
 					}
 				}
 			}
@@ -1848,20 +1848,20 @@ country_event = {
 					NOT = { has_ethic = ethic_gestalt_consciousness }
 				}
 				set_variable = { which = psionic_ability value = 0 }
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = { has_trait = trait_latent_psionic }
 					prev = {
 						change_variable = { which = psionic_ability value = 1 }
 					}
 				}
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = { has_trait = trait_psionic }
 					prev = {
 						change_variable = { which = psionic_ability value = 3 }
 					}
 				}
-				every_owned_pop = {
-					limit = { has_job = telepath }
+				every_owned_pop_group = {
+					# limit = { has_job = telepath } # Markus
 					prev = {
 						change_variable = { which = psionic_ability value = 10 }
 					}
@@ -3570,13 +3570,13 @@ country_event = {
 		allow = {
 			resource_stockpile_compare = {
 				resource = energy
-				value >= 100
-				mult = trigger:num_pops
+				value >= 1
+				mult = trigger:pop_amount
 			}
 		}
 		add_resource = {
-			energy = -100
-			mult = trigger:num_pops
+			energy = -1
+			mult = trigger:pop_amount
 		}
 		custom_tooltip = fedel.1815.E.tooltip
 		hidden_effect = {

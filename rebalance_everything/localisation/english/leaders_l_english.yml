@@ -157,8 +157,8 @@
  leader_trait_speed_chaser: "Speed Chaser"
  leader_trait_speed_chaser_desc: "Burn bright, die young, and leave a blazing trail for others to follow."
 
- leader_trait_destructive:2 "Controversial Reputation"
- leader_trait_destructive_desc:1 "Many would be happy to see this leader go. Their mere presence hurts our cohesion."
+ leader_trait_destructive: "Destructive"
+ leader_trait_destructive_desc: "This leader neglects the care of spacecraft and machinery, leading to frequent repairs and ongoing maintenance to keep them operational."
 
  leader_trait_collective_wisdom:1 "Detail-Oriented"
  leader_trait_collective_wisdom_desc:2 "A meticulous academic who works slowly, but produces incredible amounts of research."
@@ -168,9 +168,9 @@
  leader_trait_collective_wisdom_2_desc:0 "$leader_trait_collective_wisdom_desc$"
  leader_trait_collective_wisdom_2_effect:1 "+20 £society£ §Y$society_research$§! while excavating a site."
 
- leader_trait_observant:1 "Observer"
+ leader_trait_observant: "Observant"
  leader_trait_observant_desc:2 "A set of self-built, powerful scanners allow this leader to see further and plan the journey ahead."
- leader_trait_observant_hive:1 "Observer"
+ leader_trait_observant_hive: "Observant"
  leader_trait_observant_hive_desc:2 "$leader_trait_observant_desc$"
  leader_trait_observant_machine:0 "Deep Scan"
  leader_trait_observant_machine_desc:2 "$leader_trait_observant_desc$"

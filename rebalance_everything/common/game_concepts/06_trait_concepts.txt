@@ -1,6 +1,4 @@
 ### TRAIT CONCEPTS
-#
-# 1. Add new entries in alphabetical order.
 
 concept_adaptive_frames = {
 	icon = "gfx/interface/icons/traits/trait_auto_mod_robotic.dds"
@@ -94,4 +92,60 @@ concept_void_dweller = {
 
 concept_void_dweller_2 = {
 	icon = "gfx/interface/icons/traits/trait_void_dweller_2.dds"
+}
+
+concept_agrarian = {
+	icon = "gfx/interface/icons/traits/trait_agrarian.dds"
+}
+
+concept_ingenious = {
+	icon = "gfx/interface/icons/traits/trait_ingenious.dds"
+}
+
+concept_industrious = {
+	icon = "gfx/interface/icons/traits/trait_industrious.dds"
+}
+
+concept_intelligent = {
+	icon = "gfx/interface/icons/traits/trait_intelligent.dds"
+}
+
+concept_thrifty = {
+	icon = "gfx/interface/icons/traits/trait_thrifty.dds"
+}
+
+concept_natural_engineer = {
+	icon = "gfx/interface/icons/traits/trait_natural_engineers.dds"
+}
+
+concept_natural_biologist = {
+	icon = "gfx/interface/icons/traits/trait_natural_biologists.dds"
+}
+
+concept_natural_physicist = {
+	icon = "gfx/interface/icons/traits/trait_natural_physicists.dds"
+}
+
+concept_traditional = {
+	icon = "gfx/interface/icons/traits/trait_traditional.dds"
+}
+
+concept_quarrelsome = {
+	icon = "gfx/interface/icons/traits/trait_quarrelsome.dds"
+}
+
+concept_logic_engines = {
+	icon = "gfx/interface/icons/traits/trait_logic_engines.dds"
+}
+
+concept_artificial_engineer = {
+	icon = "gfx/interface/icons/traits/trait_artificial_engineers.dds"
+}
+
+concept_artificial_biologist = {
+	icon = "gfx/interface/icons/traits/trait_artificial_sociologists.dds"
+}
+
+concept_artificial_physicist = {
+	icon = "gfx/interface/icons/traits/trait_artificial_physicists.dds"
 }

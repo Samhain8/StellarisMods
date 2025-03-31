@@ -219,7 +219,7 @@ country_event = { # SUBJECT - Veterans approach the subject
 	option = { # Veterans sent home
 		name = subject.3.a
 		capital_scope = {
-			create_pop = {
+			create_pop_group = {
 				species = event_target:overlord_empire.species
 			}
 		}
@@ -3438,14 +3438,14 @@ country_event = { # Ping Event - SUBJECT - Mix species
 	trigger = {
 		#overlord_subject_event_trigger = yes
 		capital_scope = {
-			count_owned_pop = {
-				count > 1
+			count_owned_pop_amount = {
+				count >= 200
 				limit = {
 					NOT = { is_same_species = root.species }
 				}
 			}
-			count_owned_pop = {
-				count > 1
+			count_owned_pop_amount = {
+				count >= 200
 				limit = {
 					is_same_species = root.species
 				}
@@ -3456,30 +3456,31 @@ country_event = { # Ping Event - SUBJECT - Mix species
 	immediate = {
 		experiments_scientist_replacement_effect = yes
 		capital_scope = {
-			random_owned_pop = {
+			random_owned_pop_group = {
 				limit = {
 					NOT = { is_same_species = root.species }
 				}
 				save_event_target_as = targeted_species
 			}
-			create_half_species = {
-				species_one = root.species
-				species_two = event_target:targeted_species
-				country = root
-			}
-			random_owned_pop = {
+			# TODO: [AUG-48551] Half-species have been removed
+			#create_half_species = {
+			#	species_one = root.species
+			#	species_two = event_target:targeted_species
+			#	country = root
+			#}
+			random_owned_pop_group = {
 				limit = {
 					is_same_species = root.species
 				}
-				kill_pop = yes
+				kill_single_pop = yes
 			}
-			random_owned_pop = {
+			random_owned_pop_group = {
 				limit = {
 					is_same_species = event_target:targeted_species
 				}
-				kill_pop = yes
+				kill_single_pop = yes
 			}
-			create_pop = {
+			create_pop_group = {
 				species = last_created_species
 			}
 			last_created_species = {
@@ -3961,21 +3962,22 @@ planet_event = {
 					modifier = {
 						factor = 0
 						NOT = {
-							any_owned_pop = {
+							any_owned_pop_group = {
 								has_citizenship_type = { type = citizenship_full country = root.owner.overlord }
-								has_job = overlord_recruiter
+								# has_job = overlord_recruiter # Markus
 							}
 						}
 					}
-					random_owned_pop = {
+					random_owned_pop_group = {
 						limit = {
-							has_job = overlord_recruiter
+							# has_job = overlord_recruiter TODO Markus
 							has_citizenship_type = { type = citizenship_full country = root.owner.overlord }
 						}
 						save_event_target_as = moving_pop
-						resettle_pop = {
-							pop = this
-							planet = root.owner.overlord.capital_scope
+						resettle_pop_group = {
+							POP_GROUP = this
+							PLANET = root.owner.overlord.capital_scope
+							PERCENTAGE = 1
 						}
 					}
 					owner = {

@@ -4,7 +4,7 @@
 
 @discovery_weight = 3
 
-@faction_base_output = 						0.30
+@faction_base_output = 						0.3
 
 @faction_extortion_energy_ratio = 			2.00
 @faction_extortion_minerals_ratio = 		1.50
@@ -159,14 +159,28 @@
 @habitable_moon_min_size = 10
 @habitable_min_distance = 60
 @habitable_max_distance = 100
-@habitable_spawn_odds = 0.5
-@carry_cap_high = 6
-@carry_cap_normal = 4
-@carry_cap_low = 3
+@habitable_spawn_odds = 0.4
+@carry_cap_high = 600
+@carry_cap_normal = 400
+@carry_cap_low = 300
+
+@civilians_gamestart = 2000
 
 # INITIALIZERS
 @distance = 50
 @base_moon_distance = 10
+
+# SYSTEM INITIALIZERS
+@spawn_system_rare = 0.1
+@spawn_system_uncommon = 0.5
+@spawn_system_base = 1
+@spawn_system_slightlycommon = 2
+@spawn_system_common = 4
+@spawn_system_verycommon = 8
+@spawn_system_extreme = 16
+@spawn_system_max = 99999
+
+@spawn_system_enclave = 100 # first enclave uses this, rest use extreme
 
 # TECH COSTS
 @tier0cost1 = 1000
@@ -248,12 +262,12 @@
 @b0_time = 180
 @b0_minerals = 200
 @b0_upkeep = 1
-@b0_jobs = 2
+@b0_jobs = 200
 
 @b1_time = 360
 @b1_minerals = 400
 @b1_upkeep = 2
-@b1_jobs = 2
+@b1_jobs = 200
 @b1_alloy_upkeep = 2
 
 @b2_time = 480
@@ -261,7 +275,7 @@
 @b2_upkeep = 5
 @b2_rare_cost = 50
 @b2_rare_upkeep = 1
-@b2_jobs = 4
+@b2_jobs = 400
 @b2_alloy_upkeep = 3
 
 @b3_time = 600
@@ -269,7 +283,7 @@
 @b3_upkeep = 8
 @b3_rare_cost = 100
 @b3_rare_upkeep = 2
-@b3_jobs = 6
+@b3_jobs = 600
 @b3_alloy_upkeep = 5
 
 @b4_time = 900
@@ -284,8 +298,8 @@
 @feproduction = 12
 @fecost = 500
 @fetime = 720
-@fe_jobs = 6
-@fe2_jobs = 12
+@fe_jobs = 600
+@fe2_jobs = 1200
 @fe_sr_cost = 100
 
 @ap_technological_ascendancy_rare_tech = 1.5

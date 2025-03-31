@@ -3,6 +3,8 @@
 # Effects are set in particle effect for each star
 # New planets also need planet tiles (game\gfx\interface\icons\tile_backgrounds)
 # New planets need surface background (game\gfx\portraits\environments)
+
+# TODO_CD: needs change as max buildings modifier is now obsolete
 # All planet classes generates their own max_buildings_add modifiers that can be used to increase only that specific planet class' building slots
 
 ### EXAMPLE:
@@ -634,7 +636,7 @@ pc_hive = {
 	modifier = {
 		planet_jobs_produces_mult = 0.10
 		planet_max_buildings_add = 12
-		job_spawning_drone_add = 1
+		job_spawning_drone_add = 100
 		planet_resettlement_unemployed_destination_mult = 0.5
 	}
 
@@ -680,7 +682,7 @@ pc_machine = {
 		pop_housing_usage_mult = -0.10
 		pop_environment_tolerance = 0.0
 		planet_max_buildings_add = 12
-		job_replicator_add = 1
+		job_replicator_add = 100
 		planet_resettlement_unemployed_destination_mult = 0.5
 	}
 
@@ -1438,6 +1440,7 @@ pc_habitat = {
 	moon_size = 1
 	colonizable = yes
 	district_set = habitat
+	starting_district = district_hab_housing
 #	ideal = yes
 	starting_planet = no
 	orbit_lines = no

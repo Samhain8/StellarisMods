@@ -669,9 +669,9 @@ situation_event = { # Stage 3 - Start event
 			owner = {
 				while = {
 					count = value:num_synth_opposition
-					random_owned_pop = {
+					random_owned_pop_group = {
 						limit = { is_same_species = owner.species }
-						kill_pop = yes
+						kill_single_pop = yes
 					}
 				}
 				capital_scope = {
@@ -697,9 +697,9 @@ situation_event = { # Stage 3 - Start event
 			owner = {
 				while = {
 					count = value:num_synth_opposition
-					random_owned_pop = {
+					random_owned_pop_group = {
 						limit = { is_same_species = owner.species }
-						kill_pop = yes
+						kill_single_pop = yes
 					}
 				}
 				capital_scope = {
@@ -1286,7 +1286,7 @@ situation_event = { # Event to digitize pops
 						has_situation_flag = digitization_final
 					}
 				}
-				every_owned_pop = {
+				every_owned_pop_group = {
 					limit = {
 						is_same_species = owner.species
 						NOT = {
@@ -1305,7 +1305,7 @@ situation_event = { # Event to digitize pops
 					}
 					while = {
 						limit = {
-							any_owned_pop = {
+							any_owned_pop_group = {
 								exists = event_target:synthspecies@root.owner
 								is_same_species = owner.species
 								NOT = {
@@ -1314,7 +1314,7 @@ situation_event = { # Event to digitize pops
 							}
 						}
 						count = value:pop_to_digitize_per_month_synthetic_fertility
-						random_owned_pop = {
+						weighted_random_owned_pop_group = {
 							limit = {
 								is_same_species = owner.species
 								NOT = {
@@ -1328,7 +1328,7 @@ situation_event = { # Event to digitize pops
 				else = {
 					while = {
 						limit = {
-							any_owned_pop = {
+							any_owned_pop_group = {
 								exists = event_target:synthspecies@root.owner
 								is_same_species = owner.species
 								NOT = {
@@ -1337,7 +1337,7 @@ situation_event = { # Event to digitize pops
 							}
 						}
 						count = value:pop_to_digitize_per_month
-						random_owned_pop = {
+						weighted_random_owned_pop_group = {
 							limit = {
 								is_same_species = owner.species
 								NOT = {
@@ -1447,7 +1447,7 @@ situation_event = { # Event to digitize pops
 			limit = {
 				NOT = {
 					owner = {
-						any_owned_pop = {
+						any_owned_pop_group = {
 							exists = event_target:synthspecies@root.owner
 							is_same_species = owner.species
 							NOT = {

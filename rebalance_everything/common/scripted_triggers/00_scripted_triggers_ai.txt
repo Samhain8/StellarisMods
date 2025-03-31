@@ -78,7 +78,7 @@ country_uses_consumer_goods = {
 
 buildings_unemployed = {
 	planet = {
-		any_owned_pop = {
+		any_owned_pop_group = {
 			NOT = { has_citizenship_type = { type = citizenship_organic_trophy country = owner } }
 			NOR = {
 				is_pop_category = specialist
@@ -248,12 +248,18 @@ buildings_has_exotic_gases = {
 
 jobs_any_research = {
 	planet = {
-		any_owned_pop = {
+		any_owned_pop_group = {
 			OR = {
 				has_job = head_researcher
-				has_job = researcher
-				has_job = brain_drone
-				has_job = calculator
+				has_job = physicist
+				has_job = biologist
+				has_job = engineer
+				has_job = brain_drone_physicist
+				has_job = brain_drone_biologist
+				has_job = brain_drone_engineer
+				has_job = calculator_physicist
+				has_job = calculator_biologist
+				has_job = calculator_engineer
 				has_job = dimensional_portal_researcher
 				has_job = dimensional_portal_researcher_gestalt
 			}

@@ -1410,7 +1410,7 @@ astral_rift_event = {
 			}
 		}
 		event_target:genesis_new_species_selected_planet = {
-			create_pop = {
+			create_pop_group = {
 				species = event_target:genesis_new_species_final_step
 			}
 		}

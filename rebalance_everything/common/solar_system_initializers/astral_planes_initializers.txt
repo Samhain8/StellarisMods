@@ -252,7 +252,7 @@ astral_scar_system = {
 
 	usage = misc_system_init
 	usage_odds = {
-		base = 90000
+		base = @spawn_system_extreme
 		modifier = {
 			factor = 0
 			has_astral_planes_dlc = yes
@@ -267,7 +267,7 @@ astral_scar_system = {
 	}
 
 	max_instances = 1
-	spawn_chance = 100
+	scaled_spawn_chance = 8
 
 	planet = {
 		count = 1

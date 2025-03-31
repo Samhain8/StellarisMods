@@ -10,7 +10,6 @@ automate_colony_planet = {
 		district_generator
 		district_mining
 		district_farming
-		district_industrial
 	}
 
 	buildings = {

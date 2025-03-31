@@ -1,0 +1,17 @@
+include = {
+	building_research_lab_1
+	building_research_lab_2
+	building_research_lab_3
+	building_automation_1
+	building_xeno_zoo
+	building_astrometeorology_observation_center
+	building_nanolab_1
+	building_astral_siphon_1
+	building_dread_encampment
+	building_vultaum_reality_computer
+	building_archaeostudies_faculty
+	building_institute
+	building_physics_lab
+	building_society_lab
+	building_engineering_lab
+}

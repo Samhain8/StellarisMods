@@ -391,7 +391,7 @@
  subject.2145.title:0 "Mix and Match"
  subject.2145.desc:0 "Many of our earliest experiments ended in failure, to the point where we had to rework several of the designs and try again. One of our more unusual redesigned scenarios introduced a [targeted_species.Species.GetAdj] subject to the experiment. Expectations were low, but it ended up an unexpected success. With that one triumph secured, we continued to experiment on our two species."
  subject.2145.a:0 "Not quite what we expected, but interesting nonetheless."
- subject.2145.a.tt:0 "1 §Y[Root.Species.GetName]§! pop and 1 §Y[targeted_species.Species.GetName]§! pop combine into 1 §Y[new_species.Species.GetName]§! pop"
+ subject.2145.a.tt:0 "§Y100§! £pop£ §H[Root.Species.GetName] Pops§! and §Y100§! £pop£ §H[targeted_species.Species.GetName] Pops§! combine into §Y100§! £pop£ §H[new_species.Species.GetName] Pops§!"
 
  subject.2150.title:0 "Experimental Failure"
  subject.2150.desc:0 "$subject.2125.desc$"
@@ -436,4 +436,3 @@
 
  subject.3070.title:0 "Pilgrimage's End"
  subject.3070.desc:0 "Though the group of pilgrims we received on [overlord_empire.Capital.GetName] were treated well and seemed to enjoy their stay, we have heard that the [subject_empire.GetName] is clamping down on such travel in the future."
- 

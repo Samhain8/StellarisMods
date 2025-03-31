@@ -85,11 +85,9 @@ r_flowmetal_alloy = {
 		hidden_effect = {
 			create_built_robot_species = yes
 			capital_scope = {
-				while = {
-					count = 3
-					create_pop = {
-						species = last_created_species
-					}
+				create_pop_group = {
+					size = 300
+					species = last_created_species
 				}
 			}
 		}

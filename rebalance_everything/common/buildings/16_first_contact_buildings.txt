@@ -47,12 +47,12 @@ building_low_tech_scrap_refinery = {
 				is_lithoid_empire = yes
 			}
 		}
-		job_low_tech_miner_add = 2
+		job_low_tech_miner_add = 200
 	}
 
 	planet_modifier = {
-		job_low_tech_laborer_add = 2
-		job_low_tech_miner_add = 2
+		job_low_tech_laborer_add = 200
+		job_low_tech_miner_add = 200
 	}
 
 	triggered_desc = {
@@ -111,7 +111,7 @@ building_low_tech_admin_hub = {
 				is_spiritualist = yes
 			}
 		}
-		job_low_tech_priest_add = 2
+		job_low_tech_priest_add = 200
 	}
 
 	triggered_desc = {
@@ -131,7 +131,7 @@ building_low_tech_admin_hub = {
 				is_megacorp = no 
 			}
 		}
-		job_low_tech_bureaucrat_add = 2
+		job_low_tech_bureaucrat_add = 200
 	}
 
 	triggered_desc = {
@@ -152,7 +152,7 @@ building_low_tech_admin_hub = {
 				is_megacorp = yes 
 			}
 		}
-		job_low_tech_manager_add = 2
+		job_low_tech_manager_add = 200
 	}
 
 	triggered_desc = {
@@ -207,7 +207,7 @@ building_low_tech_power_plant = {
 	}
 
 	planet_modifier = {
-		job_low_tech_technician_add = 2
+		job_low_tech_technician_add = 200
 	}
 
 	triggered_desc = {
@@ -254,7 +254,7 @@ building_low_tech_farm = {
 	}
 
 	planet_modifier = {
-		job_low_tech_farmer_add = 10
+		job_low_tech_farmer_add = 1000
 	}
 
 	triggered_desc = {
@@ -293,10 +293,10 @@ building_low_tech_capital = {
 	}
 
 	planet_modifier = {
-		job_colonist_add = 2
-		job_low_tech_warrior_add = 1
-		planet_housing_add = 4
-		planet_amenities_add = 7
+		job_colonist_add = 200
+		job_low_tech_warrior_add = 100
+		planet_housing_add = 400
+		planet_amenities_add = 700
 		planet_max_buildings_add = 1
 	}
 
@@ -352,7 +352,7 @@ building_low_tech_research_lab = {
 	}
 
 	planet_modifier = {
-		job_low_tech_researcher_add = 2
+		job_low_tech_researcher_add = 200
 	}
 
 	triggered_desc = {

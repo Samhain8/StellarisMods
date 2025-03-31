@@ -1,0 +1,22 @@
+## Noble
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			has_valid_civic = civic_aristocratic_elite
+		}
+	}
+	planet_stability_add = 2
+}
+## Technophant
+triggered_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			has_origin = origin_cybernetic_creed
+		}
+	}
+	planet_amenities_add = 2
+	mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+}
+

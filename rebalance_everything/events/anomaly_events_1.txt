@@ -1537,141 +1537,40 @@ ship_event = {
 				country_event = { id = story.5 days = 2 }
 				if = {
 					limit = {
-						count_owned_pop = {
+						count_owned_pop_amount = {
 							limit = {
-								NOT = { pop_has_ethic = ethic_xenophile }
+								has_any_ethic = yes
+								NOT = { has_ethic = ethic_xenophile }
 							}
-							count > 12
+							count > 1200
 						}
 					}
-					random_owned_pop = {
-						limit = {
-							NOR = {
-								pop_has_ethic = ethic_xenophile
-								pop_has_trait = trait_mechanical
-							}
+					while = {
+						count = 6
+						pop_group_transfer_ethic = {
+							ETHOS = ethic_xenophile
+							AMOUNT = 100
 						}
-						if = {
-							limit = { pop_has_ethic = ethic_xenophobe }
-							pop_remove_ethic = ethic_xenophobe
-						}
-						pop_change_ethic = "ethic_xenophile"
-					}
-					random_owned_pop = {
-						limit = {
-							NOR = {
-								pop_has_ethic = ethic_xenophile
-								pop_has_trait = trait_mechanical
-							}
-						}
-						if = {
-							limit = { pop_has_ethic = ethic_xenophobe }
-							pop_remove_ethic = ethic_xenophobe
-						}
-						pop_change_ethic = "ethic_xenophile"
-					}
-					random_owned_pop = {
-						limit = {
-							NOR = {
-								pop_has_ethic = ethic_xenophile
-								pop_has_trait = trait_mechanical
-							}
-						}
-						if = {
-							limit = { pop_has_ethic = ethic_xenophobe }
-							pop_remove_ethic = ethic_xenophobe
-						}
-						pop_change_ethic = "ethic_xenophile"
-					}
-					random_owned_pop = {
-						limit = {
-							NOR = {
-								pop_has_ethic = ethic_xenophile
-								pop_has_trait = trait_mechanical
-							}
-						}
-						if = {
-							limit = { pop_has_ethic = ethic_xenophobe }
-							pop_remove_ethic = ethic_xenophobe
-						}
-						pop_change_ethic = "ethic_xenophile"
-					}
-					random_owned_pop = {
-						limit = {
-							NOR = {
-								pop_has_ethic = ethic_xenophile
-								pop_has_trait = trait_mechanical
-							}
-						}
-						if = {
-							limit = { pop_has_ethic = ethic_xenophobe }
-							pop_remove_ethic = ethic_xenophobe
-						}
-						pop_change_ethic = "ethic_xenophile"
-					}
-					random_owned_pop = {
-						limit = {
-							NOR = {
-								pop_has_ethic = ethic_xenophile
-								pop_has_trait = trait_mechanical
-							}
-						}
-						if = {
-							limit = { pop_has_ethic = ethic_xenophobe }
-							pop_remove_ethic = ethic_xenophobe
-						}
-						pop_change_ethic = "ethic_xenophile"
 					}
 					set_country_flag = eddic_1
 					country_event = { id = anomaly.121 days = 4 }
 				}
 				else_if = {
 					limit = {
-						count_owned_pop = {
+						count_owned_pop_amount = {
 							limit = {
-								NOT = { pop_has_ethic = ethic_xenophile }
+								has_any_ethic = yes
+								NOT = { has_ethic = ethic_xenophile }
 							}
 							count > 6
 						}
 					}
-					random_owned_pop = {
-						limit = {
-							NOR = {
-								pop_has_ethic = ethic_xenophile
-								pop_has_trait = trait_mechanical
-							}
+					while = {
+						count = 6
+						pop_group_transfer_ethic = {
+							ETHOS = ethic_xenophile
+							AMOUNT = 100
 						}
-						if = {
-							limit = { pop_has_ethic = ethic_xenophobe }
-							pop_remove_ethic = ethic_xenophobe
-						}
-						pop_change_ethic = "ethic_xenophile"
-					}
-					random_owned_pop = {
-						limit = {
-							NOR = {
-								pop_has_ethic = ethic_xenophile
-								pop_has_trait = trait_mechanical
-							}
-						}
-						if = {
-							limit = { pop_has_ethic = ethic_xenophobe }
-							pop_remove_ethic = ethic_xenophobe
-						}
-						pop_change_ethic = "ethic_xenophile"
-					}
-					random_owned_pop = {
-						limit = {
-							NOR = {
-								pop_has_ethic = ethic_xenophile
-								pop_has_trait = trait_mechanical
-							}
-						}
-						if = {
-							limit = { pop_has_ethic = ethic_xenophobe }
-							pop_remove_ethic = ethic_xenophobe
-						}
-						pop_change_ethic = "ethic_xenophile"
 					}
 					set_country_flag = eddic_2
 					country_event = { id = anomaly.121 days = 4 }
@@ -2303,12 +2202,17 @@ country_event = {
 			hidden_effect = {
 				while = {
 					count = 3
-					random_owned_pop = {
+					weighted_random_owned_pop_group = {
 						limit = {
 							is_same_species = owner.species
-							NOT = { has_ethic = "ethic_spiritualist" }
+							has_any_ethic = yes
+							NOT = { has_ethic = ethic_spiritualist }
 						}
-						pop_change_ethic = "ethic_spiritualist"
+						pop_group_transfer_ethic = {
+							POP_GROUP = this
+							ETHOS = ethic_spiritualist
+							AMOUNT = 100
+						}
 					}
 				}
 			}
@@ -2378,7 +2282,7 @@ ship_event = {
 				add_zro = yes
 			}
 		}
-		hidden_effect = { ship_event = { id = distar.305 days = 1 } }
+		hidden_effect = { ship_event = { id = action.941 days = 1 scopes = { from = fromfrom } } }
 	}
 }
 
@@ -2402,7 +2306,7 @@ ship_event = {
 		name = FASCINATING
 		hidden_effect = {
 			owner = { country_event = { id = story.5 days = 30 } }
-			ship_event = { id = distar.305 days = 1 }
+			ship_event = { id = action.941 days = 1 scopes = { from = fromfrom } }
 		}
 		FROM = {
 			custom_tooltip = anomaly.155.a.tooltip
@@ -4977,7 +4881,7 @@ country_event = {
 				}
 				while = {
 					count = 3
-					create_pop = {
+					create_pop_group = {
 						species = last_created_species
 					}
 				}
@@ -5204,13 +5108,13 @@ country_event = {
 					set_capital = yes
 					while = {
 						count = 6
-						create_pop = {
+						create_pop_group = {
 							species = last_created_species
 						}
 					}
-					add_building = building_research_lab_1
-					add_building = building_foundry_1
-					add_building = building_factory_1
+#					add_building = building_research_lab_1
+#					add_building = building_foundry_1
+#					add_building = building_factory_1
 					add_district = district_generator
 					add_district = district_generator
 					add_district = district_mining
@@ -5475,7 +5379,7 @@ country_event = {
 				}
 				while = {
 					count = 3
-					create_pop = {
+					create_pop_group = {
 						species = last_created_species
 					}
 				}
@@ -5713,13 +5617,13 @@ country_event = {
 					set_capital = yes
 					while = {
 						count = 6
-						create_pop = {
+						create_pop_group = {
 							species = last_created_species
 						}
 					}
-					add_building = building_research_lab_1
-					add_building = building_foundry_1
-					add_building = building_factory_1
+#					add_building = building_research_lab_1
+#					add_building = building_foundry_1
+#					add_building = building_factory_1
 					add_district = district_generator
 					add_district = district_generator
 					add_district = district_mining

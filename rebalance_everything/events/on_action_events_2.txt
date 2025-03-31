@@ -248,6 +248,9 @@ country_event = {
 		set_global_flag = galactic_market_founded # code listens for this flag to create market
 		country_event = { id = action.104 days = 5 }
 	}
+	after = {
+		country_event = { id = timeline.73 } # Timeline Galactic Market
+	}
 }
 
 # Market forms (notifying the new host)
@@ -505,11 +508,11 @@ country_event = {
 					}
 					modifier = {
 						factor = 2
-						trade_income >= 120
+						#trade_income >= 120
 					}
 					modifier = {
 						factor = 0.5
-						trade_income <= 50
+						#trade_income <= 50
 					}
 					modifier = {
 						factor = 0.75
@@ -978,7 +981,7 @@ pop_event = {
 	is_triggered_only = yes
 
 	trigger = {
-		from = { num_pops = 0 }
+		from = { pop_amount = 0 }
 	}
 
 	immediate = {
@@ -1732,11 +1735,11 @@ planet_event = {
 				random_owned_planet = {
 					limit = {
 						has_planet_flag = doomed_planet_origin
-						num_pops > 3
+						pop_amount > 300
 					}
 					while = {
 						count = 3
-						random_owned_pop = {
+						random_owned_pop_group = {
 							limit = {
 								OR = {
 									prev = { has_modifier = doomsday_5 }
@@ -1748,9 +1751,10 @@ planet_event = {
 									}
 								}
 							}
-							resettle_pop = {
-								pop = this
-								planet = root
+							resettle_pop_group = {
+								POP_GROUP = this
+								PLANET = root
+								AMOUNT = 100
 							}
 						}
 					}

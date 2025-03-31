@@ -71,7 +71,7 @@ maven_cruiser_01 = {
 	modifier = {
 		ship_evasion_add = 15
 		ship_armor_add = 30
-		ship_piracy_suppression_add = 6
+		#ship_piracy_suppression_add = 6
 	}
 	max_hitpoints = @cruiser_hp
 	size_multiplier = 4

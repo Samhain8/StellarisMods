@@ -102,7 +102,7 @@ crimson_crawlers_bbq_them = {
 metal_planet = {
 
 	planet_miners_minerals_produces_add = 3
-	mining_district_housing_add = 5
+	mining_district_housing_add = 500
 	planet_miners_alloys_produces_add = 2
 	planet_districts_cities_cost_mult = 0.5
 	planet_district_city_build_speed_mult = -0.5
@@ -464,7 +464,6 @@ green_skies_outcome_modifier = {
 }
 
 secrets_of_the_inetian_traders = {
-	local_trade_protection_add = 10
 }
 
 secrets_of_the_inetian_traders_hive_mach = {

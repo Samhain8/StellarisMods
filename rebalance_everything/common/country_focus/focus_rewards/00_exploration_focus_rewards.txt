@@ -1,0 +1,127 @@
+# FOCUS REWARDS
+
+@exploration_reward_tech_progress = 0.20
+
+##########################
+# Exploration Focus Rewards
+##########################
+
+exploration_rewards_1 = {
+	name = "exploration_reward_1.name"
+	category = exploration
+	cost = 50
+	mode = right
+
+	on_success = {
+		add_tech_option_no_progress_effect = { TECH = tech_automated_exploration }
+		create_focus_reward_message = { CATEGORY = EXPLORATION }
+	}
+}
+
+exploration_rewards_2 = {
+	name = "exploration_reward_2.name"
+	category = exploration
+	cost = 100
+	mode = left
+
+	on_success = {
+		add_tech_option_no_progress_effect = { TECH = tech_basic_science_lab_2 }
+		create_focus_reward_message = { CATEGORY = EXPLORATION }
+	}
+}
+
+exploration_rewards_3 = {
+	name = "exploration_reward_3.name"
+	category = exploration
+	cost = 150
+	mode = right
+
+	on_success = {
+		add_tech_option_no_progress_effect = { TECH = tech_administrative_ai }
+		create_focus_reward_message = { CATEGORY = EXPLORATION }
+	}
+}
+
+exploration_rewards_4 = {
+	name = "exploration_reward_4.name"
+	category = exploration
+	cost = 200
+	mode = left
+
+	on_success = {
+		add_tech_option_no_progress_effect = { TECH = tech_hyper_drive_2 }
+		create_focus_reward_message = { CATEGORY = EXPLORATION }
+	}
+}
+
+exploration_rewards_5 = {
+	name = "exploration_reward_5.name"
+	category = exploration
+	cost = 250
+	mode = right
+
+	on_success = {
+		add_tech_option_no_progress_effect = { TECH = tech_terrestrial_sculpting }
+		create_focus_reward_message = { CATEGORY = EXPLORATION }
+	}
+}
+
+exploration_rewards_6 = {
+	name = "exploration_reward_6.name"
+	category = exploration
+	cost = 300
+	mode = left
+
+	on_success = {
+		add_tech_option_no_progress_effect = { TECH = tech_self_aware_logic }
+		create_focus_reward_message = { CATEGORY = EXPLORATION }
+	}
+}
+
+exploration_rewards_7 = {
+	name = "exploration_reward_7.name"
+	category = exploration
+	cost = 350
+	mode = right
+
+	on_success = {
+		add_tech_option_no_progress_effect = { TECH = tech_hyper_drive_3 }
+		create_focus_reward_message = { CATEGORY = EXPLORATION }
+	}
+}
+
+exploration_rewards_8 = {
+	name = "exploration_reward_8.name"
+	category = exploration
+	cost = 400
+	mode = left
+
+	on_success = {
+		add_tech_option_no_progress_effect = { TECH = tech_basic_science_lab_3 }
+		create_focus_reward_message = { CATEGORY = EXPLORATION }
+	}
+}
+
+exploration_rewards_9 = {
+	name = "exploration_reward_9.name"
+	category = exploration
+	cost = 450
+	mode = right
+
+	on_success = {
+		add_tech_option_no_progress_effect = { TECH = tech_sapient_ai }
+		create_focus_reward_message = { CATEGORY = EXPLORATION }
+	}
+}
+
+exploration_rewards_10 = {
+	name = "exploration_reward_10.name"
+	category = exploration
+	cost = 500
+	mode = end
+
+	on_success = {
+		add_tech_option_no_progress_effect = { TECH = tech_jump_drive_1 }
+		create_focus_reward_message = { CATEGORY = EXPLORATION }
+	}
+}

@@ -584,7 +584,7 @@ leader_trait_enlister = {
 			exists = planet
 			planet = { NOT = { has_modifier = slave_colony } }
 		}
-		job_soldier_add = 1
+		job_soldier_add = 100
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -592,13 +592,13 @@ leader_trait_enlister = {
 			exists = planet
 			planet = { has_modifier = slave_colony }
 		}
-		job_battle_thrall_add = 1
+		job_battle_thrall_add = 100
 	}
 	triggered_planet_modifier = {
 		potential = {
 			trait_is_gestalt_check = yes
 		}
-		job_warrior_drone_add = 1
+		job_warrior_drone_add = 100
 	}
 	sector_modifier = {
 		planet_army_build_speed_mult = 0.05
@@ -631,7 +631,7 @@ leader_trait_enlister_2 = {
 			exists = planet
 			planet = { NOT = { has_modifier = slave_colony } }
 		}
-		job_soldier_add = 2
+		job_soldier_add = 200
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -639,13 +639,13 @@ leader_trait_enlister_2 = {
 			exists = planet
 			planet = { has_modifier = slave_colony }
 		}
-		job_battle_thrall_add = 2
+		job_battle_thrall_add = 200
 	}
 	triggered_planet_modifier = {
 		potential = {
 			trait_is_gestalt_check = yes
 		}
-		job_warrior_drone_add = 2
+		job_warrior_drone_add = 200
 	}
 	sector_modifier = {
 		planet_army_build_speed_mult = 0.1
@@ -655,13 +655,13 @@ leader_trait_enlister_2 = {
 		potential = {
 			trait_is_gestalt_check = no
 		}
-		job_soldier_add = 1
+		job_soldier_add = 100
 	}
 	triggered_sector_modifier = {
 		potential = {
 			trait_is_gestalt_check = yes
 		}
-		job_warrior_drone_add = 1
+		job_warrior_drone_add = 100
 	}
 	leader_class = { commander }
 }
@@ -784,10 +784,10 @@ leader_trait_trade_focus = {
 		owner = { is_gestalt = no }
 	}
 	planet_modifier = {
-		trade_value_mult = 0.15
+		planet_jobs_trade_produces_mult = 0.15
 	}
 	sector_modifier = {
-		trade_value_mult = 0.075
+		planet_jobs_trade_produces_mult = 0.075
 	}
 	leader_class = { official }
 	opposites = {
@@ -818,10 +818,10 @@ leader_trait_trade_focus_2 = {
 		TIER = 2
 	}
 	planet_modifier = {
-		trade_value_mult = 0.25
+		planet_jobs_trade_produces_mult = 0.25
 	}
 	sector_modifier = {
-		trade_value_mult = 0.125
+		planet_jobs_trade_produces_mult = 0.125
 	}
 	leader_class = { official }
 	opposites = {
@@ -891,7 +891,7 @@ leader_trait_frontier_spirit_3 = {
 	councilor_modifier = {
 		ship_colonizer_cost_mult = -0.10
 		planet_colony_development_speed_mult = 0.50
-		colony_start_num_pops_add = 1
+		#colony_start_num_pops_add = 1 # TODO: [AUG-48551] This modifier has been removed
 	}
 	leader_class = { official }
 }
@@ -967,7 +967,7 @@ trait_ruler_investor = {
 	}
 	triggered_councilor_modifier = {
 		potential = { trait_is_gestalt_check = no }
-		trade_value_mult = 0.1
+		planet_jobs_trade_produces_mult = 0.1
 	}
 	triggered_councilor_modifier = {
 		potential = { trait_is_gestalt_check = yes }
@@ -1003,7 +1003,7 @@ trait_ruler_investor_2 = {
 	}
 	triggered_councilor_modifier = {
 		potential = { trait_is_gestalt_check = no }
-		trade_value_mult = 0.15
+		planet_jobs_trade_produces_mult = 0.15
 	}
 	triggered_councilor_modifier = {
 		potential = { trait_is_gestalt_check = yes }
@@ -1029,7 +1029,6 @@ trait_ruler_investor_3 = {
 	}
 	triggered_councilor_modifier = {
 		potential = { trait_is_gestalt_check = no }
-		trade_value_mult = 0.25
 	}
 	triggered_councilor_modifier = {
 		potential = { trait_is_gestalt_check = yes }
@@ -1582,12 +1581,12 @@ leader_trait_settler = {
 	}
 	leader_trait_type = veteran
 	planet_modifier = {
-		planet_housing_add = 4
-		planet_amenities_add = 10
+		planet_housing_add = 400
+		planet_amenities_add = 1000
 	}
 	sector_modifier = {
-		planet_housing_add = 2
-		planet_amenities_add = 5
+		planet_housing_add = 200
+		planet_amenities_add = 500
 	}
 	leader_class = { official }
 	selectable_weight = {
@@ -1607,12 +1606,12 @@ leader_trait_settler_2 = {
 		TIER = 2
 	}
 	planet_modifier = {
-		planet_housing_add = 6
-		planet_amenities_add = 15
+		planet_housing_add = 600
+		planet_amenities_add = 1500
 	}
 	sector_modifier = {
-		planet_housing_add = 3
-		planet_amenities_add = 7
+		planet_housing_add = 300
+		planet_amenities_add = 700
 	}
 	leader_trait_type = veteran
 	leader_class = { official }
@@ -1629,12 +1628,12 @@ leader_trait_settler_3 = {
 		TIER = 3
 	}
 	planet_modifier = {
-		planet_housing_add = 10
-		planet_amenities_add = 25
+		planet_housing_add = 1000
+		planet_amenities_add = 2500
 	}
 	sector_modifier = {
-		planet_housing_add = 5
-		planet_amenities_add = 10
+		planet_housing_add = 500
+		planet_amenities_add = 1000
 	}
 	leader_trait_type = veteran
 	leader_class = { official }
@@ -2099,6 +2098,11 @@ leader_trait_urbanist = {
 		COUNCIL = no
 		TIER = none
 	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
+	}
 	leader_potential_add = {
 		has_paragon_dlc = yes
 		has_trait = subclass_official_governor
@@ -2468,6 +2472,11 @@ leader_trait_efficient = {
 		COUNCIL = no
 		TIER = none
 	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
+	}
 	leader_potential_add = {
 		has_paragon_dlc = yes
 		has_trait = subclass_official_governor
@@ -2497,6 +2506,11 @@ leader_trait_arbiter = {
 		RARITY = paragon
 		COUNCIL = no
 		TIER = none
+	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
 	}
 	leader_potential_add = {
 		has_paragon_dlc = yes
@@ -2560,6 +2574,11 @@ leader_trait_utopian_idealist = {
 		COUNCIL = no
 		TIER = none
 	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
+	}
 	leader_potential_add = {
 		has_paragon_dlc = yes
 		has_trait = subclass_official_governor
@@ -2570,7 +2589,7 @@ leader_trait_utopian_idealist = {
 		}
 		pop_happiness = 0.2
 		pop_growth_from_immigration = 0.25
-		planet_immigration_pull_mult = 0.1
+		#planet_immigration_pull_mult = 0.1 # TODO: [AUG-48754] Use automigration modifier
 	}
 	triggered_sector_modifier = {
 		potential = {
@@ -2578,7 +2597,7 @@ leader_trait_utopian_idealist = {
 		}
 		pop_happiness = 0.1
 		pop_growth_from_immigration = 0.125
-		planet_immigration_pull_mult = 0.05
+		#planet_immigration_pull_mult = 0.05 # TODO: [AUG-48754] Use automigration modifier
 	}
 	triggered_planet_modifier = {
 		potential = {
@@ -2586,7 +2605,7 @@ leader_trait_utopian_idealist = {
 		}
 		pop_happiness = 0.2
 		planet_pop_assembly_mult = 0.05
-		planet_immigration_pull_mult = 0.1
+		#planet_immigration_pull_mult = 0.1 # TODO: [AUG-48754] Use automigration modifier
 	}
 	triggered_sector_modifier = {
 		potential = {
@@ -2594,7 +2613,7 @@ leader_trait_utopian_idealist = {
 		}
 		pop_happiness = 0.1
 		planet_pop_assembly_mult = 0.025
-		planet_immigration_pull_mult = 0.05
+		#planet_immigration_pull_mult = 0.05 # TODO: [AUG-48754] Use automigration modifier
 	}
 	leader_class = { official }
 	selectable_weight = {
@@ -2614,6 +2633,11 @@ leader_trait_mediator = {
 		COUNCIL = no
 		TIER = none
 	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
+	}
 	leader_potential_add = {
 		has_paragon_dlc = yes
 		has_governor_subclass = yes
@@ -2623,7 +2647,8 @@ leader_trait_mediator = {
 		potential = {
 			exists = planet
 		}
-		pop_job_amenities_mult = 0.02
+		pop_entertainer_bonus_workforce_mult = 0.02 ##TODO AUG-51706 investigate if code can fix ouput modifier not working
+		pop_maintenance_drone_bonus_workforce_mult = 0.02
 		mult = planet.value:species_on_planet
 	}
 	triggered_planet_modifier = {
@@ -2637,7 +2662,8 @@ leader_trait_mediator = {
 		potential = {
 			exists = planet
 		}
-		pop_job_amenities_mult = 0.01
+		pop_entertainer_bonus_workforce_mult = 0.01 ##TODO AUG-51706 investigate if code can fix ouput modifier not working
+		pop_maintenance_drone_bonus_workforce_mult = 0.02
 		mult = planet.value:species_on_planet
 	}
 	triggered_sector_modifier = {
@@ -2665,6 +2691,11 @@ leader_trait_shroud_preacher = {
 		RARITY = paragon
 		COUNCIL = no
 		TIER = none
+	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
 	}
 	planet_modifier = {
 		planet_psionic_jobs_produces_mult = 0.25
@@ -2720,6 +2751,11 @@ leader_trait_master_diplomat = {
 		COUNCIL = yes
 		TIER = none
 	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
+	}
 	councilor_modifier = {
 		diplo_weight_mult = 0.2
 		country_trust_cap_add = 50
@@ -2755,6 +2791,11 @@ leader_trait_supreme_organizer = {
 		COUNCIL = yes
 		TIER = none
 	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
+	}
 	councilor_modifier = {
 		empire_size_penalty_mult = -0.1
 		pop_government_ethic_attraction = 0.50
@@ -2781,6 +2822,11 @@ leader_trait_galvanizer = {
 		RARITY = paragon
 		COUNCIL = no
 		TIER = none
+	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
 	}
 	leader_potential_add = {
 		has_paragon_dlc = yes
@@ -3185,7 +3231,7 @@ leader_trait_insider_trading = {
 	}
 	triggered_planet_modifier = {
 		potential = { trait_is_gestalt_check = no }
-		trade_value_mult = -0.10
+		planet_jobs_trade_produces_mult = -0.10
 	}
 	triggered_planet_modifier = {
 		potential = { trait_is_gestalt_check = yes }
@@ -3193,7 +3239,7 @@ leader_trait_insider_trading = {
 	}
 	triggered_sector_modifier = {
 		potential = { trait_is_gestalt_check = no }
-		trade_value_mult = -0.05
+		planet_jobs_trade_produces_mult = -0.05
 	}
 	triggered_sector_modifier = {
 		potential = { trait_is_gestalt_check = yes }
@@ -3224,7 +3270,7 @@ leader_trait_insider_trading_2 = {
 	}
 	triggered_planet_modifier = {
 		potential = { trait_is_gestalt_check = no }
-		trade_value_mult = -0.25
+		planet_jobs_trade_produces_mult = -0.25
 	}
 	triggered_planet_modifier = {
 		potential = { trait_is_gestalt_check = yes }
@@ -3232,7 +3278,7 @@ leader_trait_insider_trading_2 = {
 	}
 	triggered_sector_modifier = {
 		potential = { trait_is_gestalt_check = no }
-		trade_value_mult = -0.125
+		planet_jobs_trade_produces_mult = -0.125
 	}
 	triggered_sector_modifier = {
 		potential = { trait_is_gestalt_check = yes }

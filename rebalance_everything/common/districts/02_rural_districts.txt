@@ -9,6 +9,10 @@ district_generator = {
 	min_for_deposits_on_planet = 3
 	max_for_deposits_on_planet = 15
 
+	zone_slots = {
+		slot_energy
+	}
+
 	show_on_uncolonized = {
 		uses_district_set = standard
 	}
@@ -55,7 +59,7 @@ district_generator = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 2
+		planet_housing_add = 200
 	}
 
 	triggered_planet_modifier = {
@@ -66,7 +70,7 @@ district_generator = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 300
 		}
 	}
 
@@ -76,7 +80,7 @@ district_generator = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_technician_drone_add = 3
+			job_technician_drone_add = 300
 		}
 	}
 
@@ -86,8 +90,8 @@ district_generator = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_technician_drone_add = 2
-			planet_housing_add = 1
+			job_technician_drone_add = @base_district_jobs
+			planet_housing_add = 100
 		}
 	}
 
@@ -100,7 +104,7 @@ district_generator = {
 			}
 		}
 		modifier = {
-			job_technician_add = 2
+			job_technician_add = @base_district_jobs
 		}
 	}
 
@@ -110,7 +114,7 @@ district_generator = {
 			owner = { is_fallen_empire_spiritualist = yes }
 		}
 		modifier = {
-			job_fe_acolyte_generator_add = 2
+			job_fe_acolyte_generator_add = @base_district_jobs
 		}
 	}
 
@@ -152,6 +156,10 @@ district_mining = {
 	min_for_deposits_on_planet = 1
 	max_for_deposits_on_planet = 15
 
+	zone_slots = {
+		slot_minerals
+	}
+
 	show_on_uncolonized = {
 		uses_district_set = standard
 		NAND = {
@@ -188,7 +196,7 @@ district_mining = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 2
+		planet_housing_add = 200
 	}
 
 	triggered_planet_modifier = {
@@ -199,7 +207,7 @@ district_mining = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 300
 		}
 	}
 
@@ -209,7 +217,7 @@ district_mining = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_mining_drone_add = 3
+			job_mining_drone_add = 300
 		}
 	}
 
@@ -218,7 +226,7 @@ district_mining = {
 			has_modifier = metal_planet
 		}
 		modifier = {
-			planet_housing_add = 5
+			planet_housing_add = 500
 		}
 	}
 
@@ -228,8 +236,8 @@ district_mining = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_mining_drone_add = 2
-			planet_housing_add = 1
+			job_mining_drone_add = @base_district_jobs
+			planet_housing_add = 100
 		}
 	}
 
@@ -242,7 +250,7 @@ district_mining = {
 			}
 		}
 		modifier = {
-			job_miner_add = 2
+			job_miner_add = @base_district_jobs
 		}
 	}
 
@@ -252,7 +260,7 @@ district_mining = {
 			owner = { is_fallen_empire_spiritualist = yes }
 		}
 		modifier = {
-			job_fe_acolyte_mine_add = 2
+			job_fe_acolyte_mine_add = @base_district_jobs
 		}
 	}
 
@@ -293,6 +301,10 @@ district_farming = {
 
 	min_for_deposits_on_planet = 3
 	max_for_deposits_on_planet = 15
+
+	zone_slots = {
+		slot_food
+	}
 
 	show_on_uncolonized = {
 		uses_district_set = standard
@@ -359,7 +371,7 @@ district_farming = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 2
+		planet_housing_add = 200
 	}
 
 	triggered_planet_modifier = {
@@ -370,7 +382,7 @@ district_farming = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 400
 			planet_max_buildings_add = 0.25
 		}
 	}
@@ -384,7 +396,7 @@ district_farming = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 200
 		}
 	}
 
@@ -394,7 +406,7 @@ district_farming = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_agri_drone_add = 3
+			job_agri_drone_add = 300
 		}
 	}
 
@@ -404,8 +416,8 @@ district_farming = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_agri_drone_add = 2
-			planet_housing_add = 1
+			job_agri_drone_add = @base_district_jobs
+			planet_housing_add = 100
 		}
 	}
 
@@ -422,7 +434,7 @@ district_farming = {
 			}
 		}
 		modifier = {
-			job_farmer_add = 2
+			job_farmer_add = @base_district_jobs
 		}
 	}
 
@@ -432,20 +444,16 @@ district_farming = {
 			owner = { is_fallen_empire_spiritualist = yes }
 		}
 		modifier = {
-			job_fe_acolyte_farm_add = 2
+			job_fe_acolyte_farm_add = @base_district_jobs
 		}
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_anglers_empire = yes }
-			planet = { is_wet = yes }
+			artisan_is_pearl_diver_trigger = yes
 		}
-		modifier = {
-			job_angler_add = 1
-			job_pearl_diver_add = 1
-		}
+		job_angler_add = 100
+		job_artisan_add = 100
 	}
 
 	triggered_desc = {
@@ -511,6 +519,10 @@ district_generator_uncapped = {
 	icon = district_generator
 	is_capped_by_modifier = no
 
+	zone_slots = {
+		slot_energy
+	}
+
 	show_on_uncolonized = {
 		OR = {
 			uses_district_set = hive_world
@@ -532,16 +544,7 @@ district_generator_uncapped = {
 		OR = {
 			uses_district_set = hive_world
 			uses_district_set = machine_world
-			AND = {
-				exists = owner
-				owner = {
-					OR = {
-						is_gestalt = yes
-						is_fallen_empire = yes
-					}
-				}
-				uses_district_set = shattered_ring_world
-			}
+			uses_district_set = shattered_ring_world
 		}
 	}
 
@@ -554,6 +557,7 @@ district_generator_uncapped = {
 		district_generator
 		district_rw_generator
 		district_srw_commercial
+		district_rw_urban_1
 	}
 
 	resources = {
@@ -567,7 +571,7 @@ district_generator_uncapped = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 2
+		planet_housing_add = 200
 	}
 
 	triggered_planet_modifier = {
@@ -578,7 +582,7 @@ district_generator_uncapped = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 300
 		}
 	}
 
@@ -588,7 +592,7 @@ district_generator_uncapped = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_technician_drone_add = 3
+			job_technician_drone_add = 300
 		}
 	}
 
@@ -598,8 +602,8 @@ district_generator_uncapped = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_technician_drone_add = 2
-			planet_housing_add = 1
+			job_technician_drone_add = @base_district_jobs
+			planet_housing_add = 100
 		}
 	}
 
@@ -613,8 +617,8 @@ district_generator_uncapped = {
 			}
 		}
 		modifier = {
-			job_technician_drone_add = 2
-			planet_housing_add = 3
+			job_technician_drone_add = @base_district_jobs
+			planet_housing_add = 300
 		}
 	}
 
@@ -627,7 +631,7 @@ district_generator_uncapped = {
 			}
 		}
 		modifier = {
-			job_technician_add = 2
+			job_technician_add = @base_district_jobs
 		}
 	}
 
@@ -637,7 +641,7 @@ district_generator_uncapped = {
 			owner = { is_fallen_empire_spiritualist = yes }
 		}
 		modifier = {
-			job_fe_acolyte_generator_add = 2
+			job_fe_acolyte_generator_add = @base_district_jobs
 		}
 	}
 
@@ -671,6 +675,10 @@ district_mining_uncapped = {
 	base_buildtime = 240
 	icon = district_mining
 	is_capped_by_modifier = no
+
+	zone_slots = {
+		slot_minerals
+	}
 
 	desc = {
 		trigger = {
@@ -721,6 +729,7 @@ district_mining_uncapped = {
 	conversion_ratio = 1
 	convert_to = {
 		district_mining
+		district_rw_urban_2
 	}
 
 	resources = {
@@ -734,7 +743,7 @@ district_mining_uncapped = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 2
+		planet_housing_add = 200
 	}
 
 	triggered_planet_modifier = {
@@ -745,7 +754,7 @@ district_mining_uncapped = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 300
 		}
 	}
 
@@ -754,7 +763,7 @@ district_mining_uncapped = {
 			has_modifier = metal_planet
 		}
 		modifier = {
-			planet_housing_add = 5
+			planet_housing_add = 500
 		}
 	}
 
@@ -765,7 +774,7 @@ district_mining_uncapped = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_mining_drone_add = 3
+			job_mining_drone_add = 300
 		}
 	}
 
@@ -776,8 +785,8 @@ district_mining_uncapped = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_mining_drone_add = 2
-			planet_housing_add = 1
+			job_mining_drone_add = @base_district_jobs
+			planet_housing_add = 100
 		}
 	}
 
@@ -791,8 +800,8 @@ district_mining_uncapped = {
 			}
 		}
 		modifier = {
-			job_mining_drone_add = 2
-			planet_housing_add = 3
+			job_mining_drone_add = @base_district_jobs
+			planet_housing_add = 300
 		}
 	}
 
@@ -806,7 +815,7 @@ district_mining_uncapped = {
 			}
 		}
 		modifier = {
-			job_miner_add = 2
+			job_miner_add = @base_district_jobs
 		}
 	}
 
@@ -817,7 +826,7 @@ district_mining_uncapped = {
 			owner = { is_fallen_empire_spiritualist = yes }
 		}
 		modifier = {
-			job_fe_acolyte_mine_add = 2
+			job_fe_acolyte_mine_add = @base_district_jobs
 		}
 	}
 
@@ -828,7 +837,7 @@ district_mining_uncapped = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_scrap_miner_drone_add = 3
+			job_scrap_miner_drone_add = 300
 		}
 	}
 
@@ -839,8 +848,8 @@ district_mining_uncapped = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_scrap_miner_drone_add = 2
-			planet_housing_add = 1
+			job_scrap_miner_drone_add = @base_district_jobs
+			planet_housing_add = 100
 		}
 	}
 
@@ -853,7 +862,7 @@ district_mining_uncapped = {
 			}
 		}
 		modifier = {
-			job_scrap_miner_add = 2
+			job_scrap_miner_add = @base_district_jobs
 		}
 	}
 
@@ -867,7 +876,7 @@ district_mining_uncapped = {
 		mult = owner.value:scripted_modifier_add|MODIFIER|mining_district_housing_add|
 	}
 
-
+	# TODO_CD: needs new purpose as max buildings modifier is now obsolete
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -939,6 +948,10 @@ district_farming_uncapped = {
 	icon = district_farming
 	is_capped_by_modifier = no
 
+	zone_slots = {
+		slot_food
+	}
+
 	show_on_uncolonized = {
 		OR = {
 			uses_district_set = hive_world
@@ -972,6 +985,7 @@ district_farming_uncapped = {
 	convert_to = {
 		district_farming
 		district_rw_farming
+		district_rw_urban_3
 	}
 
 	resources = {
@@ -996,7 +1010,7 @@ district_farming_uncapped = {
 	}
 
 	planet_modifier = {
-		planet_housing_add = 2
+		planet_housing_add = 200
 	}
 
 	triggered_planet_modifier = {
@@ -1007,7 +1021,7 @@ district_farming_uncapped = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 400
 			planet_max_buildings_add = 0.25
 		}
 	}
@@ -1021,7 +1035,7 @@ district_farming_uncapped = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 200
 		}
 	}
 
@@ -1031,7 +1045,7 @@ district_farming_uncapped = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_agri_drone_add = 3
+			job_agri_drone_add = 300
 		}
 	}
 
@@ -1041,8 +1055,8 @@ district_farming_uncapped = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_agri_drone_add = 2
-			planet_housing_add = 1
+			job_agri_drone_add = @base_district_jobs
+			planet_housing_add = 100
 		}
 	}
 
@@ -1059,7 +1073,7 @@ district_farming_uncapped = {
 			}
 		}
 		modifier = {
-			job_farmer_add = 2
+			job_farmer_add = @base_district_jobs
 		}
 	}
 
@@ -1069,20 +1083,16 @@ district_farming_uncapped = {
 			owner = { is_fallen_empire_spiritualist = yes }
 		}
 		modifier = {
-			job_fe_acolyte_farm_add = 2
+			job_fe_acolyte_farm_add = @base_district_jobs
 		}
 	}
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_anglers_empire = yes }
-			planet = { is_wet = yes }
+			artisan_is_pearl_diver_trigger = yes
 		}
-		modifier = {
-			job_angler_add = 1
-			job_pearl_diver_add = 1
-		}
+		job_angler_add = 100
+		job_artisan_add = 100
 	}
 
 	triggered_desc = {

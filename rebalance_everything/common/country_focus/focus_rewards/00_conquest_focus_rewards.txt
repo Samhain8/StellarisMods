@@ -1,0 +1,127 @@
+# FOCUS REWARDS
+
+@conquest_reward_tech_progress = 0.20
+
+##########################
+# Conquest Focus Rewards
+##########################
+
+conquest_rewards_1 = {
+	name = "conquest_reward_1.name"
+	category = conquest
+	cost = 50
+	mode = right
+
+	on_success = {
+		add_tech_option_no_progress_effect = { TECH = tech_doctrine_navy_size_1 }
+		create_focus_reward_message = { CATEGORY = CONQUEST }
+	}
+}
+
+conquest_rewards_2 = {
+	name = "conquest_reward_2.name"
+	category = conquest
+	cost = 100
+	mode = left
+
+	on_success = {
+		add_tech_option_no_progress_effect = { TECH = tech_combat_computers_1 }
+		create_focus_reward_message = { CATEGORY = CONQUEST }
+	}
+}
+
+conquest_rewards_3 = {
+	name = "conquest_reward_3.name"
+	category = conquest
+	cost = 150
+	mode = right
+
+	on_success = {
+		add_tech_option_no_progress_effect = { TECH = tech_doctrine_fleet_size_1 }
+		create_focus_reward_message = { CATEGORY = CONQUEST }
+	}
+}
+
+conquest_rewards_4 = {
+	name = "conquest_reward_4.name"
+	category = conquest
+	cost = 200
+	mode = left
+
+	on_success = {
+		add_tech_option_no_progress_effect = { TECH = tech_destroyers }
+		create_focus_reward_message = { CATEGORY = CONQUEST }
+	}
+}
+
+conquest_rewards_5 = {
+	name = "conquest_reward_5.name"
+	category = conquest
+	cost = 250
+	mode = right
+
+	on_success = {
+		add_tech_option_no_progress_effect = { TECH = tech_doctrine_navy_size_2 }
+		create_focus_reward_message = { CATEGORY = CONQUEST }
+	}
+}
+
+conquest_rewards_6 = {
+	name = "conquest_reward_6.name"
+	category = conquest
+	cost = 300
+	mode = left
+
+	on_success = {
+		add_tech_option_no_progress_effect = { TECH = tech_doctrine_fleet_size_2 }
+		create_focus_reward_message = { CATEGORY = CONQUEST }
+	}
+}
+
+conquest_rewards_7 = {
+	name = "conquest_reward_7.name"
+	category = conquest
+	cost = 350
+	mode = right
+
+	on_success = {
+		add_tech_option_no_progress_effect = { TECH = tech_cruisers }
+		create_focus_reward_message = { CATEGORY = CONQUEST }
+	}
+}
+
+conquest_rewards_8 = {
+	name = "conquest_reward_8.name"
+	category = conquest
+	cost = 400
+	mode = left
+
+	on_success = {
+		add_tech_option_no_progress_effect = { TECH = tech_combat_computers_2 }
+		create_focus_reward_message = { CATEGORY = CONQUEST }
+	}
+}
+
+conquest_rewards_9 = {
+	name = "conquest_reward_9.name"
+	category = conquest
+	cost = 450
+	mode = right
+
+	on_success = {
+		add_tech_option_no_progress_effect = { TECH = tech_battleships }
+		create_focus_reward_message = { CATEGORY = CONQUEST }
+	}
+}
+
+conquest_rewards_10 = {
+	name = "conquest_reward_10.name"
+	category = conquest
+	cost = 500
+	mode = end
+
+	on_success = {
+		add_tech_option_no_progress_effect = { TECH = tech_existential_campaigns }
+		create_focus_reward_message = { CATEGORY = CONQUEST }
+	}
+}

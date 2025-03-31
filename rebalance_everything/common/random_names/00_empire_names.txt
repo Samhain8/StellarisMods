@@ -1546,6 +1546,12 @@ empire_name_parts_list = {
 # NAME FORMATS
 ###############
 
+# A note on random naming in the empire designer when the player as not yet selected planet, system, and/or gov:
+# You must use the special country scoped GetCapitalPlanetNameOrRandom and GetCapitalSystemNameOrRandom here
+# instead of Capital.GetName and Capital.System.GetName to deal with these being potentialy unspecified.
+# Furthermore, the has_government trigger has special behavior in this context and will return yes/true if the
+# government has not been specified yet.
+
 ### Imperial Militarist
 
 # Imperial Militarist 1
@@ -1564,9 +1570,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<imperial_mil> [This.Capital.System.GetName]}}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <imperial_mil>}}"
-	noun = "{[This.Capital.System.GetName]}"
+	format = "{AofB{<imperial_mil> [This.GetCapitalSystemNameOrRandom]}}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <imperial_mil>}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
 	# Empire of Sol
 }
 
@@ -1586,9 +1592,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<imperial_mil> [This.Capital.GetName]}}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <imperial_mil>}}"
-	noun = "{[This.Capital.GetName]}"
+	format = "{AofB{<imperial_mil> [This.GetCapitalPlanetNameOrRandom]}}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <imperial_mil>}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
 	# Empire of Earth
 }
 
@@ -1673,9 +1679,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<imperial_spi> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <imperial_spi>}}"
+	format = "{AofB{<imperial_spi> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <imperial_spi>}}"
 	# Empire of Sol
 }
 
@@ -1692,9 +1698,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<imperial_spi> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <imperial_spi>}}"
+	format = "{AofB{<imperial_spi> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <imperial_spi>}}"
 	# Empire of Earth
 }
 
@@ -1770,9 +1776,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB <imperial_imperial_cult> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <imperial_imperial_cult>}}"
+	format = "{AofB <imperial_imperial_cult> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <imperial_imperial_cult>}}"
 	# Empire of Sol
 }
 
@@ -1789,9 +1795,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<imperial_imperial_cult> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <imperial_imperial_cult>}}"
+	format = "{AofB{<imperial_imperial_cult> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <imperial_imperial_cult>}}"
 	# Empire of Earth
 }
 
@@ -1876,9 +1882,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<imperial_mat> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <imperial_mat>}}"
+	format = "{AofB{<imperial_mat> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <imperial_mat>}}"
 	# Empire of Sol
 }
 
@@ -1895,9 +1901,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB {<imperial_mat> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <imperial_mat>}}"
+	format = "{AofB {<imperial_mat> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <imperial_mat>}}"
 	# Empire of Earth
 }
 
@@ -1973,9 +1979,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<imperial_tech> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <imperial_tech>}}"
+	format = "{AofB{<imperial_tech> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <imperial_tech>}}"
 	# Empire of Sol
 }
 
@@ -1992,9 +1998,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<imperial_tech> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <imperial_tech>}}"
+	format = "{AofB{<imperial_tech> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <imperial_tech>}}"
 	# Empire of Earth
 }
 
@@ -2071,9 +2077,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB {<imperial_pac> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <imperial_pac>}}"
+	format = "{AofB {<imperial_pac> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <imperial_pac>}}"
 	# Empire of Sol
 }
 
@@ -2090,9 +2096,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<imperial_pac> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <imperial_pac>}}"
+	format = "{AofB{<imperial_pac> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <imperial_pac>}}"
 	# Empire of Earth
 }
 
@@ -2168,9 +2174,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<imperial_celestial> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <imperial_celestial>}}"
+	format = "{AofB{<imperial_celestial> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <imperial_celestial>}}"
 	# Empire of Sol
 }
 
@@ -2187,9 +2193,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB {<imperial_celestial> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <imperial_celestial>}}"
+	format = "{AofB {<imperial_celestial> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <imperial_celestial>}}"
 	# Empire of Earth
 }
 
@@ -2268,9 +2274,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<imperial_enlightened> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <imperial_enlightened>}}"
+	format = "{AofB{<imperial_enlightened> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <imperial_enlightened>}}"
 	# Empire of Sol
 }
 
@@ -2290,9 +2296,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<imperial_enlightened> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <imperial_enlightened>}}"
+	format = "{AofB{<imperial_enlightened> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <imperial_enlightened>}}"
 	# Empire of Earth
 }
 
@@ -2336,9 +2342,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB {<imperial_gen> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <imperial_gen>}}"
+	format = "{AofB {<imperial_gen> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <imperial_gen>}}"
 	# Empire of Sol
 }
 
@@ -2358,9 +2364,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<imperial_gen> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <imperial_gen>}}"
+	format = "{AofB{<imperial_gen> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <imperial_gen>}}"
 	# Empire of Earth
 }
 
@@ -2448,9 +2454,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<dictatorial_mil> [This.Capital.System.GetName]}}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <dictatorial_mil>}}"
-	noun = "{[This.Capital.System.GetName]}"
+	format = "{AofB{<dictatorial_mil> [This.GetCapitalSystemNameOrRandom]}}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <dictatorial_mil>}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
 	# Empire of Sol
 }
 
@@ -2470,9 +2476,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB {<dictatorial_mil> [This.Capital.GetName]}}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <dictatorial_mil>}}"
-	noun = "{[This.Capital.GetName]}"
+	format = "{AofB {<dictatorial_mil> [This.GetCapitalPlanetNameOrRandom]}}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <dictatorial_mil>}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
 	# Empire of Earth
 }
 
@@ -2557,9 +2563,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<dictatorial_spi> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <dictatorial_spi>}}"
+	format = "{AofB{<dictatorial_spi> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <dictatorial_spi>}}"
 	# Empire of Sol
 }
 
@@ -2576,9 +2582,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<dictatorial_spi> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <dictatorial_spi>}}"
+	format = "{AofB{<dictatorial_spi> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <dictatorial_spi>}}"
 	# Empire of Earth
 }
 
@@ -2654,9 +2660,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB {<dictatorial_mat> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <dictatorial_mat>}}"
+	format = "{AofB {<dictatorial_mat> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <dictatorial_mat>}}"
 	# Empire of Sol
 }
 
@@ -2673,9 +2679,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<dictatorial_mat> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <dictatorial_mat>}}"
+	format = "{AofB{<dictatorial_mat> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <dictatorial_mat>}}"
 	# Empire of Earth
 }
 
@@ -2751,9 +2757,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<dictatorial_tech> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <dictatorial_tech>}}"
+	format = "{AofB{<dictatorial_tech> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <dictatorial_tech>}}"
 	# Empire of Sol
 }
 
@@ -2770,9 +2776,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB {<dictatorial_tech> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <dictatorial_tech>}}"
+	format = "{AofB {<dictatorial_tech> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <dictatorial_tech>}}"
 	# Empire of Earth
 }
 
@@ -2848,9 +2854,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<dictatorial_pac> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <dictatorial_pac>}}"
+	format = "{AofB{<dictatorial_pac> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <dictatorial_pac>}}"
 	# Empire of Sol
 }
 
@@ -2867,9 +2873,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<dictatorial_pac> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <dictatorial_pac>}}"
+	format = "{AofB{<dictatorial_pac> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <dictatorial_pac>}}"
 	# Empire of Earth
 }
 
@@ -2945,9 +2951,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB {<dictatorial_gen> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <dictatorial_gen>}}"
+	format = "{AofB {<dictatorial_gen> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <dictatorial_gen>}}"
 	# Empire of Sol
 }
 
@@ -2964,9 +2970,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<dictatorial_gen> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <dictatorial_gen>}}"
+	format = "{AofB{<dictatorial_gen> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <dictatorial_gen>}}"
 	# Empire of Earth
 }
 
@@ -3045,9 +3051,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<oligarchic_mil> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <oligarchic_mil>}}"
+	format = "{AofB{<oligarchic_mil> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <oligarchic_mil>}}"
 	# Empire of Sol
 }
 
@@ -3067,9 +3073,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB {<oligarchic_mil> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <oligarchic_mil>}}"
+	format = "{AofB {<oligarchic_mil> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <oligarchic_mil>}}"
 	# Empire of Earth
 }
 
@@ -3154,9 +3160,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<oligarchic_service> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <oligarchic_service>}}"
+	format = "{AofB{<oligarchic_service> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <oligarchic_service>}}"
 	# Empire of Sol
 }
 
@@ -3173,9 +3179,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<oligarchic_service> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <oligarchic_service>}}"
+	format = "{AofB{<oligarchic_service> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <oligarchic_service>}}"
 	# Empire of Earth
 }
 
@@ -3213,9 +3219,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB {<oligarchic_spi> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <oligarchic_spi>}}"
+	format = "{AofB {<oligarchic_spi> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <oligarchic_spi>}}"
 	# Empire of Sol
 }
 
@@ -3232,9 +3238,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<oligarchic_spi> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <oligarchic_spi>}}"
+	format = "{AofB{<oligarchic_spi> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <oligarchic_spi>}}"
 	# Empire of Earth
 }
 
@@ -3310,9 +3316,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<oligarchic_holy_tribunal> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <oligarchic_holy_tribunal>}}"
+	format = "{AofB{<oligarchic_holy_tribunal> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <oligarchic_holy_tribunal>}}"
 	# Empire of Sol
 }
 
@@ -3329,9 +3335,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB {<oligarchic_holy_tribunal> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <oligarchic_holy_tribunal>}}"
+	format = "{AofB {<oligarchic_holy_tribunal> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <oligarchic_holy_tribunal>}}"
 	# Empire of Earth
 }
 
@@ -3407,9 +3413,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<oligarchic_mat> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <oligarchic_mat>}}"
+	format = "{AofB{<oligarchic_mat> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <oligarchic_mat>}}"
 	# Empire of Sol
 }
 
@@ -3426,9 +3432,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<oligarchic_mat> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <oligarchic_mat>}}"
+	format = "{AofB{<oligarchic_mat> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <oligarchic_mat>}}"
 	# Empire of Earth
 }
 
@@ -3504,9 +3510,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB {<oligarchic_tech> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <oligarchic_tech>}}"
+	format = "{AofB {<oligarchic_tech> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <oligarchic_tech>}}"
 	# Empire of Sol
 }
 
@@ -3523,9 +3529,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<oligarchic_tech> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <oligarchic_tech>}}"
+	format = "{AofB{<oligarchic_tech> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <oligarchic_tech>}}"
 	# Empire of Earth
 }
 
@@ -3604,9 +3610,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<oligarchic_pac> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <oligarchic_pac>}}"
+	format = "{AofB{<oligarchic_pac> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <oligarchic_pac>}}"
 	# Empire of Sol
 }
 
@@ -3626,9 +3632,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB {<oligarchic_pac> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <oligarchic_pac>}}"
+	format = "{AofB {<oligarchic_pac> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <oligarchic_pac>}}"
 	# Empire of Sol
 }
 
@@ -3713,9 +3719,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<oligarchic_gen> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <oligarchic_gen>}}"
+	format = "{AofB{<oligarchic_gen> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <oligarchic_gen>}}"
 	# Empire of Sol
 }
 
@@ -3732,9 +3738,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<oligarchic_gen> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <oligarchic_gen>}}"
+	format = "{AofB{<oligarchic_gen> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <oligarchic_gen>}}"
 	# Empire of Earth
 }
 
@@ -3810,9 +3816,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB {<democratic_mil> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <democratic_mil>}}"
+	format = "{AofB {<democratic_mil> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <democratic_mil>}}"
 	# Empire of Sol
 }
 
@@ -3829,9 +3835,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<democratic_mil> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <democratic_mil>}}"
+	format = "{AofB{<democratic_mil> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <democratic_mil>}}"
 	# Empire of Earth
 }
 
@@ -3907,9 +3913,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<democratic_war_cul> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <democratic_war_cul>}}"
+	format = "{AofB{<democratic_war_cul> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <democratic_war_cul>}}"
 	# Empire of Sol
 }
 
@@ -3926,9 +3932,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB {<democratic_war_cul> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <democratic_war_cul>}}"
+	format = "{AofB {<democratic_war_cul> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <democratic_war_cul>}}"
 	# Empire of Earth
 }
 
@@ -3985,9 +3991,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<democratic_service> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <democratic_service>}}"
+	format = "{AofB{<democratic_service> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <democratic_service>}}"
 	# Empire of Sol
 }
 
@@ -4004,9 +4010,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<democratic_service> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <democratic_service>}}"
+	format = "{AofB{<democratic_service> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <democratic_service>}}"
 	# Empire of Earth
 }
 
@@ -4044,9 +4050,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB {<democratic_spi> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <democratic_spi>}}"
+	format = "{AofB {<democratic_spi> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <democratic_spi>}}"
 	# Empire of Sol
 }
 
@@ -4063,9 +4069,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<democratic_spi> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <democratic_spi>}}"
+	format = "{AofB{<democratic_spi> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <democratic_spi>}}"
 	# Empire of Sol
 }
 
@@ -4141,9 +4147,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<democratic_mat> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <democratic_mat>}}"
+	format = "{AofB{<democratic_mat> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <democratic_mat>}}"
 	# Empire of Sol
 }
 
@@ -4160,9 +4166,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB {<democratic_mat> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <democratic_mat>}}"
+	format = "{AofB {<democratic_mat> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <democratic_mat>}}"
 	# Empire of Sol
 }
 
@@ -4238,9 +4244,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<democratic_tech> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <democratic_tech>}}"
+	format = "{AofB{<democratic_tech> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <democratic_tech>}}"
 	# Empire of Sol
 }
 
@@ -4257,9 +4263,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<democratic_tech> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <democratic_tech>}}"
+	format = "{AofB{<democratic_tech> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <democratic_tech>}}"
 	# Empire of Sol
 }
 
@@ -4335,9 +4341,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB {<democratic_pac> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <democratic_pac>}}"
+	format = "{AofB {<democratic_pac> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <democratic_pac>}}"
 	# Empire of Sol
 }
 
@@ -4354,9 +4360,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<democratic_pac> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <democratic_pac>}}"
+	format = "{AofB{<democratic_pac> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <democratic_pac>}}"
 	# Empire of Earth
 }
 
@@ -4432,9 +4438,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<democratic_gen> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.System.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <democratic_gen>}}"
+	format = "{AofB{<democratic_gen> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <democratic_gen>}}"
 	# Empire of Sol
 }
 
@@ -4451,9 +4457,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB {<democratic_gen> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <democratic_gen>}}"
+	format = "{AofB {<democratic_gen> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <democratic_gen>}}"
 	# Empire of Earth
 }
 
@@ -4802,7 +4808,7 @@ empire_name_format = {
 			}
 		}
 	}
-	format = "{AofB{<worker_coop_2> [This.Capital.GetName]}}"
+	format = "{AofB{<worker_coop_2> [This.GetCapitalPlanetNameOrRandom]}}"
 	adjective = "{[This.GetSpeciesAdj]}"
 	prefix_format = "{[This.GetSpeciesAdj] {<worker_coop_2>}}"
 	# Cooperative of Earth
@@ -4909,7 +4915,7 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<subversive_cult_2> [This.Capital.GetName]}}"
+	format = "{AofB{<subversive_cult_2> [This.GetCapitalPlanetNameOrRandom]}}"
 	adjective = "{[This.GetSpeciesAdj]}"
 	prefix_format = "{[This.GetSpeciesAdj] {<subversive_cult_2>}}"
 	# Prophets of Earth
@@ -4928,9 +4934,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<communal_parity> [This.Capital.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <imperial_celestial>}}"
+	format = "{AofB{<communal_parity> [This.GetCapitalPlanetNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <imperial_celestial>}}"
 	# People's Republic of Earth
 }
 
@@ -4947,9 +4953,9 @@ empire_name_format = {
 			NOT = { is_country_type = awakened_fallen_empire }
 		}
 	}
-	format = "{AofB{<communal_parity> [This.Capital.System.GetName]}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <imperial_celestial>}}"
+	format = "{AofB{<communal_parity> [This.GetCapitalSystemNameOrRandom]}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <imperial_celestial>}}"
 	# People's Republic of Sol
 }
 
@@ -4967,8 +4973,8 @@ empire_name_format = {
 		}
 	}
 	format = "{[This.GetSpeciesAdj] {<communal_parity>}}"
-	noun = "{[This.Capital.GetName]}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <imperial_celestial>}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <imperial_celestial>}}"
 	# Human People's Republic
 }
 
@@ -6128,9 +6134,9 @@ empire_name_format = {
 			is_hive_empire = no
 		}
 	}
-	format = "{AofB{<necrophagers> [This.Capital.System.GetName]}}"
-	prefix_format = "{AofBpfx{[This.Capital.System.GetName] <necrophagers>}}"
-	noun = "{[This.Capital.System.GetName]}"
+	format = "{AofB{<necrophagers> [This.GetCapitalSystemNameOrRandom]}}"
+	prefix_format = "{AofBpfx{[This.GetCapitalSystemNameOrRandom] <necrophagers>}}"
+	noun = "{[This.GetCapitalSystemNameOrRandom]}"
 	# Empire of Sol
 }
 
@@ -6144,9 +6150,9 @@ empire_name_format = {
 			is_hive_empire = no
 		}
 	}
-	format = "{AofB{<necrophagers> [This.Capital.GetName]}}"
-	prefix_format = "{AofBpfx{[This.Capital.GetName] <necrophagers>}}"
-	noun = "{[This.Capital.GetName]}"
+	format = "{AofB{<necrophagers> [This.GetCapitalPlanetNameOrRandom]}}"
+	prefix_format = "{AofBpfx{[This.GetCapitalPlanetNameOrRandom] <necrophagers>}}"
+	noun = "{[This.GetCapitalPlanetNameOrRandom]}"
 	# Empire of Earth
 }
 

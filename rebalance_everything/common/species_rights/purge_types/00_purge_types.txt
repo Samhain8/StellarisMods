@@ -3,9 +3,9 @@
 
 purge_normal = {
 	pop_escape_chance = 0.05
-	pop_decline_rate = 100 # 1 pops per month, overrides BASE_POP_DECLINE, will only work on purge types
+	pop_decline_rate = 100 # 100 pops per month, overrides BASE_POP_DECLINE, will only work on purge types
 
-	pop_modifier = {
+	pop_group_modifier = {
 		pop_happiness = -10
 	}
 
@@ -54,9 +54,9 @@ purge_normal = {
 
 purge_neutering = {
 	pop_escape_chance = 0.0
-	pop_decline_rate = 10 # 1 pop per 10 months, overrides BASE_POP_DECLINE, will only work on purge types
+	pop_decline_rate = 10
 
-	pop_modifier = {
+	pop_group_modifier = {
 		pop_happiness = -0.2
 	}
 
@@ -119,9 +119,9 @@ purge_neutering = {
 
 purge_displacement = {
 	pop_escape_chance = 1.0
-	pop_decline_rate = 25 # 1 pop per 4 months, overrides BASE_POP_DECLINE, will only work on purge types
+	pop_decline_rate = 25
 
-	pop_modifier = {
+	pop_group_modifier = {
 		pop_happiness = -0.3
 		pop_housing_usage_mult = -0.50
 	}
@@ -197,9 +197,9 @@ purge_displacement = {
 
 purge_labor_camps = {
 	pop_escape_chance = 0.25
-	pop_decline_rate = 50 # 1 pop per 2 months, overrides BASE_POP_DECLINE, will only work on purge types
+	pop_decline_rate = 50
 
-	pop_modifier = {
+	pop_group_modifier = {
 		pop_happiness = -10
 	}
 
@@ -250,9 +250,9 @@ purge_labor_camps = {
 
 purge_matrix = {
 	pop_escape_chance = 0.20
-	pop_decline_rate = 50 # 1 pop per 2 months, overrides BASE_POP_DECLINE, will only work on purge types
+	pop_decline_rate = 50
 
-	pop_modifier = {
+	pop_group_modifier = {
 		pop_happiness = -10
 	}
 
@@ -292,9 +292,9 @@ purge_matrix = {
 
 purge_processing = {
 	pop_escape_chance = 0.20
-	pop_decline_rate = 50 # 1 pop per 2 months, overrides BASE_POP_DECLINE, will only work on purge types
+	pop_decline_rate = 50
 
-	pop_modifier = {
+	pop_group_modifier = {
 		pop_happiness = -10
 	}
 
@@ -367,9 +367,9 @@ purge_processing = {
 
 purge_necrophage = {
 	pop_escape_chance = 0.25
-	pop_decline_rate = 20 # 1 pop per 5 months, overrides BASE_POP_DECLINE, will only work on purge types
+	pop_decline_rate = 20
 
-	pop_modifier = {
+	pop_group_modifier = {
 		pop_happiness = -0.5
 	}
 
@@ -409,7 +409,7 @@ purge_cosmogenesis = {
 	pop_escape_chance = 0.05
 	pop_decline_rate = value:num_chip_slave_purge # 0.2 per pop used as neural chip
 
-	pop_modifier = {
+	pop_group_modifier = {
 		pop_happiness = -0.33
 	}
 
@@ -428,9 +428,9 @@ purge_cosmogenesis = {
 
 purge_cosmogenesis_lathe_resettle = {
 	pop_escape_chance = 0.05
-	pop_decline_rate = 100 # 1 pop per month, overrides BASE_POP_DECLINE, will only work on purge types
+	pop_decline_rate = 100
 
-	pop_modifier = {
+	pop_group_modifier = {
 		pop_happiness = -0.33
 	}
 
@@ -451,9 +451,9 @@ purge_cosmogenesis_lathe_resettle = {
 
 purge_clips = {
 	pop_escape_chance = 0.2
-	pop_decline_rate = 50 # 1 pop per 2 months, overrides BASE_POP_DECLINE, will only work on purge types
+	pop_decline_rate = 50
 
-	pop_modifier = {
+	pop_group_modifier = {
 		pop_happiness = -10
 	}
 

@@ -907,10 +907,10 @@ leader_trait_manufacturer = {
 		has_paragon_dlc = yes
 	}
 	planet_modifier = {
-		planet_amenities_add = 10
+		planet_amenities_add = 1000
 	}
 	sector_modifier = {
-		planet_amenities_add = 5
+		planet_amenities_add = 500
 	}
 	leader_class = { scientist official }
 	selectable_weight = {
@@ -931,10 +931,10 @@ leader_trait_manufacturer_2 = {
 		TIER = 2
 	}
 	planet_modifier = {
-		planet_amenities_add = 20
+		planet_amenities_add = 2000
 	}
 	sector_modifier = {
-		planet_amenities_add = 10
+		planet_amenities_add = 1000
 	}
 	leader_class = { scientist official }
 }
@@ -951,10 +951,10 @@ leader_trait_manufacturer_3 = {
 		TIER = 3
 	}
 	planet_modifier = {
-		planet_amenities_add = 40
+		planet_amenities_add = 4000
 	}
 	sector_modifier = {
-		planet_amenities_add = 20
+		planet_amenities_add = 2000
 	}
 	leader_class = { scientist official }
 }
@@ -2905,6 +2905,11 @@ leader_trait_surveyor = {
 		COUNCIL = no
 		TIER = none
 	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
+	}
 	leader_potential_add = {
 		has_paragon_dlc = yes
 		has_governor_subclass = yes
@@ -2937,6 +2942,11 @@ leader_trait_midas_touch = {
 		COUNCIL = no
 		TIER = none
 	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
+	}
 	# Additional trait effects in paragon_2.2003
 	modifier = {
 		ship_anomaly_research_speed_mult = 0.25
@@ -2968,6 +2978,11 @@ leader_trait_collective_wisdom = {
 		RARITY = paragon
 		COUNCIL = no
 		TIER = none
+	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
 	}
 	leader_potential_add = {
 		OR = {
@@ -3028,6 +3043,11 @@ leader_trait_knowledge_for_the_masses = {
 		COUNCIL = yes
 		TIER = none
 	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
+	}
 	councilor_modifier = {
 		species_leader_exp_gain = 0.25
 	}
@@ -3054,6 +3074,11 @@ leader_trait_robotist = {
 		RARITY = paragon
 		COUNCIL = no
 		TIER = none
+	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
 	}
 	leader_potential_add = {
 		has_paragon_dlc = yes
@@ -3112,6 +3137,11 @@ leader_trait_great_researcher = {
 		COUNCIL = yes
 		TIER = none
 	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
+	}
 	councilor_modifier = {
 		all_technology_research_speed = 0.10
 	}
@@ -3136,6 +3166,11 @@ leader_trait_xeno_cataloger = {
 		RARITY = paragon
 		COUNCIL = no
 		TIER = none
+	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
 	}
 	modifier = {
 		science_ship_survey_speed = 0.50
@@ -3167,6 +3202,11 @@ leader_trait_frontier_adventurer = {
 		RARITY = paragon
 		COUNCIL = no
 		TIER = none
+	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
 	}
 	inline_script = {
 		script = paragon/leader_resource_produces
@@ -3205,6 +3245,11 @@ leader_trait_brilliant_shipwright = {
 		COUNCIL = yes
 		TIER = none
 	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
+	}
 	councilor_modifier = {
 		category_voidcraft_draw_chance_mult = 1
 		category_voidcraft_research_speed_mult = 0.15
@@ -3231,6 +3276,11 @@ leader_trait_truth_seeker = {
 		RARITY = paragon
 		COUNCIL = no
 		TIER = none
+	}
+	on_gained_effect = { 
+		owner = {
+			country_event = { id = timeline.50 } # Timeline First Leader with Destiny Trait
+		}
 	}
 	planet_modifier = {
 		planet_psionic_jobs_produces_mult = 0.25

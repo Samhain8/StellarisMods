@@ -87,26 +87,26 @@ building_paragon_memory_vaults = {
 			unity = 5
 			multiplier = planet.paragon_memory_vault
 		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_civic = civic_memory_vault_corporate }
+				planet = { is_variable_set = paragon_memory_vault }
+			}
+			trade = 10
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_civic = civic_memory_vault_corporate }
+				planet = { is_variable_set = paragon_memory_vault }
+			}
+			trade = 10
+			multiplier = planet.paragon_memory_vault
+		}
 		upkeep = {
 			energy = @b2_upkeep
 		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_civic = civic_memory_vault_corporate }
-		}
-		trade_value_add = 10
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_civic = civic_memory_vault_corporate }
-			planet = { is_variable_set = paragon_memory_vault }
-		}
-		trade_value_add = 10
-		mult = planet.paragon_memory_vault
 	}
 
 	triggered_country_modifier = {

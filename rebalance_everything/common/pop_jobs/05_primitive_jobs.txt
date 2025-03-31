@@ -7,7 +7,6 @@
 pre_sapient = {
 	category = pre_sapients
 	is_capped_by_modifier = no
-	clothes_texture_index = 2
 	contributes_to_diplo_weight = no
 
 	possible_pre_triggers = {
@@ -29,9 +28,15 @@ pre_sapient = {
 hunted_pre_sapient = {
 	category = pre_sapients
 	is_capped_by_modifier = no
-	clothes_texture_index = 2
+
+	swappable_data = {
+		default = {
+			icon = livestock
+		}
+	}
+
 	contributes_to_diplo_weight = no
-	icon = livestock
+
 
 	possible_pre_triggers = {
 		is_sapient = no
@@ -44,49 +49,71 @@ hunted_pre_sapient = {
 				has_policy_flag = pre_sapients_eat
 			}
 		}
+		is_lithoid = no
 	}
 
 	resources = {
-		category = planet_livestock
+		category = planet_livestock_farmers
 		produces = {
-			trigger = {
-				is_pre_sapient = yes
-				is_pre_sapient_lithoid = no
-			}
 			food = 4
 		}
 		produces = {
 			trigger = {
-				is_pre_sapient = yes
-				is_pre_sapient_lithoid = no
 				planet = { has_active_building = building_food_processing_facility }
 			}
 			food = 1
 		}
 		produces = {
 			trigger = {
-				is_pre_sapient = yes
-				is_pre_sapient_lithoid = no
 				planet = { has_active_building = building_food_processing_center }
 			}
 			food = 2
 		}
-		produces = {
-			trigger = {
-				is_pre_sapient_lithoid = yes
+	}
+
+	weight = {
+		weight = 5500
+	}
+}
+
+hunted_pre_sapient_lithoid = {
+	category = pre_sapients
+	is_capped_by_modifier = no
+	contributes_to_diplo_weight = no
+
+	swappable_data = {
+		default = {
+			icon = livestock
+		}
+	}
+
+	possible_pre_triggers = {
+		is_sapient = no
+	}
+
+	possible = {
+		planet = {
+			exists = owner
+			owner = {
+				has_policy_flag = pre_sapients_eat
 			}
+		}
+		is_lithoid = yes
+	}
+
+	resources = {
+		category = planet_livestock_miners
+		produces = {
 			minerals = 2
 		}
 		produces = {
 			trigger = {
-				is_pre_sapient_lithoid = yes
 				planet = { has_active_building = building_mineral_purification_plant }
 			}
 			minerals = 1
 		}
 		produces = {
 			trigger = {
-				is_pre_sapient_lithoid = yes
 				planet = { has_active_building = building_mineral_purification_hub }
 			}
 			minerals = 2
@@ -101,7 +128,6 @@ hunted_pre_sapient = {
 xeno_zoo_animal = {
 	category = pre_sapients
 	is_capped_by_modifier = no
-	clothes_texture_index = 2
 	contributes_to_diplo_weight = no
 
 	possible_pre_triggers = {
@@ -120,26 +146,61 @@ xeno_zoo_animal = {
 				has_deposit = d_genesis_preserve
 			}
 		}
+		is_lithoid = no
 	}
 
 	resources = {
-		category = pop_category_pre_sapients
+# Markus
+#		category = pop_category_pre_sapients
 		upkeep = {
-			trigger = {
-				is_pre_sapient_lithoid = no
-			}
 			food = 1
-		}
-		upkeep = {
-			trigger = {
-				is_pre_sapient_lithoid = yes
-			}
-			minerals = 1
 		}
 	}
 
 	triggered_planet_modifier = {
-		planet_amenities_add = 1
+		planet_amenities_add = 100
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	weight = {
+		weight = 5000
+	}
+}
+
+xeno_zoo_animal_lithoid = {
+	category = pre_sapients
+	is_capped_by_modifier = no
+	contributes_to_diplo_weight = no
+
+	possible_pre_triggers = {
+		is_sapient = no
+	}
+
+	possible = {
+		planet = {
+			exists = owner
+			owner = {
+				has_policy_flag = pre_sapients_protect
+				NOT = { has_valid_civic = civic_warrior_culture }
+			}
+			OR = {
+				has_active_building = building_xeno_zoo
+				has_deposit = d_genesis_preserve
+			}
+		}
+		is_lithoid = yes
+	}
+
+	resources = {
+#Markus
+#		category = pop_category_pre_sapients
+		upkeep = {
+			food = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		planet_amenities_add = 100
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -151,7 +212,6 @@ xeno_zoo_animal = {
 xeno_zoo_beast = {
 	category = pre_sapients
 	is_capped_by_modifier = no
-	clothes_texture_index = 2
 	contributes_to_diplo_weight = no
 
 	possible_pre_triggers = {
@@ -167,26 +227,58 @@ xeno_zoo_beast = {
 			}
 			has_active_building = building_xeno_zoo
 		}
+		is_lithoid = no
 	}
 
 	resources = {
-		category = pop_category_pre_sapients
+# Markus
+#		category = pop_category_pre_sapients
 		upkeep = {
-			trigger = {
-				is_pre_sapient_lithoid = no
-			}
 			food = 1
 		}
-		upkeep = {
-			trigger = {
-				is_pre_sapient_lithoid = yes
+	}
+
+	triggered_planet_modifier = {
+		planet_amenities_add = 100
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	weight = {
+		weight = 5000
+	}
+}
+
+xeno_zoo_beast_lithoid = {
+	category = pre_sapients
+	is_capped_by_modifier = no
+	contributes_to_diplo_weight = no
+
+	possible_pre_triggers = {
+		is_sapient = no
+	}
+
+	possible = {
+		planet = {
+			exists = owner
+			owner = {
+				has_policy_flag = pre_sapients_protect
+				has_valid_civic = civic_warrior_culture
 			}
+			has_active_building = building_xeno_zoo
+		}
+		is_lithoid = yes
+	}
+
+	resources = {
+# Markus
+#		category = pop_category_pre_sapients
+		upkeep = {
 			minerals = 1
 		}
 	}
 
 	triggered_planet_modifier = {
-		planet_amenities_add = 1
+		planet_amenities_add = 100
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -200,7 +292,6 @@ xeno_zoo_beast = {
 hunter_gatherer = {
 	category = worker
 	is_capped_by_modifier = no
-	clothes_texture_index = 2
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -217,28 +308,63 @@ hunter_gatherer = {
 			is_hive_empire = no
 			has_country_flag = stone_age
 		}
+		is_lithoid = no
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 1
+		planet_amenities_add = 100
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
 	resources = {
 		category = planet_farmers
 		produces = {
-			trigger = {
-				is_lithoid = no
-			}
 			food = 1
 		}
+	}
+
+	weight = {
+		weight = @worker_job_weight
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+	}
+}
+
+hunter_gatherer_lithoid = {
+	category = worker
+	is_capped_by_modifier = no
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_worker_job
+
+	possible = {
+		owner = {
+			is_primitive = yes
+			is_hive_empire = no
+			has_country_flag = stone_age
+		}
+		is_lithoid = yes
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_add = 100
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	resources = {
+		category = planet_farmers
 		produces = {
-			trigger = {
-				is_lithoid = yes
-			}
 			minerals = 1
 		}
 	}
@@ -252,8 +378,12 @@ hunter_gatherer = {
 peasant = {
 	category = worker
 	is_capped_by_modifier = no
-	building_icon = building_primitive_farm
-	clothes_texture_index = 2
+
+	swappable_data = {
+		default = {
+			building_icon = building_primitive_farm
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -276,20 +406,58 @@ peasant = {
 				has_country_flag = steam_age
 			}
 		}
+		is_lithoid = no
 	}
 
 	resources = {
 		category = planet_farmers
 		produces = {
-			trigger = {
-				is_lithoid = no
-			}
 			food = 2
 		}
-		produces = {
-			trigger = {
-				is_lithoid = yes
+	}
+
+	weight = {
+		weight = @worker_job_weight
+	}
+}
+
+peasant_lithoid = {
+	category = worker
+	is_capped_by_modifier = no
+
+	swappable_data = {
+		default = {
+			building_icon = building_primitive_farm
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_worker_job
+
+	possible = {
+		owner = {
+			is_primitive = yes
+			is_hive_empire = no
+			OR = {
+				has_country_flag = bronze_age
+				has_country_flag = iron_age
+				has_country_flag = late_medieval_age
+				has_country_flag = renaissance_age
+				has_country_flag = steam_age
 			}
+		}
+		is_lithoid = yes
+	}
+
+	resources = {
+		category = planet_farmers
+		produces = {
 			minerals = 2
 		}
 	}
@@ -302,8 +470,12 @@ peasant = {
 primitive_warrior = {
 	category = specialist
 	is_capped_by_modifier = yes
-	building_icon = building_primitive_dwellings
-	clothes_texture_index = 2
+
+	swappable_data = {
+		default = {
+			building_icon = building_primitive_dwellings
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -326,9 +498,10 @@ primitive_warrior = {
 		}
 	}
 
-	pop_modifier = {
-		pop_defense_armies_add = 3
-	}
+#Markus
+#	pop_group_modifier = {
+#		pop_defense_armies_add = 3
+#	}
 
 	weight = {
 		weight = @soldier_job_weight
@@ -346,8 +519,12 @@ primitive_warrior = {
 primitive_noble = {
 	category = ruler
 	is_capped_by_modifier = yes
-	building_icon = building_primitive_capital
-	clothes_texture_index = 1
+
+	swappable_data = {
+		default = {
+			building_icon = building_primitive_capital
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -383,7 +560,7 @@ primitive_noble = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 3
+		planet_amenities_add = 300
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -396,8 +573,12 @@ primitive_noble = {
 primitive_researcher = {
 	category = specialist
 	is_capped_by_modifier = yes
-	building_icon = building_primitive_labs
-	clothes_texture_index = 2
+
+	swappable_data = {
+		default = {
+			building_icon = building_primitive_labs
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -446,8 +627,12 @@ primitive_researcher = {
 primitive_priest = {
 	category = specialist
 	is_capped_by_modifier = yes
-	building_icon = building_temple
-	clothes_texture_index = 3
+
+	swappable_data = {
+		default = {
+			building_icon = building_temple
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -482,7 +667,7 @@ primitive_priest = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 2
+		planet_amenities_add = 200
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -501,10 +686,15 @@ primitive_priest = {
 }
 
 primitive_laborer = {
-	category = worker
+	category = specialist
 	is_capped_by_modifier = yes
-	building_icon = building_primitive_factory
-	clothes_texture_index = 2
+
+	swappable_data = {
+		default = {
+			condition_string = SPECIALIST_JOB_TRIGGER
+			building_icon = building_primitive_factory
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -513,32 +703,36 @@ primitive_laborer = {
 		is_sapient = yes
 	}
 
-	possible_precalc = can_fill_worker_job
+	possible_precalc = can_fill_specialist_job
 
 	possible = {
-		owner = {
-			is_primitive = yes
-			OR = {
-				has_country_flag = steam_age
-				has_country_flag = machine_age
-				has_country_flag = industrial_age
-				has_country_flag = atomic_age
-				has_country_flag = early_space_age
+		OR = {
+			planet = {
+				has_building = building_primitive_factory
+			}
+			owner = {
+				is_primitive = yes
+				OR = {
+					has_country_flag = steam_age
+					has_country_flag = machine_age
+					has_country_flag = industrial_age
+					has_country_flag = atomic_age
+					has_country_flag = early_space_age
+				}
 			}
 		}
 	}
 
 	resources = {
-		category = planet_artisans
+		category = planet_jobs_productive	# Deliberately not planet_artisans or planet_metallurgists
 		produces = {
+			alloys = 1
 			consumer_goods = 2
 		}
 		upkeep = {
-			minerals = 2
+			minerals = 4
 		}
 	}
-
-
 
 	weight = {
 		weight = @worker_job_weight
@@ -548,9 +742,13 @@ primitive_laborer = {
 primitive_miner = {
 	category = worker
 	is_capped_by_modifier = yes
-	building_icon = building_primitive_mine
-	icon = miner
-	clothes_texture_index = 2
+
+	swappable_data = {
+		default = {
+			building_icon = building_primitive_mine
+			icon = miner
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -562,14 +760,19 @@ primitive_miner = {
 	possible_precalc = can_fill_worker_job
 
 	possible = {
-		owner = {
-			is_primitive = yes
-			OR = {
-				has_country_flag = steam_age
-				has_country_flag = machine_age
-				has_country_flag = industrial_age
-				has_country_flag = atomic_age
-				has_country_flag = early_space_age
+		OR = {
+			planet = {
+				is_capital = yes
+			}
+			owner = {
+				is_primitive = yes
+				OR = {
+					has_country_flag = steam_age
+					has_country_flag = machine_age
+					has_country_flag = industrial_age
+					has_country_flag = atomic_age
+					has_country_flag = early_space_age
+				}
 			}
 		}
 	}
@@ -589,9 +792,13 @@ primitive_miner = {
 primitive_technician = {
 	category = worker
 	is_capped_by_modifier = yes
-	building_icon = building_primitive_power_plant
-	icon = technician
-	clothes_texture_index = 2
+
+	swappable_data = {
+		default = {
+			building_icon = building_primitive_power_plant
+			icon = technician
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -603,14 +810,19 @@ primitive_technician = {
 	possible_precalc = can_fill_worker_job
 
 	possible = {
-		owner = {
-			is_primitive = yes
-			OR = {
-				has_country_flag = steam_age
-				has_country_flag = machine_age
-				has_country_flag = industrial_age
-				has_country_flag = atomic_age
-				has_country_flag = early_space_age
+		OR = {
+			planet = {
+				is_capital = yes
+			}
+			owner = {
+				is_primitive = yes
+				OR = {
+					has_country_flag = steam_age
+					has_country_flag = machine_age
+					has_country_flag = industrial_age
+					has_country_flag = atomic_age
+					has_country_flag = early_space_age
+				}
 			}
 		}
 	}
@@ -630,8 +842,12 @@ primitive_technician = {
 primitive_farmer = {
 	category = worker
 	is_capped_by_modifier = yes
-	building_icon = building_primitive_farm
-	clothes_texture_index = 2
+
+	swappable_data = {
+		default = {
+			building_icon = building_primitive_farm
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -670,8 +886,12 @@ primitive_farmer = {
 primitive_researcher_2 = {
 	category = specialist
 	is_capped_by_modifier = yes
-	building_icon = building_primitive_labs
-	clothes_texture_index = 3
+
+	swappable_data = {
+		default = {
+			building_icon = building_primitive_labs
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -683,13 +903,19 @@ primitive_researcher_2 = {
 	possible_precalc = can_fill_specialist_job
 
 	possible = {
-		owner = {
-			is_primitive = yes
-			OR = {
-				has_country_flag = machine_age
-				has_country_flag = industrial_age
-				has_country_flag = atomic_age
-				has_country_flag = early_space_age
+		OR = {
+			planet = {
+				has_building = building_primitive_research
+			}
+			owner = {
+				is_primitive = yes
+				OR = {
+					has_country_flag = steam_age
+					has_country_flag = machine_age
+					has_country_flag = industrial_age
+					has_country_flag = atomic_age
+					has_country_flag = early_space_age
+				}
 			}
 		}
 	}
@@ -700,6 +926,9 @@ primitive_researcher_2 = {
 			physics_research = 1
 			engineering_research = 1
 			society_research = 1
+		}
+		upkeep = {
+			consumer_goods = 1
 		}
 	}
 
@@ -719,8 +948,12 @@ primitive_researcher_2 = {
 primitive_priest_2 = {
 	category = specialist
 	is_capped_by_modifier = yes
-	building_icon = building_temple
-	clothes_texture_index = 3
+
+	swappable_data = {
+		default = {
+			building_icon = building_temple
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -754,7 +987,7 @@ primitive_priest_2 = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 2
+		planet_amenities_add = 200
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -775,9 +1008,13 @@ primitive_priest_2 = {
 primitive_entertainer = {
 	category = specialist
 	is_capped_by_modifier = yes
-	building_icon = building_amusement_megaplex
-	clothes_texture_index = 1
-	icon = entertainer
+
+	swappable_data = {
+		default = {
+			building_icon = building_amusement_megaplex
+			icon = entertainer
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -802,7 +1039,7 @@ primitive_entertainer = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 8
+		planet_amenities_add = 800
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -815,8 +1052,12 @@ primitive_entertainer = {
 primitive_warrior_2 = {
 	category = specialist
 	is_capped_by_modifier = yes
-	building_icon = building_residence
-	clothes_texture_index = 2
+
+	swappable_data = {
+		default = {
+			building_icon = building_residence
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -839,9 +1080,10 @@ primitive_warrior_2 = {
 		}
 	}
 
-	pop_modifier = {
-		pop_defense_armies_add = 3
-	}
+# Markus
+#	pop_group_modifier = {
+#		pop_defense_armies_add = 3
+#	}
 
 	weight = {
 		weight = @soldier_job_weight
@@ -859,8 +1101,12 @@ primitive_warrior_2 = {
 primitive_bureaucrat = {
 	category = ruler
 	is_capped_by_modifier = yes
-	building_icon = building_primitive_capital
-	clothes_texture_index = 3
+
+	swappable_data = {
+		default = {
+			building_icon = building_primitive_capital
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -895,7 +1141,7 @@ primitive_bureaucrat = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 3
+		planet_amenities_add = 300
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -908,8 +1154,13 @@ primitive_bureaucrat = {
 solarpunk_anarchist = {
 	category = ruler
 	is_capped_by_modifier = yes
-	building_icon = building_paradise_dome
-	icon = ranger
+
+	swappable_data = {
+		default = {
+			building_icon = building_paradise_dome
+			icon = ranger
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -936,7 +1187,7 @@ solarpunk_anarchist = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 1
+		planet_amenities_add = 100
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -953,13 +1204,66 @@ solarpunk_anarchist = {
 	}
 }
 
+primitive_administrator = {
+	category = specialist
+	is_capped_by_modifier = yes
+
+	swappable_data = {
+		default = {
+			building_icon = building_primitive_offices
+			icon = low_tech_bureaucrat
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_sapient = yes
+	}
+
+	possible = {
+		OR = {
+			planet = {
+				has_building = building_primitive_offices
+			}
+			owner = {
+				is_primitive = yes
+				OR = {
+					has_country_flag = steam_age
+					has_country_flag = machine_age
+					has_country_flag = industrial_age
+					has_country_flag = atomic_age
+					has_country_flag = early_space_age
+				}
+			}
+		}
+	}
+
+	resources = {
+		category = planet_administrators
+		produces = {
+			unity = 2
+		}
+		upkeep = {
+			consumer_goods = 1
+		}
+	}
+
+	weight = {
+		weight = @specialist_job_weight
+	}
+}
+
 # Pre-FTL Hive-Mind Jobs
 
 hive_sustenance_drone = {
 	category = simple_drone
 	is_capped_by_modifier = no
-	clothes_texture_index = 2
-	icon = hunter_gatherer
+
+	swappable_data = {
+		default = {
+			icon = hunter_gatherer
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -976,28 +1280,76 @@ hive_sustenance_drone = {
 			is_hive_empire = yes
 			has_country_flag = stone_age
 		}
+		is_lithoid = no
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_no_happiness_add = 1
+		planet_amenities_no_happiness_add = 100
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
 	resources = {
 		category = planet_farmers
 		produces = {
-			trigger = {
-				is_lithoid = no
-			}
 			food = 1
 		}
+	}
+
+	weight = {
+		weight = @simple_drone_job_weight
+		modifier = {
+			factor = value:job_weights_modifier|JOB|hive_sustenance_drone|RESOURCE|minerals|
+			is_lithoid = yes
+		}
+		modifier = {
+			factor = value:job_weights_modifier|JOB|hive_sustenance_drone|RESOURCE|food|
+			is_lithoid = no
+		}
+	}
+}
+
+hive_sustenance_drone_lithoid = {
+	category = simple_drone
+	is_capped_by_modifier = no
+
+	swappable_data = {
+		default = {
+			icon = hunter_gatherer
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = {
+		owner = {
+			is_primitive = yes
+			is_hive_empire = yes
+			has_country_flag = stone_age
+		}
+		is_lithoid = yes
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_amenities_no_happiness_add = 100
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	resources = {
+		category = planet_farmers
 		produces = {
-			trigger = {
-				is_lithoid = yes
-			}
 			minerals = 1
 		}
 	}
@@ -1018,9 +1370,13 @@ hive_sustenance_drone = {
 hive_basic_agri_drone = {
 	category = simple_drone
 	is_capped_by_modifier = no
-	building_icon = building_primitive_farm
-	clothes_texture_index = 2
-	icon = peasant
+
+	swappable_data = {
+		default = {
+			building_icon = building_primitive_farm
+			icon = peasant
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1043,20 +1399,67 @@ hive_basic_agri_drone = {
 				has_country_flag = steam_age
 			}
 		}
+		is_lithoid = no
 	}
 
 	resources = {
 		category = planet_farmers
 		produces = {
-			trigger = {
-				is_lithoid = no
-			}
 			food = 2
 		}
-		produces = {
-			trigger = {
-				is_lithoid = yes
+	}
+
+	weight = {
+		weight = @simple_drone_job_weight
+		modifier = {
+			factor = value:job_weights_modifier|JOB|hive_basic_agri_drone|RESOURCE|minerals|
+			is_lithoid = yes
+		}
+		modifier = {
+			factor = value:job_weights_modifier|JOB|hive_basic_agri_drone|RESOURCE|food|
+			is_lithoid = no
+		}
+	}
+}
+
+hive_basic_agri_drone_lithoid = {
+	category = simple_drone
+	is_capped_by_modifier = no
+
+	swappable_data = {
+		default = {
+			building_icon = building_primitive_farm
+			icon = peasant
+		}
+	}
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_drone_job
+
+	possible = {
+		owner = {
+			is_primitive = yes
+			is_hive_empire = yes
+			OR = {
+				has_country_flag = bronze_age
+				has_country_flag = iron_age
+				has_country_flag = late_medieval_age
+				has_country_flag = renaissance_age
+				has_country_flag = steam_age
 			}
+		}
+		is_lithoid = yes
+	}
+
+	resources = {
+		category = planet_farmers
+		produces = {
 			minerals = 2
 		}
 	}
@@ -1077,8 +1480,13 @@ hive_basic_agri_drone = {
 primitive_hive_warrior = {
 	category = simple_drone
 	is_capped_by_modifier = yes
-	building_icon = building_primitive_dwellings
-	icon = primitive_warrior
+
+	swappable_data = {
+		default = {
+			building_icon = building_primitive_dwellings
+			icon = primitive_warrior
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1101,9 +1509,10 @@ primitive_hive_warrior = {
 		}
 	}
 
-	pop_modifier = {
-		pop_defense_armies_add = 3
-	}
+# Markus
+#	pop_group_modifier = {
+#		pop_defense_armies_add = 3
+#	}
 
 	weight = {
 		weight = @soldier_job_weight
@@ -1113,8 +1522,13 @@ primitive_hive_warrior = {
 primitive_hive_synapse_drone = {
 	category = complex_drone
 	is_capped_by_modifier = yes
-	building_icon = building_primitive_capital
-	icon = synapse_drone
+
+	swappable_data = {
+		default = {
+			building_icon = building_primitive_capital
+			icon = synapse_drone
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1143,7 +1557,7 @@ primitive_hive_synapse_drone = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_no_happiness_add = 3
+		planet_amenities_no_happiness_add = 300
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -1157,8 +1571,13 @@ primitive_hive_synapse_drone = {
 primitive_hive_cerebellum_drone = {
 	category = complex_drone
 	is_capped_by_modifier = yes
-	building_icon = building_primitive_labs
-	icon = brain_drone
+
+	swappable_data = {
+		default = {
+			building_icon = building_primitive_labs
+			icon = brain_drone
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1200,8 +1619,13 @@ primitive_hive_cerebellum_drone = {
 primitive_hive_factory_drone = {
 	category = simple_drone
 	is_capped_by_modifier = yes
-	building_icon = building_primitive_factory
-	icon = primitive_laborer
+
+	swappable_data = {
+		default = {
+			building_icon = building_primitive_factory
+			icon = primitive_laborer
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1244,8 +1668,13 @@ primitive_hive_factory_drone = {
 primitive_hive_miner = {
 	category = simple_drone
 	is_capped_by_modifier = yes
-	building_icon = building_primitive_mine
-	icon = miner
+
+	swappable_data = {
+		default = {
+			building_icon = building_primitive_mine
+			icon = miner
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1285,8 +1714,13 @@ primitive_hive_miner = {
 primitive_hive_technician = {
 	category = simple_drone
 	is_capped_by_modifier = yes
-	building_icon = building_primitive_power_plant
-	icon = technician
+
+	swappable_data = {
+		default = {
+			building_icon = building_primitive_power_plant
+			icon = technician
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1326,8 +1760,13 @@ primitive_hive_technician = {
 primitive_hive_farmer = {
 	category = simple_drone
 	is_capped_by_modifier = yes
-	building_icon = building_primitive_farm
-	icon = primitive_farmer
+
+	swappable_data = {
+		default = {
+			building_icon = building_primitive_farm
+			icon = primitive_farmer
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1367,8 +1806,13 @@ primitive_hive_farmer = {
 primitive_hive_brain_drone = {
 	category = complex_drone
 	is_capped_by_modifier = yes
-	building_icon = building_primitive_labs
-	icon = brain_drone
+
+	swappable_data = {
+		default = {
+			building_icon = building_primitive_labs
+			icon = brain_drone
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1409,8 +1853,13 @@ primitive_hive_brain_drone = {
 primitive_hive_spawning_drone = {
 	category = complex_drone
 	is_capped_by_modifier = yes
-	building_icon = building_spawning_pool
-	icon = spawning_drone
+
+	swappable_data = {
+		default = {
+			building_icon = building_spawning_pool
+			icon = spawning_drone
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1431,7 +1880,7 @@ primitive_hive_spawning_drone = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_no_happiness_add = 8
+		planet_amenities_no_happiness_add = 800
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -1444,8 +1893,13 @@ primitive_hive_spawning_drone = {
 primitive_hive_warrior_2 = {
 	category = simple_drone
 	is_capped_by_modifier = yes
-	building_icon = building_residence
-	icon = warrior_drone
+
+	swappable_data = {
+		default = {
+			building_icon = building_residence
+			icon = warrior_drone
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1468,9 +1922,10 @@ primitive_hive_warrior_2 = {
 		}
 	}
 
-	pop_modifier = {
-		pop_defense_armies_add = 3
-	}
+# Markus
+#	pop_group_modifier = {
+#		pop_defense_armies_add = 3
+#	}
 
 	weight = {
 		weight = @soldier_job_weight
@@ -1480,8 +1935,13 @@ primitive_hive_warrior_2 = {
 primitive_hive_synapse_drone_2 = {
 	category = complex_drone
 	is_capped_by_modifier = yes
-	building_icon = building_primitive_capital
-	icon = synapse_drone
+
+	swappable_data = {
+		default = {
+			building_icon = building_primitive_capital
+			icon = synapse_drone
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1516,7 +1976,7 @@ primitive_hive_synapse_drone_2 = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_no_happiness_add = 3
+		planet_amenities_no_happiness_add = 300
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -1530,8 +1990,13 @@ primitive_hive_synapse_drone_2 = {
 primitive_hive_maintenance_drone = {
 	category = simple_drone
 	is_capped_by_modifier = no
-	building_icon = building_maintenance_depot
-	icon = maintenance_drone
+
+	swappable_data = {
+		default = {
+			building_icon = building_maintenance_depot
+			icon = maintenance_drone
+		}
+	}
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -1552,7 +2017,7 @@ primitive_hive_maintenance_drone = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_no_happiness_add = 2
+		planet_amenities_no_happiness_add = 200
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 

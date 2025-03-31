@@ -372,7 +372,7 @@
 # Cloaking #
 ############
 
-# Corvette/Destroyer/Defensive Platforms
+# Corvette/Destroyer/Defense Platforms
 
 @cloak_s_t1_cost_alloys = 20
 @cloak_s_t2_cost_alloys = 25

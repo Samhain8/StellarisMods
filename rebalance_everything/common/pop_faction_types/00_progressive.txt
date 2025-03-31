@@ -141,13 +141,13 @@ progressive = {
 			owner = {
 				NOR = {
 					has_policy_flag = resettlement_allowed
-					any_owned_pop = {
+					any_owned_pop_group = {
 						has_migration_control = { type = yes }
 						is_sapient = yes
 						is_enslaved = no
 						is_being_purged = no
 						is_shackled_robot = no
-						is_robot_pop = no
+						is_robot_pop_group = no
 					}
 				}
 			}
@@ -303,7 +303,7 @@ progressive = {
 	}
 
 	on_create = {
-		pop_faction_event = { id = factions.1 }
+		pop_faction_event = { id = factions.0 }
 	}
 
 	on_destroy = {
@@ -355,6 +355,7 @@ progressive = {
 
 			effect = {
 				add_modifier = { modifier = embraced_faction days = 3600 }
+				owner = { set_country_flag = has_embraced_faction }
 				parameter:empire = {
 					shift_ethic = ethic_egalitarian
 					hidden_effect = {
@@ -423,6 +424,7 @@ progressive = {
 			}
 
 			effect = {
+				owner = { set_country_flag = has_promoted_faction }
 				parameter:empire = {
 					add_modifier = { modifier = promoted_egalitarian days = -1 }
 				}

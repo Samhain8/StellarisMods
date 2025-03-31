@@ -1,12 +1,12 @@
 # from = country
 # this = species
-#triggered_pop_modifier = {
+#triggered_pop_group_modifier = {
 #	potential = { is_pop_category = ruler }
 #	pop_happiness = 0.15
 #}
 
 living_standard_organic_trophy = {
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			NAND = {
 				exists = owner
@@ -16,7 +16,7 @@ living_standard_organic_trophy = {
 		pop_happiness = 0.4
 	}
 
-	pop_modifier = {
+	pop_group_modifier = {
 		pop_category_bio_trophy_consumer_goods_upkeep_add = @living_standard_luxuries_very_high
 	}
 
@@ -46,7 +46,7 @@ living_standard_organic_trophy = {
 }
 
 living_standard_chemical_bliss = {
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			NAND = {
 				exists = owner
@@ -56,18 +56,8 @@ living_standard_chemical_bliss = {
 		pop_happiness = 0.4
 	}
 
-	# Triggered so the auto-generated modifier is hidden.
-	triggered_pop_modifier = {
-		potential = {
-			always = yes
-		}
-		living_standard_trade_value_rulers_add = @trade_value_very_high
-		living_standard_trade_value_specialists_add = @trade_value_very_high
-		living_standard_trade_value_workers_add = @trade_value_very_high
-	}
-
-	pop_modifier = {
-		planet_jobs_produces_mult = -0.6
+	pop_group_modifier = {
+		pop_bonus_workforce_mult = -0.6
 		pop_category_rulers_consumer_goods_upkeep_add = @living_standard_luxuries_very_high
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_very_high
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_very_high
@@ -137,7 +127,7 @@ living_standard_shared_burden = {
 		from = { has_valid_civic = civic_shared_burden }
 	}
 
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			NAND = {
 				exists = owner
@@ -150,23 +140,17 @@ living_standard_shared_burden = {
 		pop_demotion_time_mult = -0.45
 	}
 
-	# Triggered so the auto-generated modifier is hidden.
-	triggered_pop_modifier = {
-		living_standard_trade_value_rulers_add = @trade_value_shared_burden
-		living_standard_trade_value_specialists_add = @trade_value_shared_burden
-		living_standard_trade_value_workers_add = @trade_value_shared_burden
-	}
-
-	pop_modifier = {
+	pop_group_modifier = {
 		pop_category_rulers_consumer_goods_upkeep_add = @living_standard_luxuries_shared_burden
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_shared_burden
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_shared_burden
 		pop_cat_ruler_political_power = 3
 		pop_cat_specialist_political_power = 3
 		pop_cat_worker_political_power = 3
+		pop_civilian_bonus_workforce_mult = 0.15
 	}
 
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			OR = {
 				is_pop_category = ruler
@@ -224,7 +208,7 @@ living_standard_dystopian_society = {
 		from = { has_valid_civic = civic_dystopian_society }
 	}
 
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			NAND = {
 				exists = owner
@@ -234,12 +218,12 @@ living_standard_dystopian_society = {
 		pop_cat_ruler_happiness = 0.25
 	}
 
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			OR = {
-				has_job = enforcer
-				has_job = colonist
-				has_job = telepath
+				# has_job = enforcer # Markus
+				# has_job = colonist
+				# has_job = telepath
 			}
 			NAND = {
 				exists = owner
@@ -250,31 +234,31 @@ living_standard_dystopian_society = {
 		pop_political_power = 1
 	}
 
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			OR = {
-				has_job = enforcer
-				has_job = colonist
-				has_job = telepath
+				# has_job = enforcer # Markus
+				# has_job = colonist
+				# has_job = telepath
 			}
 		}
 		pop_amenities_usage_mult = -0.35
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_very_high_decadent
 	}
 
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			is_pop_category = ruler
 		}
 		pop_amenities_usage_mult = 0.45
 	}
 
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			NOR = {
-				has_job = enforcer
-				has_job = colonist
-				has_job = telepath
+				# has_job = enforcer # Markus
+				# has_job = colonist
+				# has_job = telepath
 			}
 		}
 		pop_cat_specialist_happiness = -2
@@ -283,7 +267,7 @@ living_standard_dystopian_society = {
 		pop_cat_criminal_happiness = -2
 	}
 
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			OR = {
 				AND = {
@@ -299,12 +283,12 @@ living_standard_dystopian_society = {
 		pop_happiness = -0.25
 	}
 
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			NOR = {
-				has_job = enforcer
-				has_job = colonist
-				has_job = telepath
+				# has_job = enforcer # Markus
+				# has_job = colonist
+				# has_job = telepath
 			}
 			OR = {
 				is_pop_category = specialist
@@ -314,14 +298,15 @@ living_standard_dystopian_society = {
 			}
 		}
 		pop_amenities_usage_base = -1
-		pop_job_amenities_mult = -1
+		pop_entertainer_bonus_workforce_mult = -1
+		pop_maintenance_drone_bonus_workforce_mult = -1
 	}
 
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
-			has_job = enforcer
-			has_job = colonist
-			has_job = telepath
+			# has_job = enforcer # Markus
+			# has_job = colonist
+			# has_job = telepath
 			OR = {
 				planet = { free_amenities < 0 }
 				AND = {
@@ -354,17 +339,7 @@ living_standard_dystopian_society = {
 		}
 	}
 
-	# Triggered so the auto-generated modifier is hidden.
-	triggered_pop_modifier = {
-		potential = {
-			always = yes
-		}
-		living_standard_trade_value_rulers_add =			@trade_value_very_high
-		living_standard_trade_value_specialists_add =			@trade_value_low
-		living_standard_trade_value_workers_add = 			@trade_value_low
-	}
-
-	pop_modifier = {
+	pop_group_modifier = {
 		pop_category_rulers_consumer_goods_upkeep_add = @living_standard_luxuries_very_high_decadent
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_low_decadent
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_low
@@ -372,6 +347,7 @@ living_standard_dystopian_society = {
 		pop_cat_ruler_political_power = 10
 		pop_cat_specialist_political_power = -0.25
 		pop_cat_worker_political_power = -0.75
+		pop_civilian_bonus_workforce_mult = -0.1
 	}
 
 	allow = {
@@ -409,26 +385,17 @@ living_standard_worker_ownership = {
 		from = { is_worker_coop_empire = yes }
 	}
 
-	# Triggered so the auto-generated modifier is hidden.
-	triggered_pop_modifier = {
-		potential = {
-			always = yes
-		}
-		living_standard_trade_value_rulers_add = @trade_value_high
-		living_standard_trade_value_specialists_add = @trade_value_high
-		living_standard_trade_value_workers_add = @trade_value_high
-	}
-
-	pop_modifier = {
+	pop_group_modifier = {
 		pop_category_rulers_consumer_goods_upkeep_add = @living_standard_luxuries_high
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_high
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_high
 		pop_cat_ruler_political_power = 3
 		pop_cat_specialist_political_power = 3
 		pop_cat_worker_political_power = 3
+		pop_civilian_bonus_workforce_mult = 0.15
 	}
 
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -482,7 +449,7 @@ living_standard_worker_ownership = {
 }
 
 living_standard_utopian = {
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			NAND = {
 				exists = owner
@@ -494,7 +461,7 @@ living_standard_utopian = {
 		pop_cat_worker_happiness = 0.20
 	}
 
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			OR = {
 				is_pop_category = ruler
@@ -508,23 +475,14 @@ living_standard_utopian = {
 		unemployment_resources_unity_produces_add = 1
 	}
 
-	# Triggered so the auto-generated modifier is hidden.
-	triggered_pop_modifier = {
-		potential = {
-			always = yes
-			}
-		living_standard_trade_value_rulers_add =			@trade_value_very_high
-		living_standard_trade_value_specialists_add =		@trade_value_very_high
-		living_standard_trade_value_workers_add = 			@trade_value_very_high
-	}
-
-	pop_modifier = {
+	pop_group_modifier = {
 		pop_category_rulers_consumer_goods_upkeep_add = @living_standard_luxuries_very_high
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_very_high
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_very_high
 		pop_cat_ruler_political_power = 4
 		pop_cat_specialist_political_power = 4
 		pop_cat_worker_political_power = 4
+		pop_civilian_bonus_workforce_mult = 0.2
 	}
 
 	potential = {
@@ -633,7 +591,7 @@ living_standard_academic_privilege = {
 		}
 	}
 
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			NAND = {
 				exists = owner
@@ -647,23 +605,14 @@ living_standard_academic_privilege = {
 		pop_cat_specialist_happiness = 0.15
 	}
 
-	# Triggered so the auto-generated modifier is hidden.
-	triggered_pop_modifier = {
-		potential = {
-			always = yes
-		}
-		living_standard_trade_value_rulers_add =			@trade_value_very_high
-		living_standard_trade_value_specialists_add =		@trade_value_very_high
-		living_standard_trade_value_workers_add = 			@trade_value_normal
-	}
-
-	pop_modifier = {
+	pop_group_modifier = {
 		pop_category_rulers_consumer_goods_upkeep_add = @living_standard_luxuries_very_high
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_very_high
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_normal
 		pop_cat_ruler_political_power = 6
 		pop_cat_specialist_political_power = 2.5
 		pop_cat_worker_political_power = 0.5
+		pop_civilian_bonus_workforce_mult = 0.15
 	}
 
 	potential = {
@@ -782,7 +731,7 @@ living_standard_good = {
 		}
 	}
 
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			NAND = {
 				exists = owner
@@ -795,7 +744,7 @@ living_standard_good = {
 		pop_cat_slave_happiness = 0.10
 	}
 
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			OR = {
 				is_pop_category = ruler
@@ -806,16 +755,7 @@ living_standard_good = {
 		unemployment_resources_unity_produces_add = 1
 	}
 
-	triggered_pop_modifier = {
-		potential = {
-			always = yes
-		}
-		living_standard_trade_value_rulers_add =			@trade_value_very_high
-		living_standard_trade_value_specialists_add =		@trade_value_high
-		living_standard_trade_value_workers_add = 			@trade_value_high
-	}
-
-	pop_modifier = {
+	pop_group_modifier = {
 		pop_category_rulers_consumer_goods_upkeep_add = @living_standard_luxuries_very_high
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_high
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_high
@@ -823,6 +763,7 @@ living_standard_good = {
 		pop_cat_ruler_political_power = 4
 		pop_cat_specialist_political_power = 3
 		pop_cat_worker_political_power = 2
+		pop_civilian_bonus_workforce_mult = 0.1
 	}
 
 	potential = {
@@ -941,7 +882,7 @@ living_standard_good = {
 }
 
 living_standard_normal = {
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			NAND = {
 				exists = owner
@@ -967,17 +908,7 @@ living_standard_normal = {
 		}
 	}
 
-	# Triggered so the auto-generated modifier is hidden.
-	triggered_pop_modifier = {
-		potential = {
-			always = yes
-		}
-		living_standard_trade_value_rulers_add =			@trade_value_very_high
-		living_standard_trade_value_specialists_add =			@trade_value_high
-		living_standard_trade_value_workers_add = 			@trade_value_normal
-	}
-
-	pop_modifier = {
+	pop_group_modifier = {
 		pop_category_rulers_consumer_goods_upkeep_add = @living_standard_luxuries_very_high
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_high
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_normal
@@ -1051,7 +982,7 @@ living_standard_normal = {
 
 living_standard_stratified = {
 
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			NAND = {
 				exists = owner
@@ -1084,18 +1015,15 @@ living_standard_stratified = {
 	}
 
 	# Triggered so the auto-generated modifier is hidden.
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			always = yes
 		}
-		living_standard_trade_value_rulers_add =			@trade_value_very_high
-		living_standard_trade_value_specialists_add =			@trade_value_high
-		living_standard_trade_value_workers_add = 			@trade_value_low
 		pop_cat_worker_happiness = -0.10
 		pop_cat_slave_happiness = -0.10
 	}
 
-	pop_modifier = {
+	pop_group_modifier = {
 		pop_category_rulers_consumer_goods_upkeep_add = @living_standard_luxuries_very_high
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_high
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_low
@@ -1183,20 +1111,17 @@ living_standard_stratified = {
 
 living_standard_subsistence = {
 	# Triggered so the auto-generated modifier is hidden.
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			always = yes
 		}
-		living_standard_trade_value_rulers_add =			@trade_value_high
-		living_standard_trade_value_specialists_add =			@trade_value_normal
-		living_standard_trade_value_workers_add = 			@trade_value_very_low
 		pop_cat_ruler_happiness = -0.05
 		pop_cat_specialist_happiness = -0.10
 		pop_cat_worker_happiness = -0.20
 		pop_cat_slave_happiness = -0.10
 	}
 
-	pop_modifier = {
+	pop_group_modifier = {
 		pop_category_rulers_consumer_goods_upkeep_add = @living_standard_luxuries_high
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_normal
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_very_low
@@ -1435,7 +1360,7 @@ living_standard_decadent = {
 		}
 	}
 
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			NAND = {
 				exists = owner
@@ -1447,17 +1372,7 @@ living_standard_decadent = {
 		pop_cat_worker_happiness = 0.20
 	}
 
-	# Triggered so the auto-generated modifier is hidden.
-	triggered_pop_modifier = {
-		potential = {
-			always = yes
-		}
-		living_standard_trade_value_rulers_add =			@trade_value_very_high
-		living_standard_trade_value_specialists_add =			@trade_value_very_high
-		living_standard_trade_value_workers_add = 			@trade_value_very_high
-	}
-
-	pop_modifier = {
+	pop_group_modifier = {
 		pop_category_rulers_consumer_goods_upkeep_add = @living_standard_luxuries_very_high_decadent
 		pop_category_specialists_consumer_goods_upkeep_add = @living_standard_luxuries_high_decadent
 		pop_category_workers_consumer_goods_upkeep_add = @living_standard_luxuries_normal_decadent

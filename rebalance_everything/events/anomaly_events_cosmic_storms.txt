@@ -197,8 +197,6 @@ ship_event = {
 	after = {
 		hidden_effect = {
 			from = {
-				save_event_target_as = target_planet
-				update_habitat_orbital_effect = yes
 				remove_planet_flag = collect_exotic_gases
 				remove_planet_flag = collect_volatile_motes
 				remove_planet_flag = collect_alloys
@@ -885,7 +883,7 @@ ship_event = {
 				}
 			}
 			if = {
-				limit = { 
+				limit = {
 					is_regular_empire = yes
 					NOT = { has_technology = tech_alien_life_studies }
 				}
@@ -1066,7 +1064,7 @@ ship_event = {
 					which = value:get_vivarium_slots_left
 					value >= 3
 				}
-				has_technology = tech_gravity_wells	
+				has_technology = tech_gravity_wells
 			}
 		}
 		custom_tooltip = cstorms.5090.c.tt

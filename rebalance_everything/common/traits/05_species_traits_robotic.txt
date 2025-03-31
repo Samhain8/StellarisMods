@@ -35,11 +35,13 @@ trait_robot_power_drills = {
 	allowed_archetypes = { ROBOT MACHINE }
 
 	modifier = {
-		planet_jobs_minerals_produces_mult = 0.15
+		pop_miner_bonus_workforce_mult = 0.15
+		pop_mining_drone_bonus_workforce_mult = 0.15
 	}
 	slave_cost = {
 		energy = 750
 	}
+	custom_tooltip = TRAIT_INDUSTRIOUS_EFFECT
 	assembly_score = {
 		modifier = {
 			add = 1.5
@@ -59,11 +61,13 @@ trait_robot_harvesters = {
 	allowed_archetypes = { ROBOT MACHINE }
 
 	modifier = {
-		planet_jobs_food_produces_mult = 0.15
+		pop_farmer_bonus_workforce_mult = 0.15
+		pop_agri_drone_bonus_workforce_mult = 0.15
 	}
 	slave_cost = {
 		energy = 750
 	}
+	custom_tooltip = TRAIT_AGRARIAN_EFFECT
 	assembly_score = {
 		modifier = {
 			add = 1.5
@@ -91,11 +95,13 @@ trait_robot_superconductive = {
 	allowed_archetypes = { ROBOT MACHINE }
 
 	modifier = {
-		planet_jobs_energy_produces_mult = 0.15
+		pop_technician_bonus_workforce_mult = 0.15
+		pop_technician_drone_bonus_workforce_mult = 0.15
 	}
 	slave_cost = {
 		energy = 750
 	}
+	custom_tooltip = TRAIT_INGENIOUS_EFFECT
 	assembly_score = {
 		modifier = {
 			add = 1.5
@@ -115,7 +121,7 @@ trait_robot_efficient_processors = {
 	allowed_archetypes = { ROBOT MACHINE }
 
 	modifier = {
-		planet_jobs_produces_mult = 0.05
+		pop_bonus_workforce_mult = 0.05
 	}
 
 	slave_cost = {
@@ -144,13 +150,17 @@ trait_robot_logic_engines = {
 		}
 	}
 	modifier = {
-		planet_jobs_physics_research_produces_mult = 0.10
-		planet_jobs_society_research_produces_mult = 0.10
-		planet_jobs_engineering_research_produces_mult = 0.10
+		pop_physicist_bonus_workforce_mult = 0.10
+		pop_biologist_bonus_workforce_mult = 0.10
+		pop_engineer_bonus_workforce_mult = 0.10
+		pop_calculator_physicist_bonus_workforce_mult = 0.10
+		pop_calculator_biologist_bonus_workforce_mult = 0.10
+		pop_calculator_engineer_bonus_workforce_mult = 0.10
 	}
 	slave_cost = {
 		energy = 750
 	}
+	custom_tooltip = TRAIT_LOGIC_ENGINES_EFFECT
 	assembly_score = {
 		modifier = {
 			add = 1.5
@@ -200,7 +210,8 @@ trait_robot_domestic_protocols = {
 	}
 	forbidden_ethics = { ethic_gestalt_consciousness }
 	modifier = {
-		pop_job_amenities_mult = 0.20
+		pop_entertainer_bonus_workforce_mult = 0.20
+		pop_maintenance_drone_bonus_workforce_mult = 0.20
 	}
 	slave_cost = {
 		energy = 750
@@ -274,7 +285,8 @@ trait_robot_emotion_emulators = {
 	opposites = { "trait_robot_uncanny" }
 	allowed_archetypes = { ROBOT MACHINE }
 	modifier = {
-		pop_job_amenities_mult = 0.20
+		pop_entertainer_bonus_workforce_mult = 0.20
+		pop_maintenance_drone_bonus_workforce_mult = 0.20
 	}
 	slave_cost = {
 		energy = 750
@@ -287,7 +299,8 @@ trait_robot_uncanny = {
 	opposites = { "trait_robot_emotion_emulators" }
 	allowed_archetypes = { ROBOT MACHINE }
 	modifier = {
-		pop_job_amenities_mult = -0.20
+		pop_entertainer_bonus_workforce_mult = -0.20
+		pop_maintenance_drone_bonus_workforce_mult = -0.20
 	}
 	ai_weight = {
 		factor = 0
@@ -425,7 +438,7 @@ trait_robot_recycled = {
 
 	#assembling_modifier, declining_modifier, growing_modifier are applied to planet when pop is the one assembling/declining/growing
 	assembling_modifier = {
-		planet_pop_assemblers_upkeep_mult = -0.20
+		pop_replicator_bonus_workforce_mult = 0.20
 	}
 	slave_cost = {
 		energy = 1500
@@ -441,7 +454,7 @@ trait_robot_luxurious = {
 
 	#assembling_modifier, declining_modifier, growing_modifier are applied to planet when pop is the one assembling/declining/growing
 	assembling_modifier = {
-		planet_pop_assemblers_upkeep_mult = 0.20
+		pop_replicator_bonus_workforce_mult = -0.20
 	}
 	ai_weight = {
 		weight = 1
@@ -472,12 +485,13 @@ trait_robot_propaganda_machines = {
 	}
 	opposites = { "trait_robot_quarrelsome" }
 	modifier = {
-		planet_jobs_unity_produces_mult = 0.15
-		planet_jobs_unity_upkeep_mult = -0.1
+		pop_bureaucrat_bonus_workforce_mult = 0.15
+		pop_coordinator_bonus_workforce_mult = 0.15
 	}
 	slave_cost = {
 		energy = 750
 	}
+	custom_tooltip = TRAIT_CHARISMATIC_EFFECT
 	assembly_score = {
 		modifier = {
 			add = 1.5
@@ -529,8 +543,10 @@ trait_robot_trading_algorithms = {
 		owner_is_hive_empire = no
 	}
 	modifier = {
-		pop_job_trade_mult = 0.25
+		pop_trader_bonus_workforce_mult = 0.25
+		pop_maintenance_drone_bonus_workforce_mult = 0.25
 	}
+	custom_tooltip = TRAIT_THRIFTY_EFFECT
 	slave_cost = {
 		energy = 500
 	}
@@ -551,7 +567,8 @@ trait_robot_quarrelsome = {
 	allowed_archetypes = { MACHINE ROBOT }
 	forbidden_ethics = { ethic_gestalt_consciousness }
 	modifier = {
-		planet_jobs_unity_produces_mult = -0.1
+		pop_trader_bonus_workforce_mult = -0.1
+		pop_maintenance_drone_bonus_workforce_mult = -0.1
 	}
 	ai_weight = {
 		weight = 1
@@ -560,6 +577,7 @@ trait_robot_quarrelsome = {
 			years_passed > 5
 		}
 	}
+	custom_tooltip = TRAIT_QUARRELSOME_EFFECT
 	slave_cost = {
 		energy = -200
 	}
@@ -576,7 +594,6 @@ trait_robot_deviants = {
 			owner_is_individual_machine = yes
 		}
 	}
-	potential_crossbreeding_chance = 1.0
 	modifier = { pop_government_ethic_attraction = -0.15 }
 
 	allowed_archetypes = { MACHINE ROBOT }
@@ -657,11 +674,13 @@ trait_robot_artificial_engineers = {
 		}
 	}
 	modifier = {
-		planet_jobs_engineering_research_produces_mult = 0.15
+		pop_engineer_bonus_workforce_mult = 0.15
+		pop_calculator_engineer_bonus_workforce_mult = 0.15
 	}
 	slave_cost = {
 		energy = 750
 	}
+	custom_tooltip = TRAIT_ARTIFICIAL_ENGINEER_EFFECT
 }
 
 trait_robot_artificial_physicists = {
@@ -683,11 +702,13 @@ trait_robot_artificial_physicists = {
 		}
 	}
 	modifier = {
-		planet_jobs_physics_research_produces_mult = 0.15
+		pop_physicist_bonus_workforce_mult = 0.15
+		pop_calculator_physicist_bonus_workforce_mult = 0.15
 	}
 	slave_cost = {
 		energy = 750
 	}
+	custom_tooltip = TRAIT_ARTIFICIAL_PHYSICIST_EFFECT
 }
 
 trait_robot_artificial_sociologists = {
@@ -710,11 +731,13 @@ trait_robot_artificial_sociologists = {
 		}
 	}
 	modifier = {
-		planet_jobs_society_research_produces_mult = 0.15
+		pop_biologist_bonus_workforce_mult = 0.15
+		pop_calculator_biologist_bonus_workforce_mult = 0.15
 	}
 	slave_cost = {
 		energy = 750
 	}
+	custom_tooltip = TRAIT_ARTIFICIAL_BIOLOGIST_EFFECT
 }
 
 trait_robot_integrated_weaponry = {
@@ -763,7 +786,7 @@ trait_robot_delicate_frames = {
 	randomized = no
 	modifier = {
 		army_damage_mult = -0.5
-		planet_jobs_robot_worker_produces_mult = -0.05
+		pop_bonus_workforce_mult = -0.05 #TODO Change to Category AUG-51639
 	}
 
 	slave_cost = {
@@ -792,12 +815,13 @@ trait_robot_scarcity_algorithms = {
 	}
 	randomized = no
 	modifier = {
-		pop_job_trade_mult = -0.25
+		pop_trader_bonus_workforce_mult = -0.25
+		pop_maintenance_drone_bonus_workforce_mult = -0.25
 	}
-
 	slave_cost = {
 		energy = -150
 	}
+	custom_tooltip = TRAIT_SCARCITY_ALGORITHMS_EFFECT
 }
 
 #### Leviathan traits
@@ -819,7 +843,6 @@ trait_robot_ancient_dreadnought = {
 			has_country_flag = harvested_dreadnought_parts
 		}
 	}
-	potential_crossbreeding_chance = 1.0
 	initial = no
 	randomized = no
 	opposites = {}
@@ -827,7 +850,8 @@ trait_robot_ancient_dreadnought = {
 
 	modifier = {
 		army_damage_mult = 5
-		planet_metallurgists_produces_mult = 0.15
+		pop_foundry_bonus_workforce_mult = 0.15
+		pop_fabricator_bonus_workforce_mult = 0.15
 	}
 
 	slave_cost = {
@@ -852,7 +876,6 @@ trait_robot_enigmatic_fortress = {
 			has_country_flag = harvested_fortress_parts
 		}
 	}
-	potential_crossbreeding_chance = 1.0
 	initial = no
 	randomized = no
 	opposites = {}
@@ -884,7 +907,6 @@ trait_robot_infinity_sphere = {
 			has_country_flag = harvested_sphere_parts
 		}
 	}
-	potential_crossbreeding_chance = 1.0
 	initial = no
 	randomized = no
 	opposites = {}
@@ -916,7 +938,6 @@ trait_robot_scavenger_bot = {
 			has_country_flag = harvested_scavenger_parts
 		}
 	}
-	potential_crossbreeding_chance = 1.0
 	initial = no
 	randomized = no
 	opposites = {}
@@ -977,7 +998,8 @@ trait_robot_history_artbot = {
 	opposites = { "trait_robot_history_warbot" "trait_robot_history_explorebot" "trait_robot_history_researchbot" "trait_robot_history_resourcebot" "trait_robot_history_chatbot"}
 
 	modifier = {
-		pop_job_amenities_mult = 0.05
+		pop_entertainer_bonus_workforce_mult = 0.05
+		pop_maintenance_drone_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
 		energy = 750
@@ -1002,7 +1024,8 @@ trait_robot_history_explorebot = {
 	opposites = { "trait_robot_history_warbot" "trait_robot_history_artbot" "trait_robot_history_researchbot" "trait_robot_history_resourcebot" "trait_robot_history_chatbot"}
 
 	modifier = {
-		planet_jobs_unity_produces_mult = 0.02
+		pop_bureaucrat_bonus_workforce_mult = 0.02
+		pop_coordinator_bonus_workforce_mult = 0.02
 	}
 	slave_cost = {
 		energy = 750
@@ -1027,9 +1050,12 @@ trait_robot_history_researchbot = {
 	opposites = { "trait_robot_history_warbot" "trait_robot_history_artbot" "trait_robot_history_explorebot" "trait_robot_history_resourcebot" "trait_robot_history_chatbot"}
 
 	modifier = {
-		planet_jobs_physics_research_produces_mult = 0.02
-		planet_jobs_society_research_produces_mult = 0.02
-		planet_jobs_engineering_research_produces_mult = 0.02
+		pop_physicist_bonus_workforce_mult = 0.02
+		pop_biologist_bonus_workforce_mult = 0.02
+		pop_engineer_bonus_workforce_mult = 0.02
+		pop_calculator_physicist_bonus_workforce_mult = 0.02
+		pop_calculator_biologist_bonus_workforce_mult = 0.02
+		pop_calculator_engineer_bonus_workforce_mult = 0.02
 	}
 	slave_cost = {
 		energy = 750
@@ -1054,7 +1080,8 @@ trait_robot_history_resourcebot = {
 	opposites = { "trait_robot_history_warbot" "trait_robot_history_artbot" "trait_robot_history_explorebot" "trait_robot_history_researchbot" "trait_robot_history_chatbot"}
 
 	modifier = {
-		planet_jobs_minerals_produces_mult = 0.05
+		pop_miner_bonus_workforce_mult = 0.05
+		pop_mining_drone_bonus_workforce_mult = 0.05
 	}
 	slave_cost = {
 		energy = 750
@@ -1156,14 +1183,14 @@ trait_robot_digital_2 = {
 		pop_housing_usage_mult = -0.9
 	}
 
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
 				has_tradition = tr_virtuality_1
 			}
 		}
-		planet_jobs_produces_mult = 1
+		pop_bonus_workforce_mult = 1
 		mult = value:virtuality_concentrated_production_mult
 	}
 
@@ -1197,7 +1224,7 @@ trait_robot_suppressed = {
 	}
 
 	modifier = {
-		planet_jobs_produces_mult = 0.1
+		pop_bonus_workforce_mult = 0.1
 		species_leader_exp_gain = -1
 	}
 
@@ -1229,7 +1256,7 @@ trait_robot_shielded_components = {
 
 	modifier = {
 		pop_environment_tolerance = 0.30
-		planet_jobs_produces_mult = 0.05
+		pop_bonus_workforce_mult = 0.05
 		leader_lifespan_add = 50
 	}
 
@@ -1287,7 +1314,15 @@ trait_robot_inquisitative_axioms = {
 	randomized = no
 
 	modifier = {
-		planet_researchers_produces_mult = 0.2
+		pop_physicist_bonus_workforce_mult = 0.2
+		pop_biologist_bonus_workforce_mult = 0.2
+		pop_engineer_bonus_workforce_mult = 0.2
+		pop_brain_drone_physicist_bonus_workforce_mult = 0.2
+		pop_brain_drone_biologist_bonus_workforce_mult = 0.2
+		pop_brain_drone_engineer_bonus_workforce_mult = 0.2
+		pop_calculator_physicist_bonus_workforce_mult = 0.2
+		pop_calculator_biologist_bonus_workforce_mult = 0.2
+		pop_calculator_engineer_bonus_workforce_mult = 0.2
 		leaders_upkeep_mult = -0.1
 		negative_traits_leader = -1
 	}
@@ -1321,11 +1356,18 @@ trait_robot_ceaseless_symmetric_annihilation_engine = {
 	randomized = no
 
 	modifier = {
-		planet_jobs_produces_mult = 0.40
+		pop_bonus_workforce_mult = 0.40
 	}
 
 	slave_cost = {
 		energy = 750
+	}
+
+	resources = {
+		category = planet_pops
+		upkeep = {
+			sr_dark_matter = 0.02
+		}
 	}
 
 	custom_tooltip_with_modifiers = trait_robot_ceaseless_symmetric_annihilation_engine_tt
@@ -1356,7 +1398,7 @@ trait_robot_ferro_viscosity_augmentation = {
 		leader_lifespan_mult = 0.5
 	}
 
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -1366,7 +1408,7 @@ trait_robot_ferro_viscosity_augmentation = {
 		pop_amenities_usage_no_happiness_mult = -0.50
 	}
 
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
@@ -1378,6 +1420,13 @@ trait_robot_ferro_viscosity_augmentation = {
 
 	slave_cost = {
 		energy = 750
+	}
+
+	resources = {
+		category = planet_pops
+		upkeep = {
+			sr_living_metal = 0.01
+		}
 	}
 
 	custom_tooltip_with_modifiers = trait_robot_ferro_viscosity_augmentation_tt
@@ -1410,6 +1459,14 @@ trait_robot_biomimetic_assembly = {
 
 	slave_cost = {
 		energy = 750
+	}
+
+	resources = {
+		category = planet_pops
+		upkeep = {
+			food = 1
+			exotic_gases = 0.02
+		}
 	}
 
 	custom_tooltip_with_modifiers = trait_robot_biomimetic_assembly_tt
@@ -1446,11 +1503,20 @@ trait_robot_matrix_trading = {
 	randomized = no
 
 	modifier = {
-		pop_job_trade_mult = 0.5
+		pop_trader_bonus_workforce_mult = 0.5
+		pop_maintenance_drone_bonus_workforce_mult = 0.5
 	}
 
 	slave_cost = {
 		energy = 750
+	}
+
+	resources = {
+		category = planet_pops
+		upkeep = {
+			energy = 1
+			rare_crystals = 0.01
+		}
 	}
 
 	custom_tooltip_with_modifiers = trait_robot_matrix_trading_tt
@@ -1477,29 +1543,39 @@ trait_robot_mote_powered_tools = {
 	initial = no
 	randomized = no
 
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
 				country_uses_consumer_goods = yes
 			}
 		}
-		planet_metallurgists_produces_mult = 0.2
-		planet_artisans_produces_mult = 0.2
+		pop_foundry_bonus_workforce_mult = 0.2
+		pop_fabricator_bonus_workforce_mult = 0.2
+		pop_artisan_bonus_workforce_mult = 0.2
 	}
 
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = owner
 			owner = {
 				country_uses_consumer_goods = no
 			}
 		}
-		planet_metallurgists_produces_mult = 0.2
+		pop_foundry_bonus_workforce_mult = 0.2
+		pop_fabricator_bonus_workforce_mult = 0.2
 	}
 
 	slave_cost = {
 		energy = 750
+	}
+
+	resources = {
+		category = planet_pops
+		upkeep = {
+			minerals = 1
+			volatile_motes = 0.01
+		}
 	}
 
 	custom_tooltip_with_modifiers = trait_robot_mote_powered_tools_tt
@@ -1528,11 +1604,18 @@ trait_robot_exotic_fuel_consumption = {
 	randomized = no
 
 	modifier = {
-		planet_jobs_produces_mult = 0.10
+		pop_bonus_workforce_mult = 0.10
 	}
 
 	slave_cost = {
 		energy = 750
+	}
+
+	resources = {
+		category = planet_pops
+		upkeep = {
+			exotic_gases = 0.04
+		}
 	}
 
 	custom_tooltip_with_modifiers = trait_robot_exotic_fuel_consumption_tt
@@ -1572,11 +1655,19 @@ trait_robot_rare_crystal_exterior = {
 	randomized = no
 
 	modifier = {
-		planet_metallurgists_produces_mult = 0.2
+		pop_foundry_bonus_workforce_mult = 0.2
+		pop_fabricator_bonus_workforce_mult = 0.2
 	}
 
 	slave_cost = {
 		energy = 750
+	}
+
+	resources = {
+		category = planet_pops
+		upkeep = {
+			rare_crystals = 0.02
+		}
 	}
 
 	custom_tooltip_with_modifiers = trait_robot_rare_crystal_exterior_tt
@@ -1610,6 +1701,13 @@ trait_robot_volatile_mote_reactor = {
 
 	slave_cost = {
 		energy = 750
+	}
+
+	resources = {
+		category = planet_pops
+		upkeep = {
+			volatile_motes = 0.02
+		}
 	}
 
 	custom_tooltip_with_modifiers = trait_robot_volatile_mote_reactor_tt
@@ -1674,7 +1772,8 @@ trait_robot_synthetic_dawn = {
 	modifier = {
 		pop_government_ethic_attraction = 0.50
 		pop_happiness = 0.05
-		planet_jobs_unity_produces_mult = 0.05
+		pop_bureaucrat_bonus_workforce_mult = 0.05
+		pop_coordinator_bonus_workforce_mult = 0.05
 	}
 
 	initial = no

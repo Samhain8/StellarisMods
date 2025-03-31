@@ -2,6 +2,7 @@
 # Resource buildings
 #############
 building_foundry_1 = {
+	can_build = yes
 	base_buildtime = @b1_time
 	base_cap_amount = 1
 	category = manufacturing
@@ -33,9 +34,7 @@ building_foundry_1 = {
 		}
 	}
 
-	inline_script = {
-		script = jobs/foundry_add
-		AMOUNT = @b1_jobs
+	allow = {
 	}
 
 	resources = {
@@ -48,8 +47,13 @@ building_foundry_1 = {
 		}
 	}
 
-	upgrades = {
-		building_foundry_2
+	planet_modifier = {
+		planet_metallurgists_produces_mult = 0.20
+	}
+
+	inline_script = {
+		script = jobs/foundry_add
+		AMOUNT = @building_static_jobs
 	}
 
 	prerequisites = {
@@ -59,11 +63,19 @@ building_foundry_1 = {
 
 building_foundry_2 = {
 	base_buildtime = @b2_time
-	can_build = no
+	base_cap_amount = 1
 	category = manufacturing
 
 	allow = {
-		has_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = need_foundry_zone
+			planet = {
+				num_zones = {
+					type = zone_foundry
+					value > 0
+				}
+			}
+		}
 	}
 
 	destroy_trigger = {
@@ -85,20 +97,18 @@ building_foundry_2 = {
 		category = planet_buildings
 		cost = {
 			minerals = @b2_minerals
-			volatile_motes = @b3_rare_cost
 		}
 		upkeep = {
 			energy = @b2_upkeep
-			volatile_motes = @b3_rare_upkeep
 		}
-	}
-
-	upgrades = {
-		building_foundry_3
 	}
 
 	prerequisites = {
 		tech_alloys_1
+	}
+
+	planet_modifier = {
+		planet_metallurgists_upkeep_mult = -0.20
 	}
 
 	triggered_planet_modifier = {
@@ -127,19 +137,23 @@ building_foundry_2 = {
 		}
 	}
 
-	inline_script = {
-		script = jobs/foundry_add
-		AMOUNT = @b1_jobs
-	}
 }
 
 building_foundry_3 = {
 	base_buildtime = @b3_time
-	can_build = no
+	base_cap_amount = 1
 	category = manufacturing
 
 	allow = {
-		has_major_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = need_foundry_zone
+			planet = {
+				num_zones = {
+					type = zone_foundry
+					value > 0
+				}
+			}
+		}
 	}
 
 	destroy_trigger = {
@@ -190,6 +204,10 @@ building_foundry_3 = {
 
 	prerequisites = {
 		tech_alloys_2
+	}
+
+	planet_modifier = {
+		pop_foundry_bonus_workforce_mult = 0.16
 	}
 
 	triggered_planet_modifier = {
@@ -253,6 +271,7 @@ building_foundry_3 = {
 }
 
 building_factory_1 = {
+	can_build = yes
 	base_buildtime = @b1_time
 	base_cap_amount = 1
 	category = manufacturing
@@ -313,9 +332,7 @@ building_factory_1 = {
 		}
 	}
 
-	inline_script = {
-		script = jobs/factory_add
-		AMOUNT = @b1_jobs
+	allow = {
 	}
 
 	resources = {
@@ -328,22 +345,35 @@ building_factory_1 = {
 		}
 	}
 
-	prerequisites = {
-		tech_basic_industry
+	planet_modifier = {
+		planet_artisans_produces_mult = 0.20
 	}
 
-	upgrades = {
-		building_factory_2
+	inline_script = {
+		script = jobs/factory_add
+		AMOUNT = @building_static_jobs
+	}
+
+	prerequisites = {
+		tech_basic_industry
 	}
 }
 
 building_factory_2 = {
 	base_buildtime = @b2_time
-	can_build = no
+	base_cap_amount = 1
 	category = manufacturing
 
 	allow = {
-		has_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = need_factory_zone
+			planet = {
+				num_zones = {
+					type = zone_factory
+					value > 0
+				}
+			}
+		}
 	}
 
 	potential = {
@@ -381,11 +411,6 @@ building_factory_2 = {
 		planet_artisans_minerals_upkeep_add = 1
 	}
 
-	inline_script = {
-		script = jobs/factory_add
-		AMOUNT = @b1_jobs
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -398,23 +423,30 @@ building_factory_2 = {
 		}
 	}
 
-	prerequisites = {
-		tech_luxuries_1
+	planet_modifier = {
+		planet_artisans_upkeep_mult = -0.20
 	}
 
-	upgrades = {
-		building_factory_3
+	prerequisites = {
+		tech_luxuries_1
 	}
 }
 
 building_factory_3 = {
 	base_buildtime = @b3_time
-	can_build = no
-
+	base_cap_amount = 1
 	category = manufacturing
 
 	allow = {
-		has_major_upgraded_capital = yes
+		custom_tooltip = {
+			fail_text = need_factory_zone
+			planet = {
+				num_zones = {
+					type = zone_factory
+					value > 0
+				}
+			}
+		}
 	}
 
 	potential = {
@@ -464,11 +496,6 @@ building_factory_3 = {
 		}
 	}
 
-	inline_script = {
-		script = jobs/factory_add
-		AMOUNT = @b1_jobs
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -501,6 +528,10 @@ building_factory_3 = {
 		}
 	}
 
+	planet_modifier = {
+		pop_artisan_bonus_workforce_mult = 0.16
+	}
+
 	prerequisites = {
 		tech_luxuries_2
 	}
@@ -508,6 +539,7 @@ building_factory_3 = {
 
 building_refinery = {
 	base_buildtime = @b2_time
+	base_cap_amount = 1
 
 	exempt_from_ai_planet_specialization = no
 	category = manufacturing
@@ -517,11 +549,6 @@ building_refinery = {
 			has_modifier = resort_colony
 			has_modifier = slave_colony
 		}
-	}
-
-	inline_script = {
-		script = jobs/refiner_add
-		AMOUNT = 1
 	}
 
 	resources = {
@@ -534,6 +561,35 @@ building_refinery = {
 		}
 	}
 
+	planet_modifier = {
+		planet_metallurgists_exotic_gases_produces_add = 2
+		planet_artisans_exotic_gases_produces_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_catalytic_empire = no
+			}
+		}
+		planet_metallurgists_minerals_upkeep_add = 4
+		planet_artisans_minerals_upkeep_add = 4
+	}
+
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_catalytic_empire = yes
+			}
+		}
+		planet_metallurgists_food_upkeep_add = 6
+		planet_artisans_food_upkeep_add = 6
+
+	}
+
 	prerequisites = {
 		"tech_exotic_gases"
 	}
@@ -541,6 +597,7 @@ building_refinery = {
 
 building_chemical_plant = {
 	base_buildtime = @b2_time
+	base_cap_amount = 1
 
 	exempt_from_ai_planet_specialization = no
 	category = manufacturing
@@ -552,11 +609,6 @@ building_chemical_plant = {
 		}
 	}
 
-	inline_script = {
-		script = jobs/chemist_add
-		AMOUNT = 1
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -565,6 +617,34 @@ building_chemical_plant = {
 		upkeep = {
 			energy = 3
 		}
+	}
+
+	planet_modifier = {
+		planet_metallurgists_volatile_motes_produces_add = 2
+		planet_artisans_volatile_motes_produces_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_catalytic_empire = no
+			}
+		}
+		planet_metallurgists_minerals_upkeep_add = 4
+		planet_artisans_minerals_upkeep_add = 4
+	}
+
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_catalytic_empire = yes
+			}
+		}
+		planet_metallurgists_food_upkeep_add = 6
+		planet_artisans_food_upkeep_add = 6
 	}
 
 	prerequisites = {
@@ -574,6 +654,7 @@ building_chemical_plant = {
 
 building_crystal_plant = {
 	base_buildtime = @b2_time
+	base_cap_amount = 1
 
 	exempt_from_ai_planet_specialization = no
 	category = manufacturing
@@ -585,11 +666,6 @@ building_crystal_plant = {
 		}
 	}
 
-	inline_script = {
-		script = jobs/translucer_add
-		AMOUNT = 1
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -598,6 +674,34 @@ building_crystal_plant = {
 		upkeep = {
 			energy = 3
 		}
+	}
+
+	planet_modifier = {
+		planet_metallurgists_rare_crystals_produces_add = 2
+		planet_artisans_rare_crystals_produces_add = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_catalytic_empire = no
+			}
+		}
+		planet_metallurgists_minerals_upkeep_add = 4
+		planet_artisans_minerals_upkeep_add = 4
+	}
+
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_catalytic_empire = yes
+			}
+		}
+		planet_metallurgists_food_upkeep_add = 6
+		planet_artisans_food_upkeep_add = 6
 	}
 
 	prerequisites = {
@@ -720,9 +824,7 @@ building_ministry_production = {
 	}
 
 	planet_modifier = {
-		job_politician_add = 1
-		planet_metallurgists_produces_mult = 0.15
-		planet_artisans_produces_mult = 0.15
+		job_politician_add = 100
 	}
 
 	resources = {
@@ -826,7 +928,7 @@ building_production_center = {
 				is_catalytic_empire = no
 			}
 		}
-		job_alloy_drone_add = 2
+		job_alloy_drone_add = 200
 	}
 
 	triggered_planet_modifier = {
@@ -837,7 +939,7 @@ building_production_center = {
 				is_catalytic_empire = yes
 			}
 		}
-		job_catalytic_drone_add = 2
+		job_catalytic_drone_add = 200
 	}
 
 	triggered_planet_modifier = {
@@ -848,7 +950,7 @@ building_production_center = {
 				is_catalytic_empire = no
 			}
 		}
-		job_fabricator_add = 1
+		job_fabricator_add = 100
 	}
 
 	triggered_planet_modifier = {
@@ -859,7 +961,7 @@ building_production_center = {
 				is_catalytic_empire = yes
 			}
 		}
-		job_catalytic_drone_add = 1
+		job_catalytic_drone_add = 100
 	}
 
 	prerequisites = {
@@ -1253,21 +1355,6 @@ building_archaeo_refinery = {
 			has_modifier = slave_colony
 		}
 		owner = { has_technology = tech_archaeo_refinery }
-	}
-
-	inline_script = {
-		script = jobs/chemist_add
-		AMOUNT = 1
-	}
-
-	inline_script = {
-		script = jobs/refiner_add
-		AMOUNT = 1
-	}
-
-	inline_script = {
-		script = jobs/translucer_add
-		AMOUNT = 1
 	}
 
 	planet_modifier = {

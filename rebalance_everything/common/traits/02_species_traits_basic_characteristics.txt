@@ -112,7 +112,6 @@ trait_mechanical = {
 
 trait_syncretic_proles = {
 	cost = 1
-	potential_crossbreeding_chance = 0.33
 	opposites = { "trait_intelligent" "trait_erudite" "trait_natural_engineers" "trait_natural_physicists" "trait_natural_sociologists" "trait_machine_unit" }
 	initial = no
 	randomized = no
@@ -135,7 +134,7 @@ trait_syncretic_proles = {
 	custom_tooltip = TRAIT_SYNCRETIC_PROLES_EFFECT
 	modifier = {
 		pop_happiness = 0.10
-		planet_jobs_produces_mult = 0.10
+		pop_bonus_workforce_mult = 0.10
 	}
 	slave_cost = {
 		energy = 500
@@ -144,7 +143,6 @@ trait_syncretic_proles = {
 
 trait_lithoid = {
 	cost = 0
-	potential_crossbreeding_chance = 0
 
 	sorting_priority = 20
 
@@ -250,7 +248,7 @@ trait_aquatic = {
 	}
 
 	custom_tooltip_with_modifiers = trait_aquatic_tooltip
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = planet
 			planet = {
@@ -261,11 +259,14 @@ trait_aquatic = {
 			}
 		}
 		pop_housing_usage_mult = -0.1
-		planet_jobs_food_produces_mult = 0.1
-		planet_jobs_minerals_produces_mult = 0.1
-		planet_jobs_energy_produces_mult = 0.1
+		pop_farmer_bonus_workforce_mult = 0.1
+		pop_miner_bonus_workforce_mult = 0.1
+		pop_technician_bonus_workforce_mult = 0.1
+		pop_agri_drone_bonus_workforce_mult = 0.1
+		pop_mining_drone_bonus_workforce_mult = 0.1
+		pop_technician_drone_bonus_workforce_mult = 0.1
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = planet
 			planet = {
@@ -278,11 +279,14 @@ trait_aquatic = {
 			}
 		}
 		pop_housing_usage_mult = -0.05
-		planet_jobs_food_produces_mult = 0.05
-		planet_jobs_minerals_produces_mult = 0.05
-		planet_jobs_energy_produces_mult = 0.05
+		pop_farmer_bonus_workforce_mult = 0.05
+		pop_miner_bonus_workforce_mult = 0.05
+		pop_technician_bonus_workforce_mult = 0.05
+		pop_agri_drone_bonus_workforce_mult = 0.05
+		pop_mining_drone_bonus_workforce_mult = 0.05
+		pop_technician_drone_bonus_workforce_mult = 0.05
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = planet
 			planet = {
@@ -295,7 +299,7 @@ trait_aquatic = {
 		}
 		pop_housing_usage_mult = 0.3
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = planet
 			planet = {
@@ -414,7 +418,7 @@ trait_robot_aquatic = {
 	}
 
 	custom_tooltip_with_modifiers = trait_robot_aquatic_tooltip
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = planet
 			planet = {
@@ -425,11 +429,14 @@ trait_robot_aquatic = {
 			}
 		}
 		pop_housing_usage_mult = -0.1
-		planet_jobs_food_produces_mult = 0.1
-		planet_jobs_minerals_produces_mult = 0.1
-		planet_jobs_energy_produces_mult = 0.1
+		pop_farmer_bonus_workforce_mult = 0.1
+		pop_miner_bonus_workforce_mult = 0.1
+		pop_technician_bonus_workforce_mult = 0.1
+		pop_agri_drone_bonus_workforce_mult = 0.1
+		pop_mining_drone_bonus_workforce_mult = 0.1
+		pop_technician_drone_bonus_workforce_mult = 0.1
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = planet
 			planet = {
@@ -442,11 +449,14 @@ trait_robot_aquatic = {
 			}
 		}
 		pop_housing_usage_mult = -0.05
-		planet_jobs_food_produces_mult = 0.05
-		planet_jobs_minerals_produces_mult = 0.05
-		planet_jobs_energy_produces_mult = 0.05
+		pop_farmer_bonus_workforce_mult = 0.05
+		pop_miner_bonus_workforce_mult = 0.05
+		pop_technician_bonus_workforce_mult = 0.05
+		pop_agri_drone_bonus_workforce_mult = 0.05
+		pop_mining_drone_bonus_workforce_mult = 0.05
+		pop_technician_drone_bonus_workforce_mult = 0.05
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = planet
 			planet = {
@@ -459,7 +469,7 @@ trait_robot_aquatic = {
 		}
 		pop_housing_usage_mult = 0.3
 	}
-	triggered_pop_modifier = {
+	triggered_pop_group_modifier = {
 		potential = {
 			exists = planet
 			planet = {
@@ -535,7 +545,6 @@ trait_robot_aquatic = {
 
 trait_necrophage = {
 	cost = 0
-	potential_crossbreeding_chance = 0
 	opposites = { "trait_plantoid_budding" "trait_lithoid_budding" "trait_advanced_budding" "trait_tiyanki" }
 	sorting_priority = 20
 
@@ -566,9 +575,9 @@ trait_necrophage = {
 		planet_pops_organics_food_upkeep_mult = -0.5
 		planet_pops_organics_minerals_upkeep_mult = -0.5
 		planet_pops_organics_energy_upkeep_mult = -0.5
-		planet_jobs_ruler_produces_mult = 0.05
-		planet_jobs_specialist_only_produces_mult = 0.05
-		planet_jobs_worker_only_produces_mult = -0.1
+		pop_cat_ruler_bonus_workforce_mult = 0.05
+		pop_cat_specialist_bonus_workforce_mult = 0.05
+		pop_cat_worker_bonus_workforce_mult = -0.1
 	}
 
 	custom_tooltip_with_modifiers = trait_necrophage_gestalt_tooltip
@@ -576,7 +585,6 @@ trait_necrophage = {
 
 trait_clone_soldier_infertile = {
 	cost = 0
-	potential_crossbreeding_chance = 0
 	opposites = { "trait_slow_breeders" "trait_rapid_breeders" "trait_plantoid_budding" "trait_lithoid_budding" "trait_advanced_budding" "trait_vat_grown" "trait_tiyanki" "trait_humanoid_psychological_infertility" "trait_humanoid_existential_iteroparity" }
 	sorting_priority = 20
 
@@ -618,7 +626,6 @@ trait_clone_soldier_infertile = {
 
 trait_clone_soldier_infertile_full_potential = {
 	cost = 0
-	potential_crossbreeding_chance = 0
 	opposites = { "trait_slow_breeders" "trait_rapid_breeders" "trait_plantoid_budding" "trait_lithoid_budding" "trait_advanced_budding" "trait_vat_grown" "trait_tiyanki" "trait_humanoid_psychological_infertility" "trait_humanoid_existential_iteroparity" }
 	sorting_priority = 20
 
@@ -652,8 +659,8 @@ trait_clone_soldier_infertile_full_potential = {
 		# Pop modifiers
 		pop_government_ethic_attraction = 0.50
 		pop_environment_tolerance = 0.20
-		planet_jobs_ruler_produces_mult = 0.4
-		planet_jobs_specialist_produces_mult = 0.25
+		pop_cat_ruler_bonus_workforce_mult = 0.4
+		pop_cat_specialist_bonus_workforce_mult = 0.25
 
 		# Leader modifiers
 		army_damage_mult = 0.75
@@ -705,7 +712,6 @@ trait_clone_soldier_fertile = {
 
 trait_cave_dweller = {
 	cost = 0
-	potential_crossbreeding_chance = 0
 	opposites = { "trait_plantoid_phototrophic" "trait_aquatic" "trait_advanced_phototrophic" }
 	sorting_priority = 20
 
@@ -732,7 +738,8 @@ trait_cave_dweller = {
 	custom_tooltip_with_modifiers = trait_cave_dweller_tooltip
 	modifier = {
 		habitability_floor_add = 0.5
-		planet_jobs_minerals_produces_mult = 0.15
+		pop_miner_bonus_workforce_mult = 0.15
+		pop_mining_drone_bonus_workforce_mult = 0.15
 		species_empire_size_mult = 0.10
 	}
 	triggered_planet_growth_habitability_modifier = {
@@ -764,7 +771,6 @@ trait_cave_dweller = {
 
 trait_robot_cave_dweller = {
 	cost = 0
-	potential_crossbreeding_chance = 0
 	opposites = { "trait_robot_aquatic" }
 	sorting_priority = 20
 
@@ -790,7 +796,8 @@ trait_robot_cave_dweller = {
 	custom_tooltip_with_modifiers = trait_robot_cave_dweller_tooltip
 	modifier = {
 		habitability_floor_add = 0.5
-		planet_jobs_minerals_produces_mult = 0.15
+		pop_miner_bonus_workforce_mult = 0.15
+		pop_mining_drone_bonus_workforce_mult = 0.15
 		species_empire_size_mult = 0.10
 	}
 	triggered_planet_growth_habitability_modifier = {
@@ -813,7 +820,6 @@ trait_robot_cave_dweller = {
 
 trait_perfected_genes = {
 	cost = 0
-	potential_crossbreeding_chance = 0
 	opposites = { trait_fleeting trait_weak }
 	sorting_priority = 20
 
