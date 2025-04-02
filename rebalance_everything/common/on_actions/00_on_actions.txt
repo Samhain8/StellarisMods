@@ -1132,7 +1132,6 @@ on_colonization_started = {
 		origin.3101 #Remnants colonial goodies
 		federations3.120 #Kept Grounds, if Wenkwort Artem has been colonised
 		origin.5510 #Broken Shackles - First Colony
-		action.655	# Reset colony type upon colonization if this was a former pre-ftl world.
 		origin.7326	# Fruitful Origin - someone else colonizes the planet
 		origin.7328	# Fruitful Origin - colonizing a planet without opening the seeds
 		astral_rift.2698 # Randomly adds certain blockers if owner has colonization drones

@@ -1562,11 +1562,11 @@ ship_event = {
 								has_any_ethic = yes
 								NOT = { has_ethic = ethic_xenophile }
 							}
-							count > 6
+							count > 600
 						}
 					}
 					while = {
-						count = 6
+						count = 3
 						pop_group_transfer_ethic = {
 							ETHOS = ethic_xenophile
 							AMOUNT = 100

@@ -1,5 +1,6 @@
 # "CYBERNETIC CREED" ORIGIN
 
+
 haruspex = {
 	category = specialist
 

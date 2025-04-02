@@ -1,5 +1,5 @@
 complex_drone = {
-	rank = 0
+	rank = 3
 	clothes_texture_index = 2
 
 	change_job_threshold = 1.25
@@ -58,7 +58,7 @@ complex_drone = {
 }
 
 simple_drone = {
-	rank = 0
+	rank = 2
 	clothes_texture_index = 2
 
 	change_job_threshold = 1.15

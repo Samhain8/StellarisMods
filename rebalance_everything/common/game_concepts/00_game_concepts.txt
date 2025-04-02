@@ -134,6 +134,7 @@ concept_engineering_research = {
 }
 
 concept_authority = {
+	alias = { concept_authorities }
 	databank = {
 		category = db_empire
 		icon = "GFX_text_databank_empire"
@@ -498,6 +499,11 @@ concept_planet = {
 
 concept_sector = {
 	alias = { concept_sectors }
+	databank = {
+		category = db_exploration
+		icon = "GFX_text_databank_exploration"
+		picture = "GFX_evt_partition"
+	}
 }
 
 concept_resettlement = {
@@ -530,7 +536,7 @@ concept_system = {
 	alias = { concept_systems }
 	databank = {
 		category = db_exploration
-		icon = "GFX_text_databank_exploration"
+		icon = "GFX_text_system"
 		picture = "GFX_evt_ship_in_orbit_3"
 	}
 }
@@ -546,6 +552,11 @@ concept_envoy = {
 
 concept_leader_trait = {
 	alias = { concept_leader_traits }
+	databank = {
+		category = db_empire
+		icon = "GFX_text_databank_empire"
+		picture = "GFX_evt_grand_speech"
+	}
 }
 
 concept_civic = {
@@ -575,6 +586,11 @@ concept_starbase_upkeep = {
 
 concept_owned_system = {
 	alias = { concept_owned_systems }
+	databank = {
+        category = db_development
+        icon = "GFX_text_databank_development"
+        picture = "GFX_evt_friendly_enlightenment"
+    }
 }
 
 concept_naval_capacity = {
@@ -721,16 +737,31 @@ concept_space_fauna = {
 concept_official = {
 	alias = { concept_officials }
 	icon = "gfx/interface/icons/text_icons/text_icon_official.dds"
+	databank = {
+		category = db_development
+		icon = "GFX_text_databank_development"
+		picture = "GFX_evt_acquire_asset"
+	}
 }
 
 concept_commander = {
 	alias = { concept_commanders }
 	icon = "gfx/interface/icons/text_icons/text_icon_commander.dds"
+	databank = {
+		category = db_conquest
+		icon = "GFX_text_databank_conquest"
+		picture = "GFX_evt_astral_rift_tower_invitation"
+	}
 }
 
 concept_scientist = {
 	alias = { concept_scientists }
 	icon = "gfx/interface/icons/text_icons/text_icon_scientist.dds"
+	databank = {
+		category = db_exploration
+		icon = "GFX_text_databank_exploration"
+		picture = "GFX_evt_scientific_experiments"
+	}
 }
 
 concept_blocker = {
@@ -745,27 +776,58 @@ concept_blocker = {
 
 concept_event_chain = {
 	alias = { concept_event_chains }
+	databank = {
+		category = db_empire
+		icon = "GFX_text_databank_empire"
+		picture = "GFX_evt_cosmic_storms_green_skies"
+	}
 }
 
 concept_special_project = {
 	alias = { concept_special_projects }
+	databank = {
+		category = db_empire
+		icon = "GFX_text_databank_empire"
+		picture = "GFX_evt_cosmic_storms_broadcast_hacking"
+	}
 }
 
 concept_milestone = {
 	alias = { concept_milestones }
+	databank = {
+		category = db_empire
+		icon = "GFX_text_databank_empire"
+		picture = "GFX_evt_happy_reunion"
+	}
 }
 
 concept_empire_focus = {
 	alias = { concept_empire_focuses }
+	databank = {
+		category = db_empire
+		icon = "GFX_text_databank_empire"
+		picture = "GFX_evt_hive_mind"
+	}
 }
 
 concept_scoreboard = { }
 
 concept_living_standard = {
 	alias = { concept_living_standards }
+	databank = {
+		category = db_development
+		icon = "GFX_text_databank_development"
+		picture = "GFX_evt_shroudwalker_teachers"
+	}
 }
 
-concept_political_power = { }
+concept_political_power = {
+	databank = {
+		category = db_empire
+		icon = "GFX_text_databank_empire"
+		picture = "GFX_evt_enclave_overlord"
+	}
+}
 
 concept_debris = { }
 
@@ -813,8 +875,8 @@ concept_diplomacy = {
 	}
 }
 
-concept_vassal_agreement = {
-	alias = { concept_vassal_agreements }
+concept_subject_agreement = {
+	alias = { concept_subject_agreements }
 	databank = {
 		category = db_conquest
 		icon = "GFX_text_databank_conquest"
@@ -901,4 +963,12 @@ concept_first_contact = {
 
 concept_branch_office = {
 	alias = { concept_branch_offices }
+}
+
+concept_workforce = {
+	databank = {
+        category = db_development
+        icon = "GFX_text_databank_development"
+        picture = "GFX_evt_individualistic_machines_2"
+    }
 }

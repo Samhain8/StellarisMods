@@ -2031,7 +2031,7 @@ leader_trait_refinement_focus = {
 			add = @designation_bonus
 			exists = planet
 			planet = {
-				has_refinery_designation = yes
+				has_industrial_designation = yes
 			}
 		}
 	}

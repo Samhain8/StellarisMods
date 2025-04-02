@@ -12,6 +12,5 @@ exclude = {
 	zone_unity
 	zone_research
 	zone_trade
-	zone_amenities
 	zone_fortress
 }

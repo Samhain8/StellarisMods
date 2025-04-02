@@ -1031,7 +1031,7 @@ country_event = {
 					}
 				}
 				while = {
-					count = 3
+					count = 4
 					create_pop_group = {
 						species = event_target:radio_plants
 					}

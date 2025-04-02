@@ -496,28 +496,7 @@ country_assigned_priests = {
 	complex_trigger_modifier = {
 		trigger = num_assigned_jobs
 		parameters = {
-			job = priest
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_assigned_jobs
-		parameters = {
-			job = death_priest
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_assigned_jobs
-		parameters = {
-			job = preacher
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_assigned_jobs
-		parameters = {
-			job = low_tech_priest
+			job = bureaucrat
 		}
 		mode = add
 	}
@@ -525,20 +504,6 @@ country_assigned_priests = {
 		trigger = num_assigned_jobs
 		parameters = {
 			job = technophant
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_assigned_jobs
-		parameters = {
-			job = haruspex
-		}
-		mode = add
-	}
-	complex_trigger_modifier = {
-		trigger = num_assigned_jobs
-		parameters = {
-			job = numistic_priest
 		}
 		mode = add
 	}

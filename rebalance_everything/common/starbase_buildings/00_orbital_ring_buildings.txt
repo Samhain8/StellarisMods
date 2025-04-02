@@ -291,9 +291,20 @@ ring_consumer_goods_hub = {
 		is_orbital_ring = yes
 	}
 
-	planet_modifier = {
+	triggered_planet_modifier = {
+		potential = {
+			industrial_jobs_are_catalytic_trigger = no
+		}
 		planet_artisans_consumer_goods_produces_add = 1
 		planet_artisans_minerals_upkeep_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			industrial_jobs_are_catalytic_trigger = yes
+		}
+		planet_artisans_consumer_goods_produces_add = 1.25
+		planet_artisans_food_upkeep_add = 1.5
 	}
 
 	resources = {
@@ -331,10 +342,7 @@ ring_alloys_hub = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
-				is_catalytic_empire = no
-			}
+			industrial_jobs_are_catalytic_trigger = no
 		}
 		modifier = {
 			planet_metallurgists_alloys_produces_add = 1
@@ -344,10 +352,7 @@ ring_alloys_hub = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
-				is_catalytic_empire = yes
-			}
+			industrial_jobs_are_catalytic_trigger = yes
 		}
 		modifier = {
 			planet_metallurgists_alloys_produces_add = 1.25

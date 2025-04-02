@@ -4630,7 +4630,7 @@ planet_event = {
 			}
 		}
 		weighted_random_owned_pop_group = {
-			add_modifier = { # TODO [AA]: [AUG-50352] Do this using pop groups
+			add_modifier = {
 				modifier = pop_angered
 				days = 7200
 			}
@@ -4639,7 +4639,7 @@ planet_event = {
 			limit = {
 				NOT = { has_modifier = pop_angered }
 			}
-			add_modifier = { # TODO [AA]: [AUG-50352] Do this using pop groups
+			add_modifier = {
 				modifier = pop_angered
 				days = 7200
 			}

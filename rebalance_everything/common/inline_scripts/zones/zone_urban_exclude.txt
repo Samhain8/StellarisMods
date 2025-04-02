@@ -1,3 +1,4 @@
 exclude = {
     building_order_keep
+    building_betharian_power_plant
 }

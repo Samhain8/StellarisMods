@@ -2341,7 +2341,7 @@
  gal_com_neighboring_synth_queen: "They are neighboring Cetana"
  gal_com_synth_queen_threat_smallest: "They don't consider Cetana a threat"
  gal_com_synth_queen_threat_small: "They consider Cetana a minor threat"
- gal_com_synth_queen_threat_medium: "They consider Cetana threat"
+ gal_com_synth_queen_threat_medium: "They consider Cetana a threat"
  gal_com_synth_queen_threat_large: "They consider Cetana a significant threat"
  gal_com_synth_queen_threat_very_large: "They consider Cetana a major threat"
  gal_com_synth_queen_threat_huge: "They consider Cetana an immense threat"

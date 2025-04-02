@@ -48,10 +48,29 @@ triggered_district_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = {
-			is_hive_empire = yes
+			is_gestalt = yes
+		}
+		NOR = {
+			is_planet_class = pc_hive	
+			is_planet_class = pc_machine
 		}
 	}
-	job_synapse_drone_add = $AMOUNT$
+	job_coordinator_add = $AMOUNT$
+}
+
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+		}
+		OR = {
+			is_planet_class = pc_hive	
+			is_planet_class = pc_machine
+		}
+	}
+	job_coordinator_add = $AMOUNT$
+	mult = 2	# Ecus get 3× as many jobs
 }
 
 triggered_desc = {
@@ -62,16 +81,6 @@ triggered_desc = {
 		}
 	}
 	text = job_synapse_drone_effect_desc
-}
-
-triggered_district_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = {
-			is_machine_empire = yes
-		}
-	}
-	job_coordinator_add = $AMOUNT$
 }
 
 triggered_desc = {

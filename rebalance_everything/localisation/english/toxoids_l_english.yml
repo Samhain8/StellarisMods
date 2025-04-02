@@ -545,6 +545,7 @@
 
  bath_attendant: "$job_bath_attendant$"
  job_bath_attendant:0 "Mutagenic Spa Attendant"
+ bath_attendant_hive: "$job_bath_attendant_hive$"
  job_bath_attendant_hive:0 "Permutation Attendance Drone"
  job_bath_attendant_machine:0 "Lubrication Terminal"
  job_bath_attendant_desc:0 "Trained Attendants for the Mutagenic Spas. Their purpose in life is to ensure their clients' continued health through a variety of services, including intemperate detoxification and carefully curated genotype degeneration."

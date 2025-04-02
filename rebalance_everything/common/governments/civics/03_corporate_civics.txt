@@ -878,10 +878,6 @@ civic_corporate_crafters = {
 	possible = {
 		civics = { NOT = { value = civic_crafters }	}
 	}
-	modifier = {
-		planet_artisans_consumer_goods_produces_add = 2
-		planet_artisans_trade_produces_add = 2
-	}
 	random_weight = {
 		base = @civic_uncommon_random_weight
 	}

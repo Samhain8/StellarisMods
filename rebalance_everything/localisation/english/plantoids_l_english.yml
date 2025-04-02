@@ -314,6 +314,7 @@
  mod_job_catalytic_technician_per_pop_short:0 "\n§G+1§! £mod_job_catalytic_technician_add£ per $VALUE$ £pop£"
 
 # Gestalt
+ catalytic_drone: "$job_catalytic_drone$"
  job_catalytic_drone:0 "Catalytic Drone"
  job_catalytic_drone_plural:0 "Catalytic Drones"
  job_catalytic_drone_desc:0 "Valuable organic compounds are processed into durable alloys for naval development and advanced construction by highly-specialized Catalytic Drones."

@@ -213,20 +213,9 @@ district_rw_hive = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_lithoid_empire = no }
 		}
 		modifier = {
-			job_synapse_drone_add = @base_district_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_lithoid_empire = yes }
-		}
-		modifier = {
-			job_synapse_drone_lithoid_add = @base_district_jobs
+			job_coordinator_add = @base_district_jobs
 		}
 	}
 
@@ -624,9 +613,9 @@ district_rw_science = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_drone_physicist_add = 1000
-			job_brain_drone_biologist_add = 1000
-			job_brain_drone_engineer_add = 1000
+			job_calculator_physicist_add = 1000
+			job_calculator_biologist_add = 1000
+			job_calculator_engineer_add = 1000
 		}
 	}
 
@@ -914,6 +903,7 @@ district_rw_industrial = {
 }
 
 district_rw_urban_1 = {
+	icon = district_rw_city_secondary
 	base_buildtime = @rw_district_buildtime
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
@@ -926,13 +916,11 @@ district_rw_urban_1 = {
 
 	show_on_uncolonized = {
 		exists = from
-		from = { is_regular_empire = yes }
 		uses_district_set = ring_world
 	}
 
 	potential = {
 		exists = owner
-		owner = { is_regular_empire = yes }
 		uses_district_set = ring_world
 	}
 
@@ -1050,6 +1038,7 @@ district_rw_urban_1 = {
 	}
 }
 district_rw_urban_2 = {
+	icon = district_rw_city_secondary
 	base_buildtime = @rw_district_buildtime
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
@@ -1060,13 +1049,11 @@ district_rw_urban_2 = {
 
 	show_on_uncolonized = {
 		exists = from
-		from = { is_regular_empire = yes }
 		uses_district_set = ring_world
 	}
 
 	potential = {
 		exists = owner
-		owner = { is_regular_empire = yes }
 		uses_district_set = ring_world
 	}
 
@@ -1185,6 +1172,7 @@ district_rw_urban_2 = {
 }
 
 district_rw_urban_3 = {
+	icon = district_rw_city_secondary
 	base_buildtime = @rw_district_buildtime
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
@@ -1195,13 +1183,11 @@ district_rw_urban_3 = {
 
 	show_on_uncolonized = {
 		exists = from
-		from = { is_regular_empire = yes }
 		uses_district_set = ring_world
 	}
 
 	potential = {
 		exists = owner
-		owner = { is_regular_empire = yes }
 		uses_district_set = ring_world
 	}
 

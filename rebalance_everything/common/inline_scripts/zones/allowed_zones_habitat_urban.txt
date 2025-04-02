@@ -7,8 +7,8 @@ include = {
 	zone_foundry
 	zone_factory
 	zone_unity
+	zone_research_unity
 	zone_trade
-	zone_amenities
 	zone_fortress
 }
 

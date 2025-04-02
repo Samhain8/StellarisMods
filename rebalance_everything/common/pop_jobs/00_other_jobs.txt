@@ -6,6 +6,13 @@ civilian = {
 	category = civilian
 	is_capped_by_modifier = no
 
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = no
+		}
+	}
+
 	swappable_data = {
 		default = {
 			building_icon = building_residence
@@ -669,7 +676,6 @@ criminal = {
 	}
 
 	contributes_to_diplo_weight = no
-	ignores_favorite = yes #this means that if you favorite e.g. clerks, the +1000 bonus will not matter for jobs working as criminals
 
 	possible_pre_triggers = {
 		has_owner = yes
@@ -724,7 +730,6 @@ deviant_drone = {
 	}
 
 	contributes_to_diplo_weight = no
-	ignores_favorite = yes
 
 	possible_pre_triggers = {
 		has_planet = yes
@@ -759,7 +764,6 @@ corrupt_drone = {
 	}
 
 	contributes_to_diplo_weight = no
-	ignores_favorite = yes
 
 	possible_pre_triggers = {
 		has_planet = yes

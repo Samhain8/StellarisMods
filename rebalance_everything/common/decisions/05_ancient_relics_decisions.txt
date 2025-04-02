@@ -232,27 +232,9 @@ decision_museum_exhibits = {
 		NOT = {
 			has_modifier = "planet_museum_exhibits"
 		}
-		OR = {
-			num_assigned_jobs = {
-				job = bureaucrat
-				value >= 1
-			}
-			num_assigned_jobs = {
-				job = priest
-				value >= 1
-			}
-			num_assigned_jobs = {
-				job = death_priest
-				value >= 1
-			}
-			num_assigned_jobs = {
-				job = steward
-				value >= 1
-			}
-			num_assigned_jobs = {
-				job = haruspex
-				value >= 1
-			}
+		num_assigned_jobs = {
+			job = bureaucrat
+			value >= 1
 		}
 	}
 

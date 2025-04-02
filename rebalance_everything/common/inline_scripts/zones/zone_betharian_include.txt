@@ -1,0 +1,9 @@
+# This should include buildings from zone_minerals_include
+include = {
+	building_mineral_purification_plant
+	building_mineral_purification_hub
+	building_resource_silo
+	building_automation_1
+	building_crystal_mines
+	building_betharian_power_plant
+}

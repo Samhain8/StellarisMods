@@ -197,8 +197,8 @@
 
  building_adakkaria_patriotic_institute: "Patriotic Institute of Celebration"
  building_adakkaria_patriotic_institute_desc: "The $building_adakkaria_patriotic_institute$ is a trove of advanced insights into the sentient condition. Here we empower people to cultivate their inner tempest while avoiding the luring song of the Convention's cruelty."
- building_adakkaria_patriotic_institute_effect_desc: "If a cosmic storm passes this system, there is a 10% chance that §Y100§! £pop£ §HPops§! gain the $Name_Storm_Fused$ trait."
- building_adakkaria_patriotic_institute_effect_upgrade_desc: "If a cosmic storm passes this system, there is a 40% chance that §Y100§! £pop£ §HPops§! gain the $Name_Storm_Fused$ trait. Additionally, there is a 20% chance every 10 years that §Y100§! £pop£ §HPops§! are transformed into a cosmic storm."
+ building_adakkaria_patriotic_institute_effect_desc: "If a cosmic storm passes this system, there is a 10% chance that £pop£ §HPops§! gain the $Name_Storm_Fused$ trait."
+ building_adakkaria_patriotic_institute_effect_upgrade_desc: "If a cosmic storm passes this system, there is a 40% chance that £pop£ §HPops§! gain the $Name_Storm_Fused$ trait. Additionally, there is a 20% chance every 10 years that §Y100§! £pop£ §HPops§! are transformed into a cosmic storm."
 
  building_astrometeorology_observation_center: "Astrometeorology Observatory"
  building_astrometeorology_observation_center_desc: "With delicate sensors, this observation center studies diverse environmental conditions to better our understanding of the natural universe."

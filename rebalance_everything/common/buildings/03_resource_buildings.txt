@@ -44,6 +44,11 @@ building_hydroponics_farm = {
 		planet_farmers_food_produces_add = 2
 	}
 
+	inline_script = {
+		script = jobs/farmers_add
+		AMOUNT = @building_static_jobs
+	}
+
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -60,7 +65,6 @@ building_hydroponics_farm = {
 
 building_food_processing_facility = {
 	base_buildtime = @b1_time
-	base_cap_amount = 1
 	category = resource
 
 	potential = {
@@ -94,10 +98,6 @@ building_food_processing_facility = {
 				has_any_farming_district_or_buildings = no
 			}
 		}
-	}
-
-	planet_modifier = {
-		planet_farmers_produces_mult = 0.20
 	}
 
 	inline_script = {
@@ -294,7 +294,6 @@ building_mineral_purification_plant = {
 	}
 
 	base_buildtime = @b1_time
-	base_cap_amount = 1
 	category = resource
 
 	destroy_trigger = {
@@ -337,10 +336,6 @@ building_mineral_purification_plant = {
 		}
 	}
 
-	planet_modifier = {
-		planet_miners_produces_mult = 0.20
-	}
-
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -377,6 +372,11 @@ building_mineral_purification_plant = {
 		upkeep = {
 			energy = 2
 		}
+	}
+
+	inline_script = {
+		script = jobs/miners_add
+		AMOUNT = @building_static_jobs
 	}
 
 	prerequisites = {
@@ -520,7 +520,6 @@ building_mineral_purification_hub = {
 
 building_energy_grid = {
 	base_buildtime = @b1_time
-	base_cap_amount = 1
 	category = resource
 
 	destroy_trigger = {
@@ -560,10 +559,6 @@ building_energy_grid = {
 		}
 	}
 
-	planet_modifier = {
-		planet_technician_produces_mult = 0.20
-	}
-
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -599,6 +594,11 @@ building_energy_grid = {
 		upkeep = {
 			energy = 2
 		}
+	}
+
+	inline_script = {
+		script = jobs/technicians_add
+		AMOUNT = @building_static_jobs
 	}
 
 	prerequisites = {

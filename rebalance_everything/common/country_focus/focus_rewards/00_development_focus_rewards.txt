@@ -7,121 +7,111 @@
 ##########################
 
 development_rewards_1 = {
-	name = "development_reward_1.name"
 	category = development
 	cost = 50
 	mode = right
 
 	on_success = {
-		add_tech_option_no_progress_effect = { TECH = tech_planetary_unification }
+		add_research_option = tech_planetary_unification
 		create_focus_reward_message = { CATEGORY = DEVELOPMENT }
 	}
 }
 
 development_rewards_2 = {
-	name = "development_reward_2.name"
 	category = development
 	cost = 100
 	mode = left
 
 	on_success = {
-		add_tech_option_no_progress_effect = { TECH = tech_adaptive_bureaucracy }
+		add_research_option = tech_adaptive_bureaucracy
 		create_focus_reward_message = { CATEGORY = DEVELOPMENT }
 	}
 }
 
 development_rewards_3 = {
-	name = "development_reward_3.name"
 	category = development
 	cost = 150
 	mode = right
 
 	on_success = {
-		add_tech_option_no_progress_effect = { TECH = tech_federation_code }
+		add_research_option = tech_federation_code
 		create_focus_reward_message = { CATEGORY = DEVELOPMENT }
 	}
 }
 
 development_rewards_4 = {
-	name = "development_reward_4.name"
 	category = development
 	cost = 200
 	mode = left
 
 	on_success = {
-		add_tech_option_no_progress_effect = { TECH = tech_starbase_3 }
+		add_research_option = tech_starbase_3
 		create_focus_reward_message = { CATEGORY = DEVELOPMENT }
 	}
 }
 
 development_rewards_5 = {
-	name = "development_reward_5.name"
 	category = development
 	cost = 250
 	mode = right
 
 	on_success = {
-		add_tech_option_no_progress_effect = { TECH = tech_xeno_diplomacy }
+		add_research_option = tech_xeno_diplomacy
 		create_focus_reward_message = { CATEGORY = DEVELOPMENT }
 	}
 }
 
 development_rewards_6 = {
-	name = "development_reward_6.name"
 	category = development
 	cost = 300
 	mode = left
 
 	on_success = {
-		add_tech_option_no_progress_effect = { TECH = tech_effective_bureaucracy }
+		add_research_option = tech_effective_bureaucracy
 		create_focus_reward_message = { CATEGORY = DEVELOPMENT }
 	}
 }
 
 development_rewards_7 = {
-	name = "development_reward_7.name"
 	category = development
 	cost = 350
 	mode = right
 
 	on_success = {
-		add_tech_option_no_progress_effect = { TECH = tech_starbase_4 }
+		add_research_option = tech_starbase_4
 		create_focus_reward_message = { CATEGORY = DEVELOPMENT }
 	}
 }
 
 development_rewards_8 = {
-	name = "development_reward_8.name"
 	category = development
 	cost = 400
 	mode = left
 
 	on_success = {
-		add_tech_option_no_progress_effect = { TECH = tech_xeno_relations }
+		add_research_option = tech_xeno_relations
 		create_focus_reward_message = { CATEGORY = DEVELOPMENT }
 	}
 }
 
 development_rewards_9 = {
-	name = "development_reward_9.name"
 	category = development
 	cost = 450
 	mode = right
 
 	on_success = {
-		add_tech_option_no_progress_effect = { TECH = tech_starbase_5 }
+		add_research_option = tech_starbase_5
 		create_focus_reward_message = { CATEGORY = DEVELOPMENT }
 	}
 }
 
 development_rewards_10 = {
-	name = "development_reward_10.name"
 	category = development
 	cost = 500
 	mode = end
 
 	on_success = {
-		add_tech_option_no_progress_effect = { TECH = tech_mega_engineering }
+		add_research_option = tech_mega_engineering
 		create_focus_reward_message = { CATEGORY = DEVELOPMENT }
 	}
 }

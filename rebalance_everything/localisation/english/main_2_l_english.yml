@@ -4455,6 +4455,10 @@ requires_actor_not_selective_kinship: "$TRIGGER_FAIL$§RWe are [Root.GetSpeciesC
  building_hive_primitive_power_plant_desc:0 "$building_primitive_power_plant_desc$"
  building_hive_primitive_farm:0 "$building_primitive_farm$"
  building_hive_primitive_farm_desc:0 "$building_primitive_farm_desc$"
+ building_hive_primitive_node: "Simple Synaptic Node"
+ building_hive_primitive_node_desc: "Through this crude synaptic node, the will of the Hive will be strengthened."
+ building_machine_primitive_node: "Simple Uplink Node"
+ building_machine_primitive_node_desc: "An crude uplink node that decreases planetary latency."
 
  ####################################
  # Wonders

@@ -327,13 +327,6 @@ has_mining_designation = {
 	}
 }
 
-has_refinery_designation = {
-	OR = {
-		has_designation = col_refinery
-		has_designation = col_habitat_refinery
-	}
-}
-
 has_research_designation = {
 	OR = {
 		has_designation = col_research
@@ -360,8 +353,6 @@ has_unity_designation = {
 has_rural_designation = {
 	OR = {
 		has_designation = col_capital_extraction
-		has_designation = col_rural
-		has_designation = col_rural_gestalt
 		has_designation = col_hiv
 		has_designation = col_mac
 	}

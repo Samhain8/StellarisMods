@@ -1184,30 +1184,21 @@ building_hive_capital = {
 		script = buildings/on_all_capital_buildings
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_origin = origin_progenitor_hive }
-			is_planet_class = pc_hive
-		}
-		job_spawning_drone_add = -100
-		job_offspring_drone_add = 100
-	}
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = { has_origin = origin_progenitor_hive }
+	# 		is_planet_class = pc_hive
+	# 	}
+	# 	job_spawning_drone_add = -100
+	# 	job_offspring_drone_add = 100
+	# }
 
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_lithoid_empire = no }
 		}
-		job_synapse_drone_add = 200
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_lithoid_empire = yes }
-		}
-		job_synapse_drone_lithoid_add = 200
+		job_coordinator_add = 200
 	}
 
 	triggered_planet_modifier = {
@@ -1303,30 +1294,21 @@ building_hive_major_capital = {
 		script = buildings/on_all_capital_buildings
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_origin = origin_progenitor_hive }
-			is_planet_class = pc_hive
-		}
-		job_spawning_drone_add = -100
-		job_offspring_drone_add = 100
-	}
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = { has_origin = origin_progenitor_hive }
+	# 		is_planet_class = pc_hive
+	# 	}
+	# 	job_spawning_drone_add = -100
+	# 	job_offspring_drone_add = 100
+	# }
 
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_lithoid_empire = no }
 		}
-		job_synapse_drone_add = 300
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_lithoid_empire = yes }
-		}
-		job_synapse_drone_lithoid_add = 300
+		job_coordinator_add = 300
 	}
 
 	triggered_planet_modifier = {
@@ -1531,7 +1513,7 @@ building_hab_capital = {
 			}
 		}
 		modifier = {
-			job_steward_add = 200
+			job_bureaucrat_add = 200
 		}
 	}
 
@@ -1549,19 +1531,8 @@ building_hab_capital = {
 		potential = {
 			exists = owner
 			owner = { is_hive_empire = yes }
-			owner = { is_lithoid_empire = no }
 		}
-		job_synapse_drone_add = 200
-		planet_amenities_add = 300
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-			owner = { is_lithoid_empire = yes }
-		}
-		job_synapse_drone_lithoid_add = 200
+		job_coordinator_add = 200
 		planet_amenities_add = 300
 	}
 
@@ -1777,19 +1748,8 @@ building_hab_major_capital = {
 		potential = {
 			exists = owner
 			owner = { is_hive_empire = yes }
-			owner = { is_lithoid_empire = no }
 		}
-		job_synapse_drone_add = 300
-		planet_amenities_add = 300
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-			owner = { is_lithoid_empire = yes }
-		}
-		job_synapse_drone_lithoid_add = 300
+		job_coordinator_add = 300
 		planet_amenities_add = 300
 	}
 
@@ -1905,7 +1865,7 @@ building_hab_major_capital = {
 			}
 		}
 		modifier = {
-			job_steward_add = 300
+			job_bureaucrat_add = 300
 		}
 	}
 
@@ -2325,19 +2285,8 @@ building_hab_system_capital = {
 		potential = {
 			exists = owner
 			owner = { is_hive_empire = yes }
-			owner = { is_lithoid_empire = no }
 		}
-		job_synapse_drone_add = 400
-		planet_amenities_add = 300
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-			owner = { is_lithoid_empire = yes }
-		}
-		job_synapse_drone_lithoid_add = 400
+		job_coordinator_add = 400
 		planet_amenities_add = 300
 	}
 
@@ -2453,7 +2402,7 @@ building_hab_system_capital = {
 			}
 		}
 		modifier = {
-			job_steward_add = 400
+			job_bureaucrat_add = 400
 		}
 	}
 
@@ -2850,7 +2799,7 @@ building_resort_capital = {
 			}
 		}
 		modifier = {
-			job_steward_add = 200
+			job_bureaucrat_add = 200
 		}
 	}
 
@@ -3010,7 +2959,7 @@ building_resort_major_capital = {
 			}
 		}
 		modifier = {
-			job_steward_add = 200
+			job_bureaucrat_add = 200
 		}
 	}
 
@@ -3153,7 +3102,7 @@ building_slave_capital = {
 			}
 		}
 		modifier = {
-			job_steward_add = 300
+			job_bureaucrat_add = 300
 		}
 	}
 
@@ -3282,7 +3231,7 @@ building_slave_major_capital = {
 			}
 		}
 		modifier = {
-			job_steward_add = 300
+			job_bureaucrat_add = 300
 		}
 	}
 
@@ -3698,29 +3647,20 @@ building_imperial_hive_capital = {
 		text = building_hab_system_capital_tooltip
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			owner = { has_origin = origin_progenitor_hive }
-			is_planet_class = pc_hive
-		}
-		job_spawning_drone_add = -100
-		job_offspring_drone_add = 100
-	}
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		owner = { has_origin = origin_progenitor_hive }
+	# 		is_planet_class = pc_hive
+	# 	}
+	# 	job_spawning_drone_add = -100
+	# 	job_offspring_drone_add = 100
+	# }
 
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_lithoid_empire = no }
 		}
-		job_synapse_drone_add = 500
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_lithoid_empire = yes }
-		}
-		job_synapse_drone_lithoid_add = 500
+		job_coordinator_add = 500
 	}
 
 	triggered_planet_modifier = {

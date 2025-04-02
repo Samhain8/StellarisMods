@@ -1,5 +1,7 @@
 include = {
 	zone_minerals
+	zone_betharian
+	zone_subterranean_urban
 }
 
 exclude = {
@@ -10,7 +12,6 @@ exclude = {
 	zone_unity
 	zone_research
 	zone_trade
-	zone_amenities
 	zone_fortress
 	zone_food
 	zone_energy

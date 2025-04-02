@@ -9,6 +9,13 @@ ruler_unemployment = {
 		}
 	}
 
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = no
+		}
+	}
+
 	possible_pre_triggers = {
 		has_owner = yes
 		is_enslaved = no
@@ -67,6 +74,13 @@ specialist_unemployment = {
 			condition_string = SPECIALIST_JOB_TRIGGER
 			icon = unemployment
 			building_icon = building_capital
+		}
+	}
+
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = no
 		}
 	}
 
@@ -131,6 +145,13 @@ worker_unemployment = {
 		}
 	}
 
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = no
+		}
+	}
+
 	possible_pre_triggers = {
 		has_owner = yes
 		is_enslaved = no
@@ -180,3 +201,4 @@ worker_unemployment = {
 	can_set_priority = no
 	contributes_to_diplo_weight = no
 }
+	

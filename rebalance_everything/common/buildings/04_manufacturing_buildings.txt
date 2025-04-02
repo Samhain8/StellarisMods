@@ -4,7 +4,6 @@
 building_foundry_1 = {
 	can_build = yes
 	base_buildtime = @b1_time
-	base_cap_amount = 1
 	category = manufacturing
 
 	potential = {
@@ -45,10 +44,6 @@ building_foundry_1 = {
 		upkeep = {
 			energy = @b1_upkeep
 		}
-	}
-
-	planet_modifier = {
-		planet_metallurgists_produces_mult = 0.20
 	}
 
 	inline_script = {
@@ -113,10 +108,7 @@ building_foundry_2 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
-				is_catalytic_empire = no
-			}
+			industrial_jobs_are_catalytic_trigger = no
 		}
 		modifier = {
 			planet_metallurgists_alloys_produces_add = 1
@@ -126,17 +118,13 @@ building_foundry_2 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
-				is_catalytic_empire = yes
-			}
+			industrial_jobs_are_catalytic_trigger = yes
 		}
 		modifier = {
 			planet_metallurgists_alloys_produces_add = 1.25
 			planet_metallurgists_food_upkeep_add = 3
 		}
 	}
-
 }
 
 building_foundry_3 = {
@@ -212,10 +200,7 @@ building_foundry_3 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
-				is_catalytic_empire = no
-			}
+			industrial_jobs_are_catalytic_trigger = no
 		}
 		modifier = {
 			planet_metallurgists_alloys_produces_add = 2
@@ -225,10 +210,7 @@ building_foundry_3 = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
-				is_catalytic_empire = yes
-			}
+			industrial_jobs_are_catalytic_trigger = yes
 		}
 		modifier = {
 			planet_metallurgists_alloys_produces_add = 2.5
@@ -239,10 +221,7 @@ building_foundry_3 = {
 	triggered_planet_modifier = {
 		potential = {
 			has_ringworld_output_boost = yes
-			exists = owner
-			owner = {
-				is_catalytic_empire = no
-			}
+			industrial_jobs_are_catalytic_trigger = no
 		}
 		modifier = {
 			planet_metallurgists_alloys_produces_add = 1
@@ -253,10 +232,7 @@ building_foundry_3 = {
 	triggered_planet_modifier = {
 		potential = {
 			has_ringworld_output_boost = yes
-			exists = owner
-			owner = {
-				is_catalytic_empire = yes
-			}
+			industrial_jobs_are_catalytic_trigger = yes
 		}
 		modifier = {
 			planet_metallurgists_alloys_produces_add = 1.25
@@ -273,7 +249,6 @@ building_foundry_3 = {
 building_factory_1 = {
 	can_build = yes
 	base_buildtime = @b1_time
-	base_cap_amount = 1
 	category = manufacturing
 
 	potential = {
@@ -345,10 +320,6 @@ building_factory_1 = {
 		}
 	}
 
-	planet_modifier = {
-		planet_artisans_produces_mult = 0.20
-	}
-
 	inline_script = {
 		script = jobs/factory_add
 		AMOUNT = @building_static_jobs
@@ -406,9 +377,20 @@ building_factory_2 = {
 		}
 	}
 
-	planet_modifier = {
+	triggered_planet_modifier = {
+		potential = {
+			industrial_jobs_are_catalytic_trigger = no
+		}
 		planet_artisans_consumer_goods_produces_add = 1
 		planet_artisans_minerals_upkeep_add = 1
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			industrial_jobs_are_catalytic_trigger = yes
+		}
+		planet_artisans_consumer_goods_produces_add = 1.25
+		planet_artisans_food_upkeep_add = 1.5
 	}
 
 	resources = {
@@ -480,8 +462,10 @@ building_factory_3 = {
 		}
 	}
 
-
-	planet_modifier = {
+	triggered_planet_modifier = {
+		potential = {
+			industrial_jobs_are_catalytic_trigger = no
+		}
 		planet_artisans_consumer_goods_produces_add = 2
 		planet_artisans_minerals_upkeep_add = 2
 	}
@@ -489,10 +473,30 @@ building_factory_3 = {
 	triggered_planet_modifier = {
 		potential = {
 			has_ringworld_output_boost = yes
+			industrial_jobs_are_catalytic_trigger = no
 		}
 		modifier = {
 			planet_artisans_consumer_goods_produces_add = 1
 			planet_artisans_minerals_upkeep_add = 1
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			industrial_jobs_are_catalytic_trigger = yes
+		}
+		planet_artisans_consumer_goods_produces_add = 2.5
+		planet_artisans_food_upkeep_add = 3
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_ringworld_output_boost = yes
+			industrial_jobs_are_catalytic_trigger = yes
+		}
+		modifier = {
+			planet_artisans_consumer_goods_produces_add = 1.25
+			planet_artisans_food_upkeep_add = 1.5
 		}
 	}
 
@@ -568,10 +572,7 @@ building_refinery = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
-				is_catalytic_empire = no
-			}
+			industrial_jobs_are_catalytic_trigger = no
 		}
 		planet_metallurgists_minerals_upkeep_add = 4
 		planet_artisans_minerals_upkeep_add = 4
@@ -580,14 +581,10 @@ building_refinery = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
-				is_catalytic_empire = yes
-			}
+			industrial_jobs_are_catalytic_trigger = yes
 		}
 		planet_metallurgists_food_upkeep_add = 6
 		planet_artisans_food_upkeep_add = 6
-
 	}
 
 	prerequisites = {
@@ -626,10 +623,7 @@ building_chemical_plant = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
-				is_catalytic_empire = no
-			}
+			industrial_jobs_are_catalytic_trigger = no
 		}
 		planet_metallurgists_minerals_upkeep_add = 4
 		planet_artisans_minerals_upkeep_add = 4
@@ -638,10 +632,7 @@ building_chemical_plant = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
-				is_catalytic_empire = yes
-			}
+			industrial_jobs_are_catalytic_trigger = yes
 		}
 		planet_metallurgists_food_upkeep_add = 6
 		planet_artisans_food_upkeep_add = 6
@@ -683,10 +674,7 @@ building_crystal_plant = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
-				is_catalytic_empire = no
-			}
+			industrial_jobs_are_catalytic_trigger = no
 		}
 		planet_metallurgists_minerals_upkeep_add = 4
 		planet_artisans_minerals_upkeep_add = 4
@@ -695,10 +683,7 @@ building_crystal_plant = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = {
-				is_catalytic_empire = yes
-			}
+			industrial_jobs_are_catalytic_trigger = yes
 		}
 		planet_metallurgists_food_upkeep_add = 6
 		planet_artisans_food_upkeep_add = 6
@@ -928,7 +913,7 @@ building_production_center = {
 				is_catalytic_empire = no
 			}
 		}
-		job_alloy_drone_add = 200
+		job_fabricator_add = 200
 	}
 
 	triggered_planet_modifier = {
@@ -939,7 +924,7 @@ building_production_center = {
 				is_catalytic_empire = yes
 			}
 		}
-		job_catalytic_drone_add = 200
+		job_fabricator_add = 200
 	}
 
 	triggered_planet_modifier = {
@@ -961,7 +946,7 @@ building_production_center = {
 				is_catalytic_empire = yes
 			}
 		}
-		job_catalytic_drone_add = 100
+		job_fabricator_add = 100
 	}
 
 	prerequisites = {

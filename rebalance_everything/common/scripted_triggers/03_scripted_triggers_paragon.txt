@@ -320,7 +320,6 @@ has_miltary_background_job = {
 	OR = {
 		has_background_job = noble
 		has_background_job = knight_commander
-		has_background_job = death_priest
 		has_background_job = duelist
 		has_background_job = knight
 		has_background_job = ranger

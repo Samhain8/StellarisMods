@@ -2521,13 +2521,13 @@
  paradisiacal_habitat:0 "Paradisiacal Habitat"
  paradisiacal_habitat_desc:0 "Although this habitat is completely artificial, the air carries an idyllic quality that reminds any sentient creature - no matter how alien - of home."
 
- paradisiacal_habitat_science: "$paradisiacal_habitat$"
+ paradisiacal_habitat_science: "Paradisiacal Research Habitat"
  paradisiacal_habitat_science_desc: "$paradisiacal_habitat_desc$"
 
- paradisiacal_habitat_energy: "$paradisiacal_habitat$"
+ paradisiacal_habitat_energy: "Paradisiacal Generator Habitat"
  paradisiacal_habitat_energy_desc: "$paradisiacal_habitat_desc$"
 
- paradisiacal_habitat_mining: "$paradisiacal_habitat$"
+ paradisiacal_habitat_mining: "Paradisiacal Mining Habitat"
  paradisiacal_habitat_mining_desc: "$paradisiacal_habitat_desc$"
 
  fircon.3510.name:0 "The Chosen"

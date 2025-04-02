@@ -936,7 +936,7 @@ building_subversive_shrine = {
 		}
 	}
 	planet_modifier = {
-		job_preacher_add = 200
+		job_bureaucrat_add = 200
 		pop_ethic_spiritualist_attraction_mult = 0.25
 	}
 
@@ -988,7 +988,7 @@ building_temple_of_prosperity = {
 	}
 
 	planet_modifier = {
-		job_preacher_add = 200
+		job_bureaucrat_add = 200
 		pop_ethic_spiritualist_attraction_mult = 0.5
 	}
 

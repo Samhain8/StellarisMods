@@ -111,7 +111,7 @@ building_low_tech_admin_hub = {
 				is_spiritualist = yes
 			}
 		}
-		job_low_tech_priest_add = 200
+		job_bureaucrat_add = 200
 	}
 
 	triggered_desc = {
@@ -128,10 +128,10 @@ building_low_tech_admin_hub = {
 		potential = {
 			owner = {
 				is_spiritualist = no
-				is_megacorp = no 
+				is_megacorp = no
 			}
 		}
-		job_low_tech_bureaucrat_add = 200
+		job_bureaucrat_add = 200
 	}
 
 	triggered_desc = {
@@ -139,7 +139,7 @@ building_low_tech_admin_hub = {
 			exists = owner
 			owner = {
 				is_spiritualist = no
-				is_megacorp = no 
+				is_megacorp = no
 			}
 		}
 		text = job_low_tech_bureaucrat_effect_desc
@@ -149,10 +149,10 @@ building_low_tech_admin_hub = {
 		potential = {
 			owner = {
 				is_spiritualist = no
-				is_megacorp = yes 
+				is_megacorp = yes
 			}
 		}
-		job_low_tech_manager_add = 200
+		job_bureaucrat_add = 200
 	}
 
 	triggered_desc = {
@@ -160,7 +160,7 @@ building_low_tech_admin_hub = {
 			exists = owner
 			owner = {
 				is_spiritualist = no
-				is_megacorp = yes 
+				is_megacorp = yes
 			}
 		}
 		text = job_low_tech_manager_effect_desc

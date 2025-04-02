@@ -5,7 +5,14 @@ drone_unemployment = {
 		default = {
 			condition_string = DRONE_JOB_TRIGGER
 			icon = unemployment
-			building_icon = building_capital
+			building_icon = building_hive_capital
+		}
+	}
+
+	possible = {
+		hidden_trigger = { exists = owner }
+		owner = {
+			is_gestalt = yes
 		}
 	}
 

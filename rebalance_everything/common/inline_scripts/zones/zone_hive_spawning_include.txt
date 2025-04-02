@@ -1,0 +1,8 @@
+include = {
+	building_resource_silo
+	building_hive_warren
+	building_spawning_pool
+	building_offspring_nest
+	building_clone_vats
+	building_toxic_bath_hive
+}

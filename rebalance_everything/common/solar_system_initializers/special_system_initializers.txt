@@ -2793,6 +2793,7 @@ the_chosen_gate_initializer = {
 							add_modifier = {
 								modifier = paradisiacal_habitat_science
 							}
+							set_name = paradisiacal_habitat_science
 						}
 						else_if = {
 							limit = {
@@ -2806,6 +2807,7 @@ the_chosen_gate_initializer = {
 							add_modifier = {
 								modifier = paradisiacal_habitat_mining
 							}
+							set_name = paradisiacal_habitat_mining
 						}
 						else_if = {
 							limit = {
@@ -2819,6 +2821,7 @@ the_chosen_gate_initializer = {
 							add_modifier = {
 								modifier = paradisiacal_habitat_energy
 							}
+							set_name = paradisiacal_habitat_energy
 						}
 					}
 				}

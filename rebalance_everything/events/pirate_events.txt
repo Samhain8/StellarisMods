@@ -88,6 +88,7 @@ country_event = {
 
 	trigger = {
 		is_country_type = default
+		years_passed > 10
 		NOR = {
 			has_country_flag = birth_of_piracy
 			has_ethic = ethic_gestalt_consciousness
@@ -97,7 +98,7 @@ country_event = {
 			any_system_planet = {
 				planet_resource_compare = {
 					resource = trade
-					value > 100
+					value > 1000
 				}
 			}
 		}
@@ -1400,7 +1401,7 @@ country_event = {
 			any_system_planet = {
 				planet_resource_compare = {
 					resource = trade
-					value > 100
+					value > 1000
 				}
 			}
 		}

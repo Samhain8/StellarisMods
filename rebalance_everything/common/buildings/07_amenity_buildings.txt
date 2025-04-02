@@ -3,7 +3,6 @@
 #############
 building_luxury_residence = {
 	base_buildtime = @b1_time
-	base_cap_amount = 1
 	category = amenity
 
 	potential = {
@@ -632,18 +631,6 @@ building_hyper_entertainment_forum = {
 	base_cap_amount = 1
 
 	category = amenity
-
-	allow = {
-		custom_tooltip = {
-			fail_text = need_amenities_zone
-			planet = {
-				num_zones = {
-					type = zone_amenities
-					value > 0
-				}
-			}
-		}
-	}
 
 	destroy_trigger = {
 		exists = owner

@@ -636,7 +636,6 @@ pc_hive = {
 	modifier = {
 		planet_jobs_produces_mult = 0.10
 		planet_max_buildings_add = 12
-		job_spawning_drone_add = 100
 		planet_resettlement_unemployed_destination_mult = 0.5
 	}
 
@@ -682,7 +681,6 @@ pc_machine = {
 		pop_housing_usage_mult = -0.10
 		pop_environment_tolerance = 0.0
 		planet_max_buildings_add = 12
-		job_replicator_add = 100
 		planet_resettlement_unemployed_destination_mult = 0.5
 	}
 

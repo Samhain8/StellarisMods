@@ -1795,10 +1795,9 @@ d_betharian_deposit = {
 	potential = {
 		can_have_habitable_deposits = yes
 	}
-
+	custom_tooltip = unlocks_zone_betharian
 	planet_modifier = {
-		building_betharian_power_plant_max = 1
-		district_generator_max = 4
+		district_mining_max = 4
 	}
 
 	drop_weight = {

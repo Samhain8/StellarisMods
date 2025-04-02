@@ -142,7 +142,6 @@ building_dread_encampment = {
 building_stronghold = {
 	base_buildtime = 240
 	position_priority = 100
-	base_cap_amount = 1
 	can_be_ruined = no
 	category = army
 	exempt_from_ai_planet_specialization = no

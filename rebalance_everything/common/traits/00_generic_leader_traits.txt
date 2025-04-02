@@ -453,7 +453,7 @@ leader_trait_private_mines = {
 			}
 			trait_is_gestalt_check = yes
 		}
-		job_scrap_miner_drone_add = 200
+		job_mining_drone_add = 200
 	}
 	planet_modifier = {
 		planet_miners_minerals_produces_mult = 0.05
@@ -547,7 +547,7 @@ leader_trait_private_mines_2 = {
 			}
 			trait_is_gestalt_check = yes
 		}
-		job_scrap_miner_drone_add = 400
+		job_mining_drone_add = 400
 	}
 	planet_modifier = {
 		planet_miners_minerals_produces_mult = 0.10
@@ -844,28 +844,13 @@ trait_imperial_heir = {
 			exists = FROM
 			FROM.owner = { is_same_value = root.owner }
 			owner = {
-				NOT = {	has_origin = origin_cybernetic_creed }
 				has_valid_civic = civic_imperial_cult
 			}
 		}
-		job_priest_add = 100
+		job_bureaucrat_add = 100
 		mult = trigger:has_skill
 	}
 
-	triggered_background_planet_modifier = {
-		potential = {
-			is_ruler = yes
-			exists = owner
-			exists = FROM
-			FROM.owner = { is_same_value = root.owner }
-			owner = {
-				has_origin = origin_cybernetic_creed
-				has_valid_civic = civic_imperial_cult
-			}
-		}
-		job_haruspex_add = 100
-		mult = trigger:has_skill
-	}
 
 	on_gained_effect = {
 		change_background_job = noble
@@ -894,14 +879,6 @@ leader_trait_scrapper = {
 	}
 	triggered_background_planet_modifier = {
 		potential = {
-			exists = FROM
-			FROM = {
-				exists = owner
-				owner = {
-					is_same_value = root.owner
-					is_catalytic_empire = no
-				}
-			}
 			trait_is_gestalt_check = no
 		}
 		job_foundry_add = 100
@@ -918,7 +895,7 @@ leader_trait_scrapper = {
 			}
 			trait_is_hive_check = yes
 		}
-		job_alloy_drone_add = 100
+		job_fabricator_add = 100
 	}
 	triggered_background_planet_modifier = {
 		potential = {
@@ -944,23 +921,9 @@ leader_trait_scrapper = {
 					is_catalytic_empire = yes
 				}
 			}
-			trait_is_gestalt_check = no
-		}
-		job_catalytic_technician_add = 100
-	}
-	triggered_background_planet_modifier = {
-		potential = {
-			exists = FROM
-			FROM = {
-				exists = owner
-				owner = {
-					is_same_value = root.owner
-					is_catalytic_empire = yes
-				}
-			}
 			trait_is_gestalt_check = yes
 		}
-		job_catalytic_drone_add = 100
+		job_fabricator_add = 100
 	}
 	planet_modifier = {
 		planet_metallurgists_alloys_produces_mult = 0.05
@@ -1002,14 +965,6 @@ leader_trait_scrapper_2 = {
 	}
 	triggered_background_planet_modifier = {
 		potential = {
-			exists = FROM
-			FROM = {
-				exists = owner
-				owner = {
-					is_same_value = root.owner
-					is_catalytic_empire = no
-				}
-			}
 			trait_is_gestalt_check = no
 		}
 		job_foundry_add = 200
@@ -1026,7 +981,7 @@ leader_trait_scrapper_2 = {
 			}
 			trait_is_hive_check = yes
 		}
-		job_alloy_drone_add = 200
+		job_fabricator_add = 200
 	}
 	triggered_background_planet_modifier = {
 		potential = {
@@ -1052,23 +1007,9 @@ leader_trait_scrapper_2 = {
 					is_catalytic_empire = yes
 				}
 			}
-			trait_is_gestalt_check = no
-		}
-		job_catalytic_technician_add = 200
-	}
-	triggered_background_planet_modifier = {
-		potential = {
-			exists = FROM
-			FROM = {
-				exists = owner
-				owner = {
-					is_same_value = root.owner
-					is_catalytic_empire = yes
-				}
-			}
 			trait_is_gestalt_check = yes
 		}
-		job_catalytic_drone_add = 200
+		job_fabricator_add = 200
 	}
 	planet_modifier = {
 		planet_metallurgists_alloys_produces_mult = 0.10

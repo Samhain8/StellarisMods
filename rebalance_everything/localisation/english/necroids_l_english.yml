@@ -255,6 +255,7 @@
  job_death_chronicler_desc:0 "Entropy is the domain of these scholars, who observe and record death and its effects in all their various expressions."
  job_death_chronicler_effect_desc:2 "£job_death_chronicler£ $job_death_chronicler_plural$ turn £consumer_goods£ §Y$consumer_goods$§! into £unity£ §Y$unity$§!, [GetCultureWorkerSpiMatOutput][GetCultureWorkerEgalAuthOutput][GetCultureWorkerMilPacOutput][GetCultureWorkerXenoOutput] and £stability£ §YStability§!.\n\n£job_death_chronicler£ Death Chroniclers' effects vary depending on the Empire's ethics."
  job_death_chronicler_simple_effect_desc:0 "£job_death_chronicler£ $job_death_chronicler_plural$ turn £consumer_goods£ §Y$consumer_goods$§! into £unity£ §Y$unity$§!, £stability£ §YStability§! and inherit the §YEthics-based§! modifiers of §Y£job_culture_worker£ $job_culture_worker_plural$§!."
+ chronicle_drone: "$job_chronicle_drone$"
  job_chronicle_drone:0 "Chronicle Drone"
  job_chronicle_drone_plural:0 "Chronicle Drones"
  job_chronicle_drone_desc:0 "These specialized drones turn their thoughts to entropy, researching terminal decay as a counterpoint to our own, continued existence."

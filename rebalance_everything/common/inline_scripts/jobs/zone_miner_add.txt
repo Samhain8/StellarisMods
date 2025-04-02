@@ -1,0 +1,20 @@
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = yes }
+		OR = {
+			is_planet_class = pc_machine
+			is_planet_class = pc_hive
+		}
+	}
+	job_mining_drone_add = $AMOUNT$
+	mult = 2 #Hive and Machien get 3x as many jobs
+}
+
+triggered_desc = {
+	trigger = {
+		exists = owner
+		owner = { is_gestalt = yes }
+	}
+	text = job_mining_drone_desc
+}

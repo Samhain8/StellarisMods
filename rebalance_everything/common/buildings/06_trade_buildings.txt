@@ -3,7 +3,6 @@
 #############
 building_commercial_zone = {
 	base_buildtime = @b1_time
-
 	exempt_from_ai_planet_specialization = no
 	category = trade
 
@@ -37,10 +36,6 @@ building_commercial_zone = {
 		upkeep = {
 			energy = @b1_upkeep
 		}
-	}
-
-	planet_modifier = {
-		planet_traders_produces_mult = 0.20
 	}
 
 	inline_script = {

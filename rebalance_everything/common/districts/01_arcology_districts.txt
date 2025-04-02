@@ -2,7 +2,7 @@ district_arcology_housing = {
 	base_buildtime = 600
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
-	
+
 	# TODO_CD: change to real slots
 	zone_slots = {
 		slot_city_government
@@ -500,7 +500,7 @@ district_arcology_administrative = {
 			}
 		}
 		modifier = {
-			job_manager_add = 600
+			job_bureaucrat_add = 600
 		}
 	}
 
@@ -513,7 +513,7 @@ district_arcology_administrative = {
 			}
 		}
 		modifier = {
-			job_steward_add = 600
+			job_bureaucrat_add = 600
 		}
 	}
 
@@ -556,7 +556,7 @@ district_arcology_administrative = {
 			}
 		}
 		modifier = {
-			job_manager_add = 300
+			job_bureaucrat_add = 300
 		}
 	}
 
@@ -570,7 +570,7 @@ district_arcology_administrative = {
 			}
 		}
 		modifier = {
-			job_steward_add = 300
+			job_bureaucrat_add = 300
 		}
 	}
 
@@ -692,7 +692,7 @@ district_arcology_religious = {
 			}
 		}
 		modifier = {
-			job_priest_add = 600
+			job_bureaucrat_add = 600
 		}
 	}
 
@@ -707,7 +707,7 @@ district_arcology_religious = {
 		}
 		modifier = {
 			# Megacorp YES, Death Cult NO.
-			job_preacher_add = 600
+			job_bureaucrat_add = 600
 		}
 	}
 	triggered_planet_modifier = {
@@ -718,7 +718,7 @@ district_arcology_religious = {
 			}
 		}
 		modifier = {
-			job_haruspex_add = 600
+			job_bureaucrat_add = 600
 		}
 	}
 	triggered_planet_modifier = {
@@ -730,7 +730,7 @@ district_arcology_religious = {
 		}
 		modifier = {
 			# Death Cult YES.
-			job_death_priest_add = 300
+			job_bureaucrat_add = 300
 			job_mortal_initiate_add = 300
 		}
 	}
@@ -747,7 +747,7 @@ district_arcology_religious = {
 			}
 		}
 		modifier = {
-			job_priest_add = 300
+			job_bureaucrat_add = 300
 		}
 	}
 
@@ -763,7 +763,7 @@ district_arcology_religious = {
 		}
 		modifier = {
 			# Megacorp YES, Death Cult NO.
-			job_preacher_add = 300
+			job_bureaucrat_add = 300
 		}
 	}
 	triggered_planet_modifier = {
@@ -776,7 +776,7 @@ district_arcology_religious = {
 		}
 		modifier = {
 			# Death Cult YES.
-			job_death_priest_add = 150
+			job_bureaucrat_add = 150
 		}
 	}
 
@@ -826,6 +826,7 @@ district_arcology_religious = {
 }
 
 district_arcology_urban_1 = {
+	icon = district_arcology_housing_secondary
 	base_buildtime = 600
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
@@ -978,6 +979,7 @@ district_arcology_urban_1 = {
 	}
 }
 district_arcology_urban_2 = {
+	icon = district_arcology_housing_secondary
 	base_buildtime = 600
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes
@@ -1130,6 +1132,7 @@ district_arcology_urban_2 = {
 	}
 }
 district_arcology_urban_3 = {
+	icon = district_arcology_housing_secondary
 	base_buildtime = 600
 	is_capped_by_modifier = no
 	exempt_from_ai_planet_specialization = yes

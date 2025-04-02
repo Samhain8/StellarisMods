@@ -29,7 +29,7 @@ triggered_planet_modifier = {
 		}
 		NOT = {	has_modifier = penal_colony }
 	}
-	job_alloy_drone_add = $AMOUNT$
+	job_fabricator_add = $AMOUNT$
 }
 
 triggered_desc = {

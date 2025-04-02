@@ -2,6 +2,7 @@ triggered_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = {
+			is_gestalt = no
 			NOT = { has_valid_civic = civic_warrior_culture }
 		}
 	}
@@ -11,6 +12,7 @@ triggered_desc = {
 	trigger = {
 		exists = owner
 		owner = {
+			is_gestalt = no
 			NOT = { has_valid_civic = civic_warrior_culture }
 		}
 	}
@@ -21,6 +23,7 @@ triggered_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = {
+			is_gestalt = no
 			has_valid_civic = civic_warrior_culture
 		}
 	}
@@ -30,6 +33,7 @@ triggered_desc = {
 	trigger = {
 		exists = owner
 		owner = {
+			is_gestalt = no
 			has_valid_civic = civic_warrior_culture
 		}
 	}

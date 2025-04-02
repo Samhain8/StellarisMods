@@ -50,12 +50,33 @@ triggered_district_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = {
-			is_hive_empire = yes
-			is_catalytic_empire = no
+			is_gestalt = yes
 		}
-		NOT = {	has_modifier = penal_colony }
+		NOR = {	
+			has_modifier = penal_colony 
+			is_planet_class = pc_machine
+			is_planet_class = pc_hive
+		}
 	}
-	job_alloy_drone_add = $AMOUNT$
+	job_fabricator_add = $AMOUNT$
+}
+
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = {
+			is_gestalt = yes
+		}
+		NOT = {
+			has_modifier = penal_colony 
+		}
+		OR = {	
+			is_planet_class = pc_machine
+			is_planet_class = pc_hive
+		}
+	}
+	job_fabricator_add = $AMOUNT$
+	mult = 2	# Ecus get 3× as many jobs
 }
 
 triggered_desc = {
@@ -68,18 +89,6 @@ triggered_desc = {
 		NOT = {	has_modifier = penal_colony }
 	}
 	text = job_alloy_drone_effect_desc
-}
-
-triggered_district_planet_modifier = {
-	potential = {
-		exists = owner
-		owner = {
-			is_machine_empire = yes
-			is_catalytic_empire = no
-		}
-		NOT = {	has_modifier = penal_colony }
-	}
-	job_fabricator_add = $AMOUNT$
 }
 
 triggered_desc = {

@@ -165,7 +165,7 @@ d_space_ship_graveyard = { #Ship Graveyard
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_scrap_miner_drone_add = 100
+			job_mining_drone_add = 100
 		}
 	}
 }
@@ -266,9 +266,9 @@ d_ancient_facilities = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_drone_physicist_add = 200
-			job_brain_drone_biologist_add = 200
-			job_brain_drone_engineer_add = 200
+			job_calculator_physicist_add = 200
+			job_calculator_biologist_add = 200
+			job_calculator_engineer_add = 200
 		}
 	}
 

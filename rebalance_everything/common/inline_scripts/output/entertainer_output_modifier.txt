@@ -56,7 +56,9 @@ triggered_country_modifier = {
 
 triggered_planet_modifier = {
 	potential = {
-		has_building = building_identity_complex
+		planet = {
+			has_building = building_identity_complex
+		}
 	}
 	# Actual value determined in the script value below
 	branch_office_value_mult = 1

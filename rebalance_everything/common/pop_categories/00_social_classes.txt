@@ -78,18 +78,19 @@ ruler = {
 		}
 		planet_pop_assembly_organic_add = @tiyanki_budding_rate
 	}
-	triggered_pop_group_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_oligarchic_authority = yes
-				has_country_flag = cyber_individualist
-			}
-		}
-		key = auth_cyber_oligarchic_individualist
-		planet_jobs_ruler_produces_mult = 0.0001
-		mult = planet.value:count_specialists
-	}
+# Markus
+#	triggered_pop_group_modifier = {
+#		potential = {
+#			exists = owner
+#			owner = {
+#				is_oligarchic_authority = yes
+#				has_country_flag = cyber_individualist
+#			}
+#		}
+#		key = auth_cyber_oligarchic_individualist
+#		planet_jobs_ruler_produces_mult = 0.0001
+#		mult = planet.value:count_specialists
+#	}
 
 	# Triggered Modifiers
 	inline_script = "pop_categories/social_classes_triggered_modifiers"
@@ -156,18 +157,20 @@ specialist = {
 	weight = {
 		weight = 2
 	}
-	triggered_pop_group_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_democratic_authority = yes
-				has_country_flag = synth_physical
-			}
-		}
-		key = auth_synth_democratic_physical
-		planet_jobs_specialist_produces_mult = 0.01
-		mult = planet.value:count_any_districts
-	}
+	
+# Markus	
+#	triggered_pop_group_modifier = {
+#		potential = {
+#			exists = owner
+#			owner = {
+#				is_democratic_authority = yes
+#				has_country_flag = synth_physical
+#			}
+#		}
+#		key = auth_synth_democratic_physical
+#		planet_jobs_specialist_produces_mult = 0.01
+#		mult = planet.value:count_any_districts
+#	}
 
 	pop_group_modifier = {
 		pop_housing_usage_base = 1

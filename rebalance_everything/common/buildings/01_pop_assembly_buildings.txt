@@ -799,7 +799,7 @@ building_offspring_nest = {
 	#}
 
 	planet_modifier = {
-		job_offspring_drone_add = 100
+		job_spawning_drone_add = 100
 	}
 	convert_to = {
 		building_spawning_pool
@@ -1580,20 +1580,9 @@ building_toxic_bath_hive = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_lithoid_empire = no }
 		}
 		modifier = {
-			job_bath_attendant_hive_add = @b1_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_lithoid_empire = yes }
-		}
-		modifier = {
-			job_bath_attendant_hive_lithoid_add = @b1_jobs
+			job_bath_attendant_machine_add = @b1_jobs
 		}
 	}
 

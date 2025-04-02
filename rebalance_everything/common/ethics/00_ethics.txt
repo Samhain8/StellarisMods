@@ -2660,8 +2660,6 @@ ethic_spiritualist = {
 
 	leader_background_job_weight = {
 		high_priest = 25
-		priest = 25
-		death_priest = 25
 		telepath = 25
 		death_chronicler = 25
 		necro_apprentice = 25
@@ -2774,23 +2772,10 @@ ethic_spiritualist = {
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_PRIESTS_POS
 		trigger = {
-			OR = {
-				num_assigned_jobs = {
-					job = priest
-					value > 0
-				}
-				num_assigned_jobs = {
-					job = high_priest
-					value > 0
-				}
-				num_assigned_jobs = {
-					job = death_priest
-					value > 0
-				}
-				num_assigned_jobs = {
-					job = preacher
-					value > 0
-				}
+			is_spiritualist = yes
+			num_assigned_jobs = {
+				job = bureaucrat
+				value > 0
 			}
 		}
 	}
@@ -3195,23 +3180,10 @@ ethic_materialist = {
 	pop_attraction_tag = {
 		desc = POP_ATTRACTION_PRIESTS_NEG
 		trigger = {
-			OR = {
-				num_assigned_jobs = {
-					job = priest
-					value > 0
-				}
-				num_assigned_jobs = {
-					job = high_priest
-					value > 0
-				}
-				num_assigned_jobs = {
-					job = death_priest
-					value > 0
-				}
-				num_assigned_jobs = {
-					job = preacher
-					value > 0
-				}
+			is_spiritualist = yes
+			num_assigned_jobs = {
+				job = bureaucrat
+				value > 0
 			}
 		}
 	}

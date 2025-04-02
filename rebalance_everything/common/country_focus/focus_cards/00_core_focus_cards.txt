@@ -56,10 +56,8 @@ core_focus_102 = {
 					NOT = {	solar_system = { starting_system = yes } }
 					NOR = {
 						has_designation = col_capital
-						has_designation = col_default
 						has_designation = col_capital_hive
 						has_designation = col_capital_machine
-						has_designation = col_default_machine
 					}
 				}
 			}

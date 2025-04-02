@@ -57,6 +57,7 @@
  MESSAGE_FINAL_OFFSPRING_SHIP_TITLE:0 "Last Offspring Ship Defeated"
  MESSAGE_FINAL_OFFSPRING_SHIP_DESC:0 "Our last §YOffspring Ship§! in the $SYSTEM|Y$ system has fallen, leaving our fleets without proper command."
 
+ offspring_drone: "$job_offspring_drone$"
  job_offspring_drone:0 "Offspring Drone"
  job_offspring_drone_plural:0 "Offspring Drones"
  job_offspring_drone_plural_with_icon: "£job_spawning_drone£ $job_offspring_drone_plural$"

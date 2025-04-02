@@ -256,9 +256,9 @@ d_central_spire = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_drone_physicist_add = 800
-			job_brain_drone_biologist_add = 800
-			job_brain_drone_engineer_add = 800
+			job_calculator_physicist_add = 800
+			job_calculator_biologist_add = 800
+			job_calculator_engineer_add = 800
 		}
 	}
 

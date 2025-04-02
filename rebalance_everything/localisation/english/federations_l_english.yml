@@ -1993,8 +1993,9 @@
  ################
 
  col_bureau:2 "Unification Center"
- col_bureau_desc:4 "An entire world dedicated to unifying our empire."
- col_bureaucracy_custom:1 "Administrative Capacity from Bureaucrats is increased by §G2§!.\nBureaucrat Job Upkeep reduced by §G10%§!. \n£pop£ Pop Ethics Shift Chance reduced by §G20%§!."
+ col_bureau_tt:4 "An entire world dedicated to unifying our empire."
+ col_bureau_desc:1 "Boosts £unity£ §SUnity§! output."
+ col_bureaucracy_custom:1 "Administrative Capacity from Bureaucrats is increased by §G2§!.\nBureaucrat Job Upkeep reduced by §G10%§!."
 
 
  col_bureau_spiritualist:0 "Ecclesiastical Center"
@@ -3666,6 +3667,7 @@
  # Jobs
  ####################################
 
+ bluelotus_drone: "job_bluelotus_technician"
  job_bluelotus_technician:0 "Transmuter"
  job_bluelotus_technician_plural:0 "Transmuters"
  job_bluelotus_technician_desc:0 "Specialist scientists who work on the Blue Lotus project to transmute everyday silicates into useful alloys."

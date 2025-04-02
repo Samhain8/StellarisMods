@@ -271,15 +271,15 @@ decision_expel_population = {
 			reroll_random = yes
 			switch = {
 				trigger = free_housing
-				-9 < { set_variable = { which = expel_pop_var value = 10 } } # 10
-				-8 < { set_variable = { which = expel_pop_var value = 9 } } # 9
-				-7 < { set_variable = { which = expel_pop_var value = 8 } } # 8
-				-6 < { set_variable = { which = expel_pop_var value = 7 } } # 7
-				-5 < { set_variable = { which = expel_pop_var value = 6 } } # 6
-				-4 < { set_variable = { which = expel_pop_var value = 5 } } # 5
-				-3 < { set_variable = { which = expel_pop_var value = 4 } } # 4
-				-2 < { set_variable = { which = expel_pop_var value = 3 } } # 3
-				-1 < { set_variable = { which = expel_pop_var value = 2 } } # 2
+				-900 < { set_variable = { which = expel_pop_var value = 10 } } # 10
+				-800 < { set_variable = { which = expel_pop_var value = 9 } } # 9
+				-700 < { set_variable = { which = expel_pop_var value = 8 } } # 8
+				-600 < { set_variable = { which = expel_pop_var value = 7 } } # 7
+				-500 < { set_variable = { which = expel_pop_var value = 6 } } # 6
+				-400 < { set_variable = { which = expel_pop_var value = 5 } } # 5
+				-300 < { set_variable = { which = expel_pop_var value = 4 } } # 4
+				-200 < { set_variable = { which = expel_pop_var value = 3 } } # 3
+				-100 < { set_variable = { which = expel_pop_var value = 2 } } # 2
 				0 < { set_variable = { which = expel_pop_var value = 1 } } # 1
 			}
 			while = {
@@ -323,7 +323,7 @@ decision_expel_population = {
 						refugee_pop_effect = yes
 					}
 					else = {
-						kill_pop = yes
+						kill_single_pop = yes
 					}
 				}
 			}

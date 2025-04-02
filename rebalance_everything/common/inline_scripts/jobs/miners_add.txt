@@ -52,7 +52,7 @@ triggered_planet_modifier = {
 		owner = { is_gestalt = yes }
 	}
 	modifier = {
-		job_scrap_miner_drone_add = $AMOUNT$
+		job_mining_drone_add = $AMOUNT$
 	}
 }
 triggered_desc = {

@@ -1,10 +1,17 @@
 # Job number for districts and zones should generally be multiples of 150.
-@base_district_jobs = 180
-@habitat_district_jobs = 180
-@habitat_research_district_jobs = 60
+@base_district_jobs = 100
+@habitat_district_jobs = 100
+@habitat_research_district_jobs = 30
 
-@scaling_district_1_job = 180
-@scaling_district_2_jobs = 90
-@scaling_district_3_jobs = 60
+@scaling_district_1_job = 100
+@scaling_district_2_jobs = 50
+@scaling_district_3_jobs = 30
 
-@building_static_jobs = 180
+@building_static_jobs = 200
+
+@scaling_district_researchers_4_jobs = 20
+@scaling_district_unity_4_jobs = 40
+@scaling_district_researchers_2_jobs = 60
+
+@base_rural_district_jobs = 200
+

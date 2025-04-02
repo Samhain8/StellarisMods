@@ -26,7 +26,7 @@ zone_default = {
 		}
 	}
 
-	max_buildings = 3
+	max_buildings = 6
 
 	include = {
 		all
@@ -84,7 +84,22 @@ zone_urban = {
 }
 
 zone_industrial = {
+	icon = GFX_colony_type_industrial
 	base_buildtime = @base_buildtime
+	potential = { # planet scope
+		exists = owner
+		owner = {
+			country_uses_consumer_goods = yes
+		}
+	}
+
+	unlock = { # planet scope
+		exists = owner
+		owner = {
+			country_uses_consumer_goods = yes
+		}
+	}
+
 	resources = {
 		category = planet_zones
 		cost = {
@@ -126,7 +141,7 @@ zone_foundry = {
 		always = yes
 	}
 
-    unlock = { # planet scope
+	unlock = { # planet scope
 		always = yes
 	}
 
@@ -163,11 +178,17 @@ zone_factory = {
 	icon = GFX_colony_type_factory
 	base_buildtime = @base_buildtime
 	potential = { # planet scope
-		always = yes
+		exists = owner
+		owner = {
+			country_uses_consumer_goods = yes
+		}
 	}
 
-    unlock = { # planet scope
-		always = yes
+	unlock = { # planet scope
+		exists = owner
+		owner = {
+			country_uses_consumer_goods = yes
+		}
 	}
 
 	resources = {
@@ -206,7 +227,7 @@ zone_research = {
 		always = yes
 	}
 
-    unlock = { # planet scope
+	unlock = { # planet scope
 		always = yes
 	}
 
@@ -228,11 +249,6 @@ zone_research = {
 		LARGE_AMOUNT = @scaling_district_1_job
 	}
 
-#	inline_script = {
-#		script = jobs/zone_researchers_add
-#		LARGE_AMOUNT = @scaling_district_1_job
-#	}
-
 	planet_modifier = {
 		zone_building_slots_add = 3
 	}
@@ -252,7 +268,7 @@ zone_unity = {
 		always = yes
 	}
 
-    unlock = { # planet scope
+	unlock = { # planet scope
 		always = yes
 	}
 
@@ -293,7 +309,7 @@ zone_fortress = {
 		always = yes
 	}
 
-    unlock = { # planet scope
+	unlock = { # planet scope
 		always = yes
 	}
 
@@ -331,11 +347,17 @@ zone_trade = {
 	icon = GFX_resource_trade_large
 	base_buildtime = @base_buildtime
 	potential = { # planet scope
-		always = yes
+		exists = owner
+		owner = {
+			NOT = {	is_gestalt = yes }
+		}
 	}
 
-    unlock = { # planet scope
-		always = yes
+	unlock = { # planet scope
+		exists = owner
+		owner = {
+			NOT = {	is_gestalt = yes }
+		}
 	}
 
 	resources = {
@@ -367,47 +389,6 @@ zone_trade = {
 	}
 }
 
-zone_amenities = {
-	icon = GFX_colony_type_resort
-	base_buildtime = @base_buildtime
-	potential = { # planet scope
-		always = yes
-	}
-
-    unlock = { # planet scope
-		always = yes
-	}
-
-	resources = {
-		category = planet_zones
-		cost = {
-			minerals = @base_cost
-		}
-		upkeep = {
-			energy = @base_upkeep
-		}
-	}
-
-	inline_script = "zones/zone_amenities_include"
-
-	inline_script = {
-		script = jobs/zone_entertainers_add
-		AMOUNT = @scaling_district_1_job
-	}
-
-	planet_modifier = {
-		zone_building_slots_add = 3
-	}
-
-	triggered_desc = {
-		trigger = {
-			always = yes
-		}
-		text = zone_amenities_triggered_desc
-	}
-
-}
-
 zone_minerals = {
 	icon = GFX_resource_minerals_large
 	base_buildtime = @base_buildtime
@@ -430,6 +411,11 @@ zone_minerals = {
 		}
 	}
 
+	inline_script = {
+		script = jobs/zone_miner_add
+		AMOUNT = @scaling_district_1_job
+	}
+
 	inline_script = "zones/zone_minerals_include"
 
 	planet_modifier = {
@@ -441,6 +427,43 @@ zone_minerals = {
 			always = yes
 		}
 		text = zone_minerals_triggered_desc
+	}
+}
+
+zone_betharian = {
+	icon = GFX_zone_betharian
+	base_buildtime = @base_buildtime
+
+	potential = { # planet scope
+		has_deposit = d_betharian_deposit
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = {
+			has_deposit = d_betharian_deposit
+			exists = owner
+		}
+		owner = {
+			has_technology = tech_mine_betharian
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @base_cost
+		}
+		upkeep = {
+			energy = @base_upkeep
+		}
+	}
+
+	inline_script = "zones/zone_betharian_include"
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+		planet_miners_energy_produces_add = 6
+		planet_miners_minerals_produces_add = -4
 	}
 }
 
@@ -458,6 +481,11 @@ zone_energy = {
 	}
 
 	inline_script = "zones/zone_energy_include"
+
+	inline_script = {
+		script = jobs/zone_technicians_add
+		AMOUNT = @scaling_district_1_job
+	}
 
 	planet_modifier = {
 		zone_building_slots_add = 3
@@ -509,6 +537,11 @@ zone_food = {
 		}
 	}
 
+	inline_script = {
+		script = jobs/zone_farmers_add
+		AMOUNT = @scaling_district_1_job
+	}
+
 	inline_script = "zones/zone_food_include"
 
 	planet_modifier = {
@@ -549,25 +582,6 @@ zone_anglers = {
 		}
 	}
 
-	planet_modifier = {
-		planet_artisans_trade_produces_add = 2
-		planet_artisans_minerals_upkeep_add = -2
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_individual_machine = no }
-		}
-		planet_artisans_food_upkeep_add = 2
-	}
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_individual_machine = yes }
-		}
-		planet_artisans_energy_upkeep_add = 2
-	}
-
 	inline_script = "zones/zone_food_include"
 
 	planet_modifier = {
@@ -579,5 +593,257 @@ zone_anglers = {
 			always = yes
 		}
 		text = zone_anglers_triggered_desc
+	}
+}
+
+zone_rw_food = {
+	icon = GFX_resource_food_large
+	base_buildtime = @base_buildtime
+	potential = { # planet scope
+		always = yes
+	}
+
+	unlock = { # planet scope
+		always = yes
+	}
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @base_cost
+		}
+		upkeep = {
+			energy = @base_upkeep
+		}
+	}
+
+	inline_script = "zones/zone_food_include"
+
+	inline_script = {
+		script = jobs/zone_farmers_add
+		AMOUNT = @scaling_district_1_job
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+}
+
+zone_rw_energy = {
+	icon = GFX_resource_energy_large
+	base_buildtime = @base_buildtime
+	potential = { # planet scope
+		always = yes
+	}
+
+	unlock = { # planet scope
+		always = yes
+	}
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @base_cost
+		}
+		upkeep = {
+			energy = @base_upkeep
+		}
+	}
+
+	inline_script = "zones/zone_energy_include"
+
+	inline_script = {
+		script = jobs/zone_technicians_add
+		AMOUNT = @scaling_district_1_job
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+}
+
+#Hive World Zones
+zone_hive_spawning = {
+	#TODO_CD Needs Icon + Needs to be Planet Unique
+	#icon = GFX_resource_energy_large
+	base_buildtime = @base_buildtime
+	potential = { # planet scope
+		is_planet_class = pc_hive
+		owner = {
+			is_hive_empire = yes
+			has_ascension_perk = ap_hive_worlds
+		}
+	}
+
+	unlock = { # planet scope
+		exists = owner
+		owner = {
+			is_hive_empire = yes
+			has_ascension_perk = ap_hive_worlds
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @base_cost
+		}
+		upkeep = {
+			energy = @base_upkeep
+		}
+	}
+
+	inline_script = "zones/zone_hive_spawning_include"
+
+	triggered_district_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		job_spawning_drone_add = 100
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+}
+
+#Machine World Zones
+zone_machine_replication = {
+	#TODO_CD Needs Icon
+	#icon = GFX_resource_energy_large
+	base_buildtime = @base_buildtime
+	potential = { # planet scope
+		is_planet_class = pc_machine
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			has_ascension_perk = ap_machine_worlds
+		}
+	}
+
+	unlock = { # planet scope
+		exists = owner
+		owner = {
+			is_machine_empire = yes
+			has_ascension_perk = ap_machine_worlds
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @base_cost
+		}
+		upkeep = {
+			energy = @base_upkeep
+		}
+	}
+
+	inline_script = "zones/zone_machine_replication_include"
+
+	triggered_district_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		job_roboticist_add = 100
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+}
+
+zone_research_unity = {
+	icon = GFX_job_administrator
+	base_buildtime = @base_buildtime
+	potential = { # planet scope
+		always = yes
+	}
+
+    unlock = { # planet scope
+		always = yes
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @base_cost
+		}
+		upkeep = {
+			energy = @base_upkeep
+		}
+	}
+
+	inline_script = "zones/zone_research_unity_include"
+
+	inline_script = {
+		script = jobs/zone_researchers_add
+		AMOUNT = @scaling_district_researchers_4_jobs
+		LARGE_AMOUNT = @scaling_district_researchers_2_jobs
+	}
+
+	inline_script = {
+		script = jobs/zone_unity_jobs_add
+		AMOUNT = @scaling_district_unity_4_jobs
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
+	}
+
+	triggered_desc = {
+		trigger = {
+			always = yes
+		}
+		text = zone_research_unity_triggered_desc
+	}
+}
+
+zone_subterranean_urban = {
+	icon = GFX_colony_type_urban
+	base_buildtime = @base_buildtime
+	potential = { # planet scope
+		exists = owner
+		owner = {
+			is_subterranean_empire = yes
+		}
+	}
+
+	unlock = { # planet scope
+		hidden_trigger = {
+			exists = owner
+			owner = {
+				is_subterranean_empire = yes
+			}
+		}
+	}
+
+	resources = {
+		category = planet_zones
+		cost = {
+			minerals = @base_cost
+		}
+		upkeep = {
+			energy = @base_upkeep
+		}
+	}
+
+	max_buildings = 3
+
+	include = {
+		all
+	}
+	# TODO Urban Zone building restrictions
+	# inline_script = "zones/zone_urban_include"
+
+	# inline_script = "zones/zone_urban_exclude"
+
+	inline_script = {
+		script = jobs/zone_clerks_add
+		AMOUNT = @scaling_district_1_job
+	}
+
+	planet_modifier = {
+		zone_building_slots_add = 3
 	}
 }

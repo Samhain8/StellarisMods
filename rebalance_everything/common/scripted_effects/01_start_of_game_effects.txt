@@ -1475,19 +1475,16 @@ generate_start_buildings_and_districts = {
 
 			# 3 jobs
 			add_building = building_capital
-			add_building = {
-				zone = zone_urban
-				building = building_primitive_factory
+			add_zone = {
+				district = district_city
+				zone = zone_research_unity
+				zone_slot = 1
 			}
-			add_building = {
-				zone = zone_urban
-				building = building_primitive_offices
+			add_zone = {
+				district = district_city
+				zone = zone_industrial
+				zone_slot = 2
 			}
-			add_building = {
-				zone = zone_urban
-				building = building_primitive_research
-			}
-
 			# 2 jobs
 			if = {
 				limit = {
@@ -1684,6 +1681,18 @@ generate_start_buildings_and_districts = {
 
 			# 5 jobs
 			add_building = building_hive_capital
+			add_building = {
+				zone = zone_urban
+				building = building_primitive_factory
+			}
+			add_building = {
+				zone = zone_urban
+				building = building_hive_primitive_node
+			}
+			add_building = {
+				zone = zone_urban
+				building = building_primitive_research
+			}
 
 			if = { #This building is very useless for Devouring Swarm Necrophages
 				limit = {
@@ -1731,6 +1740,18 @@ generate_start_buildings_and_districts = {
 
 			# 6 jobs
 			add_building = building_machine_capital
+			add_building = {
+				zone = zone_urban
+				building = building_primitive_factory
+			}
+			add_building = {
+				zone = zone_urban
+				building = building_machine_primitive_node
+			}
+			add_building = {
+				zone = zone_urban
+				building = building_primitive_research
+			}
 
 			# 1 job
 			add_building = building_machine_assembly_plant
@@ -1961,6 +1982,10 @@ generate_start_buildings_and_districts = {
 				add_district_and_planet_size_if_needed_effect = {
 					district = district_mining_uncapped
 				}
+			}
+			add_zone = {
+				district = district_mining_uncapped
+				zone = zone_subterranean_urban
 			}
 		}
 		# Give Idyllic Bloom a Gaiaseeder to start with if they have room
@@ -2446,6 +2471,18 @@ generate_start_buildings_and_districts = {
 
 			# 5 jobs
 			add_building = building_hive_capital
+			add_building = {
+				zone = zone_urban
+				building = building_primitive_factory
+			}
+			add_building = {
+				zone = zone_urban
+				building = building_hive_primitive_node
+			}
+			add_building = {
+				zone = zone_urban
+				building = building_primitive_research
+			}
 
 			# 1 job
 			if = {
@@ -2480,6 +2517,18 @@ generate_start_buildings_and_districts = {
 
 			# 6 jobs
 			add_building = building_machine_capital
+			add_building = {
+				zone = zone_urban
+				building = building_primitive_factory
+			}
+			add_building = {
+				zone = zone_urban
+				building = building_machine_primitive_node
+			}
+			add_building = {
+				zone = zone_urban
+				building = building_primitive_research
+			}
 
 			# 1 job
 			add_building = building_machine_assembly_plant
@@ -3294,6 +3343,22 @@ generate_home_planet_final_pass = {
 		owner = {
 			capital_scope = {
 				add_deposit = d_machine_minerals
+				while = {
+					count = 2
+					add_district = district_nexus_1
+				}
+				add_zone = {
+					district = district_nexus_1
+					zone = zone_minerals
+				}
+				while = {
+					count = 3
+					add_district = district_nexus_2
+				}
+				add_zone = {
+					district = district_nexus_2
+					zone = zone_energy
+				}
 				solar_system = {
 					every_system_planet = {
 						limit = {

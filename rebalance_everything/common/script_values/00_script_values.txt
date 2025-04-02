@@ -1438,16 +1438,8 @@ conclave_election_value = {
 		trigger = pop_percentage
 		parameters = {
 			limit = {
-				OR = {
-					has_job = priest
-					has_job = high_priest
-					has_job = death_priest
-					has_job = mortal_initiate
-					has_job = preacher
-					has_job = technophant
-					has_job = haruspex
-					has_job = numistic_priest
-				}
+				bureaucrat_is_priest = yes
+				has_job = bureaucrat
 			}
 		}
 		mode = add

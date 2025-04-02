@@ -4,7 +4,6 @@
 building_research_lab_1 = {
 	can_build = yes
 	base_buildtime = @b1_time
-	base_cap_amount = 1
 	exempt_from_ai_planet_specialization = no
 
 	category = research
@@ -42,10 +41,6 @@ building_research_lab_1 = {
 		upkeep = {
 			energy = @b1_upkeep
 		}
-	}
-
-	planet_modifier = {
-		planet_researchers_produces_mult = 0.20
 	}
 
 	prerequisites = {
@@ -566,9 +561,9 @@ building_vultaum_reality_computer = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_drone_physicist_add = 100
-			job_brain_drone_biologist_add = 100
-			job_brain_drone_engineer_add = 100
+			job_calculator_physicist_add = 100
+			job_calculator_biologist_add = 100
+			job_calculator_engineer_add = 100
 		}
 	}
 
@@ -644,11 +639,6 @@ building_physics_lab = {
 		}
 	}
 
-	inline_script = {
-		script = jobs/researchers_add
-		LARGE_AMOUNT = @scaling_district_1_job
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -659,8 +649,17 @@ building_physics_lab = {
 		}
 	}
 
+	inline_script = {
+		script = jobs/physicists_add
+		AMOUNT = @building_static_jobs
+	}
+
 	planet_modifier = {
 		planet_physicists_upkeep_mult = -0.20
+	}
+
+	triggered_desc = {
+		text = building_physics_lab_tt
 	}
 
 	prerequisites = {
@@ -698,11 +697,6 @@ building_society_lab = {
 		}
 	}
 
-	inline_script = {
-		script = jobs/researchers_add
-		LARGE_AMOUNT = @scaling_district_1_job
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -713,14 +707,24 @@ building_society_lab = {
 		}
 	}
 
+	inline_script = {
+		script = jobs/biologists_add
+		AMOUNT = @building_static_jobs
+	}
+
 	planet_modifier = {
 		planet_biologists_upkeep_mult = -0.20
+	}
+
+	triggered_desc = {
+		text = building_society_lab_tt
 	}
 
 	prerequisites = {
 		"tech_basic_science_lab_1"
 	}
 }
+
 building_engineering_lab = {
 	can_build = yes
 	base_buildtime = @b1_time
@@ -752,11 +756,6 @@ building_engineering_lab = {
 		}
 	}
 
-	inline_script = {
-		script = jobs/researchers_add
-		LARGE_AMOUNT = @scaling_district_1_job
-	}
-
 	resources = {
 		category = planet_buildings
 		cost = {
@@ -767,8 +766,17 @@ building_engineering_lab = {
 		}
 	}
 
+	inline_script = {
+		script = jobs/engineers_add
+		AMOUNT = @building_static_jobs
+	}
+
 	planet_modifier = {
 		planet_engineers_upkeep_mult = -0.20
+	}
+
+	triggered_desc = {
+		text = building_engineering_lab_tt
 	}
 
 	prerequisites = {

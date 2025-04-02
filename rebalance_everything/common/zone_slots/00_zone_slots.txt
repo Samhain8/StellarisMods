@@ -186,21 +186,21 @@ inline_script = zones/allowed_zones_urban
 }
 ##Ringworld
 slot_rw_urban_01 = {
-inline_script = zones/allowed_zones_urban
+inline_script = zones/allowed_zones_rw
 
 	unlock = { # planet scope
 		uses_district_set = ring_world
 	}
 }
 slot_rw_urban_02 = {
-inline_script = zones/allowed_zones_urban
+inline_script = zones/allowed_zones_rw
 
 	unlock = { # planet scope
 		uses_district_set = ring_world
 	}
 }
 slot_rw_urban_03 = {
-inline_script = zones/allowed_zones_urban
+inline_script = zones/allowed_zones_rw
 
 	unlock = { # planet scope
 		uses_district_set = ring_world
@@ -226,5 +226,49 @@ inline_script = zones/allowed_zones_urban
 
 	unlock = { # planet scope
 		uses_district_set = city_world
+	}
+}
+##Machine
+slot_nexus_01 = {
+inline_script = zones/allowed_zones_nexus
+
+	unlock = { # planet scope
+		uses_district_set = machine_world
+	}
+}
+slot_nexus_02 = {
+inline_script = zones/allowed_zones_nexus
+
+	unlock = { # planet scope
+		uses_district_set = machine_world
+	}
+}
+slot_nexus_03 = {
+inline_script = zones/allowed_zones_nexus
+
+	unlock = { # planet scope
+		uses_district_set = machine_world
+	}
+}
+##Hive
+slot_hive_01 = {
+inline_script = zones/allowed_zones_hive
+
+	unlock = { # planet scope
+		uses_district_set = hive_world
+	}
+}
+slot_hive_02 = {
+inline_script = zones/allowed_zones_hive
+
+	unlock = { # planet scope
+		uses_district_set = hive_world
+	}
+}
+slot_hive_03 = {
+inline_script = zones/allowed_zones_hive
+
+	unlock = { # planet scope
+		uses_district_set = hive_world
 	}
 }

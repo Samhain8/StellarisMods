@@ -463,11 +463,9 @@ automate_permanent_employment_building = {
 		NOT = { has_building = building_posthumous_employment_center }
 		free_building_slots > 1
 		NOR = {
-			colony_type = col_default
 			colony_type = col_industrial
 			colony_type = col_foundry
 			colony_type = col_factory
-			colony_type = col_refinery
 			colony_type = col_research
 			colony_type = col_habitat_trade
 			colony_type = col_habitat_foundry

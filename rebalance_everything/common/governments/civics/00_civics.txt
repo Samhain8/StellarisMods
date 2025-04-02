@@ -2138,12 +2138,6 @@ civic_catalytic_processing = {
 		}
 	}
 	modifier = {
-		planet_metallurgists_alloys_produces_add = 0.75
-		planet_metallurgists_minerals_upkeep_add = -6
-		planet_metallurgists_food_upkeep_add = 9
-		planet_artisans_consumer_goods_produces_add = 0.75
-		planet_artisans_minerals_upkeep_add = -6
-		planet_artisans_food_upkeep_add = 9
 	}
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = {
@@ -2164,10 +2158,6 @@ civic_crafters = {
 	}
 	possible = {
 		civics = { NOT = { value = civic_corporate_crafters }	}
-	}
-	modifier = {
-		planet_artisans_consumer_goods_produces_add = 2
-		planet_artisans_trade_produces_add = 3
 	}
 	random_weight = {
 		base = @civic_uncommon_random_weight

@@ -80,8 +80,7 @@ building_crystal_mines = {
 
 building_betharian_power_plant = {
 	base_buildtime = @b1_time
-
-	is_capped_by_modifier = yes
+	base_cap_amount = 1
 
 	category = resource
 
@@ -102,11 +101,11 @@ building_betharian_power_plant = {
 	}
 
 	planet_modifier = {
-		planet_technician_energy_produces_add = 0.5
+		planet_miners_energy_produces_add = 2
 	}
 
 	inline_script = {
-		script = jobs/technicians_add
+		script = jobs/miners_add
 		AMOUNT = 400
 	}
 

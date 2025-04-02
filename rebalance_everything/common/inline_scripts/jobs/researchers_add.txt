@@ -92,9 +92,9 @@ triggered_planet_modifier = {
 		exists = owner
 		owner = { is_hive_empire = yes }
 	}
-	job_brain_drone_physicist_add = $AMOUNT$
-	job_brain_drone_biologist_add = $AMOUNT$
-	job_brain_drone_engineer_add = $AMOUNT$
+	job_calculator_physicist_add = $AMOUNT$
+	job_calculator_biologist_add = $AMOUNT$
+	job_calculator_engineer_add = $AMOUNT$
 }
 
 triggered_desc = {

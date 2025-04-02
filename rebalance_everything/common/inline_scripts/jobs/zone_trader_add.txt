@@ -44,8 +44,25 @@ triggered_district_planet_modifier = {
 	potential = {
 		exists = owner
 		owner = { is_gestalt = yes }
+		NOR = {
+			is_planet_class = pc_machine
+			is_planet_class = pc_hive
+		}
 	}
 	job_maintenance_drone_add = $AMOUNT$
+}
+
+triggered_district_planet_modifier = {
+	potential = {
+		exists = owner
+		owner = { is_gestalt = yes }
+		OR = {
+			is_planet_class = pc_machine
+			is_planet_class = pc_hive
+		}
+	}
+	job_maintenance_drone_add = $AMOUNT$
+	mult = 2	# Ecus get 3× as many jobs
 }
 
 triggered_desc = {

@@ -7077,15 +7077,15 @@ country_event = { # First words
 				}
 				modifier = {
 					add = 5
-					free_housing > 1
+					free_housing > 100
 				}
 				modifier = {
 					add = 10
-					free_housing > 5
+					free_housing > 500
 				}
 				modifier = {
 					add = 10
-					free_housing > 10
+					free_housing > 1000
 				}
 				modifier = {
 					add = 5
@@ -7101,6 +7101,10 @@ country_event = { # First words
 			export_trigger_value_to_variable = {
 				trigger = free_housing
 				variable = new_pops
+			}
+			divide_variable = {
+				which = new_pops
+				value = 100
 			}
 			if = {
 				limit = {

@@ -134,9 +134,9 @@ d_payback_habitat_research = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_drone_physicist_add = 200
-			job_brain_drone_biologist_add = 200
-			job_brain_drone_engineer_add = 200
+			job_calculator_physicist_add = 200
+			job_calculator_biologist_add = 200
+			job_calculator_engineer_add = 200
 		}
 	}
 

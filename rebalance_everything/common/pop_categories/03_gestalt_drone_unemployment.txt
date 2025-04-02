@@ -1,8 +1,8 @@
 simple_drone_unemployment = {
-	rank = 0
+	rank = 1
 	clothes_texture_index = 2
 
-	# display_category = simple_drone
+	demotion_time = 90
 
 	pop_group_modifier = {
 		pop_housing_usage_base = 1

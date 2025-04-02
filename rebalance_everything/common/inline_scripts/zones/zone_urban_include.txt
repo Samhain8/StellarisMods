@@ -7,4 +7,6 @@ include = {
 	building_primitive_research
 	building_research_lab_1
 	building_holo_theater
+	building_hive_primitive_node
+	building_machine_primitive_node
 }

@@ -77,20 +77,10 @@ district_generator = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_hive_empire = yes }
+			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_technician_drone_add = 300
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		modifier = {
-			job_technician_drone_add = @base_district_jobs
+			job_technician_drone_add = @base_rural_district_jobs
 			planet_housing_add = 100
 		}
 	}
@@ -104,7 +94,7 @@ district_generator = {
 			}
 		}
 		modifier = {
-			job_technician_add = @base_district_jobs
+			job_technician_add = @base_rural_district_jobs
 		}
 	}
 
@@ -114,7 +104,7 @@ district_generator = {
 			owner = { is_fallen_empire_spiritualist = yes }
 		}
 		modifier = {
-			job_fe_acolyte_generator_add = @base_district_jobs
+			job_fe_acolyte_generator_add = @base_rural_district_jobs
 		}
 	}
 
@@ -213,16 +203,6 @@ district_mining = {
 
 	triggered_planet_modifier = {
 		potential = {
-			exists = owner
-			owner = { is_hive_empire = yes }
-		}
-		modifier = {
-			job_mining_drone_add = 300
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
 			has_modifier = metal_planet
 		}
 		modifier = {
@@ -236,7 +216,7 @@ district_mining = {
 			owner = { is_machine_empire = yes }
 		}
 		modifier = {
-			job_mining_drone_add = @base_district_jobs
+			job_mining_drone_add = @base_rural_district_jobs
 			planet_housing_add = 100
 		}
 	}
@@ -250,7 +230,7 @@ district_mining = {
 			}
 		}
 		modifier = {
-			job_miner_add = @base_district_jobs
+			job_miner_add = @base_rural_district_jobs
 		}
 	}
 
@@ -260,7 +240,7 @@ district_mining = {
 			owner = { is_fallen_empire_spiritualist = yes }
 		}
 		modifier = {
-			job_fe_acolyte_mine_add = @base_district_jobs
+			job_fe_acolyte_mine_add = @base_rural_district_jobs
 		}
 	}
 
@@ -403,20 +383,10 @@ district_farming = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_hive_empire = yes }
+			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_agri_drone_add = 300
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		modifier = {
-			job_agri_drone_add = @base_district_jobs
+			job_agri_drone_add = @base_rural_district_jobs
 			planet_housing_add = 100
 		}
 	}
@@ -434,7 +404,7 @@ district_farming = {
 			}
 		}
 		modifier = {
-			job_farmer_add = @base_district_jobs
+			job_farmer_add = @base_rural_district_jobs
 		}
 	}
 
@@ -444,7 +414,7 @@ district_farming = {
 			owner = { is_fallen_empire_spiritualist = yes }
 		}
 		modifier = {
-			job_fe_acolyte_farm_add = @base_district_jobs
+			job_fe_acolyte_farm_add = @base_rural_district_jobs
 		}
 	}
 
@@ -525,8 +495,8 @@ district_generator_uncapped = {
 
 	show_on_uncolonized = {
 		OR = {
-			uses_district_set = hive_world
-			uses_district_set = machine_world
+			#uses_district_set = hive_world
+			#uses_district_set = machine_world
 			AND = {
 				exists = from
 				from = {
@@ -542,8 +512,8 @@ district_generator_uncapped = {
 
 	potential = {
 		OR = {
-			uses_district_set = hive_world
-			uses_district_set = machine_world
+			#uses_district_set = hive_world
+			#uses_district_set = machine_world
 			uses_district_set = shattered_ring_world
 		}
 	}
@@ -589,20 +559,10 @@ district_generator_uncapped = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_hive_empire = yes }
+			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_technician_drone_add = 300
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		modifier = {
-			job_technician_drone_add = @base_district_jobs
+			job_technician_drone_add = @base_rural_district_jobs
 			planet_housing_add = 100
 		}
 	}
@@ -617,7 +577,7 @@ district_generator_uncapped = {
 			}
 		}
 		modifier = {
-			job_technician_drone_add = @base_district_jobs
+			job_technician_drone_add = @base_rural_district_jobs
 			planet_housing_add = 300
 		}
 	}
@@ -631,7 +591,7 @@ district_generator_uncapped = {
 			}
 		}
 		modifier = {
-			job_technician_add = @base_district_jobs
+			job_technician_add = @base_rural_district_jobs
 		}
 	}
 
@@ -641,7 +601,7 @@ district_generator_uncapped = {
 			owner = { is_fallen_empire_spiritualist = yes }
 		}
 		modifier = {
-			job_fe_acolyte_generator_add = @base_district_jobs
+			job_fe_acolyte_generator_add = @base_rural_district_jobs
 		}
 	}
 
@@ -697,8 +657,8 @@ district_mining_uncapped = {
 
 	show_on_uncolonized = {
 		OR = {
-			uses_district_set = hive_world
-			uses_district_set = machine_world
+			#uses_district_set = hive_world
+			#uses_district_set = machine_world
 			uses_district_set = shattered_ring_world
 			AND = {
 				exists = from
@@ -711,8 +671,8 @@ district_mining_uncapped = {
 	potential = {
 
 		OR = {
-			uses_district_set = hive_world
-			uses_district_set = machine_world
+			#uses_district_set = hive_world
+			#uses_district_set = machine_world
 			uses_district_set = shattered_ring_world
 			AND = {
 				exists = owner
@@ -771,21 +731,10 @@ district_mining_uncapped = {
 		potential = {
 			NOT = { uses_district_set = shattered_ring_world }
 			exists = owner
-			owner = { is_hive_empire = yes }
+			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_mining_drone_add = 300
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			NOT = { uses_district_set = shattered_ring_world }
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		modifier = {
-			job_mining_drone_add = @base_district_jobs
+			job_mining_drone_add = @base_rural_district_jobs
 			planet_housing_add = 100
 		}
 	}
@@ -800,7 +749,7 @@ district_mining_uncapped = {
 			}
 		}
 		modifier = {
-			job_mining_drone_add = @base_district_jobs
+			job_mining_drone_add = @base_rural_district_jobs
 			planet_housing_add = 300
 		}
 	}
@@ -815,7 +764,7 @@ district_mining_uncapped = {
 			}
 		}
 		modifier = {
-			job_miner_add = @base_district_jobs
+			job_miner_add = @base_rural_district_jobs
 		}
 	}
 
@@ -826,7 +775,7 @@ district_mining_uncapped = {
 			owner = { is_fallen_empire_spiritualist = yes }
 		}
 		modifier = {
-			job_fe_acolyte_mine_add = @base_district_jobs
+			job_fe_acolyte_mine_add = @base_rural_district_jobs
 		}
 	}
 
@@ -834,21 +783,10 @@ district_mining_uncapped = {
 		potential = {
 			uses_district_set = shattered_ring_world
 			exists = owner
-			owner = { is_hive_empire = yes }
+			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_scrap_miner_drone_add = 300
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			uses_district_set = shattered_ring_world
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		modifier = {
-			job_scrap_miner_drone_add = @base_district_jobs
+			job_mining_drone_add = @base_rural_district_jobs
 			planet_housing_add = 100
 		}
 	}
@@ -862,7 +800,7 @@ district_mining_uncapped = {
 			}
 		}
 		modifier = {
-			job_scrap_miner_add = @base_district_jobs
+			job_scrap_miner_add = @base_rural_district_jobs
 		}
 	}
 
@@ -874,17 +812,6 @@ district_mining_uncapped = {
 			planet_housing_add = 1
 		}
 		mult = owner.value:scripted_modifier_add|MODIFIER|mining_district_housing_add|
-	}
-
-	# TODO_CD: needs new purpose as max buildings modifier is now obsolete
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-		}
-		modifier = {
-			planet_max_buildings_add = 1
-		}
-		mult = owner.value:scripted_modifier_add|MODIFIER|mining_district_buildings_add|
 	}
 
 	triggered_desc = {
@@ -954,14 +881,14 @@ district_farming_uncapped = {
 
 	show_on_uncolonized = {
 		OR = {
-			uses_district_set = hive_world
+			#uses_district_set = hive_world
 			uses_district_set = shattered_ring_world
 		}
 	}
 
 	potential = {
 		OR = {
-			uses_district_set = hive_world
+			#uses_district_set = hive_world
 			uses_district_set = shattered_ring_world
 			AND = {
 				exists = owner
@@ -1042,20 +969,10 @@ district_farming_uncapped = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_hive_empire = yes }
+			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_agri_drone_add = 300
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_machine_empire = yes }
-		}
-		modifier = {
-			job_agri_drone_add = @base_district_jobs
+			job_agri_drone_add = @base_rural_district_jobs
 			planet_housing_add = 100
 		}
 	}
@@ -1073,7 +990,7 @@ district_farming_uncapped = {
 			}
 		}
 		modifier = {
-			job_farmer_add = @base_district_jobs
+			job_farmer_add = @base_rural_district_jobs
 		}
 	}
 
@@ -1083,7 +1000,7 @@ district_farming_uncapped = {
 			owner = { is_fallen_empire_spiritualist = yes }
 		}
 		modifier = {
-			job_fe_acolyte_farm_add = @base_district_jobs
+			job_fe_acolyte_farm_add = @base_rural_district_jobs
 		}
 	}
 

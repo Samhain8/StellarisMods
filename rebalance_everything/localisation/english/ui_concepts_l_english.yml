@@ -81,7 +81,7 @@
  concept_contacts_view_desc: "Lists all Empires and aliens in the galaxy that you have come in contact with. $TODO_CD$"
  contacts_view_tab_contacts: "§H$topbar_button_contacts_name$§!"
  contacts_view_tab_agreements: "§H$AGREEMENTS_LIST_TITLE$§!"
- concept_contacts_view_tabs: "- $contacts_view_tab_contacts$: engage in ['concept_diplomacy']\n- $contacts_view_tab_agreements$: study ['concept_vassal_agreements']" # Avoid c_ concepts in tabs list because we don't want icons in the Navigation Bar
+ concept_contacts_view_tabs: "- $contacts_view_tab_contacts$: engage in ['concept_diplomacy']\n- $contacts_view_tab_agreements$: study ['concept_subject_agreements']" # Avoid c_ concepts in tabs list because we don't want icons in the Navigation Bar
 
  # View: £interface£ ['concept_discoveries_view'] or £interface£ §H$concept_discoveries_view$§!
  concept_discoveries_view: "$topbar_button_discoveries_name$ View"

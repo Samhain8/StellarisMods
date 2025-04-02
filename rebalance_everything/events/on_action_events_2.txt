@@ -3320,33 +3320,6 @@ country_event = {
 	}
 }
 
-# Reset colony type upon colonization if this was a former pre-ftl world.
-# Scope = Planet
-planet_event = {
-	id = action.655
-	hide_window = yes
-
-	is_triggered_only = yes
-
-	trigger = {
-		is_pre_ftl_colony_type = yes
-	}
-
-	immediate = {
-		if = {
-			limit = {
-				owner = {
-					is_machine_empire = yes
-				}
-			}
-			set_colony_type = col_default_machine
-		}
-		else = {
-			set_colony_type = col_default
-		}
-	}
-}
-
 event = {
 	id = action.720
 	hide_window = yes

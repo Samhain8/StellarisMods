@@ -13,6 +13,7 @@ event = {
 		every_country = {
 			limit = { is_ai = no }
 			country_event = { id = country.900 days = 460 random = 60 }
+			country_event = { id = game_start.74 }
 		}
 
 		### HUMAN SPAWNS
@@ -3236,6 +3237,22 @@ country_event = {
 				}
 				set_country_flag = augmentation_bazaars_superconductive
 			}
+		}
+	}
+}
+
+### Empire Focus 
+country_event = {
+	id = game_start.74
+	hide_window = yes
+	is_triggered_only = yes
+	event_message_type = EMPIRE_FOCUS
+
+	immediate = {
+		create_message = {
+			type = EMPIRE_FOCUS
+			localization = game_start.74.title
+			days = 30
 		}
 	}
 }

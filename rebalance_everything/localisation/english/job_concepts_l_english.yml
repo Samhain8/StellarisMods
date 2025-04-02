@@ -116,7 +116,7 @@
  # Plural: £mod_job_clerk_add£ ['concept_clerks'] or £mod_job_clerk_add£ §H$concept_clerks$§!
  concept_clerk: "$job_clerk$"
  concept_clerks: "$job_clerk_plural$"
- concept_clerk_desc: "$job_clerk_plural$ produce $i_trade_value$ and $i_amenities$.\n\n§L$job_clerk_desc$§!"
+ concept_clerk_desc: "$job_clerk_plural$ produce $r_trade$ and $i_amenities$.\n\n§L$job_clerk_desc$§!"
 
  concept_unifier: "$job_unifier_plural$"
  concept_unifier_desc: "$job_unifier_plural$ turn $i_consumer_goods$ and $i_food$ (or $i_minerals$) into $i_unity$ and $i_amenities$.\n\n§L$job_unifier_desc$§!"

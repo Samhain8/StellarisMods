@@ -4364,16 +4364,6 @@ add_tech_option_or_research_effect = {
 	}
 }
 
-add_tech_option_no_progress_effect = {
-	if = {
-		limit = {
-			NOT = { has_technology = $TECH$ }
-			can_research_technology = $TECH$
-		}
-		add_research_option = $TECH$
-	}
-}
-
 give_tech_no_error_effect = {
 	if = {
 		limit = {

@@ -9,7 +9,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_priest_add = $AMOUNT$
+		job_bureaucrat_add = $AMOUNT$
 	}
 }
 
@@ -37,7 +37,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_preacher_add = $AMOUNT$
+		job_bureaucrat_add = $AMOUNT$
 	}
 }
 
@@ -62,7 +62,7 @@ triggered_planet_modifier = {
 		}
 	}
 	modifier = {
-		job_haruspex_add = $AMOUNT$
+		job_bureaucrat_add = $AMOUNT$
 	}
 }
 

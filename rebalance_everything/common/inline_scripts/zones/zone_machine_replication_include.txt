@@ -1,0 +1,7 @@
+include = {
+	building_resource_silo
+	building_automation_1
+	building_machine_assembly_plant
+	building_drone_storage
+	building_toxic_bath_machine
+}

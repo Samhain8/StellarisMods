@@ -4232,7 +4232,6 @@ message_type = {
 	name = "ENCLAVE_DIPLOMACY_TITLE"
 	#sound = "diplomatic_notification"
 	ping = "ping_notification_yellow"
-
 }
 
 # Terraforming World Discovered
@@ -4247,5 +4246,20 @@ message_type = {
 	name = "MESSAGE_TERRAFORMING_EVENT_TITLE"
 	sound = "diplomatic_notification"
 	ping = "ping_notification_green"
+}
 
+# Empire Focus Start
+message_type = {
+	key = "EMPIRE_FOCUS"
+	icon = "GFX_focus_priority_icon_exploration"
+	icon_frame = 1
+	hidden_in_message_settings = yes
+	default_popup = no
+	default_notification = yes
+
+	name = "EMPIRE_FOCUS_MESSAGE_TYPE"
+	sound = "notification"
+	ping = "ping_notification_yellow"
+
+	category = focuses
 }

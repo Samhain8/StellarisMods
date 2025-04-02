@@ -979,7 +979,7 @@
  r_society:0 "£society£ §YSociety Research§!"
  r_engineering:0 "£engineering£ §YEngineering Research§!"
  r_amenities:2 "£mod_planet_amenities_add£ §YAmenities§!"
- r_trade_value:2 "£mod_trade_value_add£ §YTrade Value§!"
+ r_trade_value:2 "£trade£ §YTrade Value§!"
  r_loyalty:1 "£loyalty£ §YMonthly Loyalty§!"
  r_rare_crystals:1 "£rare_crystals£ §Y$rare_crystals$§!"
  r_volatile_motes:1 "£volatile_motes£ §Y$volatile_motes$§!"

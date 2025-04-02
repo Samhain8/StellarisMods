@@ -27,7 +27,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_storm_chasers_desc"
 					override_text = { "text:origin_storm_chasers" }
-					override_texture = { "background:GFX_origin_storm_chasers" }
+					override_texture = { "background:GFX_origin_storm_chasers_zoom_1" }
 					override_id = timeline_origin_storm_chasers
 				}
 			}
@@ -36,7 +36,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_life_seeded_desc"
 					override_text = { "text:origin_life_seeded" }
-					override_texture = { "background:GFX_origin_life_seeded" }
+					override_texture = { "background:GFX_origin_life_seeded_zoom_1"}
 					override_id = timeline_origin_life_seeded
 				}
 			}
@@ -45,7 +45,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_syncretic_evolution_desc"
 					override_text = { "text:origin_syncretic_evolution" }
-					override_texture = { "background:GFX_origin_syncretic_evolution" }
+					override_texture = { "background:GFX_origin_syncretic_evolution_zoom_1" }
 					override_id = timeline_origin_syncretic_evolution
 				}
 			}
@@ -54,7 +54,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_common_ground_desc"
 					override_text = { "text:origin_common_ground" }
-					override_texture = { "background:GFX_origin_common_ground" }
+					override_texture = { "background:GFX_origin_common_ground_zoom_1" }
 					override_id = timeline_origin_common_ground
 				}
 			}
@@ -63,7 +63,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_post_apocalyptic_desc"
 					override_text = { "text:origin_post_apocalyptic" }
-					override_texture = { "background:GFX_origin_post_apocalyptic" }
+					override_texture = { "background:GFX_origin_post_apocalyptic_zoom_1" }
 					override_id = timeline_origin_post_apocalyptic
 				}
 			}
@@ -72,7 +72,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_shoulders_of_giants_desc"
 					override_text = { "text:origin_shoulders_of_giants" }
-					override_texture = { "background:GFX_origin_shoulders" }
+					override_texture = { "background:GFX_origin_shoulders_zoom_1" }
 					override_id = timeline_origin_shoulders_of_giants
 				}
 			}
@@ -81,7 +81,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_scion_desc"
 					override_text = { "text:origin_scion" }
-					override_texture = { "background:GFX_origin_scion" }
+					override_texture = { "background:GFX_origin_scion_zoom_1" }
 					override_id = timeline_origin_scion
 				}
 			}
@@ -90,7 +90,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_doomsday_desc"
 					override_text = { "text:origin_doomsday" }
-					override_texture = { "background:GFX_origin_doomsday" }
+					override_texture = { "background:GFX_origin_doomsday_zoom_1" }
 					override_id = timeline_origin_doomsday
 				}
 			}
@@ -99,7 +99,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_remnants_desc"
 					override_text = { "text:origin_remnants" }
-					override_texture = { "background:GFX_origin_remnants" }
+					override_texture = { "background:GFX_origin_remnants_zoom_1" }
 					override_id = timeline_origin_remnants
 				}
 			}
@@ -108,7 +108,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_galactic_doorstep_desc"
 					override_text = { "text:origin_galactic_doorstep" }
-					override_texture = { "background:GFX_origin_galactic_doorstep" }
+					override_texture = { "background:GFX_origin_galactic_doorstep_zoom_1" }
 					override_id = timeline_origin_galactic_doorstep
 				}
 			}
@@ -117,7 +117,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_lost_colony_desc"
 					override_text = { "text:origin_lost_colony" }
-					override_texture = { "background:GFX_origin_lost_colony" }
+					override_texture = { "background:GFX_origin_lost_colony_zoom_1" }
 					override_id = timeline_origin_lost_colony
 				}
 			}
@@ -126,7 +126,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_mechanists_desc"
 					override_text = { "text:origin_mechanists" }
-					override_texture = { "background:GFX_origin_mechanists" }
+					override_texture = { "background:GFX_origin_mechanists_zoom_1" }
 					override_id = timeline_origin_mechanists
 				}
 			}
@@ -135,7 +135,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_clone_army_desc"
 					override_text = { "text:origin_clone_army" }
-					override_texture = { "background:GFX_origin_clone_army" }
+					override_texture = { "background:GFX_origin_clone_army_zoom_1" }
 					override_id = timeline_origin_clone_army
 				}
 			}
@@ -144,7 +144,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_hegemon_desc"
 					override_text = { "text:origin_hegemon" }
-					override_texture = { "background:GFX_origin_hegemon" }
+					override_texture = { "background:GFX_origin_hegemon_zoom_1" }
 					override_id = timeline_origin_hegemon
 				}
 			}
@@ -153,7 +153,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_shattered_ring_desc"
 					override_text = { "text:origin_shattered_ring" }
-					override_texture = { "background:GFX_origin_shattered_ring" }
+					override_texture = { "background:GFX_origin_shattered_ring_zoom_1" }
 					override_id = timeline_origin_shattered_ring
 				}
 			}
@@ -162,7 +162,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_void_dwellers_desc"
 					override_text = { "text:origin_void_dwellers" }
-					override_texture = { "background:GFX_origin_void_dwellers" }
+					override_texture = { "background:GFX_origin_void_dwellers_zoom_1" }
 					override_id = timeline_origin_void_dwellers
 				}
 			}
@@ -171,7 +171,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_necrophage_desc"
 					override_text = { "text:origin_necrophage" }
-					override_texture = { "background:GFX_origin_necrophage" }
+					override_texture = { "background:GFX_origin_necrophage_zoom_1" }
 					override_id = timeline_origin_necrophage
 				}
 			}
@@ -180,7 +180,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_here_be_dragons_desc"
 					override_text = { "text:origin_here_be_dragons" }
-					override_texture = { "background:GFX_origin_here_be_dragons" }
+					override_texture = { "background:GFX_origin_here_be_dragons_zoom_1" }
 					override_id = timeline_origin_here_be_dragons
 				}
 			}
@@ -189,7 +189,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_ocean_paradise_desc"
 					override_text = { "text:origin_ocean_paradise" }
-					override_texture = { "background:GFX_origin_ocean_paradise" }
+					override_texture = { "background:GFX_origin_ocean_paradise_zoom_1" }
 					override_id = timeline_origin_ocean_paradise
 				}
 			}
@@ -198,7 +198,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_toxic_knights_desc"
 					override_text = { "text:origin_toxic_knights" }
-					override_texture = { "background:GFX_origin_toxic_knights" }
+					override_texture = { "background:GFX_origin_toxic_knights_zoom_1" }
 					override_id = timeline_origin_toxic_knights
 				}
 			}
@@ -207,7 +207,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_overtuned_desc"
 					override_text = { "text:origin_overtuned" }
-					override_texture = { "background:GFX_origin_overtuned" }
+					override_texture = { "background:GFX_origin_overtuned_zoom_1" }
 					override_id = timeline_origin_overtuned
 				}
 			}
@@ -216,7 +216,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_imperial_vassal_desc"
 					override_text = { "text:origin_imperial_vassal" }
-					override_texture = { "background:GFX_origin_imperial_vassal" }
+					override_texture = { "background:GFX_origin_imperial_vassal_zoom_1" }
 					override_id = timeline_origin_imperial_vassal
 				}
 			}
@@ -225,7 +225,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_star_slingshot_desc"
 					override_text = { "text:origin_star_slingshot" }
-					override_texture = { "background:GFX_origin_star_slingshot" }
+					override_texture = { "background:GFX_origin_star_slingshot_zoom_1" }
 					override_id = timeline_origin_star_slingshot
 				}
 			}
@@ -234,7 +234,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_subterranean_desc"
 					override_text = { "text:origin_subterranean" }
-					override_texture = { "background:GFX_origin_subterranean" }
+					override_texture = { "background:GFX_origin_subterranean_zoom_1" }
 					override_id = timeline_origin_subterranean
 				}
 			}
@@ -243,7 +243,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_shroudwalker_apprentice_desc"
 					override_text = { "text:origin_shroudwalker_apprentice" }
-					override_texture = { "background:GFX_origin_shroudwalker_apprentice" }
+					override_texture = { "background:GFX_origin_shroudwalker_apprentice_zoom_1" }
 					override_id = timeline_origin_shroudwalker_apprentice
 				}
 			}
@@ -252,7 +252,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_broken_shackles_desc"
 					override_text = { "text:origin_broken_shackles" }
-					override_texture = { "background:GFX_origin_broken_shackles" }
+					override_texture = { "background:GFX_origin_broken_shackles_zoom_1" }
 					override_id = timeline_origin_broken_shackles
 				}
 			}
@@ -261,7 +261,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_payback_desc"
 					override_text = { "text:origin_payback" }
-					override_texture = { "background:GFX_origin_payback" }
+					override_texture = { "background:GFX_origin_payback_zoom_1" }
 					override_id = timeline_origin_payback
 				}
 			}
@@ -270,7 +270,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_fear_of_the_dark_desc"
 					override_text = { "text:origin_fear_of_the_dark" }
-					override_texture = { "background:GFX_origin_fear_of_the_dark" }
+					override_texture = { "background:GFX_origin_fear_of_the_dark_zoom_1" }
 					override_id = timeline_origin_fear_of_the_dark
 				}
 			}
@@ -279,7 +279,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_legendary_leader_desc"
 					override_text = { "text:origin_legendary_leader" }
-					override_texture = { "background:GFX_origin_legendary_leader" }
+					override_texture = { "background:GFX_origin_legendary_leader_zoom_1" }
 					override_id = timeline_origin_legendary_leader
 				}
 			}
@@ -288,7 +288,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_riftworld_desc"
 					override_text = { "text:origin_riftworld" }
-					override_texture = { "background:GFX_origin_riftworld" }
+					override_texture = { "background:GFX_origin_riftworld_zoom_1" }
 					override_id = timeline_origin_riftworld
 				}
 			}
@@ -297,7 +297,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_cybernetic_creed_desc"
 					override_text = { "text:origin_cybernetic_creed" }
-					override_texture = { "background:GFX_origin_cybernetic_creed" }
+					override_texture = { "background:GFX_origin_cybernetic_creed_zoom_1" }
 					override_id = timeline_origin_cybernetic_creed
 				}
 			}
@@ -306,7 +306,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_synthetic_fertility_desc"
 					override_text = { "text:origin_synthetic_fertility" }
-					override_texture = { "background:GFX_origin_synthetic_fertility" }
+					override_texture = { "background:GFX_origin_synthetic_fertility_zoom_1" }
 					override_id = timeline_origin_synthetic_fertility
 				}
 			}
@@ -315,7 +315,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_primal_calling_desc"
 					override_text = { "text:origin_primal_calling" }
-					override_texture = { "background:GFX_origin_primal_calling" }
+					override_texture = { "background:GFX_origin_primal_calling_zoom_1" }
 					override_id = timeline_origin_primal_calling
 				}
 			}
@@ -324,7 +324,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_treasure_hunters_desc"
 					override_text = { "text:origin_treasure_hunters" }
-					override_texture = { "background:GFX_origin_treasure_hunters" }
+					override_texture = { "background:GFX_origin_treasure_hunters_zoom_1" }
 					override_id = timeline_origin_treasure_hunters
 				}
 			}
@@ -333,7 +333,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_fruitful_desc"
 					override_text = { "text:origin_fruitful" }
-					override_texture = { "background:GFX_origin_fruitful" }
+					override_texture = { "background:GFX_origin_fruitful_zoom_1" }
 					override_id = timeline_origin_fruitful
 				}
 			}
@@ -342,7 +342,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_lithoid_desc"
 					override_text = { "text:origin_lithoid" }
-					override_texture = { "background:GFX_origin_calamitous" }
+					override_texture = { "background:GFX_origin_calamitous_zoom_1" }
 					override_id = timeline_origin_lithoid
 				}
 			}
@@ -351,7 +351,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_arc_welders_desc"
 					override_text = { "text:origin_arc_welders" }
-					override_texture = { "background:GFX_origin_arc_welders" }
+					override_texture = { "background:GFX_origin_arc_welders_zoom_1" }
 					override_id = timeline_origin_arc_welders
 				}
 			}
@@ -360,7 +360,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_tree_of_life_desc"
 					override_text = { "text:origin_tree_of_life" }
-					override_texture = { "background:GFX_origin_tree_of_life" }
+					override_texture = { "background:GFX_origin_tree_of_life_zoom_1" }
 					override_id = timeline_origin_tree_of_life
 				}
 			}
@@ -369,7 +369,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_progenitor_hive_desc"
 					override_text = { "text:origin_progenitor_hive" }
-					override_texture = { "background:GFX_origin_progenitor_hive" }
+					override_texture = { "background:GFX_origin_progenitor_hive_zoom_1" }
 					override_id = timeline_origin_progenitor_hive
 				}
 			}
@@ -378,7 +378,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_machine_desc"
 					override_text = { "text:origin_machine" }
-					override_texture = { "background:GFX_origin_resource_consolidation" }
+					override_texture = { "background:GFX_origin_resource_consolidation_zoom_1" }
 					override_id = timeline_origin_machine
 				}
 			}
@@ -387,7 +387,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_separatists_desc"
 					override_text = { "text:origin_separatists" }
-					override_texture = { "background:GFX_evt_organic_oppression" }
+					override_texture = { "background:GFX_evt_organic_oppression_zoom_1" }
 					override_id = timeline_origin_separatists
 				}
 			}
@@ -396,7 +396,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_demonic_incursion_desc"
 					override_text = { "text:origin_demonic_incursion" }
-					override_texture = { "background:GFX_evt_space_dragon" }
+					override_texture = { "background:GFX_evt_space_dragon_zoom_1" }
 					override_id = timeline_origin_demonic_incursion
 				}
 			}
@@ -405,7 +405,7 @@ country_event = {
 					type = timeline_origin
 					override_tooltip = "origin_default_desc"
 					override_text = { "text:origin_default" }
-					override_texture = { "background:GFX_origin_default" }
+					override_texture = { "background:GFX_origin_default_zoom_1" }
 					override_id = timeline_origin_default
 				}
 			}

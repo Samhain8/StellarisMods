@@ -779,19 +779,19 @@ defined_text = {
 		localization_key = xeno_zoo_keeper_fs_FR
 	}
 	text = {
-		trigger = { loc_leader_masc = yes has_background_job = priest }
+		trigger = { loc_leader_masc = yes has_background_job = bureaucrat }
 		localization_key = priest_ms_FR
 	}
 	text = {
-		trigger = { loc_leader_fem = yes has_background_job = priest }
+		trigger = { loc_leader_fem = yes has_background_job = bureaucrat }
 		localization_key = priest_fs_FR
 	}
 	text = {
-		trigger = { loc_leader_masc = yes has_background_job = death_priest }
+		trigger = { loc_leader_masc = yes has_background_job = bureaucrat }
 		localization_key = death_priest_ms_FR
 	}
 	text = {
-		trigger = { loc_leader_fem = yes has_background_job = death_priest }
+		trigger = { loc_leader_fem = yes has_background_job = bureaucrat }
 		localization_key = death_priest_fs_FR
 	}
 	text = {

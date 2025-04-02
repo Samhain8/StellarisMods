@@ -158,13 +158,39 @@ building_primitive_factory = {
 		job_primitive_laborer_add = @building_static_jobs
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		job_fabricator_add = @building_static_jobs
+	}
+
 #	upgrades = {
 #		building_foundry_1
 #		building_factory_1
 #	}
 
 	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+			}
+		}
 		text =  job_primitive_laborer_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		text =  job_alloy_drone_effect_desc
 	}
 }
 
@@ -219,6 +245,18 @@ building_primitive_research = {
 			}
 		}
 		job_primitive_researcher_2_add = @building_static_jobs
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = yes
+			}
+		}
+		job_calculator_physicist_add = 60
+		job_calculator_biologist_add = 60
+		job_calculator_engineer_add = 60
 	}
 
 #	upgrades = {
@@ -974,6 +1012,62 @@ building_hive_urban_dwellings = {
 	}
 
 	upgrades = {
+	}
+}
+
+building_hive_primitive_node = {
+	icon = building_hive_node
+	can_build = no
+	base_cap_amount = 1
+	can_demolish = yes
+	can_be_ruined = no
+
+	category = unity
+
+	potential = {
+		always = yes
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_hive_empire = yes
+			}
+		}
+		job_coordinator_add = @building_static_jobs
+	}
+
+	triggered_desc = {
+		text =  job_synapse_drone_effect_desc
+	}
+}
+
+building_machine_primitive_node = {
+	icon = building_autochthon_monument
+	can_build = no
+	base_cap_amount = 1
+	can_demolish = yes
+	can_be_ruined = no
+
+	category = unity
+
+	potential = {
+		always = yes
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_machine_empire = yes
+			}
+		}
+		job_coordinator_add = @building_static_jobs
+	}
+
+	triggered_desc = {
+		text =  job_coordinator_effect_desc
 	}
 }
 

@@ -85,20 +85,9 @@ building_ancient_hive_capital = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_lithoid_empire = no }
 		}
 		modifier = {
-			job_synapse_drone_add = 500
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_lithoid_empire = yes }
-		}
-		modifier = {
-			job_synapse_drone_lithoid_add = 500
+			job_coordinator_add = 500
 		}
 	}
 
@@ -346,9 +335,9 @@ building_master_archive = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_drone_physicist_add = @fe2_jobs
-			job_brain_drone_biologist_add = @fe2_jobs
-			job_brain_drone_engineer_add = @fe2_jobs
+			job_calculator_physicist_add = @fe2_jobs
+			job_calculator_biologist_add = @fe2_jobs
+			job_calculator_engineer_add = @fe2_jobs
 		}
 	}
 
@@ -1703,7 +1692,7 @@ building_fe_administration_1 = {
 			}
 		}
 		modifier = {
-			job_manager_add = @fe_jobs
+			job_bureaucrat_add = @fe_jobs
 		}
 	}
 
@@ -1726,7 +1715,7 @@ building_fe_administration_1 = {
 			}
 		}
 		modifier = {
-			job_steward_add = @fe_jobs
+			job_bureaucrat_add = @fe_jobs
 		}
 	}
 
@@ -1848,7 +1837,7 @@ building_fe_administration_2 = {
 			}
 		}
 		modifier = {
-			job_manager_add = @fe2_jobs
+			job_bureaucrat_add = @fe2_jobs
 		}
 	}
 
@@ -1873,7 +1862,7 @@ building_fe_administration_2 = {
 			}
 		}
 		modifier = {
-			job_steward_add = @fe2_jobs
+			job_bureaucrat_add = @fe2_jobs
 		}
 	}
 
@@ -1952,20 +1941,9 @@ building_fe_administration_hive_1 = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_lithoid_empire = no }
 		}
 		modifier = {
-			job_synapse_drone_add = @fe_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_lithoid_empire = yes }
-		}
-		modifier = {
-			job_synapse_drone_lithoid_add = @fe_jobs
+			job_coordinator_add = @fe_jobs
 		}
 	}
 
@@ -2043,20 +2021,9 @@ building_fe_administration_hive_2 = {
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_lithoid_empire = no }
 		}
 		modifier = {
-			job_synapse_drone_add = @fe2_jobs
-		}
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_lithoid_empire = yes }
-		}
-		modifier = {
-			job_synapse_drone_lithoid_add = @fe2_jobs
+			job_coordinator_add = @fe2_jobs
 		}
 	}
 
@@ -2757,7 +2724,6 @@ building_fe_clinic_1 = {
 			exists = owner
 			owner = {
 				is_regular_empire = no
-				NOT = { has_origin = origin_progenitor_hive }
 			}
 		}
 		modifier = {
@@ -2776,18 +2742,18 @@ building_fe_clinic_1 = {
 		text = job_spawning_drone_desc
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = no
-				NOT = { has_origin = origin_progenitor_hive }
-			}
-		}
-		modifier = {
-			job_offspring_drone_add = 200
-		}
-	}
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = {
+	# 			is_regular_empire = no
+	# 			NOT = { has_origin = origin_progenitor_hive }
+	# 		}
+	# 	}
+	# 	modifier = {
+	# 		job_offspring_drone_add = 200
+	# 	}
+	# }
 
 	triggered_desc = {
 		trigger = {
@@ -2912,7 +2878,6 @@ building_fe_clinic_2 = {
 			exists = owner
 			owner = {
 				is_regular_empire = no
-				NOT = { has_origin = origin_progenitor_hive }
 			}
 		}
 		modifier = {
@@ -2931,18 +2896,18 @@ building_fe_clinic_2 = {
 		text = job_spawning_drone_desc
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = {
-				is_regular_empire = no
-				NOT = { has_origin = origin_progenitor_hive }
-			}
-		}
-		modifier = {
-			job_offspring_drone_add = 300
-		}
-	}
+	# triggered_planet_modifier = {
+	# 	potential = {
+	# 		exists = owner
+	# 		owner = {
+	# 			is_regular_empire = no
+	# 			NOT = { has_origin = origin_progenitor_hive }
+	# 		}
+	# 	}
+	# 	modifier = {
+	# 		job_offspring_drone_add = 300
+	# 	}
+	# }
 
 	triggered_desc = {
 		trigger = {
@@ -3634,9 +3599,9 @@ building_fe_lab_1 = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_drone_physicist_add = @fe_jobs
-			job_brain_drone_biologist_add = @fe_jobs
-			job_brain_drone_engineer_add = @fe_jobs
+			job_calculator_physicist_add = @fe_jobs
+			job_calculator_biologist_add = @fe_jobs
+			job_calculator_engineer_add = @fe_jobs
 		}
 	}
 
@@ -3795,9 +3760,9 @@ building_fe_lab_2 = {
 			owner = { is_hive_empire = yes }
 		}
 		modifier = {
-			job_brain_drone_physicist_add = @fe_jobs
-			job_brain_drone_biologist_add = @fe_jobs
-			job_brain_drone_engineer_add = @fe_jobs
+			job_calculator_physicist_add = @fe_jobs
+			job_calculator_biologist_add = @fe_jobs
+			job_calculator_engineer_add = @fe_jobs
 		}
 	}
 

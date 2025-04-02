@@ -20,7 +20,7 @@ energy = {
 	max = 15000
 
 	deficit_situation = situation_energy_deficit
-	deficit_trade_conversion_mult = 0.25
+	deficit_trade_conversion_mult = -0.25
 
 	culling_conversion_value = 1
 
@@ -41,7 +41,7 @@ minerals = {
 	max = 15000
 
 	deficit_situation = situation_mineral_deficit
-	deficit_trade_conversion_mult = 0.25
+	deficit_trade_conversion_mult = -0.25
 
 	culling_conversion_value = 1
 
@@ -62,7 +62,7 @@ food = {
 	max = 15000
 
 	deficit_situation = situation_food_deficit
-	deficit_trade_conversion_mult = 0.25
+	deficit_trade_conversion_mult = -0.25
 
 	culling_conversion_value = 1
 
@@ -163,7 +163,7 @@ consumer_goods = {
 	max = 15000
 
 	deficit_situation = situation_consumer_goods_deficit
-	deficit_trade_conversion_mult = 0.5
+	deficit_trade_conversion_mult = -0.5
 
 	culling_conversion_value = 2
 
@@ -198,7 +198,7 @@ alloys = {
 	max = 15000
 
 	deficit_situation = situation_alloys_deficit
-	deficit_trade_conversion_mult = 1.0
+	deficit_trade_conversion_mult = -1.0
 
 	culling_conversion_value = 4
 
@@ -225,7 +225,7 @@ volatile_motes = {
 	prerequisites = { "tech_mine_volatile_motes" }
 
 	deficit_situation = situation_volatile_motes_deficit
-	deficit_trade_conversion_mult = 2.5
+	deficit_trade_conversion_mult = -2.5
 
 	culling_conversion_value = 7
 
@@ -248,7 +248,7 @@ exotic_gases = {
 	prerequisites = { "tech_mine_exotic_gases" }
 
 	deficit_situation = situation_exotic_gases_deficit
-	deficit_trade_conversion_mult = 2.5
+	deficit_trade_conversion_mult = -2.5
 
 	culling_conversion_value = 7
 
@@ -271,7 +271,7 @@ rare_crystals = {
 	prerequisites = { "tech_mine_rare_crystals" }
 
 	deficit_situation = situation_rare_crystals_deficit
-	deficit_trade_conversion_mult = 2.5
+	deficit_trade_conversion_mult = -2.5
 
 	culling_conversion_value = 7
 
@@ -300,7 +300,7 @@ sr_living_metal = {
 	prerequisites = { "tech_mine_living_metal" }
 	visibility_prerequisite = { always = yes }
 	deficit_modifier = sr_living_metal_deficit
-	deficit_trade_conversion_mult = 5
+	deficit_trade_conversion_mult = -5
 
 	culling_conversion_value = 20
 
@@ -324,7 +324,7 @@ sr_zro = {
 	prerequisites = { "tech_mine_zro" }
 	visibility_prerequisite = { always = yes }
 	deficit_modifier = sr_zro_deficit
-	deficit_trade_conversion_mult = 5
+	deficit_trade_conversion_mult = -5
 
 	culling_conversion_value = 20
 
@@ -352,7 +352,7 @@ sr_dark_matter = {
 		weight = 100
 	}
 	deficit_modifier = dark_matter_deficit #found in static modifiers
-	deficit_trade_conversion_mult = 5
+	deficit_trade_conversion_mult = -5
 
 	culling_conversion_value = 20
 
@@ -368,7 +368,7 @@ nanites = {
 
 	visibility_prerequisite = { always = yes }
 	deficit_modifier = nanites_deficit #found in static modifiers
-	deficit_trade_conversion_mult = 5
+	deficit_trade_conversion_mult = -5
 
 	culling_conversion_value = 20
 
@@ -390,7 +390,7 @@ minor_artifacts = {
 
 	visibility_prerequisite = { has_ancrel = yes }
 
-	deficit_trade_conversion_mult = 2.5
+	deficit_trade_conversion_mult = -2.5
 
 	culling_conversion_value = 10
 
@@ -410,7 +410,7 @@ astral_threads = {
 	max = 500
 	special_max_amount = yes
 	
-	deficit_trade_conversion_mult = 1
+	deficit_trade_conversion_mult = -1
 	
 	dynamic_capacity = {
 		base = @astral_threads_capacity_from_each_explored_rift

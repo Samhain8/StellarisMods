@@ -24,4 +24,6 @@ exclude = {
 	building_primitive_offices
 	building_primitive_research
 	building_order_keep
+	building_hive_primitive_node
+	building_machine_primitive_node
 }

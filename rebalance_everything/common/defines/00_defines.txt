@@ -758,7 +758,7 @@
 		HABITABILITY_IDEAL_PLANET		= 1.00			# Habitability of Gaia worlds
 		HABITABILITY_WRONG_PLANET		= 0.70			# Below which point we color habitability icons and text yellow
 		HABITABILITY_OPPOSITE_PLANET	= 0.40			# Below which point we color habitability icons and text red
-		HABITABILITY_AUTO_MIGRATION		= 0.40			# The minimum habitability that will be considered for automatic migration
+		HABITABILITY_AUTO_MIGRATION		= 0.20			# The minimum habitability that will be considered for automatic migration
 
 		WAR_EXHAUSTION_NAVAL_CAP_ADD			= 100
 		WAR_EXHAUSTION_SHIP_KILLED_MULT			= 2.00	# Multiplier of war exhaustion gained from ships
@@ -1705,7 +1705,7 @@
 		OVERCROWDING_DECLINE_THRESHOLD		= 1.25	# At this amount of overcrowding (required housing / actual housing), pops start declining
 		OVERCROWDING_ABSOLUTE_THRESHOLD_FOR_NO_GROWTH		= 5	# Planet needs this amount of overcrowding (required housing - actual housing) for OVERCROWDING_NO_GROWTH_THRESHOLD to kick in
 
-		RESETTLE_UNEMPLOYED_BASE_RATE		= 5		# Base pop amount that can auto-migrate from a planet per month
+		RESETTLE_UNEMPLOYED_BASE_RATE		= 10	# Base pop amount that can auto-migrate from a planet per month
 		RESETTLE_DESTROY_COLONY_COST		= 200	# Influence surcharge for manually resettling the last pop from a colony
 
 		NEW_POP_SAME_SPECIES_WEIGHT			= 1.0	# The higher this is, the more new pops will be weighted by number of same or subspecies pops (i.e. the less likely they are to be picked)
@@ -1736,8 +1736,6 @@
 		BASE_HAPPINESS						= 0.50 # Base value of pop happiness
 
 		RECENTLY_CONQUERED_DAYS				= 3600 # How long the recently conquered modifier stays on pops.
-
-		FAVORITE_JOB_EMPLOYMENT_BONUS		= 1000.0		# How much will be added to a jobs weight if it's favorited
 	}
 
 	NArmy = {
