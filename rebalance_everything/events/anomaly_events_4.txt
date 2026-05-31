@@ -3775,7 +3775,7 @@ ship_event = {
 		owner = {
 			add_modifier = {
 				modifier = harmonious_tune
-				days = 7200
+				days = -1
 			}
 		}
 	}

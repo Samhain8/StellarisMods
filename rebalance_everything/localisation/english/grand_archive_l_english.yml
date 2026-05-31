@@ -465,11 +465,11 @@
  GET_UNIQUE_EDICT: "Gain access to a unique §YEdict§!"
 
  primal_calling_exhibit_modifier: "Voidborne Livestock"
- primal_calling_exhibit_modifier_tt: "- $MOD_TRADE_VALUE_MULT$: §G+$@primal_calling_exhibit_trade_value|1%$§! per occupied Vivarium Capacity\n- $mod_specimens_produces_mult$: §G+$@primal_calling_exhibit_specimen|1%$§! per occupied Vivarium Capacity"
+ primal_calling_exhibit_modifier_tt: "- $MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED$: §G+$@primal_calling_exploit_research_mult|1%$§! per occupied Vivarium Capacity\n- $mod_specimens_produces_mult$: §G+$@primal_calling_exhibit_specimen|1%$§! per occupied Vivarium Capacity"
  primal_calling_exhibit_bonus_tt: "[GetWranglerContext]\n- $GET_UNIQUE_EDICT$, ['edict:space_fauna_exhibition']"
 
  primal_calling_exploit_modifier: "Galactic Livestock"
- primal_calling_exploit_modifier_tt: "- $MOD_COUNTRY_ALL_TECH_RESEARCH_SPEED$: §G+$@primal_calling_exploit_research_mult|1%$§! per occupied Vivarium Capacity\n- $mod_planet_primal_jobs_produces_mult$: §G+$@primal_calling_exploit_wrangler_mult|1%$§! per occupied Vivarium Capacity"
+ primal_calling_exploit_modifier_tt: "- $MOD_TRADE_VALUE_MULT$: §G+$@primal_calling_exhibit_trade_value|1%$§! per occupied Vivarium Capacity\n- $mod_planet_primal_jobs_produces_mult$: §G+$@primal_calling_exploit_wrangler_mult|1%$§! per occupied Vivarium Capacity"
  primal_calling_exploit_bonus_tt: "[GetRancherContext]\n- $GET_UNIQUE_EDICT$, ['edict:beasts_burden']"
 
  animal_handler_common_effect_desc: "- Space Fauna Ships generate §G+$@primal_calling_animal_handler_diplo_weight_mult|0%$§! more £diplo_weight£ Diplomatic Weight\n- §G$@primal_calling_animal_handler_opinion_bonus|0$§! opinion with other non-Homicidal, non-Xenophobe and non-Fallen Empires per occupied Vivarium Capacity."
@@ -1919,7 +1919,7 @@
  tradition_domestication_desc: "Mastery of the galaxy requires mastering the organisms within."
  tr_domestication_adopt: "$tradition_domestication$ Traditions"
  tr_domestication_finish: "$tradition_domestication$ Traditions Finished"
- tr_domestication_finish_desc_primal_calling: "$MOD_SPACE_FAUNA_EXPERIENCE_GAIN_MULT$: §G+$@domestication_finish_exp_bonus|0%$§!\n$TRADITIONS_FINISH_AP$"
+ tr_domestication_finish_desc_primal_calling: "$MOD_SPACE_FAUNA_EXPERIENCE_GAIN_MULT$: §G+$@domestication_finish_exp_bonus|0%$§!. +3 naval capacity from vivarium tanks.\n$TRADITIONS_FINISH_AP$"
  tr_domestication_finish_desc_default: "Unlocks ['concept_voidlure', Voidlures]\n$tr_domestication_finish_desc_primal_calling$"
  tr_domestication_finish_desc: "[GetDomesticationFinishEffectDesc]"
  tr_domestication_containment_protocols: "Containment Protocols"
@@ -1928,7 +1928,7 @@
  tr_domestication_bio_repurposing: "Bio-Repurposing"
  tr_domestication_bio_repurposing_delayed: "Nothing goes to waste."
  tr_domestication_bio_repurposing_blocker_tt: "Gain §G$@bio_repurposing_blocker_clear_food|0$§!$r_food$ when clearing an £blocker£ §YOrganic Blocker§!"
- tr_domestication_bio_repurposing_tt: "Your defeated §YSpace Fauna§! leave behind debris that you can research to recover some of their cost. (§G10%§!)\n$tr_domestication_bio_repurposing_blocker_tt$"
+ tr_domestication_bio_repurposing_tt: "Your defeated §YSpace Fauna§! leave behind debris that you can research to recover some of their cost (§G10%§!). Livestock and Zoo animals produce 1 food or mineral and 0.5 consumer goods.\n$tr_domestication_bio_repurposing_blocker_tt$"
  tr_domestication_bio_repurposing_reanimator_tt: "$tr_domestication_bio_repurposing_blocker_tt$"
  tr_domestication_astrozoology: "Astrozoology"
  tr_domestication_astrozoology_delayed: "The creatures of the void are each unique in their breeding patterns and nutritional needs. It takes great attention to raise them to their greatest potential in an isolated environment."

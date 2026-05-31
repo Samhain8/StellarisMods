@@ -68,7 +68,8 @@ ship_section_template = {
 		locatorname = "large_gun_04"
 	}
 
-	large_utility_slots = 6
+	large_utility_slots = 5
+	aux_utility_slots = 1
 
 	resources = {
 		category = ship_sections
@@ -100,6 +101,7 @@ ship_section_template = {
 		locatorname = "large_gun_02"
 	}
 
+	large_utility_slots = 2
 	aux_utility_slots = 3
 
 	resources = {

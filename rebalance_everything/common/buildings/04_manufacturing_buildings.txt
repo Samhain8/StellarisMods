@@ -476,7 +476,8 @@ building_factory_3 = {
 				has_ringworld_output_boost = no
 			}
 			minerals = @b3_minerals
-			rare_crystals = @b4_rare_cost
+			rare_crystals = @b3_rare_cost
+			volatile_motes = @b3_rare_cost
 		}
 		cost = {
 			trigger = {
@@ -490,7 +491,8 @@ building_factory_3 = {
 				has_ringworld_output_boost = no
 			}
 			energy = @b3_upkeep
-			rare_crystals = @b4_rare_upkeep
+			rare_crystals = @b3_rare_upkeep
+			volatile_motes = @b3_rare_upkeep
 		}
 		upkeep = {
 			trigger = {
@@ -720,7 +722,6 @@ building_ministry_production = {
 	}
 
 	planet_modifier = {
-		job_politician_add = 1
 		planet_metallurgists_produces_mult = 0.15
 		planet_artisans_produces_mult = 0.15
 	}
@@ -739,10 +740,6 @@ building_ministry_production = {
 
 	prerequisites = {
 		"tech_global_production_strategy"
-	}
-
-	triggered_desc = {
-		text = job_politician_effect_desc
 	}
 
 	show_tech_unlock_if = {

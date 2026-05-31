@@ -41,7 +41,7 @@ building_military_academy = {
 			owner = { is_gestalt = no }
 		}
 		modifier = {
-			job_politician_add = 1
+			job_honor_guard_add = 1
 		}
 	}
 	triggered_planet_modifier = {
@@ -50,7 +50,7 @@ building_military_academy = {
 			owner = { is_gestalt = yes }
 		}
 		modifier = {
-			job_evaluator_add = 2
+			job_warrior_drone_add = 3
 		}
 	}
 
@@ -113,7 +113,7 @@ building_military_academy = {
 			exists = owner
 			owner = { is_gestalt = no }
 		}
-		text = job_politician_effect_desc
+		text = job_honor_guard_effect_desc
 	}
 
 	triggered_desc = {
@@ -121,7 +121,7 @@ building_military_academy = {
 			exists = owner
 			owner = { is_gestalt = yes }
 		}
-		text = job_evaluator_effect_desc
+		text = job_warrior_drone_effect_desc
 	}
 }
 

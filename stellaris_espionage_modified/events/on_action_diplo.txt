@@ -1,0 +1,111 @@
+############################
+#
+# Expanded Game Start Events
+#
+############################
+
+namespace = onactiondiplo
+
+# Modifying operation difficulty
+espionage_operation_event = {
+	id = onactiondiplo.30
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		if = {
+			limit = {
+				owner = {
+					relative_encryption_decryption = { target = root.target value > 1.4 }
+				}
+			}
+			add_modifier = { modifier = spynetwork_counter_spy_1 days = -1 }
+		}
+		else_if = {
+			limit = {
+				owner = {
+					relative_encryption_decryption = { target = root.target value > 1.2 }
+				}
+			}
+			add_modifier = { modifier = spynetwork_counter_spy_2 days = -1 }
+		}
+		else_if = {
+			limit = {
+				owner = {
+					relative_encryption_decryption = { target = root.target value < 0.8 }
+				}
+			}
+			add_modifier = { modifier = spynetwork_counter_spy_3 days = -1 }
+		}
+		else_if = {
+			limit = {
+				owner = {
+					relative_encryption_decryption = { target = root.target value < 0.6 }
+				}
+			}
+			add_modifier = { modifier = spynetwork_counter_spy_4 days = -1 }
+		}
+		else_if = {
+			limit = {
+				owner = {
+					relative_encryption_decryption = { target = root.target value < 0.4 }
+				}
+			}
+			add_modifier = { modifier = spynetwork_counter_spy_5 days = -1 }
+		}
+		else_if = {
+			limit = {
+				owner = {
+					relative_encryption_decryption = { target = root.target value < 0.2 }
+				}
+			}
+			add_modifier = { modifier = spynetwork_counter_spy_6 days = -1 }
+		}
+	}
+}
+
+# Remove modifiers on owner change
+planet_event = {
+	id = onactiondiplo.32
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		NOT = { has_modifier = diplo_recently_conquered_planet }
+		owner = {
+			OR = {
+				is_country_type = default
+				is_country_type = awakened_marauders
+				is_country_type = rebel
+				is_country_type = swarm
+				is_country_type = extradimensional
+				is_country_type = extradimensional_2
+				is_country_type = extradimensional_3
+				is_country_type = ai_empire
+				is_country_type = fallen_empire
+				is_country_type = awakened_fallen_empire
+				is_country_type = ascended_empire
+				is_country_type = lost_empire
+			}
+		}
+	}
+
+	immediate = {
+		if = {
+			limit = {
+				solar_system = { has_star_flag = original_owner_is@root.owner }
+			}
+			# planet liberated
+			remove_modifier = diplo_recently_conquered_planet
+		}
+		else_if = {
+			limit = { owner = { is_country_type = rebel } }
+			# planet conquered (lesser)
+			add_modifier = { modifier = diplo_recently_conquered_planet days = 3600 }
+		}
+		else = {
+			# planet conquered
+			add_modifier = { modifier = diplo_recently_conquered_planet days = 18000 }
+		}
+	}
+}

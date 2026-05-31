@@ -1,4 +1,4 @@
-$JOB_KEY$ = {
+$JOB_KEY$ = { #FRED not used anymore
 	category = specialist
 	condition_string = SPECIALIST_JOB_TRIGGER
 	building_icon = wildlife_ranch
@@ -10,10 +10,12 @@ $JOB_KEY$ = {
 		is_sapient = yes
 	}
 
+	possible_precalc = can_fill_specialist_job
 	possible = {
 		owner = {
 			has_$JOB_KEY$_job = yes
 		}
+		nondomestic_specialist_job_check_trigger = yes
 	}
 
 	inline_script = "grand_archive/wrangler_jobs_produces"
@@ -28,20 +30,8 @@ $JOB_KEY$ = {
 			NOT = { has_trait = trait_mechanical }
 		}
 		modifier = {
-			factor = 3
-			has_trait = trait_robot_domestic_protocols
-			OR = {
-				is_non_sapient_robot = yes
-				is_shackled_robot = yes
-			}
-		}
-		modifier = {
 			factor = 1.5
 			has_job = $JOB_KEY$
-		}
-		modifier = {
-			factor = 0.1
-			is_domestic_servant = yes
 		}
 		modifier = {
 			factor = 0.1

@@ -245,7 +245,7 @@ succession_type_challenge = {
 		modifier = {
 			desc = federation_acceptance_warrior_culture
 			add = 50
-			has_civic = civic_warrior_culture
+			is_warrior_culture = yes
 		}
 		modifier = {
 			#the chosen believes in both challenges

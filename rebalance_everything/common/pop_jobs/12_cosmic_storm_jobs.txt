@@ -326,14 +326,37 @@ storm_dancer = {
 		produces = {
 			unity = 4
 		}
+		produces = {
+			trigger = {
+				planet = {
+					solar_system = {
+						OR = {
+							has_star_flag = storm_system
+						}
+					}
+				}
+			}
+			unity = 2
+		}
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 8
+		planet_amenities_add = 6
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_fertility_rituals = yes }
+		}
+		modifier = {
+			pop_growth_speed = 0.02
+			planet_jobs_food_produces_mult = 0.02
+		}
 	}
 
 	weight = {

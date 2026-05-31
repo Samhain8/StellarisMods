@@ -18,6 +18,7 @@ tr_aptitude_finish = {
 tr_aptitude_the_empire_needs_you = {
 	modifier = {
 		leaders_cost_mult = -0.25
+		country_leader_pool_size = 1
 	}
 	ai_weight = { factor = 1000 }
 
@@ -33,7 +34,7 @@ tr_aptitude_the_empire_needs_you = {
 
 tr_aptitude_specialist_training = {
 	modifier = {
-		country_leader_pool_size = 1
+		species_leader_exp_gain = 0.2
 	}
 	ai_weight = { factor = 1000 }
 
@@ -50,7 +51,7 @@ tr_aptitude_specialist_training = {
 tr_aptitude_psychological_profiling = {
 	possible = { has_tradition = tr_aptitude_the_empire_needs_you }
 	modifier = {
-		leaders_upkeep_mult = -0.25
+		negative_traits_country = -1
 	}
 	ai_weight = { factor = 1000 }
 
@@ -75,7 +76,8 @@ tr_aptitude_healthcare_program = {
 	custom_tooltip = BLANK_STRING	# Since the Modifier uses only a scripted modifier, we'll get an error without a custom tooltip.
 	possible = { has_tradition = tr_aptitude_the_empire_needs_you }
 	modifier = {
-		negative_traits_country = -1
+		leader_lifespan_add = 10
+		leaders_upkeep_mult = -0.25
 	}
 	ai_weight = { factor = 1000 }
 
@@ -85,7 +87,8 @@ tr_aptitude_healthcare_program = {
 		name = tr_aptitude_healthcare_program_hive
 		inherit_icon = yes
 		modifier = {
-			negative_traits_country = -1
+			leader_lifespan_add = 10
+			leaders_upkeep_mult = -0.25
 		}
 		weight = { factor = 1 }
 	}
@@ -96,7 +99,7 @@ tr_aptitude_healthcare_program = {
 		name = tr_aptitude_healthcare_program_machine
 		inherit_icon = yes
 		modifier = {
-			negative_traits_country = -1
+			leaders_upkeep_mult = -0.50
 		}
 		weight = { factor = 1 }
 	}
@@ -104,17 +107,22 @@ tr_aptitude_healthcare_program = {
 
 tr_aptitude_champions_of_the_empire = {
 	possible = { has_tradition = tr_aptitude_specialist_training }
-	custom_tooltip = tr_aptitude_adopt_desc
-	on_enabled = {
-		hidden_effect = {
-			every_owned_leader = {
-				add_trait_no_notify = "random_common"
-			}
-			every_pool_leader = {
-				add_trait_no_notify = "random_common"
-			}
-		}
+	#custom_tooltip = tr_aptitude_adopt_desc
+	#on_enabled = {
+	#	hidden_effect = {
+	#		every_owned_leader = {
+	#			add_trait_no_notify = "random_common"
+	#		}
+	#		every_pool_leader = {
+	#			add_trait_no_notify = "random_common"
+	#		}
+	#	}
+	#}
+	modifier = {
+		leader_initial_skill = 1
+		country_leader_pool_size = 1
 	}
+
 	ai_weight = { factor = 1000 }
 
 	inline_script = {

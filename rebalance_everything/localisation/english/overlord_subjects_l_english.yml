@@ -562,8 +562,8 @@
  holding_parasitic_algorithms_effect_desc:2 "[Root.ResearchProducerIcon] [Root.ResearchProducer] turn Subject [Root.SubjectResearcherUpkeep] into $r_research$ for the Overlord."
 
  holding_noble_vacation_homes:0 "Noble Chateaus"
- holding_noble_vacation_homes_desc:0 "A home away from home, this is the perfect place for the Overlord's ruling elite to let off steam, so that they don't cause incidents back home."
- holding_noble_vacation_homes_effect:0 "Each $holding_noble_vacation_homes$ grants §G+2§! £stability£ stability in the Overlord's capital."
+ holding_noble_vacation_homes_desc:0 "A home away from home, this is the perfect place for the Overlord's ruling elite to enjoy the domains of their foreign subjects, and to flaunt their reach and status."
+ holding_noble_vacation_homes_effect:0 "Each $holding_noble_vacation_homes$ increases the productivity of Ruler Jobs."
 
  holding_dread_outpost:0 "Dread Outpost"
  holding_dread_outpost_desc:0 "The Dread Outpost is an arcane structure that produces unholy reanimated armies while sending back insidious data to this planet's Overlord."

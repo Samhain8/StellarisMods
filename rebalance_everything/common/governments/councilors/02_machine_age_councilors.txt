@@ -24,7 +24,8 @@ councilor_natural_design = {
 	civic = civic_natural_design
 
 	modifier = {
-		pop_citizen_happiness = 0.02
+		pop_growth_speed = 0.01
+		pop_environment_tolerance = 0.01
 	}
 }
 

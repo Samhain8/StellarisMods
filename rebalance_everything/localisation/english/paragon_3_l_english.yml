@@ -852,7 +852,7 @@
  leader_trait_legendary_offspring:0 "$leader_trait_legendary_leader$ Bloodline"
  leader_trait_legendary_offspring_desc:1 "The Heir to the $leader_trait_legendary_leader$. Living up to their predecessor's legacy will be a challenge, but this leader already shows great promise."
  trait_perfected_genes:0 "Perfected Genes"
- trait_perfected_genes_desc:1 "§LMillennia of genetic experimentation and war have led to the creation of a highly resilient species.§!"
+ trait_perfected_genes_desc:1 "§LThis species fought to the top of an exceptionally diverse and competitive ecosystem.§!"
  leader_trait_legendary_story:0 "Historical Deeds"
  leader_trait_legendary_story_desc:0 "This leader will go down in history as a figure of great notoriety."
 

@@ -189,11 +189,11 @@
 
  building_storm_resistant_production: "Storm Relief Center"
  building_storm_resistant_production_desc: "This aid center assists local efforts to negate the impact of a cosmic storm on planetary production. Through efficient coordination and communication, the $building_storm_resistant_production$ allows for quick deployment of rescue teams, as well as improving the conditions for planet-wide trade."
- building_storm_resistant_production_tt: "Negative effects from §Y$default_storm$§! that affect planet production are reduced by §G25%§!.\n\nWhile a §Y$default_storm$§! is present:$TABBED_NEW_LINE$$mod_planet_miners_minerals_produces_add$: §G+1§! $TABBED_NEW_LINE$$mod_planet_farmers_food_produces_add$: §G+1§! $TABBED_NEW_LINE$$mod_planet_technician_energy_produces_add$: §G+1§! \n\nAllows Planetary Decision §Y$decision_hunker_down$§!"
+ building_storm_resistant_production_tt: "Negative effects from §Y$default_storm$§! that affect planets are reduced by §G30%§!.\n\nWhile a §Y$default_storm$§! is present: +10 Stability"
 
  building_advanced_storm_resistant_production: "Storm Nullifier"
  building_advanced_storm_resistant_production_desc: "By adding weather control systems to each $building_storm_resistant_production$, the negative effects of cosmic storms are significantly lessened. Additionally, rescue teams can be deployed even more efficiently and planetary trade is almost impervious to local weather conditions."
- building_advanced_storm_resistant_production_tt: "Negative effects from §Y$default_storm$§! that affect planet production are reduced by §G40%§!.\n\nWhile a §Y$default_storm$§! is present:$TABBED_NEW_LINE$$mod_planet_miners_minerals_produces_add$: §G+2§! $TABBED_NEW_LINE$$mod_planet_farmers_food_produces_add$: §G+2§! $TABBED_NEW_LINE$$mod_planet_technician_energy_produces_add$: §G+2§! \n\nAllows Planetary Decision §Y$decision_hunker_down$§!"
+ building_advanced_storm_resistant_production_tt: "Negative effects from §Y$default_storm$§! that affect planets are reduced by §G60%§!.\n\nWhile a §Y$default_storm$§! is present: +20 Stability"
 
  building_adakkaria_patriotic_institute: "Patriotic Institute of Celebration"
  building_adakkaria_patriotic_institute_desc: "The $building_adakkaria_patriotic_institute$ is a trove of advanced insights into the sentient condition. Here we empower people to cultivate their inner tempest while avoiding the luring song of the Convention's cruelty."
@@ -382,7 +382,7 @@
 # Traits
  trait_storm_touched: "Storm Touched"
  trait_storm_touched_desc: "Being inside a cosmic storm fills the $trait_storm_touched$ with devotional aspiration."
- trait_storm_touched_modifier_tooltip: "While in a §Y$default_storm$§!:$TABBED_NEW_LINE$$mod_planet_jobs_produces_mult$: §G+10%§!$TABBED_NEW_LINE$Amenity Usage: §G-10%§!"
+ trait_storm_touched_modifier_tooltip: "While in a §Y$default_storm$§!:$TABBED_NEW_LINE$$mod_planet_jobs_produces_mult$: §G+20%§!$TABBED_NEW_LINE$$MOD_POP_HAPPINESS$: §G+10%§!"
  trait_storm_fused: "Storm Fused"
  trait_storm_fused_desc: "The Storm Fused learned to cultivate their Inner Storm as they strain for enlightenment."
  trait_storm_fused_modifier_tooltip: "While in a §Y$default_storm$§!:\n$mod_planet_jobs_produces_mult$: §G+10%§!\n$MOD_POP_HAPPINESS$: §G+5%§!"
@@ -1557,13 +1557,13 @@
  cstorms.331.desc.normal: "$challenge_completed_intro$\n\nThe great storm called their name and they answered with jubilation. Hail Storm Rider, you absolute legend!"
  cstorms.331.desc.gestalt: "$challenge_completed_intro$\n\nThe great storm has called a part of ourself to join it in jubilant carnage. Nearly losing a node has never felt so meaningful and invigorating! This epic experience will define our species for many years to come."
 
- electric_storm_desc: "The collision of electromagnetic fields imbues this cosmic storm with near a dangerous level of electric charge. Hazardous for shields, but beneficial for planetary production."
- particle_storm_desc: "These storms almost seem alive, moving through and within the galactic fabric, neither hunting nor avoiding spaceborne vessels. Dangerous and unstable, their mere presence is enough to unite a civilization in defiance of the elements."
- gravity_storm_desc: "When massive stellar bodies collide, the resulting impact sends gravitational ripples throughout the galaxy. When these in turn collapse, a gravity storm is born. Negative effects on ship targeting systems, and the fluctuating gravity makes almost everyone forced to stay at home."
- magnetic_storm_desc: "When roving metallic asteroid belts interact with strong gravitational forces, magnetic fields are formed within. Storms of this type rip hulls apart and cause interruptions to industrial construction - yet they also assist in bringing up valuable minerals from a planet's crust."
- solar_storm_desc: "A $solar_storm$ creates a glistening fluctuation within the spatial fabric. Its presence causes stars to produce unprecedented flares. The resultant radiation is extremely damaging, but supercharges space station output and makes it hard for ships to stay hidden."
- celestial_storm_desc: "At any given moment, dust from millions of planets is drifting aimlessly through the galaxy. Sometimes these granules gather in such significant quantities that a dust storm results. Disturbs planet-wide communication, but the chemical elements it brings are useful for resource production. Objects inside these tempests may as well not exist as far as our scanners are concerned."
- shroud_storm_desc: "On rare occasions, the Shroud may whisper through the physical world. These rare storms expose sentients to visions both sublime and grotesque. Those who have communed with the Shroud can even enjoy a fickle synergy."
+ electric_storm_desc: "The collision of electromagnetic fields imbues this cosmic storm with a dangerous level of electric charge. Hazardous for shields, but beneficial for energy production."
+ particle_storm_desc: "These particularly volatile storms almost seem alive, eating away at the hull of spaceborne vessels. Witnessing their interaction with a planet's atmosphere is a beautiful but dangerous spectacle to behold."
+ gravity_storm_desc: "When massive stellar bodies collide, the resulting impact sends gravitational ripples throughout the galaxy. When these in turn collapse, a gravity storm is born. Short waves of gravitational anomalies may cause earthquakes on planets."
+ magnetic_storm_desc: "Complex currents weaving through a cloud of metallic particles cause chaotic magnetic fields to manifest. Storms of this type especially interfere with computers and communication equipment."
+ solar_storm_desc: "This storm contains gases that excite the surface of stars an causes them to produce unprecedented flares. The resultant radiation is highly hazardous, but supercharges space station output, makes it hard for ships to stay hidden, and produce magnificent auroras."
+ celestial_storm_desc: "A dense veil of celestial dust racing through the galaxy after having been blasted away by other phenomena. Unusual snow is the worst that will happen to planets, but ships inside these tempests may as well not exist as far as our scanners are concerned."
+ shroud_storm_desc: "On rare occasions, the Shroud may whisper, or scream, through the physical world. These rare storms expose sentients to visions both sublime and grotesque. Those who have communed with the Shroud can even enjoy a fickle synergy."
  nexus_storm_desc: "When the stars align, even a minor cosmic storm can grow beyond conventional limits. This rare event will unleash terror of apocalyptic proportions. There is no thriving inside this abomination; the only option is to survive."
 
  FROM_STORM: "From Storm"
@@ -1625,8 +1625,8 @@
  STORM_AFTERMATH_DESC: "- Depending on the storm's intensity, colonies will have the following modifier applied for 3 Years:"
 
  electric_storm_aftermath_modifier: "Charged Atmosphere"
- electric_storm_aftermath_modifier_tooltip: "$STORM_AFTERMATH_DESC$\n$t$- §H$electric_storm_aftermath_modifier$§!:\n$tt$- §R-25%§! to §R-65%§! $MOD_PLANET_BUILDING_BUILD_SPEED_MULT$\n$tt$- §G+10%§! to §G+30%§! $mod_planet_jobs_energy_produces_mult$"
- electric_storm_aftermath_modifier_severity_desc: "The $electric_storm$ left surging electricity in the atmosphere, causing unreliable output from machinery. However, energy production is off the charts!"
+ electric_storm_aftermath_modifier_tooltip: "$STORM_AFTERMATH_DESC$\n$t$- §H$electric_storm_aftermath_modifier$§!:\n$tt$- §R-4%§! to §R-12%§! Habitabiliy\n$tt$- §G+10%§! to §G+30%§! $mod_planet_jobs_energy_produces_mult$"
+ electric_storm_aftermath_modifier_severity_desc: "The waning $electric_storm$ left pockets of dangerous electric charge that have yet to settle, however, energy production is still off the charts!"
  electric_storm_aftermath_modifier_severity_1: "Aftermath: $electric_storm_aftermath_modifier$"
  electric_storm_aftermath_modifier_severity_1_desc: "$electric_storm_aftermath_modifier_severity_desc$"
  electric_storm_aftermath_modifier_severity_2: "Aftermath: §HSeverely§! $electric_storm_aftermath_modifier$"
@@ -1635,8 +1635,8 @@
  electric_storm_aftermath_modifier_severity_3_desc: "$electric_storm_aftermath_modifier_severity_desc$"
 
  particle_storm_aftermath_modifier: "Corrosive Winds"
- particle_storm_aftermath_modifier_tooltip: "$STORM_AFTERMATH_DESC$\n$t$- §H$particle_storm_aftermath_modifier$§!:\n$tt$- §R-40%§! to §R-60%§! $MOD_PLANET_POP_ASSEMBLY_MULT$\n$tt$- §R-10%§! to §R-30%§! $mod_planet_jobs_minerals_produces_mult$\n$tt$- §G+0.02§! to §G+0.06§! $r_volatile_motes$ from Pops"
- particle_storm_aftermath_modifier_severity_desc: "$particle_storm$ grind down everything from metal to organic life, causing great damage to our mineral output. However, the residue contains valuable substances."
+ particle_storm_aftermath_modifier_tooltip: "$STORM_AFTERMATH_DESC$\n$t$- §H$particle_storm_aftermath_modifier$§!:\n$tt$- §R-5%§! to §R-15%§! $mod_planet_jobs_food_produces_mult$\n$tt$- §G+0.02§! to §G+0.06§! $r_volatile_motes$ from Pops"
+ particle_storm_aftermath_modifier_severity_desc: "Corrosive remnants from the $particle_storm$ ride on the wind, causing damage to our crops. However, the residue contains valuable substances."
  particle_storm_aftermath_modifier_severity_1: "Aftermath: $particle_storm_aftermath_modifier$"
  particle_storm_aftermath_modifier_severity_1_desc: "$particle_storm_aftermath_modifier_severity_desc$"
  particle_storm_aftermath_modifier_severity_2: "Aftermath: §HSeverely§! $particle_storm_aftermath_modifier$"
@@ -1645,8 +1645,8 @@
  particle_storm_aftermath_modifier_severity_3_desc: "$particle_storm_aftermath_modifier_severity_desc$"
 
  gravity_storm_aftermath_modifier: "Gravitational Flux"
- gravity_storm_aftermath_modifier_tooltip: "$STORM_AFTERMATH_DESC$\n$t$- §H$gravity_storm_aftermath_modifier$§!:\n$tt$- §R+25%§! to §R+100%§! $mod_planet_structures_cost_mult$\n$tt$- §G+20%§! to §G+60%§! $mod_planet_administrators_unity_produces_mult$"
- gravity_storm_aftermath_modifier_severity_desc: "While fluctuating gravity levels from the $gravity_storm$ have made building difficult, they do provide unique insights into gravity and space-time."
+ gravity_storm_aftermath_modifier_tooltip: "$STORM_AFTERMATH_DESC$\n$t$- §H$gravity_storm_aftermath_modifier$§!:\n$tt$- §R+25%§! to §R+100%§! $mod_planet_structures_cost_mult$\n$tt$- §G+20%§! to §G+60%§! $mod_planet_miners_produces_mult$"
+ gravity_storm_aftermath_modifier_severity_desc: "While fluctuating gravity levels from the $gravity_storm$ have made building difficult, the aftermath of the quakes unearthed previously hidden mineral veins."
  gravity_storm_aftermath_modifier_severity_1: "Aftermath: $gravity_storm_aftermath_modifier$"
  gravity_storm_aftermath_modifier_severity_1_desc: "$gravity_storm_aftermath_modifier_severity_desc$"
  gravity_storm_aftermath_modifier_severity_2: "Aftermath: §HSevere§! $gravity_storm_aftermath_modifier$"
@@ -1655,8 +1655,8 @@
  gravity_storm_aftermath_modifier_severity_3_desc: "$gravity_storm_aftermath_modifier_severity_desc$"
 
  magnetic_storm_aftermath_modifier: "Polar Disturbance"
- magnetic_storm_aftermath_modifier_tooltip: "$STORM_AFTERMATH_DESC$\n$t$- §H$magnetic_storm_aftermath_modifier$§!:\n$tt$- §G-10%§! to §G-30%§! $mod_planet_metallurgists_upkeep_mult$\n$tt$- §R-5%§! to §R-20%§! $MOD_PLANET_BUILDING_BUILD_SPEED_MULT$"
- magnetic_storm_aftermath_modifier_severity_desc: "The magnetic disturbances left by the $magnetic_storm$ cause a brilliant display of atmospheric lights. Remnant magnetic fields also impact the speed of planetary construction projects."
+ magnetic_storm_aftermath_modifier_tooltip: "$STORM_AFTERMATH_DESC$\n$t$- §H$magnetic_storm_aftermath_modifier$§!:\n$tt$- §G-10%§! to §G-30%§! $mod_planet_metallurgists_upkeep_mult$"
+ magnetic_storm_aftermath_modifier_severity_desc: "The disturbances left by the $magnetic_storm$ cause a brilliant display of atmospheric lights. Remnant magnetic fields still gather valuable metals."
  magnetic_storm_aftermath_modifier_severity_1: "Aftermath: $magnetic_storm_aftermath_modifier$"
  magnetic_storm_aftermath_modifier_severity_1_desc: "$magnetic_storm_aftermath_modifier_severity_desc$"
  magnetic_storm_aftermath_modifier_severity_2: "Aftermath: §HSevere§! $magnetic_storm_aftermath_modifier$"
@@ -1664,9 +1664,9 @@
  magnetic_storm_aftermath_modifier_severity_3: "Aftermath: §RExtreme§! $magnetic_storm_aftermath_modifier$"
  magnetic_storm_aftermath_modifier_severity_3_desc: "$magnetic_storm_aftermath_modifier_severity_desc$"
 
- solar_storm_aftermath_modifier: "Radioactive Lockdown"
- solar_storm_aftermath_modifier_tooltip: "$STORM_AFTERMATH_DESC$\n$t$- §H$solar_storm_aftermath_modifier$§!:\n$tt$- §R-40%§! to §R-60%§! $MOD_POP_GROWTH_SPEED$\n$tt$- §R+10%§! to §R+30%§! $MOD_POP_AMENITIES_USAGE_MULT$\n$tt$- §G+20%§! to §G+40%§! $MOD_ARMY_DEFENSE_DAMAGE_MULT$"
- solar_storm_aftermath_modifier_severity_desc: "High levels of radiation caused by the $solar_storm$ necessitate near permanent lockdown. Given the heavily controlled living spaces, armed control of the planet has become significantly easier at a cost of a despondent population."
+ solar_storm_aftermath_modifier: "Lifting Lockdowns"
+ solar_storm_aftermath_modifier_tooltip: "$STORM_AFTERMATH_DESC$\n$t$- §H$solar_storm_aftermath_modifier$§!:\n$tt$- §R+15%§! to §R+25%§! $MOD_POP_AMENITIES_USAGE_MULT$"
+ solar_storm_aftermath_modifier_severity_desc: "With the $solar_storm$ waning, daytime lockdowns are lifted, and citizens have much to do outside."
  solar_storm_aftermath_modifier_severity_1: "Aftermath: $solar_storm_aftermath_modifier$"
  solar_storm_aftermath_modifier_severity_1_desc: "$solar_storm_aftermath_modifier_severity_desc$"
  solar_storm_aftermath_modifier_severity_2: "Aftermath: §HSeverely§! $solar_storm_aftermath_modifier$"
@@ -1675,8 +1675,8 @@
  solar_storm_aftermath_modifier_severity_3_desc: "$solar_storm_aftermath_modifier_severity_desc$"
 
  celestial_storm_aftermath_modifier: "Dust Covered"
- celestial_storm_aftermath_modifier_tooltip: "$STORM_AFTERMATH_DESC$\n$t$- §H$celestial_storm_aftermath_modifier$§!:\n$tt$- §R+10%§! to §R+30%§! $MOD_PLANET_CRIME_MULT$\n$tt$- §R-10%§! to §R-30%§! $mod_planet_jobs_food_produces_mult$\n$tt$- §G+0.02§! to §G+0.06§! $r_rare_crystals$ from Pops"
- celestial_storm_aftermath_modifier_severity_desc: "Although composed of rare materials, the relentless onslaught of interstellar dust from the $celestial_storm$ has seeped all the way down into the soil, impeding production."
+ celestial_storm_aftermath_modifier_tooltip: "$STORM_AFTERMATH_DESC$\n$t$- §H$celestial_storm_aftermath_modifier$§!:\n$tt$- §R+10%§! to §R+30%§! $MOD_PLANET_CRIME_MULT$\n$tt$- §R-10%§! to §R-20%§! $mod_planet_jobs_food_produces_mult$\n$tt$- §G+0.02§! to §G+0.06§! $r_rare_crystals$ from Pops"
+ celestial_storm_aftermath_modifier_severity_desc: "Although composed of rare and coveted materials, the relentless onslaught of interstellar dust from the $celestial_storm$ has deprived crops from sunlight and resulted in meager harvests."
  celestial_storm_aftermath_modifier_severity_1: "Aftermath: $celestial_storm_aftermath_modifier$"
  celestial_storm_aftermath_modifier_severity_1_desc: "$celestial_storm_aftermath_modifier_severity_desc$"
  celestial_storm_aftermath_modifier_severity_2: "Aftermath: §HSeverely§! $celestial_storm_aftermath_modifier$"
@@ -2112,9 +2112,9 @@
  d_particle_storm_3_motes: "Unstable Planes"
  d_particle_storm_3_motes_desc: "The Cosmic Storm has turned several vast planes into areas of high tectonic activity, coincidentally the increase in danger has also come with an increase in volatile motes."
 
- particle_storm_aftermath_1_tt: "Robot Assembly Speed: §R-40%§!\n£minerals£ §YMinerals§! from Jobs: §R-10%§!\n£volatile_motes£ §YVolatile Motes§! from Pops: §G+0.02§!"
- particle_storm_aftermath_2_tt: "Robot Assembly Speed: §R-50%§!\n£minerals£ §YMinerals§! from Jobs: §R-20%§!\n£volatile_motes£ §YVolatile Motes§! from Pops: §G+0.04§!"
- particle_storm_aftermath_3_tt: "Robot Assembly Speed: §R-60%§!\n£minerals£ §YMinerals§! from Jobs: §R-30%§!\n£volatile_motes£ §YVolatile Motes§! from Pops: §G+0.06§!"
+ particle_storm_aftermath_1_tt: "£food£ §YFood§! from Jobs: §R-5%§!\n£volatile_motes£ §YVolatile Motes§! from Pops: §G+0.02§!"
+ particle_storm_aftermath_2_tt: "£food£ §YFood§! from Jobs: §R-10%§!\n£volatile_motes£ §YVolatile Motes§! from Pops: §G+0.04§!"
+ particle_storm_aftermath_3_tt: "£food£ §YFood§! from Jobs: §R-15%§!\n£volatile_motes£ §YVolatile Motes§! from Pops: §G+0.06§!"
 
  d_solar_storm_1_energy: "Degraded Ozone Layer"
  d_solar_storm_1_energy_desc: "The Cosmic Storm has torn a hole into the ozone layer of this planets atmosphere. While severely infringing on our quality of life, the quality of production has gone up."
@@ -2130,9 +2130,9 @@
  d_celestial_storm_3_crystal: "Stardust Dunes"
  d_celestial_storm_3_crystal_desc: "A passing cosmic storm swept over this world like a great wave. In its wake, it left behind an ethereal landscape of glittering, stardust dunes."
 
- celestial_storm_aftermath_1_tt: "Planet Crime: §R+10%§!\n£food£ §YFood§! from Jobs: §R-10%§!\n£rare_crystals£ §YRare Crystals§! from Pops: §G+0.02§!"
- celestial_storm_aftermath_2_tt: "Planet Crime: §R+20%§!\n£food£ §YFood§! from Jobs: §R-20%§!\n£rare_crystals£ §YRare Crystals§! from Pops: §G+0.04§!"
- celestial_storm_aftermath_3_tt: "Planet Crime: §R+30%§!\n£food£ §YFood§! from Jobs: §R-30%§!\n£rare_crystals£ §YRare Crystals§! from Pops: §G+0.06§!"
+ celestial_storm_aftermath_1_tt: "Planet Crime: §R+10%§!\n£food£ §YFood§! from Jobs: §R-05%§!\n£rare_crystals£ §YRare Crystals§! from Pops: §G+0.02§!"
+ celestial_storm_aftermath_2_tt: "Planet Crime: §R+20%§!\n£food£ §YFood§! from Jobs: §R-10%§!\n£rare_crystals£ §YRare Crystals§! from Pops: §G+0.04§!"
+ celestial_storm_aftermath_3_tt: "Planet Crime: §R+30%§!\n£food£ §YFood§! from Jobs: §R-15%§!\n£rare_crystals£ §YRare Crystals§! from Pops: §G+0.06§!"
 
  d_gravity_storm_1_districts: "Compacted Plains"
  d_gravity_storm_1_districts_desc: "The crushing gravitational effects of a passing cosmic storm have compacted several areas previously deemed too unstable for construction, effectively granting us free real estate."
@@ -2141,10 +2141,10 @@
  d_gravity_storm_3_engineering: "Gravitational Caves"
  d_gravity_storm_3_engineering_desc: "A passing cosmic storm has transformed some of our mining complexes into broken shafts of hyper-compact material. While our attempts to reopen them have sparked new theories in engineering and drilling, they have made little progress in reclaiming the mines."
 
- d_shroud_storm_1_society: "Shroud Parasites"
- d_shroud_storm_1_society_desc: "A passing cosmic storm has spread parasites among our livestock. Phasing between our reality and the Shroud, they have proven to be edible, healthy and surprisingly delicious."
+ d_shroud_storm_1_society: "Shroud Nymphs"
+ d_shroud_storm_1_society_desc: "A passing cosmic storm has left playful spirits among our population. Phasing in from the shroud to possess our citizens, their antics have increased population growth and given us new perspectives on our own psychology."
  d_shroud_storm_2_zro: "Fields of Zro"
- d_shroud_storm_2_zro_desc: "Transformed by a passing cosmic storm, this planet's most verdant biomes have become wavering fields of Zro. These are some of the purest deposits we have ever encountered."
+ d_shroud_storm_2_zro_desc: "Transformed by a passing cosmic storm, verdant biomes have become wavering fields of Zro. These are some of the purest deposits we have ever encountered."
  d_shroud_storm_3_happy: "Entity of the Lake"
  d_shroud_storm_3_happy_desc: "A passing cosmic storm has left us with a strange and wonderful gift. The largest body of water on this planet forms ripples that create patterns and symbols of obvious importance, capable of answering inquiries with surprising wisdom."
 

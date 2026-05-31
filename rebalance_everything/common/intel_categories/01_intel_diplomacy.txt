@@ -8,11 +8,11 @@ diplomacy = {
 		relative_power
 		rivalries
 		federation_name
-		galactic_community_vote_breakdown
+		opinion_breakdown
 	}
 
 	intel_level = {
-		opinion_breakdown
+		galactic_community_vote_breakdown
 		diplomatic_pacts
 	}
 

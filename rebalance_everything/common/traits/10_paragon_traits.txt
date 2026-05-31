@@ -55,7 +55,7 @@ leader_trait_legendary_leader = { #Origin trait
 		potential = {
 			NOT = { has_leader_flag = legendary_leader_coma }
 		}
-		leader_lifespan_add = 40
+		leader_lifespan_add = 60
 	}
 	triggered_self_modifier = {
 		potential = {
@@ -617,7 +617,7 @@ leader_trait_legendary_commanding_presence_2 = { #Origin trait - authoritarian
 	custom_tooltip_with_modifiers = "leader_trait_legendary_origin_desc"
 
 	councilor_modifier = {
-		monthly_loyalty_from_subjects = 0.6
+		monthly_loyalty_from_subjects = 0.7
 		diplo_action_acceptance_add = 10
 	}
 

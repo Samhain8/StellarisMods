@@ -205,7 +205,7 @@ tr_synthetics_maintenance_protocols = {
 	}
 
 	modifier = {
-		pop_amenities_usage_robotic_mult = -0.1
+		pop_amenities_usage_robotic_mult = -0.15
 	}
 
 	tradition_swap = {

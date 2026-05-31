@@ -325,7 +325,7 @@ situation_toxic_knights = {
 		}
 	}
 	monthly_progress = {
-		base = 0.4
+		base = 0.2
 		modifier = {
 			add = 0.2
 			desc = situation_toxic_knights_generous_tt
@@ -345,6 +345,11 @@ situation_toxic_knights = {
 					has_policy_flag = toxic_knights_diplomats
 				}
 			}
+		}
+		modifier = {
+			add = 0.1
+			desc = situation_toxic_knights_policy_tt
+			owner = { has_policy_flag = toxic_knights_questing }
 		}
 		modifier = {
 			add = owner.value:toxic_knight_job_number

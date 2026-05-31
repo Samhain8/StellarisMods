@@ -252,6 +252,41 @@ councilor_aristocratic_elite = {
 	}
 }
 
+councilor_merchant_nobles = {
+	leader_class = { official }
+	is_leader_possible = {
+		leader_class = official
+	}
+	civic = civic_merchant_nobles
+	modifier = {
+		planet_jobs_ruler_produces_mult = 0.02
+	}
+}
+
+councilor_fertility_rituals = {
+	leader_class = { official }
+	is_leader_possible = {
+		leader_class = official
+	}
+	civic = civic_fertility_rituals
+	modifier = {
+		pop_growth_speed = 0.01
+		country_unity_produces_mult = 0.01
+	}
+}
+
+councilor_fertility_rituals_corporate = {
+	leader_class = { official }
+	is_leader_possible = {
+		leader_class = official
+	}
+	civic = civic_fertility_rituals_corporate
+	modifier = {
+		pop_growth_speed = 0.01
+		country_unity_produces_mult = 0.01
+	}
+}
+
 councilor_ascensionists = {
 	leader_class = { official }
 	is_leader_possible = {
@@ -364,13 +399,33 @@ councilor_corvee_system = {
 }
 
 councilor_crafters = {
-	leader_class = { official }
+	leader_class = { official scientist }
 	is_leader_possible = {
-		leader_class = official
+		OR = {
+			leader_class = official
+			leader_class = scientist
+		}
 	}
 	civic = civic_crafters
 	modifier = {
-		ship_armor_mult = 0.01
+		ship_armor_mult = 0.012
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
+councilor_crystal_artists = {
+	leader_class = { official scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = official
+			leader_class = scientist
+		}
+	}
+	civic = civic_crystal_artists
+	modifier = {
+		ship_hull_mult = 0.015
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -484,7 +539,8 @@ councilor_environmentalist = {
 	}
 	civic = civic_environmentalist
 	modifier = {
-		pop_amenities_usage_mult = -0.015
+		pop_environment_tolerance = 0.01
+		planet_rangers_unity_produces_add = 0.3
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -499,6 +555,7 @@ councilor_exalted_priesthood = {
 	civic = civic_exalted_priesthood
 	modifier = {
 		planet_priests_upkeep_mult = -0.02
+		pop_amenities_usage_mult = -0.01
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -529,7 +586,9 @@ councilor_feudal_realm = {
 	}
 	civic = civic_feudal_realm
 	modifier = {
-		subjects_unity_produces_add = 5
+		#subjects_unity_produces_add = 5
+		monthly_loyalty_from_subjects = 0.1
+		diplo_weight_mult = 0.02
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -641,6 +700,7 @@ councilor_memory_vaults = {
 	}
 	civic = civic_memory_vault
 	modifier = {
+		species_leader_exp_gain = 0.02
 		leaders_upkeep_mult = -0.02
 		leaders_cost_mult = -0.02
 	}
@@ -747,7 +807,8 @@ councilor_pleasure_seekers = {
 	}
 	civic = civic_pleasure_seekers
 	modifier = {
-		pop_cat_ruler_happiness = 0.04
+		pop_cat_ruler_happiness = 0.02
+		country_consumer_goods_produces_mult = 0.01
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -842,7 +903,8 @@ councilor_shadow_council = {
 	}
 	civic = civic_shadow_council
 	modifier = {
-		pop_category_rulers_upkeep_mult = -0.04
+		council_agenda_progress_speed = 0.02
+		spy_network_daily_value_mult = 0.02
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -876,7 +938,8 @@ councilor_slaver_guilds = {
 	}
 	civic = civic_slaver_guilds
 	modifier = {
-		pop_cat_slave_happiness = 0.02
+		pop_cat_slave_happiness = 0.01
+		planet_jobs_slave_produces_mult = 0.01
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -890,7 +953,7 @@ councilor_technocracy = {
 	}
 	civic = civic_technocracy
 	modifier = {
-		planet_researchers_upkeep_mult = -0.02
+		planet_researchers_upkeep_mult = -0.025
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -944,7 +1007,7 @@ councilor_warrior_culture = {
 	civic = civic_warrior_culture
 	custom_tooltip = "councilor_warrior_culture_custom_modifier_desc"
 	modifier = {
-		planet_entertainers_unity_produces_add = 0.2
+		planet_entertainers_unity_produces_add = 0.15
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -962,8 +1025,9 @@ councilor_heroic_tales = {
 	}
 	civic = civic_heroic_tales
 	modifier = {
-		pop_government_ethic_attraction = 0.02
 		species_leader_exp_gain = 0.02
+		pop_government_ethic_attraction = 0.02
+		country_unity_produces_mult = 0.01
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -1027,6 +1091,7 @@ councilor_memory_vault_corporate = {
 	}
 	civic = civic_memory_vault_corporate
 	modifier = {
+		species_leader_exp_gain = 0.02
 		leaders_upkeep_mult = -0.02
 		leaders_cost_mult = -0.02
 	}
@@ -1043,7 +1108,7 @@ councilor_crusader_spirit_corporate = {
 	civic = civic_crusader_spirit_corporate
 	modifier = {
 		ship_fire_rate_mult = 0.01
-		local_trade_protection_add = 1
+		local_trade_protection_add = 3
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -1150,9 +1215,12 @@ councilor_corporate_catalytic_processing = {
 }
 
 councilor_corporate_crafters = {
-	leader_class = { official }
+	leader_class = { official scientist }
 	is_leader_possible = {
-		leader_class = official
+		OR = {
+			leader_class = official
+			leader_class = scientist
+		}
 	}
 	civic = civic_corporate_crafters
 	modifier = {
@@ -1236,7 +1304,11 @@ councilor_criminal_heritage = {
 	}
 
 	civic = civic_criminal_heritage
-	custom_tooltip = "councilor_criminal_heritage_custom_modifier_desc"
+	modifier = {
+		add_base_country_intel = 2
+		planet_branch_offices_cost_mult = -0.02
+	}
+	#custom_tooltip = "councilor_criminal_heritage_custom_modifier_desc"
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
 	}
@@ -1278,7 +1350,7 @@ councilor_free_traders = {
 	}
 	civic = civic_free_traders
 	modifier = {
-		commercial_pact_mult = 0.02
+		commercial_pact_mult = 0.04
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -1298,9 +1370,12 @@ councilor_gospel_of_the_masses = {
 }
 
 councilor_indentured_assets = {
-	leader_class = { commander }
+	leader_class = { commander official }
 	is_leader_possible = {
-		leader_class = commander
+		OR = {
+			leader_class = commander
+			leader_class = official
+		}
 	}
 	civic = civic_indentured_assets
 	custom_tooltip = "councilor_indentured_assets_custom_modifier_desc"
@@ -1330,7 +1405,7 @@ councilor_naval_contractors = {
 	}
 	civic = civic_naval_contractors
 	modifier = {
-		starbase_shipyard_build_speed_mult = 0.01
+		starbase_shipyard_build_cost_mult = -0.01
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights

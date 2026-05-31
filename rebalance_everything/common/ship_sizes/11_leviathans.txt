@@ -61,7 +61,7 @@ space_dragon_red = {
 					is_country_type = default
 				}
 			}
-			food = 100
+			food = 32
 		}
 	}
 }
@@ -394,7 +394,7 @@ toxic_god = {
 	graphical_culture = no
 	can_be_inspected = no
 	is_space_object = yes
-	max_speed = @speed_very_fast
+	max_speed = @speed_slow
 	acceleration = 0.4
 	rotation_speed = 0.25
 	collision_radius = 15
@@ -677,7 +677,7 @@ space_dragon_blue = {
 					is_country_type = default
 				}
 			}
-			food = 100
+			food = 32
 		}
 	}
 }
@@ -717,7 +717,7 @@ space_dragon_origin = {
 					is_country_type = default
 				}
 			}
-			food = 100
+			food = 32
 		}
 	}
 }
@@ -780,7 +780,7 @@ space_dragon_origin_baby = {
 			sr_living_metal = 100
 		}
 		upkeep = {
-			food = 10
+			food = 8
 		}
 	}
 

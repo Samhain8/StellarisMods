@@ -1,0 +1,251 @@
+
+#Starbase scope (uses event target)
+defined_text = {
+	name = GetSabotagedStarbaseTitle
+	text = {
+		trigger = {
+			event_target:sabotaged_starbase_owner = { has_country_flag = anchorage_sabotaged }
+		}
+		localization_key = sabotaged_anchorage
+	}
+	text = {
+		trigger = {
+			event_target:sabotaged_starbase_owner = { has_country_flag = gun_battery_sabotaged }
+		}
+		localization_key = sabotaged_gun_battery
+	}
+	text = {
+		trigger = {
+			event_target:sabotaged_starbase_owner = { has_country_flag = hangar_bay_sabotaged }
+		}
+		localization_key = sabotaged_hangar_bay
+	}
+	text = {
+		trigger = {
+			event_target:sabotaged_starbase_owner = { has_country_flag = missile_battery_sabotaged }
+		}
+		localization_key = sabotaged_missile_battery
+	}
+	text = {
+		trigger = {
+			event_target:sabotaged_starbase_owner = { has_country_flag = solar_panel_network_sabotaged }
+		}
+		localization_key = sabotaged_solar_panel_network
+	}
+	text = {
+		trigger = {
+			event_target:sabotaged_starbase_owner = { has_country_flag = trading_hub_sabotaged }
+		}
+		localization_key = sabotaged_trading_hub
+	}
+	text = {
+		trigger = {
+			event_target:sabotaged_starbase_owner = { has_country_flag = art_college_sabotaged }
+		}
+		localization_key = sabotaged_art_college
+	}
+	text = {
+		trigger = {
+			event_target:sabotaged_starbase_owner = { has_country_flag = black_hole_observatory_sabotaged }
+		}
+		localization_key = sabotaged_black_hole_observatory
+	}
+	text = {
+		trigger = {
+			event_target:sabotaged_starbase_owner = { has_country_flag = command_center_sabotaged }
+		}
+		localization_key = sabotaged_command_center
+	}
+	text = {
+		trigger = {
+			event_target:sabotaged_starbase_owner = { has_country_flag = communications_jammer_sabotaged }
+		}
+		localization_key = sabotaged_communications_jammer
+	}
+	text = {
+		trigger = {
+			event_target:sabotaged_starbase_owner = { has_country_flag = crew_quarters_sabotaged }
+		}
+		localization_key = sabotaged_crew_quarters
+	}
+	text = {
+		trigger = {
+			event_target:sabotaged_starbase_owner = { has_country_flag = curator_think_tank_sabotaged }
+		}
+		localization_key = sabotaged_curator_think_tank
+	}
+	text = {
+		trigger = {
+			event_target:sabotaged_starbase_owner = { has_country_flag = deep_space_black_site_sabotaged }
+		}
+		localization_key = sabotaged_deep_space_black_site
+	}
+	text = {
+		trigger = {
+			event_target:sabotaged_starbase_owner = { has_country_flag = disruption_field_sabotaged }
+		}
+		localization_key = sabotaged_disruption_field
+	}
+	text = {
+		trigger = {
+			event_target:sabotaged_starbase_owner = { has_country_flag = fleet_academy_sabotaged }
+		}
+		localization_key = sabotaged_fleet_academy
+	}
+	text = {
+		trigger = {
+			event_target:sabotaged_starbase_owner = { has_country_flag = hydroponics_bay_sabotaged }
+		}
+		localization_key = sabotaged_hydroponics_bay
+	}
+	text = {
+		trigger = {
+			event_target:sabotaged_starbase_owner = { has_country_flag = listening_post_sabotaged }
+		}
+		localization_key = sabotaged_listening_post
+	}
+	text = {
+		trigger = {
+			event_target:sabotaged_starbase_owner = { has_country_flag = naval_logistics_office_sabotaged }
+		}
+		localization_key = sabotaged_naval_logistics_office
+	}
+	text = {
+		trigger = {
+			event_target:sabotaged_starbase_owner = { has_country_flag = nebula_refinery_sabotaged }
+		}
+		localization_key = sabotaged_nebula_refinery
+	}
+	text = {
+		trigger = {
+			event_target:sabotaged_starbase_owner = { has_country_flag = offworld_trading_company_sabotaged }
+		}
+		localization_key = sabotaged_offworld_trading_company
+	}
+	text = {
+		trigger = {
+			event_target:sabotaged_starbase_owner = { has_country_flag = resource_silo_sabotaged }
+		}
+		localization_key = sabotaged_resource_silo
+	}
+	text = {
+		trigger = {
+			event_target:sabotaged_starbase_owner = { has_country_flag = target_uplink_computer_sabotaged }
+		}
+		localization_key = sabotaged_target_uplink_computer
+	}
+	default = DEFAULT_MODULE #will only be seen in debugtooltip, if ever seen ingame we know it's broken
+}
+
+#Country scope | from = operation
+defined_text = {
+	name = GetOperativeRoleIndefiniteArticle
+	text = {
+		trigger = {
+			from = { has_espionage_operation_flag = operative_courier }
+		}
+		localization_key = operative_a_courier
+	}
+	text = {
+		trigger = {
+			from = { has_espionage_operation_flag = operative_facilitator }
+		}
+		localization_key = operative_a_facilitator
+	}
+	text = {
+		trigger = {
+			from = { has_espionage_operation_flag = operative_fixer }
+		}
+		localization_key = operative_a_fixer
+	}
+	text = {
+		trigger = {
+			from = { has_espionage_operation_flag = operative_informant }
+		}
+		localization_key = operative_a_informant
+	}
+	text = {
+		trigger = {
+			from = { has_espionage_operation_flag = operative_warehouse }
+		}
+		localization_key = operative_a_warehouse
+	}
+}
+defined_text = {
+	name = GetOperativeRole
+	text = {
+		trigger = {
+			from = { has_espionage_operation_flag = operative_courier }
+		}
+		localization_key = operative_courier
+	}
+	text = {
+		trigger = {
+			from = { has_espionage_operation_flag = operative_facilitator }
+		}
+		localization_key = operative_facilitator
+	}
+	text = {
+		trigger = {
+			from = { has_espionage_operation_flag = operative_fixer }
+		}
+		localization_key = operative_fixer
+	}
+	text = {
+		trigger = {
+			from = { has_espionage_operation_flag = operative_informant }
+		}
+		localization_key = operative_informant
+	}
+	text = {
+		trigger = {
+			from = { has_espionage_operation_flag = operative_warehouse }
+		}
+		localization_key = operative_warehouse
+	}
+}
+
+# If the ambassador is actually a spymaster, this will substitute the title in a subtle way
+defined_text = {
+	name = GetAmbassadorOrNot
+	text = {
+		trigger = {
+			NOT = {
+				has_envoy_task = {
+					task = spy_network
+				}
+			}
+		}
+		localization_key = STRING_ambassador
+	}
+	text = {
+		trigger = {
+			has_envoy_task = {
+				task = spy_network
+			}
+		}
+		localization_key = STRING_fake_ambassador
+	}
+}
+
+defined_text = {
+	name = GetAmbassadorOrNotCap
+	text = {
+		trigger = {
+			NOT = {
+				has_envoy_task = {
+					task = spy_network
+				}
+			}
+		}
+		localization_key = STRING_ambassador_CAP
+	}
+	text = {
+		trigger = {
+			has_envoy_task = {
+				task = spy_network
+			}
+		}
+		localization_key = STRING_fake_ambassador_CAP
+	}
+}

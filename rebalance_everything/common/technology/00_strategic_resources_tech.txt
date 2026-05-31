@@ -90,6 +90,7 @@ tech_mine_volatile_motes = {
 						has_deposit = d_dust_caverns
 						has_deposit = d_dust_desert
 						has_deposit = d_industrial_sector
+						has_deposit = d_spice_pits
 					}
 				}
 				any_planet_within_border = {
@@ -113,12 +114,12 @@ tech_mine_volatile_motes = {
 
 #Volatile Material Plants
 tech_volatile_motes = {
-	cost = @tier2cost1
+	cost = @tier2cost3
 	area = physics
-	tier = 2
+	tier = 3
 	category = { particles }
 	prerequisites = { "tech_basic_industry" }
-	weight = @tier2weight1
+	weight = @tier2weight3
 
 	weight_modifier = {
 		factor = 2
@@ -130,6 +131,7 @@ tech_volatile_motes = {
 						has_deposit = d_dust_caverns
 						has_deposit = d_dust_desert
 						has_deposit = d_industrial_sector
+						has_deposit = d_spice_pits
 					}
 				}
 				any_planet_within_border = {
@@ -197,12 +199,12 @@ tech_mine_exotic_gases = {
 
 #Exotic Gas Refining
 tech_exotic_gases = {
-	cost = @tier2cost1
+	cost = @tier2cost3
 	area = engineering
-	tier = 2
+	tier = 3
 	category = { materials }
 	prerequisites = { "tech_basic_industry" }
-	weight = @tier2weight1
+	weight = @tier2weight3
 
 	weight_modifier = {
 		factor = 2
@@ -262,6 +264,7 @@ tech_mine_rare_crystals = {
 						has_deposit = d_crystal_forest
 						has_deposit = d_crystal_reef
 						has_deposit = d_industrial_sector
+						has_deposit = d_crystal_garden
 					}
 				}
 				any_planet_within_border = {
@@ -289,12 +292,12 @@ tech_mine_rare_crystals = {
 
 #Rare Crystal Manufacturing
 tech_rare_crystals = {
-	cost = @tier2cost1
+	cost = @tier2cost3
 	area = engineering
-	tier = 2
+	tier = 3
 	category = { materials }
 	prerequisites = { "tech_basic_industry" }
-	weight = @tier2weight1
+	weight = @tier2weight3
 
 	weight_modifier = {
 		factor = 2
@@ -307,6 +310,7 @@ tech_rare_crystals = {
 						has_deposit = d_crystal_forest
 						has_deposit = d_crystal_reef
 						has_deposit = d_industrial_sector
+						has_deposit = d_crystal_garden
 					}
 				}
 				any_planet_within_border = {
@@ -344,7 +348,7 @@ tech_mine_zro = {
 
 	weight_modifier = {
 		modifier = {
-			factor = 0.10
+			factor = 0.5
 			NOR = {
 				has_trait_in_council = { TRAIT = leader_trait_expertise_psionics }
 				has_trait_in_council = { TRAIT = leader_trait_curator }

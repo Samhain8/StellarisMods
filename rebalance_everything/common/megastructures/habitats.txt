@@ -5,10 +5,10 @@
 @central_orbital_influence_cost = 200
 
 @major_orbital_build_time = 720
-@major_orbital_alloy_cost = 200
+@major_orbital_alloy_cost = 300
 
 @minor_orbital_build_time = 180
-@minor_orbital_alloy_cost = 50
+@minor_orbital_alloy_cost = 80
 
 # Habitat Central Complex
 habitat_central_complex = {

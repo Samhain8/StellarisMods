@@ -17,10 +17,11 @@ decision_hunker_down = {
 	enactment_time = 0
 
 	potential = {
-		has_storm_resistant_production_building = yes
-		NOT = {
-			has_modifier = storm_hunkered_down_modifier
-		}
+		always = no
+		#has_storm_resistant_production_building = yes
+		#NOT = {
+		#	has_modifier = storm_hunkered_down_modifier
+		#}
 	}
 
 	allow = {

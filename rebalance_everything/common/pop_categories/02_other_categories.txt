@@ -163,6 +163,71 @@ slave = {
 
 	triggered_planet_modifier = {
 		potential = {
+			can_assemble_biomimetic_pop = yes
+		}
+		planet_pop_assembly_add = @biomimetic_budding_rate
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_xeno_compatibility_female_a
+			exists = planet
+			planet = { 
+				any_owned_pop = { has_male_species_trait = yes }
+			}
+		}
+		pop_growth_speed = 0.005
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_trait = trait_xeno_compatibility_female_q
+			exists = planet
+			planet = { 
+				any_owned_pop = { has_male_species_trait = yes }
+				count_owned_pop = {
+					limit = {
+						has_trait = trait_xeno_compatibility_female_q
+					}
+					count <= 3
+				}
+			}
+		}
+		pop_growth_speed = 0.01
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			planet = {
+				OR = {
+					has_building = building_slave_processing
+					AND = {
+						exists = orbital_defence
+						orbital_defence = {
+							exists = starbase
+							starbase = {
+								has_starbase_building = ring_slave_processing_facility
+							}
+						}
+					}
+				}
+			}
+		}
+		trade_value_add = 1
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_slaver_civic = yes }
+		}
+		trade_value_add = 1
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
 			owner = {
 				has_councilor = { COUNCILOR = "councilor_indentured_assets" } 
 			}
@@ -190,6 +255,13 @@ slave = {
 				has_trait = trait_exotic_metabolism
 			}
 			exotic_gases = @exotic_metabolism
+		}
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				has_trait = trait_mote_eater
+			}
+			volatile_motes = @exotic_metabolism
 		}
 
 		# Resource Production
@@ -251,6 +323,13 @@ bio_trophy = {
 		}
 		planet_pop_assembly_organic_add = @tiyanki_budding_rate
 	}
+
+	triggered_planet_modifier = {
+		potential = {
+			can_assemble_biomimetic_pop = yes
+		}
+		planet_pop_assembly_add = @biomimetic_budding_rate
+	}
 	
 	# Triggered Modifiers
 	inline_script = "pop_categories/social_classes_triggered_modifiers"
@@ -277,6 +356,13 @@ bio_trophy = {
 				has_trait = trait_exotic_metabolism
 			}
 			exotic_gases = @exotic_metabolism
+		}
+		upkeep = {
+			trigger = {
+				is_organic_species = yes
+				has_trait = trait_mote_eater
+			}
+			volatile_motes = @exotic_metabolism
 		}
 
 		# Resource Production 

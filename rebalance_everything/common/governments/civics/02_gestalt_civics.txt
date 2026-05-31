@@ -198,13 +198,13 @@ civic_hive_devouring_swarm = {
 	description = "civic_tooltip_devouring_swarm_effects"
 	modifier = {
 		councilor_gestalt_legion_exp_gain = @gestalt_civic_node_xp_rate
-		country_starbase_influence_cost_mult = -0.5
+		country_starbase_influence_cost_mult = -0.3
 		ship_hull_mult = 0.25
 		ship_hull_regen_add_perc = 0.05
 		ship_armor_regen_add_perc = 0.05
 		army_damage_mult = 0.40
 		category_biology_research_speed_mult = 0.20
-		starbase_shipyard_build_cost_mult = -0.25
+		starbase_shipyard_build_cost_mult = -0.15
 		country_naval_cap_mult = 0.33
 	}
 
@@ -295,12 +295,14 @@ civic_hive_catalytic_processing = {
 			}
 		}
 	}
+	modifier = {
+		ship_hull_mult = 0.1
+		ship_hull_regen_add_perc = 0.05
+		councilor_gestalt_cognitive_exp_gain = @gestalt_civic_node_xp_rate
+	}
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = {
 		base = 0			# Too dangerous to switch mid-game
-	}
-	modifier = {
-		councilor_gestalt_cognitive_exp_gain = @gestalt_civic_node_xp_rate
 	}
 }
 
@@ -435,10 +437,8 @@ civic_hive_stargazers = {
 		}
 	}
 	modifier = {
+		country_starbase_influence_cost_distance_mult = -0.8
 		councilor_gestalt_legion_exp_gain = @gestalt_civic_node_xp_rate
-		ship_sensor_range_add = 1
-		ship_hyperlane_range_add = 2
-		country_starbase_influence_cost_distance_mult = -0.2
 	}
 
 	traits = {
@@ -807,6 +807,9 @@ civic_machine_servitor = {
 	description = civic_tooltip_machine_servitor_effects
 	has_secondary_species = {	# see game_start.12
 		title = civic_machine_servitor_secondary_species
+		traits = {
+			trait = trait_syncretic_proles
+		}
 	}
 	modifier = {
 		councilor_gestalt_regulatory_exp_gain = @gestalt_civic_node_xp_rate
@@ -1174,12 +1177,14 @@ civic_machine_catalytic_processing = {
 	possible = {
 		origin = { NOT = { value = origin_machine } }
 	}
+	modifier = {
+		ship_hull_mult = 0.1
+		ship_hull_regen_add_perc = 0.05
+		councilor_gestalt_cognitive_exp_gain = @gestalt_civic_node_xp_rate
+	}
 	random_weight = { base = @civic_default_random_weight }
 	ai_weight = {
 		base = 0		# Too dangerous to switch mid-game
-	}
-	modifier = {
-		councilor_gestalt_cognitive_exp_gain = @gestalt_civic_node_xp_rate
 	}
 }
 
@@ -1281,9 +1286,10 @@ civic_machine_exploration_protocol = {
 	}
 
 	modifier = {
+		country_starbase_influence_cost_distance_mult = -0.8
 		councilor_gestalt_legion_exp_gain = @gestalt_civic_node_xp_rate
 		first_contact_speed_mult = 0.2
-		station_observers_unity_produces_add = 3
+		station_observers_unity_produces_add = 5
 	}
 
 	random_weight = {

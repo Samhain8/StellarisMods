@@ -597,7 +597,7 @@ pc_nuked = {
 
 	min_distance_from_sun = 60
 	max_distance_from_sun = 110
-	spawn_odds = 0.15
+	spawn_odds = 0.1
 
 	extra_orbit_size = 0
 	extra_planet_count = 0
@@ -1410,7 +1410,7 @@ pc_shattered_ring_habitable = {
 
 	is_artificial_planet = yes
 
-	carry_cap_per_free_district = @carry_cap_normal
+	carry_cap_per_free_district = @carry_cap_high
 
 	modifier = {
 		pop_environment_tolerance = 1.0
@@ -1451,7 +1451,7 @@ pc_habitat = {
 		pop_environment_tolerance = 0.40
 	}
 
-	carry_cap_per_free_district = @carry_cap_low
+	carry_cap_per_free_district = @carry_cap_normal
 }
 
 pc_cosmogenesis_world = {

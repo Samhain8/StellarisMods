@@ -171,7 +171,7 @@ leader_trait_army_veteran_2 = {
 	}
 	councilor_modifier = {
 		planet_army_build_speed_mult = 0.25
-		armies_cost_mult = -0.10
+		armies_cost_mult = -0.25
 		army_defense_damage_mult = 0.25
 	}
 	leader_class = { official scientist }
@@ -295,6 +295,10 @@ leader_trait_agrarian_upbringing_2 = {
 
 ###################
 trait_ruler_fertility_preacher = {
+	starting_ruler_trait = yes
+	forbidden_origins = { origin_legendary_leader }
+	cost = 1
+	
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -362,7 +366,7 @@ trait_ruler_fertility_preacher_2 = {
 			exists = owner
 			owner = { is_synthetic_empire = no }
 		}
-		pop_growth_speed = 0.05
+		pop_growth_speed = 0.06
 	}
 	triggered_councilor_modifier = {
 		potential = {
@@ -396,7 +400,7 @@ leader_trait_righteous = {
 	}
 	triggered_planet_modifier = {
 		potential = { trait_is_gestalt_check = no }
-		planet_crime_add = -25
+		planet_crime_add = -15
 	}
 	triggered_planet_modifier = {
 		potential = { trait_is_gestalt_check = yes }
@@ -404,7 +408,7 @@ leader_trait_righteous = {
 	}
 	triggered_sector_modifier = {
 		potential = { trait_is_gestalt_check = no }
-		planet_crime_add = -10
+		planet_crime_add = -5
 	}
 	triggered_sector_modifier = {
 		potential = { trait_is_gestalt_check = yes }
@@ -433,7 +437,7 @@ leader_trait_righteous_2 = {
 	}
 	triggered_planet_modifier = {
 		potential = { trait_is_gestalt_check = no }
-		planet_crime_add = -50
+		planet_crime_add = -25
 	}
 	triggered_planet_modifier = {
 		potential = { trait_is_gestalt_check = yes }
@@ -441,7 +445,7 @@ leader_trait_righteous_2 = {
 	}
 	triggered_sector_modifier = {
 		potential = { trait_is_gestalt_check = no }
-		planet_crime_add = -25
+		planet_crime_add = -10
 	}
 	triggered_sector_modifier = {
 		potential = { trait_is_gestalt_check = yes }
@@ -668,6 +672,10 @@ leader_trait_enlister_2 = {
 
 ###################
 leader_trait_shipwright = {
+	starting_ruler_trait = yes
+	forbidden_origins = { origin_legendary_leader }
+	cost = 1
+	
 	inline_script = {
 		script = trait/icon
 		CLASS = official
@@ -677,7 +685,7 @@ leader_trait_shipwright = {
 		TIER = 1
 	}
 	councilor_modifier = {
-		starbase_shipyard_build_speed_mult = 0.05
+		starbase_shipyard_build_cost_mult = -0.03
 	}
 	leader_class = { official }
 	opposites = {
@@ -701,7 +709,7 @@ leader_trait_shipwright_2 = {
 		TIER = 2
 	}
 	councilor_modifier = {
-		starbase_shipyard_build_speed_mult = 0.10
+		starbase_shipyard_build_cost_mult = -0.06
 	}
 	leader_class = { official }
 	opposites = {
@@ -725,7 +733,7 @@ leader_trait_architectural_interest = {
 	}
 	planet_modifier = {
 		planet_structures_upkeep_mult = -0.1
-		planet_building_build_speed_mult = 0.1
+		planet_building_build_speed_mult = 0.15
 	}
 	sector_modifier = {
 		planet_structures_upkeep_mult = -0.05
@@ -1772,10 +1780,10 @@ leader_trait_naturalist = {
 		TIER = 1
 	}
 	planet_modifier = {
-		deposit_blockers_natural_unity_produces_add = 3
+		deposit_blockers_natural_unity_produces_add = 2
 	}
 	sector_modifier = {
-		deposit_blockers_natural_unity_produces_add = 1.5
+		deposit_blockers_natural_unity_produces_add = 1
 	}
 	leader_potential_add = {
 		has_paragon_dlc = yes
@@ -1803,10 +1811,10 @@ leader_trait_naturalist_2 = {
 		TIER = 2
 	}
 	planet_modifier = {
-		deposit_blockers_natural_unity_produces_add = 6
+		deposit_blockers_natural_unity_produces_add = 4
 	}
 	sector_modifier = {
-		deposit_blockers_natural_unity_produces_add = 3
+		deposit_blockers_natural_unity_produces_add = 2
 	}
 	leader_trait_type = veteran
 	leader_class = { official scientist }
@@ -1823,10 +1831,10 @@ leader_trait_naturalist_3 = {
 		TIER = 3
 	}
 	planet_modifier = {
-		deposit_blockers_natural_unity_produces_add = 12
+		deposit_blockers_natural_unity_produces_add = 8
 	}
 	sector_modifier = {
-		deposit_blockers_natural_unity_produces_add = 6
+		deposit_blockers_natural_unity_produces_add = 4
 	}
 	leader_trait_type = veteran
 	leader_class = { official scientist }

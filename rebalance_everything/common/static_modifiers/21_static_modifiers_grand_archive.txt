@@ -284,16 +284,16 @@ primal_calling_exhibit_modifier = {
 	icon = "gfx/interface/icons/origins/origins_primal_calling.dds"
 	custom_tooltip = primal_calling_exhibit_modifier_tt
 	show_only_custom_tooltip = yes
-	trade_value_mult = @primal_calling_exhibit_trade_value
 	specimens_produces_mult = @primal_calling_exhibit_specimen
+	all_technology_research_speed = @primal_calling_exploit_research_mult
 }
 
 primal_calling_exploit_modifier = {
 	icon = "gfx/interface/icons/origins/origins_primal_calling.dds"
 	custom_tooltip = primal_calling_exploit_modifier_tt
 	show_only_custom_tooltip = yes
-	all_technology_research_speed = @primal_calling_exploit_research_mult
 	planet_primal_jobs_produces_mult = @primal_calling_exploit_wrangler_mult
+	trade_value_mult = @primal_calling_exhibit_trade_value
 }
 
 primal_calling_shelter_modifier = {

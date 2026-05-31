@@ -132,8 +132,8 @@ d_magnetic_storm_1_minerals = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		planet_non_artificial_max_districts_add = 3
-		district_mining_max = 3
+		planet_non_artificial_max_districts_add = 1
+		district_mining_max = 1
 		planet_jobs_minerals_produces_mult = 0.25
 	}
 
@@ -146,8 +146,8 @@ d_magnetic_storm_2_alloys = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		planet_metallurgists_upkeep_mult = -0.30
-		planet_metallurgists_alloys_produces_mult = 0.30
+		planet_metallurgists_upkeep_mult = -0.25
+		planet_metallurgists_alloys_produces_mult = 0.25
 	}
 
 	potential = { always = no }
@@ -175,6 +175,7 @@ d_electric_storm_1_engineering = {
 
 	country_modifier = {
 		category_materials_research_speed_mult = 0.15
+		planet_housing_add = -2
 	}
 
 	potential = { always = no }
@@ -216,7 +217,7 @@ d_particle_storm_1_society = {
 
 	planet_modifier = {
 		planet_jobs_society_research_produces_mult = 0.1
-		planet_max_districts_add = -2
+		planet_housing_add = -2
 	}
 
 	potential = { always = no }
@@ -232,7 +233,7 @@ d_particle_storm_2_unity = {
 			always = yes
 		}
 		planet_jobs_unity_produces_mult = 0.1
-		planet_max_districts_add = -2
+		planet_housing_add = -3
 	}
 
 	potential = { always = no }
@@ -251,7 +252,8 @@ d_particle_storm_3_motes = {
 			}
 		}
 		modifier = {
-			job_mote_harvester_add = 1
+			job_mote_harvester_add = 2
+			planet_max_districts_add = -1
 		}
 	}
 
@@ -263,7 +265,8 @@ d_particle_storm_3_motes = {
 			}
 		}
 		modifier = {
-			job_mote_harvesting_drone_add = 1
+			job_mote_harvesting_drone_add = 2
+			planet_max_districts_add = -1
 		}
 	}
 
@@ -276,8 +279,8 @@ d_solar_storm_1_energy = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		planet_jobs_energy_produces_mult = 1
-		pop_growth_speed = -0.25
+		planet_jobs_energy_produces_mult = 0.50
+		pop_environment_tolerance = -0.10
 	}
 
 	potential = { always = no }
@@ -289,8 +292,8 @@ d_solar_storm_2_districts = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		planet_max_districts_add = 3
-		district_generator_max = +3
+		district_generator_max = 3
+		pop_environment_tolerance = -0.05
 	}
 
 	potential = { always = no }
@@ -305,8 +308,8 @@ d_solar_storm_3_output = {
 		potential = {
 			always = yes
 		}
-		planet_jobs_energy_produces_mult = 0.1
-		trade_value_mult = 0.1
+		trade_value_mult = 0.2
+		pop_environment_tolerance = -0.05
 	}
 
 	potential = { always = no }
@@ -326,6 +329,7 @@ d_celestial_storm_1_mines = {
 		}
 		modifier = {
 			job_crystal_miner_add = 2
+			planet_housing_add = -2
 		}
 	}
 
@@ -338,6 +342,7 @@ d_celestial_storm_1_mines = {
 		}
 		modifier = {
 			job_crystal_mining_drone_add = 2
+			planet_housing_add = -2
 		}
 	}
 
@@ -394,7 +399,7 @@ d_gravity_storm_1_districts = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		planet_max_districts_add = 3
+		planet_max_districts_add = 1
 	}
 
 	potential = { always = no }
@@ -406,7 +411,7 @@ d_gravity_storm_2_unity = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		planet_jobs_unity_produces_mult = 0.1
+		planet_stability_add = 5
 	}
 
 	potential = { always = no }
@@ -422,7 +427,7 @@ d_gravity_storm_3_engineering = {
 			always = yes
 		}
 		modifier = {
-			planet_max_districts_add = -1
+			district_mining_max = -2
 			planet_jobs_engineering_research_produces_mult = 0.2
 		}
 	}
@@ -456,7 +461,6 @@ d_shroud_storm_2_zro = {
 	}
 
 	planet_modifier = {
-		pop_happiness = 0.1
 		district_farming_max = -1
 	}
 
@@ -469,7 +473,7 @@ d_shroud_storm_3_happy = {
 	category = deposit_cat_rare
 
 	planet_modifier = {
-		pop_happiness = 0.25
+		pop_happiness = 0.15
 		pop_ethic_spiritualist_attraction_mult = 0.5
 	}
 

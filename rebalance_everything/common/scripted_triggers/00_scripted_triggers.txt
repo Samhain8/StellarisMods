@@ -1142,6 +1142,10 @@ is_livestock = {
 	has_slavery_type = { type = slavery_livestock country = root }
 }
 
+is_pet_slaves = {
+	has_slavery_type = { type = slavery_pets country = root }
+}
+
 is_synthetic_empire = {
 	OR = {
 		has_country_flag = synthetic_empire
@@ -2094,6 +2098,7 @@ is_wet = {
 is_dry = {
 	has_climate = dry
 	NOT = { is_planet_class = pc_city }
+	NOT = { is_planet_class = pc_relic }
 }
 
 is_barren = {
@@ -2398,14 +2403,14 @@ holo_theatres_upkeep_affordable = {
 	}
 	OR = {
 		AND = {
-			has_valid_civic = civic_warrior_culture
+			is_warrior_culture = yes
 			has_monthly_income = {
 				resource = alloys
 				value > 2
 			}
 		}
 		AND = {
-			NOT = { has_valid_civic = civic_warrior_culture }
+			NOT = { is_warrior_culture = yes }
 			has_monthly_income = {
 				resource = consumer_goods
 				value > 2
@@ -3097,10 +3102,6 @@ species_can_be_necrophaged = {
 		is_archetype = ROBOT
 		is_archetype = PRESAPIENT
 		is_same_species = prev.owner_species
-		AND = {
-			has_slavery_type = { type = slavery_livestock country = prev.owner }
-			prev.owner = { is_hive_empire = no }
-		}
 		has_citizenship_type = { type = citizenship_purge country = prev.owner }
 	}
 	species_has_happiness_with_owner = prev.owner
@@ -3450,10 +3451,49 @@ is_eager_explorer_empire = {
 	}
 }
 
+has_male_species_trait = {
+	OR = {
+		has_trait = trait_xeno_compatibility_male_p
+		has_trait = trait_xeno_compatibility_male_i
+		has_trait = trait_xeno_compatibility_male_r
+		has_trait = trait_xeno_compatibility_male_g
+		has_trait = trait_omni_compatibility
+	}
+}
+
+has_female_species_trait = {
+	OR = {
+		has_trait = trait_xeno_compatibility_female_a
+		has_trait = trait_xeno_compatibility_female_q
+		has_trait = trait_omni_compatibility
+	}
+}
+
 is_pleasure_seeker = {
 	OR = {
 		has_valid_civic = civic_pleasure_seekers
 		has_valid_civic = civic_corporate_hedonism
+	}
+}
+
+is_fertility_rituals = {
+	OR = {
+		has_valid_civic = civic_fertility_rituals
+		has_valid_civic = civic_fertility_rituals_corporate
+	}
+}
+
+is_warrior_culture = {
+	OR = {
+		has_valid_civic = civic_warrior_culture
+		#has_valid_civic = civic_private_military_companies
+	}
+}
+
+has_slaver_civic = {
+	OR = {
+		has_valid_civic = civic_slaver_guilds
+		has_valid_civic = civic_indentured_assets
 	}
 }
 
@@ -3479,6 +3519,8 @@ is_catalytic_empire = {
 		has_valid_civic = civic_corporate_catalytic_processing
 		has_valid_civic = civic_hive_catalytic_processing
 		has_valid_civic = civic_machine_catalytic_processing
+		has_valid_civic = civic_anglers
+		has_valid_civic = civic_corporate_anglers
 	}
 }
 
@@ -4134,6 +4176,13 @@ is_non_hostile_to_wraith = {
 	}
 }
 
+can_add_tradeoff_traits = {
+	hidden_trigger = { exists = from }
+	from = {
+		is_ai = no
+	}
+}
+
 is_preftl_but_not_special = {
 	is_primitive = yes
 	OR = {
@@ -4150,6 +4199,21 @@ is_preftl_but_not_special = {
 				has_planet_flag = prescripted_ideal
 			}
 		}
+	}
+}
+
+can_add_psionic_traits = {
+	hidden_trigger = { exists = from }
+	from = {
+		has_tradition = tr_psionics_finish
+	}
+	has_trait = trait_psionic
+}
+
+can_remove_psionic_traits = {
+	hidden_trigger = { exists = from }
+	from = {
+		has_tradition = tr_psionics_finish
 	}
 }
 

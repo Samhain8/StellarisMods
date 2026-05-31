@@ -166,7 +166,8 @@ ship_section_template = {
 		locatorname = "strike_craft_locator_01"
 	}
 
-	large_utility_slots = 3
+	large_utility_slots = 2
+	aux_utility_slots = 1
 
 	resources = {
 		category = ship_sections
@@ -393,7 +394,7 @@ ship_section_template = {
 		locatorname = "medium_gun_02"
 	}
 
-	large_utility_slots = 3
+	large_utility_slots = 4
 
 	resources = {
 		category = ship_sections
@@ -431,6 +432,7 @@ ship_section_template = {
 	}
 
 	large_utility_slots = 3
+	aux_utility_slots = 1
 
 	resources = {
 		category = ship_sections
@@ -492,6 +494,7 @@ ship_section_template = {
 	}
 
 	large_utility_slots = 3
+	aux_utility_slots = 1
 
 	resources = {
 		category = ship_sections
@@ -547,6 +550,7 @@ ship_section_template = {
 	}
 
 	large_utility_slots = 3
+	aux_utility_slots = 1
 
 	resources = {
 		category = ship_sections
@@ -606,6 +610,7 @@ ship_section_template = {
 		locatorname = "large_gun_01"
 	}
 
+	large_utility_slots = 1
 	aux_utility_slots = 2
 
 	resources = {
@@ -637,7 +642,64 @@ ship_section_template = {
 		locatorname = "medium_gun_02"
 	}
 
-	aux_utility_slots = 3
+	large_utility_slots = 1
+	aux_utility_slots = 2
+
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = @section_cost
+		}
+	}
+}
+
+ship_section_template = {
+	key = "BATTLESHIP_STERN_L1_A0"
+	ship_size = battleship
+	fits_on_slot = stern
+	should_draw_components = yes
+	entity = "battleship_stern_L1_entity"
+	icon = "GFX_ship_part_core_stern"
+	ai_tags = { artillery }
+
+	component_slot = {
+		name = "LARGE_GUN_01"
+		template = "large_turret"
+		locatorname = "large_gun_01"
+	}
+
+	large_utility_slots = 2
+
+	resources = {
+		category = ship_sections
+		cost = {
+			alloys = @section_cost
+		}
+	}
+}
+
+ship_section_template = {
+	key = "BATTLESHIP_STERN_M2_A0"
+	ship_size = battleship
+	fits_on_slot = stern
+	should_draw_components = yes
+	entity = "battleship_stern_M2_entity"
+	icon = "GFX_ship_part_core_stern"
+	ai_tags = { gunship carrier }
+
+	component_slot = {
+		name = "MEDIUM_GUN_01"
+		template = "medium_turret"
+		locatorname = "medium_gun_01"
+
+	}
+	component_slot = {
+		name = "MEDIUM_GUN_02"
+		template = "medium_turret"
+		locatorname = "medium_gun_02"
+	}
+
+	large_utility_slots = 2
 
 	resources = {
 		category = ship_sections

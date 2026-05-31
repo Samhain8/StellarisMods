@@ -1,0 +1,14 @@
+﻿l_english:
+
+####################################
+# 	Tooltip
+####################################
+
+requires_neutral_or_worse_opinion:0 "$TRIGGER_FAIL$§RRequires $OPINION_NEUTRAL$ an Envoy sent to §YHarm Relations§!.§!"
+has_antagonistic_ethics:0 "Has Opposite Ethics"
+has_similar_ethics:0 "Has Ethics in Common"
+
+RELATIVE_ENCRYPTION_DECRYPTION_-6:1 "§MUncrackable§!"
+RELATIVE_ENCRYPTION_DECRYPTION_-5:1 "§MHerculean§!"
+RELATIVE_ENCRYPTION_DECRYPTION_5:1 "§LLaughable§!"
+RELATIVE_ENCRYPTION_DECRYPTION_6:1 "§LNon-Existent§!"

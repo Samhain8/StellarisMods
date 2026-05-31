@@ -84,7 +84,7 @@ grand_archive_size_effect_pop_factor = {
 }
 
 grand_archive_size_effect = {
-	base = 0.005
+	base = 0.0025
 	multiply = value:grand_archive_size_effect_pop_factor
 	add = 1
 }

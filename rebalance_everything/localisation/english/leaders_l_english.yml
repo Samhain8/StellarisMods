@@ -151,8 +151,8 @@
  leader_trait_selfcare_expert_effect: "Upon death: generate a copy of the leader with the same skills, level, and half the current age."
 
  leader_trait_midas_touch:0 "Vibrant Storyteller"
- leader_trait_midas_touch_desc:1 "Often off-world, this leader has borne witness to truly amazing, far-flung places. [Root.GetHisHer] exploits inspire the populace, providing valuable insights into rare resources and anomalous occurrences."
- leader_trait_midas_touch_effect:4 "$t$On Researching any Anomaly:\n$tt$All $scientist_plural_with_icon$ gain §G+300§! experience"
+ leader_trait_midas_touch_desc:1 "Often off-world, this leader has borne witness to truly amazing, far-flung places. [Root.GetHisHer] exploits inspire the populace, providing valuable insights into anomalous occurrences."
+ leader_trait_midas_touch_effect:4 "$t$On Researching an Anomaly, advancing Archeology Site stage or Astral Rift event:\n$tt$All leaders gain §G+300§! experience"
 
  leader_trait_speed_chaser: "Speed Chaser"
  leader_trait_speed_chaser_desc: "Burn bright, die young, and leave a blazing trail for others to follow."

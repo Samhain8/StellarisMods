@@ -10,7 +10,10 @@ can_do_advanced_gene_modding = {
 can_remove_beneficial_genetic_traits = {
 	hidden_trigger = { exists = from }
 	from = {
-		has_tradition = tr_genetics_resequencing
+		OR = {
+			has_tradition = tr_genetics_resequencing
+			has_tradition = tr_cybernetics_integrated_anatomy
+		}
 	}
 }
 
@@ -34,12 +37,13 @@ can_add_overtuned_traits = {
 #this = species, from = country
 can_remove_overtuned_traits = {
 	hidden_trigger = { exists = from }
-	from = {
-		OR = {
-			has_tradition = tr_genetics_resequencing
-			has_origin = origin_overtuned
-		}
-	}
+	#from = {
+	#	OR = {
+	#		has_tradition = tr_genetics_resequencing
+	#		has_origin = origin_overtuned
+	#	}
+	#}
+	always = yes
 }
 
 #this = species, from = country
@@ -289,6 +293,24 @@ can_assemble_tiyanki_pop = {
 	}
 }
 
+can_assemble_biomimetic_pop = {
+	has_trait = trait_robot_biomimetic_assembly
+	planet = {
+		OR = {
+			NOT = { exists = assembling_species }
+			AND = {
+				exists = assembling_species
+				assembling_species = {
+					OR = {
+						has_trait = trait_robot_biomimetic_assembly
+						is_robotic = yes
+					}
+				}
+			}
+		}
+	}
+}
+
 can_assemble_bio_pop = {
 	planet = {
 		OR = {
@@ -408,5 +430,10 @@ has_cyborg_trait = {
 		has_trait = trait_cyborg_creed_of_research
 		has_trait = trait_cyborg_creed_of_labor
 		has_trait = trait_cyborg_ritualistic_implants
+		has_trait = trait_cyborg_neon_allure
+		has_trait = trait_cyborg_armored
+		has_trait = trait_cyborg_willing_tool
+		has_trait = trait_cyborg_organic_recyclers
+		has_trait = trait_cyborg_mechanical_interface
 	}
 }

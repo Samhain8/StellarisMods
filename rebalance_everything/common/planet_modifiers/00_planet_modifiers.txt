@@ -1584,6 +1584,10 @@ pm_atmospheric_aphrodisiac = {
 			is_planet_class = "pc_gaia"
 		}
 		modifier = {
+			add = 10
+			is_planet_class = "pc_relic"
+		}
+		modifier = {
 			factor = 0
 			has_planet_modifier = "pm_atmospheric_aphrodisiac"
 		}
@@ -1638,6 +1642,10 @@ pm_atmospheric_hallucinogen = {
 		modifier = {
 			add = 10
 			is_planet_class = "pc_gaia"
+		}
+		modifier = {
+			add = 10
+			is_planet_class = "pc_relic"
 		}
 		modifier = {
 			factor = 0

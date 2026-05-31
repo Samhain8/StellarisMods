@@ -891,24 +891,13 @@ gas_plant_engineer = {
 
 	possible_precalc = can_fill_specialist_job
 
-	triggered_planet_modifier = {
-		potential = {
-			planet = {
-				has_deposit = d_spore_vents
-			}
-		}
-		modifier = {
-			planet_jobs_exotic_gases_produces_mult = 0.05
-		}
-	}
-
 	resources = {
 		category = planet_refiners
 		produces = {
-			exotic_gases = 3
+			exotic_gases = 2
 		}
 		upkeep = {
-			minerals = 10
+			energy = 5
 		}
 	}
 
@@ -938,24 +927,13 @@ gas_plant_engineer_gestalt = {
 
 	possible = { can_think = yes }
 
-	triggered_planet_modifier = {
-		potential = {
-			planet = {
-				has_deposit = d_spore_vents
-			}
-		}
-		modifier = {
-			planet_jobs_exotic_gases_produces_mult = 0.05
-		}
-	}
-
 	resources = {
 		category = planet_refiners
 		produces = {
-			exotic_gases = 3
+			exotic_gases = 2
 		}
 		upkeep = {
-			minerals = 10
+			energy = 5
 		}
 	}
 
@@ -1419,15 +1397,16 @@ manufactorium_specialist = {
 	possible_precalc = can_fill_specialist_job
 	possible = {
 		complex_specialist_job_check_trigger = yes
+		nondomestic_specialist_job_check_trigger = yes
 	}
 
 	resources = {
 		category = planet_metallurgists
 		produces = { #no modifiers min: 2 max: 7
-			alloys = 5
+			alloys = 6
 		}
 		upkeep = { #no modifiers min: 2 food/3 minerals max: 9
-			minerals = 5
+			minerals = 6
 		}
 		produces = {
 			trigger = {
@@ -1592,7 +1571,7 @@ manufactorium_specialist = {
 	}
 
 	weight = {
-		weight = @special_job_weight
+		weight = @high_prio_specialist_job_weight
 		mult = value:job_weights_modifier|JOB|manufactorium_specialist|RESOURCE|alloys|
 	}
 }
@@ -2213,13 +2192,13 @@ stasis_warden = {
 		produces = {
 			physics_research = 4
 		}
-		produces = {
-			trigger = {
-				exists = owner
-				owner = { has_active_tradition = tr_domination_judgment_corps }
-			}
-			unity = 1
-		}
+		#produces = {
+		#	trigger = {
+		#		exists = owner
+		#		owner = { has_active_tradition = tr_domination_judgment_corps }
+		#	}
+		#	unity = 1
+		#}
 		upkeep = {
 			trigger = {
 				exists = planet
@@ -2247,10 +2226,10 @@ stasis_warden = {
 	weight = {
 		weight = @specialist_job_weight
 
-		modifier = {
-			mult = value:job_weights_modifier|JOB|enforcer|RESOURCE|unity|FACTOR|0.25|
-			owner = { has_active_tradition = tr_domination_judgment_corps }
-		}
+		#modifier = {
+		#	mult = value:job_weights_modifier|JOB|enforcer|RESOURCE|unity|FACTOR|0.25|
+		#	owner = { has_active_tradition = tr_domination_judgment_corps }
+		#}
 
 		modifier = {
 			factor = 10

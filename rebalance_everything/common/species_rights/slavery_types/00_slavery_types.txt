@@ -24,7 +24,7 @@ slavery_normal = {
 	ai_will_do = {
 		factor = 1
 		modifier = {
-			factor = 0.5
+			factor = 0.3
 			from = {
 				is_galactic_community_member = yes
 			}
@@ -35,16 +35,8 @@ slavery_normal = {
 			}
 		}
 		modifier = {
-			factor = 5
+			factor = 10
 			has_trait = trait_syncretic_proles
-		}
-		modifier = {
-			factor = 1.2
-			has_trait = trait_strong
-		}
-		modifier = {
-			factor = 1.5
-			has_trait = trait_very_strong
 		}
 	}
 }
@@ -52,6 +44,7 @@ slavery_normal = {
 slavery_domestic = {
 	pop_modifier = {
 		pop_happiness = -0.20
+		pop_political_power = 0.25
 	}
 
 	potential = {
@@ -64,22 +57,26 @@ slavery_domestic = {
 		is_sapient = yes
 	}
 	ai_will_do = {
-		factor = 3
+		factor = 1
 		modifier = {
-			factor = 0
-			NOR = {
+			factor = 5
+			OR = {
 				has_trait = trait_charismatic
-
-				AND = {
-					from = {
-						is_galactic_community_member = yes
-					}
-					OR = {
-						is_active_resolution = "resolution_greatergood_greater_than_ourselves"
-						is_active_resolution = "resolution_greatergood_balance_in_the_middle"
-						is_active_resolution = "resolution_greatergood_universal_prosperity_mandate"
-					}
-				}
+				has_trait = trait_charming
+				has_trait = trait_crafted_smiles
+			}
+		}
+		modifier = {
+			factor = 10
+			OR = {
+				has_trait = trait_crafted_charm
+				has_trait = trait_perfected_charm
+			}
+		}
+		modifier = {
+			factor = 3
+			from = {
+				is_pleasure_seeker = yes
 			}
 		}
 	}
@@ -108,6 +105,7 @@ slavery_military = {
 		modifier = {
 			factor = 0
 			NOT = { has_trait = trait_very_strong }
+			NOT = { has_trait = trait_juiced_power }
 		}
 	}
 }
@@ -130,7 +128,7 @@ slavery_indentured = {
 	ai_can_colonize = yes #otherwise, AI will not colonise with enslaved species
 
 	ai_will_do = {
-		factor = 30
+		factor = 2
 		modifier = {
 			factor = 10
 			from = { has_valid_civic = civic_indentured_assets }
@@ -144,22 +142,33 @@ slavery_indentured = {
 			is_same_species = owner_main_species
 		}
 		modifier = {
-			factor = 0
-			has_trait = trait_syncretic_proles
+			factor = 5
+			OR = {
+				has_trait = trait_erudite
+				has_trait = trait_natural_machinist
+				has_trait = trait_intelligent
+				has_trait = trait_artificial_intelligence
+				has_trait = trait_elevated_synapses
+			}
 		}
 	}
 }
 
 slavery_matrix = {
 	pop_modifier = {
-		pop_happiness = -0.40
+		pop_happiness = -0.30
 	}
 
 	pop_tooltip = MATRIX_LIVESTOCK
 	pop_status_frame = 6
 
 	potential = {
-		from = { is_machine_empire = yes }
+		from = { 
+			OR = {
+				is_machine_empire = yes
+				has_valid_civic = civic_hive_natural_neural_network
+			}
+		}
 		NOT = { from = { has_valid_civic = civic_machine_guided_sapience } }
 	}
 
@@ -214,11 +223,30 @@ slavery_livestock = {
 		}
 		custom_tooltip = {
 			fail_text = empire_not_xenophobe
-			from = {
-				OR = {
-					has_ethic = ethic_xenophobe
-					has_ethic = ethic_fanatic_xenophobe
-					has_ethic = ethic_gestalt_consciousness
+			OR = {
+				has_trait = trait_nerve_stapled
+				has_trait = trait_syncretic_proles
+				from = {
+					OR = {
+						has_ethic = ethic_xenophobe
+						has_ethic = ethic_fanatic_xenophobe
+						has_ethic = ethic_gestalt_consciousness
+						has_slaver_civic = yes
+					}
+				}
+				AND = {
+					OR = {
+						has_trait = trait_delicious
+						has_trait = trait_kindling
+						has_trait = trait_felsic
+						from = { has_valid_civic = civic_natural_design }
+					}
+					from = {
+						NOR = {
+							has_ethic = ethic_egalitarian
+							has_ethic = ethic_fanatic_egalitarian
+						}
+					}
 				}
 			}
 		}
@@ -228,11 +256,12 @@ slavery_livestock = {
 		}
 	}
 	ai_will_do = {
-		factor = 3
+		factor = 100
 		modifier = {
 			factor = 0
 			NOR = {
 				has_trait = trait_delicious
+				has_trait = trait_felsic
 				from = { is_hive_empire = yes }
 			}
 		}
@@ -249,6 +278,29 @@ slavery_livestock = {
 		}
 	}
 }
+
+slavery_pets = {
+	pop_modifier = {
+		pop_happiness = -0.30
+	}
+
+	in_breach_of = {
+		{
+			key = resolution_greatergood_greater_than_ourselves
+		}
+	}
+	potential = {
+		from = { NOT = { has_ethic = ethic_gestalt_consciousness } }
+	}
+
+	allow = {
+		hidden_trigger = { always = yes }
+	}
+	ai_will_do = {
+		factor = 0.1
+	}
+}
+
 slavery_matrix_guided_sapience = {
 	pop_modifier = {
 		pop_happiness = 0.10

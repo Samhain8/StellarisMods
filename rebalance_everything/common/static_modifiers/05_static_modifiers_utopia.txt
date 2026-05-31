@@ -225,13 +225,11 @@ covenant_detection_first_contact = {
 covenant_composer_of_strands_0 = {
 	pop_growth_speed = 0.10
 	leader_lifespan_add = 10
-	BIOLOGICAL_species_trait_picks_add = -1
 }
 
 covenant_composer_of_strands = {
 	pop_growth_speed = 0.20
 	leader_lifespan_add = 20
-	BIOLOGICAL_species_trait_picks_add = -2
 }
 
 covenant_instrument_of_desire_0 = {

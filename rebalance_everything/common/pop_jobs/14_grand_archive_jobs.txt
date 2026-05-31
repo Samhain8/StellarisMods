@@ -13,6 +13,7 @@ geologist = {
 	possible_precalc = can_fill_specialist_job
 	possible = {
 		complex_specialist_job_check_trigger = yes
+		nondomestic_specialist_job_check_trigger = yes
 	}
 
 	resources = {
@@ -76,6 +77,7 @@ treasure_gatherer = {
 	possible_precalc = can_fill_specialist_job
 	possible = {
 		complex_specialist_job_check_trigger = yes
+		nondomestic_specialist_job_check_trigger = yes
 	}
 
 	resources = {
@@ -127,6 +129,7 @@ wonder_curator = {
 	possible_precalc = can_fill_specialist_job
 	possible = {
 		complex_specialist_job_check_trigger = yes
+		nondomestic_specialist_job_check_trigger = yes
 	}
 
 	resources = {
@@ -195,6 +198,7 @@ historical_curator = {
 	possible_precalc = can_fill_specialist_job
 	possible = {
 		complex_specialist_job_check_trigger = yes
+		nondomestic_specialist_job_check_trigger = yes
 	}
 
 	resources = {
@@ -378,14 +382,98 @@ drone_historical_curator = {
 # Wrangler Jobs #
 #################
 
-inline_script = {
-	script = "jobs/wrangler_job"
-	JOB_KEY = wrangler
+wrangler = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = wildlife_ranch
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		owner = {
+			has_wrangler_job = yes
+		}
+	}
+
+	inline_script = "grand_archive/wrangler_jobs_produces"
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = planet.owner
+		}
+		planet_amenities_add = 4
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	weight = {
+		weight = @high_prio_specialist_job_weight
+		mult = value:job_weights_modifier|JOB|wrangler|RESOURCE|unity|FACTOR|0.25|
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 1.5
+			has_job = wrangler
+		}
+	}
+
+	inline_script = "jobs/automodding_priority_research"
 }
 
-inline_script = {
-	script = "jobs/wrangler_job"
-	JOB_KEY = rancher
+rancher = {
+	category = specialist
+	condition_string = SPECIALIST_JOB_TRIGGER
+	building_icon = wildlife_ranch
+
+	possible_pre_triggers = {
+		has_owner = yes
+		is_being_purged = no
+		is_being_assimilated = no
+		is_sapient = yes
+	}
+
+	possible_precalc = can_fill_specialist_job
+	possible = {
+		owner = {
+			has_rancher_job = yes
+		}
+	}
+
+	inline_script = "grand_archive/wrangler_jobs_produces"
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		trade_value_add = 2
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+	}
+
+	weight = {
+		weight = @high_prio_specialist_job_weight
+		mult = value:job_weights_modifier|JOB|rancher|RESOURCE|unity|FACTOR|0.25|
+		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
+		modifier = {
+			factor = 0.2
+			has_citizenship_rights = no
+			NOT = { has_trait = trait_mechanical }
+		}
+		modifier = {
+			factor = 1.5
+			has_job = rancher
+		}
+	}
+
+	inline_script = "jobs/automodding_priority_research"
 }
 
 trophy_hunter = {
@@ -400,27 +488,21 @@ trophy_hunter = {
 		is_sapient = yes
 	}
 
+	possible_precalc = can_fill_specialist_job
 	possible = {
 		owner = {
 			has_trophy_hunter_job = yes
 		}
+		nondomestic_specialist_job_check_trigger = yes
 	}
 
 	inline_script = "grand_archive/wrangler_jobs_produces"
 
-	# Trophy Hunter production modification
 	resources = {
 		category = planet_primal_jobs
 		produces = {
 			food = 3
-			society_research = -4
 		}
-	}
-
-	triggered_planet_modifier = {
-		potential = { always = yes }
-		planet_amenities_add = 2
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
 	weight = {
@@ -433,37 +515,8 @@ trophy_hunter = {
 			NOT = { has_trait = trait_mechanical }
 		}
 		modifier = {
-			factor = 3
-			has_trait = trait_robot_domestic_protocols
-			OR = {
-				is_non_sapient_robot = yes
-				is_shackled_robot = yes
-			}
-		}
-		modifier = {
 			factor = 1.5
 			has_job = trophy_hunter
-		}
-		modifier = {
-			factor = 0.1
-			is_domestic_servant = yes
-		}
-		modifier = {
-			factor = 0.1
-			NOT = { has_job = trophy_hunter }
-			exists = planet
-			planet = {
-				free_amenities > 5
-			}
-		}
-		modifier = {
-			factor = 2
-			NOT = { has_job = trophy_hunter }
-			exists = planet
-			planet = {
-				free_amenities < 2
-				has_available_jobs = trophy_hunter
-			}
 		}
 	}
 
@@ -482,6 +535,7 @@ animal_handler = {
 		is_sapient = yes
 	}
 
+	possible_precalc = can_fill_specialist_job
 	possible = {
 		owner = {
 			has_animal_handler_job = yes
@@ -494,15 +548,8 @@ animal_handler = {
 	resources = {
 		category = planet_primal_jobs
 		produces = {
-			society_research = 1
-			unity = 2
+			society_research = 2
 		}
-	}
-
-	triggered_planet_modifier = {
-		potential = { always = yes }
-		planet_amenities_add = -4
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
 	weight = {
@@ -515,37 +562,8 @@ animal_handler = {
 			NOT = { has_trait = trait_mechanical }
 		}
 		modifier = {
-			factor = 3
-			has_trait = trait_robot_domestic_protocols
-			OR = {
-				is_non_sapient_robot = yes
-				is_shackled_robot = yes
-			}
-		}
-		modifier = {
 			factor = 1.5
 			has_job = animal_handler
-		}
-		modifier = {
-			factor = 0.1
-			is_domestic_servant = yes
-		}
-		modifier = {
-			factor = 0.1
-			NOT = { has_job = animal_handler }
-			exists = planet
-			planet = {
-				free_amenities > 5
-			}
-		}
-		modifier = {
-			factor = 2
-			NOT = { has_job = animal_handler }
-			exists = planet
-			planet = {
-				free_amenities < 2
-				has_available_jobs = animal_handler
-			}
 		}
 	}
 
@@ -577,17 +595,31 @@ beastfighter = {
 	resources = {
 		category = planet_primal_jobs
 		produces = {
-			unity = 2
+			unity = 1
+			society_research = -2
 		}
 		upkeep = {
 			alloys = 1
-			consumer_goods = -1
+			consumer_goods = -2
 		}
+	}
+
+	country_modifier = {
+		country_naval_cap_add = 4
+	}
+
+	triggered_country_modifier = {
+		potential = {
+			has_councilor = { COUNCILOR = "councilor_warrior_culture" }
+		}
+
+		country_naval_cap_add = 0.2
+		mult = value:councilor_level|TYPE|councilor_warrior_culture|
 	}
 
 	triggered_planet_modifier = {
 		potential = { always = yes }
-		planet_amenities_add = 2
+		planet_amenities_add = 4
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
@@ -595,7 +627,7 @@ beastfighter = {
 		potential = {
 			has_councilor = { COUNCILOR = "councilor_warrior_culture" }
 		}
-		planet_amenities_add = 1
+		planet_amenities_add = 0.2
 		mult = value:scripted_modifier_councilor_level_mult|MODIFIER|pop_job_amenities_mult|TYPE|councilor_warrior_culture|
 	}
 
@@ -616,14 +648,6 @@ beastfighter = {
 		modifier = {
 			factor = 1.5
 			has_job = beastfighter
-		}
-		modifier = {
-			factor = 0.5
-			NOT = { has_job = beastfighter }
-			exists = planet
-			planet = {
-				free_amenities > 5
-			}
 		}
 	}
 

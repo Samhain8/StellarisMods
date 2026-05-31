@@ -13,13 +13,18 @@
 @med_rare = 1
 @low_rare = 0.5
 
+@ranger_small_production = 2
+@ranger_large_production = 4
+@ranger_small_research_production = 3
+@ranger_large_research_production = 6
+
 d_metal_boneyard = {
 	is_for_colonizable = yes
 	category = deposit_cat_rare
 
 	planet_modifier = {
 		district_mining_max = 4
-		planet_jobs_society_research_produces_mult = 0.10
+		planet_jobs_engineering_research_produces_mult = 0.10
 	}
 
 	triggered_planet_modifier = {
@@ -42,9 +47,18 @@ d_migrating_forests = {
 	icon = d_huge_tree
 
 	planet_modifier = {
-		district_mining_max = -1
-		district_farming_max = -1
-		district_generator_max = -1
+		district_mining_max = -2
+		district_farming_max = -2
+		district_generator_max = -2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_society_research_produces_add = @ranger_small_research_production
+		planet_rangers_food_produces_add = @ranger_small_production
 	}
 
 	drop_weight = {
@@ -60,6 +74,9 @@ d_migrating_forest_reserve = {
 
 	planet_modifier = {
 		planet_jobs_society_research_produces_mult = 0.2
+		district_mining_max = -1
+		district_farming_max = -1
+		district_generator_max = -1
 	}
 
 	triggered_planet_modifier = {
@@ -90,6 +107,15 @@ d_migrating_forest_reserve = {
 		modifier = {
 			job_calculator_add = 2
 		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_society_research_produces_add = @ranger_small_research_production
+		planet_rangers_food_produces_add = @ranger_small_production
 	}
 
 	drop_weight = {
@@ -1595,16 +1621,27 @@ d_house_turtle = {
 	is_for_colonizable = yes
 	category = deposit_cat_rare
 	icon = d_tropical_island
+
 	planet_modifier = {
 		planet_max_districts_add = 1
 		planet_jobs_society_research_produces_mult = 0.025
 	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_society_research_produces_add = @ranger_small_research_production
+	}
+
 	resources = {
 		category = planet_deposits
 		upkeep = {
 			food = 2
 		}
 	}
+
 	drop_weight = {
 		weight = 0
 	}
@@ -1725,6 +1762,14 @@ d_fungal_study_zone = {
 		planet_jobs_society_research_produces_mult = 0.15
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_society_research_produces_add = @ranger_small_research_production
+	}
+
 	drop_weight = {
 		weight = 0
 	}
@@ -1761,6 +1806,15 @@ d_living_snow_reserve = {
 		planet_jobs_physics_research_produces_mult = 0.2
 		planet_jobs_society_research_produces_mult = 0.2
 		planet_max_districts_add = -2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_physics_research_produces_add = @ranger_small_research_production
+		planet_rangers_society_research_produces_add = @ranger_small_research_production
 	}
 
 	drop_weight = {
@@ -1956,7 +2010,24 @@ d_big_nature_preserve_blocker = {
 	}
 
 	resources = {
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_valid_civic = civic_environmentalist }
+			}
+			unity = 5
+		}
 		category = deposit_blockers_natural
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_valid_civic = civic_environmentalist }
+		}
+		modifier = {
+			job_ranger_add = 1
+		}
 	}
 
 	inline_script = deposits/ai_weight_natural_blocker
@@ -2246,7 +2317,7 @@ d_ancient_manufactorium_working = {
 			owner = { is_gestalt = no }
 		}
 		modifier = {
-			job_manufactorium_specialist_add = 1
+			job_manufactorium_specialist_add = 2
 			job_manufactorium_specialist_per_pop = 0.04 #1 per 25
 		}
 	}
@@ -2373,18 +2444,6 @@ d_metallic_puddles = {
 
 	icon = d_fertile_lands
 
-	planet_modifier = {
-		district_farming_max = 3
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			always = yes
-		}
-		district_farming_max = 3
-		mult = value:natural_desposit_district_amount_multiplier
-	}
-
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -2392,7 +2451,7 @@ d_metallic_puddles = {
 				is_gestalt = no
 			}
 		}
-		job_puddle_technician_add = 1
+		job_puddle_technician_add = 3
 	}
 
 	triggered_planet_modifier = {
@@ -2402,7 +2461,7 @@ d_metallic_puddles = {
 				is_gestalt = yes
 			}
 		}
-		job_puddle_technician_drone_add = 1
+		job_puddle_technician_drone_add = 3
 	}
 
 	drop_weight = {

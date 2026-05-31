@@ -9,9 +9,9 @@ electric_storm = {
 		MAX_RADIUS = 50
 		MIN_RANGE = value:storm_range_min
 		MAX_RANGE = value:storm_range_max
-		STORM_SPEED = 0.02
+		STORM_SPEED = 0.04
 		ACTIVATION_PERIOD_IN_MONTHS = 12
-		MONTHLY_ADDED_DEVASTATION = @cosmic_storm_base_monthly_devastation
+		MONTHLY_ADDED_DEVASTATION = 0.3
 	}
 	affect_shield_regen = yes
 
@@ -24,7 +24,8 @@ electric_storm = {
 		potential = {
 			is_colony = yes
 		}
-		planet_jobs_produces_mult = 0.25
+		#planet_jobs_produces_mult = 0.25
+		planet_jobs_energy_produces_mult = 1
 	}
 
 	triggered_fleet_modifier = {
@@ -32,7 +33,7 @@ electric_storm = {
 			always = yes
 		}
 		modifier = {
-			ship_speed_mult = 1
+			ship_speed_mult = 0.5
 		}
 	}
 
@@ -102,9 +103,9 @@ particle_storm = {
 		MAX_RADIUS = 50
 		MIN_RANGE = value:storm_range_min
 		MAX_RANGE = value:storm_range_max
-		STORM_SPEED = 0.02
+		STORM_SPEED = 0.03
 		ACTIVATION_PERIOD_IN_MONTHS = 12
-		MONTHLY_ADDED_DEVASTATION = @cosmic_storm_base_monthly_devastation
+		MONTHLY_ADDED_DEVASTATION = 0.2
 	}
 	affect_hp_regen = yes
 	affect_armor_regen = yes
@@ -181,26 +182,15 @@ gravity_storm = {
 		MAX_RADIUS = 50
 		MIN_RANGE = value:storm_range_min
 		MAX_RANGE = value:storm_range_max
-		STORM_SPEED = 0.02
+		STORM_SPEED = 0.04
 		ACTIVATION_PERIOD_IN_MONTHS = 12
-		MONTHLY_ADDED_DEVASTATION = @cosmic_storm_base_monthly_devastation
+		MONTHLY_ADDED_DEVASTATION = 0.3
 	}
 
 	spawn_weight = 1
 	description = gravity_storm_lore_description
 
 	### positive effects ###
-
-	triggered_planet_modifier = {
-		potential = {
-			is_colony = yes
-		}
-		modifier = {
-			planet_enforcers_produces_mult = 0.5
-			planet_administrators_produces_mult = 0.5
-			planet_entertainers_produces_mult = 0.5
-		}
-	}
 
 	### negative effects ###
 
@@ -209,35 +199,9 @@ gravity_storm = {
 			is_colony = yes
 			exists = owner
 			owner = { country_uses_consumer_goods = yes }
-			NOR = {
-				owner = { has_valid_civic = civic_machine_obsessional_directive }
-				owner = { has_valid_civic = civic_machine_servitor }
-			}
-			system_has_negating_storm_building = no
+			#system_has_negating_storm_building = no
 		}
-		custom_tooltip = gravity_storm_consumer_goods_upkeep_tt
-		planet_farmers_consumer_goods_upkeep_add = 1
-		planet_miners_consumer_goods_upkeep_add = 1
-		planet_technician_consumer_goods_upkeep_add = 1
-		mult = value:storm_resistant_production_multiplier
-	}
-	triggered_planet_modifier = {
-		potential = {
-			is_colony = yes
-			exists = owner
-			OR = {
-				owner = { country_uses_consumer_goods = no }
-				OR = {
-					owner = { has_valid_civic = civic_machine_obsessional_directive }
-					owner = { has_valid_civic = civic_machine_servitor }
-				}
-			}
-			system_has_negating_storm_building = no
-		}
-		custom_tooltip = gravity_storm_energy_upkeep_tt
-		planet_farmers_energy_upkeep_add = 1
-		planet_miners_energy_upkeep_add = 1
-		planet_technician_energy_upkeep_add = 1
+		planet_building_build_speed_mult = -0.5
 		mult = value:storm_resistant_production_multiplier
 	}
 
@@ -306,9 +270,9 @@ magnetic_storm = {
 		MAX_RADIUS = 50
 		MIN_RANGE = value:storm_range_min
 		MAX_RANGE = value:storm_range_max
-		STORM_SPEED = 0.02
+		STORM_SPEED = 0.04
 		ACTIVATION_PERIOD_IN_MONTHS = 12
-		MONTHLY_ADDED_DEVASTATION = @cosmic_storm_base_monthly_devastation
+		MONTHLY_ADDED_DEVASTATION = 0.1
 	}
 
 	spawn_weight = 1
@@ -329,19 +293,17 @@ magnetic_storm = {
 
 	triggered_planet_modifier = {
 		potential = {
-			OR = {
-				is_colony = yes
-				is_colonizable = yes
-			}
-			system_has_negating_storm_building = no
+			is_colony = yes
+			#system_has_negating_storm_building = no
 		}
-		planet_building_build_speed_mult = -0.5
+		planet_researchers_produces_mult = -0.5
 		mult = value:storm_resistant_production_multiplier
 	}
 
 	triggered_system_modifier = {
 		potential = {
-			system_has_negating_storm_building = no
+			#system_has_negating_storm_building = no
+			always = yes
 		}
 		modifier = {
 			starbase_shipyard_build_speed_mult = -0.5
@@ -351,21 +313,21 @@ magnetic_storm = {
 	triggered_planet_modifier = {
 		potential = {
 			is_colony = no
-			system_has_negating_storm_building = no
+			#system_has_negating_storm_building = no
 		}
 		modifier = {
 			stations_upkeep_mult = 1
 		}
 	}
 
-	triggered_fleet_modifier = {
-		potential = {
-			always = yes
-		}
-		modifier = {
-			ships_upkeep_mult = 1
-		}
-	}
+	#triggered_fleet_modifier = {
+	#	potential = {
+	#		always = yes
+	#	}
+	#	modifier = {
+	#		ships_upkeep_mult = 1
+	#	}
+	#}
 
 	on_start = {
 		every_system_within_storm = {
@@ -420,9 +382,9 @@ solar_storm = {
 		MAX_RADIUS = 50
 		MIN_RANGE = value:storm_range_min
 		MAX_RANGE = value:storm_range_max
-		STORM_SPEED = 0.02
+		STORM_SPEED = 0.03
 		ACTIVATION_PERIOD_IN_MONTHS = 12
-		MONTHLY_ADDED_DEVASTATION = @cosmic_storm_base_monthly_devastation
+		MONTHLY_ADDED_DEVASTATION = 0.2
 	}
 
 	spawn_weight = 1
@@ -436,10 +398,25 @@ solar_storm = {
 			always = yes
 		}
 		station_gatherers_produces_mult = 2
-		station_researchers_produces_mult = 2
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			is_colony = yes
+		}
+		planet_jobs_unity_produces_mult = 0.25
 	}
 
 	### negative effects ###
+
+	triggered_planet_modifier = {
+		potential = {
+			is_colony = yes
+			#system_has_negating_storm_building = no
+		}
+		pop_environment_tolerance = -0.20
+		mult = value:storm_resistant_production_multiplier
+	}
 
 	###
 
@@ -496,9 +473,9 @@ celestial_storm = {
 		MAX_RADIUS = 50
 		MIN_RANGE = value:storm_range_min
 		MAX_RANGE = value:storm_range_max
-		STORM_SPEED = 0.02
+		STORM_SPEED = 0.03
 		ACTIVATION_PERIOD_IN_MONTHS = 12
-		MONTHLY_ADDED_DEVASTATION = @cosmic_storm_base_monthly_devastation
+		MONTHLY_ADDED_DEVASTATION = 0.1
 	}
 	occlude_system = yes
 
@@ -513,9 +490,9 @@ celestial_storm = {
 			is_colony = yes
 		}
 		modifier = {
-			planet_farmers_produces_mult = 1
 			planet_miners_produces_mult = 1
-			planet_technician_produces_mult = 1
+			planet_miners_rare_crystals_produces_add = 0.1
+			planet_farmers_rare_crystals_produces_add = 0.1
 		}
 	}
 
@@ -524,12 +501,17 @@ celestial_storm = {
 	triggered_planet_modifier = {
 		potential = {
 			is_colony = yes
-			system_has_negating_storm_building = no
+			#system_has_negating_storm_building = no
 		}
-		planet_enforcers_upkeep_mult = 0.5
-		planet_administrators_upkeep_mult = 0.5
-		planet_entertainers_upkeep_mult = 0.5
+		planet_jobs_energy_produces_mult = -0.40
 		mult = value:storm_resistant_production_multiplier
+	}
+
+	triggered_system_modifier = {
+		potential = {
+			always = yes
+		}
+		station_researchers_produces_mult = -0.75
 	}
 
 	triggered_fleet_modifier = {
@@ -596,9 +578,9 @@ shroud_storm = {
 		MAX_RADIUS = 50
 		MIN_RANGE = value:storm_range_min
 		MAX_RANGE = value:storm_range_max
-		STORM_SPEED = 0.02
+		STORM_SPEED = 0.03
 		ACTIVATION_PERIOD_IN_MONTHS = 12
-		MONTHLY_ADDED_DEVASTATION = @cosmic_storm_base_monthly_devastation
+		MONTHLY_ADDED_DEVASTATION = 0.2
 	}
 
 	spawn_weight = {
@@ -665,7 +647,7 @@ shroud_storm = {
 				is_colony = yes
 				is_colonizable = yes
 			}
-			system_has_negating_storm_building = no
+			#system_has_negating_storm_building = no
 		}
 		planet_stability_mult = -0.2
 		mult = value:storm_resistant_production_multiplier

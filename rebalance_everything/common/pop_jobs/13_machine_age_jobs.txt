@@ -303,7 +303,7 @@ augmentor = { # Normal empire
 
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			is_cyborg_empire = yes
 		}
 		planet_amenities_add = 5
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
@@ -399,7 +399,7 @@ augmentor_drone = { # Hive empire
 
 	triggered_planet_modifier = {
 		potential = {
-			always = yes
+			is_cyborg_empire = yes
 		}
 		planet_amenities_no_happiness_add = 5
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|

@@ -9,6 +9,8 @@
 @rw_maintenance = 5
 @rw_maintenance_sr = 2
 
+@ranger_small_research_production = 3
+
 ############################
 #	Federations Deposits	#
 ############################
@@ -47,6 +49,26 @@ d_arcane_replicator = {
 			}
 			exotic_gases = 4
 		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					any_owned_pop = {
+						has_trait = trait_mote_eater
+					}
+				}
+			}
+			volatile_motes = 4
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = {
+					has_civic = civic_crystal_artists
+				}
+			}
+			rare_crystals = 4
+		}
 	}
 }
 
@@ -63,8 +85,16 @@ d_system_resources = {
 		potential = {
 			always = yes
 		}
-		planet_max_districts_add = 0.5
+		planet_max_districts_add = 1
 		mult = solar_system.value:num_major_orbitals
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_housing_add = 2
+		mult = solar_system.value:num_minor_orbitals
 	}
 
 	# Non-Resource Orbitals give additional Building Slots
@@ -73,8 +103,16 @@ d_system_resources = {
 		potential = {
 			always = yes
 		}
-		planet_max_buildings_add = 0.50
-		mult = solar_system.value:num_major_and_minor_orbitals_class|CLASS|generic|
+		planet_max_districts_add = 0.5
+		mult = solar_system.value:num_major_orbitals_class|CLASS|generic|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			always = yes
+		}
+		planet_max_buildings_add = 0.25
+		mult = solar_system.value:num_minor_orbitals_class|CLASS|generic|
 	}
 
 	# Advanced Habitat Capitals get additional District Slots and Building Slots
@@ -83,7 +121,7 @@ d_system_resources = {
 		potential = {
 			has_building = building_hab_major_capital
 		}
-		planet_max_districts_add = 0.25
+		planet_max_districts_add = 0.5
 		mult = solar_system.value:num_major_orbitals
 	}
 
@@ -96,7 +134,7 @@ d_system_resources = {
 				has_building = building_imperial_hive_capital
 			}
 		}
-		planet_max_districts_add = 0.50
+		planet_max_districts_add = 0.5
 		mult = solar_system.value:num_major_orbitals
 	}
 
@@ -104,8 +142,8 @@ d_system_resources = {
 		potential = {
 			has_building = building_hab_major_capital
 		}
-		planet_max_buildings_add = 0.25
-		mult = solar_system.value:num_major_and_minor_orbitals_class|CLASS|generic|
+		planet_housing_add = 1
+		mult = solar_system.value:num_minor_orbitals
 	}
 
 	triggered_planet_modifier = {
@@ -117,8 +155,50 @@ d_system_resources = {
 				has_building = building_imperial_hive_capital
 			}
 		}
-		planet_max_buildings_add = 0.50
-		mult = solar_system.value:num_major_and_minor_orbitals_class|CLASS|generic|
+		planet_housing_add = 1
+		mult = solar_system.value:num_minor_orbitals
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_building = building_hab_major_capital
+		}
+		planet_max_districts_add = 0.25
+		mult = solar_system.value:num_major_orbitals_class|CLASS|generic|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_building = building_hab_system_capital
+				has_building = building_imperial_capital
+				has_building = building_imperial_machine_capital
+				has_building = building_imperial_hive_capital
+			}
+		}
+		planet_max_districts_add = 0.25
+		mult = solar_system.value:num_major_orbitals_class|CLASS|generic|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_building = building_hab_major_capital
+		}
+		planet_max_buildings_add = 0.125
+		mult = solar_system.value:num_minor_orbitals_class|CLASS|generic|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			OR = {
+				has_building = building_hab_system_capital
+				has_building = building_imperial_capital
+				has_building = building_imperial_machine_capital
+				has_building = building_imperial_hive_capital
+			}
+		}
+		planet_max_buildings_add = 0.125
+		mult = solar_system.value:num_minor_orbitals_class|CLASS|generic|
 	}
 
 	# Extra Jobs from Order's Outposts
@@ -138,26 +218,54 @@ d_system_resources = {
 		job_knight_add = 1
 		mult = solar_system.value:num_major_orbitals_class|CLASS|knights|
 	}
-
+	
 	custom_tooltip = system_resources_tooltip
 }
 
 # The district cap for provided by support habitats is
-# 3 × NUM_ORBITALS_TYPE
+# 2 × NUM_ORBITALS_TYPE
+
 d_orbital_research = {
 	is_for_colonizable = yes
 	icon = "d_engineering_research"
 	category = deposit_cat_rare
 
 	potential = { always = no }
-	# Research Districts
 	custom_tooltip = d_orbital_research_tt
+	
+	# Research Districts
 	triggered_planet_modifier = {
 		potential = {
 			always = yes
 		}
-		district_hab_science_max = 1
-		mult = value:habitat_district_value|TYPE|science|
+		district_hab_science_max = 2
+		mult = solar_system.value:num_major_orbitals_type|TYPE|science|
+	}
+	
+	# Research Jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_regular_empire = yes }
+		}
+		job_researcher_add = 2
+		mult = solar_system.value:num_minor_orbitals_type|TYPE|science|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		job_brain_drone_add = 2
+		mult = solar_system.value:num_minor_orbitals_type|TYPE|science|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		job_calculator_add = 2
+		mult = solar_system.value:num_minor_orbitals_type|TYPE|science|
 	}
 }
 
@@ -167,14 +275,44 @@ d_orbital_energy = {
 	category = deposit_cat_rare
 
 	potential = { always = no }
-	# Energy Districts
 	custom_tooltip = d_orbital_energy_tt
+	
+	# Energy Districts
 	triggered_planet_modifier = {
 		potential = {
 			always = yes
 		}
-		district_hab_energy_max = 1
+		district_hab_energy_max = 2
 		mult = value:habitat_district_value|TYPE|energy|
+	}
+
+	# Energy Jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		job_technician_add = 2
+		mult = solar_system.value:num_minor_orbitals_type|TYPE|energy|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = yes }
+		}
+		job_fe_acolyte_generator_add = 2
+		mult = solar_system.value:num_minor_orbitals_type|TYPE|energy|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_technician_drone_add = 2
+		mult = solar_system.value:num_minor_orbitals_type|TYPE|energy|
 	}
 }
 
@@ -185,13 +323,43 @@ d_orbital_mining = {
 
 	potential = { always = no }
 	custom_tooltip = d_orbital_mining_tt
+	
 	# Mining Districts
 	triggered_planet_modifier = {
 		potential = {
 			always = yes
 		}
-		district_hab_mining_max = 1
-		mult = value:habitat_district_value|TYPE|mining|
+		district_hab_mining_max = 2
+		mult = solar_system.value:num_major_orbitals_type|TYPE|mining|
+	}
+
+	# Mining Jobs
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = {
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		job_miner_add = 2
+		mult = solar_system.value:num_minor_orbitals_type|TYPE|mining|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		job_mining_drone_add = 2
+		mult = solar_system.value:num_minor_orbitals_type|TYPE|mining|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = yes }
+		}
+		job_fe_acolyte_mine_add = 2
+		mult = solar_system.value:num_minor_orbitals_type|TYPE|mining|
 	}
 }
 
@@ -248,7 +416,7 @@ d_ruined_minor_orbital = {
 	}
 
 	planet_modifier = {
-		habitability_ceil_add = -0.05
+		planet_housing_add = -2
 	}
 
 	resources = {
@@ -717,6 +885,14 @@ d_spore_vents = {
 		job_gas_plant_engineer_per_pop = 0.05 # 1 per 20
 	}
 
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { has_civic = civic_environmentalist }
+		}
+		planet_rangers_society_research_produces_add = @ranger_small_research_production
+	}
+
 	# For Gestalt Empires
 	triggered_planet_modifier = {
 		potential = {
@@ -781,10 +957,11 @@ d_tree_of_life_home = {
 	}
 
 	planet_modifier = {
-		pop_growth_speed = 0.15
+		pop_growth_speed = 0.2
 		planet_jobs_society_research_produces_mult = 0.10
 		planet_housing_add = 10
-		district_farming_max = 4
+		pop_environment_tolerance = 0.1
+		planet_farmers_food_produces_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -827,7 +1004,8 @@ d_tree_of_life_colony = {
 		pop_growth_speed = 0.1
 		planet_jobs_society_research_produces_mult = 0.10
 		planet_housing_add = 5
-		district_farming_max = 2
+		pop_environment_tolerance = 0.1
+		planet_farmers_food_produces_add = 0.5
 	}
 
 	triggered_planet_modifier = {
@@ -1069,7 +1247,7 @@ d_disco_planet = {
 
 	planet_modifier = {
 		planet_amenities_mult = 0.2
-		planet_miners_exotic_gases_produces_add = 0.1
+		planet_farmers_exotic_gases_produces_add = 0.1
 		pop_growth_speed = 0.15
 	}
 
@@ -1191,22 +1369,12 @@ d_crater_bluelotus = {
 	is_for_colonizable = yes
 	category = deposit_cat_rare
 	icon = d_crater
-
-	planet_modifier = {
-		district_mining_max = 1
-	}
-
-	triggered_planet_modifier = {
-		potential = {
-			always = yes
-		}
-		district_mining_max = 1
-		mult = value:natural_desposit_district_amount_multiplier
-	}
+	
 	resources = {
 		category = planet_deposits
 		produces = {
 			alloys = 2
+			rare_crystals = 1
 		}
 	}
 

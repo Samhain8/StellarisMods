@@ -165,7 +165,7 @@ wooden_planet = {
 }
 
 electric_storm_aftermath_modifier_severity_1 = {
-	planet_building_build_speed_mult = -0.25
+	pop_environment_tolerance = -0.04
 	planet_jobs_energy_produces_mult = 0.1
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_electric_aftermath_modifier.dds"
@@ -173,7 +173,7 @@ electric_storm_aftermath_modifier_severity_1 = {
 }
 
 electric_storm_aftermath_modifier_severity_2 = {
-	planet_building_build_speed_mult = -0.45
+	pop_environment_tolerance = -0.08
 	planet_jobs_energy_produces_mult = 0.2
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_electric_aftermath_modifier.dds"
@@ -181,7 +181,7 @@ electric_storm_aftermath_modifier_severity_2 = {
 }
 
 electric_storm_aftermath_modifier_severity_3 = {
-	planet_building_build_speed_mult = -0.65
+	pop_environment_tolerance = -0.12
 	planet_jobs_energy_produces_mult = 0.3
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_electric_aftermath_modifier.dds"
@@ -189,8 +189,7 @@ electric_storm_aftermath_modifier_severity_3 = {
 }
 
 particle_storm_aftermath_modifier_severity_1 = {
-	planet_pop_assembly_mult = -0.4
-	planet_jobs_minerals_produces_mult = -0.1
+	planet_jobs_food_produces_mult = -0.05
 
 	custom_tooltip = particle_storm_aftermath_1_tt
 	icon = "gfx/interface/icons/planet_modifiers/pm_particle_aftermath_modifier.dds"
@@ -198,8 +197,7 @@ particle_storm_aftermath_modifier_severity_1 = {
 }
 
 particle_storm_aftermath_modifier_severity_2 = {
-	planet_pop_assembly_mult = -0.5
-	planet_jobs_minerals_produces_mult = -0.2
+	planet_jobs_food_produces_mult = -0.10
 
 	custom_tooltip = particle_storm_aftermath_2_tt
 	icon = "gfx/interface/icons/planet_modifiers/pm_particle_aftermath_modifier.dds"
@@ -207,8 +205,7 @@ particle_storm_aftermath_modifier_severity_2 = {
 }
 
 particle_storm_aftermath_modifier_severity_3 = {
-	planet_pop_assembly_mult = -0.6
-	planet_jobs_minerals_produces_mult = -0.3
+	planet_jobs_food_produces_mult = -0.15
 
 	custom_tooltip = particle_storm_aftermath_3_tt
 	icon = "gfx/interface/icons/planet_modifiers/pm_particle_aftermath_modifier.dds"
@@ -217,7 +214,7 @@ particle_storm_aftermath_modifier_severity_3 = {
 
 gravity_storm_aftermath_modifier_severity_1 = {
 	planet_structures_cost_mult = 0.25
-	planet_administrators_unity_produces_mult = 0.2
+	planet_miners_produces_mult = 0.2
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_gravity_aftermath_modifier.dds"
 	icon_frame = 2
@@ -225,7 +222,7 @@ gravity_storm_aftermath_modifier_severity_1 = {
 
 gravity_storm_aftermath_modifier_severity_2 = {
 	planet_structures_cost_mult = 0.5
-	planet_administrators_unity_produces_mult = 0.4
+	planet_miners_produces_mult = 0.4
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_gravity_aftermath_modifier.dds"
 	icon_frame = 2
@@ -233,7 +230,7 @@ gravity_storm_aftermath_modifier_severity_2 = {
 
 gravity_storm_aftermath_modifier_severity_3 = {
 	planet_structures_cost_mult = 1
-	planet_administrators_unity_produces_mult = 0.6
+	planet_miners_produces_mult = 0.6
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_gravity_aftermath_modifier.dds"
 	icon_frame = 2
@@ -241,7 +238,6 @@ gravity_storm_aftermath_modifier_severity_3 = {
 
 magnetic_storm_aftermath_modifier_severity_1 = {
 	planet_metallurgists_upkeep_mult = -0.1
-	planet_building_build_speed_mult = -0.05
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_magnetic_aftermath_modifier.dds"
 	icon_frame = 2
@@ -249,7 +245,6 @@ magnetic_storm_aftermath_modifier_severity_1 = {
 
 magnetic_storm_aftermath_modifier_severity_2 = {
 	planet_metallurgists_upkeep_mult = -0.2
-	planet_building_build_speed_mult = -0.1
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_magnetic_aftermath_modifier.dds"
 	icon_frame = 2
@@ -257,34 +252,27 @@ magnetic_storm_aftermath_modifier_severity_2 = {
 
 magnetic_storm_aftermath_modifier_severity_3 = {
 	planet_metallurgists_upkeep_mult = -0.3
-	planet_building_build_speed_mult = -0.2
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_magnetic_aftermath_modifier.dds"
 	icon_frame = 2
 }
 
 solar_storm_aftermath_modifier_severity_1 = {
-	pop_growth_speed = -0.4
-	pop_amenities_usage_mult = 0.1
-	army_defense_damage_mult = 0.2
+	pop_amenities_usage_mult = 0.15
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_solar_aftermath_modifier.dds"
 	icon_frame = 2
 }
 
 solar_storm_aftermath_modifier_severity_2 = {
-	pop_growth_speed = -0.5
 	pop_amenities_usage_mult = 0.2
-	army_defense_damage_mult = 0.3
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_solar_aftermath_modifier.dds"
 	icon_frame = 2
 }
 
 solar_storm_aftermath_modifier_severity_3 = {
-	pop_growth_speed = -0.6
-	pop_amenities_usage_mult = 0.3
-	army_defense_damage_mult = 0.4
+	pop_amenities_usage_mult = 0.25
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_solar_aftermath_modifier.dds"
 	icon_frame = 2
@@ -301,7 +289,7 @@ celestial_storm_aftermath_modifier_severity_1 = {
 
 celestial_storm_aftermath_modifier_severity_2 = {
 	planet_crime_mult = 0.2
-	planet_jobs_food_produces_mult = -0.2
+	planet_jobs_food_produces_mult = -0.15
 	custom_tooltip = celestial_storm_aftermath_2_tt
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_celestial_aftermath_modifier.dds"
@@ -311,7 +299,7 @@ celestial_storm_aftermath_modifier_severity_2 = {
 
 celestial_storm_aftermath_modifier_severity_3 = {
 	planet_crime_mult = 0.3
-	planet_jobs_food_produces_mult = -0.3
+	planet_jobs_food_produces_mult = -0.2
 	custom_tooltip = celestial_storm_aftermath_3_tt
 
 	icon = "gfx/interface/icons/planet_modifiers/pm_celestial_aftermath_modifier.dds"

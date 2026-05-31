@@ -352,9 +352,7 @@ building_archaeostudies_faculty = {
 
 	category = research
 
-	empire_limit = {
-		base = 1
-	}
+	base_cap_amount = 1
 
 	potential = {
 		NOR = {

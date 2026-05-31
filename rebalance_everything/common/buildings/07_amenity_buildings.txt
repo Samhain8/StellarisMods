@@ -139,7 +139,7 @@ building_paradise_dome = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 2
 		}
 	}
 
@@ -323,7 +323,7 @@ building_communal_housing_large = {
 			}
 		}
 		modifier = {
-			planet_housing_add = 1
+			planet_housing_add = 2
 		}
 	}
 
@@ -595,7 +595,7 @@ building_holo_theatres = {
 		OR = {
 			owner = { is_regular_empire = no }
 			owner = { has_valid_civic = civic_dystopian_society }
-			has_modifier = slave_colony
+			#has_modifier = slave_colony
 		}
 	}
 
@@ -762,7 +762,7 @@ building_clinic = {
 	}
 
 	planet_modifier = {
-		job_healthcare_add = 2
+		job_healthcare_add = 1
 	}
 
 	triggered_planet_modifier = {
@@ -918,7 +918,7 @@ building_hospital = {
 	}
 
 	planet_modifier = {
-		job_healthcare_add = @b2_jobs
+		job_healthcare_add = 2
 	}
 
 	triggered_planet_modifier = {
@@ -1060,6 +1060,7 @@ building_ranger_lodge = {
 		NOT = {	has_modifier = slave_colony	}
 		owner = {
 			is_regular_empire = yes
+			is_regular_empire = no # I'm just disabling it stupidly
 			has_valid_civic = civic_environmentalist
 		}
 		NOR = {

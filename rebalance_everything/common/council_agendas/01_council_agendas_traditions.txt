@@ -62,9 +62,8 @@ agenda_civil_exclusion = {
 		has_paragon_dlc = yes
 	}
 	modifier = {
-		planet_jobs_worker_produces_mult = 0.05
-		planet_jobs_slave_produces_mult = 0.05
-		planet_crime_add = 10
+		country_traditions_influence_produces_add = 0.25
+		monthly_loyalty_from_subjects = 0.25
 	}
 	finish_modifier = agenda_civil_exclusion_finish
 }
@@ -79,6 +78,7 @@ agenda_superior_colonies = {
 	}
 	modifier = {
 		planet_colony_development_speed_mult = 0.25
+		pop_growth_from_immigration = 0.1
 	}
 	finish_modifier = agenda_superior_colonies_finish
 	effect = {
@@ -115,6 +115,8 @@ agenda_open_markets = {
 	}
 	modifier = {
 		commercial_pact_mult = 0.2
+		local_trade_protection_add = 30
+		country_trade_fee = -0.05
 	}
 	finish_modifier = agenda_open_markets_finish
 }
@@ -130,7 +132,8 @@ agenda_open_markets_criminal_heritage = {
 		is_regular_empire = yes		# Copied from Tradition potential.
 	}
 	modifier = {
-		branch_office_holding_crime_mult = 0.2
+		branch_office_holding_crime_mult = 0.15
+		country_trade_fee = -0.05
 	}
 	finish_modifier = agenda_open_markets_criminal_heritage_finish
 }
@@ -167,6 +170,7 @@ agenda_departmental_efficiency = {
 	}
 	modifier = {
 		councilor_exp_gain = 0.2
+		planet_jobs_ruler_produces_mult = 0.05
 	}
 	finish_modifier = agenda_departmental_efficiency_finish
 }
@@ -336,8 +340,9 @@ agenda_pioneer_politics = {
 		is_homicidal = no
 	}
 	modifier = {
-		resolutions_cost_mult = -0.05
-		veto_cooldown_mult = -0.05
+		resolutions_cost_mult = -0.1
+		veto_cooldown_mult = -0.1
+		diplo_weight_mult = 0.1
 	}
 	finish_modifier = agenda_pioneer_politics_finish
 }

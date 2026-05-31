@@ -19,8 +19,6 @@ servant = {
 		can_take_servant_job = yes
 	}
 
-	resources = {}
-
 	triggered_pop_modifier = {
 		potential = {
 			is_organic_species = yes
@@ -32,21 +30,65 @@ servant = {
 		potential = {
 			always = yes
 		}
-		planet_amenities_add = 4
+		planet_amenities_add = 5
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
-			owner = { is_pleasure_seeker = yes }
+			owner = { has_tradition = tr_mercantile_trickle_up_economics }
 		}
-		planet_amenities_add = 5
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+		trade_value_add = 1
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				owner = { is_pleasure_seeker = yes }
+			}
+		}
+		modifier = {
+			pop_growth_speed = 0.02
+		}
+	}
+
+	triggered_pop_modifier = {
+		potential = {
+			exists = owner
+			OR = {
+				owner = { is_pleasure_seeker = yes }
+			}
+		}
+		pop_housing_usage_add = -0.15
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			is_pet_slave = yes
+		}
+		trade_value_add = 2
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+	}
+
+	resources = {
+		category = planet_entertainers
+		produces = {
+			trigger = {
+				is_pet_slave = yes
+			}
+			unity = 1
+		}
 	}
 
 	weight = {
 		weight = @special_job_weight
+		#modifier = {
+		#	factor = 100000
+		#	is_pet_slave = yes
+		#}
 	}
 }
 
@@ -83,25 +125,26 @@ slave_overseer = {
 	}
 
 	planet_modifier = {
-		planet_crime_add = -25
+		planet_crime_add = -10
+		planet_crime_mult = -0.05
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { has_active_tradition = tr_domination_judgment_corps }
-		}
-		modifier = {
-			planet_crime_add = -5
-		}
-	}
+	#triggered_planet_modifier = {
+	#	potential = {
+	#		exists = owner
+	#		owner = { has_active_tradition = tr_domination_judgment_corps }
+	#	}
+	#	modifier = {
+	#		planet_crime_add = -2
+	#	}
+	#}
 
 	triggered_planet_modifier = {
 		potential = {
 			planet = { has_modifier = anticrime_campaign }
 		}
 		modifier = {
-			planet_crime_add = -10
+			planet_crime_add = -5
 		}
 	}
 
@@ -115,7 +158,7 @@ slave_overseer = {
 	}
 
 	weight = {
-		weight = @specialist_job_weight
+		weight = @worker_job_weight
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 	}
 }
@@ -137,6 +180,19 @@ slave_toiler = {
 		planet = { has_modifier = slave_colony }
 	}
 
+	resources = {
+		category = planet_jobs
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_slaver_civic = yes }
+			}
+			minerals = 1
+			food = 1
+			consumer_goods = 1
+		}
+	}
+
 	triggered_planet_modifier = {
 		potential = {
 			always = yes
@@ -145,17 +201,8 @@ slave_toiler = {
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
 	}
 
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { is_pleasure_seeker = yes }
-		}
-		planet_amenities_add = 5
-		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
-	}
-
 	weight = {
-		weight = @special_job_weight
+		weight = 0.001
 	}
 }
 
@@ -182,7 +229,9 @@ organic_battery = {
 	resources = {
 		category = planet_organic_batteries
 		produces = {
-			energy = 4
+			physics_research = 1
+			engineering_research = 1
+			society_research = 1
 		}
 	}
 
@@ -197,6 +246,7 @@ livestock = {
 	clothes_texture_index = 2
 
 	pop_modifier = {
+		pop_amenities_usage_add = -0.75
 		pop_housing_usage_add = -0.5
 		pop_political_power = -0.1
 	}
@@ -223,9 +273,69 @@ livestock = {
 		}
 		produces = {
 			trigger = {
+				is_organic_species = yes
+				is_lithoid = no
+				planet = { has_active_building = building_food_processing_facility }
+			}
+			food = 1
+		}
+		produces = {
+			trigger = {
+				is_organic_species = yes
+				is_lithoid = no
+				planet = { has_active_building = building_food_processing_center }
+			}
+			food = 2
+		}
+		produces = {
+			trigger = {
+				is_organic_species = yes
+				is_lithoid = no
+				exists = owner
+				owner = { has_tradition = tr_domestication_bio_repurposing }
+			}
+			food = 1
+		}
+		produces = {
+			trigger = {
 				is_lithoid = yes
 			}
 			minerals = 2
+		}
+		produces = {
+			trigger = {
+				is_lithoid = yes
+				planet = { has_active_building = building_mineral_purification_plant }
+			}
+			minerals = 0.5
+		}
+		produces = {
+			trigger = {
+				is_lithoid = yes
+				planet = { has_active_building = building_mineral_purification_hub }
+			}
+			minerals = 1
+		}
+		produces = {
+			trigger = {
+				is_lithoid = yes
+				exists = owner
+				owner = { has_tradition = tr_domestication_bio_repurposing }
+			}
+			minerals = 1
+		}
+		produces = {
+			trigger = {
+				has_trait = trait_kindling
+			}
+			energy = 2
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_tradition = tr_domestication_bio_repurposing }
+			}
+			consumer_goods = 0.5
 		}
 	}
 
@@ -247,7 +357,10 @@ livestock_zoo_animal = {
 
 	possible = {
 		has_citizenship_type = { type = citizenship_slavery country = owner }
-		has_slavery_type = { type = slavery_livestock }
+		OR = {
+			has_slavery_type = { type = slavery_livestock }
+			has_slavery_type = { type = slavery_pets }
+		}
 		planet = {
 			exists = owner
 			owner = {
@@ -259,40 +372,89 @@ livestock_zoo_animal = {
 
 	pop_modifier = {
 		pop_amenities_usage_add = -0.75
-		pop_housing_usage_add = -0.5
 		pop_political_power = -0.1
 	}
 
 	resources = {
 		category = planet_livestock
-		upkeep = {
+		produces = {
+			unity = 2
+		}
+		#upkeep = {
+		#	trigger = {
+		#		is_lithoid = no
+		#	}
+		#	food = 1
+		#}
+		#upkeep = {
+		#	trigger = {
+		#		is_lithoid = yes
+		#	}
+		#	minerals = 1
+		#}
+		produces = {
 			trigger = {
+				is_organic_species = yes
 				is_lithoid = no
+				exists = owner
+				owner = { has_tradition = tr_domestication_bio_repurposing }
 			}
 			food = 1
 		}
-		upkeep = {
+		produces = {
 			trigger = {
 				is_lithoid = yes
+				exists = owner
+				owner = { has_tradition = tr_domestication_bio_repurposing }
 			}
 			minerals = 1
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_tradition = tr_domestication_bio_repurposing }
+			}
+			consumer_goods = 0.5
 		}
 	}
 
 	triggered_planet_modifier = {
-		planet_amenities_add = 1
+		planet_amenities_add = 4
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+	triggered_planet_modifier = {
+		trade_value_add = 2
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_pet_slave = yes
+		}
+		trade_value_add = 2
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_slavery_type = { type = slavery_pets }
+			exists = owner
+			owner = { is_pleasure_seeker = yes }
+		}
+		modifier = {
+			pop_growth_speed = 0.02
+		}
 	}
 
 	weight = {
 		weight = @special_job_weight
 		mult = value:scripted_modifier_job_weight_mult|MODIFIER|pop_job_amenities_mult|
 		modifier = {
-			factor = 1.5
-			NOT = { has_job = livestock_zoo_animal }
-			exists = planet
-			planet = {
-				free_amenities < 5
+			factor = 110000
+			has_citizenship_type = { type = citizenship_slavery country = owner }
+			OR = {
+				has_slavery_type = { type = slavery_livestock }
+				has_slavery_type = { type = slavery_pets }
 			}
 		}
 	}
@@ -311,7 +473,10 @@ livestock_zoo_beast = {
 
 	possible = {
 		has_citizenship_type = { type = citizenship_slavery country = owner }
-		has_slavery_type = { type = slavery_livestock }
+		OR = {
+			has_slavery_type = { type = slavery_livestock }
+			has_slavery_type = { type = slavery_pets }
+		}
 		planet = {
 			exists = owner
 			owner = {
@@ -323,29 +488,80 @@ livestock_zoo_beast = {
 
 	pop_modifier = {
 		pop_amenities_usage_add = -0.75
-		pop_housing_usage_add = -0.5
 		pop_political_power = -0.1
+		pop_defense_armies_add = 1
 	}
 
 	resources = {
 		category = planet_livestock
-		upkeep = {
+		produces = {
+			unity = 2
+		}
+		#upkeep = {
+		#	trigger = {
+		#		is_lithoid = no
+		#	}
+		#	food = 1
+		#}
+		#upkeep = {
+		#	trigger = {
+		#		is_lithoid = yes
+		#	}
+		#	minerals = 1
+		#}
+		produces = {
 			trigger = {
+				is_organic_species = yes
 				is_lithoid = no
+				exists = owner
+				owner = { has_tradition = tr_domestication_bio_repurposing }
 			}
 			food = 1
 		}
-		upkeep = {
+		produces = {
 			trigger = {
 				is_lithoid = yes
+				exists = owner
+				owner = { has_tradition = tr_domestication_bio_repurposing }
 			}
 			minerals = 1
+		}
+		produces = {
+			trigger = {
+				exists = owner
+				owner = { has_tradition = tr_domestication_bio_repurposing }
+			}
+			consumer_goods = 0.5
 		}
 	}
 
 	triggered_planet_modifier = {
-		planet_amenities_add = 1
+		planet_amenities_add = 4
 		mult = value:scripted_modifier_mult|MODIFIER|pop_job_amenities_mult|
+	}
+
+
+	triggered_planet_modifier = {
+		trade_value_add = 2
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+	}
+	triggered_planet_modifier = {
+		potential = {
+			is_pet_slave = yes
+		}
+		trade_value_add = 2
+		mult = value:scripted_modifier_mult|MODIFIER|pop_job_trade_mult|
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			has_slavery_type = { type = slavery_pets }
+			exists = owner
+			owner = { is_pleasure_seeker = yes }
+		}
+		modifier = {
+			pop_growth_speed = 0.02
+		}
 	}
 
 	weight = {
@@ -382,7 +598,7 @@ bio_trophy = {
 			trigger = {
 				happiness >= 0.5
 			}
-			unity = 2
+			unity = 3
 		}
 	}
 
@@ -778,6 +994,15 @@ criminal = {
 
 	weight = {
 		weight = @criminal_job_weight
+		modifier = {
+			factor = 5
+			OR = {
+				has_slavery_type = { type = slavery_normal country = root }
+				has_slavery_type = { type = slavery_military country = root }
+				has_slavery_type = { type = slavery_matrix country = root }
+				has_slavery_type = { type = slavery_livestock country = root }
+			}
+		}
 	}
 }
 

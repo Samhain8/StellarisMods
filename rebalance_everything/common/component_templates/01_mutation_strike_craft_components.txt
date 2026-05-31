@@ -53,7 +53,6 @@ strike_craft_component_template = {
 	acceleration = 1
 
 	shield_penetration = 1.0
-	armor_damage = 1.5
 }
 
 strike_craft_component_template = {
@@ -97,7 +96,6 @@ strike_craft_component_template = {
 	acceleration = 1
 
 	shield_penetration = 1.0
-	armor_damage = 1.5
 }
 
 strike_craft_component_template = {
@@ -141,7 +139,6 @@ strike_craft_component_template = {
 	acceleration = 1
 
 	shield_penetration = 1.0
-	armor_damage = 1.5
 }
 
 strike_craft_component_template = {
@@ -185,7 +182,6 @@ strike_craft_component_template = {
 	acceleration = 1
 
 	shield_penetration = 1.0
-	armor_damage = 1.5
 }
 
 strike_craft_component_template = {
@@ -215,7 +211,7 @@ strike_craft_component_template = {
 	regeneration_per_day = @regen
 	launch_time = @launch_time
 	damage = { min = 4 max = 10 }
-	cooldown = 2.3
+	cooldown = 2.2
 	range = @attack_range
 	engagement_range = @engagement_range
 	accuracy = 1.00
@@ -230,7 +226,6 @@ strike_craft_component_template = {
 	acceleration = 1
 
 	shield_penetration = 1.0
-	armor_damage = 1.5
 }
 
 strike_craft_component_template = {
@@ -260,7 +255,7 @@ strike_craft_component_template = {
 	regeneration_per_day = @regen
 	launch_time = @launch_time
 	damage = { min = 4 max = 10 }
-	cooldown = 2.3
+	cooldown = 2.2
 	range = @attack_range
 	engagement_range = @engagement_range
 	accuracy = 1.00
@@ -275,7 +270,6 @@ strike_craft_component_template = {
 	acceleration = 1
 
 	shield_penetration = 1.0
-	armor_damage = 1.5
 }
 
 strike_craft_component_template = {
@@ -305,7 +299,7 @@ strike_craft_component_template = {
 	regeneration_per_day = @regen
 	launch_time = @launch_time
 	damage = { min = 4 max = 10 }
-	cooldown = 2.3
+	cooldown = 2.2
 	range = @attack_range
 	engagement_range = @engagement_range
 	accuracy = 1.00
@@ -320,7 +314,6 @@ strike_craft_component_template = {
 	acceleration = 1
 
 	shield_penetration = 1.0
-	armor_damage = 1.5
 }
 
 strike_craft_component_template = {
@@ -350,7 +343,7 @@ strike_craft_component_template = {
 	regeneration_per_day = @regen
 	launch_time = @launch_time
 	damage = { min = 4 max = 10 }
-	cooldown = 2.3
+	cooldown = 2.2
 	range = @attack_range
 	engagement_range = @engagement_range
 	accuracy = 1.00
@@ -365,7 +358,6 @@ strike_craft_component_template = {
 	acceleration = 1
 
 	shield_penetration = 1.0
-	armor_damage = 1.5
 }
 
 strike_craft_component_template = {
@@ -395,7 +387,7 @@ strike_craft_component_template = {
 	regeneration_per_day = @regen
 	launch_time = @launch_time
 	damage = { min = 5 max = 13 }
-	cooldown = 2.3
+	cooldown = 2.1
 	range = @attack_range
 	engagement_range = @engagement_range
 	accuracy = 1.00
@@ -410,7 +402,6 @@ strike_craft_component_template = {
 	acceleration = 1
 
 	shield_penetration = 1.0
-	armor_damage = 1.5
 }
 
 strike_craft_component_template = {
@@ -440,7 +431,7 @@ strike_craft_component_template = {
 	regeneration_per_day = @regen
 	launch_time = @launch_time
 	damage = { min = 5 max = 13 }
-	cooldown = 2.3
+	cooldown = 2.1
 	range = @attack_range
 	engagement_range = @engagement_range
 	accuracy = 1.00
@@ -455,7 +446,6 @@ strike_craft_component_template = {
 	acceleration = 1
 
 	shield_penetration = 1.0
-	armor_damage = 1.5
 }
 
 strike_craft_component_template = {
@@ -485,7 +475,7 @@ strike_craft_component_template = {
 	regeneration_per_day = @regen
 	launch_time = @launch_time
 	damage = { min = 5 max = 13 }
-	cooldown = 2.3
+	cooldown = 2.1
 	range = @attack_range
 	engagement_range = @engagement_range
 	accuracy = 1.00
@@ -500,7 +490,6 @@ strike_craft_component_template = {
 	acceleration = 1
 
 	shield_penetration = 1.0
-	armor_damage = 1.5
 }
 
 strike_craft_component_template = {
@@ -530,7 +519,7 @@ strike_craft_component_template = {
 	regeneration_per_day = @regen
 	launch_time = @launch_time
 	damage = { min = 5 max = 13 }
-	cooldown = 2.3
+	cooldown = 2.1
 	range = @attack_range
 	engagement_range = @engagement_range
 	accuracy = 1.00
@@ -545,7 +534,6 @@ strike_craft_component_template = {
 	acceleration = 1
 
 	shield_penetration = 1.0
-	armor_damage = 1.5
 }
 
 strike_craft_component_template = {
@@ -575,7 +563,7 @@ strike_craft_component_template = {
 	regeneration_per_day = @regen
 	launch_time = @launch_time
 	damage = { min = 6 max = 17 }
-	cooldown = 2.3
+	cooldown = 2
 	range = @attack_range
 	engagement_range = @engagement_range
 	accuracy = 1.00
@@ -590,7 +578,6 @@ strike_craft_component_template = {
 	acceleration = 1
 
 	shield_penetration = 1.0
-	armor_damage = 1.5
 }
 
 strike_craft_component_template = {
@@ -620,7 +607,7 @@ strike_craft_component_template = {
 	regeneration_per_day = @regen
 	launch_time = @launch_time
 	damage = { min = 6 max = 17 }
-	cooldown = 2.3
+	cooldown = 2
 	range = @attack_range
 	engagement_range = @engagement_range
 	accuracy = 1.00
@@ -635,7 +622,6 @@ strike_craft_component_template = {
 	acceleration = 1
 
 	shield_penetration = 1.0
-	armor_damage = 1.5
 }
 
 strike_craft_component_template = {
@@ -665,7 +651,7 @@ strike_craft_component_template = {
 	regeneration_per_day = @regen
 	launch_time = @launch_time
 	damage = { min = 6 max = 17 }
-	cooldown = 2.3
+	cooldown = 2
 	range = @attack_range
 	engagement_range = @engagement_range
 	accuracy = 1.00
@@ -680,7 +666,6 @@ strike_craft_component_template = {
 	acceleration = 1
 
 	shield_penetration = 1.0
-	armor_damage = 1.5
 }
 
 strike_craft_component_template = {
@@ -710,7 +695,7 @@ strike_craft_component_template = {
 	regeneration_per_day = @regen
 	launch_time = @launch_time
 	damage = { min = 6 max = 17 }
-	cooldown = 2.3
+	cooldown = 2
 	range = @attack_range
 	engagement_range = @engagement_range
 	accuracy = 1.00
@@ -725,7 +710,6 @@ strike_craft_component_template = {
 	acceleration = 1
 
 	shield_penetration = 1.0
-	armor_damage = 1.5
 }
 
 strike_craft_component_template = {
@@ -934,14 +918,14 @@ strike_craft_component_template = {
 	regeneration_per_day = @regen
 	launch_time = @launch_time
 
-	damage = { min = 20 max = 30 }
+	damage = { min = 24 max = 36 }
 	cooldown = 5
 	range = @attack_range
 	engagement_range = 100
-	accuracy = 0.70
+	accuracy = 0.80
 	tracking = 0.50
 
-	health = 20
+	health = 35
 	armor = 0
 	shield = 0
 	evasion = 0.50
@@ -981,14 +965,14 @@ strike_craft_component_template = {
 	regeneration_per_day = @regen
 	launch_time = @launch_time
 
-	damage = { min = 20 max = 30 }
+	damage = { min = 24 max = 36 }
 	cooldown = 5
 	range = @attack_range
 	engagement_range = 100
-	accuracy = 0.70
+	accuracy = 0.80
 	tracking = 0.50
 
-	health = 20
+	health = 35
 	armor = 0
 	shield = 0
 	evasion = 0.50
@@ -1028,14 +1012,14 @@ strike_craft_component_template = {
 	regeneration_per_day = @regen
 	launch_time = @launch_time
 
-	damage = { min = 20 max = 30 }
+	damage = { min = 24 max = 36 }
 	cooldown = 5
 	range = @attack_range
 	engagement_range = 100
-	accuracy = 0.70
+	accuracy = 0.80
 	tracking = 0.50
 
-	health = 20
+	health = 35
 	armor = 0
 	shield = 0
 	evasion = 0.50
@@ -1075,14 +1059,14 @@ strike_craft_component_template = {
 	regeneration_per_day = @regen
 	launch_time = @launch_time
 
-	damage = { min = 20 max = 30 }
+	damage = { min = 24 max = 36 }
 	cooldown = 5
 	range = @attack_range
 	engagement_range = 100
-	accuracy = 0.70
+	accuracy = 0.80
 	tracking = 0.50
 
-	health = 20
+	health = 35
 	armor = 0
 	shield = 0
 	evasion = 0.50
@@ -1128,8 +1112,8 @@ strike_craft_component_template = {
 	accuracy = 1.0
 	tracking = 0.8
 
-	health = 40
-	armor = 20
+	health = 30
+	armor = 10
 	shield = 0
 	evasion = 0.80
 
@@ -1139,7 +1123,6 @@ strike_craft_component_template = {
 
 	shield_damage = 1.0
 	shield_penetration = 1
-	armor_penetration = 0.66
 }
 
 strike_craft_component_template = {
@@ -1174,8 +1157,8 @@ strike_craft_component_template = {
 	accuracy = 1.0
 	tracking = 0.8
 
-	health = 40
-	armor = 20
+	health = 30
+	armor = 10
 	shield = 0
 	evasion = 0.80
 
@@ -1185,7 +1168,6 @@ strike_craft_component_template = {
 
 	shield_damage = 1.0
 	shield_penetration = 1
-	armor_penetration = 0.66
 }
 
 strike_craft_component_template = {
@@ -1220,8 +1202,8 @@ strike_craft_component_template = {
 	accuracy = 1.0
 	tracking = 0.8
 
-	health = 40
-	armor = 20
+	health = 30
+	armor = 10
 	shield = 0
 	evasion = 0.80
 
@@ -1231,7 +1213,6 @@ strike_craft_component_template = {
 
 	shield_damage = 1.0
 	shield_penetration = 1
-	armor_penetration = 0.66
 }
 
 strike_craft_component_template = {
@@ -1266,8 +1247,8 @@ strike_craft_component_template = {
 	accuracy = 1.0
 	tracking = 0.8
 
-	health = 40
-	armor = 20
+	health = 30
+	armor = 10
 	shield = 0
 	evasion = 0.80
 
@@ -1277,7 +1258,6 @@ strike_craft_component_template = {
 
 	shield_damage = 1.0
 	shield_penetration = 1
-	armor_penetration = 0.66
 }
 
 strike_craft_component_template = {

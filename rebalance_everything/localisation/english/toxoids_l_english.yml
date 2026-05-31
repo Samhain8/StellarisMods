@@ -684,16 +684,31 @@
  ### Scavengers
  civic_scavengers:0 "Scavengers"
  civic_scavengers_desc:0 "In this society, nothing goes to waste, even in the grimmest times of war: no enemy technology will go undiscovered, as teams of scrappers accompanying the war fleets scrape wreckages of anything and everything worth salvaging."
- civic_scavengers_effects:0 "Researching §YDebris§! will grant both §YResearch§! and a portion of other §YResource Costs§! of the destroyed fleet.\n§YShips§! can be salvaged from some §YDebris§!."
+ civic_scavengers_effects:0 "Researching §YDebris§! will grant both §YResearch§! and a portion of other §YResource Costs§! of the destroyed fleet.\n§YShips§! can be salvaged from some §YDebris§!. £job_researcher£ $job_archaeoengineers_plural$ produce an additional 0.25 minor artifacts."
  civic_corporate_scavengers:1 "Refurbishment Division"
  civic_corporate_scavengers_desc:0 "$civic_scavengers_desc$"
+
+
+ civic_crystal_artists:0 "Crystal Shapers"
+ civic_crystal_artists_desc:0 "Makers of this society excel at creating structures and ship hulls using the rare crystals native to their homeworld."
+ civic_crystal_artists_effects:0 "Homeworld has a deposit producing rare crystals.\nThe Crystal-Infused Plating technology is researched, and Crystal-Forged Plating is available as a research option.\nThe Heritage Site building and its upgraded versions provide one Lattice Artist job."
+ civic_tooltip_crystal_artists_effects:1 "Homeworld has a deposit producing rare crystals.\nThe Crystal-Infused Plating technology is researched, and Crystal-Forged Plating is available as a research option.\nThe Heritage Site building and its upgraded versions provide one Lattice Artist job."
+ 
+ job_lattice_artist:0 "Lattice Artist"
+ job_lattice_artist_desc:0 "Meticulous artists who create highly intricate masterpieces from rare crystals, put on display in public cultural spaces."
+
+ planet_lattice_artists:0 "Lattice Artists"
+ mod_job_lattice_artist_add:0 "$job_lattice_artist$ Jobs"
+ job_lattice_artist_plural:0 "Lattice Artists"
+ job_lattice_artist_effect_desc:1 "£job_lattice_artist£ Lattice Artists turn £rare_crystals£ §YRare Crystals§! into Unity, Engineering Research, and double the output of a culture worker."
+
 
  trait_incubator:0 "Incubators"
  incubator_tooltip:1 "Grants between §G+30%§! and §R-10%§! Pop Growth Speed, inversely proportional to the number of pops on the planet."
  trait_incubator_desc:1 "§LWhen isolated or few in numbers, a species with this trait naturally adapts and is able to focus on procreation with an intentness others would consider extreme. However, when in large numbers, this effect is reversed, and they find reproduction more difficult.§!"
 
  trait_inorganic_breath:0 "Inorganic Breath"
- inorganic_breath_tooltip:2 "Each pop working as a slave or better produces 0.02 £exotic_gases£ §Y$exotic_gases$§! per month."
+ inorganic_breath_tooltip:2 "Each pop working as a slave or better produces 0.05 £exotic_gases£ §Y$exotic_gases$§! per month."
  trait_inorganic_breath_desc:0 "§LThe slightly toxic digestive methods of this species have resulted in a highly exotic breath composition.§!"
 
  trait_noxious:0 "Noxious"
@@ -705,6 +720,15 @@
  trait_exotic_metabolism:0 "Exotic Metabolism"
  exotic_metabolism_tooltip:2 "£exotic_gases£ Exotic Gas Upkeep: §R+0.125§!"
  trait_exotic_metabolism_desc:0 "§LA metabolism based on exotic - and expensive - gases has vastly enhanced this species' abilities.§!"
+ trait_mote_eater:0 "Mote Eaters"
+ mote_eater_tooltip:2 "£volatile_motes£ Volatile Motes Upkeep: §R+0.125§!"
+ trait_mote_eater_desc:0 "§LThe exceptional digestive system of this species depends on volatile motes, leading to an excessive amount of energy and excitement.§!"
+
+ trait_fast_metabolism:0 "Fast Metabolism"
+ trait_fast_metabolism_desc:0 "§LA particularly fast metabolism makes this species produce, consume, and age more rapidly.§!"
+
+ trait_impish:0 "Impish"
+ trait_impish_desc:0 "§LA diminutive species prone to impulsively following their instincts.§!"
 
  ap_detox:0 "Detox"
  ap_detox_desc:1 "Our newest advancements in terraforming allow us to breathe new life into a class of planets formerly considered irrevocably deadly and beyond salvation."
@@ -773,6 +797,12 @@
  trait_excessive_endurance:0 "Excessive Endurance"
  trait_excessive_endurance_desc:0 "§LThe greatest in adaptability genes have been hyper-expressed in these specimens. Mutation rates around 30% indicate a somewhat stable and successful experiment.§!"
  excessive_endurance_tooltip:0 "Habitability: §G+30%§!\nResources from Jobs: §G+5%§!"
+ trait_compliance_instincts:0 "Compliance Instincts"
+ trait_compliance_instincts_desc:0 "§LCarrying out direct orders promptly or receiving praise from a master triggers a generous endorphins release. Mind your wording and be wary of addiction.§!"
+ trait_thrill_seeker:0 "Thrill Seeker"
+ trait_thrill_seeker_desc:0 "§LThe drive to find excitement in their lives makes these specimens particularly brave, frisky, and prone to accidents.§!"
+ trait_crafted_charm:0 "Crafted Charm"
+ trait_crafted_charm_desc:0 "§LCarefully curated aesthetic gene banks allow for the customization of one's appearance to any taste. Sometimes at the expense of more functional options.§!"
 
  edict_damn_the_consequences:0 "Damn the Consequences"
  edict_damn_the_consequences_desc:1 "This Edict pushes our genetic modifications to the very limit, doubling their effect but also causing an increased amount of terrible side-effects, including sudden catastrophic combustion.\n\n§RWhat could possibly go wrong?§!"
@@ -782,6 +812,10 @@
 
  d_exotic_mountain:0 "Exotic Mountains"
  d_exotic_mountain_desc:0 "Deep within these mountains lie vast reserves of exotic gases - the core of our biology."
+ d_spice_pits:0 "Spice Hollows"
+ d_spice_pits_desc:0 "Deep within these pits lie vast reserves of volatile motes - the spice that gives us life."
+ d_crystal_garden:0 "Amber Garden"
+ d_crystal_garden_desc:0 "A sheltered garden from which plentiful rare crystals can be collected."
 
  #VO
  vo_toxoids_voice:0 "Toxoid"

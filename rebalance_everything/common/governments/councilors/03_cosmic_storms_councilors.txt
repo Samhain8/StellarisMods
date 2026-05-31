@@ -33,7 +33,8 @@ councilor_storm_callers = {
 		leader_class = scientist
 	}
 	modifier = {
-		planet_buildings_storm_tech_upkeep_mult = -0.05
+		planet_storm_devastation_mult = -0.03
+		planet_entertainers_unity_produces_add = 0.1
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -49,7 +50,8 @@ councilor_storm_callers_megacorp = {
 		leader_class = scientist
 	}
 	modifier = {
-		planet_buildings_storm_tech_upkeep_mult = -0.05
+		planet_storm_devastation_mult = -0.03
+		planet_entertainers_unity_produces_add = 0.1
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights

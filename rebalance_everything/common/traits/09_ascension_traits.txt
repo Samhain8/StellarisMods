@@ -56,9 +56,9 @@ trait_rapid_breeders_lithoid = {
 
 trait_delicious = {
 	cost = 2
-	species_potential_add = {
-		can_do_advanced_gene_modding = yes
-	}
+	#species_potential_add = {
+	#	can_do_advanced_gene_modding = yes
+	#}
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
 	}
@@ -66,15 +66,310 @@ trait_delicious = {
 		always = yes
 	}
 	potential_crossbreeding_chance = 0.5
-	initial = no
+	initial = yes
 	randomized = no
-	advanced_trait = yes
+	advanced_trait = no
 	allowed_archetypes = { BIOLOGICAL }
 	modifier = {
 		planet_livestock_food_produces_add = 2
 	}
 	slave_cost = {
 		energy = 1000
+	}
+}
+
+trait_kindling = {
+	cost = 2
+	icon = "gfx/interface/icons/traits/trait_plantoid_radiotrophic.dds"
+	#species_potential_add = {
+	#	can_do_advanced_gene_modding = yes
+	#}
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	potential_crossbreeding_chance = 0.5
+	initial = yes
+	randomized = no
+	advanced_trait = no
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	slave_cost = {
+		energy = 1000
+	}
+}
+
+trait_xeno_compatibility_male_p = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_perfected_genes.dds"
+	potential_crossbreeding_chance = 0
+	initial = yes
+	randomized = no
+	advanced_trait = yes
+	allowed_archetypes = { BIOLOGICAL }
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_remove = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	opposites = { "trait_xeno_compatibility_female_a" "trait_xeno_compatibility_female_q" "trait_xeno_compatibility_male_i" "trait_omni_compatibility" "trait_xeno_compatibility_male_r" "trait_xeno_compatibility_male_g" }
+
+	triggered_planet_growth_habitability_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				NOT = { 
+					any_owned_pop = { has_female_species_trait = yes } 
+				}
+			}
+		}
+		pop_growth_speed = -0.8
+	}
+
+	modifier = {
+		planet_jobs_produces_mult = 0.1
+		pop_growth_speed = -0.20
+		species_empire_size_mult = 0.20
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+trait_xeno_compatibility_female_a = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_perfected_genes.dds"
+	potential_crossbreeding_chance = 0
+	initial = yes
+	randomized = no
+	advanced_trait = yes
+	allowed_archetypes = { BIOLOGICAL }
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_remove = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	opposites = { "trait_xeno_compatibility_male_p" "trait_xeno_compatibility_female_q" "trait_xeno_compatibility_male_i" "trait_omni_compatibility" "trait_xeno_compatibility_male_r" "trait_xeno_compatibility_male_g" }
+
+	triggered_planet_growth_habitability_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				NOT = { 
+					any_owned_pop = { has_male_species_trait = yes } 
+				}
+			}
+		}
+		pop_growth_speed = -1.2
+	}
+
+	modifier = {
+		pop_growth_speed = 0.20
+		planet_jobs_produces_mult = -0.1
+		leader_lifespan_add = -20
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+trait_xeno_compatibility_male_i = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_perfected_genes.dds"
+	potential_crossbreeding_chance = 0
+	initial = yes
+	randomized = no
+	advanced_trait = yes
+	allowed_archetypes = { BIOLOGICAL }
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_remove = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	opposites = { "trait_xeno_compatibility_female_a" "trait_xeno_compatibility_female_q" "trait_xeno_compatibility_male_p" "trait_omni_compatibility" "trait_xeno_compatibility_male_r" "trait_xeno_compatibility_male_g" }
+
+	triggered_planet_growth_habitability_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				NOT = { 
+					any_owned_pop = { has_female_species_trait = yes } 
+				}
+			}
+		}
+		pop_growth_speed = -1
+	}
+
+	modifier = {
+		species_leader_exp_gain = 0.25
+		negative_leader_traits_species = 1
+		leader_lifespan_add = -20
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+trait_xeno_compatibility_female_q = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_perfected_genes.dds"
+	potential_crossbreeding_chance = 0
+	initial = yes
+	randomized = no
+	advanced_trait = yes
+	allowed_archetypes = { BIOLOGICAL }
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_remove = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	opposites = { "trait_xeno_compatibility_male_p" "trait_xeno_compatibility_female_a" "trait_xeno_compatibility_male_i" "trait_omni_compatibility" "trait_xeno_compatibility_male_r" "trait_xeno_compatibility_male_g" }
+
+	triggered_planet_growth_habitability_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				NOT = { 
+					any_owned_pop = { has_male_species_trait = yes } 
+				}
+			}
+		}
+		pop_growth_speed = -0.5
+	}
+
+	modifier = {
+		leader_lifespan_add = 100
+		negative_leader_traits_species = -2
+		pop_growth_speed = -0.50
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+trait_xeno_compatibility_male_r = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_perfected_genes.dds"
+	potential_crossbreeding_chance = 0
+	initial = yes
+	randomized = no
+	advanced_trait = yes
+	allowed_archetypes = { BIOLOGICAL }
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_remove = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	opposites = { "trait_xeno_compatibility_female_a" "trait_xeno_compatibility_female_q" "trait_xeno_compatibility_male_p" "trait_xeno_compatibility_male_i" "trait_xeno_compatibility_male_g" "trait_omni_compatibility" }
+
+	triggered_planet_growth_habitability_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				NOT = { 
+					any_owned_pop = { has_female_species_trait = yes } 
+				}
+			}
+		}
+		pop_growth_speed = -0.8
+	}
+
+	modifier = {
+		leader_lifespan_add = 30
+		pop_job_trade_mult = 0.30
+		pop_growth_speed = -0.20
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+trait_xeno_compatibility_male_g = {
+	cost = 0
+	icon = "gfx/interface/icons/traits/trait_perfected_genes.dds"
+	potential_crossbreeding_chance = 0
+	initial = yes
+	randomized = no
+	advanced_trait = yes
+	allowed_archetypes = { BIOLOGICAL }
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_remove = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	opposites = { "trait_xeno_compatibility_female_a" "trait_xeno_compatibility_female_q" "trait_xeno_compatibility_male_p" "trait_xeno_compatibility_male_i" "trait_xeno_compatibility_male_r" "trait_omni_compatibility" }
+
+	triggered_planet_growth_habitability_modifier = {
+		potential = {
+			exists = planet
+			planet = {
+				NOT = { 
+					any_owned_pop = { has_female_species_trait = yes } 
+				}
+			}
+		}
+		pop_growth_speed = -1
+	}
+
+	modifier = {
+		planet_jobs_worker_produces_mult = 0.05
+		species_empire_size_mult = -0.20
+		species_leader_exp_gain = -0.30
+	}
+	slave_cost = {
+		energy = 250
+	}
+}
+
+trait_omni_compatibility = {
+	cost = 2
+	icon = "gfx/interface/icons/traits/trait_perfected_genes.dds"
+	potential_crossbreeding_chance = 0
+	initial = yes
+	randomized = no
+	advanced_trait = yes
+	allowed_archetypes = { BIOLOGICAL }
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_remove = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	opposites = { "trait_xeno_compatibility_male_p" "trait_xeno_compatibility_female_a" "trait_xeno_compatibility_male_i" "trait_xeno_compatibility_female_q" "trait_xeno_compatibility_male_r" "trait_xeno_compatibility_male_g"}
+
+	modifier = {
+		pop_growth_speed = 0.10
+	}
+	slave_cost = {
+		energy = 750
 	}
 }
 
@@ -205,11 +500,11 @@ trait_erudite = {
 	opposites = { "trait_nerve_stapled" "trait_intelligent" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 	modifier = {
-		planet_jobs_physics_research_produces_mult = 0.2
-		planet_jobs_society_research_produces_mult = 0.2
-		planet_jobs_engineering_research_produces_mult = 0.2
+		planet_jobs_engineering_research_produces_mult = 0.15
+		planet_jobs_physics_research_produces_mult = 0.15
+		planet_jobs_society_research_produces_mult = 0.15
 		negative_leader_traits_species = -1
-		leaders_upkeep_mult = -0.1
+		species_leader_exp_gain = 0.25
 	}
 	slave_cost = {
 		energy = 2000
@@ -223,6 +518,221 @@ trait_erudite = {
 			add = 2.5
 			from = { has_building = building_order_keep }
 		}
+	}
+}
+
+trait_perfected_charm = {
+	cost = 4
+	icon = "gfx/interface/icons/traits/trait_charismatic.dds"
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	potential_crossbreeding_chance = 0.5
+	initial = no
+	randomized = no
+	advanced_trait = yes
+	opposites = { "trait_repugnant" "trait_charming" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		pop_job_trade_mult = 0.25
+		pop_job_amenities_mult = 0.25
+		planet_jobs_unity_produces_mult = 0.10
+		pop_happiness = 0.1
+	}
+	slave_cost = {
+		energy = 2000
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = { has_unity_designation = yes }
+		}
+	}
+}
+
+trait_ballistic_muscle = {
+	cost = 4
+	icon = "gfx/interface/icons/traits/trait_very_strong.dds"
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	potential_crossbreeding_chance = 0.5
+	initial = no
+	randomized = no
+	advanced_trait = yes
+	opposites = { "trait_weak" "trait_strong" "trait_very_strong" "trait_frail" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		army_health = 0.6
+		army_damage_mult = 0.6
+		planet_jobs_worker_produces_mult = 0.1
+	}
+	slave_cost = {
+		energy = 2000
+	}
+	assembly_score = {
+		modifier = {
+			add = 1.5
+			from = {
+				OR = {
+					has_fortress_designation = yes
+					has_farming_designation = yes
+					has_generator_designation = yes
+					has_mining_designation = yes
+					has_rural_designation = yes
+				}
+			}
+		}
+	}
+}
+
+trait_natural_deference = {
+	cost = 3
+	icon = "gfx/interface/icons/traits/trait_talented.dds"
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	potential_crossbreeding_chance = 0.5
+	initial = no
+	randomized = no
+	advanced_trait = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		species_empire_size_mult = -0.5
+		pop_cat_slave_happiness = 0.15
+	}
+	slave_cost = {
+		energy = 1000
+	}
+}
+
+trait_flexible_metabolism = {
+	cost = 3
+	icon = "gfx/interface/icons/traits/trait_conservational.dds"
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	potential_crossbreeding_chance = 0.5
+	initial = no
+	randomized = no
+	advanced_trait = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		pop_environment_tolerance = 0.20
+		planet_pops_upkeep_mult = -0.20
+	}
+	slave_cost = {
+		energy = 1000
+	}
+}
+
+trait_evanescent = {
+	cost = -4
+	icon = "gfx/interface/icons/traits/trait_weak.dds"
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	potential_crossbreeding_chance = 0.5
+	initial = no
+	randomized = no
+	advanced_trait = yes
+	opposites = { "trait_enduring" "trait_fleeting" "trait_fleeting_lithoid" "trait_ephemeral" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		leader_lifespan_add = -50
+		species_empire_size_mult = 0.35
+	}
+	slave_cost = {
+		energy = -1500
+	}
+}
+
+trait_frail = {
+	cost = -4
+	icon = "gfx/interface/icons/traits/trait_weak.dds"
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	potential_crossbreeding_chance = 0.5
+	initial = no
+	randomized = no
+	advanced_trait = yes
+	opposites = { "trait_weak" "trait_strong" "trait_very_strong" "trait_ballistic_muscle" }
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = {
+		army_damage_mult = -0.4
+		army_health = -0.2
+		planet_jobs_food_produces_mult = -0.15
+		planet_jobs_minerals_produces_mult = -0.15
+		planet_jobs_alloys_produces_mult = -0.15
+	}
+	slave_cost = {
+		energy = -1500
+	}
+}
+
+trait_fractured_memory = {
+	cost = -4
+	icon = "gfx/interface/icons/traits/trait_fleeting.dds"
+	species_potential_add = {
+		can_do_advanced_gene_modding = yes
+	}
+	species_possible_remove = {
+		can_remove_beneficial_genetic_traits = yes
+	}
+	species_possible_merge_remove = {
+		always = yes
+	}
+	potential_crossbreeding_chance = 0.5
+	initial = no
+	randomized = no
+	advanced_trait = yes
+	allowed_archetypes = { BIOLOGICAL LITHOID }
+	modifier = { 
+		planet_jobs_physics_research_produces_mult = -0.15
+		planet_jobs_society_research_produces_mult = -0.15
+		planet_jobs_engineering_research_produces_mult = -0.15
+		species_leader_exp_gain = -0.5
+		species_empire_size_mult = 0.25
+	}
+	slave_cost = {
+		energy = -1500
 	}
 }
 
@@ -421,16 +931,16 @@ trait_vat_grown = {
 
 trait_felsic = {
 	cost = 2
-	species_potential_add = {
-		can_do_advanced_gene_modding = yes
-	}
+	#species_potential_add = {
+	#	can_do_advanced_gene_modding = yes
+	#}
 	species_possible_remove = {
 		can_remove_beneficial_genetic_traits = yes
 	}
 	potential_crossbreeding_chance = 0.5
-	initial = no
+	initial = yes
 	randomized = no
-	advanced_trait = yes
+	advanced_trait = no
 	allowed_archetypes = { LITHOID }
 
 	modifier = {
@@ -493,7 +1003,7 @@ trait_drake_scaled = {
 	custom_tooltip_with_modifiers = TRAIT_DRAKE_SCALED_EFFECT
 
 	modifier = {
-		army_health = 0.5
+		army_health = 1
 	}
 
 	slave_cost = {
@@ -523,7 +1033,7 @@ trait_voidling = {
 
 	custom_tooltip_with_modifiers = TRAIT_VOIDLING_EFFECT
 	modifier = {
-		habitability_floor_add = 0.20
+		habitability_floor_add = 0.40
 	}
 	slave_cost = {
 		energy = 1500
@@ -550,8 +1060,11 @@ trait_tiyanki = {
 	opposites = { "trait_slow_breeders" "trait_rapid_breeders" "trait_rapid_breeders_lithoid" "trait_fertile" "trait_plantoid_budding" "trait_lithoid_budding" "trait_advanced_budding" "trait_necrophage" "trait_clone_soldier_infertile" "trait_clone_soldier_infertile_full_potential" "trait_clone_soldier_fertile" }
 	allowed_archetypes = { BIOLOGICAL LITHOID }
 
-	custom_tooltip = TRAIT_TIYANKI_BUDDING_EFFECT
+	custom_tooltip_with_modifiers = TRAIT_TIYANKI_BUDDING_EFFECT
 	# Organic Pop Assembly set by tiyanki_budding_rate in \pop_categories\ and 00_scripted_variables
+	modifier = {
+		leader_lifespan_add = 40
+	}
 
 	slave_cost = {
 		energy = 1500
